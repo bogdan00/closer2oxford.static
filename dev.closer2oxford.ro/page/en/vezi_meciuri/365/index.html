@@ -1,0 +1,691 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml-strict.dtd">
+<HTML xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+    <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+            <link rel="icon" type="image/png"  href="../../../../../closer2oxford.ro/favicon.html">
+                <link rel="stylesheet" href="../../../var/layout.css" type="text/css">
+                    <title>Closer to Oxford - e timpul pentru argumente!</title>
+                    <link rel="alternate" type="application/rss+xml"  href="../../../rss_feed" title="Stiri Closer2Oxford">
+                        <link rel="image_src" property="og:image"  href="../../../../images/layout/closer2oxford_fb_white.png" />
+                        <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9" />
+<script type='text/javascript' src='../../../../js/jquery-1.4.4.min.js'></script>
+<script>var $j = jQuery.noConflict();</script>
+<script type='text/javascript' src='../../../../js/tinymce/tiny_mce.js'></script>
+<script type='text/javascript' src='../../../../js/jquery.form.js'></script>
+<script type='text/javascript' src='../../../../js/fbLoginRegister.js'></script>
+<script type='text/javascript' src='../../../var/javascript.js'></script>
+<script type='text/javascript' src='../../../../js/jquery.hovertip-1.0.min.js'></script> 
+<script type='text/javascript' src='../../../../js/jquery.jgrowl_minimized.js'></script> 
+<link rel='stylesheet' href='../../../../css/jquery.jgrowl.css' media='screen' type='text/css'> 
+<script type='text/javascript' src='../../../../js/jquery.timer-min.js'></script> 
+<link rel='stylesheet' href='../../../var/gallery.css' media='screen' type='text/css'> 
+<script type='text/javascript' src='../../../var/galerie/jquery.prettyPhoto.js'></script> 
+<style>.hovertip{
+    position:absolute;
+    padding:10px 13px;
+    z-index:2;
+    max-width:300px;
+    color:#303030;
+    background-color:#f5f5b5;
+    border:1px solid #DECA7E;
+    font-family:sans-serif;
+    font-size:12px;
+    line-height:18px;
+    text-align:left;
+    }
+           .normal_text ol,.normal_text ol *{text-align:left !important}
+           .normal_text *{font-weight:normal !important;font-size:12px !important;font-face:tahoma !important}</style> 
+<script type='text/javascript'>$j(document).ready(function(){$j('.tooltip').hovertip({'offset':[20,20]});get_notif();});
+
+if(!Array.indexOf){Array.prototype.indexOf = function(obj){for(var i=0; i<this.length; i++){if(this[i]==obj){return i;}}return -1;}}
+    hashuri = [] ;
+	 var tick_timer= 3000 ;
+ 
+	 function get_notif()
+        {
+		  
+		  //console.log(tick_timer);
+	     
+		  setTimeout(get_notif,tick_timer);
+        
+		   $j.ajax(
+            {
+                url: '/page/notif/show_events',
+                dataType: 'json',
+                data: "{}",
+                success: function(data)
+                    {
+                    $j.each(data,function(index,data){
+                        try
+                            {
+                            if( hashuri.indexOf(data.hash) == -1 )
+                                {
+                                hashuri.push(data.hash);
+                                $j.jGrowl(
+                                    data.str,
+                                    {
+                                        corners:'1px',
+                                        life: data.life,
+                                        header:data.title,
+                                        hash: data.hash,
+                                        sticky: data.sticky,
+                                        close: function(e,m,o)
+                                            {
+                                                $j.ajax({url:'/page/notif/delete_single_event/' + o.hash});
+                                            }
+                                    });
+                                }
+                            }
+                        catch(e){}
+                        })
+                    }
+            });
+        }
+	 </script> 
+ 
+                            
+  <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-19111721-1']);
+  _gaq.push(['_setDomainName', '.closer2oxford.ro']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+    
+                        </head>
+                        <body>
+                            <div id="global_wrap">
+                                <div id="header">
+                                    <a href='../../../../en/index.html'><div id='logo'><img src='../../../../images/layout/sigla.jpg'></div></a>
+                                    <a class='noExternal' href='http://www.facebook.com/pages/Closer2Oxford/162758797069605'><img src='../../../../images/fb.png' style='height:30px;float:right;clear:right;margin:10px 5px 5px 5px;border:none;'/></a>
+                                    <a href='../../../rss_feed'><img src='../../../../images/feed-icon.png' style='height:30px;float:right;clear:right;margin:5px;border:none;'/></a>
+                                </div>
+                                <div id="meniu">
+                                    <div  id='register_login'>
+
+                                        
+  <a href='#' class='todo' id='login'>Login </a> &nbsp;<a href='../../../register.html' class='todo' id='register'>Register</a>
+    <div id='login_box'>
+		  <form action='https://dev.closer2oxford.ro/page/en/login_user/logon' method='post' id='user_login_form'>
+					 <div>Email: <input type='text' name='email'/> </div><br />
+					 <div>Pass: <input type='password' name='passwd'/></div><br />
+					 <a href='#' class='password_forgot'>forgot password?</a>
+					 <input type='hidden' value='/page/en/vezi_meciuri/365/' name='returnto' class='submiter'/><br />
+					 <input type='submit' value='login' name='btn' class='submiter'/><br />
+		  </form>
+		  
+		  <form action='https://dev.closer2oxford.ro/page/en/login_user/reset_user_pw' method='post' id='user_reset_form'>
+					 <div>Email: <input type='text' name='email'/> </div><br />
+					 <a href='#' class='password_forgot'>login?</a>
+					 <input type='hidden' value='/page/en/vezi_meciuri/365/' name='returnto' class='submiter'/><br />
+					 <input type='submit' value='reset' name='btn' class='submiter'/><br />
+		  </form>
+		  
+    </div>
+    
+                                    </div>
+                                    <div id="menu1" style="margin:auto;"> <ul id="meniu_prinicpal">
+                                            <li><a href="../../../contactus/index.html"> Contact us </a></li>
+                                            <li><a href="../../../theteam/index.html"> The team</a></li>
+                                            <li><a href="../../../theproject/index.html"> The project </a></li>
+                                            <li><a href="../../../home_en/index.html"> Home</a></li>
+                                        </ul></div>
+                                </div>
+                                <div id="main">
+                                    <a href='../../../../en.html'><img src="../../../../images/cover/BANNER_c2o_12_DEBATE_ONLINE_results.png" alt=""  usemap="#imgmap_iordania" /></a>
+									<div id='frontpageGallery'> 
+										<script type='text/javascript' src='../../../../js/jquery.hovertip-1.0.min.js'></script> 
+<script type='text/javascript' src='../../../../js/jquery.jgrowl_minimized.js'></script> 
+<link rel='stylesheet' href='../../../../css/jquery.jgrowl.css' media='screen' type='text/css'> 
+<script type='text/javascript' src='../../../../js/jquery.timer-min.js'></script> 
+<link rel='stylesheet' href='../../../var/gallery.css' media='screen' type='text/css'> 
+<style>.hovertip{
+    position:absolute;
+    padding:10px 13px;
+    z-index:2;
+    max-width:300px;
+    color:#303030;
+    background-color:#f5f5b5;
+    border:1px solid #DECA7E;
+    font-family:sans-serif;
+    font-size:12px;
+    line-height:18px;
+    text-align:left;
+    }</style> 
+<script type='text/javascript'>$j(document).ready(function(){$j('.tooltip').hovertip({'offset':[20,20]});get_notif();});
+
+if(!Array.indexOf){Array.prototype.indexOf = function(obj){for(var i=0; i<this.length; i++){if(this[i]==obj){return i;}}return -1;}}
+    hashuri = [] ;
+	 var tick_timer= 3000 ;
+ 
+	 function get_notif()
+        {
+		  
+		  //console.log(tick_timer);
+	     
+		  setTimeout(get_notif,tick_timer);
+        
+		   $j.ajax(
+            {
+                url: '/page/notif/show_events',
+                dataType: 'json',
+                data: "{}",
+                success: function(data)
+                    {
+                    $j.each(data,function(index,data){
+                        try
+                            {
+                            if( hashuri.indexOf(data.hash) == -1 )
+                                {
+                                hashuri.push(data.hash);
+                                $j.jGrowl(
+                                    data.str,
+                                    {
+                                        corners:'1px',
+                                        life: data.life,
+                                        header:data.title,
+                                        hash: data.hash,
+                                        sticky: data.sticky,
+                                        close: function(e,m,o)
+                                            {
+                                                $j.ajax({url:'/page/notif/delete_single_event/' + o.hash});
+                                            }
+                                    });
+                                }
+                            }
+                        catch(e){}
+                        })
+                    }
+            });
+        }
+	 </script> 
+
+										<script type='text/javascript' src='../../../../js/jquery.hovertip-1.0.min.js'></script> 
+<script type='text/javascript' src='../../../../js/jquery.jgrowl_minimized.js'></script> 
+<link rel='stylesheet' href='../../../../css/jquery.jgrowl.css' media='screen' type='text/css'> 
+<script type='text/javascript' src='../../../../js/jquery.timer-min.js'></script> 
+<link rel='stylesheet' href='../../../var/gallery.css' media='screen' type='text/css'> 
+<script type='text/javascript' src='../../../var/galerie/jquery.prettyPhoto.js'></script> 
+<style>.hovertip{
+    position:absolute;
+    padding:10px 13px;
+    z-index:2;
+    max-width:300px;
+    color:#303030;
+    background-color:#f5f5b5;
+    border:1px solid #DECA7E;
+    font-family:sans-serif;
+    font-size:12px;
+    line-height:18px;
+    text-align:left;
+    }</style> 
+<script type='text/javascript'>$j(document).ready(function(){$j('.tooltip').hovertip({'offset':[20,20]});get_notif();});
+
+if(!Array.indexOf){Array.prototype.indexOf = function(obj){for(var i=0; i<this.length; i++){if(this[i]==obj){return i;}}return -1;}}
+    hashuri = [] ;
+	 var tick_timer= 3000 ;
+ 
+	 function get_notif()
+        {
+		  
+		  //console.log(tick_timer);
+	     
+		  setTimeout(get_notif,tick_timer);
+        
+		   $j.ajax(
+            {
+                url: '/page/notif/show_events',
+                dataType: 'json',
+                data: "{}",
+                success: function(data)
+                    {
+                    $j.each(data,function(index,data){
+                        try
+                            {
+                            if( hashuri.indexOf(data.hash) == -1 )
+                                {
+                                hashuri.push(data.hash);
+                                $j.jGrowl(
+                                    data.str,
+                                    {
+                                        corners:'1px',
+                                        life: data.life,
+                                        header:data.title,
+                                        hash: data.hash,
+                                        sticky: data.sticky,
+                                        close: function(e,m,o)
+                                            {
+                                                $j.ajax({url:'/page/notif/delete_single_event/' + o.hash});
+                                            }
+                                    });
+                                }
+                            }
+                        catch(e){}
+                        })
+                    }
+            });
+        }
+	 </script> 
+
+										<style type="text/css">
+										.poze
+										{
+											float:right;
+											width:110px;
+										}
+										.poze a img
+										{    border:none;
+										}
+										.main_content
+										{
+											float:left;
+											width:560px;
+										}
+										</style>
+										
+										 <div class = 'poze'>
+
+    <script>
+    $j(document).ready(function(){
+      		$j("a[rel^='prettyPhoto']").prettyPhoto({theme:'facebook'});
+        });
+    
+    </script>
+    </div> 
+									
+									</div> 
+                                    <!--<div id='stiri-padding'>
+        <div id='stiri_back'>
+                {stiri} 
+    
+               
+        </div>-->
+        
+</div>
+<div  id="content-padding">
+        <div id='sidebar_menu'>
+                <span class='tr'></span>
+                <span class='tl'></span>
+                <span class='br'></span>
+                <span class='bl'></span>
+                <span id="filler"></span>
+                    
+                <ul></ul>
+                
+                <div class='clear'></div>
+        </div>
+        <div id="content">
+                <span class='tr'></span>
+                <span class='tl'></span>
+                <span class='br'></span>
+                <span class='bl'></span>
+                <span id="filler"></span>
+                  <script>
+        $j(document).ready(function(){
+        $j('.discurs_toggler').toggle(
+                function(){
+                $j(this).attr('src', '../../../../images/little_stuff/16-em-down.png');   
+                $j(this).parent().next('.discurs').hide('fast');
+                },
+                function(){
+                $j(this).attr('src', '../../../../images/little_stuff/16-em-up.png');
+                $j(this).parent().next('.discurs').show('fast');
+                });
+            });
+        </script><style>.nowrap{white-space: nowrap;}
+		.noJustify{text-align:left;}
+		</style><h2 class='noJustify'><span class='nowrap'>'Challenge2Progress'</span> <span class='notif'>(Affirmative team)</span> vs <span class='nowrap'>'PoP: Power of People'</span> <span class='notif'>(Negative team)</span></h2><h3>A1 (Alina Ciobotaru) <img src='../../../../images/little_stuff/16-em-up.png' class='discurs_toggler'></h3>
+            <div class='discurs normal_text'><p>We will limit ourselves to modern political democracy which is defined by the Oxford dictionary as &ldquo;a system of government by the whole population or all the eligible members of a state, typically through elected representatives&rdquo;. Karl Popper defined democracy in opposition to dictatorship.</p>
+<p>Force in this case means military intervention which should be limited to those critical situations that endanger the lives of humans worldwide in non-democratic countries such as war crimes, genocide, the infringing of human rights etc. It should only be used as a &ldquo;last resort&rdquo;, when peaceful measures are not enough.</p>
+<p>Sean M. Lynn-Jones observes that most democracies today are &ldquo;liberal democracies to some degree&rdquo;. Lynn Jones specifies that &ldquo;Western industrial countries combine procedural democracy with guarantees of civil liberties&rdquo; (&ldquo;freedom from arbitrary authority, freedom of religion, the right to own and exchange private property, rights to equal opportunity in health care, education, and employment, and the rights to political participation and representation&rdquo;). This is accomplished through the separation of powers in state. Based on this, it is easy to understand that Western democracies have the moral duty to promote democracy (especially liberal democracy) as a system worldwide since this automatically presupposes that they are promoting basic, fundamental human rights.</p>
+<p><strong>Arg.1. &ldquo;The responsibility to protect&rdquo; all human beings </strong></p>
+<p>As human beings, citizens from Western countries have the obligation from a humanitarian point of view to protect those whose human rights have been or are gravely violated. Most democratic nations have already realized this and hence in 2005 the United Nations incorporated the doctrine of the international responsibility to protect in an &ldquo;outcome document&rdquo; stipulating that if a &ldquo;state failed to protect its citizens from &lt;&lt; genocide, war crimes, ethnic cleansing, and crimes against humanity&gt;&gt;&rdquo;, the international community is responsible to protect these people (Bajoria and McMahon). It is this team&rsquo;s belief that promoting democracy, even by force, would decrease the danger of civil war and internal civil turmoil especially from those countries which are under authoritarian rule. It will assure that citizens from these countries have human rights. Sean M. Lynn Jones observes that findings so far have shown that &ldquo;citizens of liberal democracies are less likely to suffer violent death in civil unrest or at the hands of their governments&rdquo;.</p>
+<p><strong>Arg. 2 Promoting worldwide peace </strong></p>
+<p>Events in international relations have shown that &ldquo;democratic regimes rarely make war on each other&rdquo; (James Meernik 392), whereas authoritarian regimes have a higher risk at weaging war at each other. Hence we could argue that by promoting democracy western countries are actually promoting the spread of global peace. Authoritarian regimes as inherently more aggresive since they wield internal power most of the times by using force. As USA Secretary of State George Marshall observes:&nbsp; &bdquo;governments which systematically disregard the rights of their own people are not likely to respect the rights of other nations and people and are likely to seek their ob-jectives by coercion and force in the international field&rdquo; ( George Marshall quoted by Meernik 392).</p>
+<p>It is this team&rsquo;s belief that a wordwide state of stability and peace is so important that it justifies the use of force in extreme cases. As we have shown, democracy is linked to the idea of peace by the very nature of its systematic organisation and hence it is a viable solution to international wars. James Meernik has statistically proven in his article &ldquo;United States Military Intervention and the Promotion of Democracy&rdquo;&nbsp; that military intervation can be an &ldquo;effective tool in the promotion of democracy&rdquo;(391), as he discovered that &ldquo;nations which experienced a military intervention are 15% more likely to make democratic gains&rdquo; (396)<strong>. &nbsp;</strong></p>
+
+<p><strong>Arg. 3 A moral duty towards themselves</strong></p>
+<p>For many Western democratic countries democracy has been so far a better alternative than the opposing authoritarian system and they have the moral duty to preserve their well-being by preserving and strengthening democracy. As the authors of the article &ldquo;What makes democracies endure observe&rdquo;, following an analysis of past patterns, the international climate is of outmost importance for preserving any political system, including democracy:&nbsp; &ldquo;the larger the proportion of democracies on the globe and in the region during a particular year, the more likely is democracy to survive in any particular country&rdquo; (43).</p>
+<p><strong>In conclusion</strong>, we believe that from a humanitarian perspective Western democracies have the moral duty to promote democracy worldwide since what they would actually be promoting is basic human rights. All human beings have a moral responsibly towards those in harsh situation and in many cases citizens from authoritarian systems have few human rights. Apart from this, we have also shown than democracy increases worldwide peace. It is this team&rsquo;s strong belief that human rights and worldwide peace are so important that they justify the use of force from Western democracies.</p>
+
+
+
+
+
+<p>Works cited:</p>
+<p><a href="http://muse.jhu.edu/results?section1=author&amp;search1=Jose%20Antonio%20Cheibub">&nbsp;Cheibub</a>, &nbsp;Jose Antonio&nbsp; et all. &ldquo;What Makes Democracies Endure?&rsquo;. <a href="http://muse.jhu.edu/journals/journal_of_democracy"><em>Journal of Democracy</em></a><em>&nbsp;</em><br /> <a href="http://muse.jhu.edu/journals/journal_of_democracy/toc/jod7.1.html">Volume 7, Number 1, January 1996</a>&nbsp;, pp. 39-55.</p>
+<p>ayshree Bajoria, and&nbsp;<a href="http://www.cfr.org/experts/world/robert-mcmahon/b11891">Robert McMahon</a>, Editor. The Dilemma of Humanitarian Intervention. Updated June 12, 2013</p>
+<p>http://www.cfr.org/humanitarian-intervention/dilemma-humanitarian-intervention/p16524?cid=rss-fullfeed-the_dilemma_of_humanitarian_in-061213</p>
+
+<p><a href="http://belfercenter.ksg.harvard.edu/experts/146/sean_m_lynnjones.html?back_url=%2Fpublication%2F2830%2Fwhy_the_united_states_should_spread_democracy.html&amp;back_text=Back%20to%20publication"><strong>Lynn-Jones</strong></a><strong>, </strong>Sean M. "Why the United States Should Spread Democracy". Discussion Paper 98-07, <a href="http://belfercenter.ksg.harvard.edu/">Center for Science and International Affairs, Harvard University</a>, March 1998.</p>
+<p><a href="http://belfercenter.ksg.harvard.edu/publication/2830/why_the_united_states_should_spread_democracy.html">http://belfercenter.ksg.harvard.edu/publication/2830/why_the_united_states_should_spread_democracy.html</a></p>
+<p>Meernik, James. &ldquo;United States Military Intervention and the Promotion of Democracy&rdquo;. <em>Journal of Peace Research</em>, vol. 33, no. 4, 1996, pp. 391-402.</p>
+<p><a href="http://www.oxforddictionaries.com/definition/english/democracy">http://www.oxforddictionaries.com/definition/english/democracy</a></p>
+</div><hr><h3>N1 (Anood Amjad Abutayeh) <img src='../../../../images/little_stuff/16-em-up.png' class='discurs_toggler'></h3>
+            <div class='discurs normal_text'><p><strong>&nbsp;</strong>As the opposition side of this motion we would like to begin and present our opposing speech with accepting the definition of democracy which was put forward by our fellow teammates in the preposition. Our main reason for accepting the previous definition is because we feel it complements our main point, which clarifies the main role of the population, the inhabitants of a country, and their own independent role of choosing their ruler and the way they want to be ruled. On the other hand, this house does not recognise any form of intervention from one country in another as democratic, and it totally contradicts the essence of democracy.</p>
+<p>Furthermore, we will move on by rebutting the arguments that were brought up in our opponents&rsquo; speech:</p>
+<p><strong>ARGUMENT #1: </strong></p>
+<p>Firstly, when we address people in less democratic countries we know they are human beings with rights, citizens with responsibilities, and rational people who are aware of their rights and how to protect them. The spreading of democracy by individual states in others truly and directly threatens the latter's independence and internal affairs, which is incompatible with true democracy in the sense that is not something that can be imposed. Thus it does not make sense that the interference on the part of Western countries be thought of as a form of democracy propagation. When countries are introduced to democracy by others, this increases the level of dependency and internal weakness, which in turn creates a huge gap between the people and their rulers and leads to greater effects politically, economically, and socially. A strong example of this is the state of affairs in both Iraq and Afghanistan, whose respective governments are still very much reliant on the United States. It is particularly noticeable how miserable conditions are in these countries, especially following the US intervention. Therefore this house truly believes that modern democracies do not have a moral duty to spread democracy around the world in any possible way. <strong>&nbsp;</strong></p>
+<p><strong>ARGUMENT #2 and ARGUMENT #3:</strong></p>
+<p>Firstly, we do not understand or recognise how peace justifies force. It is by the nature of peace that it happens when people's desires and intentions coincide to prohibit non-peaceful practices, which leads to the spread of peace, and internal stability. Secondly, the spreading democracy around the world by modern democracies is not an objective way of promoting it and does not represent its true meaning. Countries that claim to promote democracy but actually impose it, tend to have their own political agenda, and geopolitical motivations. In addition to the fact that democratic countries are not only for the people but created by them, forcing democracy on people has not proven its efficiency and effectiveness and has left those countries affected with scars that cannot be healed. For example, after the military intervention in Libya, the situation never fully returned to normality and the new government was left to face the consequences of militia groups and terrorist attacks. This house therefore believes and insists on impeding the spread of democracy by Western countries.&nbsp;</p>
+<p><strong>Our point-</strong> Furthermore, as the opposition side of this motion, we would also want to highlight how essential it is for Western countries to be aware of the consequences that result from the spreading of democracy, and interfering in the internal matters and concerns of others. The risks, damages, and scars which cause high rates of violence, dependency, and the destruction of the unity of the one people and one country, that divides the people and shatters its strength. Democracy calls for voting for the best-qualified representative, but on the other hand, the scars left behind by war take a lot of time to heal and inhibit democracy. Egypt is a fitting example for its refusal to accept any Western interference. Considering its huge population, the diversity of religious groups, social statuses, and recent events, it is still a better case for stability than other countries, which suffered from "democracy spreading" such as Iraq, Afghanistan and Libya.</p>
+
+<p><strong>References:</strong></p>
+<p>1-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="http://www.nytimes.com/2004/11/14/books/review/14KAGANL.html?pagewanted=1&amp;_r=1&amp;">http://www.nytimes.com/2004/11/14/books/review/14KAGANL.html?pagewanted=1&amp;_r=1&amp;</a></p>
+<p>2-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="http://www.bbc.co.uk/worldservice/people/features/ihavearightto/four_b/casestudy_art28.shtml">http://www.bbc.co.uk/worldservice/people/features/ihavearightto/four_b/casestudy_art28.shtml</a></p>
+<p>3-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="http://en.wikipedia.org/wiki/Humanitarian_intervention#Examples_of_humanitarian_intervention">http://en.wikipedia.org/wiki/Humanitarian_intervention#Examples_of_humanitarian_intervention</a></p>
+<p>4-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="http://prq.sagepub.com/content/65/3/558.abstract">http://prq.sagepub.com/content/65/3/558.abstract</a></p>
+<p>5-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="http://revsoc.me/arab-and-international/dmw-lthwr-lswry-wrfdw-ldrb-lskry-lmryky/">http://revsoc.me/arab-and-international/dmw-lthwr-lswry-wrfdw-ldrb-lskry-lmryky/</a></p>
+<p>6-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="http://www.merriam-webster.com/dictionary/democracy">http://www.merriam-webster.com/dictionary/democracy</a></p>
+<p>7-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Owen, Jones, &lsquo;The war in Libya was seen as a success now here we are engaging in the blowback in Mali&rsquo;, independent.co.uk, 13 Jan 2013</p>
+<p>8-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Chris, Stephen, &lsquo;Assassination pushes Libya towards civil war, two years after Gaddafi&rsquo;s death&rsquo;, thegurdian.com, 19 October 2013</p>
+<p>9-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Doyle, Michael. "Promoting Democracy is Not Imposing Democracy." The Huffington Post.( <a href="http://www.huffingtonpost.com/michael-doyle/promoting-democracy-is-no_b_826574.html">http://www.huffingtonpost.com/michael-doyle/promoting-democracy-is-no_b_826574.html</a> )</p>
+<p>10-&nbsp; Fearon, James (2006), &ldquo;Iraq&rsquo;s Civil War&rdquo;, Foreign Affairs Magazine, [Accessed July 19, 2011]</p>
+</div><hr><h3>A2 (Bogdan Muresan) <img src='../../../../images/little_stuff/16-em-up.png' class='discurs_toggler'></h3>
+            <div class='discurs normal_text'>
+<p><strong>Right from the start</strong>, we will reiterate the definition of modern political democracy as defined by the Oxford dictionary: &lsquo;a system of government by the whole population or all eligible members of a state, typically through elected representatives&rsquo;. British philosopher Karl Popper defined democracy in opposition with dictatorship, while one of the most famous political figures in modern history, Winston Churchill, once called it &lsquo;the worst form of government, except for all those other forms that have been tried from time to time&rsquo;. While admitting that democracy is perfectible, at the moment, there is a widespread opinion amongst different political leaders and global thinkers according to which democracy is quintessential for a future interconnected global society of peace and prosperity.</p>
+<p>As we have already stated in our first document, we recognize that imposing democracy by force, namely by coercion and military actions, should be regarded as a last resort measure meant to tackle extreme cases of war crimes, crimes against humanity, ethnic cleansing and genocide, where conventional diplomacy will not suffice. And these cases, although rare on a global scale, do occur and infringe on the population&rsquo;s own independent role of choosing their ruler and the way they want to be ruled, that the negative team wrote about. That is exactly when flagship Western democracies have the moral duty to intervene with the overall aim of guaranteeing the civil liberties of the oppressed.</p>
+<p><strong>Responsibility to Protect 2.0</strong></p>
+<p>We already talked about the idea of a responsibility to protect and we explained why we believe that governments have a duty to protect their own citizens and then, if they fail in that respect, then the international community has a residuary responsibility to step in and help those who cannot help themselves. In 2005, a unanimous resolution adopted by the UN established this responsibility to protect in just that kind of a concept, in a world where sovereignty is no longer as absolute and impenetrable as it once seemed. We would also encourage a responsibility to reconstruct in post-conflict areas, as an incremental element of any action that wishes to have a genuinely humanitarian character. A reconstruction process is taking place in Iraq, where foreign intervention removed the dictator Saddam Hussein, who was engaged in ethnic cleansing activities against his own people, and is set to start in Afghanistan at the end of the current year, after the official end of NATO&rsquo;s ISAF mission.</p>
+<p><strong>The World needs its &lsquo;warriors of peace&rsquo;</strong></p>
+<p>As Professor James Meernik put it &lsquo;democratic regimes rarely make wars against each other&rsquo;, so, by promoting democracy we could also assume that Western countries do promote world peace. It is this team&rsquo;s belief that a wordwide state of stability and peace is so important that it justifies the use of force in extreme cases. Because in these cases the consequences of inaction are worse than those of difficult and bold military actions that, unfortunately, sometimes come with the cost of collateral civilian damage, as seen in Kosovo. The fact that countries that engage in democracy promotion have their own political agenda and geopolitical interests integrated in the greater process of cooperation with the local authorities should come as no surprise. Because after the empowerment of the new authorities, freed of tyranny and oppression, they will need reconstruction and development assistance from their benefactors. And political issues, based on geopolitical arguments, should be included in an overall action plan.</p>
+<p><strong>The morality of interventionism</strong></p>
+<p>The opposing team mentioned the risks, damages and scars that lead to high rates of violence, destroy the unity of the people and the country. Well, more or less, that is a fitting definition for the Syrian crisis, shattered by three years of civil war between the rebel oppositon and Bashar al-Assad&rsquo;s loyal troops. More than 130,000 people are said to have died in Syria&rsquo;s civil war. Reports of atrocities and accounts of suffering refugees rend our hearts and throw us in an unconfortable moral dilemma. Egypt took down its dictator by itself&hellip; and Mohamed Mursi, the country&rsquo;s first democratically elected president, has been ousted from office just over a year into his presidency by a military coup. So we express our serious doubts that this country can be considered a regional example of stability.</p>
+<p><strong>To sum up</strong>, we can only hope that the occasions that will require foreign military intervention for democracy promotion purposes will drop down in the future. We would really like to live in a world characterized by the perpetual peace descended from Kant&rsquo;s 18<sup>th</sup> century essay, in which countries protect their own populations and don't need external pressure to act accordingly. That would be very desirable, indeed. The problem is, however, that is not the world we live in today.</p>
+<p><strong><em>&nbsp;</em></strong></p>
+<p><strong><em>References:</em></strong></p>
+<p>Berg, A. Scott.&nbsp; Excerpt from <em>Wilson.</em> From the print edition. &ldquo;Woodrow Wilson<strong>: </strong>Negotiating world peace. America's remarkable 28th president&rdquo;. <em>The Economist.</em> Sep 7, 2013<strong></strong></p>
+<p><a href="http://www.economist.com/news/books-and-arts/21584957-americas-remarkable-28th-president-negotiating-world-peace">http://www.economist.com/news/books-and-arts/21584957-americas-remarkable-28th-president-negotiating-world-peace</a></p>
+<p>Doyle, Michael W. &ldquo;The Folly of Protection&rdquo;. <em>Foreign Affairs</em>. March 20, 2011.</p>
+<p><a href="http://www.foreignaffairs.com/articles/67666/michael-w-doyle/the-folly-of-protection">http://www.foreignaffairs.com/articles/67666/michael-w-doyle/the-folly-of-protection</a></p>
+<p>Doyle, Michael W, John Tessitore. &ldquo;Michael Doyle on Nonintervantion and the Responsibility to Protect&rdquo;. <em>Carnegie Council for Ethics in International Affairs.</em> March 3, 2012</p>
+<p><a href="https://www.carnegiecouncil.org/studio/multimedia/20110310/index.html#section-19579">https://www.carnegiecouncil.org/studio/multimedia/20110310/index.html#section-19579</a></p>
+<p>Jayshree Bajoria, and&nbsp;<a href="http://www.cfr.org/experts/world/robert-mcmahon/b11891">Robert McMahon</a>, Editor. &ldquo;The Dilemma of Humanitarian Intervention<em>.&rdquo; Council on Foreign Relations</em>. Updated June 12, 2013</p>
+<p><a href="http://www.cfr.org/humanitarian-intervention/dilemma-humanitarian-intervention/p16524?cid=rss-fullfeed-the_dilemma_of_humanitarian_in-061213">http://www.cfr.org/humanitarian-intervention/dilemma-humanitarian-intervention/p16524?cid=rss-fullfeed-the_dilemma_of_humanitarian_in-061213</a></p>
+<p>Nye, Joseph. &ldquo;Duties without Borders&rdquo;. <em>Project Syndicate. The World&rsquo;s Opinion Page. </em>March 10, 2014</p>
+<p><a href="http://www.project-syndicate.org/commentary/joseph-s--nye-considers-the-limits-of-political-leaders--transnational-moral-obligations">http://www.project-syndicate.org/commentary/joseph-s--nye-considers-the-limits-of-political-leaders--transnational-moral-obligations</a></p>
+<p><strong>Smith-Spark, Laura. </strong><strong>&ldquo;</strong>The rise and rapid fall of Egypt's Mohamed Morsy&rdquo;. <em>CNN International.</em> July 4, 2013 -- Updated 0919 GMT<strong></strong></p>
+<p><a href="http://edition.cnn.com/2013/07/02/world/meast/egypt-morsy-profile/">http://edition.cnn.com/2013/07/02/world/meast/egypt-morsy-profile/</a></p></div><hr><h3>N2 (Ahmed Akour) <img src='../../../../images/little_stuff/16-em-up.png' class='discurs_toggler'></h3>
+            <div class='discurs normal_text'><p>&nbsp;At the beginning of our second speech, which will highlight how harmful it is for countries that are being imposed to democracy by Westerns, we are going to rebut the points mentioned by our fellow teammates in the proposition team, in addition to summarizing why do we believe Western democracies do not have any moral duty to spread democracy around the world.&nbsp;</p>
+<p>Firstly, the point of using force as a last resort or option, we strongly believe that this is not the actual case, actions speak louder than words in this where most of the interference involve the use of force, hence this will lead to more force and violence, this is fighting fire with fire, which we realize it is not a solution or an appropriate way to help those less democratic countries prosper, and it is also not in any way the essence of democracy as we have mentioned earlier, furthermore in a best case scenario where it is not an actual war with force involved, it is a cold war which does not influence prosperity in the long term, as we are going to mention later in this speech. <br /> <br /> - Arguments Rebuttals:</p>
+<ul>
+<li>As our opponents speak about the failure of countries in spreading democracy, which requires the interference by Western democracies, we do ask who determines this failure and who is responsible to classify countries efforts in spreading democracy as successful or failing. If it is a responsibility mandated with western democracies to decide, if so then again this is not where true, real democracy rely. The examples mentioned by our opponents about Iraq and Afghanistan, is not convenient at all, we can clearly see that reconstruction processes are not prosperous, and they never were, it is also very inconvenient that we are speaking about "virtual" results of reconstruction after 13 years of the war in Afghanistan, and 10 years in Iraq's. </li>
+<li>Quoting what was brought forward by our opponents: "Democratic regimes rarely make wars against each other" We doubt the credibility and truthfulness of that, as we know the United States and Russia are both considered modern, developed democratic countries, the controversy which started in 1914 in the World War I, is still extending and impacting today's issues as we can clearly notice the conditions in Ukraine which is not prosperous neither now or in the future, not only when we speak about today's issues of Ukraine, but also many other countries. As we have stated before this is a case where political agendas, and geopolitical motivations lead this impose of democracy and acts in the name of promoting it, while we all do realize that the latter's purpose does not happen when Western democracies countries involve serving their own interests, it is not a promoting of democracy, it is more of a conflict, war, and controversy happening in countries between other countries trying to get the most benefits out of this confrontation.</li>
+<li>We brought Egypt as an example of stability, because we can clearly see that the results and circumstances of what happened in Egypt considering it's huge size and diverse contents of people and their backgrounds and believes, is still a much better example for stability than Libya for an example, which we did not find any counter argument for by our opponents, which proves how miserable the results can turn out to be when interventions happen. Moreover when we speak about Syria and it's tragic conditions, we cannot say that it is a situation with no interference involved, we can see the impact and pressures by other countries in Syria, we do not want to imagine how worse it will be if democracy imposing gets involved too. </li>
+</ul>
+
+<p>&nbsp;In conclusion, we summaries our points and rebuttals in saying that democracy cannot be imposed by Western democracies, it is a form of system that revolves around the independency of a country and the independency of its peoples' choices and decisions, which cannot be threatened and violated by others in order to truly call it a democracy. Violence and destruction is not what peace revolves around, it does not represent any moral duty, and it not an ambition for less democratic countries. Again, the failure of spreading democracy cannot be determined by Westerns, and it is not an objective pattern nor it does not present the essence of democracy which we as the negative team of this motion, believe it must happen with the vigilance of those less democratic countries by their own people and in all conditions it is not a moral duty for Western countries to spread in any method.</p>
+<p><br /> - References:</p>
+<ul>
+<li>. <a href="http://www.huffingtonpost.com/michael-doyle/promoting-democracy-is-no_b_826574.html">http://www.huffingtonpost.com/michael-doyle/promoting-democracy-is-no_b_826574.html</a> </li>
+<li>. <a href="http://www.mideastweb.org/log/archives/00000628.htm">http://www.mideastweb.org/log/archives/00000628.htm</a> </li>
+<li>. <a href="http://nation-building.blogspot.com/2011/03/why-imposing-democracy-is-bad.html">http://nation-building.blogspot.com/2011/03/why-imposing-democracy-is-bad.html</a> </li>
+<li>. <a href="http://www.bbc.co.uk/programmes/b03y888v">http://www.bbc.co.uk/programmes/b03y888v</a> </li>
+<li>. <a href="http://www.economist.com/topics/ukraine">http://www.economist.com/topics/ukraine</a> </li>
+<li>. <a href="http://www.wikpedia.com/">www.wikpedia.com</a> </li>
+<li>. Kinzer, Stephen. Overthrow, New York: Times Books, 2006. </li>
+<li>. Mansfield, Edward D. Electing to Fight: Why Emerging Democracies Go to War.</li>
+</ul>
+</div><hr><hr><h2>Decision:</h2> <script>
+        $j(document).ready(function(){
+			$j('.decizie_toggler').toggle( 
+				function(){
+					$j(this).attr('src', '../../../../images/little_stuff/16-em-down.png');   
+					$j(this).parent().next('.decizie').hide('fast'); 
+                },
+                function(){
+					$j(this).attr('src', '../../../../images/little_stuff/16-em-up.png');
+					$j(this).parent().next('.decizie').show('fast'); 
+                } 
+			);
+		});</script><div class='decizie'><h3>George Maxim
+                <img src='../../../../images/little_stuff/16-em-up.png' class='decizie_toggler'></h3><div class='normal_text'><p>Part 1 &ndash;General feedback</p>
+<p>First of all congratulations to both teams for a very well structured round with an easy to follow flow of arguments and the ability to discuss major issues without getting caught up in the myriad of examples given! I also enjoyed the top line approach which focused on discussing the morality and general effect of the proposed actions instead of bickering over specific details.</p>
+<p>Another plus side to the round was the fact that both teams spent time researching and using articles which were well suited for the topic discussed instead of relying on general arguments without a documented basis.</p>
+<p>Part 2 &ndash; Individual feedback</p>
+<p>Affirmative 1:</p>
+<ul>
+<li>A well rounded speech which was easy to follow and understand</li>
+<li>However, the 3<sup>rd</sup> argument was rather an extension to the 1<sup>st</sup> and 2<sup>nd</sup> rather than an argument in itself; here a better option could have been to argue why it&rsquo;s in a democratic state&rsquo;s own interest to have in the world as many democracies as possible (with the idea that an authoritarian state, regardless of the specific regime will always demonize democracies because of its inherent need to find outside enemies to justify its existence)</li>
+</ul>
+<p>Negative 1:</p>
+<ul>
+<li>I was very happy to see that the negative decided not to have a useless debate on the definitions proposed and also that kept the outline provided in the first speech</li>
+<li>The rebuttals were efficient and to the point and asked very valid questions: Is a democratic regime which was imposed and not internally developed actually democratic? Can the desire for peace justify the force used?</li>
+<li>The perspective on Egypt was also well placed as it showed the ability of the team to come up with an angle of their own instead of just providing counterarguments to the affirmative side, but a little more depth was needed to better explain why is this example so relevant for the debate (because from a cultural point of view, Iraq, Afghanistan and other countries have also very complex structures)</li>
+<li>When quoting a source or an article please put the number of source used right after the idea or quote used for easier following by the reader</li>
+</ul>
+<p>Affirmative 2:</p>
+<ul>
+<li>The first and third arguments regarding the duty of the international community and the morality burden were very well eloquent; however, for more impact and a better flow it would have been more effective if the order was reversed to show that the duty stems from the morality of all countries to intervene in such extreme cases</li>
+<li>The second argument could have been better built in order to show that even if the outside intervention might not be the best solution it will give the people of that country a better chance for a transition to a democracy they want rather than the chance they had under the previous regime</li>
+<li>Also a few more words to sum up the debate from the affirmative side are always welcomed; remember that it is the duty of this speaker to provide counterarguments but also to show why the affirmative side is the winner of the round</li>
+</ul>
+<p>Negative 2:</p>
+<ul>
+<li>The speech was full of good ideas which could have been turned into winning arguments for the negative team</li>
+<li>The first point, that in the end there is no true benefit from outside intervention was well made and that previous efforts are not as successful as proclaimed</li>
+<li>The second point, that democracies also fight against each other was also very good but could have used a couple of examples (like the Russia-Georgia war or the US interventions in South America)</li>
+<li>Finally, the third rebuttal regarding the influence that comes with these interventions or non-interventions was the most interesting one. Here a few good examples would have driven the point home, such as: the US quietly endorsing the former Egyptian dictator Mubarak due to geopolitical interests or the case of Pinochet in Latin America or even their support for Saddam Hussein in the early stages of his ruling. </li>
+<li>Also please be careful with the wording and the structure of the speech because it was a bit hard to follow sometimes </li>
+</ul>
+<p>Partea 3 &ndash; The verdict</p>
+<p>The debate centers around two main areas: the argument of morality and the one of effectiveness of intervention. The morality thread is won by the affirmative team which clearly shows that in case the citizens of a country are repressed or opposed by their own government it is the duty of all other people (through their governments) to intervene to stop the violence. The effectiveness area was well argued by the negative who pointed out that no benefits can come from violent intervention on the long term, especially if the outside actions are perceived by the citizens of the country in question as unjustified and with hidden intentions.</p>
+<p>In order to determine a winner a fine point must be made. This point was made by the second negative speaker but just barely and it touches on an error made by the second affirmative. The second affirmative mentions in the first point of the speech that it is the duty of the <strong>international</strong> community to intervene. Afterwards the final speech says clearly that this community must include all countries not just the Western democracies. Therefore, even if the situation is dire and help is urgently needed regarding a specific country, <strong>the whole international community</strong> must intervene and not just the Western democracies who have no right to solely act by themselves in such situations.</p>
+<p>Congratulations to both teams for an excellent round!</p>
+<table border="1" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td width="128" valign="top">
+<p>Speaker</p>
+</td>
+<td width="128" valign="top">
+<p>Content</p>
+</td>
+<td width="128" valign="top">
+<p>Strategy</p>
+</td>
+<td width="128" valign="top">
+<p>Style</p>
+</td>
+<td width="128" valign="top">
+<p>Total</p>
+</td>
+</tr>
+<tr>
+<td width="128" valign="top">
+<p>A1</p>
+</td>
+<td width="128" valign="top">
+<p>12</p>
+</td>
+<td width="128" valign="top">
+<p>8</p>
+</td>
+<td width="128" valign="top">
+<p>4</p>
+</td>
+<td width="128" valign="top">
+<p>24</p>
+</td>
+</tr>
+<tr>
+<td width="128" valign="top">
+<p>N1</p>
+</td>
+<td width="128" valign="top">
+<p>13</p>
+</td>
+<td width="128" valign="top">
+<p>8</p>
+</td>
+<td width="128" valign="top">
+<p>4</p>
+</td>
+<td width="128" valign="top">
+<p>25</p>
+</td>
+</tr>
+<tr>
+<td width="128" valign="top">
+<p>A2</p>
+</td>
+<td width="128" valign="top">
+<p>13</p>
+</td>
+<td width="128" valign="top">
+<p>7</p>
+</td>
+<td width="128" valign="top">
+<p>4</p>
+</td>
+<td width="128" valign="top">
+<p>24</p>
+</td>
+</tr>
+<tr>
+<td width="128" valign="top">
+<p>N2</p>
+</td>
+<td width="128" valign="top">
+<p>14</p>
+</td>
+<td width="128" valign="top">
+<p>7</p>
+</td>
+<td width="128" valign="top">
+<p>3</p>
+</td>
+<td width="128" valign="top">
+<p>24</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</div>A1 -> 24 points<br>N1 -> 25 points<br>A2 -> 24 points<br>N2 -> 24 points<br>Winning team: <h3 style='display:inline;color:red;'>PoP: Power of People (Negative team)</h3></div><hr><h3 class='important'>We want your opinion! for this you need to login.</h3>
+                <div class='clear'></div>
+        </div><!-- end main content -->
+         <div class='clear'></div>
+</div>
+<div id="pix"></div>
+                                </div><!--end main -->
+                                <div id='parteneri'>
+                                    <span class='tr'></span><span class='tl'></span><span class='br'></span><span class='bl'></span><span id="filler"></span>
+                                    <div class='parteneri' id='sustinatori'>
+                                        <span class='floating_text' id='un_proiect'>Un proiect</span>
+                                        <a href='https://www.facebook.com/Diwanieh'><div class='image' id='diwanieh' >Diwanieh</div></a>
+                                        <a href='http://www.ardor.org.ro/'><div class='image' id='ardor'>Ardor</div></a>
+										<a href='http://www.annalindhfoundation.org/'><div class='image' id='anna_lindh'>Anna Lindh Foundation</div></a>
+                                        <!-- 
+                                        <span class='floating_text' id='finantatori'>Finanțatori</span>
+										<a href='http://www.opensocietyfoundations.org/'><div class='image' id='open_society'>Open Society Foundation </div></a>
+                                        <a href='http://www.studentiq.ro//'><div class='image' id='memoplus'>MemoPlus</div></a>
+                                        <a href='http://www.ratiufamilyfoundation.com/'><div class='image' id='FundatiaRatiu'>Ardor</div></a>
+                                        <a href='http://www.eef.md/'><div class='image' id='eef'>East Europe Foundation</div></a>
+                                        <a href='http://www.mts.gov.md/'><div class='image' id='mdminister'>Ministerul Tineretului si Sportului al Republicii Moldova</div></a> -->
+
+                                        <span class='floating_text' id='parteneri_text'>Parteneri</span>
+
+                                        <a href='http://www.policycenter.eu/'><div class='image' id='PolicyCenter'>Policy Center</div></a>
+                                        <a href='http://www.britishcouncil.org/'><div class='image' id='BritishCouncil'>British Council</div></a>
+                                        <a href='http://www.europuls.ro/'><div class='image' id='europuls'>Europuls</div></a>
+                                        <a href='http://www.cere.ro/'><div class='image' id='cere'>Ce-Re</div></a>
+                                        <a href='http://www.primeromania.ro/'><div class='image' id='prime'>Prime Romania</div></a>
+                                        <a href='http://www.cji.ro/'><div class='image' id='cji'>Centrul pentru jurnalism independent</div></a>
+                                        <a href='http://www.aiesectm.ro/'><div class='image' id='aisec'>Aisec</div></a>
+                                        <!-- ===================================================================================================== -->
+                                        <a href='http://www.cogitus.ro/'><div class='image' id='cogitus'>Cogitus</div></a>
+                                        <a href='http://www.adevarul.ro/international/foreign_policy/'><div class='image' id='foreignPolicy'>Foreign Policy</div></a>
+                                        <a href='http://www.elsa.ro/'><div class='image' id='elsa'>Elsa</div></a>
+                                        <a href='http://www.vipromania.ro/'><div class='image' id='vipromania'>Voluntari pentru idei si proiecte</div></a>
+                                        <a href='http://www.ongtrust.ro/'><div class='image' id='ongtrust'>Trust</div></a>
+
+                                        <!-- ===================================================================================================== -->
+                                        <a href='http://www.leap.ro/'><div class='image' id='leap'>Leap</div></a>
+                                        <a href='http://www.younginitiative.org/'><div class='image' id='younginitiative'>Asociatia young initiative</div></a>
+                                        <a href='http://www.asjc.ro/'><div class='image' id='asjc'>Asjc</div></a>
+                                        <a href='http://osut.ro/'><div class='image' id='osut'>Osut</div></a>
+                                        <div class='clear'></div>
+                                    </div>
+                                    <div class='parteneri' id='parteneri_institutionali'>
+                                        <span class='floating_text' id='sponsori_text'>Sus&#539;in&#x0103;tori</span>
+                                        <a href='http://www.cartier.md/'><div class='image' id='cartier_logo'>Editura Cartier</div></a>
+                                        <a href='http://www.pll.md/ro/'><div class='image' id='biblio_logo'>Biblioteca publica de drept</div></a>
+                                        <span class='floating_text' id='institutii_text'>Parteneri institu&#539;ionali</span> 
+                                        <ul id='institutii'>
+                                            <!-- <span class='floating_text' id='institutii_text'>Parteneri institu&#539;ionali:</span> -->
+                                            <li><a href='http://www.politice.ro/'>Facultatea de &#536;tiin&#539;e Politice SNSPA </a></li>
+                                            <li><a href='http://www.comunicare.ro/'>Facultatea de Comunicare &#537;i Rela&#539;ii Publice SNSPA</a></li>
+                                            <li><a href='http://www.fspub.ro/'>Facultatea de &#536;tiin&#539;e Politice Universitatea Bucure&#537;ti</a></li>
+                                            <li><a href='http://www.filosofie.unibuc.ro/'>Facultatea de Filosofie Universitatea Bucure&#537;ti</a></li>
+                                            <li><a href='http://litere.unibuc.ro/'>Facultatea de Litere din Universitatea Bucure&#x015f;ti</a></li>
+                                            <li><a href='http://www.unibuc.ro/ro/fac_fsas_ro'>Facultatea de Sociologie Universitatea Bucure&#537;ti</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class='parteneri' id='parteneri_media'>
+                                        <span class='floating_text' id='media_text'>Parteneri media</span>
+                                        <a href='http://www.hotnews.ro/'><div class='image' id='hotnews'>HotNews</div></a>
+                                        <!-- <a href='http://www.lumebuna.ro/'><div class='image' id='lumebuna'>Lume Buna</div></a> -->
+                                        <a href='http://www.romaniapozitiva.ro/'><div class='image' id='romaniapozitiva'>Romania Pozitiva</div></a>
+                                        <a href='http://totb.ro/'><div class='image' id='thinkoutsidethebox'>Think Outside The Box</div></a>
+                                        <a href='http://www.facebook.com/carevasazica.vip'><div class='image' id='carevasazica'>Carevasazica</div></a>
+                                        <a href='http://www.studentie.ro/'><div class='image' id='studentiero'>Studentie.ro</div></a>
+                                        <a href='http://startub.unibuc.ro/'><div class='image' id='startub'>startub.unibuc.ro</div></a>
+                                        <!-- <a href='http://www.tvr.ro/tvr_cluj.php'><div class='image' id='tvrcluj'>Tvr Cluj</div></a> -->
+                                        <!-- <a href='http://www.radiotransilvania.ro'><div class='image' id='radiotransilvania'>Radio Transilvania</div></a> -->
+                                        
+
+                                        <div class='clear'></div> 
+                                    </div>
+                                    <div class='clear'></div>
+
+                                </div>	
+                            </div>	<!-- end wrap -->
+                            <div id='footer_mare'>
+                                <div id='footer'>
+                                    <div id='links' class='footer'>
+                                        
+                                    </div><!--
+                                    <div id='contact' class='footer'>
+                                            <h4>Contact</h4>
+                                            <p>office@closer2oxford.ro</p>
+                                            <p>bogdan.draghicescu@closer2oxford.ro<br>
+                                            <span class='detalii'> (asistenta tehnica web - orice probleme legate de site)</span></p>
+                                    </div>
+                                    -->
+                                    <div id='newsletter' class='footer'>
+                                        <script src="../../../../../connect.facebook.net/en_US/all.js#xfbml=1"></script><fb:like href="http://www.facebook.com/pages/Closer2Oxford/162758797069605" width="250" colorscheme="dark"></fb:like>
+                                        <!--<h4>Newsletter</h4>
+                                        <form action='/page/newsletter'>
+                                                <input type='text' name='email'>
+                                                <input type='submit' id='submit' value='>'>
+                                                        
+                                        </form>-->
+                                    </div>
+                                    <div id='credits'>
+                                        Copyright(c) 2021 ARDOR |  Toate drepturile rezervate | Toate logo-urile si sloganurile de pe site sunt proprietate intelectuala inregistrata si nu pot fi reproduse fara acordul explicit al detinatorilor. <br>
+                                            <br /><br />
+                                            <b>Disclaimer</b><br /><i>
+
+                                                Programul educational Closer to Oxford este un program non-profit si nu are o legatura cu universitatea cu acelasi nume, referirea la Oxford avand doar o semnificatie simbolica.
+                                            </i>
+                                    </div>
+
+                                </div>		
+                            </div>		
+
+                            <div id="finantatde">Acest proiect este finantat cu sustinere din partea Comisiei Europene. Aceast publicatie [comunicare] reflecta doar
+                                vederile autorului, iar Comisia nu poate fi facuta  responsabila pentru utilizarea informatiei pe care o contine.</div>
+
+
+                        </body>
+                        </html>

@@ -1,0 +1,621 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml-strict.dtd">
+<HTML xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+    <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+            <link rel="icon" type="image/png"  href="../../../../../closer2oxford.ro/favicon.html">
+                <link rel="stylesheet" href="../../../var/layout.css" type="text/css">
+                    <title>Closer to Oxford - e timpul pentru argumente!</title>
+                    <link rel="alternate" type="application/rss+xml"  href="../../../rss_feed" title="Stiri Closer2Oxford">
+                        <!-- <link rel="image_src" property="og:image"  href="/images/layout/closer2oxford_fb_white.png" /> -->
+                        <link rel="image_src" property="og:image"   type="image/jpeg"  href="../../../../uploads/2015/06/9/facebook_icon.html" />
+                        <link rel="image_src" type="image/jpeg"  href="../../../../uploads/2015/06/9/icon-facebook.gif" /> 
+						<meta name="description" content="Closer2Oxford pune în valoare oameni şi argumentele lor, în dezbateri online şi publice alături de tineri şi invitați avizaţi"/>
+                        <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9" />
+<script type='text/javascript' src='../../../../js/jquery-1.4.4.min.js'></script>
+<script>var $j = jQuery.noConflict();</script>
+<script type='text/javascript' src='../../../../js/tinymce/tiny_mce.js'></script>
+<script type='text/javascript' src='../../../../js/jquery.form.js'></script>
+<script type='text/javascript' src='../../../../js/fbLoginRegister.js'></script>
+<script type='text/javascript' src='../../../var/javascript.js'></script>
+<script type='text/javascript' src='../../../../js/jquery.hovertip-1.0.min.js'></script> 
+<script type='text/javascript' src='../../../../js/jquery.jgrowl_minimized.js'></script> 
+<link rel='stylesheet' href='../../../../css/jquery.jgrowl.css' media='screen' type='text/css'> 
+<script type='text/javascript' src='../../../../js/jquery.timer-min.js'></script> 
+<style>.hovertip{
+    position:absolute;
+    padding:10px 13px;
+    z-index:2;
+    max-width:300px;
+    color:#303030;
+    background-color:#f5f5b5;
+    border:1px solid #DECA7E;
+    font-family:sans-serif;
+    font-size:12px;
+    line-height:18px;
+    text-align:left;
+    }
+           .normal_text ol,.normal_text ol *{text-align:left !important}
+           .normal_text *{font-weight:normal !important;font-size:12px !important;font-face:tahoma !important}</style> 
+<script type='text/javascript'>$j(document).ready(function(){$j('.tooltip').hovertip({'offset':[20,20]});get_notif();});
+
+if(!Array.indexOf){Array.prototype.indexOf = function(obj){for(var i=0; i<this.length; i++){if(this[i]==obj){return i;}}return -1;}}
+    hashuri = [] ;
+	 var tick_timer= 3000 ;
+ 
+	 function get_notif()
+        {
+		  
+		  //console.log(tick_timer);
+	     
+		  setTimeout(get_notif,tick_timer);
+        
+		   $j.ajax(
+            {
+                url: '/page/notif/show_events',
+                dataType: 'json',
+                data: "{}",
+                success: function(data)
+                    {
+                    $j.each(data,function(index,data){
+                        try
+                            {
+                            if( hashuri.indexOf(data.hash) == -1 )
+                                {
+                                hashuri.push(data.hash);
+                                $j.jGrowl(
+                                    data.str,
+                                    {
+                                        corners:'1px',
+                                        life: data.life,
+                                        header:data.title,
+                                        hash: data.hash,
+                                        sticky: data.sticky,
+                                        close: function(e,m,o)
+                                            {
+                                                $j.ajax({url:'/page/notif/delete_single_event/' + o.hash});
+                                            }
+                                    });
+                                }
+                            }
+                        catch(e){}
+                        })
+                    }
+            });
+        }
+	 </script> 
+ 
+                            
+  <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-19111721-1']);
+  _gaq.push(['_setDomainName', '.closer2oxford.ro']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+    
+                        </head>
+                        <body>
+                            <div id="global_wrap">
+                                <div id="header">
+                                    <a href='../../../../index.html'><div id='logo'><img src='../../../../images/layout/sigla.jpg'></div></a>
+                                    <a class='noExternal' href='http://www.facebook.com/pages/Closer2Oxford/162758797069605'><img src='../../../../images/fb.png' style='height:30px;float:right;clear:right;margin:10px 5px 5px 5px;border:none;'/></a>
+                                    <a href='../../../rss_feed'><img src='../../../../images/feed-icon.png' style='height:30px;float:right;clear:right;margin:5px;border:none;'/></a>
+                                </div>
+                                <div id="meniu">
+                                    <div  id='register_login'>
+
+                                        
+  <a href='#' class='todo' id='login'>Login </a> &nbsp;<a href='../../../register.html' class='todo' id='register'>Register</a>
+    <div id='login_box'>
+		  <form action='https://dev.closer2oxford.ro/page/ro/login_user/logon' method='post' id='user_login_form'>
+					 <div>Email: <input type='text' name='email'/> </div><br />
+					 <div>Pass: <input type='password' name='passwd'/></div><br />
+					 <a href='#' class='password_forgot'>forgot password?</a>
+					 <input type='hidden' value='/page/ro/vezi_meciuri/351/' name='returnto' class='submiter'/><br />
+					 <input type='submit' value='login' name='btn' class='submiter'/><br />
+		  </form>
+		  
+		  <form action='https://dev.closer2oxford.ro/page/ro/login_user/reset_user_pw' method='post' id='user_reset_form'>
+					 <div>Email: <input type='text' name='email'/> </div><br />
+					 <a href='#' class='password_forgot'>login?</a>
+					 <input type='hidden' value='/page/ro/vezi_meciuri/351/' name='returnto' class='submiter'/><br />
+					 <input type='submit' value='reset' name='btn' class='submiter'/><br />
+		  </form>
+		  
+    </div>
+    
+                                    </div>
+                                    <div id='menu1' style='margin:auto;'> <ul id='meniu_prinicpal'><li><a href='../../../contacte/index.html'> Contact </a></li>
+<li><a href='../../../clubdebate/index.html'> Cluburile </a></li>
+<li><a href='../../../oamenii/index.html'> Oamenii </a></li>
+<li><a href='../../../proiectul/index.html'> Proiectul </a></li>
+<li><a href='../../../home/index.html'> Acasa </a></li>
+</ul></div><!--end menu-->
+                                </div>
+                                <div id="main"> 
+                                    <!--<div id='stiri-padding'>
+        <div id='stiri_back'>
+                {stiri} 
+    
+               
+        </div>-->
+        
+</div>
+<div  id="content-padding">
+        <div id='sidebar_menu'>
+                <span class='tr'></span>
+                <span class='tl'></span>
+                <span class='br'></span>
+                <span class='bl'></span>
+                <span id="filler"></span>
+                    
+                <ul></ul>
+                
+                <div class='clear'></div>
+        </div>
+        <div id="content">
+                <span class='tr'></span>
+                <span class='tl'></span>
+                <span class='br'></span>
+                <span class='bl'></span>
+                <span id="filler"></span>
+                  <script>
+        $j(document).ready(function(){
+        $j('.discurs_toggler').toggle(
+                function(){
+                $j(this).attr('src', '../../../../images/little_stuff/16-em-down.png');   
+                $j(this).parent().next('.discurs').hide('fast');
+                },
+                function(){
+                $j(this).attr('src', '../../../../images/little_stuff/16-em-up.png');
+                $j(this).parent().next('.discurs').show('fast');
+                });
+            });
+        </script><style>.nowrap{white-space: nowrap;}
+		.noJustify{text-align:left;}
+		</style><h2 class='noJustify'><span class='nowrap'>'Cristina si Andrei'</span> <span class='notif'>(afirmatori)</span> vs <span class='nowrap'>'Nicoleta si Viorica'</span> <span class='notif'>(negatori)</span></h2><h3>A1 (Cristina Beatrice Condrea) <img src='../../../../images/little_stuff/16-em-up.png' class='discurs_toggler'></h3>
+            <div class='discurs normal_text'><p>&nbsp; &nbsp; &nbsp;Situația prezentă dezvăluie o societate &icirc;n curs de modernizare. Din ce &icirc;n ce mai multe minorități sau grupuri de persoane care au avut o situație nefavorabilă &icirc;n trecut și-au &icirc;nceput expansiunea socială cer&icirc;ndu-și anumite drepturi &icirc;n numele egalității. Aceste acțiuni s&icirc;nt privite ca deviante, iar prima reacție a majorității este să se &icirc;mpotrivească izol&icirc;nd factorii devianți &icirc;n speranța că &icirc;n timp vor accede la normalitate. Tendința este una normală normală: fiecare sistem caută să &icirc;și păstreze caracteristicile &icirc;n numele stabilității. Totuși, schimbarea socială are loc, fiind absolut necesară pentru o societate sănătoasă. O societate inflexibilă, care nu &icirc;și adaptează sistemele &icirc;n funcție de nevoile populației devine anomică. Socialul și contracultura nu mai lucrează &icirc;n tandem, ajung&icirc;ndu-se la ciocnici de multe ori violente (revoluții, reforme, lovituri de stat etc.) &nbsp;Devinața devine un factor pozitiv &icirc;n procesul schimbării sociale pentru că &icirc;n urma acestor acte deviante societate se adaptează la noile tendințe ale umanității. &Icirc;n funcție de efecte devianța poate fi pozitivă (c&icirc;nd duce la o schimbare socială) sau negativă (c&icirc;nd faptul deviant este izolat și eliminat).&nbsp;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp; Moțiunea discutată &icirc;n această dezbatere &bdquo;E timpul să afirmăm că parada Gay Pride este o necesitate?&rdquo;&nbsp; are ca fundament ideea de schimbare socială.&nbsp; Pentru o dezbatere sănătoasă și lipsită de contradicții trebuie &icirc;nt&icirc;i să definim termenii.</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;Conceptul de gay pride reprezintă atitudinea de m&icirc;ndrie și stimă de sine &icirc;n raport cu afirmarea sexualității a persoanelor gay.&nbsp; Parada Gay Pride este o manifestare la nivelul comunității gay, prin care aceștia se &icirc;mpotrivesc discriminării și violențelor la care s&icirc;nt supuși, și de asemenea &icirc;ncearcă să &icirc;și afirme prezența &icirc;n spațiul socio-cultural &icirc;n care trăiesc.</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp; Termenul de &ldquo;necesitate&rdquo; indică &ldquo;ceea ce se cere, se impune să se facă; ceea ce este de absolută trebuință; trebuință, nevoie&rdquo;<a  href="#400d1">[1]</a>.</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp; Primul argument pe care &icirc;l vom expune se sprijină pe conceptul modern de <em>egalitate de șanse</em>. O dată cu evoluția societății, individul primește din ce &icirc;n ce mai multă libertate &icirc;n manifestare și &icirc;n g&icirc;ndire, d&icirc;nd naștere unor noi tendințe &icirc;n acord cu noile sale nevoi. Aceste noi tendințe se confruntă cu un refuz din partea majorității conservatoare, și de aceea trebuie să stăruie o perioadă de timp p&icirc;nă c&icirc;nd vor fi acceptate. &Icirc;n cazul homosexualității una din probleme este reprezentată de heterosexualitatea spațiului public. &Icirc;n acceptarea fenomenului gay, majoritatea conformistă trebuie să treacă prin diferite etape: prima a fost negarea fenomenului. Persoanele gay au fost considerate instabile mental, &nbsp;homosexualitatea a fost privită ca un capriciu, ca o tendință ce după un timp va dispărea. &nbsp;Fenomenul s-a dovedit a fi mai puternic &icirc;nsă, iar acum, următorul pas este să &icirc;și c&icirc;știge locul &icirc;n normalitate. Pentru ca acest lucru să se &icirc;nt&icirc;mple, homosexualitatea trebuie să evadeze din spațiul privat, și să devină cunoscută și acceptată ca parte integrată a spațiului public. Vocile care susțin că acest fenomen ar trebui să răm&icirc;nă &icirc;n spatele unor cortine, care să le ascundă publicului, nu fac altceva dec&icirc;t să susțină ideea că homosexualitatea este un fenomen trecător ce se va dizolva &icirc;n normalitate.&nbsp; Această atitudine este doar rezultatul poziționării heterosexualității drept normă universală căreia trebuie să se supună toți membrii societății, iar homosexualitatea este privită ca o caracteristică prezentă la niște indivizi izolați, o deviere de la normalitate, care trebuie eliminată prin izolare. Fenomenul homosexualității prezintă &icirc;nsă rădăcini ad&icirc;nci at&icirc;t din punct de vedere temporal c&icirc;t și biologic. Nu este doar o tendință a unei minorități instabile și incerte. De aceea membrii comunității gay trebuie să se impună &icirc;n spațiul public, să demonstreze că s&icirc;nt și vor răm&icirc;ne printre ceilalți membri ai societății, și de aceea merită să fie considerați egalii acestora. Parada Gay Pride este primul pas &icirc;n acceptarea homosexualitații ca fenomen normal și &icirc;n integrarea persoanelor gay. Prin această manifestare se &icirc;ncearcă o schimbare la nivelul mentalității indivizilor, pentru a se obține o permisivitate din partea majorității. &Icirc;n urma schimbării mentalității va avea loc și o schimbare socială, iar fenomenul gay va fi ajunge doar o altă dimensiune a societății, care nu va mai ridica probleme. Existența unor atitudini negative care doresc să cenzureze mișcarea gay nu face dec&icirc;t să susțină necesitatea acestor manifestări ale homosexualității &icirc;n spațiul public, astfel &icirc;nc&icirc;t majoritatea conservatoare să se conformeze cu noul fenomen și să &icirc;l accepte.</p>
+<p>Referințe:</p>
+<ol>
+<li>Dexonline</li>
+<li>A. Ogien, <em>Sociologia devianței, </em>ed. Polirom, 2002</li>
+<li><a href="../../../../../www.brickell.co.nz/docs/heroesinvaders.html">http://www.brickell.co.nz/docs/heroesinvaders.pdf</a></li>
+</ol>
+<div><br /> 
+<hr size="1" />
+<div>
+<p><a  name="400d1">[1]</a> dexonline</p>
+</div>
+</div>
+</div><hr><h3>N1 (Viorica Mosoi) <img src='../../../../images/little_stuff/16-em-up.png' class='discurs_toggler'></h3>
+            <div class='discurs normal_text'><p>&nbsp; &nbsp;&Icirc;ntr-o societate a cărei bază și temelie a fost pusă pe valori cum ar fi credința &icirc;n Dumnezeu, familia, tradiții și obiceiuri transmise din generații &icirc;n generații, este dificil de a infiltra noi valori at&acirc;ta timp c&acirc;t acest sistem este &ldquo;sănătos&rdquo;, integru. Dacă au apărut anumite grupuri sociale cu o altă orientare &icirc;ntr-un astfel de sistem deja evoluează spre o altă formă de coexistență. Astfel, homosexualitatea este interpretată drept&nbsp; &rdquo;perversiune sexuală care constă &icirc;n atracția sexuală față de indivizi de același sex; pederastie, inversiune sexuală&rdquo;,<a  href="#5cb51">[1]</a> iar afirmarea publică a permisivității &nbsp;faţă de această comunitate nu este dec&acirc;t o accepțiune a lucrurilor antiortodoxe. &Icirc;n discursul afirmatorilor heterosexualitatea este denumită problemă a homosexualității, iar paradele Gay o indispensabilitate a acceptării acestui fenomen ca unul normal. Ştim cu toții că libertatea unora se termină&nbsp; acolo, unde &icirc;ncepe libertatea altora, iar raportul &nbsp;Lunacek, o nouă formă a paradelor Gay, o formă a politicului &nbsp;servește exclusiv pentru suprimarea exprimării opoziției publice față de stilul de viață homosexual și față de agenda homosexuală<strong>, </strong><strong>&bdquo;minoritățile sexuale&rdquo; fiind transformate astfel &icirc;n grupuri privilegiate &icirc;n fața legii. </strong><a href="file:///D:/Arhiva/CLOSER2OXFORD/LGBT.docx#_ftn2"><strong><strong>[2]</strong></strong></a></p>
+<p>Primul și unicul argument invocat de către afirmatori &ndash; egalitatea de șanse, susține &icirc;n general comunitatea LGBT, tratarea acestora &icirc;n societate la fel cu heterosexualii, dar nu este corelat prin dovezi cu necesitatea organizării paradelor Gay Pride. Av&acirc;nd aceleași drepturi, aceștia pot să desfășoare aceleași activități, respectiv să-și asume aceleași obligații. Astfel, din faptul că &ldquo;statul respectă și ocrotește viața intimă, familială și privată&rdquo;<a  href="#5cb53">[3]</a> fără ca aceștia să-și susțină orientarea sexuală prin manifestări publice. Mircea Solcanu, homosexual declarat și prezentator TV din Rom&acirc;nia, susține: &ldquo;e total deplasat să organizezi așa ceva. Nu au o idee, un țel, ceva pentru care ies &icirc;n stradă... aiurea in tramvai, zice o vorbă&rdquo;<a  href="#5cb54">[4]</a> . Astfel, din cele menționate derivă lipsa necesității și scopului organizării paradelor de acest gen.</p>
+<p>Pentru a susține poziția noastră &ndash; paradele Gay Pride nu sunt necesare și trebuie interzise, aducem următoarele argumente:</p>
+<p>&Icirc;n primul r&acirc;nd, paradele Gay Pride creează o imagine negativă despre comunitatea LGBT. Datorită comportamentului neadecvat al acestora, stilului vestimentar adoptat, uneori fiind extrem de sumar și vulgar, oamenii care au avut păreri favorabile despre gay, după participarea la paradele desfășurate de aceștia și-au schimbat impresiile despre ei datorită comportamentului exagerat. Această idee este susținute chiar și de persoane care și-au recunoscut homosexualitatea, Răzvan Ciobanu susțin&acirc;nd: &ldquo;Gay nu &icirc;nseamnă bărbați &icirc;mbrăcați &icirc;n femei. Mă g&acirc;ndesc cu jenă că oamenii mă pot judeca, că pot fi unul ca ei. Sunt bărbat, mă comport ca atare.&nbsp;&rdquo;<a  href="#5cb55">[5]</a> Astfel, odată ce &icirc;nsăși membrii comunității LGBD recunosc că aceste manifestări publice nu promovează valorile acestora și le creează o imagine nefavorabilă, paradele trebuie interzise.</p>
+<p>&Icirc;n al doilea r&acirc;nd, paradele Gay Pride provoacă acte de violență. Chiar dacă scopul &icirc;n sine al acestor demonstrații este unul pașnic, la aceste evenimente deseori iau parte grupări extremiste<a  href="#5cb56">[6]</a> care reprezintă o amenințare at&acirc;t pentru participanții homosexuali c&acirc;t și pentru susținătorii acestora<a  href="#5cb57">[7]</a>. Astfel, pentru a &icirc;nlătura confruntările dintre grupurile respective și pentru a evita consecințele acestora, paradele Gay trebuie interzise.</p>
+<p>&Icirc;n concluzie, din ideile menționate reiese lipsa necesității organizării acestor manifestări odată cu acceptarea homosexualilor ca o normalitate, și totodată din cauza inexistenței unui scop definit al acestor evenimente. Deoarece aceste parade au ca rezultat efecte negative at&acirc;t asupra participanților c&acirc;t și a altor persoane ce nu au un interes direct &icirc;n aceste manifestări, trebuie interzise.</p>
+<div><br /> 
+<hr size="1" />
+<div>
+<p><a  name="5cb51">[1]</a> DEX, obținut pe 17 februarie 2014 de pe:</p>
+<p><a href="http://www.dex.ro/homosexualitate">http://www.dex.ro/homosexualitate</a></p>
+</div>
+<div>
+<p><a  href="#5cb52">[2]</a> MOBILIZARE: solicitați eurodeputaților rom&acirc;ni să respingă Raportul &bdquo;Lunacek&rdquo;!,(2014), obținut pe 17 februarie 2014 de pe:</p>
+<p>&nbsp;<a href="http://www.culturavietii.ro/2014/01/30/mobilizare-solicitati-eurodeputatilor-romani-sa-respinga-raportul-lunacek/#.UwKEzvmSzAv">http://www.culturavietii.ro/2014/01/30/mobilizare-solicitati-eurodeputatilor-romani-sa-respinga-raportul-lunacek/#.UwKEzvmSzAv</a></p>
+</div>
+<div>
+<p><a  name="5cb53">[3]</a> Art. 28 din Constituția Republicii Moldova</p>
+</div>
+<div>
+<p><a  name="5cb54">[4]</a> Mircea Solcanu, &icirc;mpotriva Marșului GAY, (2012), obținut pe 17 februarie 2014 de pe:</p>
+<p>&nbsp;<a href="http://www.libertatea.ro/detalii/articol/mircea-solcanu-prezentator-tv-mars-gay-401420.html">http://www.libertatea.ro/detalii/articol/mircea-solcanu-prezentator-tv-mars-gay-401420.html</a></p>
+</div>
+<div>
+<p><a  name="5cb55">[5]</a> I. Tomescu,(2011), Răzvan Ciobanu: "Mă revoltă paradele gay, mi-ar veni să dau cu roşii", obținut pe 17 februarie 2014 de pe:</p>
+<p><a href="http://www.click.ro/vedete/romanesti/Razvan-Ciobanu-revolta-paradele-rosii_0_1295270461.html">http://www.click.ro/vedete/romanesti/Razvan-Ciobanu-revolta-paradele-rosii_0_1295270461.html</a></p>
+</div>
+<div>
+<p><a  name="5cb56">[6]</a> G.C.P.,(2013), Prima paradă gay din Muntenegru a fost marcată de violenţe, obținut pe 17 februarie 2014 de pe:</p>
+<p><a href="http://www.antena3.ro/externe/prima-parada-gay-din-muntenegru-a-fost-marcata-de-violente-222341.html">http://www.antena3.ro/externe/prima-parada-gay-din-muntenegru-a-fost-marcata-de-violente-222341.html</a></p>
+</div>
+<div>
+<p><a  name="5cb57">[7]</a> (2010), Parada Gay victimă de skinheads, obținut pe 17 februarie 2014 de pe:</p>
+<p><a href="http://www.presseurop.eu/ro/content/news-brief/257821-parada-gay-victima-de-skinheads">http://www.presseurop.eu/ro/content/news-brief/257821-parada-gay-victima-de-skinheads</a></p>
+
+</div>
+</div>
+<!-- marcator referinte --><p>[1] DEX, obținut pe 17 februarie 2014 de pe:</p>
+<p><a href="http://www.dex.ro/homosexualitate">http://www.dex.ro/homosexualitate</a></p>
+<p>[1] MOBILIZARE: solicitați eurodeputaților rom&acirc;ni să respingă Raportul &bdquo;Lunacek&rdquo;!,(2014), obținut pe 17 februarie 2014 de pe:</p>
+<p>&nbsp;<a href="http://www.culturavietii.ro/2014/01/30/mobilizare-solicitati-eurodeputatilor-romani-sa-respinga-raportul-lunacek/#.UwKEzvmSzAv">http://www.culturavietii.ro/2014/01/30/mobilizare-solicitati-eurodeputatilor-romani-sa-respinga-raportul-lunacek/#.UwKEzvmSzAv</a></p>
+<p>[1] Art. 28 din Constituția Republicii Moldova</p>
+<p>[1] Mircea Solcanu, &icirc;mpotriva Marșului GAY, (2012), obținut pe 17 februarie 2014 de pe:</p>
+<p>&nbsp;<a href="http://www.libertatea.ro/detalii/articol/mircea-solcanu-prezentator-tv-mars-gay-401420.html">http://www.libertatea.ro/detalii/articol/mircea-solcanu-prezentator-tv-mars-gay-401420.html</a></p>
+<p>[1] I. Tomescu,(2011), Răzvan Ciobanu: "Mă revoltă paradele gay, mi-ar veni să dau cu roşii", obținut pe 17 februarie 2014 de pe:</p>
+<p><a href="http://www.click.ro/vedete/romanesti/Razvan-Ciobanu-revolta-paradele-rosii_0_1295270461.html">http://www.click.ro/vedete/romanesti/Razvan-Ciobanu-revolta-paradele-rosii_0_1295270461.html</a></p>
+<p>[1] G.C.P.,(2013), Prima paradă gay din Muntenegru a fost marcată de violenţe, obținut pe 17 februarie 2014 de pe:</p>
+<p><a href="http://www.antena3.ro/externe/prima-parada-gay-din-muntenegru-a-fost-marcata-de-violente-222341.html">http://www.antena3.ro/externe/prima-parada-gay-din-muntenegru-a-fost-marcata-de-violente-222341.html</a></p>
+<p>[1] (2010), Parada Gay victimă de skinheads, obținut pe 17 februarie 2014 de pe:</p>
+<p><a href="http://www.presseurop.eu/ro/content/news-brief/257821-parada-gay-victima-de-skinheads">http://www.presseurop.eu/ro/content/news-brief/257821-parada-gay-victima-de-skinheads</a></p>
+
+</div><hr><h3>A2 (andrei siminiciuc) <img src='../../../../images/little_stuff/16-em-up.png' class='discurs_toggler'></h3>
+            <div class='discurs normal_text'><p>Argumentul principal, egalitatea in sanse, libertatea, drepturi egale, reprezinta un ideal inspre care societatea noastra tinde si fiecare dintre noi ar trebui sa il sustina. Paradele Gay Pride reprezinta o libertate a unui grup mare de oameni de a se exprima, libertate care este permisa multor altor comunitati doar pentru ca reprezinta majoritatea. Extravaganta paradei ajuta la desensibilizarea publicului asupra acestui fenomen, reactie dorita intr-o tara europeana. In numele libertatii si egalitatii, trebuie sa acceptam alte opinii, alte atitudini, alte culturi, &nbsp;iar aceasta acceptare inseamna aducerea lor in sfera normalului.</p>
+<p>Suntem o societate a carei baza a fost pusa pe valori precum credinta, famile, traditii dar aceste valori nu sunt impotriva homosexualitatii; intradevar sunt anumite persoane din cadrul bisericii care numesc homosexualitatea drept o deviatie si un pericol impotriva familiei, traditiilor dar este doar o opinie personala in mare parte si nu o parere umanim acceptata. De exemplu: Papa insusi indeamna spre o atitudine toleranta in aceasta privinta [1]. Observam o tendinta mondiala de acceptare a acestui fenomen; in Romania fiind in dezbatere posibilitatea legalizarii căsătorii &icirc;ntre persoane de același sex[2]. Chiar si definitia cuvantului a fost imbunatatita, daca in trecut in Dex homosexualitatea era definita drept "Perversiune sexuală care constă &icirc;n atracția sexuală față de indivizi de același sex; pederastie, inversiune sexuală, invertire sexuală. Dex 1998", noua definitie este "Sexualitate a unui homosexual; pederastie, inversiune sexuală, invertire sexuală. Dex 2012" sau in functie de sursa "Stare de atracție sexuală față de indivizi de același sex; pederastie."[3][4]</p>
+<p>Parada gay nu este o parada a unui mic grup de oameni din o anumita comunitate. Homosexualitatea este prezenta in orice ramura a societatii iar procentul de homosexuali este mult mai mare decat multi vor sa admita. Cifrele variaza mult in functie de studii, de exemplu in SUA, procentul variaza intre 3.8%[5] si 19%[6]; chiar si luand in considerare cel mai mic procent, numarul este prea mare pentru a fi ignorat sau pentru a li se restrictiona dreptul la o viata normala. Participantii la parada sunt doar un mic procent al comunitatii gay dar chiar si asa isi declara in fara publicului prezenta si poate ajuta la desensibilizarea in anumite aspecte, precum vestimentatie mai excentrica sau doveziile de afectiune dintre homosexuali care nu ar trebui sa starneasca nici o reactie violenta sau profund negativa in o persoana civilizata.</p>
+<p>O opinie pozitiva sau negativa a unor persoane asupra comunitatii LGBT sau a paradelor Gay trebuie sa fie consideranta irelevanta, deoarece nu trebuie sa acceptam doar ce ne place si sa respingem sau sa interzicem ce nu ne place. Opinia persoanala nu trebuie sa conteze mult in anumite decizii care tin de libertatea individului, precum a ajunge sa interzici o manifestare doar pe motive personale de preferinte sau pe principii morale vagi. Normalul in imbracaminte sau comportament variaza mult de la o regiune geografica la alta sau de la o comunitate la alta, un exemplu evident fiind Kilt-ul scotian, care este practic o fusta, purtata de barbati. Răzvan Ciobanu spunea &ldquo;Gay nu &icirc;nseamnă bărbați &icirc;mbrăcați &icirc;n femei" - fapt complet adevarat si cunoscut [7] iar publicul trebuie educat sa nu confunde acest tip de comportament cu homosexualitatea, confuzie de altfel destul de frecventa. Dar aceasta confuzie nu poate fi un motiv pentru a interzice paradele la fel cum nici nemultumirea unor membrii a comunitatii LGBT, nu inseamna ca vor sa o interzica.</p>
+<p>Anumite grupari extremiste provoaca acte de violenta in cadrul acestor parade la origine pasnica iar vina le revine doar lor, fiind agresori neprovocati. Aceste acte de violenta nu trebuie tolerate iar cei care le provoaca trebuie sa raspunda in fata legii. De altfel, a interzice paradele din cauza acestor grupari este o greseala, cedand in fata violentei si a comportamentului antisocial, lasand impresia unui stat slab care nu poate asigura ordinea interna.</p>
+<p>In concluzie, Paradele Gay reprezinte o necesitate, in special in cadrul unui stat cu mentalitati conservatoare, ele find nu doar o dovada a faptului ca Homosexualitatea exista si nu va disparea daca ignoram fenomenul sau nu ii acceptam dar ajuta restul populatiei sa fie mai tolerant si mai civilizat, prin acceptare si diversitate.&nbsp;</p><!-- marcator referinte --><p>[1] http://www.nytimes.com/2013/09/20/world/europe/pope-bluntly-faults-churchs-focus-on-gays-and-abortion.html?_r=0</p>
+<p>[2] http://ro.wikipedia.org/wiki/C%C4%83s%C4%83torii_%C3%AEntre_persoane_de_acela%C8%99i_sex_%C3%AEn_Rom%C3%A2nia</p>
+<p>[3] http://www.dex.ro/homosexualitate</p>
+<p>[4] http://dexonline.ro/definitie/homosexualitate</p>
+<p>[5] http://en.wikipedia.org/wiki/LGBT_demographics_of_the_United_States</p>
+<p>[6] http://www.psmag.com/culture/gay-population-lgbt-homosexual-sex-kinsey-68670/</p>
+<p>[7] http://en.wikipedia.org/wiki/Cross-dressing</p>
+</div><hr><h3>N2 (Nicoleta Gonta) <img src='../../../../images/little_stuff/16-em-up.png' class='discurs_toggler'></h3>
+            <div class='discurs normal_text'><p>Nu s-a cunoscut vreodată &icirc;n istoria omenirii o formă de conviețuire socială bazată pe egalități depline, cu excepția conceptului unei societăți primitive, fără clase care urmărea să fundamenteze societatea comunistă a viitorului &ndash; teorie aflată și astăzi la stadiul de utopie. &Icirc;ntotdeauna a existat lupta pentru dominație și libertate, care se poate sf&acirc;rși doar prin victorie sau &icirc;nfr&acirc;ngere, confruntarea exprim&acirc;ndu-se printr-o formă de utilitate numită putere. Max Weber afirmă că : &ldquo;puterea reprezintă orice șansă &icirc;n cadrul unei legături sociale care impune voința proprie indiferent pe ce se bazează această șansă&rdquo;[1]. Totodată &icirc;n putere se regăsește tendința de a instituționaliza dominația, care la r&acirc;ndul său presupune consolidarea sau schimbarea valorilor tradiționale, modificarea normelor, verificarea și supravegherea respectării lor precum și aplicarea sancțiunilor sociale. Astfel, homosexualitatea fiind dea lungul timpului o minoritate socială, s-a aflat &icirc;ntr-o permanentă luptă pentru a obține o poziție dominantă &icirc;n societate față de alte comunități, paradele Gay Pride fiind unul din instrumentele aplicate. Chiar dacă susținătorii comunității LGBT afirmă că scopul și caracterul acestor manifestări este &ldquo;desensibilizarea publicului asupra acestui fenomen&rdquo;, adevăratul țel este promovarea valorilor proprii &icirc;n r&acirc;ndul populației heterosexuale, ca mai apoi acestea să &icirc;nlocuiască vechile tradiții, obiceiuri, concepte. Există un șir de dovezi ce susțin aceste afirmații, un exemplu fiind declarația unui membru a comunității Gay, Michael Swift, din 1987: &ldquo;Vă vom sodomiza fiii, embleme ale bărbăției voastre neputincioase, ale viselor voastre derizorii și ale minciunilor voastre vulgare. &Icirc;i vom seduce &icirc;n școlile voastre, &icirc;n dormitoarele voastre, &icirc;n sălile voastre de sport, &icirc;n grupurile voastre de tineret, &icirc;n cazărmile voastre, &icirc;n motelurile voastre, &icirc;n clădirile Parlamentului vostru, oriunde bărbații sunt &icirc;mpreună cu alți bărbați. Fiii voștri vor deveni fetițele noastre și vor asculta de noi. &Icirc;i vom remodela după chipul și asemănarea noastră. Ei se vor umple de dorință pătimașă pentru noi și ne vor adora (&hellip;) Toate legile voastre care interzic activitatea homosexuală vor fi anulate. &Icirc;n loc, vor fi promulgate legi ce promovează dragostea &icirc;ntre bărbați.&rdquo; [2] Un alt exemplu care demonstrează &bdquo;implementarea&rdquo; celor spuse de M. Swift este faptul că &icirc;n Suedia a fost deschisă o grădiniță, &icirc;n 2010, unde termenii de băiței și fetițe nu există, fiind &icirc;nlăturate din limbajul copiilor pronumele &bdquo;el&rdquo; și &bdquo;ea&rdquo; [3] [4]. Chiar și &icirc;n societatea democratică care tinde spre o egalitate de șanse, există o categorie socială dominantă a căror valori sunt instituționalizate, a căror norme sunt respectate de membrii acesteia și de minorități, mai mult sau mai puțin din voință proprie. Astfel, principalul argument invocat de afirmatori sugerează &bdquo;aducerea &icirc;n sfera normalului&rdquo;, prin manifestații de genul paradelor Gay Pride, a valorilor comunității LGBT, ceea ce implică renunțarea la propriile valori.</p>
+<p>Chiar dacă &icirc;n continuare nu au fost construite argumente complexe, ci doar au fost făcute mai multe afirmații care ar susține comunitatea LGBD, dar nu organizarea paradelor Gay Pride, aș putea să le combat prin următoarele afirmații susținute de dovezi:</p>
+<ul>
+<li>&middot; Homosexualitatea, promov&acirc;nd căsătoriile dintre persoane de același sex, contravine societății a cărei element de bază este familia formată din soț, soție și urmașii acestora, care nu pot apărea &icirc;ntr-o uniune dintre persoane de același sex;</li>
+<li>&middot; Papa &icirc;ndeamnă spre o atitudine tolerantă spre membrii comunității LGBT &icirc;n sensul integrării lor &icirc;n societate prin respectarea drepturilor omului, dar nu susține Paradele Gay, nemaivorbind de căsătorii; [5]</li>
+<li>&middot; Modificările apărute &icirc;n definirea termenului de homosexualitate nu schimbă sensul acestuia și nu are nici o implicație privind necesitatea paradelor Gay Pride;</li>
+<li>&middot; Numărul mic de reprezentanți ai comunității LGBT care participă la parade reflectă nepăsarea lor față de aceste evenimente, &nbsp;dar un interes deosebit &icirc;n organizarea lor au alte categorii de persoane, care urmăresc anumite scopuri comerciale. Un exemplu ar fi paradele de la Stockholm care au dezvoltat considerabil turismul &icirc;n acest oraș [6]. </li>
+<li>&middot; Vestimentația extravagantă și simbolul comunității LGBT denaturează sensul și valoarea curcubeului &icirc;n cultura poporului nostru; [7]</li>
+<li>&middot; Nemulțumirile unor membri ai comunității LGBT și opiniile contradictorii ale acestora demonstrează &icirc;ncă o dată că &icirc;ncă nu sunt un grup social consolidat printr-o idee comună, nu au un țel conștientizat de majoritatea membrilor. </li>
+<li>&middot; &ldquo;Originea pașnică&rdquo; a inițiativelor de organizare a paradelor nu poate garanta efectele sociale ulterioare permiterii acestor manifestări, efectelor de ordin moral dificil de &bdquo;corectat&rdquo;, nemaivorbind că sancționarea acestora este imposibilă. [8]</li>
+</ul>
+<p>Prin prisma dovezilor și argumentelor aduse cu referire la lipsa necesității organizării manifestărilor publice a comunității Gay Pride, precum și evidențierea efectelor negative care le pot genera, susținem &icirc;n continuare că acestea trebuie interzise.</p>
+<p>Precum o forță deosebită a unui stat poate dezechilibra guvernarea mondială, la fel poate comunitatea LGBT să denatureze și să &icirc;nlocuiască valorile, tradițiile, normele societății heterosexualilor dacă cei din urmă vor fi toleranți și vor permite instituționalizarea și aplicarea propriilor metode, printre care și paradele Gay Pride, &icirc;n sensul distrugerii normelor etice și morale ce guvernează o societate cu conștiință de sine.</p>
+<!-- marcator referinte --><p>[1] M. Tantau, Sociologie economică, obținut pe 21 februarie 2014 de pe:</p>
+<p><a href="http://www.biblioteca-digitala.ase.ro/biblioteca/carte2.asp?id=53&amp;idb=7">http://www.biblioteca-digitala.ase.ro/biblioteca/carte2.asp?id=53&amp;idb=7</a></p>
+<p>[2] Michael Swift: &bdquo;Gay Revolution&rdquo;, obținut pe 21 februarie 2014 de pe:</p>
+<p><a href="http://www.fordham.edu/halsall/pwh/swift1.asp">http://www.fordham.edu/halsall/pwh/swift1.asp</a></p>
+<p>[3] I. Tcaci, Suedia impune sodomia &icirc;n grădinițele de copii, obținut pe 21 februarie 2014 de pe: <a href="http://iontcaci.info/2011/06/28/suedia-impune-sodomia-in-gradinitele-de-copii/">http://iontcaci.info/2011/06/28/suedia-impune-sodomia-in-gradinitele-de-copii/</a></p>
+<p>[4] Paradele gay pentru copii &icirc;n Scandinavia și alte țări, obținut pe 21 februarie 2014 de pe:</p>
+<p><a href="http://www.aparatorul.md/paradele-gay-pentru-copii-in-scandinavia-si-alte-tari/">http://www.aparatorul.md/paradele-gay-pentru-copii-in-scandinavia-si-alte-tari/</a></p>
+<p>[5] Papa Francisc a excomunicat un preot care susținea căsătoriile &icirc;ntre persoane de același sex, obținut pe 21 februarie 2014 de pe: <a href="http://www.digi24.ro/Stiri/Digi24/Extern/International/Papa+Francisc+a+excomunicat+un+preot+care+sustinea+casatoriile+i">http://www.digi24.ro/Stiri/Digi24/Extern/International/Papa+Francisc+a+excomunicat+un+preot+care+sustinea+casatoriile+i</a></p>
+<p>[6] Parada gay de la Stockholm, &icirc;ntre toleranță și turism, obținut pe 21 februarie 2014 de pe:</p>
+<p>&nbsp;<a href="http://adevarul.ro/moldova/actualitate/paradagay-stockholm-toleranta-turism-1_5203b32ec7b855ff56ba0d33/index.html">http://adevarul.ro/moldova/actualitate/paradagay-stockholm-toleranta-turism-1_5203b32ec7b855ff56ba0d33/index.html</a></p>
+<p>[7] Curcubeul &ndash; simbol al legăm&acirc;ntului, obținut pe 21 februarie 2014 de pe:</p>
+<p><a href="http://elldor.info/2013/12/curcubeul-simbol-al-legamantului/">http://elldor.info/2013/12/curcubeul-simbol-al-legamantului/</a></p>
+<p>[8] ЛГБТ-активисты во Франции требуют запретить христианство, obținut pe 21 februarie 2014 de pe: <a href="http://fognews.ru/lgbt-aktivisty-vo-francii-trebuyut-zapretit-xristianstvo.html">http://fognews.ru/lgbt-aktivisty-vo-francii-trebuyut-zapretit-xristianstvo.html</a></p>
+
+</div><hr><hr><h2>Decizii:</h2> <script>
+        $j(document).ready(function(){
+			$j('.decizie_toggler').toggle( 
+				function(){
+					$j(this).attr('src', '../../../../images/little_stuff/16-em-down.png');   
+					$j(this).parent().next('.decizie').hide('fast'); 
+                },
+                function(){
+					$j(this).attr('src', '../../../../images/little_stuff/16-em-up.png');
+					$j(this).parent().next('.decizie').show('fast'); 
+                } 
+			);
+		});</script><div class='decizie'><h3>Raul Salagean
+                <img src='../../../../images/little_stuff/16-em-up.png' class='decizie_toggler'></h3><div class='normal_text'><p>Status    quo-ul acestei dezbateri este acceptat de catre ambele echipe, ca fiind unul in    care comunitatea LGBT este dezavantajata in societatea de astazi, fiind    marginalizata, supusa violentelor si fiind, totodata opresata de catre    majoritatea heterosexuala. Chiar daca echipa negatoare are o abordare diferita    asupra acestui context, in final prin formularile si argumentele aduse asuma si    aceasta faptul ca exista o dominare a majoritatii asupra comunitatii LGBT, si    chiar daca litera legii se aplica si in cazul acestei minoritati, spiritul    legii nu se respecta in societatea romaneasca, si nu numai.</p>
+<p>Argumentul principal    al echipei afirmatoare este faptul ca mai presus de orice, comunitatea LGBT    incearca prin aceste evenimente de tip parada gay pride sa sensibilizeze    populatia majoritara cu privire la faptul ca si aceasta minoritate are dreptul    la egalitate de sanse. Primul vorbitor ne explica faptul ca aceasta comunitate    are un numar mare de membri, si ca acestia isi cer dreptul la egalitate, fara a    reprezenta un moft, ci o actiune fireasca intr-o societate moderna. Deoarece    heterosexualitatea a devenit o norma impusa in societate, este timpul ca LGBT    sa faca eforturi reale in a-si afirma si pastra pozitia egala in societate, iar    acest lucru poate fi realizat doar prin autoexpunerea in spatiul public, pana    cand majoritatea va deveni constienta si va permite integrarea acestei    comunitati.</p>
+<p>Primul    negator contraargumenteaza, evidentiind faptul ca nu este nevoie de parade gay    pride pentru afirmarea acestei comunitati, si nu este nevoie in sine de o    afirmare, intrucat prin lege, statul asigura egalitate. Totodata, aduce doua    argumente de partea negatoare, si anume ca imaginea comunitatii LGBT are de    suferit in urma acestor parade si ca se creeaza violente intre grupuri    extremiste anti-homosexuale si participantii la aceste parade.</p>
+<p>Al doilea    afirmator contrargumenteaza argumentele negatoare prin faptul ca intr-o    societate normala, moderna in mentalitate, nu ar trebui sa fie o problema    afisarea publica si fara ascunzisuri a homosexualitatii. Astfel, violentele si    imaginea alterata a comunitatii LGBT in urma acestor parade apar in mod logic,    insa sunt nefiresti si este de datoria institutiilor statului sa le combata si    sa asigure conditii in care acestea sa se desfasoare in conditii de siguranta.    Expunerea explicita a comunitatii LGBT, la care asistam la parade are tocmai    scopul de a obisnui heterosexualii cu ideea ca aceasta comunitate trebuie    scoasa din anonimat, acceptata si inclusa.</p>
+<p>Al doilea    negator sustine argumentul conform caruia tirania majoritatii    intotdeauna va prima, in timp ce minoritatea LGBT se supune si ea    acestei reguli. Totodata, acest vorbitor aduce ideea ca adevaratul    scop al miscarii gay pride este de a-si impune propriile viziuni    asupra majoritatii, mergand pana in punctul extremist in care vor    incerca sa domine intr-un mod malefic majoritatea, sodomizand-o.In    partea de final a discursului aduce idei noi, cum ar fi: faptul ca    casatoria intre persoane de acelasi sex contravine principiilor    societatii actuale, ca Papa sustine miscarea gay, insa fara a sustine    casatoria si paradele gay, ca scopul paradelor gay este mai degraba    unul comercial, membrii acesteia neimplicandu-se activ intr-un numar    mare, vestimentatia extravaganta altereaza imaginea comunitatii gay,    comunitatea gay nu este omogena si nu are un tel clar si ca aceste    parade nu garanteaza efectul scontat de toleranta marita a    majoritatii.</p>
+<p>Decizia s-a bazat pe urmatorul fir logic: Echipa afirmatoare aduce cel    mai important si mai direct argument pro-parade gay pride, si anume    egalitatea de sanse si faptul ca prin aceste parade se va produce o    sensibilizare a populatiei. Echipa negatoare accepta faptul ca    egalitatea sanselor este importanta, insa ca exista anumite neajunsuri    ale acestor parade gay, si anume crearea violentelor si denigrarea    imaginii comunitatii gay. Echipa afirmatoare raspunde prin faptul ca    aceste neajunsuri sunt usor de rezolvat, fiindca sprijinul vine din    partea statului. In final, negatorul doi contraargumenteaza ca    paradele gay au in continuare o serie de neajunsuri. Ceea ce lipseste    in strategia echipei negatoare este un argument puternic din punct de    vedere al impactului, conform caruia paradele gay nu ar trebui    organizate. Din acest motiv, din punct de vedere strategic, echipa    negatoare este intr-un dezavantaj, intrucat egalitatea de sanse este    un beneficiu foarte    &nbsp;important pe care il aduce echipa afirmatoare, care si reuseste sa    demonstreze ca paradele gay nu au suficient de multe neajunsuri incat    sa ne abatem de la aceasta valoare importanta pentru intreaga    societate. Mai mult, ne arata importanta protejarii dreptului la sanse    egale atat la noi in tara, cat si peste tot in lumea civilizata, si    observa un trend international, dar si la noi in tara spre tolerarea    incluziva a acestei comunitati. Astfel, paradele gay pride sunt in    continuare necesare, si echipa afirmatoare castiga.</p>
+<p>Afirmatorului 1 ii recomand sa aloce mai putin spatiu introducerii si    mai mult argumentarii. Totodata, meciul a fost unul riscant, din cauza    faptului ca echipa afirmatoare a adus un singur argument. Sunt de    acord ca acest argument reprezinta esenta dezbaterii, insa ar trebui    gasite si alte argumente, in cel mai rau caz chiar disecat acest    argument in mai multe argumente distincte, pentru ca sunt prezente in    el diferite viziuni asupra problemei.</p>
+<p>Negatorului 1 i-a lipsit un argument valoric, care sa concureze cu    argumentul valoric legat de egalitatea sanselor. I-as recomanda sa nu    se rezume la a contraargumenta motiunile in care se discuta despre    valori prin niste argumente tehnice, cu atat mai mult cu cat acestea    nu sunt foarte puternice.</p>
+<p>Discursul A2 a fost cel mai bun din dezbatere, ii recomand insa sa-si    imbunatateasca putin structura discursurilor, in asa fel incat partea    de contraargumentare sa fie clar distinsa de cea de resustinere a    cazului propriu.</p>
+<p>Discursul N2 a avut cea mai mare problema la nivel de continut propriu    adus in dezbatere. A fost foarte tarziu sa vina cu sapte idei, chiar    daca nu sunt argumente de sine statatoare, total noi, pentru ca este    unfair ca pe sfarsitul dezbaterii, cand afirmatorii nu mai pot    raspunde sa se aduca multe argumente noi de catre negatori. In schimb,    ar fi fost bine sa contraargumenteze punctele noi aduse de afirmatori,    si mai apoi sa faca o comparare a celor doua cazuri, evidentiind de ce    echipa negatoare a castigat dezbaterea, si care au fost punctele ei    forte.</p>
+<p><br /> A1:24     <br /> N1:23     <br /> A2:25     <br /> N2:22</p></div>A1 -> 24 puncte<br>N1 -> 23 puncte<br>A2 -> 25 puncte<br>N2 -> 22 puncte<br>Castiga echipa: <h3 style='display:inline;color:red;'>Cristina si Andrei (afirmatori)</h3></div><hr><div class='decizie'><h3>George Maxim
+                <img src='../../../../images/little_stuff/16-em-up.png' class='decizie_toggler'></h3><div class='normal_text'><p>Partea 1 &ndash; Feedback general</p>
+<p>Runda este una echilibrata in care se aduc multe idei bune dar care per total fac ca dezbaterea sa se poarte in jurul subiectului daca ar trebui sa acceptam miscarea gay in Romania in loc sa se discute necesitatea unei astfel de manifestari. Scopul motiunii este sa mute discutia din tiparul gasit in mass media asupra acceptarii minoritatilor sexuale in cel al daca un astfel de eveniment ajuta sau dauneaza celor care participa. Daca s-ar merge pe aceastra structura dezbaterea ar trebui deschisa prin a defini care este scopul unei astfel de parade, daca exista evenimente asemanatoare, care sunt efectele si in final daca isi atinge scopul propus.</p>
+<p>Ce s-a dezbatut insa este daca societatea romana este gata sa accepte minoritatile sexuale nu doar prin decriminalizarea persoanelor de alte orientari sexuale ci si in spatiul public si in cel legal (casatoria persoanelor de acelasi sex).</p>
+<p>Partea 2 - Remarci individuale</p>
+<p>Afirmatorul 1:</p>
+<ul>
+<li>Un discurs bun, usor de urmarit si inteles</li>
+<li>Cateva recomandari: 
+<ul>
+<li>Introducerea legata de evolutia unei societati a fost foarte bine formulata dar idea centrala s-a ratacit pe parcurs; pe viitor incearca sa legi idea de la care pornesti cu finalul discursului pentru a obtine un efect de convingere mai mare</li>
+<li>Nu cred ca dezbaterea trebuie setata prin ce inseamna &ldquo;conceptual de gay&rdquo; cat prin cum se defineste un astfel de eveniment si ce inteleg afirmatorii prin necesitate (cum o definim, cum o masuram, cum demonstram ca este utila).</li>
+<li>Parada Gay nu cred ca este acel prim pas inspre acceptare cat decriminalizarea actelor sexuale intre persoanele de acelasi sex;</li>
+<li>Mai mult, idea de societate conservatoare care trebuie sa se schimbe nu sta in picioare atat timp cat nu se demonstreaza de ce schimbarea propusa aduce mai multe beneficii decat status quo-ul curent</li>
+</ul>
+</li>
+</ul>
+<p>Negatorul 1:</p>
+<ul>
+<li>Contraargumentarea initiala pleaca de la punctele care sunt vehiculate nu atat legate de evenimentul in sine cat despre acceptarea homosexualitatii in Romania</li>
+<li>Atentie la exprimari de tipul: &ldquo;[tradiții și obiceiuri transmise din generații &icirc;n generații], este dificil de a infiltra noi valori at&acirc;ta timp c&acirc;t acest sistem este &ldquo;sănătos&rdquo;, integru&rdquo;; pe de o parte argumentul la traditie este un sofism care ar trebui evitat; in al doilea rand trebuie definit clar ce se intelege prin sistem sanatos si integru.</li>
+<li>A doua linie de atac legata de faptul ca in forma sa curenta manifestarea are mai degraba un efect de recul pentru participanti este o linie foarte utila&nbsp; dar care propune o concluzie eronata: interzicerea lor. O concluzie in spiritual acestei runde ar fi ca din moment ce aceste evenimente aduc mai degraba efecte negative ar trebui reconsiderate atat ca si impact cat si ca mesaj si structura. In momentul in care se interzice unei minoritati dreptul de a se exprima atunci fundamentul unei societati democratice este in pericol.</li>
+</ul>
+<p>Afirmatorul 2:</p>
+<ul>
+<li>Principiul de libertate de exprimare si acceptare a diferentelor intr-o societate contra-argumenteaza corect ultimul argument adus de primul negator. Insa, se comite apoi un sofism de apel la majoritate care spune ca daca toata lumea face ceva trebuie sa facem si noi ceva</li>
+<li>Chiar daca Biserica reprezinta o influenta puternica in societate, idea acestei dezbateri este de a discuta cum reusim sa aducem un echilibru intre cele doua puncte de vedere opuse nu doar sa enutam pozitiile ambelor parti adverse la nivel societal.</li>
+<li>Linia de argumentare legata de incidentele violente care ar putea sa apara nu aduce niciun castig deoarece se poate argumenta ca orice manifestare de masa (politica, indicala, de fotbal, etc.) poate degenera in confruntari violente intre membrii celor doua tabere adverse</li>
+</ul>
+<p>Negatorul 2:</p>
+<ul>
+<li>Atentie in primul rand la lungimea discursului. </li>
+<li>Negatorul isi indeplineste rolul de a sumariza si combate argumentele echipei oponente insa este nevoie ca sa se si identifice ariile principale de conflict si motivele pentru care negatorii castiga runda</li>
+<li>Exemplul Suediei nu este relevant deoarece se refera la cum un stat pune in aplicare conceptul de egalitate intre cetateni indiferent de orientarea sexuala nu fata de manifestarile comunitatii LGBT</li>
+<li>In cazul folosirii unui citat rezuma-l la 2-3 propozitii cheie pentru a castiga si spatiu si pentru a sintetiza pozitia. Citatul folosit in cauza nu poate fi luat in considerare deoarece reprezinta in esenta un apel la teama nefondata fata de viitor si o argumentare foarte slaba de natura cauzala.</li>
+<li>In final, normele etice nu sunt distruse de paradele gay ci din contra se poate argumenta ca ele reprezinta o manifestare a unei norme superioare, acea de nediscriminare a cetatenilor si garantare a libertatii de exprimare.</li>
+</ul>
+<p>Partea 2 &ndash; Verdict si punctaje</p>
+<p>In ciuda faptului ca echipa afirmatoare propune un caz format dintr-un singur argument, datorita contra-argumentarii insuficiente din partea negatorilor care concluzioneaza ca aceste evenimente &ldquo;denatureaza&rdquo; in loc sa schimbe status quo-ul si nu arata clar care sunt efectele negative palpabile in societate, runda merge catre echipa afirmatoare</p>
+<p>Felicitari ambelor echipe!</p>
+<table border="1" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td width="128" valign="top">
+<p>Vorbitor</p>
+</td>
+<td width="128" valign="top">
+<p>Continut</p>
+</td>
+<td width="128" valign="top">
+<p>Strategie</p>
+</td>
+<td width="128" valign="top">
+<p>Stil</p>
+</td>
+<td width="128" valign="top">
+<p>Total</p>
+</td>
+</tr>
+<tr>
+<td width="128" valign="top">
+<p>A1</p>
+</td>
+<td width="128" valign="top">
+<p>12</p>
+</td>
+<td width="128" valign="top">
+<p>7</p>
+</td>
+<td width="128" valign="top">
+<p>4</p>
+</td>
+<td width="128" valign="top">
+<p>23</p>
+</td>
+</tr>
+<tr>
+<td width="128" valign="top">
+<p>N1</p>
+</td>
+<td width="128" valign="top">
+<p>13</p>
+</td>
+<td width="128" valign="top">
+<p>7</p>
+</td>
+<td width="128" valign="top">
+<p>3</p>
+</td>
+<td width="128" valign="top">
+<p>23</p>
+</td>
+</tr>
+<tr>
+<td width="128" valign="top">
+<p>A2</p>
+</td>
+<td width="128" valign="top">
+<p>12</p>
+</td>
+<td width="128" valign="top">
+<p>7</p>
+</td>
+<td width="128" valign="top">
+<p>4</p>
+</td>
+<td width="128" valign="top">
+<p>23</p>
+</td>
+</tr>
+<tr>
+<td width="128" valign="top">
+<p>N2</p>
+</td>
+<td width="128" valign="top">
+<p>10</p>
+</td>
+<td width="128" valign="top">
+<p>8</p>
+</td>
+<td width="128" valign="top">
+<p>4</p>
+</td>
+<td width="128" valign="top">
+<p>22</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</div>A1 -> 23 puncte<br>N1 -> 23 puncte<br>A2 -> 23 puncte<br>N2 -> 22 puncte<br>Castiga echipa: <h3 style='display:inline;color:red;'>Cristina si Andrei (afirmatori)</h3></div><hr><div class='decizie'><h3>Laura Bretea
+                <img src='../../../../images/little_stuff/16-em-up.png' class='decizie_toggler'></h3><div class='normal_text'><p>Le mulțumesc participanților la dezbatere pentru o discuție interesantă și respectuoasă. Am apreciat că ați reflectat la subiectul moțiunii și implicațiile sale. &Icirc;mi pare rău că dezbaterea a fost deviată către o discuție pro și contra homosexualității. Aș fi preferat ca vorbitorii să se concentreze pe tema libertăților și mai ales a libertății de opinie.</p>
+
+<p>A1</p>
+<p>Cazul afirmator a fost &icirc;ntr-o tentă filozofică și mai degrabă descriptiv dec&acirc;t argumentativ. Afirmatorii au transmis puține idei &ndash; nevoia unei schimbări la nivelul mentalității, Gay Pride primul pas &icirc;n acceptarea homosexualității. Aceste idei sunt foarte bune, ar fi trebuit elaborate și susținute de mai multe elemente concrete. Am sesizat o confuzie legată de conceptul de egalitate de șanse, care este &icirc;nt&acirc;lnit &icirc;n dezbaterea despre egalitatea dintre femei și bărbați.</p>
+<p>Discursul trebuie structurat pe mai multe argumente, ideal doua sau trei argumente principale, care fiecare sa fie sustinute de alte idei si de exemple. Introducerea pe care ati facut-o descrie subiectul fara sa afirme ceva. Trebuie sa va construiti o serie de argumente pe care sa le sustineti cu tarie. Concentrați-vă pe tema dezbaterii &ndash; necesitatea Gay Parade &ndash; si nu va abateti de la subiect.</p>
+
+<p>Punctaj: 23</p>
+<p>Continut &ndash; 12, Strategie &ndash; 8, Stil &ndash; 3</p>
+
+<p>N1</p>
+<p>Discurs bun din punct de vedere strategic. Afirmați din start că afirmatorii nu au arătat de ce marșurile gay ar fi necesare. Ați prezentat o serie de contra-argumente foarte bune la cazul afirmator și argumentele voastre pentru cazul negator au fost bine structurate.</p>
+<p>Cu toate acestea, unele idei nu se &icirc;nțeleg bine &ndash; ca de exemplu referința la raportul Lunacek. Introducerea la caz este descriptivă și nu susține o filozofie clară. &Icirc;nțeleg doar că prin acordarea de mai multe libertăți minoritățile sexuale ar fi avantajate față de altele. Ideea aceasta nu e dusă p&acirc;nă la capăt și se pierde argumentul din ea.</p>
+
+<p>Punctaj: 25</p>
+<p>Continut &ndash; 12, Strategie &ndash; 9, Stil - 4</p>
+
+<p>A2</p>
+<p>Un discurs ceva mai bine structurat dec&acirc;t primul. Ați &icirc;ncercat și o contra-argumentare la cazul negator și refacerea cazului afirmator. &Icirc;nsă există idei avansate fără o argumentare clară &ndash;&nbsp; există o tendință mondială pentru acceptare a homosexualității. Homosexualii sunt un grup mare. Un argument nefondat/incorect a fost cel privind faptul că majoritatea &icirc;n cadrul bisericii nu este de părere că homosexualitatea este un pericol.</p>
+<p>Discursul este prea scurt. Aveți o limită de 800 de cuvinte, discursul A2 are 690. Trebuie să profitați să includeți c&acirc;t mai multe argumente.</p>
+
+<p>Punctaj: 24</p>
+<p>Continut &ndash; 13, Strategie &ndash; 8, Stil - 3</p>
+
+<p>N2</p>
+<p>Negatorii se molipsesc și ei de filozofie &icirc;n acest discurs. Raționamentul care pleacă de la Max Weber și ajunge la ideea că homosexualii doresc să se impună este șubred. Nu toate minoritățile &icirc;ncearcă să se impună. Afro-americanii, femeile sau alte grupuri care au cerut să li se respecte drepturile nu &icirc;ncercau să se impună ci doar să obțină respectarea drepturilor.</p>
+<p>Am căutat citatul din Michael Swift și am găsit că articolul scris de acesta era o satiră și nu un discurs programatic așa cum a apreciat N2. Am depunctat folosirea acestui exemplu, sper că a fost o greșeală.</p>
+<p>N2 spune că afirmatorii nu au construit argumente ci doar au prezentat afirmații (adevărat) dar se rezumă la a răspunde cu alte afirmații, care nu sunt contra-argumente. Am reținut ideea cu numărul mic de participanți care semnifică nepăsare, dar aceasta apare mult prea t&acirc;rziu &icirc;n discurs. &Icirc;n plus ideea nu este susținută de o dovadă care să arate că la nivel global Gay Parade atrage puține persoane.</p>
+<p>Punctaj: 24</p>
+<p>Continut &ndash; 12, Strategie &ndash; 8, Stil - 4</p>
+
+<p>Arii de conflict</p>
+<ol>
+<li>Marșurile Gay Parade nu sunt necesare pentru ca crează o imagine proastă despre comunitatea gay</li>
+</ol>
+<p>Negatorii aduc două comentarii ale unor reprezentanți ai comunității gay ca să susțină această idee. Afirmatorii spun că aceste declarații un &icirc;nseamnă că respectivii ar interzice Gay Parade. Consider că negatorii au c&acirc;știgat această arie, pentru că moțiunea se referea la necesitatea marșurilor Gay Parade și nu la interzicerea lor.</p>
+
+<ol>
+<li>Marșurile Gay Parade trebuie interzise pentru ca provoacă violență</li>
+</ol>
+<p>Afirmatorii au contra-argumentat că forțele de ordine sunt responsabile pentru menținerea ordinii. Negatorii au reconstruit repet&acirc;nd aceeași idee. Am acordat această arie de conflict afirmatorilor, care au fost mai coerenți &icirc;n explicație și pentru că negatorii nu au reușit să vină cu alte argumente pe tema aceasta.</p>
+<p>Deși scorul pe arii de conflict este egal am acordat meciul negatorilor. Afirmatorii nu au fost convingători pentru că au preferat să descrie situația dec&acirc;t să argumenteze. Deși au fost mai organizați &icirc;n contra-argumentare, rolul lor era să susțină o serie de argumente p&acirc;nă la sf&acirc;rșitul dezbaterii. &Icirc;n acest meci afirmatorii au avut o singură idee generală, care s-a &icirc;ndepărtat de subiectul moțiunii.</p>
+<p>Deși a c&acirc;știgat, echipa negatoare nu a făcut un meci foarte bun. Restr&acirc;ngerea la cazul Republicii Moldova nu va ține cu toate echipele. Contradicțiile și c&iacute;tatele din surse &icirc;nvechite (DEX 1998) sau incorecte au fost depunctate.</p>
+</div>A1 -> 23 puncte<br>N1 -> 25 puncte<br>A2 -> 24 puncte<br>N2 -> 24 puncte<br>Castiga echipa: <h3 style='display:inline;color:red;'>Nicoleta si Viorica (negatori)</h3></div><hr><h3 class='important'>Vrem parerea ta! Pentru asta, trebuie sa te loghezi.</h3><h3>Clasament meci</h3><p>Medii punctaje</p>A1 -> 23.33 puncte<br>N1 -> 23.67 puncte<br>A2 -> 24.00 puncte<br>N2 -> 22.67 puncte<br>Castiga echipa: <h3 style='display:inline;color:red;'>Cristina si Andrei (afirmatori)</h3>
+                <div class='clear'></div>
+        </div><!-- end main content -->
+         <div class='clear'></div>
+</div>
+<div id="pix"></div>
+
+
+                                </div><!--end main -->
+                                <div id='parteneri'>
+                                    <span class='tr'></span><span class='tl'></span><span class='br'></span><span class='bl'></span><span id="filler"></span>
+                                    <div class='parteneri' id='sustinatori'>
+                                        <span class='floating_text' id='un_proiect'>Un proiect</span>
+                                        <a href='http://www.ardor.org.ro/'><div class='image' id='ardor'>Ardor</div></a>
+                                        <span class='floating_text' id='finantatori'>Finanțatori</span>
+                                        <a href='http://www.opensocietyfoundations.org/'><div class='image' id='open_society'>Open Society Foundation </div></a>
+                                        <a href='http://www.studentiq.ro//'><div class='image' id='memoplus'>MemoPlus</div></a>
+                                        <!-- <a href='http://www.ratiufamilyfoundation.com/'><div class='image' id='FundatiaRatiu'>Ardor</div></a>
+                                        <a href='http://www.eef.md/'><div class='image' id='eef'>East Europe Foundation</div></a>
+                                        <a href='http://www.mts.gov.md/'><div class='image' id='mdminister'>Ministerul Tineretului si Sportului al Republicii Moldova</div></a> -->
+
+                                        <span class='floating_text' id='parteneri_text'>Parteneri</span>
+
+                                        <a href='http://www.policycenter.eu/'><div class='image' id='PolicyCenter'>Policy Center</div></a>
+                                        <a href='http://www.britishcouncil.org/'><div class='image' id='BritishCouncil'>British Council</div></a>
+                                        <a href='http://www.europuls.ro/'><div class='image' id='europuls'>Europuls</div></a>
+                                        <a href='http://www.cere.ro/'><div class='image' id='cere'>Ce-Re</div></a>
+                                        <a href='http://www.primeromania.ro/'><div class='image' id='prime'>Prime Romania</div></a>
+                                        <a href='http://www.cji.ro/'><div class='image' id='cji'>Centrul pentru jurnalism independent</div></a>
+                                        <a href='http://www.aiesectm.ro/'><div class='image' id='aisec'>Aisec</div></a>
+                                        <!-- ===================================================================================================== -->
+                                        <a href='http://www.cogitus.ro/'><div class='image' id='cogitus'>Cogitus</div></a>
+                                        <a href='http://www.adevarul.ro/international/foreign_policy/'><div class='image' id='foreignPolicy'>Foreign Policy</div></a>
+                                        <a href='http://www.elsa.ro/'><div class='image' id='elsa'>Elsa</div></a>
+                                        <a href='http://www.vipromania.ro/'><div class='image' id='vipromania'>Voluntari pentru idei si proiecte</div></a>
+                                        <a href='http://www.ongtrust.ro/'><div class='image' id='ongtrust'>Trust</div></a>
+
+                                        <!-- ===================================================================================================== -->
+                                        <a href='http://www.leap.ro/'><div class='image' id='leap'>Leap</div></a>
+                                        <a href='http://www.younginitiative.org/'><div class='image' id='younginitiative'>Asociatia young initiative</div></a>
+                                        <a href='http://www.asjc.ro/'><div class='image' id='asjc'>Asjc</div></a>
+                                        <a href='http://osut.ro/'><div class='image' id='osut'>Osut</div></a>
+                                        <div class='clear'></div>
+                                    </div>
+                                    <div class='parteneri' id='parteneri_institutionali'>
+                                        <span class='floating_text' id='sponsori_text'>Sus&#539;in&#x0103;tori</span>
+                                        <a href='http://www.cartier.md/'><div class='image' id='cartier_logo'>Editura Cartier</div></a>
+                                        <a href='http://www.pll.md/ro/'><div class='image' id='biblio_logo'>Biblioteca publica de drept</div></a>
+                                        <span class='floating_text' id='institutii_text'>Parteneri institu&#539;ionali</span> 
+                                        <ul id='institutii'>
+                                            <!-- <span class='floating_text' id='institutii_text'>Parteneri institu&#539;ionali:</span> -->
+                                            <li><a href='http://www.politice.ro/'>Facultatea de &#536;tiin&#539;e Politice SNSPA </a></li>
+                                            <li><a href='http://www.comunicare.ro/'>Facultatea de Comunicare &#537;i Rela&#539;ii Publice SNSPA</a></li>
+                                            <li><a href='http://www.fspub.ro/'>Facultatea de &#536;tiin&#539;e Politice Universitatea Bucure&#537;ti</a></li>
+                                            <li><a href='http://www.filosofie.unibuc.ro/'>Facultatea de Filosofie Universitatea Bucure&#537;ti</a></li>
+                                            <li><a href='http://litere.unibuc.ro/'>Facultatea de Litere din Universitatea Bucure&#x015f;ti</a></li>
+                                            <li><a href='http://www.unibuc.ro/ro/fac_fsas_ro'>Facultatea de Sociologie Universitatea Bucure&#537;ti</a></li>
+                                            <li><a href='http://laws.uaic.ro/'>Facultatea de Drept Universitatea Alexandru Ioan Cuza Ia&#537;i</a></li>
+                                            <li><a href='http://www.uaic.ro/uaic/bin/view/Academic/Filosofie'>Facultatea de Filosofie si &#536;tiin&#539;e Social Politice Universitatea AIC Ia&#537;i</a></li>
+                                            <li><a href='http://www.upa.ro/'>Facultatea de Drept si Facultatea de &#x015e;tiin&#x0163;e Politice si Administrative Universitatea Petre Andrei Ia&#x015f;i</a></li> 
+
+                                            <li><a href='http://www.ubbcluj.ro/'>Universitatea Babe&#537;-Bolyai Cluj Napoca</a></li>
+                                            <li><a href='http://www.uvt.ro/'>Universitatea de Vest Timi&#537;oara</a></li>
+                                            <li><a href='http://www.upt.ro/'>Universitatea Politehnica Timi&#537;oara</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class='parteneri' id='parteneri_media'>
+                                        <span class='floating_text' id='media_text'>Parteneri media</span>
+                                        <a href='http://www.hotnews.ro/'><div class='image' id='hotnews'>HotNews</div></a>
+                                        <!-- <a href='http://www.lumebuna.ro/'><div class='image' id='lumebuna'>Lume Buna</div></a> -->
+                                        <a href='http://www.romaniapozitiva.ro/'><div class='image' id='romaniapozitiva'>Romania Pozitiva</div></a>
+                                        <a href='http://totb.ro/'><div class='image' id='thinkoutsidethebox'>Think Outside The Box</div></a>
+                                        <a href='http://www.facebook.com/carevasazica.vip'><div class='image' id='carevasazica'>Carevasazica</div></a>
+                                        <a href='http://www.studentie.ro/'><div class='image' id='studentiero'>Studentie.ro</div></a>
+                                        <a href='http://startub.unibuc.ro/'><div class='image' id='startub'>startub.unibuc.ro</div></a>
+                                        <!-- <a href='http://www.tvr.ro/tvr_cluj.php'><div class='image' id='tvrcluj'>Tvr Cluj</div></a> -->
+                                        <!-- <a href='http://www.radiotransilvania.ro'><div class='image' id='radiotransilvania'>Radio Transilvania</div></a> -->
+                                        <a href='http://iasifun.ziaruldeiasi.ro/'><div class='image' id='iasifun'>Iasi fun</div></a>
+                                        <a href='http://www.ziaruldeiasi.ro/'><div class='image' id='ziaruldeiasi'>Ziarul de Iasi</div></a>
+                                        <a href='http://www.kissfm.ro/timisoara'><div class='image' id='kissfm'>KissFm</div></a>
+
+                                        <div class='clear'></div> 
+                                    </div>
+                                    <div class='clear'></div>
+
+                                </div>	
+                            </div>	<!-- end wrap -->
+                            <div id='footer_mare'>
+                                <div id='footer'>
+                                    <div id='links' class='footer'>
+                                        <div id='menu1' style='margin:auto;'> <ul id='meniu_prinicpal'><li><a href='../../../contacte/index.html'> Contact </a></li>
+<li><a href='../../../clubdebate/index.html'> Cluburile </a></li>
+<li><a href='../../../oamenii/index.html'> Oamenii </a></li>
+<li><a href='../../../proiectul/index.html'> Proiectul </a></li>
+<li><a href='../../../home/index.html'> Acasa </a></li>
+</ul></div><!--end menu-->
+                                    </div><!--
+                                    <div id='contact' class='footer'>
+                                            <h4>Contact</h4>
+                                            <p>office@closer2oxford.ro</p>
+                                            <p>bogdan.draghicescu@closer2oxford.ro<br>
+                                            <span class='detalii'> (asistenta tehnica web - orice probleme legate de site)</span></p>
+                                    </div>
+                                    -->
+                                    <div id='newsletter' class='footer'>
+                                        <script src="../../../../../connect.facebook.net/en_US/all.js#xfbml=1"></script><fb:like href="http://www.facebook.com/pages/Closer2Oxford/162758797069605" width="250" colorscheme="dark"></fb:like>
+                                        <!--<h4>Newsletter</h4>
+                                        <form action='/page/newsletter'>
+                                                <input type='text' name='email'>
+                                                <input type='submit' id='submit' value='>'>
+                                                        
+                                        </form>-->
+                                    </div>
+                                    <div id='credits'>
+                                        Copyright(c) 2021 ARDOR |  Toate drepturile rezervate | Toate logo-urile si sloganurile de pe site sunt proprietate intelectuala inregistrata si nu pot fi reproduse fara acordul explicit al detinatorilor. <br>
+                                            <br /><br />
+                                            <b>Disclaimer</b><br /><i>
+
+                                                Programul educational Closer to Oxford este un program non-profit si nu are o legatura cu universitatea cu acelasi nume, referirea la Oxford avand doar o semnificatie simbolica.
+                                            </i>
+                                    </div>
+
+                                </div>		
+                            </div>		
+
+                            <div id="finantatde">Acest proiect este finantat cu sustinere din partea Comisiei Europene. Aceast publicatie [comunicare] reflecta doar
+                                vederile autorului, iar Comisia nu poate fi facuta  responsabila pentru utilizarea informatiei pe care o contine.</div>
+
+
+                        </body>
+                        </html>

@@ -1,0 +1,548 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml-strict.dtd">
+<HTML xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+    <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+            <link rel="icon" type="image/png"  href="../../../../../closer2oxford.ro/favicon.html">
+                <link rel="stylesheet" href="../../../var/layout.css" type="text/css">
+                    <title>Closer to Oxford - e timpul pentru argumente!</title>
+                    <link rel="alternate" type="application/rss+xml"  href="../../../rss_feed" title="Stiri Closer2Oxford">
+                        <!-- <link rel="image_src" property="og:image"  href="/images/layout/closer2oxford_fb_white.png" /> -->
+                        <link rel="image_src" property="og:image"   type="image/jpeg"  href="../../../../uploads/2015/06/9/facebook_icon.html" />
+                        <link rel="image_src" type="image/jpeg"  href="../../../../uploads/2015/06/9/icon-facebook.gif" /> 
+						<meta name="description" content="Closer2Oxford pune în valoare oameni şi argumentele lor, în dezbateri online şi publice alături de tineri şi invitați avizaţi"/>
+                        <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9" />
+<script type='text/javascript' src='../../../../js/jquery-1.4.4.min.js'></script>
+<script>var $j = jQuery.noConflict();</script>
+<script type='text/javascript' src='../../../../js/tinymce/tiny_mce.js'></script>
+<script type='text/javascript' src='../../../../js/jquery.form.js'></script>
+<script type='text/javascript' src='../../../../js/fbLoginRegister.js'></script>
+<script type='text/javascript' src='../../../var/javascript.js'></script>
+<script type='text/javascript' src='../../../../js/jquery.hovertip-1.0.min.js'></script> 
+<script type='text/javascript' src='../../../../js/jquery.jgrowl_minimized.js'></script> 
+<link rel='stylesheet' href='../../../../css/jquery.jgrowl.css' media='screen' type='text/css'> 
+<script type='text/javascript' src='../../../../js/jquery.timer-min.js'></script> 
+<style>.hovertip{
+    position:absolute;
+    padding:10px 13px;
+    z-index:2;
+    max-width:300px;
+    color:#303030;
+    background-color:#f5f5b5;
+    border:1px solid #DECA7E;
+    font-family:sans-serif;
+    font-size:12px;
+    line-height:18px;
+    text-align:left;
+    }
+           .normal_text ol,.normal_text ol *{text-align:left !important}
+           .normal_text *{font-weight:normal !important;font-size:12px !important;font-face:tahoma !important}</style> 
+<script type='text/javascript'>$j(document).ready(function(){$j('.tooltip').hovertip({'offset':[20,20]});get_notif();});
+
+if(!Array.indexOf){Array.prototype.indexOf = function(obj){for(var i=0; i<this.length; i++){if(this[i]==obj){return i;}}return -1;}}
+    hashuri = [] ;
+	 var tick_timer= 3000 ;
+ 
+	 function get_notif()
+        {
+		  
+		  //console.log(tick_timer);
+	     
+		  setTimeout(get_notif,tick_timer);
+        
+		   $j.ajax(
+            {
+                url: '/page/notif/show_events',
+                dataType: 'json',
+                data: "{}",
+                success: function(data)
+                    {
+                    $j.each(data,function(index,data){
+                        try
+                            {
+                            if( hashuri.indexOf(data.hash) == -1 )
+                                {
+                                hashuri.push(data.hash);
+                                $j.jGrowl(
+                                    data.str,
+                                    {
+                                        corners:'1px',
+                                        life: data.life,
+                                        header:data.title,
+                                        hash: data.hash,
+                                        sticky: data.sticky,
+                                        close: function(e,m,o)
+                                            {
+                                                $j.ajax({url:'/page/notif/delete_single_event/' + o.hash});
+                                            }
+                                    });
+                                }
+                            }
+                        catch(e){}
+                        })
+                    }
+            });
+        }
+	 </script> 
+ 
+                            
+  <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-19111721-1']);
+  _gaq.push(['_setDomainName', '.closer2oxford.ro']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+    
+                        </head>
+                        <body>
+                            <div id="global_wrap">
+                                <div id="header">
+                                    <a href='../../../../index.html'><div id='logo'><img src='../../../../images/layout/sigla.jpg'></div></a>
+                                    <a class='noExternal' href='http://www.facebook.com/pages/Closer2Oxford/162758797069605'><img src='../../../../images/fb.png' style='height:30px;float:right;clear:right;margin:10px 5px 5px 5px;border:none;'/></a>
+                                    <a href='../../../rss_feed'><img src='../../../../images/feed-icon.png' style='height:30px;float:right;clear:right;margin:5px;border:none;'/></a>
+                                </div>
+                                <div id="meniu">
+                                    <div  id='register_login'>
+
+                                        
+  <a href='#' class='todo' id='login'>Login </a> &nbsp;<a href='../../../register.html' class='todo' id='register'>Register</a>
+    <div id='login_box'>
+		  <form action='https://dev.closer2oxford.ro/page/ro/login_user/logon' method='post' id='user_login_form'>
+					 <div>Email: <input type='text' name='email'/> </div><br />
+					 <div>Pass: <input type='password' name='passwd'/></div><br />
+					 <a href='#' class='password_forgot'>forgot password?</a>
+					 <input type='hidden' value='/page/ro/vezi_meciuri/212/' name='returnto' class='submiter'/><br />
+					 <input type='submit' value='login' name='btn' class='submiter'/><br />
+		  </form>
+		  
+		  <form action='https://dev.closer2oxford.ro/page/ro/login_user/reset_user_pw' method='post' id='user_reset_form'>
+					 <div>Email: <input type='text' name='email'/> </div><br />
+					 <a href='#' class='password_forgot'>login?</a>
+					 <input type='hidden' value='/page/ro/vezi_meciuri/212/' name='returnto' class='submiter'/><br />
+					 <input type='submit' value='reset' name='btn' class='submiter'/><br />
+		  </form>
+		  
+    </div>
+    
+                                    </div>
+                                    <div id='menu1' style='margin:auto;'> <ul id='meniu_prinicpal'><li><a href='../../../contacte/index.html'> Contact </a></li>
+<li><a href='../../../clubdebate/index.html'> Cluburile </a></li>
+<li><a href='../../../oamenii/index.html'> Oamenii </a></li>
+<li><a href='../../../proiectul/index.html'> Proiectul </a></li>
+<li><a href='../../../home/index.html'> Acasa </a></li>
+</ul></div><!--end menu-->
+                                </div>
+                                <div id="main"> 
+                                    <!--<div id='stiri-padding'>
+        <div id='stiri_back'>
+                {stiri} 
+    
+               
+        </div>-->
+        
+</div>
+<div  id="content-padding">
+        <div id='sidebar_menu'>
+                <span class='tr'></span>
+                <span class='tl'></span>
+                <span class='br'></span>
+                <span class='bl'></span>
+                <span id="filler"></span>
+                    
+                <ul></ul>
+                
+                <div class='clear'></div>
+        </div>
+        <div id="content">
+                <span class='tr'></span>
+                <span class='tl'></span>
+                <span class='br'></span>
+                <span class='bl'></span>
+                <span id="filler"></span>
+                  <script>
+        $j(document).ready(function(){
+        $j('.discurs_toggler').toggle(
+                function(){
+                $j(this).attr('src', '../../../../images/little_stuff/16-em-down.png');   
+                $j(this).parent().next('.discurs').hide('fast');
+                },
+                function(){
+                $j(this).attr('src', '../../../../images/little_stuff/16-em-up.png');
+                $j(this).parent().next('.discurs').show('fast');
+                });
+            });
+        </script><style>.nowrap{white-space: nowrap;}
+		.noJustify{text-align:left;}
+		</style><h2 class='noJustify'><span class='nowrap'>'Teo si Horatiu'</span> <span class='notif'>(afirmatori)</span> vs <span class='nowrap'>'Ana-Maria si Andreea'</span> <span class='notif'>(negatori)</span></h2><h3>A1 (Teodora Oprea) <img src='../../../../images/little_stuff/16-em-up.png' class='discurs_toggler'></h3>
+            <div class='discurs normal_text'><p>E timpul sa interzicem publicitatea care se adreseaza copiilor</p>
+<p><br /><br /></p>
+<p>In vederea demonstrarii acestei teze, ne vom referi la copii ca fiind persoanele in varsta de pana la 14 ani, pentru a distinge intre notiunea de &lsquo;copil&rsquo;, sugerand si naivitatea caracteristica varstei fragede (chestiune relevanta in cazul acestei motiuni), si notiunea de &lsquo;minor&rsquo;, desemnand orice persoana care nu a implinit inca 18 ani.</p>
+<p>Prin publicitatea adresata copiilor intelegem, in congruenta cu definitia din Legea audiovizualului<a class="sdfootnoteanc" name="sdfootnote1anc" href="#sdfootnote1sym"><sup>1</sup></a>, orice forma de mesaj difuzat in vederea promovarii furnizarii de bunuri sau servicii contra cost, insa in acest caz centrata in jurul preocuparilor si bunurilor si serviciilor de interes pentru copii, precum: jucarii, haine, mancare, promotii, concursuri, etc.</p>
+<p>Consideram ca publicitatea adresata copiilor ar trebui interzisa pentru urmatoarele motive:</p>
+<ol>
+<li>
+<p><strong>Copiii nu ar trebui sa fie 	tratati ca niste consumatori</strong></p>
+</li>
+</ol>
+<p>Daca scopul publicitatii e sa creasca vanzarile unui produs, chiar daca produsul respectiv este destinat copiilor, consumatorii nu sunt copiii. Pana la o anumita varsta cel putin (12-14 ani<a class="sdfootnoteanc" name="sdfootnote2anc" href="#sdfootnote2sym"><sup>2</sup></a>), copiii nu dispun de discernamantul necesar pentru a intelege scopul reclamei, pentru a face comparatia cu alte produse, si nici resursele personale pentru a investi in acel produs. Chiar daca copiii isi formeaza inca de la varste fragede gustul si preferintele, expunerea repetata la un mesaj pe care nu il inteleg in totalitate ii determina sa recurga la parinti pentru a obtine acel produs. Daca permitem difuzarea reclamelor pentru copii, le dam copiilor responsabilitati mai mari decat resursele personale de care dispun, le cerem sa nu doreasca incontrolabil ceva ce nu-si pot cumpara singuri, le cerem sa-si dea seama cum sa faca alegerea intre mai multe interese firesti cu privire la mancare, jucarii, brand-uri.</p>
+<p>In realitate, parintii sunt cei care cumpara, iar acestia sunt responsabili de buna crestere si educatie a copilului lor. Reclamele ar trebui adresate lor, chiar daca sunt cu privire la produse pentru copii.</p>
+<ol>
+<li>
+<p><strong>Publicitatea nu urmareste 	interesului copilului, ci profitul</strong></p>
+</li>
+</ol>
+<p>Reclamele au efecte negative asupra copiilor in mai multe sensuri: induc conceptii exagerate cu privire la realitate, la calitatea produsului, la atitudinea pe care ar trebui sa o aiba un copil in raport cu produsul sau anumite situatii (de frenezie, energie excesiva de cele mai multe ori). Copilul este credul, influentabil, mai atent decat adultii in perioada de publicitate.</p>
+<p>Chiar daca copiii nu sunt convinsi sa doreasca/cumpere un anumit produs, publicitatea pentru copii creeaza un comportament materialist si consumist, acestia vor dori in general mai multe obiecte/produse, chiar daca nu sunt exact produsele pentru care au fost realizate reclamele<a class="sdfootnoteanc" name="sdfootnote3anc" href="#sdfootnote3sym"><sup>3</sup></a>.</p>
+<p>Nu consideram ca este in interesul copilului sa permitem ca televiziunea sa creeze astfel de comportamente, pentru a permite producatorilor si programelor televizate pentru copii sa obtina profit. Asa cum in privinta tuturor celorlalte domenii ale vietii sociale principiul interesului superior al copilului este prioritar, asa ar trebui sa fie si in privinta publicitatii televizate, fara a se pune problema de libertatea de informare si comercializare.</p>
+<p><br /><br /></p>
+<ol>
+<li>
+<p><strong>Exista pericole de scurta si 	lunga durata</strong></p>
+</li>
+</ol>
+<p>Consideram ca impulsul de a cumpara un produs si interesul copilului pentru a imita ceea ce vede la televizor se manifesta doar la scurt timp de la contactul cu publicitatea televizata, dar o data cu repetarea reclamelor sau expunerea pe o perioada indelungata la acelasi tip de reclame, comportamentul copilului se altereaza, mai ales daca in reclame apar si copii sau eroi animati. Copilul percepe limbajul si comportamentul copiilor din reclame si programe pentru copii ca fiind normale si le imita in cursul formarii sale. In ceea ce priveste programele pentru copii, acestea sunt concepute sau restrictionate ulterior astfel incat comportamentul personajelor sa fie unul acceptabil pentru privitori. Reclamele insa urmaresc din start sa produca un efect de consum si deci exagereaza comportamentul si reactiile personajelor fata de anumite produse sau situatii. Multi copii nu reusesc sa faca diferenta intre programe si reclame si isi modeleaza trasaturile in mod indistinct dupa amandoua sursele.</p>
+<p>In concluzie, avem doua posibilitati: fie facem ca reclamele sa fie potrivite pentru copii, dar atunci nu vor mai fi impactante, profitabile, si oricum e dificil sa stabilim cu fiecare clam ace induce un comportament si mentalitate negative copiilor si ce nu; fie interzicem publicitatea adresata copiilor pentru motivele expuse anterior.</p>
+<p><br /><br /></p>
+<div id="sdfootnote1">
+<p><span style="font-size: x-small;"><a class="sdfootnotesym" name="sdfootnote1sym" href="#sdfootnote1anc">1</a><sup></sup> Legea audiovizualului nr. 504 din 11 iulie 2002, art 1 alin. 1 pct. 	17 <a href="http://www.cna.ro/Legea-audiovizualului.html">http://www.cna.ro/Legea-audiovizualului.html</a> </p>
+</div>
+<div id="sdfootnote2">
+<p><span style="font-size: x-small;"><a class="sdfootnotesym" name="sdfootnote2sym" href="#sdfootnote2anc">2</a><sup></sup> Pine, Nash- &ldquo;The effects of television advertising&rdquo;, subcapitol 	Consumer Literacy, pag 530 	<a href="../../../../../uk.sagepub.com/en-gb/eur/hackley/SJO%20Articles%20for%20Website/Chapter%208%20-%20Pine%20%26%20Nash.html">http://www.uk.sagepub.com/hackley/SJO%20Articles%20for%20Website/Chapter%208%20-%20Pine%20&amp;%20Nash.pdf</a> </p>
+</div>
+<div id="sdfootnote3">
+<p><span style="font-size: x-small;"><a class="sdfootnotesym" name="sdfootnote3sym" href="#sdfootnote3anc">3</a><sup></sup> Pine, Nash- &ldquo;The effects of television advertising&rdquo;, subcapitol 	Discussions, paragraph 3, pag 537 	<a href="../../../../../uk.sagepub.com/en-gb/eur/hackley/SJO%20Articles%20for%20Website/Chapter%208%20-%20Pine%20%26%20Nash.html">http://www.uk.sagepub.com/hackley/SJO%20Articles%20for%20Website/Chapter%208%20-%20Pine%20&amp;%20Nash.pdf</a></p>
+</div>
+</div><hr><h3>N1 (Andreea Ștefea) <img src='../../../../images/little_stuff/16-em-up.png' class='discurs_toggler'></h3>
+            <div class='discurs normal_text'><p>&nbsp; E timpul să interzicem publicitatea care se adresează copiilor?</p>
+
+
+
+<p>&nbsp; 1.1 Termenii cheie din această frază care stabilesc subiecții dezbaterii fiind remarcați și de membrul echipei afirmatoare sunt: a interzice, publicitate, copii.</p>
+<p>&nbsp;&nbsp; &bdquo;A interzice&rdquo; declanșează automat suprimarea permisiei de informare respectiv cunoaștere. Este adevărat că sunt situații c&acirc;nd <em>a interzice </em>devine o nuanță favorabilă, &icirc;nsă nu trebuie omis faptul că odată interzisă informarea, de orice tip ar fii aceasta, se &icirc;ncalcă automat exercitarea *dreptului la informare, drept reglementat in mod special de către **Uniunea Europeană (aici se face referire la dreptul copilului).</p>
+<p>&nbsp;&nbsp; Publicitatea, mijloc de informare &icirc;n masă sub diferite forme, dispune de un maximum de frecvență &icirc;n viața societății. Cu alte cuvinte, publicitatea este regăsită at&acirc;t de des &icirc;n viața cotidiană, &icirc;nc&acirc;t uneori nu se conștientizează prezența acesteia &icirc;n mod evident. Este aceasta at&acirc;t de dăunătoare precum se vehiculează și dacă este cum se face că ne &icirc;nconjurăm de ea? Ba mai mult dec&acirc;t simplul fapt că suntem tot timpul sau majoritatea timpului conectați cu acest mijloc de informare, efectul său a &icirc;nceput să devină din ce &icirc;n ce mai vizibil; altfel de ce s-ar mai recurge la publicitate!</p>
+<p>&nbsp;&nbsp; Copii sunt ființe umane sau juridic vorbind persoane minore. De ce am specificat <em>ființe umane</em>? Deoarece &icirc;n acepțiunea echipei afirmatoare, citez <em>&bdquo;consumatorii nu sunt copii&rdquo;</em>, propoziție ce nu face altceva dec&acirc;t să-i elimine pe cei &icirc;n cauză, și anume copiii, din viața socială. E egal cu a afirma faptul că ființele umane nu cuprind și copiii. Așadar, a-i priva de orice mijloc de informare nu ar duce dec&acirc;t a-i exclude din coexistența propriu-zisă.</p>
+
+<p>&nbsp;1.2&nbsp; Acum că am definit și explicat termenii cheie am să recurg la c&acirc;teva argumentări propriu-zise care vizează opinia negatoare, aceea că: nu suntem de acord cu interzicerea publicității pentru copii.</p>
+<p>&nbsp;&nbsp;Cum spuneam anterior, anularea totală a publicității pentru copii degradează calitatea vieții acestuia. *** <em>Copii au dreptul de a se informa și de a fi ascultați, au dreptul la libertatea de a g&acirc;ndi&hellip; . [&hellip;]Pentru ca un copil să devină &icirc;ntr-o zi un bun cetățean este nevoie ca drepturile lui să fie cunoscute și respectate. </em>Consecințele pot fi lesne de imaginat, dificultăți de integrare socială, discriminare etc.. Caracteristici ca naivitatea, lipsa de discernăm&acirc;nt amintite de cealaltă echipă, nu constituie motive temeinice pentru interzicerea publicității juvenile. Aceste atribute invocă subestimarea, dar mai ales discriminarea copilului. Mai mult dec&acirc;t at&acirc;t, publicitatea adresată publicului t&acirc;năr, se axează pe elemente corespunzătoare acestuia, care afișează ****caractere destinate v&acirc;rstei, nivelului de cultură, bazate in proporție de 90% pe o adaptare ludică. &Icirc;n acest mod nu se poate afecta dezvoltarea personalității sau bunei creșteri.</p>
+
+<p>1.3 Dacă se recurge la parinți așa cum propunea echipa afirmatoare, aici trebuie a se preciza faptul că rolul principal al părinților nu este altul dec&acirc;t acela de a coordona sau &icirc;ndruma viața micuților lor. Cu siguranță aceștia au suficienta competență de a putea remarca care sunt cu adevărat reclamele pentru micuți și care depășesc nivelul acestora. A explica unui copil care este diferența dintre bun sau rău la modul generic este mult mai util dec&acirc;t a interzice.</p>
+
+<p>&nbsp;&nbsp; &Icirc;n concluzie, nu este benefică interzicerea reclamelor pentru copii deoarece acestea stimulează creativitatea, dezvoltă o g&acirc;ndire proprie și un liber arbitru. Așadar, caracteristicile enumerate la finalul frazei anterioare, luate integral constituie o personalitate bine angrenată &icirc;n societate și cu o multitudine de capacități respectiv competențe.</p>
+
+
+
+
+
+
+<p>* Constituția Rom&acirc;niei <a href="http://legeaz.net/constitutia-romaniei/articolul-31-constitutie">http://legeaz.net/constitutia-romaniei/articolul-31-constitutie</a></p>
+<p>**&nbsp; Drepturile copilului &icirc;n Uniunea Europeană <a href="../../../../../europedirect.centras.ro/assets/editor/file/pliant%20dr%20copilului.html">http://europedirect.centras.ro/assets/editor/file/pliant%20dr%20copilului.pdf</a></p>
+<p>*** Dr. Copilului &icirc;n U.E. <a href="../../../../../europedirect.centras.ro/assets/editor/file/pliant%20dr%20copilului.html">http://europedirect.centras.ro/assets/editor/file/pliant%20dr%20copilului.pdf</a></p>
+<p>**** Reclame pentru copii</p>
+<p><a href="http://www.youtube.com/watch?v=xtJQKK-Hk_s">http://www.youtube.com/watch?v=xtJQKK-Hk_s</a>&nbsp; <a href="http://www.youtube.com/watch?feature=endscreen&amp;v=EfAPCk7sf3U&amp;NR=1">http://www.youtube.com/watch?feature=endscreen&amp;v=EfAPCk7sf3U&amp;NR=1</a></p>
+<p><a href="http://www.youtube.com/watch?v=fs0AXusd2S0&amp;feature=fvwrel">http://www.youtube.com/watch?v=fs0AXusd2S0&amp;feature=fvwrel</a></p>
+
+
+</div><hr><h3>A2 (Horatiu Dumitru) <img src='../../../../images/little_stuff/16-em-up.png' class='discurs_toggler'></h3>
+            <div class='discurs normal_text'><p class="p1">&Icirc;mi propun astăzi să vă ilustrez efectele negative pentru dezvoltarea unui copil, c&acirc;nd acesta este expus reclamelor. &Icirc;n cele ce urmează, voi incepe contraargumentarea ideilor negatoare, aceasta pliindu-se perfect pe resusţinerea cazului afirmator.</p>
+<p class="p1">1. Echipa negatoare aduce &icirc;n discuţie drepturile omului. Trebuie clarificat că prin interzicerea reclamelor pentru copii nu se &icirc;ncalcă niciun drept. Dreptul la informare nu se rezumă la publicitate, ea &icirc;nseamnă mult mai mult. Dreptul la informare &icirc;ncă există, nimeni nu leagă copilul la ochi c&acirc;nd se plimbă prin supermarket. Ce doresc negatorii, printr-o analogie, este următorul lucru: din moment ce dreptul la educaţie este unul fundamental, copiii ar trebui să fie trimişi la şcoala &icirc;ncă de c&acirc;nd fac primii paşi, altfel le este &icirc;ncalcat acest drept. Noi considerăm că, din moment ce copilul nu este conştient, nu are discernăm&acirc;nt, nu se pune problema de trimis la şcoala, respectiv vizionare de reclame.Nici noi nu ne dorim un copil sustras din realitate, care să nu aibe habar de produsele existente pe piaţă. Un copil va putea liniştit să admire iaurturile de fructe din supermarket, at&acirc;ta timp c&acirc;t pe ambalajele lor nu există animale şi z&acirc;ne. Vrem doar ca reclamele să nu mai aibe acel rol manipulativ asupra lui. Prin adoptarea acestei măsuri, copilul nu va fi inchis &icirc;ntr-o cutie, neav&acirc;nd habar de lumea &icirc;nconjurătoare. Informaţiile doar i se vor transmite corect, filtrate. Copilul va şti că există gumă de mestecat roz. Informaţia ce nu &icirc;i va fi transmisă este aceea că dacă o mestecă, va fi cuprins de magie, aruncat intr-un univers paralel unde va dansa cu personajele preferate!</p>
+<p class="p2">2. Părinţii sunt cei ce plătesc pentru bunurile consumate de copii, aşadar ei ar trebui să constituie grupul ţintă al reclamelor. Un părinte doreşte ce-i mai bine pentru copilul său, iar acestuia cu sigutanţă nu &icirc;i vor lipsi dulciurile şi jucăriile, dacă banii nu constituie o problemă. &Icirc;n acest fel, copilul nu va consuma dulciuri &icirc;n exces, cum se &icirc;ntamplă dacă acesta este manipulat prin reclame. &Icirc;ncă un motiv pentru interzicerea reclamelor pentru copii este faptul că aceştia nu cunosc preţul banului. Un copil mereu va fi tentat să cumpere c&acirc;t mai multe cornuri cu ciocolată, nu neapărat din cauza gustului, ci a modalităţii manipulative de difuzare a reclamei. Aşa apar ne&icirc;nţelegerile dintre părinţi şi copii, pe tema banilor, pe tema alimentelor nesănătoase. O mamă se va chinui &icirc;n zadar să &icirc;i explice copilului său că o marcă de cereale este mai calitativă, mai bună, mai gustoasă dec&acirc;t o marcă promovată de Spiderman. Dacă nu i se va cumpăra marca dorită, copilul se va simţi frustrat, ne&icirc;ndreptăţit, nefericit. Ni se spune că rolul părintelui este acela de a coordona şi &icirc;ndruma viaţa micuţului, &icirc;nsă prin aceste exemple se observă clar cum acest rol este &icirc;ngreunat de efectele publicităţii.</p>
+<p class="p3">3. Tocmai negatorii susţin c&acirc;t de prezentă este publicitatea in viaţa noastră, cum ne &icirc;nconjoară din toate părţile. Noi vă demonstrăm azi că tocmai manipularea aceasta &icirc;n masă este negativă pentru orice copil.&nbsp; Nu prea ne dăm seama cum reclamele ar putea stimula imaginaţia, creativitatea, dezvoltarea g&acirc;ndirii proprii şi al propriului arbitru. Pentru acestea, exista educaţie, gradiniţă, desene animate, carţi, jocuri. Tocmai, liberal arbitru este distrus in cazul copilului. Liber arbitru &icirc;nseamnă acea alegere din proprie iniţiativă dintre două sau mai multe posibilităţi prezentate egal. Ei bine, la copil, dintre o un iaurt proaspăt sănătos, şi un iaurt plin de coloranţi, cu faţa lui Scooby Doo pe ambalaj, pe care credeţi că l-ar alege? Tocmai adaptarea ludică din reclame este problema. De ce? Copiii sunt obişnuiţi ca personajele lor preferate, prezente &icirc;n desene animate şi poveşti, să fie pline de calităţi, pozitive, niste modele. Industria reclamelor se foloseşte de acest lucru, folosindu-se de aceste figuri cu rol de model pentru a &icirc;i manipula pe cei mici. De exemplu, după ce a citit povestea Cenuşăresei, o fetiţă este clar impresionată de personajul acesteia, &icirc;nzestrată cu un caracter frumos. Aceasta, prin calităţile pe care le promovează, devine un erou, un model in ochii fetiţei. Cum oare percepe micuţa o reclamă &icirc;n care Cenuşăreasa se fardează cu nişte farduri pentru copii, şi face reclamă la un şampon roz cu sclipici? Bine&icirc;nţeles, copilul va crede de cuviinţă că, din moment ce eroina sa procedează aşa, produsul respectiv este de cea mai &icirc;naltă calitate, şi ca este normală folosirea produselor respective. Aici intervine problema, deoarece explicaţiile mamei despre nocivitatea coloranţilor din farduri pălesc &icirc;n faţa argumentului din mintea fetiţei &ldquo;&nbsp; aşa procedează Cenuşăreasa, &icirc;nseamnă că e bine!&rdquo;. Astfel, copilul mereu va alege un produs de acest gen, chiar daca acesta este nesănătos, ineficient, scump.&nbsp;</p>
+<p class="p3">Ce efecte apar? Spre exemplu, sunt cunoscute eforturile părinţilor de a-şi educa copiii să măn&acirc;nce sănătos. Eforturile acestea sunt triplate &icirc;n momentul &icirc;n care copilul este bombardat de reclame la Mc Donalds. Ne miram de ce obezitatea creşte &icirc;n r&acirc;ndul celor mici.</p>
+<p class="p3">Copii sunt creduli, nu au discernăm&acirc;nt. Copiii chiar cred că dacă măn&acirc;ncă dimineaţa Nesquik, vor avea o energie uluitoare, precum are iepurele mascotă. Un studiu realizat &icirc;n ţările dezvoltate susţine că majoritatea copiilor ce trăiesc &icirc;n mediul urban, deoarece nu au vazut niciodată in realitate un asemenea animal fermecător, cred ca vaca e mov, datorită reclamelor de la Milka. Amuzant sau nu, astfel se reflectă impactul major al reclamelor, spălarea de creier şi manipularea copiilor creduli.&nbsp;</p>
+<p class="p4">&Icirc;n concluzie, am demonstrat că cei mici nu au discernăm&acirc;ntul, competenţele necesare unui consumator şi că reclamele sunt nocive pentru aceştia. Din aceste motive, ar trebui să considerăm acum momentul oportun de a spune stop reclamelor pentru copii.</p></div><hr><h3>N2 () <img src='../../../../images/little_stuff/16-em-up.png' class='discurs_toggler'></h3>
+            <div class='discurs normal_text'><p class="western" lang="ro-RO">Efectele negative de care vorbea echipa afirmatoare și pe care le expunea distorsioneaza realitatea. Pe baza cărui temei spun asta? Pe a aceluia cum că exemplele date tind mai mult a se mula pe o lume fictivă, și anume aceea &icirc;n care copiii, după cum afirmau aceștia nu au nicio competență intelectuală. Lipsa discernăm&acirc;ntului menționată &icirc;n discursul afirmator ne face să credem că societatea contemporană deține copii care prezintă caractere asemănătoare roboților, astfel &icirc;nc&acirc;t aceștia pot fi manipulați sub cea mai ușoară formă posibilă. Dai un click sau o comandă vocală și voila: copilul recepționează comanda primită, ba mai mult o execută. Ei bine, nu e chiar așa! Comparația mea nu se dorește a fi o ironizare; am folosit-o pentru a ilustra c&acirc;t mai bine ideea că micuții nu se lasă impresionați cu una cu doua, ba mai mult aceștia sunt cei mai aspri critici. Eu cred că este de preferat a ne raporta la exemple concrete sau dacă nu concrete &icirc;ntr-totul, cel puțin reale, bunăoară cele expuse de către afirmatori &icirc;nclin să le desemnez drept simple presupuneri.</p>
+<p class="western" lang="ro-RO">&Icirc;n primul r&acirc;nd, lipsa conștienței copiilor, adusă &icirc;n discuție de către afirmatori ne șochează. C&acirc;nd spui conștiență la ce te referi? Conștiența este cea care dezvăluie realitatea &icirc;nconjurătoare, d&acirc;nd posibilitatea ființei umane de a-și da seama de rolul său &icirc;n societate. Conștiența are la bază logica și este nativă. O definiție medicală a conștienței sună cam așa &bdquo;Conștiența reprezinta capacitatea individului de a se orienta &icirc;n timp, spațiu și propria persoană&rdquo;, ori afirm&acirc;nd că lipsa conștienței este una din caracteristicile copiilor riști să de &icirc;ndepărtezi de legile firești de care ființa umană este guvernată.</p>
+<p class="western"><span lang="ro-RO">&Icirc;n al doilea r&acirc;nd, cum spuneam și &icirc;n primul discurs, rolul părinților este unul extrem de important dacă nu cel mai important. Echipa afirmatoare susținea dorința părinților de a-și crește copii prin metode sănătoase oferindu-le un trai cu un nivel ridicat. A dori <span lang="ro-RO"><em>cei mai bine </em><span lang="ro-RO">pentru copilul tău nu &icirc;nseamnă să-l lași să treacă peste limitele v&acirc;rstei sau să-i cumperi toate jucăriile și dulciurile invocate, de care aminteau și afirmatorii. Calitatea creșterii unui copil implică educația &icirc;n primul r&acirc;nd, &icirc;ncă din primii ani de viață, iar aici voi mai adăuga și ideea că educația nu este doar un exponent al școlii ca instituție, ci educația &icirc;ncepe &icirc;n căminul familial. Precizarea făcută anterior clarifică nelămurirea echipei afiramatoare și anume aceea cum că noi (echipa negatoare) doream ca să nu se &icirc;ncalce drepturile copilului cu privire la informare. Noi nu solicitam schimbarea sistemului &icirc;nspre a se frecventa cursurile școlare &icirc;ncă de la c&acirc;teva luni. Nu. Mai exact făceam referire la educația din afara școlii care este o completare a celei școlare. O educație corespunzătoare conferă echilibru mediului &icirc;n care se dezvoltă copilul.</p>
+<p class="western"><span lang="ro-RO">&Icirc;n concluzie, nu poate fi vorba de manipuarea propriu-zisă a copiilor prin intermediul publicității. Tentațiile oferite de către aceasta prezintă un caracter inofensiv, fără efecte semnificative, at&acirc;ta timp c&acirc;t ne raportăm realității și nu luăm &icirc;n considerare fabulțiile. &Icirc;n zilele noastre copii se maturizează mult mai repede deoarece timpurile sunt de o așa natură și acest fapt nu este unul uluitor. Să nu uităm că și-n vremurile trecute maturizarea era una destul de accelerată fară posibilitățile din ziua de azi.&nbsp;</p>
+</div><hr><hr><h2>Decizia:</h2> <script>
+        $j(document).ready(function(){
+			$j('.decizie_toggler').toggle( 
+				function(){
+					$j(this).attr('src', '../../../../images/little_stuff/16-em-down.png');   
+					$j(this).parent().next('.decizie').hide('fast'); 
+                },
+                function(){
+					$j(this).attr('src', '../../../../images/little_stuff/16-em-up.png');
+					$j(this).parent().next('.decizie').show('fast'); 
+                } 
+			);
+		});</script><div class='decizie'><h3>Liviu Gajora
+                <img src='../../../../images/little_stuff/16-em-up.png' class='decizie_toggler'></h3><div class='normal_text'><p lang="ro-RO">A1</p>
+<ul>
+<li>
+<p lang="ro-RO"><em>e 	foarte bine că defineşti termenii moţiunii </em></p>
+</li>
+<li>
+<p lang="ro-RO"><em>ai grijă să 	numerotezi corect argumentele</em></p>
+</li>
+<li>
+<p lang="ro-RO"><em>primul 	argument e formulat problematic: Copiii sunt consumatori (ei măn&acirc;ncă 	cerealele, ei se joacă cu jucăriile cumpărate samd), ce vrei tu 	să spui e că ei nu sunt cumpărători, ci apelează la părinţi. 	E important că spui că nu &icirc;nţeleg mesajul &icirc;n totalitate, deci 	titlul argumentului ar fi fost mai potrivit astfel &ldquo;Copiii nu ar 	trebui să fie consideraţi consumatori raţionali/cu discernăm&acirc;nt&rdquo;. 	Atenţie că ai nişte propoziţii care nu sunt corecte pentru cazul 	afirmator, prin care vrei să interzici publicitatea: &ldquo;dacă 	permitem difuzarea reclamelor le cerem sa nu doreasca incontrolabil ceva ce nu-si pot cumpara singuri, le cerem sa-si 	dea seama cum sa faca alegerea intre...&rdquo;</em></p>
+</li>
+<li>
+<p lang="ro-RO"><em>E bun 	argumentul 3, privitor la faptul că publicitatea deseori 	exagerează/sugerează efecte miraculoase (erau bune nişte exemple 	chiar aici) şi creează un obicei consumerist, conform studiului.</em></p>
+</li>
+<li>
+<p lang="ro-RO"><em>Argumentul 3 - cel cu efectele pe termen scurt şi lung &ndash; are 	nevoie de dovezi/exemplificări  ca să convingi că efectele sunt 	nocive</em></p>
+</li>
+</ul>
+<p class="western" lang="ro-RO">N1</p>
+<ul>
+<li>
+<p lang="ro-RO"><em>atenţie 	că atunci c&acirc;nd defineşti termenii cheie faci nişte erori logice 	sau distorsionezi nişte noţiuni. Afirmatorii nu au spus 	&ldquo;consumatorii nu sunt copii&rdquo;, ci au spus că cei mici/copiii nu 	ar trebui să fie trataţi ca nişte consumatori (pentru că nu au 	discernăm&acirc;ntul necesar pentru a &icirc;nţelege scopul reclamei). C&acirc;nd 	vorbeşti la dreptul de informare, trebuie să ţii cont că acesta 	nu e un absolut, sunt multe instanţe c&acirc;nd părinţii/altă 	autoritate limitează accesul copiilor la un anumit tip de conţinut 	(producţiile erotice sau violente, de exemplu). Afirmatorii susţin 	că publicitatea are efecte negative, de aceea merită limitat 	accesul la informare al copiilor, iar sarcina voastră este să 	demonstraţi ori că publicitatea nu are efecte sau ele sunt 	neglijabile, ori că are efecte chiar pozitive.</em></p>
+</li>
+<li>
+<p lang="ro-RO"><em>Afirmi că cei 	privaţi de acces la publicitate nu vor fi integraţi sociali, că 	vor fi discriminaţi, dar nu argumentezi/dovedeşti că acestea sunt 	consecinţele probabile. Apoi, &icirc;n concluzie spui că reclamele 	stimulează creativitatea şi dezvoltă g&acirc;ndirea critică, dar nu 	oferi nici o dovadă &icirc;n acest sens.</em></p>
+</li>
+<li>
+<p lang="ro-RO"><em>Argumentul trei este probabil singurul argument care are 	potenţial de a convinge. Păcat că nu insişti mai mult asupra lui 	şi nu &icirc;l &icirc;ntăreşti cu dovezi (de pildă ,&icirc;n dovada propusă de 	afirmatori, la pagina 538 scrie că acei copii care vizionează 	reclame alături de părinţi şi discută despre ele &icirc;n familie 	sunt mai puţin influenţabili)</em></p>
+</li>
+</ul>
+<p class="western" lang="ro-RO">A2</p>
+<ul>
+<li>
+<p lang="ro-RO"><em>atenţie că depăşeşti limita de cuvinte (discursul tău are 	914 cuvinte), motiv pentru care pierzi puncte la structură. Pe 	viitor &icirc;ncearcă să compactezi conţinutul şi/sau să renunţi la 	frazele care nu &icirc;ţi ajtă cazul (la primul argument analogia aceea 	cu mersul la şcoală putea lipsi). </em></p>
+</li>
+<li>
+<p lang="ro-RO"><em>E 	bine că explici că publicitatea nu (doar) informează, ci uneori 	sugerează efecte şi beneficii nerealiste. Argumentul cu părinţii 	care au o muncă &icirc;ngreunată din cauza advertising-ului e 	acceptabil (mai ales &icirc;n absenţa unei critici negatoare relevante), 	dar puteai susţine mai bine acest aspect apel&acirc;nd la un studiu. </em></p>
+</li>
+<li>
+<p lang="ro-RO"><em>Argumentul 	trei ţinteşte la fix cu exemplele de reclame care se folosesc de 	universul copiilor pentru a induce o imagine favorabilă asupra 	produselor (nişte link-uri la reclame erau utile, ca să nu te 	acuze negatorii că inventezi);  e bine şi că remarci că 	negatorii nu au dovedit de ce reclamele stimulează &bdquo;creativitatea 	şi liberul arbitru&rdquo;</em></p>
+</li>
+<li>
+<p lang="ro-RO"><em>Deşi e la &icirc;ndem&acirc;nă, nu poţi afirma că publicitatea duce la 	creşterea obezităţii &icirc;n r&acirc;ndul celor mici, fără să dovedeşti 	asta cu nişte studii </em></p>
+</li>
+</ul>
+<p class="western" lang="ro-RO">N2</p>
+<ul>
+<li>
+<p class="western" lang="ro-RO"><em>discursul 	tău suferă  &icirc;n ceea ce priveşte argumentele/dovezile/relevanţa 	ideilor faţă de sarcina negatorilor de a nega moţiunea. Concret, 	definiţia &ldquo;conştienţei&rdquo;  şi invocarea &ldquo;legilor fireşti de 	care fiinţa e guvernată&rdquo; sunt irelevante şi inexacte, şi nu 	contra-argumentezi poziţia afirmatorilor, care spuneau că cei mici 	nu au discernăm&acirc;ntul necesar pentru a naviga &icirc;n lumea 	publicităţii. </em></p>
+</li>
+<li>
+<p class="western" lang="ro-RO"><em>Afirmi 	că tentaţiile oferite de publicitate sunt inofensive, dar 	afirmatorii &icirc;ţi dau nişte exemple legate de posibilele pericole, 	pe care le ignori. Afirmi că cei mici sunt cei mai aspri critici, 	dar nu oferi nici  o dovadă &icirc;n acest sens, nici măcar nu explici 	ce &icirc;nseamnă că sunt critici (dacă spiiritul lor critic se rezumă 	la faptul că &icirc;l preferă pe Superman lui Spiderman, nu &icirc;nseamnă 	că ei analizează critic produsele cu care aceste personaje sunt 	asociate)</em></p>
+</li>
+<li>
+<p class="western" lang="ro-RO"><em>E 	bine că reiterezi rolul important al părinţilor, dar nu explici 	suficient de convingător faptul că părinţii fac o treabă 	bună/completă sau măcar suficientă &icirc;n a-i educa pe cei mici 	referitor la publicitate</em></p>
+</li>
+</ul>
+<p class="western" lang="ro-RO">&nbsp;</p>
+<p class="western" lang="ro-RO">Verdict:</p>
+<p class="western" lang="ro-RO">Sunt doua idei majore dezbătute &icirc;n meci. Prima e legată de capacitatea copiilor de a &icirc;nţelege şi judeca critic reclamele şi produsele promovate, iar a doua se referă la efectele, nocive sau nu, pe care publicitatea le are. &Icirc;n ceea ce priveşte prima idee, afirmatorii se descurcă mai bine să argumenteze, sprijinindu-se de un studiu, că cei mici nu au capacitatea intelectuală de a evalua corect reclamele şi nu ar trebui să fie pionii prin care companiile obţin profit. Referitor la cea de-a doua idee, deşi afirmatorii puteau face o treabă mai bună &icirc;n a dovedi efectele nocive ale publicităţii, reuşesc să sugereze că există pericole (de &icirc;ncurajare a unui consumerism exagerat, de optare pentru nişte produse care deşi pot fi problematice dpdv calitativ, sunt seducătoare, de &icirc;ngreunare a rolului părinţilor etc). Recomand ambelor echipe să se documenteze mai mult şi să &icirc;şi argumenteze atent afirmaţiile.</p>
+<p class="western" lang="ro-RO">&nbsp;</p>
+<p class="western" lang="ro-RO">Acest meci e c&acirc;ştigat de echipa afirmatoare.</p>
+<p class="western" lang="ro-RO">&nbsp;</p>
+<p class="western" lang="ro-RO">Punctaje</p>
+<table cellspacing="0" cellpadding="7" width="620">
+<colgroup><col width="140"></col> <col width="141"></col> <col width="141"></col> <col width="140"></col> </colgroup> 
+<tbody>
+<tr valign="TOP">
+<td width="140">
+<p class="western" lang="ro-RO">&nbsp;</p>
+</td>
+<td width="141">
+<p class="western" lang="ro-RO">Conţinut</p>
+</td>
+<td width="141">
+<p class="western" lang="ro-RO">Strategie</p>
+</td>
+<td width="140">
+<p class="western" lang="ro-RO">Stil</p>
+</td>
+</tr>
+<tr valign="TOP">
+<td width="140">
+<p class="western" lang="ro-RO">Afirmator 1 (24)</p>
+</td>
+<td width="141">
+<p class="western" lang="ro-RO">12</p>
+</td>
+<td width="141">
+<p class="western" lang="ro-RO">8</p>
+</td>
+<td width="140">
+<p class="western" lang="ro-RO">4</p>
+</td>
+</tr>
+<tr valign="TOP">
+<td width="140">
+<p class="western" lang="ro-RO">Negator 1 (20)</p>
+</td>
+<td width="141">
+<p class="western" lang="ro-RO">9</p>
+</td>
+<td width="141">
+<p class="western" lang="ro-RO">7</p>
+</td>
+<td width="140">
+<p class="western" lang="ro-RO">4</p>
+</td>
+</tr>
+<tr valign="TOP">
+<td width="140">
+<p class="western" lang="ro-RO">Afirmator 2 (23)</p>
+</td>
+<td width="141">
+<p class="western" lang="ro-RO">13</p>
+</td>
+<td width="141">
+<p class="western" lang="ro-RO">6</p>
+</td>
+<td width="140">
+<p class="western" lang="ro-RO">4</p>
+</td>
+</tr>
+<tr valign="TOP">
+<td width="140">
+<p class="western" lang="ro-RO">Negator 2 (20)</p>
+</td>
+<td width="141">
+<p class="western" lang="ro-RO">9</p>
+</td>
+<td width="141">
+<p class="western" lang="ro-RO">7</p>
+</td>
+<td width="140">
+<p class="western" lang="ro-RO">4</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="western" lang="ro-RO">&nbsp;</p>
+</div>A1 -> 24 puncte<br>N1 -> 20 puncte<br>A2 -> 23 puncte<br>N2 -> 20 puncte<br>Castiga echipa: <h3 style='display:inline;color:red;'>Teo si Horatiu (afirmatori)</h3></div><hr><h3 class='important'>Vrem parerea ta! Pentru asta, trebuie sa te loghezi.</h3>
+                <div class='clear'></div>
+        </div><!-- end main content -->
+         <div class='clear'></div>
+</div>
+<div id="pix"></div>
+
+
+                                </div><!--end main -->
+                                <div id='parteneri'>
+                                    <span class='tr'></span><span class='tl'></span><span class='br'></span><span class='bl'></span><span id="filler"></span>
+                                    <div class='parteneri' id='sustinatori'>
+                                        <span class='floating_text' id='un_proiect'>Un proiect</span>
+                                        <a href='http://www.ardor.org.ro/'><div class='image' id='ardor'>Ardor</div></a>
+                                        <span class='floating_text' id='finantatori'>Finanțatori</span>
+                                        <a href='http://www.opensocietyfoundations.org/'><div class='image' id='open_society'>Open Society Foundation </div></a>
+                                        <a href='http://www.studentiq.ro//'><div class='image' id='memoplus'>MemoPlus</div></a>
+                                        <!-- <a href='http://www.ratiufamilyfoundation.com/'><div class='image' id='FundatiaRatiu'>Ardor</div></a>
+                                        <a href='http://www.eef.md/'><div class='image' id='eef'>East Europe Foundation</div></a>
+                                        <a href='http://www.mts.gov.md/'><div class='image' id='mdminister'>Ministerul Tineretului si Sportului al Republicii Moldova</div></a> -->
+
+                                        <span class='floating_text' id='parteneri_text'>Parteneri</span>
+
+                                        <a href='http://www.policycenter.eu/'><div class='image' id='PolicyCenter'>Policy Center</div></a>
+                                        <a href='http://www.britishcouncil.org/'><div class='image' id='BritishCouncil'>British Council</div></a>
+                                        <a href='http://www.europuls.ro/'><div class='image' id='europuls'>Europuls</div></a>
+                                        <a href='http://www.cere.ro/'><div class='image' id='cere'>Ce-Re</div></a>
+                                        <a href='http://www.primeromania.ro/'><div class='image' id='prime'>Prime Romania</div></a>
+                                        <a href='http://www.cji.ro/'><div class='image' id='cji'>Centrul pentru jurnalism independent</div></a>
+                                        <a href='http://www.aiesectm.ro/'><div class='image' id='aisec'>Aisec</div></a>
+                                        <!-- ===================================================================================================== -->
+                                        <a href='http://www.cogitus.ro/'><div class='image' id='cogitus'>Cogitus</div></a>
+                                        <a href='http://www.adevarul.ro/international/foreign_policy/'><div class='image' id='foreignPolicy'>Foreign Policy</div></a>
+                                        <a href='http://www.elsa.ro/'><div class='image' id='elsa'>Elsa</div></a>
+                                        <a href='http://www.vipromania.ro/'><div class='image' id='vipromania'>Voluntari pentru idei si proiecte</div></a>
+                                        <a href='http://www.ongtrust.ro/'><div class='image' id='ongtrust'>Trust</div></a>
+
+                                        <!-- ===================================================================================================== -->
+                                        <a href='http://www.leap.ro/'><div class='image' id='leap'>Leap</div></a>
+                                        <a href='http://www.younginitiative.org/'><div class='image' id='younginitiative'>Asociatia young initiative</div></a>
+                                        <a href='http://www.asjc.ro/'><div class='image' id='asjc'>Asjc</div></a>
+                                        <a href='http://osut.ro/'><div class='image' id='osut'>Osut</div></a>
+                                        <div class='clear'></div>
+                                    </div>
+                                    <div class='parteneri' id='parteneri_institutionali'>
+                                        <span class='floating_text' id='sponsori_text'>Sus&#539;in&#x0103;tori</span>
+                                        <a href='http://www.cartier.md/'><div class='image' id='cartier_logo'>Editura Cartier</div></a>
+                                        <a href='http://www.pll.md/ro/'><div class='image' id='biblio_logo'>Biblioteca publica de drept</div></a>
+                                        <span class='floating_text' id='institutii_text'>Parteneri institu&#539;ionali</span> 
+                                        <ul id='institutii'>
+                                            <!-- <span class='floating_text' id='institutii_text'>Parteneri institu&#539;ionali:</span> -->
+                                            <li><a href='http://www.politice.ro/'>Facultatea de &#536;tiin&#539;e Politice SNSPA </a></li>
+                                            <li><a href='http://www.comunicare.ro/'>Facultatea de Comunicare &#537;i Rela&#539;ii Publice SNSPA</a></li>
+                                            <li><a href='http://www.fspub.ro/'>Facultatea de &#536;tiin&#539;e Politice Universitatea Bucure&#537;ti</a></li>
+                                            <li><a href='http://www.filosofie.unibuc.ro/'>Facultatea de Filosofie Universitatea Bucure&#537;ti</a></li>
+                                            <li><a href='http://litere.unibuc.ro/'>Facultatea de Litere din Universitatea Bucure&#x015f;ti</a></li>
+                                            <li><a href='http://www.unibuc.ro/ro/fac_fsas_ro'>Facultatea de Sociologie Universitatea Bucure&#537;ti</a></li>
+                                            <li><a href='http://laws.uaic.ro/'>Facultatea de Drept Universitatea Alexandru Ioan Cuza Ia&#537;i</a></li>
+                                            <li><a href='http://www.uaic.ro/uaic/bin/view/Academic/Filosofie'>Facultatea de Filosofie si &#536;tiin&#539;e Social Politice Universitatea AIC Ia&#537;i</a></li>
+                                            <li><a href='http://www.upa.ro/'>Facultatea de Drept si Facultatea de &#x015e;tiin&#x0163;e Politice si Administrative Universitatea Petre Andrei Ia&#x015f;i</a></li> 
+
+                                            <li><a href='http://www.ubbcluj.ro/'>Universitatea Babe&#537;-Bolyai Cluj Napoca</a></li>
+                                            <li><a href='http://www.uvt.ro/'>Universitatea de Vest Timi&#537;oara</a></li>
+                                            <li><a href='http://www.upt.ro/'>Universitatea Politehnica Timi&#537;oara</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class='parteneri' id='parteneri_media'>
+                                        <span class='floating_text' id='media_text'>Parteneri media</span>
+                                        <a href='http://www.hotnews.ro/'><div class='image' id='hotnews'>HotNews</div></a>
+                                        <!-- <a href='http://www.lumebuna.ro/'><div class='image' id='lumebuna'>Lume Buna</div></a> -->
+                                        <a href='http://www.romaniapozitiva.ro/'><div class='image' id='romaniapozitiva'>Romania Pozitiva</div></a>
+                                        <a href='http://totb.ro/'><div class='image' id='thinkoutsidethebox'>Think Outside The Box</div></a>
+                                        <a href='http://www.facebook.com/carevasazica.vip'><div class='image' id='carevasazica'>Carevasazica</div></a>
+                                        <a href='http://www.studentie.ro/'><div class='image' id='studentiero'>Studentie.ro</div></a>
+                                        <a href='http://startub.unibuc.ro/'><div class='image' id='startub'>startub.unibuc.ro</div></a>
+                                        <!-- <a href='http://www.tvr.ro/tvr_cluj.php'><div class='image' id='tvrcluj'>Tvr Cluj</div></a> -->
+                                        <!-- <a href='http://www.radiotransilvania.ro'><div class='image' id='radiotransilvania'>Radio Transilvania</div></a> -->
+                                        <a href='http://iasifun.ziaruldeiasi.ro/'><div class='image' id='iasifun'>Iasi fun</div></a>
+                                        <a href='http://www.ziaruldeiasi.ro/'><div class='image' id='ziaruldeiasi'>Ziarul de Iasi</div></a>
+                                        <a href='http://www.kissfm.ro/timisoara'><div class='image' id='kissfm'>KissFm</div></a>
+
+                                        <div class='clear'></div> 
+                                    </div>
+                                    <div class='clear'></div>
+
+                                </div>	
+                            </div>	<!-- end wrap -->
+                            <div id='footer_mare'>
+                                <div id='footer'>
+                                    <div id='links' class='footer'>
+                                        <div id='menu1' style='margin:auto;'> <ul id='meniu_prinicpal'><li><a href='../../../contacte/index.html'> Contact </a></li>
+<li><a href='../../../clubdebate/index.html'> Cluburile </a></li>
+<li><a href='../../../oamenii/index.html'> Oamenii </a></li>
+<li><a href='../../../proiectul/index.html'> Proiectul </a></li>
+<li><a href='../../../home/index.html'> Acasa </a></li>
+</ul></div><!--end menu-->
+                                    </div><!--
+                                    <div id='contact' class='footer'>
+                                            <h4>Contact</h4>
+                                            <p>office@closer2oxford.ro</p>
+                                            <p>bogdan.draghicescu@closer2oxford.ro<br>
+                                            <span class='detalii'> (asistenta tehnica web - orice probleme legate de site)</span></p>
+                                    </div>
+                                    -->
+                                    <div id='newsletter' class='footer'>
+                                        <script src="../../../../../connect.facebook.net/en_US/all.js#xfbml=1"></script><fb:like href="http://www.facebook.com/pages/Closer2Oxford/162758797069605" width="250" colorscheme="dark"></fb:like>
+                                        <!--<h4>Newsletter</h4>
+                                        <form action='/page/newsletter'>
+                                                <input type='text' name='email'>
+                                                <input type='submit' id='submit' value='>'>
+                                                        
+                                        </form>-->
+                                    </div>
+                                    <div id='credits'>
+                                        Copyright(c) 2021 ARDOR |  Toate drepturile rezervate | Toate logo-urile si sloganurile de pe site sunt proprietate intelectuala inregistrata si nu pot fi reproduse fara acordul explicit al detinatorilor. <br>
+                                            <br /><br />
+                                            <b>Disclaimer</b><br /><i>
+
+                                                Programul educational Closer to Oxford este un program non-profit si nu are o legatura cu universitatea cu acelasi nume, referirea la Oxford avand doar o semnificatie simbolica.
+                                            </i>
+                                    </div>
+
+                                </div>		
+                            </div>		
+
+                            <div id="finantatde">Acest proiect este finantat cu sustinere din partea Comisiei Europene. Aceast publicatie [comunicare] reflecta doar
+                                vederile autorului, iar Comisia nu poate fi facuta  responsabila pentru utilizarea informatiei pe care o contine.</div>
+
+
+                        </body>
+                        </html>

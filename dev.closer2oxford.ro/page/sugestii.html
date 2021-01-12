@@ -1,0 +1,444 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml-strict.dtd">
+<HTML xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+    <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+            <link rel="icon" type="image/png"  href="../../closer2oxford.ro/favicon.html">
+                <link rel="stylesheet" href="var/layout.css" type="text/css">
+                    <title>Sugestii de lectură</title>
+                    <link rel="alternate" type="application/rss+xml"  href="rss_feed" title="Stiri Closer2Oxford">
+                        <!-- <link rel="image_src" property="og:image"  href="/images/layout/closer2oxford_fb_white.png" /> -->
+                        <link rel="image_src" property="og:image"   type="image/jpeg"  href="../uploads/2015/06/9/facebook_icon.html" />
+                        <link rel="image_src" type="image/jpeg"  href="../uploads/2015/06/9/icon-facebook.gif" /> 
+						<meta name="description" content="Closer2Oxford pune în valoare oameni şi argumentele lor, în dezbateri online şi publice alături de tineri şi invitați avizaţi"/>
+                        <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9" />
+<script type='text/javascript' src='../js/jquery-1.4.4.min.js'></script>
+<script>var $j = jQuery.noConflict();</script>
+<script type='text/javascript' src='../js/tinymce/tiny_mce.js'></script>
+<script type='text/javascript' src='../js/jquery.form.js'></script>
+<script type='text/javascript' src='../js/fbLoginRegister.js'></script>
+<script type='text/javascript' src='var/javascript.js'></script>
+<script type='text/javascript' src='../js/jquery.hovertip-1.0.min.js'></script> 
+<script type='text/javascript' src='../js/jquery.jgrowl_minimized.js'></script> 
+<link rel='stylesheet' href='../css/jquery.jgrowl.css' media='screen' type='text/css'> 
+<script type='text/javascript' src='../js/jquery.timer-min.js'></script> 
+<meta name='description' content=''/> 
+<meta name='keywords' content=''/> 
+<style>.hovertip{
+    position:absolute;
+    padding:10px 13px;
+    z-index:2;
+    max-width:300px;
+    color:#303030;
+    background-color:#f5f5b5;
+    border:1px solid #DECA7E;
+    font-family:sans-serif;
+    font-size:12px;
+    line-height:18px;
+    text-align:left;
+    }</style> 
+<script type='text/javascript'>$j(document).ready(function(){$j('.tooltip').hovertip({'offset':[20,20]});get_notif();});
+
+if(!Array.indexOf){Array.prototype.indexOf = function(obj){for(var i=0; i<this.length; i++){if(this[i]==obj){return i;}}return -1;}}
+    hashuri = [] ;
+	 var tick_timer= 3000 ;
+ 
+	 function get_notif()
+        {
+		  
+		  //console.log(tick_timer);
+	     
+		  setTimeout(get_notif,tick_timer);
+        
+		   $j.ajax(
+            {
+                url: '/page/notif/show_events',
+                dataType: 'json',
+                data: "{}",
+                success: function(data)
+                    {
+                    $j.each(data,function(index,data){
+                        try
+                            {
+                            if( hashuri.indexOf(data.hash) == -1 )
+                                {
+                                hashuri.push(data.hash);
+                                $j.jGrowl(
+                                    data.str,
+                                    {
+                                        corners:'1px',
+                                        life: data.life,
+                                        header:data.title,
+                                        hash: data.hash,
+                                        sticky: data.sticky,
+                                        close: function(e,m,o)
+                                            {
+                                                $j.ajax({url:'/page/notif/delete_single_event/' + o.hash});
+                                            }
+                                    });
+                                }
+                            }
+                        catch(e){}
+                        })
+                    }
+            });
+        }
+	 </script> 
+ 
+                            
+  <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-19111721-1']);
+  _gaq.push(['_setDomainName', '.closer2oxford.ro']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+    
+                        </head>
+                        <body>
+                            <div id="global_wrap">
+                                <div id="header">
+                                    <a href='../index.html'><div id='logo'><img src='../images/layout/sigla.jpg'></div></a>
+                                    <a class='noExternal' href='http://www.facebook.com/pages/Closer2Oxford/162758797069605'><img src='../images/fb.png' style='height:30px;float:right;clear:right;margin:10px 5px 5px 5px;border:none;'/></a>
+                                    <a href='rss_feed'><img src='../images/feed-icon.png' style='height:30px;float:right;clear:right;margin:5px;border:none;'/></a>
+                                </div>
+                                <div id="meniu">
+                                    <div  id='register_login'>
+
+                                        
+  <a href='#' class='todo' id='login'>Login </a> &nbsp;<a href='register.html' class='todo' id='register'>Register</a>
+    <div id='login_box'>
+		  <form action='https://dev.closer2oxford.ro/page/ro/login_user/logon' method='post' id='user_login_form'>
+					 <div>Email: <input type='text' name='email'/> </div><br />
+					 <div>Pass: <input type='password' name='passwd'/></div><br />
+					 <a href='#' class='password_forgot'>forgot password?</a>
+					 <input type='hidden' value='/page/sugestii' name='returnto' class='submiter'/><br />
+					 <input type='submit' value='login' name='btn' class='submiter'/><br />
+		  </form>
+		  
+		  <form action='https://dev.closer2oxford.ro/page/ro/login_user/reset_user_pw' method='post' id='user_reset_form'>
+					 <div>Email: <input type='text' name='email'/> </div><br />
+					 <a href='#' class='password_forgot'>login?</a>
+					 <input type='hidden' value='/page/sugestii' name='returnto' class='submiter'/><br />
+					 <input type='submit' value='reset' name='btn' class='submiter'/><br />
+		  </form>
+		  
+    </div>
+    
+                                    </div>
+                                    <div id='menu1' style='margin:auto;'> <ul id='meniu_prinicpal'><li><a href='contacte/index.html'> Contact </a></li>
+<li><a href='clubdebate/index.html'> Cluburile </a></li>
+<li><a href='oamenii/index.html'> Oamenii </a></li>
+<li><a href='proiectul/index.html'> Proiectul </a></li>
+<li><a href='home/index.html'> Acasa </a></li>
+</ul></div><!--end menu-->
+                                </div>
+                                <div id="main"> 
+                                    <!--<div id='stiri-padding'>
+        <div id='stiri_back'>
+                {stiri} 
+    
+               
+        </div>-->
+        
+</div>
+<div  id="content-padding">
+        <div id='sidebar_menu'>
+                <span class='tr'></span>
+                <span class='tl'></span>
+                <span class='br'></span>
+                <span class='bl'></span>
+                <span id="filler"></span>
+                <ul class='submeniu'><a href='inregistrare.html'><li>Inregistrare  </li></a><a href='dezbateri.html'><li>Dezbateri si arbitraje  </li></a><a href='resurse.html'><li>Resurse teoretice  </li></a><a href='sugestii.html'><li>Resurse de lectură  </li></a><a href='tutoriale.html'><li>Tutoriale  </li></a></ul>    
+                <ul></ul>
+                
+                <div class='clear'></div>
+        </div>
+        <div id="content">
+                <span class='tr'></span>
+                <span class='tl'></span>
+                <span class='br'></span>
+                <span class='bl'></span>
+                <span id="filler"></span>
+                <p>&nbsp;</p>
+<p>Fiecare dintre noi avem revistele, bibliotecile și cărțile &nbsp;preferate. Ne-am gandit sa vă &icirc;mpărtășim ce citim noi pe subiectul propus, &icirc;ncuraj&acirc;ndu-vă să răsfoiți at&acirc;t sugestiile noastre, c&acirc;t și alte surse. Documentarea unui caz este o etapă importantă dintr-un meci, și face deosebirea dintre un debate de calitate și unul slab.</p>
+<p>Resursele rundei de vara 2015 (runda a 13-a)</p>
+<p><strong>Ar trebui ca dreptul la libera exprimare sa nu includa dreptul de a ofensa religii</strong></p>
+<div class="gmail_extra"><span style="font-size: x-small; color: #333399;"><span style="font-family: tahoma,sans-serif;"><a href="http://journalism.cmpf.eui.eu/discussions/when-satire-incites-hatred/" target="_blank">When satire incites hatred</a></span></span></div>
+<div class="gmail_extra"><span style="font-size: x-small; color: #333399;"><span style="font-family: tahoma,sans-serif;"><br /></span></span></div>
+<div class="gmail_extra"><span style="font-size: x-small; color: #333399;"><span style="font-family: tahoma,sans-serif;"><span style="font-size: x-small;"><span style="font-family: tahoma,sans-serif;"><a href="http://www.contributors.ro/editorial/eu-sunt-charlie-si-ahmed-–-cateva-lectii-si-o-concluzie/" target="_blank">Eu sunt Charlie si Ahmed - cateva lectii si o concluzie</a></span></span></span></span></div>
+<div>
+<div class="gmail_default" style="color: #444444;"><span style="color: #333399;"><span style="font-family: tahoma,sans-serif;"><span class="im">
+<p style="margin-bottom: 0cm;"><a href="http://www.nybooks.com/articles/archives/2006/mar/23/the-right-to-ridicule/" target="_blank">The Right to Ridicule</a></p>
+<p style="margin-bottom: 0cm;"><a href="http://www.economist.com/blogs/erasmus/2015/01/free-speech-and-islam" target="_blank">Free Speech and Islam:&nbsp;<span style="background: transparent none repeat scroll 0% 0%;">Could Voltaire be Muslim?</span></a></p>
+<p style="margin-bottom: 0cm;"><a href="http://foreignpolicy.com/2015/01/02/islam-will-not-have-its-own-reformation/" target="_blank">Islam Will Not Have Its Own &lsquo;Reformation&rsquo;</a></p>
+<p style="margin-bottom: 0cm;"><a href="http://www.economist.com/blogs/erasmus/2015/01/reforming-islam" target="_blank">Where change comes from</a></p>
+<p style="margin-bottom: 0cm;"><a href="http://www.newrepublic.com/article/120785/pope-francis-charlie-hebdo-remarks-miss-our-right-offend-religion" target="_blank">Pope Francis Is Wrong About 'Charlie Hebdo.' We Have a Right to Make Fun of Religion.</a></p>
+<p style="margin-bottom: 0cm;"><a href="http://www.economist.com/node/13413974" target="_blank">Religion and human rights:&nbsp;<span style="background: transparent none repeat scroll 0% 0%;">The meaning of freedom</span></a></p>
+<p style="margin-bottom: 0cm;"><a href="http://www.theguardian.com/books/2015/jan/15/salman-rushdie-on-charlie-hebdo-freedom-of-speech-can-only-be-absolute" target="_blank">Salman Rushdie on Charlie Hebdo: freedom of speech can only be absolute</a></p>
+<p style="margin-bottom: 0cm;"><a href="http://www.economist.com/news/international/21640324-reactions-paris-attacks-highlight-threats-free-expression-around-world" target="_blank">Freedom of speech:&nbsp;<span style="background: transparent none repeat scroll 0% 0%;">The sound of silence</span></a></p>
+<p style="margin-bottom: 0cm;"><a href="http://www.economist.com/blogs/erasmus/2015/01/christianity-and-free-speech" target="_blank">Christianity and free speech:&nbsp;<span style="background: transparent none repeat scroll 0% 0%;">Mothers, punches and turning cheeks</span></a></p>
+<p style="margin-bottom: 0cm;"><a href="https://www.indexoncensorship.org/takingtheoffensive/" target="_blank">Conference Report: Taking the offensive &ndash; defending artistic freedom of expression in the UK</a></p>
+<p style="margin-bottom: 0cm;"><a href="http://blogs.spectator.co.uk/coffeehouse/2015/01/the-right-to-offend-isnt-as-important-as-the-right-to-speak-the-truth/" target="_blank">The right to offend is nowhere near as important as the right to speak the truth</a></p>
+<p style="margin-bottom: 0cm;"><a href="http://www.salon.com/2015/02/22/we_must_offend_religion_more_islam_christianity_and_our_tolerance_for_ancient_myths_harmful_ideas/" target="_blank">We must offend religion more: Islam, Christianity and our tolerance for ancient myths, harmful ideas</a></p>
+<p style="margin-bottom: 0cm;"><a href="http://www.economist.com/blogs/erasmus/2015/01/india-america-and-religion" target="_blank">Judges of faith</a></p>
+<p style="margin-bottom: 0cm;"><a href="http://www.economist.com/news/international/21640748-netherlands-restrictions-free-speech-allow-provocateurs-pose-martyrs-illiberal" target="_blank">Illiberal liberalism</a></p>
+<p style="margin-bottom: 0cm;"><a href="https://www.theobjectivestandard.com/issues/2006-summer/religion-vs-free-speech/" target="_blank">Religion vs. Free Speech</a></p>
+<p style="margin-bottom: 0cm;"><a href="http://www.economist.com/news/international/21640747-middle-east-free-expression-rarity-blasphemy-laws-are-favoured-tools" target="_blank">Freedom of speech:&nbsp;<span style="background: transparent none repeat scroll 0% 0%;">Unholy silence</span></a></p>
+<p style="margin-bottom: 0cm;"><a href="http://www.economist.com/blogs/erasmus/2013/05/religion-freedom-and-social-peace" target="_blank">The effect of laws, or their absence</a></p>
+<p style="margin-bottom: 0cm;"><a href="http://www.economist.com/blogs/newsbook/2011/03/free_speech" target="_blank">Defusing the defamation issue</a></p>
+</span></span><span style="font-family: tahoma,sans-serif;">​</span></span></div>
+&nbsp; <span style="font-size: x-small;"><span style="font-family: tahoma,sans-serif;"><br /></span></span></div>
+<p>Resursele rundei de primavara 2014 (runda a 11-a)</p>
+<p><span><strong>E timpul să afirmăm că parada Gay Pride este &icirc;ncă necesară</strong></span></p>
+<p dir="ltr"><span><a href="../../ires.ro/uploads/articole/ires_cncd_perceptii-si-atitudini-privind-discriminarea-2013.pdf" target="_blank">Perceptii si atitudini privind discriminarea 2013</a></span></p>
+<p dir="ltr"><a href="http://www.newyorker.com/online/blogs/newsdesk/2012/08/gay-and-proud-in-uganda.html#slide_ss_0=1" target="_blank"><span>Gay and proud in Uganda</span></a><span>&nbsp;</span></p>
+<p dir="ltr"><span><a href="../../www.brickell.co.nz/docs/heroesinvaders.html" target="_blank">Heroes and Invaders: gay and lesbian pride parades and the public/private distinction in New Zealand media accounts</a></span></p>
+<p dir="ltr"><a href="http://www.slate.com/blogs/outward/2014/01/30/what_is_homophobia_why_straight_men_are_right_to_be_afraid_of_homosexuality.html" target="_blank"><span>Homophobia is a real fear - but of what, exactly?</span></a><span>&nbsp;</span></p>
+<p dir="ltr"><span><a href="http://www.elliotlakestandard.ca/2013/05/15/the-gay-pride-parade-not-good-for-the-city" target="_blank">The gay pride parade not good for the city</a></span></p>
+<p><span><span><a href="http://psychology.ucdavis.edu/faculty_sites/rainbow/html/comeout1.html" target="_blank">Coming out can reduce sexual prejudice</a></span></span></p>
+<div><span><a href="http://www.huffingtonpost.com/2013/09/08/discrimination-lawsuits-gay-rights_n_3882450.html" target="_blank">Religious liberty pitted against gay rights in discrimination laws</a></span></div>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>Resursele rundei de toamna 2013 (runda 10)</p>
+<p><strong>&nbsp;E timpul ca statul sa nu mai subventioneze specializarile care nu au cautare pe piata muncii?</strong></p>
+<p><a href="http://www.evz.ro/detalii/stiri/admitere-facultate-2013-care-sunt-cele-mai-cautate-specializari-1049040.html" target="_blank">Admitere facultate 2013. Care sunt cele mai căutate specializări</a></p>
+<p><a href="http://www.anofm.ro/12-514-locuri-de-muncă-vacante-în-data-de-10-octombrie-2013" target="_blank">Specializari cautate pe piata muncii - octombrie 2013</a></p>
+<p><a href="../../sar.org.ro/files/529_Policy%20memo46.pdf" target="_blank">PENTRU O AUTONOMIE RESPONSABILA. Expnsiunea Universitatilor in Romania</a></p>
+<p><a href="http://www.anosr.ro/semneaza-petitia/" target="_blank">Petitia "Studenti pentru Viitorul Romaniei", initiata de ANOSR</a></p>
+<p><a href="https://www.heacademy.ac.uk/node/3263" target="_blank">Learning &amp; Employability -&nbsp;Employability and higher education: what it is &ndash; what it is not&nbsp;</a></p>
+<p><a href="https://www.heacademy.ac.uk/node/3244" target="_blank">Learning &amp; Employability -&nbsp;Embedding employability into the curriculum</a></p>
+<p><a href="../../www.heacademy.ac.uk/assets/documents/employability/id370_work-related_learning_in_higher_education_582.html" target="_blank">Learning &amp; Employability -&nbsp;Work-related learning in higher education</a></p>
+<p><a href="http://www.newyorker.com/online/blogs/books/2013/08/why-teach-english.html" target="_blank">Why Teach English</a></p>
+<p><a href="http://www.usatodayeducate.com/staging/index.php/campuslife/actors-dilemma-theater-major-vs-no-theater-major" target="_blank">Actors dilemma: Theater major vs. no theater major</a></p>
+<p><a href="http://online.wsj.com/article/SB10001424127887323823004578595803296798048.html" target="_blank">Who Ruined the Humanities?</a></p>
+<p><a href="http://epp.eurostat.ec.europa.eu/statistics_explained/index.php/Young_people_-_education_and_employment_patterns">Young people - education and employment patterns</a></p>
+<p><a href="http://www.economist.com/news/international/21576657-around-world-almost-300m-15-24-year-olds-are-not-working-what-has-caused">Youth unemployment: Generation jobless</a></p>
+<p><a href="http://www.economist.com/blogs/lexington/2011/04/higher_education">Higher education: Is it really the next bubble?</a></p>
+<p><a href="http://www.economist.com/news/united-states/21567373-american-universities-represent-declining-value-money-their-students-not-what-it">Higher education: Not what it used to be</a></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>Resursele rundei de vara 2013 (runda 9)</p>
+<p><a href="http://www.stayfreemagazine.org/public/wsj_finland.html" target="_blank">Finnish Drivers Don't Mind Sliding Scale, But Instant Calculation Gets Low Marks</a></p>
+<p><a href="http://www.ncpa.org/sub/dpd/index.php?Article_ID=9031" target="_blank">Finland's Progressive Fines</a></p>
+<p><a href="http://www.sfgate.com/news/article/Speeding-fines-being-linked-to-income-in-Europe-3275939.php" target="_blank">Speeding fines being linked to income in Europe</a></p>
+<p><a href="http://blissfulwriter.hubpages.com/hub/Traffic-Fines-Proportional-to-Income" target="_blank">Traffic Fines Proportional to Income</a></p>
+<p><a href="http://www.turistineuropa.ro/amenzi_viteza_europa.html" target="_blank">Amenzi pentru depasirea limitelor de viteza</a></p>
+<p><a href="http://www.nytimes.com/2012/11/19/opinion/to-reduce-inequality-tax-wealth-not-income.html?pagewanted=1&amp;_r=2">To Reduce Inequality, Tax Wealth, Not Income</a></p>
+<p>update&nbsp;<a href="http://bigthink.com/econ201/a-hybrid-tax-on-income-and-wealth">A Hybrid Tax on Income and Wealth</a></p>
+<p>&nbsp;</p>
+<p>Resursele rundei de primăvară 2013 (runda 8)</p>
+<p><a href="http://en.wikipedia.org/wiki/Duty_to_rescue" target="_blank">Duty to Rescue</a></p>
+<p><a href="http://en.wikipedia.org/wiki/Good_Samaritan_law" target="_blank">Good Samaritan Law</a></p>
+<p><a href="http://www.daneurope.org/c/document_library/get_file?uuid=c09228f3-a745-480b-9549-d9fc8bbbd535&amp;groupId=10103" target="_blank">The Good Samaritan Law Across Europe</a></p>
+<p><a href="http://digitalcommons.law.scu.edu/cgi/viewcontent.cgi?article=1358&amp;context=lawreview" target="_blank">Law, Ethics, and the Good Samaritan? Should There Be a Duty to Rescue?</a></p>
+<p><a href="http://www.legi-internet.ro/articole-drept-it/probleme-juridice-privind-abuzurile-savarsite-asupra-minorilor-in-internet/controversa-din-jurul-materialelor-de-8222erotica-infantila8221.html#c536">Probleme juridice privind abuzurile savarsite asupra minorilor in Internet</a></p>
+<p>&nbsp;</p>
+<p>Resursele rundei de toamnă 2012 (runda 7)</p>
+<p><a href="../../www.bci.ie/documents/advertising_children.html" target="_blank">Advertising and Children</a></p>
+<p><a href="http://parenting.blogs.nytimes.com/2012/07/13/ban-on-advertising-to-children-linked-to-lower-obesity-rates/" target="_blank">Ban on Advertising to Children Linked to Lower Obesity Rates</a></p>
+<p><a href="http://www.newstatesman.com/2011/09/children-advertising-ban" target="_blank">Ban on advertising aimed at children won&rsquo;t end &lsquo;compulsive consumerism&rsquo;, says childhood expert</a></p>
+<p><a href="http://www.guardian.co.uk/media/2011/oct/26/morrisons-ad-banned-targeting-kids" target="_blank">Morrisons ad banned for targeting kids</a></p>
+<p><a href="../../uk.sagepub.com/en-gb/eur/hackley/SJO%20Articles%20for%20Website/Chapter%208%20-%20Pine%20%26%20Nash.html" target="_blank">Dear Santa: The effects of television advertising on young children</a></p>
+<p><a href="http://entertainment.time.com/2012/06/05/disney-nixes-junk-food-ads-aimed-at-kids-can-good-health-be-good-business/" target="_blank">Disney Nixes Junk-Food Ads Aimed at Kids. Can Good Health Be Good Business?</a></p>
+<p><a href="../../www.cerealfacts.org/media/Cereal_FACTS_Report_2012_7.12.pdf" target="_blank">Cereal facts. Limited progress in the nutrition quality and marketing of children&rsquo;s cereals</a></p>
+<p><a href="http://www.unesco.org/webworld/points_of_views/010928_dumont.shtml" target="_blank">Temptation-free television for children?</a></p>
+<p>&nbsp;</p>
+<p>Resursele rundei de vară 2012 (runda 6)</p>
+<p><a href="../uploads/2012/06/12/Freedom_in_the_World_2012.ntevkc.pdf">Freedom in the World 2012</a></p>
+<p><a href="../uploads/2012/06/12/Democracy_Index_2011.5yjahi.pdf">Democracy Index 2011</a></p>
+<p><a href="../uploads/2012/06/12/The_Rise_of_Illiberal_Democracy.gf1ruw.pdf">The Rise of Illiberal Democracy</a></p>
+<p><a href="../uploads/2012/06/12/China%27s_Dilemma_-_Social_Change_and_Political_Reform.lntevk.html">China's Dilemma - Social Change and Political Reform</a></p>
+<p><a href="../uploads/2012/06/12/Triumphant_Turkey.c0zqx3.pdf">Triumphant Turkey?</a></p>
+<div><a href="../uploads/2012/06/12/The_Arab_Counterrevolution.yjahim.pdf">The Arab Counterrevolution</a></div>
+<p>&nbsp;</p>
+<p>Resursele rundei de primavară 2012 (runda 5):</p>
+<p><a href="http://www.riaa.com/physicalpiracy.php?content_selector=piracy-online-scope-of-the-problem">The Scope of the Problem (piracy) &ndash; from the Recording Industry Association of America</a></p>
+<p><a href="http://riaa.com/blog.php?content_selector=riaa-news-blog&amp;content_selector=riaa-news-blog&amp;blog_selector=RIAA-CEO-Reflects-&amp;news_month_filter=2&amp;news_year_filter=2012">Comments, Questions, Concerns: RIAA CEO Reflects On Responses To His New York Times Op-Ed</a></p>
+<p><a href="http://moreintelligentlife.com/story/internet-piracy-is-good-for-films-1">Internet Piracy Is Good for films</a></p>
+<p><a href="http://www.cato-at-liberty.org/how-copyright-industries-con-congress/">How Copyright Industries Con Congress</a></p>
+<p><a href="../../documents.envisional.com/docs/Envisional-Internet_Usage-Jan2011.pdf">Technical report: An Estimate of Infringing Use of the Internet</a></p>
+<p><a href="../../www.ipi.org/IPI/IPIPublications.nsf/PublicationLookupFullTextPDF/51CC65A1D4779E408625733E00529174/%24File/SoundRecordingPiracy.html">The True Cost of Sound Recording Piracy to the U.S. Economy</a></p>
+<p><a href="http://www.cato-at-liberty.org/internet-regulation-the-economics-of-piracy/">Internet Regulation &amp; the Economics of Piracy</a></p>
+<p><a href="http://ec.europa.eu/trade/creating-opportunities/trade-topics/intellectual-property/anti-counterfeiting/">ACTA<strong>&nbsp;</strong>- Anti-Counterfeiting Trade Agreement</a></p>
+<p><a href="http://blogs.wsj.com/tech-europe/2012/02/10/acta-is-useless-and-a-threat-says-ex-eu-lead-nego">ACTA is Useless&hellip; and a Threat, Says Ex-EU Lead Negotiator</a></p>
+<p><a href="http://articles.cnn.com/2009-04-17/entertainment/online.piracy.for.against_1_file-sharing-online-piracy-pirate-bay?_s=PM:SHOWBIZ">Is Online Piracy a Good Thing?</a></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>Resursele rundei de toamna 2011 (runda 4)</p>
+<div>
+<div>
+<div><span>
+<p><span><a href="http://plato.stanford.edu/entries/civil-disobedience/">Stanford&nbsp;Encyclopaedia&nbsp;of&nbsp;</a></span><span><a href="http://plato.stanford.edu/entries/civil-disobedience/">Philosophy</a></span></p>
+<p><a href="../../www.ce-re.ro/upload/Peter%20Suber%20Civil%20Disobedience.html" target="_blank">Civil Disobedience, Peter Suber</a>&nbsp;</p>
+<p><a href="../../www.ce-re.ro/upload/L%27influence%20de%20Gandhi_semelin.html" target="_blank">L'influence de Gandhi dans les r&eacute;sistances civiles de l'Est, Jacques S&eacute;melin</a>&nbsp;</p>
+<p><a href="http://thoreau.eserver.org/civil.html">Thoreau, Civil Disobedience</a></p>
+<p><a href="../../www.ce-re.ro/upload/E%20Armand%20Petit%20manuel%20anarchiste%20individualiste.html" target="_blank">Petit manuel anarchiste individualiste, E. Armand</a>&nbsp;)</p>
+<p><a href="../../www.ce-re.ro/upload/sinteza.html" target="_blank">Rezumatul mesei rotunde</a>&nbsp;</p>
+<p><a href="../../www.ce-re.ro/upload/HO%20De%20ce%20despre%20nesupunerea%20civica.html" target="_blank">De ce despre nesupunerea civica</a>&nbsp;</p>
+<div><span style="font-family: arial, sans-serif;">notă: resursele de lectură au fost preluate cu acordul Centrul de Resurse pentru Participare Publica CeRe (</span><a href="http://www.ce-re.ro/nesupunere_civica" target="_blank">http://www.ce-re.ro/nesupunere_civica</a>),&nbsp;fiind rezultatul mesei rotunde realizate in 29 aprilie 2010.</div>
+</span></div>
+</div>
+</div>
+<p>&nbsp;</p>
+<p>Linkuri pentru sesiunea de vară 2011 (runda 3)</p>
+<p><a href="../../helda.helsinki.fi/bitstream/handle/10138/18311/religion3640.pdf?sequence=2">Religions and legal boundaries of democracy in Europe: European commitment to democratic principles.capitol 6 - Religion and Education - between equality and indoctrination (pg.203)</a></p>
+<p><a href="http://www.presalocala.com/2011/03/13/cum-ar-trebui-predata-religia-in-scoli/">Cum ar trebui predata religia in scoli</a></p>
+<p><a href="http://jsri.ro/ojs/index.php/jsri/article/viewFile/160/160">Relatia Stat-Biserica in privinta&nbsp;educatiei religioase in scolile&nbsp;publice din Romania</a></p>
+<p><a href="../../re-net.ac.uk/attachments/01785212-fcb6-4ef1-9775-61a53ce0af04.pdf">Teaching about Religions in European School Systems.&nbsp;Policy issues and trends</a></p>
+<p>&nbsp;</p>
+<p>Linkuri pentru sesiunea de primăvară 2011 (runda 2)</p>
+<p><a href="http://plato.stanford.edu/entries/rights/">Rights</a></p>
+<p><a href="http://plato.stanford.edu/entries/privacy/">Privacy</a></p>
+<p><a href="http://www.nytimes.com/2004/04/25/politics/campaign/25DISC.html?pagewanted=1">Privacy of wife's fortune casts a shadow over Kerry</a></p>
+<p><a href="http://www.hotnews.ro/stiri-politic-8276292-cinci-senatori-propun-examinarea-pshiatrica-candidatilor-presedintie-parlament-guvernul-opune-initiativei.htm">Propunere de control psihologic și psihiatric a demnitarilor, respinsă de Guvern</a></p>
+<p>&nbsp;</p>
+<p><a href="http://www.raison-publique.fr/article206.html">The private life of politicians</a></p>
+<p><a href="http://www.intelligencesquared.com/controversies/public-figures-have-a-right-to-a-private-life?result_374_result_page=2">Public figures have a right to private life</a></p>
+<p><a href="http://www.scu.edu/ethics/practicing/focusareas/government_ethics/introduction/personal-lives.html#q2">The personal lives of public officials</a></p>
+<p><a href="http://www.intelligencesquared.com/events/sex-bugs-and-video-tapes">Video debate on Intelligencesquared</a></p>
+<p>&nbsp;</p>
+<p>Linkuri pentru sesiunea din&nbsp;toamnă 2010 (runda 1):&nbsp;</p>
+<p><a href="http://www.dilemaveche.ro/sectiune/mass-comedia/articol/ieducatie-prostiii">Educație? Prostii! </a></p>
+<p><a href="../../portal.unesco.org/ci/en/files/18796/11144252115pb_why_how.pdf/pb_why_how.html">Public broadcasting: Why? How? </a></p>
+<p><a href="http://www.eurozine.com/articles/2009-03-20-editorial-en.html">Handmaiden of democracy or everybody's football? </a></p>
+<p><a href="http://books.google.com/books?id=KQzr_BTuefkC&amp;printsec=frontcover#v=onepage&amp;q&amp;f=false">Television: Critical Concepts in Media and Cultural Studies</a></p>
+<p><a href="../uploads/2010/10/30/starea_de_fapt_cateva_repere.doc">Cateva repere pentru starea de fapt</a></p>
+<p><a href="http://www.newsweek.com/2009/05/22/sesame-street.html">Sesame Street. The show that counts</a></p>
+                <div class='clear'></div>
+        </div><!-- end main content -->
+         <div class='clear'></div>
+</div>
+<div id="pix"></div>
+
+
+                                </div><!--end main -->
+                                <div id='parteneri'>
+                                    <span class='tr'></span><span class='tl'></span><span class='br'></span><span class='bl'></span><span id="filler"></span>
+                                    <div class='parteneri' id='sustinatori'>
+                                        <span class='floating_text' id='un_proiect'>Un proiect</span>
+                                        <a href='http://www.ardor.org.ro/'><div class='image' id='ardor'>Ardor</div></a>
+                                        <span class='floating_text' id='finantatori'>Finanțatori</span>
+                                        <a href='http://www.opensocietyfoundations.org/'><div class='image' id='open_society'>Open Society Foundation </div></a>
+                                        <a href='http://www.studentiq.ro//'><div class='image' id='memoplus'>MemoPlus</div></a>
+                                        <!-- <a href='http://www.ratiufamilyfoundation.com/'><div class='image' id='FundatiaRatiu'>Ardor</div></a>
+                                        <a href='http://www.eef.md/'><div class='image' id='eef'>East Europe Foundation</div></a>
+                                        <a href='http://www.mts.gov.md/'><div class='image' id='mdminister'>Ministerul Tineretului si Sportului al Republicii Moldova</div></a> -->
+
+                                        <span class='floating_text' id='parteneri_text'>Parteneri</span>
+
+                                        <a href='http://www.policycenter.eu/'><div class='image' id='PolicyCenter'>Policy Center</div></a>
+                                        <a href='http://www.britishcouncil.org/'><div class='image' id='BritishCouncil'>British Council</div></a>
+                                        <a href='http://www.europuls.ro/'><div class='image' id='europuls'>Europuls</div></a>
+                                        <a href='http://www.cere.ro/'><div class='image' id='cere'>Ce-Re</div></a>
+                                        <a href='http://www.primeromania.ro/'><div class='image' id='prime'>Prime Romania</div></a>
+                                        <a href='http://www.cji.ro/'><div class='image' id='cji'>Centrul pentru jurnalism independent</div></a>
+                                        <a href='http://www.aiesectm.ro/'><div class='image' id='aisec'>Aisec</div></a>
+                                        <!-- ===================================================================================================== -->
+                                        <a href='http://www.cogitus.ro/'><div class='image' id='cogitus'>Cogitus</div></a>
+                                        <a href='http://www.adevarul.ro/international/foreign_policy/'><div class='image' id='foreignPolicy'>Foreign Policy</div></a>
+                                        <a href='http://www.elsa.ro/'><div class='image' id='elsa'>Elsa</div></a>
+                                        <a href='http://www.vipromania.ro/'><div class='image' id='vipromania'>Voluntari pentru idei si proiecte</div></a>
+                                        <a href='http://www.ongtrust.ro/'><div class='image' id='ongtrust'>Trust</div></a>
+
+                                        <!-- ===================================================================================================== -->
+                                        <a href='http://www.leap.ro/'><div class='image' id='leap'>Leap</div></a>
+                                        <a href='http://www.younginitiative.org/'><div class='image' id='younginitiative'>Asociatia young initiative</div></a>
+                                        <a href='http://www.asjc.ro/'><div class='image' id='asjc'>Asjc</div></a>
+                                        <a href='http://osut.ro/'><div class='image' id='osut'>Osut</div></a>
+                                        <div class='clear'></div>
+                                    </div>
+                                    <div class='parteneri' id='parteneri_institutionali'>
+                                        <span class='floating_text' id='sponsori_text'>Sus&#539;in&#x0103;tori</span>
+                                        <a href='http://www.cartier.md/'><div class='image' id='cartier_logo'>Editura Cartier</div></a>
+                                        <a href='http://www.pll.md/ro/'><div class='image' id='biblio_logo'>Biblioteca publica de drept</div></a>
+                                        <span class='floating_text' id='institutii_text'>Parteneri institu&#539;ionali</span> 
+                                        <ul id='institutii'>
+                                            <!-- <span class='floating_text' id='institutii_text'>Parteneri institu&#539;ionali:</span> -->
+                                            <li><a href='http://www.politice.ro/'>Facultatea de &#536;tiin&#539;e Politice SNSPA </a></li>
+                                            <li><a href='http://www.comunicare.ro/'>Facultatea de Comunicare &#537;i Rela&#539;ii Publice SNSPA</a></li>
+                                            <li><a href='http://www.fspub.ro/'>Facultatea de &#536;tiin&#539;e Politice Universitatea Bucure&#537;ti</a></li>
+                                            <li><a href='http://www.filosofie.unibuc.ro/'>Facultatea de Filosofie Universitatea Bucure&#537;ti</a></li>
+                                            <li><a href='http://litere.unibuc.ro/'>Facultatea de Litere din Universitatea Bucure&#x015f;ti</a></li>
+                                            <li><a href='http://www.unibuc.ro/ro/fac_fsas_ro'>Facultatea de Sociologie Universitatea Bucure&#537;ti</a></li>
+                                            <li><a href='http://laws.uaic.ro/'>Facultatea de Drept Universitatea Alexandru Ioan Cuza Ia&#537;i</a></li>
+                                            <li><a href='http://www.uaic.ro/uaic/bin/view/Academic/Filosofie'>Facultatea de Filosofie si &#536;tiin&#539;e Social Politice Universitatea AIC Ia&#537;i</a></li>
+                                            <li><a href='http://www.upa.ro/'>Facultatea de Drept si Facultatea de &#x015e;tiin&#x0163;e Politice si Administrative Universitatea Petre Andrei Ia&#x015f;i</a></li> 
+
+                                            <li><a href='http://www.ubbcluj.ro/'>Universitatea Babe&#537;-Bolyai Cluj Napoca</a></li>
+                                            <li><a href='http://www.uvt.ro/'>Universitatea de Vest Timi&#537;oara</a></li>
+                                            <li><a href='http://www.upt.ro/'>Universitatea Politehnica Timi&#537;oara</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class='parteneri' id='parteneri_media'>
+                                        <span class='floating_text' id='media_text'>Parteneri media</span>
+                                        <a href='http://www.hotnews.ro/'><div class='image' id='hotnews'>HotNews</div></a>
+                                        <!-- <a href='http://www.lumebuna.ro/'><div class='image' id='lumebuna'>Lume Buna</div></a> -->
+                                        <a href='http://www.romaniapozitiva.ro/'><div class='image' id='romaniapozitiva'>Romania Pozitiva</div></a>
+                                        <a href='http://totb.ro/'><div class='image' id='thinkoutsidethebox'>Think Outside The Box</div></a>
+                                        <a href='http://www.facebook.com/carevasazica.vip'><div class='image' id='carevasazica'>Carevasazica</div></a>
+                                        <a href='http://www.studentie.ro/'><div class='image' id='studentiero'>Studentie.ro</div></a>
+                                        <a href='http://startub.unibuc.ro/'><div class='image' id='startub'>startub.unibuc.ro</div></a>
+                                        <!-- <a href='http://www.tvr.ro/tvr_cluj.php'><div class='image' id='tvrcluj'>Tvr Cluj</div></a> -->
+                                        <!-- <a href='http://www.radiotransilvania.ro'><div class='image' id='radiotransilvania'>Radio Transilvania</div></a> -->
+                                        <a href='http://iasifun.ziaruldeiasi.ro/'><div class='image' id='iasifun'>Iasi fun</div></a>
+                                        <a href='http://www.ziaruldeiasi.ro/'><div class='image' id='ziaruldeiasi'>Ziarul de Iasi</div></a>
+                                        <a href='http://www.kissfm.ro/timisoara'><div class='image' id='kissfm'>KissFm</div></a>
+
+                                        <div class='clear'></div> 
+                                    </div>
+                                    <div class='clear'></div>
+
+                                </div>	
+                            </div>	<!-- end wrap -->
+                            <div id='footer_mare'>
+                                <div id='footer'>
+                                    <div id='links' class='footer'>
+                                        <div id='menu1' style='margin:auto;'> <ul id='meniu_prinicpal'><li><a href='contacte/index.html'> Contact </a></li>
+<li><a href='clubdebate/index.html'> Cluburile </a></li>
+<li><a href='oamenii/index.html'> Oamenii </a></li>
+<li><a href='proiectul/index.html'> Proiectul </a></li>
+<li><a href='home/index.html'> Acasa </a></li>
+</ul></div><!--end menu-->
+                                    </div><!--
+                                    <div id='contact' class='footer'>
+                                            <h4>Contact</h4>
+                                            <p>office@closer2oxford.ro</p>
+                                            <p>bogdan.draghicescu@closer2oxford.ro<br>
+                                            <span class='detalii'> (asistenta tehnica web - orice probleme legate de site)</span></p>
+                                    </div>
+                                    -->
+                                    <div id='newsletter' class='footer'>
+                                        <script src="../../connect.facebook.net/en_US/all.js#xfbml=1"></script><fb:like href="http://www.facebook.com/pages/Closer2Oxford/162758797069605" width="250" colorscheme="dark"></fb:like>
+                                        <!--<h4>Newsletter</h4>
+                                        <form action='/page/newsletter'>
+                                                <input type='text' name='email'>
+                                                <input type='submit' id='submit' value='>'>
+                                                        
+                                        </form>-->
+                                    </div>
+                                    <div id='credits'>
+                                        Copyright(c) 2021 ARDOR |  Toate drepturile rezervate | Toate logo-urile si sloganurile de pe site sunt proprietate intelectuala inregistrata si nu pot fi reproduse fara acordul explicit al detinatorilor. <br>
+                                            <br /><br />
+                                            <b>Disclaimer</b><br /><i>
+
+                                                Programul educational Closer to Oxford este un program non-profit si nu are o legatura cu universitatea cu acelasi nume, referirea la Oxford avand doar o semnificatie simbolica.
+                                            </i>
+                                    </div>
+
+                                </div>		
+                            </div>		
+
+                            <div id="finantatde">Acest proiect este finantat cu sustinere din partea Comisiei Europene. Aceast publicatie [comunicare] reflecta doar
+                                vederile autorului, iar Comisia nu poate fi facuta  responsabila pentru utilizarea informatiei pe care o contine.</div>
+
+
+                        </body>
+                        </html>

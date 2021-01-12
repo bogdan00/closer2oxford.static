@@ -1,0 +1,518 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml-strict.dtd">
+<HTML xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+    <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+            <link rel="icon" type="image/png"  href="../../closer2oxford.ro/favicon.html">
+                <link rel="stylesheet" href="var/layout.css" type="text/css">
+                    <title>Closer to Oxford - e timpul pentru argumente!</title>
+                    <link rel="alternate" type="application/rss+xml"  href="rss_feed" title="Stiri Closer2Oxford">
+                        <!-- <link rel="image_src" property="og:image"  href="/images/layout/closer2oxford_fb_white.png" /> -->
+                        <link rel="image_src" property="og:image"   type="image/jpeg"  href="../uploads/2015/06/9/facebook_icon.html" />
+                        <link rel="image_src" type="image/jpeg"  href="../uploads/2015/06/9/icon-facebook.gif" /> 
+						<meta name="description" content="Closer2Oxford pune în valoare oameni şi argumentele lor, în dezbateri online şi publice alături de tineri şi invitați avizaţi"/>
+                        <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9" />
+<script type='text/javascript' src='../js/jquery-1.4.4.min.js'></script>
+<script>var $j = jQuery.noConflict();</script>
+<script type='text/javascript' src='../js/tinymce/tiny_mce.js'></script>
+<script type='text/javascript' src='../js/jquery.form.js'></script>
+<script type='text/javascript' src='../js/fbLoginRegister.js'></script>
+<script type='text/javascript' src='var/javascript.js'></script>
+<script type='text/javascript' src='../js/jquery.hovertip-1.0.min.js'></script> 
+<script type='text/javascript' src='../js/jquery.jgrowl_minimized.js'></script> 
+<link rel='stylesheet' href='../css/jquery.jgrowl.css' media='screen' type='text/css'> 
+<script type='text/javascript' src='../js/jquery.timer-min.js'></script> 
+<link rel='stylesheet' href='var/gallery.css' media='screen' type='text/css'> 
+<script type='text/javascript' src='../js/galerie/jquery.prettyPhoto.js'></script> 
+<meta name='description' content=''/> 
+<meta name='keywords' content=''/> 
+<style>.hovertip{
+    position:absolute;
+    padding:10px 13px;
+    z-index:2;
+    max-width:300px;
+    color:#303030;
+    background-color:#f5f5b5;
+    border:1px solid #DECA7E;
+    font-family:sans-serif;
+    font-size:12px;
+    line-height:18px;
+    text-align:left;
+    }</style> 
+<script type='text/javascript'>$j(document).ready(function(){$j('.tooltip').hovertip({'offset':[20,20]});get_notif();});
+
+if(!Array.indexOf){Array.prototype.indexOf = function(obj){for(var i=0; i<this.length; i++){if(this[i]==obj){return i;}}return -1;}}
+    hashuri = [] ;
+	 var tick_timer= 3000 ;
+ 
+	 function get_notif()
+        {
+		  
+		  //console.log(tick_timer);
+	     
+		  setTimeout(get_notif,tick_timer);
+        
+		   $j.ajax(
+            {
+                url: '/page/notif/show_events',
+                dataType: 'json',
+                data: "{}",
+                success: function(data)
+                    {
+                    $j.each(data,function(index,data){
+                        try
+                            {
+                            if( hashuri.indexOf(data.hash) == -1 )
+                                {
+                                hashuri.push(data.hash);
+                                $j.jGrowl(
+                                    data.str,
+                                    {
+                                        corners:'1px',
+                                        life: data.life,
+                                        header:data.title,
+                                        hash: data.hash,
+                                        sticky: data.sticky,
+                                        close: function(e,m,o)
+                                            {
+                                                $j.ajax({url:'/page/notif/delete_single_event/' + o.hash});
+                                            }
+                                    });
+                                }
+                            }
+                        catch(e){}
+                        })
+                    }
+            });
+        }
+	 </script> 
+ 
+                            
+  <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-19111721-1']);
+  _gaq.push(['_setDomainName', '.closer2oxford.ro']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+    
+                        </head>
+                        <body>
+                            <div id="global_wrap">
+                                <div id="header">
+                                    <a href='../index.html'><div id='logo'><img src='../images/layout/sigla.jpg'></div></a>
+                                    <a class='noExternal' href='http://www.facebook.com/pages/Closer2Oxford/162758797069605'><img src='../images/fb.png' style='height:30px;float:right;clear:right;margin:10px 5px 5px 5px;border:none;'/></a>
+                                    <a href='rss_feed'><img src='../images/feed-icon.png' style='height:30px;float:right;clear:right;margin:5px;border:none;'/></a>
+                                </div>
+                                <div id="meniu">
+                                    <div  id='register_login'>
+
+                                        
+  <a href='#' class='todo' id='login'>Login </a> &nbsp;<a href='register.html' class='todo' id='register'>Register</a>
+    <div id='login_box'>
+		  <form action='https://dev.closer2oxford.ro/page/ro/login_user/logon' method='post' id='user_login_form'>
+					 <div>Email: <input type='text' name='email'/> </div><br />
+					 <div>Pass: <input type='password' name='passwd'/></div><br />
+					 <a href='#' class='password_forgot'>forgot password?</a>
+					 <input type='hidden' value='/page/oamenii' name='returnto' class='submiter'/><br />
+					 <input type='submit' value='login' name='btn' class='submiter'/><br />
+		  </form>
+		  
+		  <form action='https://dev.closer2oxford.ro/page/ro/login_user/reset_user_pw' method='post' id='user_reset_form'>
+					 <div>Email: <input type='text' name='email'/> </div><br />
+					 <a href='#' class='password_forgot'>login?</a>
+					 <input type='hidden' value='/page/oamenii' name='returnto' class='submiter'/><br />
+					 <input type='submit' value='reset' name='btn' class='submiter'/><br />
+		  </form>
+		  
+    </div>
+    
+                                    </div>
+                                    <div id='menu1' style='margin:auto;'> <ul id='meniu_prinicpal'><li><a href='contacte/index.html'> Contact </a></li>
+<li><a href='clubdebate/index.html'> Cluburile </a></li>
+<li><a href='oamenii/index.html'> Oamenii </a></li>
+<li><a href='proiectul/index.html'> Proiectul </a></li>
+<li><a href='home/index.html'> Acasa </a></li>
+</ul></div><!--end menu-->
+                                </div>
+                                <div id="main"> 
+                                    <!--<div id='stiri-padding'>
+        <div id='stiri_back'>
+                {stiri} 
+    
+               
+        </div>-->
+        
+</div>
+<div  id="content-padding">
+        <div id='sidebar_menu'>
+                <span class='tr'></span>
+                <span class='tl'></span>
+                <span class='br'></span>
+                <span class='bl'></span>
+                <span id="filler"></span>
+                <ul class='submeniu'><a href='oamenii.html'><li>Echipa Organizatorică  </li></a><a href='arbitrii.html'><li>Arbitrii  </li></a></ul>    
+                <ul></ul>
+                
+                <div class='clear'></div>
+        </div>
+        <div id="content">
+                <span class='tr'></span>
+                <span class='tl'></span>
+                <span class='br'></span>
+                <span class='bl'></span>
+                <span id="filler"></span>
+                <script type='text/javascript' src='../js/jquery.hovertip-1.0.min.js'></script> 
+<script type='text/javascript' src='../js/jquery.jgrowl_minimized.js'></script> 
+<link rel='stylesheet' href='../css/jquery.jgrowl.css' media='screen' type='text/css'> 
+<script type='text/javascript' src='../js/jquery.timer-min.js'></script> 
+<link rel='stylesheet' href='var/gallery.css' media='screen' type='text/css'> 
+<style>.hovertip{
+    position:absolute;
+    padding:10px 13px;
+    z-index:2;
+    max-width:300px;
+    color:#303030;
+    background-color:#f5f5b5;
+    border:1px solid #DECA7E;
+    font-family:sans-serif;
+    font-size:12px;
+    line-height:18px;
+    text-align:left;
+    }</style> 
+<script type='text/javascript'>$j(document).ready(function(){$j('.tooltip').hovertip({'offset':[20,20]});get_notif();});
+
+if(!Array.indexOf){Array.prototype.indexOf = function(obj){for(var i=0; i<this.length; i++){if(this[i]==obj){return i;}}return -1;}}
+    hashuri = [] ;
+	 var tick_timer= 3000 ;
+ 
+	 function get_notif()
+        {
+		  
+		  //console.log(tick_timer);
+	     
+		  setTimeout(get_notif,tick_timer);
+        
+		   $j.ajax(
+            {
+                url: '/page/notif/show_events',
+                dataType: 'json',
+                data: "{}",
+                success: function(data)
+                    {
+                    $j.each(data,function(index,data){
+                        try
+                            {
+                            if( hashuri.indexOf(data.hash) == -1 )
+                                {
+                                hashuri.push(data.hash);
+                                $j.jGrowl(
+                                    data.str,
+                                    {
+                                        corners:'1px',
+                                        life: data.life,
+                                        header:data.title,
+                                        hash: data.hash,
+                                        sticky: data.sticky,
+                                        close: function(e,m,o)
+                                            {
+                                                $j.ajax({url:'/page/notif/delete_single_event/' + o.hash});
+                                            }
+                                    });
+                                }
+                            }
+                        catch(e){}
+                        })
+                    }
+            });
+        }
+	 </script> 
+
+<script type='text/javascript' src='../js/jquery.hovertip-1.0.min.js'></script> 
+<script type='text/javascript' src='../js/jquery.jgrowl_minimized.js'></script> 
+<link rel='stylesheet' href='../css/jquery.jgrowl.css' media='screen' type='text/css'> 
+<script type='text/javascript' src='../js/jquery.timer-min.js'></script> 
+<link rel='stylesheet' href='var/gallery.css' media='screen' type='text/css'> 
+<script type='text/javascript' src='../js/galerie/jquery.prettyPhoto.js'></script> 
+<style>.hovertip{
+    position:absolute;
+    padding:10px 13px;
+    z-index:2;
+    max-width:300px;
+    color:#303030;
+    background-color:#f5f5b5;
+    border:1px solid #DECA7E;
+    font-family:sans-serif;
+    font-size:12px;
+    line-height:18px;
+    text-align:left;
+    }</style> 
+<script type='text/javascript'>$j(document).ready(function(){$j('.tooltip').hovertip({'offset':[20,20]});get_notif();});
+
+if(!Array.indexOf){Array.prototype.indexOf = function(obj){for(var i=0; i<this.length; i++){if(this[i]==obj){return i;}}return -1;}}
+    hashuri = [] ;
+	 var tick_timer= 3000 ;
+ 
+	 function get_notif()
+        {
+		  
+		  //console.log(tick_timer);
+	     
+		  setTimeout(get_notif,tick_timer);
+        
+		   $j.ajax(
+            {
+                url: '/page/notif/show_events',
+                dataType: 'json',
+                data: "{}",
+                success: function(data)
+                    {
+                    $j.each(data,function(index,data){
+                        try
+                            {
+                            if( hashuri.indexOf(data.hash) == -1 )
+                                {
+                                hashuri.push(data.hash);
+                                $j.jGrowl(
+                                    data.str,
+                                    {
+                                        corners:'1px',
+                                        life: data.life,
+                                        header:data.title,
+                                        hash: data.hash,
+                                        sticky: data.sticky,
+                                        close: function(e,m,o)
+                                            {
+                                                $j.ajax({url:'/page/notif/delete_single_event/' + o.hash});
+                                            }
+                                    });
+                                }
+                            }
+                        catch(e){}
+                        })
+                    }
+            });
+        }
+	 </script> 
+
+
+<script>
+$j(document).ready(function(){
+ //   $j(".descriere").toggle();
+    $j(".nume").toggle(function(){
+                    $j(this).removeClass("more");
+                    $j(this).addClass("less"); 
+                    $j(this).next().toggle(100);
+                },function(){
+                    $j(this).next().toggle(100);
+                    $j(this).removeClass("less");
+                    $j(this).addClass("more");
+                });
+     $j.each(
+                $j(".descriere img"),
+                function(index, element){
+                    $j(element).wrap("<a href='"+$j(element).attr("src").replace('oameni','oameni/mari')+"' rel='prettyPhoto[mixed]'>");
+                    
+                    $j(element).attr("alt",
+                                     $j(element).parent().parent().prev(".nume").html())
+                    })
+     $j("a[rel^='prettyPhoto']").prettyPhoto({theme:'facebook'});
+     $j(".nume").addClass("more");
+    });
+    </script>  
+<style type="text/css">
+.nume{cursor:pointer;clear:both;text-decoration:underline;}
+.more{
+    background: url('../images/little_stuff/16-arrow-down.png') no-repeat center left;
+    padding-left:16px;
+    }
+.less{
+    background: url('../images/little_stuff/16-arrow-up.png') no-repeat center left;
+    padding-left:16px;
+    }
+#oameni h2{font-size:0.94em;clear:both;padding:10px;}
+.descriere img{float:left;margin:10px;padding:0 10px 10px 0;}
+.currentTextHolder{color:black;}
+div.ppt{top: -15px;}
+#logging {position: relative;}
+</style>
+
+<div id="oameni">
+<h2>Coordonator naţional</h2>
+<p class="nume">Monica Mocanu</p>
+<p class="descriere"><img src="../images/oameni/monica_mocanu.jpg" alt="Monica Mocanu" /> M-am intersectat cu ARDOR acum 19 ani, după un telefon al unei prietene care mă &icirc;ntreba dacă nu vreau să intru &icirc;ntr-un program educațional spectaculos. Am intrat dupa șase luni, timp &icirc;n care m-am g&acirc;ndit dacă debate-ul nu este cumva un instrument cam tăios pentru mine; &icirc;ntre timp am aflat că așa e, dar că pot supraviețui acestui aspect. Closer to Oxford vine in intampinarea dorintei mele ca achizițiile din debate sa ajunga mai prompt in spatiul public. Mai nou, &icirc;mi place sa &icirc;ncerc şi alte metode de &icirc;nvatare cu elevii mei, "mai vechi" &icirc;mi plac Salman Rushdie şi Jose Saramago.</p>
+<h2>Coordonator Bucureşti</h2>
+<p class="nume">Bianca Dragomir&nbsp;<span>(trainer, content manager)</span></p>
+<p class="descriere"><img src="../images/oameni/bianca_dragomir.jpg" alt="Bianca Dragomir" /><span>Fac debate de nouă ani şi &icirc;ncă am fluturi &icirc;n stomac &icirc;nainte de o rundă şi mă binedispune pentru o săptăm&acirc;nă c&acirc;nd un debater &ldquo;le zice bine&rdquo;. &Icirc;n acești ani m-am bucurat de combinația reușită dintre campionatele de debate și &icirc;nt&acirc;lnirea cu oameni interesanți şi oraşe frumoase. Dincolo de dimensiunea competiţională, cred că dezbaterile energizează și deschid g&acirc;ndirea mai mult dec&acirc;t orice şi ar trebui să reprezinte un exerciţiu constant de &icirc;ntreţinere a minţii. De aceea ţin mult la Closer to Oxford şi la comunitatea pe care a creat-o. Am o slăbiciune pentru persoanele cu umor şi pentru oamenii cu entuziasm molipsitor.</span></p>
+<h2>Coordonator Bălți - Republica Moldova</h2>
+<p class="nume">Ana Zatușevschi</p>
+<p class="descriere"><img src="../images/oameni/ana_zatusevschi.jpg" alt="Ana Zatușevschi" /> <span>Sunt studentă la  Universitatea de Stat &ldquo;Alecu Russo&rdquo; din Bălți, mă implic activ &icirc;n acțiuni de voluntariat și-mi  plac proiectele care mă fac să excelez. Ca orice om axat pe succes, &icirc;mi plac &ldquo;luptele&rdquo; incitante ce se soldează cu victorii, iar dezbaterile permit identificarea  &icirc;nvingătorilor reali. Am participat cu colegul meu Dumitru la campionatul național de debate online Closer2Oxford Moldova. Datorită acestei experiențe, am &icirc;nteles c&icirc;t de mult contează să fii bine "echipat" cu argumente ca să c&icirc;știgi, dar &icirc;n special, c&acirc;t de important e sa fii in compania unui coechipier puternic. </span></p>
+<h2>Coordonator Chișinău</h2>
+<p class="nume">Patricia Zghibarta&nbsp;</p>
+<p class="descriere"><img src="../images/oameni/patricia_zghibarta.jpg" alt="Patricia Zghibarta" /> <span>Am descoperit pasiunea pentru dezbateri &icirc;n clasa a 7-a, c&acirc;nd am participat pentru prima dată&nbsp;la un campionat intern și... am pierdut. Am decis să &icirc;mi iau revanșa la următorul campionat și am rămas&nbsp;atașată de tot ce &icirc;nseamnă argumentare și&nbsp;confruntare de idei. Ador sa urmaresc "meciurile de debate" care se dau &icirc;ntre oamenii care merg pe strada, &icirc;n transport public sau &icirc;n pauzele de la universitate sau job. Or, ele sunt cele &icirc;n care&nbsp;ei trăiesc dezbaterile, nu doar le exerseaza. Mai nou, sunt foarte fericită&nbsp;să fac parte din familia "Closer to Oxford".</span></p>
+<h2>Coordonator Cluj</h2>
+<p class="nume">Bianca Prunea</p>
+<p class="descriere"><img src="../images/oameni/bianca.prunea.jpg" alt="Bianca Prunea" /><span> Sunt studentă &icirc;n anul III la Facultatea de Drept (UBB-Cluj) şi fac dezbateri de mai bine de şase ani. &icirc;n tot acest timp, dezbaterile au ajuns să joace un rol important &icirc;n viaţa mea şi am &icirc;ncercat să &icirc;nvăţ ceva din fiecare experienţă. Mă bucur să pot spune că prin intermediul evenimentelor de debate am călătorit mult şi am cunoscut oameni inteligenţi şi interesanţi, unii dintre ei număr&acirc;ndu-se azi printre cei mai buni prieteni. Sunt m&acirc;ndră că am reuşit să ajung &icirc;n finala Campionatului de Debate de la Cambridge 2011 şi &icirc;n semifinală Campionatului de la Oxford &icirc;n 2012. Mi-am dat &icirc;nsă seama că dezbaterile nu se limitează doar la componenta competiţională, ci au potenţialul de a pune &icirc;n mişcare ideile şi a "antrena" minţile tinerilor din medii diferite. Aş vrea să contribui şi eu la această comunitate şi de aceea mă bucur să arbitrez la Closer to Oxford. </span></p>
+<h2>Coordonator Iași</h2>
+<p class="nume">Liviu Gajora</p>
+<p class="descriere"><img src="../images/oameni/liviu_gajora.jpg" alt="Liviu Gajora" /> Dependent de comunicare, dezbateri și dialog &icirc;n spațiul public, nu puteam rata șansa de a mă alătura proiectului C2O. Activez &icirc;n cadrul programului de dezbateri de mai bine de zece ani și &icirc;mi place să cred că am păstrat aceeași curiozitate de a descoperi, analiza și evalua argumente pro și contra unei moțiuni ca la &icirc;nceput. &Icirc;n prezent sunt doctorand &icirc;n Științele Comunicării &icirc;n cadrul Universității Al. I. Cuza Iași.</p>
+<h2>Coordonator Sibiu</h2>
+<p class="nume">George Manea</p>
+<p class="descriere"><img src="../images/oameni/george.manea.jpg" alt="George Manea" /> <span>Absolvent al Facultăţii de Ştiinţe Politice &icirc;n cadrul Universităţii din Bucureşti, masterand &icirc;n securitate, pace şi conflicte la Universitatea Liberă din Bruxelles, am considerat mereu că activităţile extra-curiculare dau valoarea dezvoltării personale şi aduc o un plus semnificativ programei şcolare din universităţi.<br /> Născut la Constanţa, crescut la Sibiu, cu facultatea la Bucureşti, plecat cu mobilitate Erasmus la Roma şi master făcut la Bruxelles, mereu sunt &icirc;ntrebat unde locuiesc sau unde este casa mea. Răspunsul nu &icirc;nt&acirc;rzie să apară şi s-ar putea numi acum &bdquo;Closer to Oxford&rdquo;:). Dincolo de pasiunea pentru călătorii (30 de ţări vizitate pana acum), sport (karate) şi timpul alocat pentru Model NATO Youth Summit (MoNYS) &icirc;n calitate de fondator şi actual director, Closer2Oxford este un proiect complex &icirc;n care argumentul primează, iar prietenia secondează. Astfel, am decis să mă alătur unei echipe creative, entuziaste şi nu &icirc;n ultimul r&acirc;nd mereu surprinzătoare prin coeziune şi forţă persuasivă.</span></p>
+<h2>Coordonator Timișoara</h2>
+<p class="nume">Teodora Blidaru&nbsp;</p>
+<p class="descriere"><img src="../images/oameni/teo_blidariu.jpg" alt="Teodora Blidariu" /> <span>Păşesc cu entuziasm &icirc;n cel de-al doilea an al implicării active &icirc;n cadrul Closer2Oxford pe meleaguri timişorene, după un an universitar 2011/2012 plin. Şi vă invit să ne fiţi alături! Intrinsec, am ajuns ceva "mai aproape de Oxford" &icirc;n ultimul an, ca urmare a lecţiilor &icirc;nvăţate, a dezbaterilor pricinuite (şi) de acest proiect, dar mai ales mulţumită oamenilor, fie ei studenţi, cadre universitare, voluntari, sau susţinători pur-şi-simplu. Atunci c&acirc;nd nu activez &icirc;n cadrul Closer2Oxford, analizez teoria şi practica politicilor de sustenabilitate &icirc;n cadrul companiilor cotate la burse internaţionale, promovez educaţia prin dezbateri sau călătoresc pe distanţe lungi.</span></p>
+<h2>Staff: training, PR, web</h2>
+<!--
+<p class="nume">Bianca Dragomir (training)</p>
+<p class="descriere"><img src="../../images/oameni/bianca_dragomir.jpg" _mce_src="../../images/oameni/bianca_dragomir.jpg" alt="Bianca Dragomir" /><span>Fac debate de nouă ani şi &icirc;ncă am fluturi &icirc;n stomac &icirc;nainte de o rundă şi mă binedispune pentru o săptăm&acirc;nă c&acirc;nd un debater&nbsp;</span><span lang="EN-US">&ldquo;le zice bine&rdquo;</span><span>. &Icirc;n ace</span><span>ș</span><span>ti ani m-am bucurat de combina</span><span>ț</span><span>ia reu</span><span>ș</span><span>ită dintre campionatele de debate&nbsp;</span><span>ș</span><span>i &icirc;nt&acirc;lnirea cu oameni interesan</span><span>ț</span><span>i şi oraşe frumoase. Dincolo de dimensiunea competi</span><span>ţ</span><span>ională, cred că dezbaterile energizează&nbsp;</span><span>ș</span><span>i deschid g&acirc;ndirea mai mult dec&acirc;t orice şi ar trebui să reprezinte un exerciţiu constant de &icirc;ntreţinere a minţii. De aceea ţin mult la Closer to Oxford şi la comunitatea pe care a creat-o. Am o slăbiciune pentru persoanele cu umor şi pentru oamenii cu entuziasm molipsitor.</span></p>
+-->
+<p class="nume">Raluca Bogdan (training și PR)</p>
+<p class="descriere"><img src="../images/oameni/raluca_bogdan.jpg" alt="Raluca Bogdan" />Am studiat Științe Politice la Universitatea București și&nbsp; am urmat masterul de Discurs și Argumentare de la Facultatea de Limbi Străine, sunt trainer acreditat și susțin cursuri &icirc;n domeniu pentru că mă preocupă &icirc;ntărirea abilităților de g&acirc;ndire critică și argumentare &icirc;n spațiul public. Sunt co-autor al cursului de lectură critică din cadrul programului Closer to Oxford, seminarul susținut fiind unic &icirc;n Rom&acirc;nia. Mă pasionează interacțiunea prin dialog/joc și studiul acestuia precum și promovarea culturii, educației și artelor.</p>
+<p class="nume">Teodora Oprea (training)</p>
+<p class="descriere"><img src="../images/oameni/teodora_oprea.jpg" alt="Teodora Oprea" />&nbsp;Sunt studentă &icirc;n anul III la drept și practic dezbaterile destul de pasionat de 8 ani. &Icirc;mi plac discuţiile profunde, substanţiale și super-analitice, dar și &icirc;ncercările &icirc;ndrăzneţe, neconvenţionale de răsturnare a unei discuţii, de aceea &icirc;ncerc să-i &icirc;nvăţ și pe alţii să g&acirc;ndească logic, critic și deschis.&nbsp;<br />&Icirc;mi plac cărțile bune, neştiute de nimeni, &icirc;nvaţ japoneză și chineză, joc baschet și m&acirc;zgălesc versuri c&acirc;nd mă &icirc;ntorc seara acasă cu autobuzul. Mă bucur de un cer senin şi mă g&acirc;ndesc la viitor cu entuziasm.</p>
+<p class="nume">Bogdan Drăghicescu (Web)</p>
+<p class="descriere"><img src="../images/oameni/bogdan_draghicescu.jpg" alt="Bogdan Draghicescu" />Sunt o persoană ambițioasă, care nu se mulțumește cu nimic mai prejos dec&acirc;t cel mai bun lucru posibil, curajos (uneori poate chiar prea... ), pasionat at&acirc;t de calculatoare, c&acirc;t și de plimbări prin parc, de rezolvat probleme ce includ litere ciudate, precum NP, A* sau O(n), dar &icirc;mi place și să analizez un argument bun, să privesc cu un ochi critic nu numai un text academic, dar și un discurs public.&nbsp;</p>
+<p class="descriere clear">&nbsp;</p>
+<p class="descriere">&nbsp;</p>
+<p class="descriere">&nbsp;</p>
+</div>
+<div><span style="color: #222222; font-family: arial, sans-serif; font-size: 16px;"><span style="font-family: 'times new roman', 'new york', times, serif; font-size: 16px; background-color: #ffffff;"><br /></span></span></div>
+
+                <div class='clear'></div>
+        </div><!-- end main content -->
+         <div class='clear'></div>
+</div>
+<div id="pix"></div>
+
+
+                                </div><!--end main -->
+                                <div id='parteneri'>
+                                    <span class='tr'></span><span class='tl'></span><span class='br'></span><span class='bl'></span><span id="filler"></span>
+                                    <div class='parteneri' id='sustinatori'>
+                                        <span class='floating_text' id='un_proiect'>Un proiect</span>
+                                        <a href='http://www.ardor.org.ro/'><div class='image' id='ardor'>Ardor</div></a>
+                                        <span class='floating_text' id='finantatori'>Finanțatori</span>
+                                        <a href='http://www.opensocietyfoundations.org/'><div class='image' id='open_society'>Open Society Foundation </div></a>
+                                        <a href='http://www.studentiq.ro//'><div class='image' id='memoplus'>MemoPlus</div></a>
+                                        <!-- <a href='http://www.ratiufamilyfoundation.com/'><div class='image' id='FundatiaRatiu'>Ardor</div></a>
+                                        <a href='http://www.eef.md/'><div class='image' id='eef'>East Europe Foundation</div></a>
+                                        <a href='http://www.mts.gov.md/'><div class='image' id='mdminister'>Ministerul Tineretului si Sportului al Republicii Moldova</div></a> -->
+
+                                        <span class='floating_text' id='parteneri_text'>Parteneri</span>
+
+                                        <a href='http://www.policycenter.eu/'><div class='image' id='PolicyCenter'>Policy Center</div></a>
+                                        <a href='http://www.britishcouncil.org/'><div class='image' id='BritishCouncil'>British Council</div></a>
+                                        <a href='http://www.europuls.ro/'><div class='image' id='europuls'>Europuls</div></a>
+                                        <a href='http://www.cere.ro/'><div class='image' id='cere'>Ce-Re</div></a>
+                                        <a href='http://www.primeromania.ro/'><div class='image' id='prime'>Prime Romania</div></a>
+                                        <a href='http://www.cji.ro/'><div class='image' id='cji'>Centrul pentru jurnalism independent</div></a>
+                                        <a href='http://www.aiesectm.ro/'><div class='image' id='aisec'>Aisec</div></a>
+                                        <!-- ===================================================================================================== -->
+                                        <a href='http://www.cogitus.ro/'><div class='image' id='cogitus'>Cogitus</div></a>
+                                        <a href='http://www.adevarul.ro/international/foreign_policy/'><div class='image' id='foreignPolicy'>Foreign Policy</div></a>
+                                        <a href='http://www.elsa.ro/'><div class='image' id='elsa'>Elsa</div></a>
+                                        <a href='http://www.vipromania.ro/'><div class='image' id='vipromania'>Voluntari pentru idei si proiecte</div></a>
+                                        <a href='http://www.ongtrust.ro/'><div class='image' id='ongtrust'>Trust</div></a>
+
+                                        <!-- ===================================================================================================== -->
+                                        <a href='http://www.leap.ro/'><div class='image' id='leap'>Leap</div></a>
+                                        <a href='http://www.younginitiative.org/'><div class='image' id='younginitiative'>Asociatia young initiative</div></a>
+                                        <a href='http://www.asjc.ro/'><div class='image' id='asjc'>Asjc</div></a>
+                                        <a href='http://osut.ro/'><div class='image' id='osut'>Osut</div></a>
+                                        <div class='clear'></div>
+                                    </div>
+                                    <div class='parteneri' id='parteneri_institutionali'>
+                                        <span class='floating_text' id='sponsori_text'>Sus&#539;in&#x0103;tori</span>
+                                        <a href='http://www.cartier.md/'><div class='image' id='cartier_logo'>Editura Cartier</div></a>
+                                        <a href='http://www.pll.md/ro/'><div class='image' id='biblio_logo'>Biblioteca publica de drept</div></a>
+                                        <span class='floating_text' id='institutii_text'>Parteneri institu&#539;ionali</span> 
+                                        <ul id='institutii'>
+                                            <!-- <span class='floating_text' id='institutii_text'>Parteneri institu&#539;ionali:</span> -->
+                                            <li><a href='http://www.politice.ro/'>Facultatea de &#536;tiin&#539;e Politice SNSPA </a></li>
+                                            <li><a href='http://www.comunicare.ro/'>Facultatea de Comunicare &#537;i Rela&#539;ii Publice SNSPA</a></li>
+                                            <li><a href='http://www.fspub.ro/'>Facultatea de &#536;tiin&#539;e Politice Universitatea Bucure&#537;ti</a></li>
+                                            <li><a href='http://www.filosofie.unibuc.ro/'>Facultatea de Filosofie Universitatea Bucure&#537;ti</a></li>
+                                            <li><a href='http://litere.unibuc.ro/'>Facultatea de Litere din Universitatea Bucure&#x015f;ti</a></li>
+                                            <li><a href='http://www.unibuc.ro/ro/fac_fsas_ro'>Facultatea de Sociologie Universitatea Bucure&#537;ti</a></li>
+                                            <li><a href='http://laws.uaic.ro/'>Facultatea de Drept Universitatea Alexandru Ioan Cuza Ia&#537;i</a></li>
+                                            <li><a href='http://www.uaic.ro/uaic/bin/view/Academic/Filosofie'>Facultatea de Filosofie si &#536;tiin&#539;e Social Politice Universitatea AIC Ia&#537;i</a></li>
+                                            <li><a href='http://www.upa.ro/'>Facultatea de Drept si Facultatea de &#x015e;tiin&#x0163;e Politice si Administrative Universitatea Petre Andrei Ia&#x015f;i</a></li> 
+
+                                            <li><a href='http://www.ubbcluj.ro/'>Universitatea Babe&#537;-Bolyai Cluj Napoca</a></li>
+                                            <li><a href='http://www.uvt.ro/'>Universitatea de Vest Timi&#537;oara</a></li>
+                                            <li><a href='http://www.upt.ro/'>Universitatea Politehnica Timi&#537;oara</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class='parteneri' id='parteneri_media'>
+                                        <span class='floating_text' id='media_text'>Parteneri media</span>
+                                        <a href='http://www.hotnews.ro/'><div class='image' id='hotnews'>HotNews</div></a>
+                                        <!-- <a href='http://www.lumebuna.ro/'><div class='image' id='lumebuna'>Lume Buna</div></a> -->
+                                        <a href='http://www.romaniapozitiva.ro/'><div class='image' id='romaniapozitiva'>Romania Pozitiva</div></a>
+                                        <a href='http://totb.ro/'><div class='image' id='thinkoutsidethebox'>Think Outside The Box</div></a>
+                                        <a href='http://www.facebook.com/carevasazica.vip'><div class='image' id='carevasazica'>Carevasazica</div></a>
+                                        <a href='http://www.studentie.ro/'><div class='image' id='studentiero'>Studentie.ro</div></a>
+                                        <a href='http://startub.unibuc.ro/'><div class='image' id='startub'>startub.unibuc.ro</div></a>
+                                        <!-- <a href='http://www.tvr.ro/tvr_cluj.php'><div class='image' id='tvrcluj'>Tvr Cluj</div></a> -->
+                                        <!-- <a href='http://www.radiotransilvania.ro'><div class='image' id='radiotransilvania'>Radio Transilvania</div></a> -->
+                                        <a href='http://iasifun.ziaruldeiasi.ro/'><div class='image' id='iasifun'>Iasi fun</div></a>
+                                        <a href='http://www.ziaruldeiasi.ro/'><div class='image' id='ziaruldeiasi'>Ziarul de Iasi</div></a>
+                                        <a href='http://www.kissfm.ro/timisoara'><div class='image' id='kissfm'>KissFm</div></a>
+
+                                        <div class='clear'></div> 
+                                    </div>
+                                    <div class='clear'></div>
+
+                                </div>	
+                            </div>	<!-- end wrap -->
+                            <div id='footer_mare'>
+                                <div id='footer'>
+                                    <div id='links' class='footer'>
+                                        <div id='menu1' style='margin:auto;'> <ul id='meniu_prinicpal'><li><a href='contacte/index.html'> Contact </a></li>
+<li><a href='clubdebate/index.html'> Cluburile </a></li>
+<li><a href='oamenii/index.html'> Oamenii </a></li>
+<li><a href='proiectul/index.html'> Proiectul </a></li>
+<li><a href='home/index.html'> Acasa </a></li>
+</ul></div><!--end menu-->
+                                    </div><!--
+                                    <div id='contact' class='footer'>
+                                            <h4>Contact</h4>
+                                            <p>office@closer2oxford.ro</p>
+                                            <p>bogdan.draghicescu@closer2oxford.ro<br>
+                                            <span class='detalii'> (asistenta tehnica web - orice probleme legate de site)</span></p>
+                                    </div>
+                                    -->
+                                    <div id='newsletter' class='footer'>
+                                        <script src="../../connect.facebook.net/en_US/all.js#xfbml=1"></script><fb:like href="http://www.facebook.com/pages/Closer2Oxford/162758797069605" width="250" colorscheme="dark"></fb:like>
+                                        <!--<h4>Newsletter</h4>
+                                        <form action='/page/newsletter'>
+                                                <input type='text' name='email'>
+                                                <input type='submit' id='submit' value='>'>
+                                                        
+                                        </form>-->
+                                    </div>
+                                    <div id='credits'>
+                                        Copyright(c) 2021 ARDOR |  Toate drepturile rezervate | Toate logo-urile si sloganurile de pe site sunt proprietate intelectuala inregistrata si nu pot fi reproduse fara acordul explicit al detinatorilor. <br>
+                                            <br /><br />
+                                            <b>Disclaimer</b><br /><i>
+
+                                                Programul educational Closer to Oxford este un program non-profit si nu are o legatura cu universitatea cu acelasi nume, referirea la Oxford avand doar o semnificatie simbolica.
+                                            </i>
+                                    </div>
+
+                                </div>		
+                            </div>		
+
+                            <div id="finantatde">Acest proiect este finantat cu sustinere din partea Comisiei Europene. Aceast publicatie [comunicare] reflecta doar
+                                vederile autorului, iar Comisia nu poate fi facuta  responsabila pentru utilizarea informatiei pe care o contine.</div>
+
+
+                        </body>
+                        </html>

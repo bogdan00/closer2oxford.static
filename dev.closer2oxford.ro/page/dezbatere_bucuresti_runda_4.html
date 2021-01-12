@@ -1,0 +1,662 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml-strict.dtd">
+<HTML xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+    <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+            <link rel="icon" type="image/png"  href="../../closer2oxford.ro/favicon.html">
+                <link rel="stylesheet" href="var/layout.css" type="text/css">
+                    <title>Closer to Oxford - e timpul pentru argumente!</title>
+                    <link rel="alternate" type="application/rss+xml"  href="rss_feed" title="Stiri Closer2Oxford">
+                        <!-- <link rel="image_src" property="og:image"  href="/images/layout/closer2oxford_fb_white.png" /> -->
+                        <link rel="image_src" property="og:image"   type="image/jpeg"  href="../uploads/2015/06/9/facebook_icon.html" />
+                        <link rel="image_src" type="image/jpeg"  href="../uploads/2015/06/9/icon-facebook.gif" /> 
+						<meta name="description" content="Closer2Oxford pune în valoare oameni şi argumentele lor, în dezbateri online şi publice alături de tineri şi invitați avizaţi"/>
+                        <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9" />
+<script type='text/javascript' src='../js/jquery-1.4.4.min.js'></script>
+<script>var $j = jQuery.noConflict();</script>
+<script type='text/javascript' src='../js/tinymce/tiny_mce.js'></script>
+<script type='text/javascript' src='../js/jquery.form.js'></script>
+<script type='text/javascript' src='../js/fbLoginRegister.js'></script>
+<script type='text/javascript' src='var/javascript.js'></script>
+<script type='text/javascript' src='../js/jquery.hovertip-1.0.min.js'></script> 
+<script type='text/javascript' src='../js/jquery.jgrowl_minimized.js'></script> 
+<link rel='stylesheet' href='../css/jquery.jgrowl.css' media='screen' type='text/css'> 
+<script type='text/javascript' src='../js/jquery.timer-min.js'></script> 
+<link rel='stylesheet' href='var/gallery.css' media='screen' type='text/css'> 
+<script type='text/javascript' src='var/galerie/jquery.prettyPhoto.js'></script> 
+<meta name='description' content=''/> 
+<meta name='keywords' content=''/> 
+<style>.hovertip{
+    position:absolute;
+    padding:10px 13px;
+    z-index:2;
+    max-width:300px;
+    color:#303030;
+    background-color:#f5f5b5;
+    border:1px solid #DECA7E;
+    font-family:sans-serif;
+    font-size:12px;
+    line-height:18px;
+    text-align:left;
+    }</style> 
+<script type='text/javascript'>$j(document).ready(function(){$j('.tooltip').hovertip({'offset':[20,20]});get_notif();});
+
+if(!Array.indexOf){Array.prototype.indexOf = function(obj){for(var i=0; i<this.length; i++){if(this[i]==obj){return i;}}return -1;}}
+    hashuri = [] ;
+	 var tick_timer= 3000 ;
+ 
+	 function get_notif()
+        {
+		  
+		  //console.log(tick_timer);
+	     
+		  setTimeout(get_notif,tick_timer);
+        
+		   $j.ajax(
+            {
+                url: '/page/notif/show_events',
+                dataType: 'json',
+                data: "{}",
+                success: function(data)
+                    {
+                    $j.each(data,function(index,data){
+                        try
+                            {
+                            if( hashuri.indexOf(data.hash) == -1 )
+                                {
+                                hashuri.push(data.hash);
+                                $j.jGrowl(
+                                    data.str,
+                                    {
+                                        corners:'1px',
+                                        life: data.life,
+                                        header:data.title,
+                                        hash: data.hash,
+                                        sticky: data.sticky,
+                                        close: function(e,m,o)
+                                            {
+                                                $j.ajax({url:'/page/notif/delete_single_event/' + o.hash});
+                                            }
+                                    });
+                                }
+                            }
+                        catch(e){}
+                        })
+                    }
+            });
+        }
+	 </script> 
+ 
+                            
+  <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-19111721-1']);
+  _gaq.push(['_setDomainName', '.closer2oxford.ro']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+    
+                        </head>
+                        <body>
+                            <div id="global_wrap">
+                                <div id="header">
+                                    <a href='../index.html'><div id='logo'><img src='../images/layout/sigla.jpg'></div></a>
+                                    <a class='noExternal' href='http://www.facebook.com/pages/Closer2Oxford/162758797069605'><img src='../images/fb.png' style='height:30px;float:right;clear:right;margin:10px 5px 5px 5px;border:none;'/></a>
+                                    <a href='rss_feed'><img src='../images/feed-icon.png' style='height:30px;float:right;clear:right;margin:5px;border:none;'/></a>
+                                </div>
+                                <div id="meniu">
+                                    <div  id='register_login'>
+
+                                        
+  <a href='#' class='todo' id='login'>Login </a> &nbsp;<a href='register.html' class='todo' id='register'>Register</a>
+    <div id='login_box'>
+		  <form action='https://dev.closer2oxford.ro/page/ro/login_user/logon' method='post' id='user_login_form'>
+					 <div>Email: <input type='text' name='email'/> </div><br />
+					 <div>Pass: <input type='password' name='passwd'/></div><br />
+					 <a href='#' class='password_forgot'>forgot password?</a>
+					 <input type='hidden' value='/page/dezbatere_bucuresti_runda_4' name='returnto' class='submiter'/><br />
+					 <input type='submit' value='login' name='btn' class='submiter'/><br />
+		  </form>
+		  
+		  <form action='https://dev.closer2oxford.ro/page/ro/login_user/reset_user_pw' method='post' id='user_reset_form'>
+					 <div>Email: <input type='text' name='email'/> </div><br />
+					 <a href='#' class='password_forgot'>login?</a>
+					 <input type='hidden' value='/page/dezbatere_bucuresti_runda_4' name='returnto' class='submiter'/><br />
+					 <input type='submit' value='reset' name='btn' class='submiter'/><br />
+		  </form>
+		  
+    </div>
+    
+                                    </div>
+                                    <div id='menu1' style='margin:auto;'> <ul id='meniu_prinicpal'><li><a href='contacte/index.html'> Contact </a></li>
+<li><a href='clubdebate/index.html'> Cluburile </a></li>
+<li><a href='oamenii/index.html'> Oamenii </a></li>
+<li><a href='proiectul/index.html'> Proiectul </a></li>
+<li><a href='home/index.html'> Acasa </a></li>
+</ul></div><!--end menu-->
+                                </div>
+                                <div id="main"> 
+                                    <!--<div id='stiri-padding'>
+        <div id='stiri_back'>
+                {stiri} 
+    
+               
+        </div>-->
+        
+</div>
+<div  id="content-padding">
+        <div id='sidebar_menu'>
+                <span class='tr'></span>
+                <span class='tl'></span>
+                <span class='br'></span>
+                <span class='bl'></span>
+                <span id="filler"></span>
+                    
+                <ul></ul>
+                
+                <div class='clear'></div>
+        </div>
+        <div id="content">
+                <span class='tr'></span>
+                <span class='tl'></span>
+                <span class='br'></span>
+                <span class='bl'></span>
+                <span id="filler"></span>
+                <script type='text/javascript' src='../js/jquery.hovertip-1.0.min.js'></script> 
+<script type='text/javascript' src='../js/jquery.jgrowl_minimized.js'></script> 
+<link rel='stylesheet' href='../css/jquery.jgrowl.css' media='screen' type='text/css'> 
+<script type='text/javascript' src='../js/jquery.timer-min.js'></script> 
+<link rel='stylesheet' href='var/gallery.css' media='screen' type='text/css'> 
+<style>.hovertip{
+    position:absolute;
+    padding:10px 13px;
+    z-index:2;
+    max-width:300px;
+    color:#303030;
+    background-color:#f5f5b5;
+    border:1px solid #DECA7E;
+    font-family:sans-serif;
+    font-size:12px;
+    line-height:18px;
+    text-align:left;
+    }</style> 
+<script type='text/javascript'>$j(document).ready(function(){$j('.tooltip').hovertip({'offset':[20,20]});get_notif();});
+
+if(!Array.indexOf){Array.prototype.indexOf = function(obj){for(var i=0; i<this.length; i++){if(this[i]==obj){return i;}}return -1;}}
+    hashuri = [] ;
+	 var tick_timer= 3000 ;
+ 
+	 function get_notif()
+        {
+		  
+		  //console.log(tick_timer);
+	     
+		  setTimeout(get_notif,tick_timer);
+        
+		   $j.ajax(
+            {
+                url: '/page/notif/show_events',
+                dataType: 'json',
+                data: "{}",
+                success: function(data)
+                    {
+                    $j.each(data,function(index,data){
+                        try
+                            {
+                            if( hashuri.indexOf(data.hash) == -1 )
+                                {
+                                hashuri.push(data.hash);
+                                $j.jGrowl(
+                                    data.str,
+                                    {
+                                        corners:'1px',
+                                        life: data.life,
+                                        header:data.title,
+                                        hash: data.hash,
+                                        sticky: data.sticky,
+                                        close: function(e,m,o)
+                                            {
+                                                $j.ajax({url:'/page/notif/delete_single_event/' + o.hash});
+                                            }
+                                    });
+                                }
+                            }
+                        catch(e){}
+                        })
+                    }
+            });
+        }
+	 </script> 
+
+<script type='text/javascript' src='../js/jquery.hovertip-1.0.min.js'></script> 
+<script type='text/javascript' src='../js/jquery.jgrowl_minimized.js'></script> 
+<link rel='stylesheet' href='../css/jquery.jgrowl.css' media='screen' type='text/css'> 
+<script type='text/javascript' src='../js/jquery.timer-min.js'></script> 
+<link rel='stylesheet' href='var/gallery.css' media='screen' type='text/css'> 
+<script type='text/javascript' src='var/galerie/jquery.prettyPhoto.js'></script> 
+<style>.hovertip{
+    position:absolute;
+    padding:10px 13px;
+    z-index:2;
+    max-width:300px;
+    color:#303030;
+    background-color:#f5f5b5;
+    border:1px solid #DECA7E;
+    font-family:sans-serif;
+    font-size:12px;
+    line-height:18px;
+    text-align:left;
+    }</style> 
+<script type='text/javascript'>$j(document).ready(function(){$j('.tooltip').hovertip({'offset':[20,20]});get_notif();});
+
+if(!Array.indexOf){Array.prototype.indexOf = function(obj){for(var i=0; i<this.length; i++){if(this[i]==obj){return i;}}return -1;}}
+    hashuri = [] ;
+	 var tick_timer= 3000 ;
+ 
+	 function get_notif()
+        {
+		  
+		  //console.log(tick_timer);
+	     
+		  setTimeout(get_notif,tick_timer);
+        
+		   $j.ajax(
+            {
+                url: '/page/notif/show_events',
+                dataType: 'json',
+                data: "{}",
+                success: function(data)
+                    {
+                    $j.each(data,function(index,data){
+                        try
+                            {
+                            if( hashuri.indexOf(data.hash) == -1 )
+                                {
+                                hashuri.push(data.hash);
+                                $j.jGrowl(
+                                    data.str,
+                                    {
+                                        corners:'1px',
+                                        life: data.life,
+                                        header:data.title,
+                                        hash: data.hash,
+                                        sticky: data.sticky,
+                                        close: function(e,m,o)
+                                            {
+                                                $j.ajax({url:'/page/notif/delete_single_event/' + o.hash});
+                                            }
+                                    });
+                                }
+                            }
+                        catch(e){}
+                        })
+                    }
+            });
+        }
+	 </script> 
+
+<style type="text/css">
+.poze
+{
+    float:right;
+    width:110px;
+}
+.poze a img
+{    border:none;
+}
+.main_content
+{
+    float:left;
+    width:560px;
+}
+</style>
+
+ <div class = 'poze'>
+            <a class='thumb' href='../uploads/2012/02/13/buc_ianinte.j6y7xc.png' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../uploads/2012/02/13/thumb_buc_ianinte.j6y7xc.png' alt='' />
+                <span class='desc'></span>
+            </a>
+        
+
+            <a class='thumb' href='http://www.youtube.com/watch?v=pNWFCgVBS2w&amp;feature=related' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../../img.youtube.com/vi/pNWFCgVBS2w/1.jpg' alt='' />
+                <span class='desc'>Introducere</span>
+            </a>
+        
+
+            <a class='thumb' href='http://www.youtube.com/watch?v=_3RkQhELrcM&amp;feature=related' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../../img.youtube.com/vi/_3RkQhELrcM/1.jpg' alt='' />
+                <span class='desc'>Discurs A1 - Cristian Neagoe</span>
+            </a>
+        
+
+            <a class='thumb' href='http://www.youtube.com/watch?v=AQinx4N4haU&amp;feature=related' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../../img.youtube.com/vi/AQinx4N4haU/1.jpg' alt='' />
+                <span class='desc'>Discurs N1 - Ciprian Șiulea</span>
+            </a>
+        
+
+            <a class='thumb' href='http://www.youtube.com/watch?v=JMlgh_YXIbM&amp;feature=related' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../../img.youtube.com/vi/JMlgh_YXIbM/1.jpg' alt='' />
+                <span class='desc'>Discurs A2 - Radu Țigănaș</span>
+            </a>
+        
+
+            <a class='thumb' href='http://www.youtube.com/watch?v=e7xfcDMWsgA&amp;feature=related' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../../img.youtube.com/vi/e7xfcDMWsgA/1.jpg' alt='' />
+                <span class='desc'>Discurs N2 - Ioana Covei</span>
+            </a>
+        
+
+            <a class='thumb' href='http://www.youtube.com/watch?v=UylquD3ZtoE&amp;feature=related' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../../img.youtube.com/vi/UylquD3ZtoE/1.jpg' alt='' />
+                <span class='desc'>Interventii 1</span>
+            </a>
+        
+
+            <a class='thumb' href='http://www.youtube.com/watch?v=eud3kxJ0Mfk&amp;feature=related' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../../img.youtube.com/vi/eud3kxJ0Mfk/1.jpg' alt='' />
+                <span class='desc'>Interventii 2</span>
+            </a>
+        
+
+            <a class='thumb' href='http://www.youtube.com/watch?v=TKsbO25XZgc&amp;feature=related' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../../img.youtube.com/vi/TKsbO25XZgc/1.jpg' alt='' />
+                <span class='desc'>Interventii 3</span>
+            </a>
+        
+
+            <a class='thumb' href='http://www.youtube.com/watch?v=a3Q06p92djQ&amp;feature=related' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../../img.youtube.com/vi/a3Q06p92djQ/1.jpg' alt='' />
+                <span class='desc'>Concluzii</span>
+            </a>
+        
+
+            <a class='thumb' href='../uploads/2012/02/13/buc_final.3dvoun.png' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../uploads/2012/02/13/thumb_buc_final.3dvoun.png' alt='' />
+                <span class='desc'></span>
+            </a>
+        
+
+
+    <script>
+    $j(document).ready(function(){
+      		$j("a[rel^='prettyPhoto']").prettyPhoto({theme:'facebook'});
+        });
+    
+    </script>
+    </div>
+
+<div class='main_content'>
+<p><strong>Dezbatere publică Bucureşti</strong><strong> </strong></p>
+<p><strong>Sala de Consiliu Facultatea de Sociologie Bucureşti, 14 decembrie, ora 18.30</strong><strong>&nbsp;</strong></p>
+<p><strong><em>&ldquo;E timpul să afirmăm că nesupunerea civică este legitimă &icirc;ntr-o democraţie?&rdquo;</em></strong><em>&nbsp;</em></p>
+<p><strong>Echipa afirmatoare:</strong>&nbsp;<strong> Cristian Neagoe </strong><strong>(</strong>masterand Facultatea de Filosofie, organizator de evenimente culturale<strong>) şi </strong><strong>Radu Tigănaş</strong><strong> (</strong>student Academia de Teatru si Film<strong>)</strong><strong>&nbsp;</strong></p>
+<p><strong>Echipa negatoare:</strong>&nbsp;<strong>Ciprian Şiulea</strong> (publicist, traducător) şi <strong>Ioana Covei (</strong>studentă Facultatea de Litere, Studii Europene)</p>
+<p><strong>Moderator</strong>&nbsp;<strong>Andrei Ţaranu</strong> (profesor SNSPA)</p>
+<p><em><strong>Moţiunea a trecut cu votul final 78 % pro vs 22 % contra</strong></em>; <em><strong>vot inițial: 83% pro vs 17% contra</strong></em></p>
+<p><strong>&nbsp;</strong></p>
+<p><strong>Măriuca Morariu</strong><strong>&nbsp;</strong>(coordonator București):</p>
+<p>Scopul acestui program este să creăm un spațiu de dezbateri, discuții și argumentare. Acesta este prima serie din al doilea an; avem, deci, deja, un an de experiență și țin să laud &icirc;ntreaga echipă pentru premiul I la Gala Societății Civile pe care l-a obținut anul trecut. Ce se va &icirc;nt&acirc;mpla &icirc;n această seară e&nbsp;<strong>un joc, unul serios, &icirc;n care invitații cărora le mulțumesc pentru prezență, se dedublează cumva, &icirc;ncearcă să găsească argumente pro sau contra pentru moțiunea pe care o vom dezbate</strong>, și anume nesupunerea civică &ndash;este sau nu legitimă &icirc;ntr-o democrație? N-o să schimbăm lumea cu această dezbatere, probabil n-o să facem nici o petiție specială, dar e un joc &icirc;n care sperăm să plecați un pic mai luminați. Acum am să dau cuv&acirc;ntul domnului Andrei Țăranu, profesor la catedra de Științe Politice de la Școala Națională de Științe Politice și Administrative. Vă rog.</p>
+<p>&nbsp;</p>
+<p><strong>Andrei Țăranu (moderator):</strong></p>
+<p>Bună seara. Și eu țin să mulțumesc și dumneavoastră pentru că sunteți aici &icirc;ntr-o perioadă &icirc;n care, &icirc;ntr-adevăr, subiectul poate fi foarte la modă &ndash; nesupunerea civică, av&acirc;nd &icirc;n vedere că sunt tot mai multe perioadele &icirc;n care cetățenii, nu numai din Rom&acirc;nia, dar aproape peste tot &icirc;n lumea civilizată, se simt tot mai mult constr&acirc;nși de stat. Avem, unul&nbsp; dintre poate cele mai importante paradoxuri ale democrației&nbsp; - &icirc;n numele libertății, statul consideră că poate să limiteze suveranitatea poporului. &Icirc;n numele economiei, statul poate considera că se poate limita sau se pot găsi diverse forme pentru cei mulți, lăs&acirc;nd pe c&acirc;țiva, puțini, pe dinafară. Avem foarte multe motive &icirc;n societatea contemporană să ne &icirc;ndoim de statul existent și de regimurile politice, chiar dacă multe dintre ele, la un moment dat, au fost modelul nostru de democrație. Și vă aduceți aminte că prin anii &rsquo;90 sau chiar &icirc;n anii 2000, UE sau SUA erau considerate niște modele ale democrației. Astăzi vedem că sunt foarte mulți cetățeni, fie că sunt &icirc;n Grecia sau &icirc;n SUA, care fac un pro domo pentru a găsi modalități de reacție cetățenească asemănătoare cu ale unor cetățeni din state care p&acirc;nă de cur&acirc;nd nu erau democratice, cum sunt Egiptul, Tunisia ș.a. Astfel , &icirc;ntrebarea este legitimă: este nesupunerea civică legitimă &icirc;ntr-o democrație?</p>
+<p>&Icirc;ntr-o lucrare pe care văd că &icirc;n ultima vreme nu se citește foarte mult, John Stuart Mill &icirc;n &bdquo;Despre Libertate&rdquo; &icirc;și punea și el această &icirc;ntrebare: c&acirc;t sau p&acirc;nă unde nesupunerea civică poate să meargă? De ce este sau nu este necesară nesupunerea civică? Eu pot considera ca atunci c&acirc;nd un guvernăm&acirc;nt este prea autoritar, nesupunerea civică este legitimă. &Icirc;ntrebarea este:<strong>&icirc;ntr-o situație de libertate maximă, nesupunerea civică poate să mai fie legitimă? Nesupunerea cui &icirc;mpotriva a ce?</strong><strong>&nbsp;</strong>Una din &icirc;ntrebările serioase care se pun peste tot &icirc;n lume este care mai este raportul dintre cetățean și stat.&nbsp;<strong>Statul mai este al cetățenilor sau este o entitate care s-a construit pur și simplu de la sine și care, practic, nu &icirc;n numele libertății, ci &icirc;n numele unui oligopol sau al unei oligarhii oarecare, construiește politici pentru cei mai mulți</strong>? La un moment dat, democrația era considerată o formă prin care foarte mulți cetățeni &icirc;și alegeau destinul. Azi, democrația spune:&nbsp;<strong>toți cetățenii &icirc;și aleg destinul, toți laolaltă, dar fiecare diferit,</strong>&nbsp;ceea ce generează, dacă vreți, un conflict &icirc;ntre generații, &icirc;ntre cetățeni și stat, c&acirc;t și &icirc;ntre partidele politice și diverse tipuri de reprezentare. Una din &icirc;ntrebările importante, și cu asta mă opresc, este dacă statul trebuie să fie un gestionar al economiei sau al existenței cetățenilor. Și ca o ultimă &icirc;ntrebare, care este ridicată de la &icirc;nceputul științelor politice, cine a fost la &icirc;nceput: oul sau găina &ndash; statul sau cetățenii? Părerea mea este că nu poate exista stat fără cetățeni.</p>
+<p>Dau cuv&acirc;ntul echipei care afirmă că nesupunerea civică este legitimă &icirc;ntr-o democrație, respectiv domnului Cristian Neagoe, care este secondat de domnul Radu Țigănaș. Vă rog.</p>
+<p><strong>&nbsp;</strong></p>
+<p><strong>Cristian Neagoe (afirmator 1)</strong></p>
+<p>Mă bucur să mă aflu &icirc;n această seară &icirc;n fața dumneavoastră. Alături de coechipierul meu, Radu Țigănaș, vă voi arăta de ce&nbsp;<strong>nesupunerea civică nu este doar legitimă, ci este un instrument esențial &icirc;ntr-o democrație sănătoasă</strong>. Deși aceasta este o dezbatere demonstrativă, veți vedea că ea are niște efecte destul de palpabile &icirc;n viața de zi cu zi. Văd că se află printre noi oameni care au ocupat Facultatea de Istorie, oameni care au fost luați pe sus de jandarmi &icirc;n Piața Universității sau la televiziune pentru nesupunere civică, pentru proteste &icirc;mpotriva perversității canalelor media sau pentru proteste &icirc;mpotriva proiectului Roșia Montană sau pentru simplul drept la libera exprimare. Mi se pare că rezultatele acțiunilor lor ne privesc pe toți. De aceea, hai să vedem ce &icirc;nțelegem prin nesupunerea civică.</p>
+<p>Pe scurt,&nbsp;<strong>nesupunerea civică este &icirc;ncălcarea unei legi care ți se pare nedreaptă, refuzul de a te supune unei legi sau de a lua parte la o politică pe care o consideri nedreaptă, injust.</strong><strong>&nbsp;</strong>Cei care practică nesupunerea &icirc;și bazează acțiunile pe un drept moral și de cele mai multe ori folosesc tehnici non-violente, de rezistență pasivă, pentru a atrage atenția unui public larg asupra nedreptăților la care sunt supuși. Majoritatea practicanților nesupunerii civice respectă domnia legii și &icirc;și asumă riscul de a fi amendați, arestați, bătuți sau chiar de a-și pierde viața pentru cauza pe care o susțin, &icirc;n speranța că exemplul lor poate duce la o schimbare legislativă sau cel puțin la una de opinie publică?</p>
+<p>De ce este necesară nesupunerea civică? Winston Churchill spunea că democrația este cea mai proastă formă de guvernare, &icirc;n afară de toate celelalte pe care le-am experimentat p&acirc;nă acum. Ca orice alt sistem, democrația este imperfectă. De multe ori, este un simplu joc al numerelor. Ce &icirc;nseamnă 51 la sută versus 49 la sută? &Icirc;nseamnă, cumva, că primii au dreptate și ceilalți nu? E un joc al compromisului. Dar ce are democrația important este un mecanism de autoreglare. Din acest punct de vedere, noi considerăm că nesupunerea civică face parte din acest mecanism de autoreglare. Avem alegeri la patru sau cinci ani și opțiunile sunt deseori jalnice. Mai mult dec&acirc;t at&acirc;t, nedreptățile pot fi, uneori, foarte bine ascunse de sistem. Ca individ e dificil să-ți faci vocea auzită, oric&acirc;te petiții și scrisori ai depune la oficialități. Pentru ca publicul larg să afle despre o lege care e injustă, de multe ori trebuie să &icirc;ncalci acea lege și să ajungi, prin urmare, &icirc;n instanță, unde poți să o contești<strong>. &Icirc;ntr-un sistem democratic sănătos, nesupunerea civică este un instrument esențial care face parte din acest mecanism de autoreglare a democrației</strong>. Democrația și domnia legii au de c&acirc;știgat prin nesupunerea civică a cetățenilor.</p>
+<p>&Icirc;n lipsa nesupunerii civice, se poate intra pe o pantă periculoasă. Obediența față de legile injuste creează premisele unei tiranii.</p>
+<p>Nesupunerea civică are efecte pozitive, cel puțin patru, după cum le-am identificat:</p>
+<p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; șansa de a-ți exercita&nbsp;<strong>libertatea de exprimare și conștiință față de un lucru care ți se pare injust</strong>;</p>
+<p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; face&nbsp;<strong>vizibilă o problemă a sistemului democratic</strong>. Este un mod&nbsp;<strong>eficient și puternic de a răspunde</strong><strong>&nbsp;</strong>unor grupuri de interese și forțe financiare mult superioare care pot cumpăra canalele media sau politicienii;</p>
+<p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; are&nbsp;<strong>mai multe șanse să pornească o dezbatere publică</strong>&nbsp;dec&acirc;t canalele lente și deseori &icirc;nc&acirc;lcite ale birocrației. Oric&acirc;te petiții ai scrie, nu poți pre&icirc;nt&acirc;mpina trimiterea unor avioane &icirc;ntr-un război injust, dar dacă reușești să intri &icirc;n hambar și să spargi cu ciocanul respectivele avioane, vei reuși treaba asta.</p>
+<p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>&icirc;ntărește spiritul critic și capacitatea societății civile de a răspunde la nedreptăți</strong>.</p>
+<p>&Icirc;n concluzie, nu trebuie să facem confuzia &icirc;ntre legitimitate și legalitate. Legile str&acirc;mbe pot fi &icirc;ndreptate, iar nesupunerea civică este un instrument esențial &icirc;n acest sens. Democrația are de c&acirc;știgat din nesupunerea civică, din confruntarea cu opinii diferite, cum spuneau J. S. Mill și domnul Andrei Țăranu, chiar cu prețul &icirc;ncălcării legii. Nesupunerea civică este justificabilă moral &icirc;ntr-o democrație, așadar este legitimă.</p>
+<p>(Aplauze)</p>
+<p><strong><em><span style="text-decoration: underline;">Cross examination 1</span></em></strong><em>&nbsp;</em></p>
+<p><strong>Ioana Covei</strong>&nbsp;(N2): &nbsp;Ați avut două dintre avantaje, libertatea de exprimare și că există mai multe șanse să pornească o dezbatere publică &ndash; &icirc;n ce măsură sunt avantajele astea exclusiv obținute din nesupunerea civică, spre deosebire de alte forme de protest, și care ar fi dezavantajele pe care le vedeți dumneavoastră decurg&acirc;nd din nesupunerea civică, chiar dacă susțineți astăzi nesupunerea civică? Mă g&acirc;ndesc că poate există și dezavantaje&hellip;</p>
+<p><strong>Cristian Neagoe</strong>&nbsp;(A1): Ok. Thoreau spunea că s-a născut ca să trăiască, nu ca să facă lobby. De foarte multe ori, canalele oficiale prin care noi putem ajunge să transformăm &icirc;n lege sau să o punem sub semnul &icirc;ntrebării sunt foarte dificil de abordat și de multe ori, ți se răspunde nici măcar &icirc;n termeni legali. &Icirc;n plus, &icirc;n măsura &icirc;n care oficialitățile am&acirc;nă să &icirc;ndrepte o nedreptate, e ca și cum ea ar fi oficializată. Vorbeați de dezavantajele nesupunerii civice. Din punctul meu de vedere, poate ajunge &icirc;n anumite cazuri, să ducă la violență sau la distrugerea proprietății. Dar aceste cazuri sunt, de cele mai multe ori, inițiate tocmai din cauza unei violențe &icirc;n care participanții la un protest non-violent sunt supuși. Ce s-a &icirc;nt&acirc;mplat &icirc;n Piața Universității de cur&acirc;nd a fost o violență din partea jandarmeriei. Oamenii de acolo nu au făcut nimic &icirc;mpotriva bunului simț. Sper că v-am răspuns.</p>
+<p><strong>Andrei Țăranu</strong>&nbsp;(moderator): Mai aveți un minut, dacă vreți să mai puneți o &icirc;ntrebare rapid, scurt, cu un răspuns tot at&acirc;t de scurt.</p>
+<p><strong>Ioana Covei</strong>: Bun, dacă &icirc;n momentul de față, dacă nu reușim să atragem atenția celorlalți prin formele de protest legale, &icirc;nseamnă asta că ar trebui să apelăm la nesupunerea civică sau că ar trebui să &icirc;ncercăm să schimbăm, cu puterea majorității, prin moduri democratice, felul &icirc;n care suntem ascultați?</p>
+<p><strong>Cristian Neagoe:</strong>&nbsp;&nbsp;<strong>N</strong>esupunerea civică, așa cum spuneam mai devreme, este mult mai eficientă și mai directă.</p>
+<p>&nbsp;</p>
+<p><strong>Ciprian Șiulea (negator 1)</strong></p>
+<p>Este un moment nu foarte bun să fii &icirc;n echipa negatoare pe tema asta, adică să contești legitimitatea nesupunerii civice, pentru că &icirc;n ultimul timp am avut un șir de evenimente nefericite &icirc;n sensul ăsta &ndash; abuzurile autorității față de protest &icirc;n general, față de modalități de protest absolut normale și firești, abuzuri absurde și nejustificate. Am avut un proiect de lege, de asemenea absurd, care a &icirc;ncercat să limiteze libertatea de manifestare. Deci, cum spuneam, nu e un moment foarte bun pentru a susține această poziție.</p>
+<p>&Icirc;nsă, eu aș vrea să argumentez dintr-un anumit sens, și nu neapărat pe fond, să spunem, &icirc;mpotriva legitimității nesupunerii civice, dintr-o perspectivă mai conjuncturală, istorică, din perspectiva situației de fapt, &icirc;n care ne găsim noi acum. Care este această situație? Ea este că<strong>trăim &icirc;ntr-o societate care se definește poate &icirc;n primul r&acirc;nd prin pasivitate, autism și lipsă de implicare</strong>. Deci, cum se spunea și &icirc;n introducerea pe care a făcut-o și moderatorul nostru din această seară: față de ce protestăm, de fapt? Fără &icirc;ndoială, statul are aceste ieșiri abuzive, are această latură abuzivă a sa. &Icirc;nsă el&nbsp;<strong>nu este abuziv pentru că este un stat puternic, ci pentru că este un stat slab.</strong>&nbsp;De altfel, acest cuplu abuziv-slab este un cuplu absolut clasic de caracteristici care merg perfect &icirc;mpreună. Deci, eu cred că fără a contesta, cum spuneam, pe fond, total, totuși, legitimitatea nesupunerii civice, cred că am putea pune această idee &icirc;n această perspectivă:&nbsp;<strong>oare nu mai bine ne g&acirc;ndim &icirc;nainte să construim puterea față de care să ne opunem apoi?</strong>&nbsp;Pentru că puterea aceea lipsește mi se pare mie, &icirc;n ciuda acestor abuzuri.&nbsp; Puterea aceea lipsește exact &icirc;n sensul acesta: că avem un stat slab care este construit pe lipsă de participare sau nu este construit pe nimic pentru că nu există &icirc;n sensul pe care ni l-am dori unii dintre noi, acela de stat eficient care administrează &icirc;n beneficiul măcar al unei majorități largi, de stat care construiește un bine public, or noi nu avem un astfel de stat. Deci de aceea spun că poate punem și &icirc;n această perspectivă problema.</p>
+<p>Știu cum sună ce o să spun, dar o să spun, totuși. Cred că &icirc;n momentul ăsta există un fel de<strong>fetișizare a protestului, adică un soi de sete de protest care vine, cred eu, dintr-un fel de sete de eroism &icirc;ntr-o situație &icirc;n care eroismul nu mai e posibil</strong>. Eroismul &icirc;n acest mod era posibil &icirc;n societatea comunistă. Unii dintre noi au apucat, dar și cei care nu au apucat să se formeze &icirc;n acel sistem, au mai prins reverberații de atunci și &icirc;nțeleg foarte bine că la trecerea de la comunism la democrație, măcar un lucru s-a pierdut: acum nu mai poți fi erou așa cum se putea atunci. Dar mulți &icirc;și doresc asta, &icirc;n mod legitim. Și eu mi-aș dori asta. Nu cred că mai e posibil. Cred că această sete de eroism este unul din motivele pentru care s-ar putea să existe o &icirc;nclinație exagerată pentru protest &icirc;n general, nesupunere civică &icirc;n particular, &icirc;naintea acelei dorințe de a<strong>&nbsp;</strong><strong>participa &icirc;n sistem, prin sistemul &icirc;nsuși, de a &icirc;ncerca să facem lucrurile mai bune urm&acirc;nd regulile statului.</strong></p>
+<p>Și aș mai vrea să &icirc;ncerc să fac o punere &icirc;n context, invoc&acirc;nd perspectiva istoriei protestului din Rom&acirc;nia. Eu am fost &icirc;ntotdeauna absolut uluit de felul &icirc;n care sunt celebrate ultimele două mari momente de nesupunere sau revoltă populară, care sunt rezistența din munți și revoluția din &lsquo;89. Mi se pare niște eșecuri colosale. De ce? Sigur, la nivel individual, ele sunt o formă de manifestare a unui curaj, spirit de sacrificiu, niște calități pe care le admir foarte mult. Dar aici nu discutăm despre nivelul individual, și nici măcar de un nivel etic. Discutăm de nivelul social și de efectele pentru societate. Din această perspectivă, aceste două momente sunt niște eșecuri catastrofice.<strong>Rezistența din munți este eșecul socializării protestului și de-acolo se intră &icirc;n linie dreaptă spre acel tip particular de comunism din Rom&acirc;nia, complet aberant, iar revoluția este eșecul socializării trecerii de la un sistem la altul</strong>.</p>
+<p>Cred că depășesc timpul, așa că mă opresc aici.</p>
+<p>(Aplauze)</p>
+<p><strong><em><span style="text-decoration: underline;">Cross examination 2:</span></em></strong><em>&nbsp;</em></p>
+<p><strong>Cristian Neagoe</strong>: Nu am &icirc;nțeles foarte clar de ce vorbiți de eroism &icirc;n legătură cu nesupunerea civică. Din punctul nostru de vedere, nesupunerea civică poate lua forme intime, cum ar fi să fumezi iarbă deși știi că e ilegală sau să ascunzi o familie de evrei &icirc;n fața poliției naziste, deși naziștii au preluat puterea &icirc;n mod democratic. Ce legătură are eroismul cu nesupunerea civică?</p>
+<p><strong>Ciprian Șiulea:</strong><strong>&nbsp;</strong>&nbsp;Sigur, există și aceste situații &icirc;n care nesupunerea civică are o motivație profund personală, adică se limitează la dorințele și orizontul individului și-at&acirc;t. Dar, de obicei, există un ideal sau o relevanță publică, adică mulți care recurg la nesupunere civică și la protest &icirc;n general, cumva se g&acirc;ndesc că o fac și pentru alții, nu doar pentru ei. Și atunci, asta voiam să spun, că trebuie să fie luată &icirc;n calcul o exigență publică &icirc;nainte de una personală.</p>
+<p><strong>&nbsp;</strong></p>
+<p><strong>Radu Țigănaș (afirmator 2):</strong></p>
+<p>Doamnelor și domnilor, astăzi vreau să vorbesc despre c&acirc;teva argumente esențiale și să mă refer la ce ni s-a spus astăzi din partea opoziției pe această temă. Practic, ei vin aici cu o filozofie simplă: că sistemul ar trebui schimbat din interior. Dar ceea ce vrem noi să spunem este că ei nu au cum să combată un lucru simplu, anume că democrația, ca orice alt sistem de pe lumea aceasta, este imperfect. Și noi considerăm că&nbsp;<strong>nesupunerea civică este &icirc;n primul r&acirc;nd o modalitate democratică, și &icirc;n al doilea r&acirc;nd esențială, prin care mai putem contrabalansa c&acirc;teva dintre imperfecțiunile acestui sistem.</strong>&nbsp;Ei spuneau că&hellip; bine, dar haideți să vorbim cu statul mai bine, haideți ca, &icirc;n loc să ieșim pe stradă să protestăm și să fim apatici sau dezinteresați, să &icirc;ncercăm să schimbăm sistemul din interior. Bun, dar dacă trecem de acest pas?&nbsp; Chiar dacă noi am &icirc;ncerca să mergem prin sistem și totuși, n-am obține ce-am vrea, atunci ce-am face? Atunci am ajunge tot la nesupunere civică. Chiar și &icirc;ntr-o democrație perfectă, noi tot am avea nevoie de acest instrument, pentru că democrația &icirc;n sine are defecte inerente, pe care o să vi le explic acum, &icirc;n discursul meu, și prin care trebuie să acționăm cumva și noi considerăm că nesupunerea civică este una din modalitățile perfect legitime prin care putem acționa.</p>
+<p>Haideți să ne uităm un pic la această loterie a numerelor. S-a vorbit &icirc;n primul discurs despre această diferență procentuală: că p&acirc;nă la urmă, &icirc;ntr-o democrație, 50 plus unu &icirc;ntotdeauna c&acirc;știgă. Și atunci avem 49 la sută dintre oameni care, să zicem, poate nu se simt reprezentați de acea decizie luată de către majoritate, ori poate au frustrări, nemulțumiri. P&acirc;nă la urmă, ei ce pot să facă? Ei pot să se exprime. Și p&acirc;nă la urmă, oricum s-ar exprima, fie printr-o petiție online, fie oricum ar alege, fie că așteaptă &icirc;ntr-un an să voteze, &icirc;n general, aceste mecanisme ale sistemului democratic sunt lente, dureroase și dacă nu ai resursele proprii să faci acest lucru, să mergi &icirc;n instanță, să faci lobby, este dureros. Așa că&nbsp;<strong>pentru omul de r&acirc;nd, nesupunerea civică este modalitatea cea mai eficientă și accesibilă pentru a lupta pentru ceea ce crede, pentru ceva esențial democratic și pentru a informa majoritatea</strong>&nbsp;despre unele lucruri pentru care, considerăm noi, că merită luptat. Noi considerăm că există oameni care cred foarte puternic &icirc;n ceva, există oameni care nu cred deloc &icirc;n acel lucru și la mijloc, o masă de oameni care ba nu sunt informați, ba nu au opinii. Așa că acești oameni trebuie cumva să fie informați și trebuie să deschidem, cumva, o dezbatere cu ei. Și asta este o modalitate foarte eficientă și, dacă ne uităm &icirc;n istorie, simplă, prin care putem să luptăm pentru ceva și mai mult dec&acirc;t să c&acirc;știgăm o luptă, să fim&nbsp;<strong>simbol pentru o luptă</strong>. P&acirc;nă la urmă, Rosa Parks nu a c&acirc;știgat nimic prin faptul că s-a dus &icirc;n fața autobuzului, dar a funcționat ca un simbol al acelei mișcări și acest lucru &icirc;n sine a fost un element foarte important &icirc;n modul &icirc;n care s-au combătut acele injustiții din sistem. Pentru că sistemul &icirc;ntotdeauna evoluează și se schimbă: dacă ne uităm la ceea ce era legal, legitim sau acceptat de societate acum sute de ani, clar nu mai este cazul &icirc;n această societate. Deci noi considerăm că statul are nevoie de o oglindă prin care să se poată reflecta, să vadă ce este și nu este bine și să poată evolua, iar&nbsp;<strong>cetățenii prin nesupunerea civică ar fi o oglindă foarte bună, să zic așa, pragmatică și rapidă, prin care pot acționa</strong>.</p>
+<p>Al doilea motiv pentru care o democrație are nevoie de această nesupunere civică este că, politic vorbind,&nbsp;<strong>democrația este un joc de-a compromisul.</strong>&nbsp;&Icirc;ntotdeauna, av&acirc;nd &icirc;n vedere at&acirc;tea partide și at&acirc;tea interese la mijloc, pentru a atinge un scop, oamenii trebuie să facă compromisuri, să se &icirc;nțeleagă ș.a.m.d. Și &icirc;n acest joc de compromisuri, n-o să ajungem la decizii politice care sunt pure, perfecte. &Icirc;ntotdeauna, &icirc;ntre două partide care se bat cap &icirc;n cap, adevărul va fi undeva la mijloc și de ambele părți vor exista lucruri care nu ne vor mulțimi. Așa că noi considerăm că democrația &icirc;n sine nu are cum să mulțumească pe toată lumea &icirc;ntotdeauna, ceea ce este perfect valabil din punctul nostru de vedere, doar că atunci noi considerăm că trebuie să venim cu nesupunerea civică pentru a plusa pe acest lucru. Și nu &icirc;n ultimul r&acirc;nd, o să folosesc un termen care mie mi se pare un pic vulgar &ndash; &rdquo;tirania majorității&rdquo;, acest 51 la sută sau poate &icirc;n cazuri și mai nasoale, &icirc;n care vorbim despre minorități &icirc;n state care poate chiar nu se simt reprezentate de aceste decizii, trebuie să aibă o modalitate de a se face auzite. Nesupunerea civică este &icirc;n primul r&acirc;nd un mod de a te face auzit. Asta este o problemă foarte mare cu care oamenii de r&acirc;nd se confruntă &icirc;n lumea de azi. Cum ne facem auziți? Da, putem să mergem la vot, dar sunt un vot din milioane și milioane de voturi. Votul este rar, am un număr de alegeri limitate și nu știu &icirc;ntotdeauna dacă ceea ce e acolo mă reprezintă cu adevărat. Și atunci, c&acirc;nd nimic din sistem nu mă reprezintă și mi se pune &icirc;n față opțiunea de a lupta prin sistem, dacă nu sunt de acord cu sistemul &icirc;n sine, cu modul &icirc;n care trebuie să port această luptă, atunci ce facem? P&acirc;nă la urmă, eu pot fi, de fapt, și anti-democrație. Doar asta vorbește de puterea democrației, că noi putem să acceptăm toți acești oameni și să &icirc;i ascultăm și să fim sau nu de acord cu ei. Noi, p&acirc;nă la urmă, nu vrem să fim, ca să vorbesc un pic &icirc;n engleză, a &rdquo;nanny state&rdquo; ca Anglia, să interzicem toate aceste proteste, toate aceste nesupuneri civice cu totul pentru că nu vrem ca oamenii să fie influențați. Nu, noi vrem ca oamenii să audă tot ceea ce au oamenii de spus, noi vrem ca oamenii să se exprime cu tot ceea ce au de spus și după aceea să lăsăm oamenii de acasă să aleagă ceea ce li se pare legitim sau corect și&nbsp;<strong>să lăsăm oamenii să propulseze și să accelereze fundamental schimbările care se petrec &icirc;ntr-o societate nu doar prin vot, dar și prin voce.</strong>&nbsp;Acestea fiind spuse, noi considerăm că v-am convins.</p>
+<p><strong>(Aplauze)</strong></p>
+<p><strong>Ioana Covei (N2):</strong></p>
+<p>Bună ziua, doamnelor și domnilor. Astăzi, p&acirc;nă la urmă, vorbim despre un exercițiu de persuasiune, cam ceea ce &icirc;ncearcă să facă ARDOR. E vorba despre un om sau c&acirc;țiva oameni care &icirc;ncearcă să convingă o masă care are, &icirc;ntr-adevăr, puterea să ia o decizie. Și există mai multe moduri prin care poți să convingi pe cineva să ia o decizie sau poți să convingi un public. Poți, pe de-o parte, să &icirc;l flatezi și pe această cale, aș vrea să spun că inițiativa ARDOR este una minunată, iar tema cu privire la legitimitatea nesupunerii civice este una foarte interesantă&hellip; &Icirc;nsă, mai ai două alte instrumente: poți, pe de-o parte, să-l forțezi să facă acest lucru și o să vorbim despre această latură, a nesupunerii civice și &icirc;n al doilea r&acirc;nd poți, &icirc;ntr-adevăr, să ai argumente. Ori noi, av&acirc;nd &icirc;n vedere că suntem și la o dezbatere, cred că cu toții am prefera ideea de argumente, de discuție pașnică, care p&acirc;nă la urmă să ajungă să convingă majoritatea de ceea ce este, &icirc;ntr-adevăr, &icirc;n interesul tuturor.</p>
+<p>Haideți să vedem care este situația protestatarilor și din nou, o zi grea să discutăm despre protestatari &icirc;n contextul &icirc;n care revista &rdquo;Time&rdquo; a declarat omul anului ca fiind protestatarul &icirc;n general. &Icirc;n ce poziție se află protestatarul? El vrea să ne convingă, dar&nbsp;<strong>poate, pe de-o parte, să se exprime și prin mijloace legale,</strong>&nbsp;doamnelor și domnilor. Ce ne spune echipa afirmatoare este că nu va obține &icirc;ntotdeauna destulă vizibilitate. Și suntem de acord că din punct de vedere al sistemului, există anumite probleme. Dar &icirc;ntrebarea este dacă răspundem la această problemă prin nesupunere civică, prin a răspunde la niște legi care nu au o legătură cu situația de fapt care nu ne permite &icirc;ntotdeauna să contribuim pe c&acirc;t am vrea, sau dacă &icirc;ncercăm să schimbăm acest lucru prin puterea pe care o vrem, și nu mă refer doar la vot, ci la lucruri de la boicotarea unor produse sau programe de știri. Mă refer la acțiunea pe care o putem face cu toții și la o putere pe care o avem , fie și pentru că suntem mulți.</p>
+<p>&nbsp;Haideți să ne g&acirc;ndim la mișcarea &rdquo;Occupy Wall Street&rdquo; p&acirc;nă la urmă, pentru că e genul de protest despre care cred că vorbește echipa afirmatoare sau despre care ar trebui să vorbim oricum &icirc;n cadrul acestei dezbateri. Dacă &icirc;ntr-adevăr sunt reprezentați cei 99 la sută, atunci nu e nici o problemă. Pentru că cei 99 la sută au deja puterea. Dacă ceea ce ne spune Wall Street e adevărat, atunci deja a c&acirc;știgat. Atunci nu are nici un rost să ieșim &icirc;n stradă, or nu asta e situația, de fapt, &icirc;n situația&nbsp;<strong>protestatarului care alege nesupunerea civică. Este o minoritate</strong>. Acum, noi spunem două lucruri: pe de-o parte, minoritatea poate avea dreptate. Noi nu credem că majoritatea este infailibilă. Haideți să clarificăm că &icirc;n această dezbatere nu vorbim despre bune intenții și despre adevăr sau fals. Nu, e clar: o minoritate poate avea dreptate. Galilei a avut dreptate și &icirc;l&nbsp; credem pe cuv&acirc;nt &icirc;n continuare<strong>. &Icirc;nsă, ce trebuie să facă această minoritate &icirc;n opinia noastră, &icirc;ntr-un cadru democratic, este să &icirc;ncerce să convingă majoritatea prin mijloacele pe care le are.</strong><strong>&nbsp;</strong>Pentru că &icirc;n cazul &icirc;n care minoritatea nu face acest lucru, atunci pe de-o parte, și dacă ar reuși să schimbe legile statului, majoritatea ar fi &icirc;n continuare &icirc;mpotrivă, asta &icirc;n cazul &icirc;n care interesele minorității și majorității sunt opuse și noi am prefera să se respecte principiile majorității chiar dacă nu este infailibilă. &Icirc;n al doilea r&acirc;nd, dacă majoritatea este, &icirc;ntr-adevăr, neinformată și nu este contra poziției pe care o susține minoritatea, atunci este relativ ușor prin petițiile acestea despre care vorbește echipa afirmatoare să informezi și chiar dacă poate este mai greu, mi se pare cumva că este un test pentru o mișcare să convingă prin intermediul petițiilor. Și &icirc;n al treilea r&acirc;nd, &icirc;n acest demers de persuasiune, ce ne spune echipa afirmatoare este că oamenii nu au &icirc;ntotdeauna resurse. Bun, avem resursa votului care este sau nu la fel de important, dar este, totuși, o resursă. Pe de altă parte, din nou, avem aceste acțiuni pe care le putem face &icirc;n viața de zi cu zi prin care să forțăm o anumită corporație, de exemplu cazul Occupy Wall Street, o anumită administrație, executiv sau Parlament, să ia anumite decizii fără să apeleze la nesupunerea civică. Pentru că&nbsp;<strong>ce face, de fapt, nesupunerea civică? Transmite mesajul că principiul majorității nu e chiar at&acirc;t de important</strong>. Or da,&nbsp;<strong>principiul majorității nu e perfect, dar e cel mai bun principiu care să și funcționeze pe care &icirc;l avem &icirc;n momentul de față.</strong></p>
+<p>S-au dat exemple &icirc;n această seară cu care am putea fi de acord &ndash; să găzduiești un evreu &icirc;n timpul Holocaustului, &icirc;ntr-adevăr, asta e un scop nobil, cred că putem să cădem cu toții de acord.<strong>Dar ce facem &icirc;n momentul &icirc;n care vin grupuri sau persoane cu care nu am putea fi de acord?</strong>&nbsp;Noi, ca tineri informați, care avem acces la educație și la resurse și știm că e importantă toleranța, de exemplu, ce am face c&acirc;nd un grup minoritar care nu este tolerant ar decide să-și exprime părerea că este justificat, legitim, să nu respecte legea tocmai pentru că crede foarte mult &icirc;n ceea ce vrea să ne demonstreze nouă? Or noi spunem că nu asta este relevant, nu asta ar trebui să fie important pentru discuția de astăzi. P&acirc;nă la urmă, din nou,<strong>demersul ar trebui să se bazeze pe argumente</strong>. Av&acirc;nd &icirc;n vedere toate acestea, vă mulțumim.</p>
+<p><strong>(Aplauze)</strong></p>
+<p><strong><span style="text-decoration: underline;">Intervenții și &icirc;ntrebări din partea publicului</span></strong></p>
+<p><strong>Andrei Țăranu</strong>&nbsp;(moderator): &Icirc;n calitatea asta, mă rog, nedemocratică, &icirc;n care mă aflu aici, la masă, mi-aș permite să pun și eu c&acirc;teva &icirc;ntrebări, pentru că, &icirc;ntr-adevăr, subiectul este foarte interesant. Și-aș pune c&acirc;te o &icirc;ntrebare fiecărei echipe: (către echipa afirmatoare) ce se &icirc;nt&acirc;mplă, de exemplu, c&acirc;nd unui protest de nesupunere civică, i se opune un alt grup, tot necivic și este un protest &icirc;mpotriva protestului? Domnul Șiulea și cu mine ne aducem aminte c&acirc;nd &icirc;n anii &rsquo;90 ieșeau muncitorii din fabrică și spuneau &rdquo;Lăsați-ne să muncim, lăsați-ne să avem liniștea ca să ne concentrăm pe ceea ce avem, nu mai vrem tineri &icirc;n Piața Universității&rdquo;. Nu știu &icirc;n ce măsură era&nbsp; foarte multă manipulare acolo, dar să mergem pe ideea că nu era și existau persoane care protestau &icirc;mpotriva protestului necivic al studenților. Deci asta&nbsp;<strong>ar fi prima &icirc;ntrebare &ndash; c&acirc;nd nesupunerii civice i se opune cu nesupunere civică din partea unor cetățeni.</strong>&nbsp;Și a doua &icirc;ntrebare, pentru echipa negatoare, este de ce nimeni nu ia &icirc;n considerare că&nbsp;<strong>democrația directă ar putea să fie o formă de eliminare a nesupunerii civice &ndash; v-ați g&acirc;ndit la acest lucru?</strong><strong>&nbsp;</strong>Vă rog.<strong>&nbsp;</strong></p>
+<p><strong>Cristian Neagoe</strong>: La prima &icirc;ntrebare, din punctul meu de vedere răspunsul este simplu: statul care funcționează sau ar trebui să funcționeze ca un c&acirc;ine de pază al societății ar trebui să arbitreze acest lucru și să pre&icirc;nt&acirc;mpine violențele. Mai trebuie să facem o distincție &icirc;ntre protestele legitime, cu autorizație, și protestele sindicatelor, spontane, să spunem, care sunt exemple de nesupunere civică. Jandarmii, poliția ar trebui să intervină doar &icirc;n cazul &icirc;n care cele două grupuri ajung la violențe, din punctul nostru de vedere.</p>
+<p><strong>Radu Țigănaș</strong>: Cu at&acirc;t mai mult, mi se pare că este exact un atu al democrației că putem avea proteste de pe ambele laturi; este un lucru foarte bun că au ieșit unii pro și unii contra &icirc;n stradă, ca reactiv la ceea ce s-a &icirc;nt&acirc;mplat atunci, pentru că s-au putut exprima ambele părți, &icirc;n același timp, cu forțe egale, și statul a putut să vadă care este gravitatea problemei ș.a.m.d. Că p&acirc;nă la urmă, nesupunerea civică trebuie să indice și gravitatea unei probleme, nu doar existența ei, căci altfel nimeni nu ar ieși &icirc;n stradă.</p>
+<p><strong>Ciprian Șiulea:&nbsp;</strong><strong>&nbsp;</strong>Democrația &icirc;n sine are limitările ei; democrația de drept cu at&acirc;t mai mult. Există limitările clasice referitoare la referendum, de exemplu. &Icirc;nsă cred că trebuie să punctăm foarte clar că democrația nu se limitează la mecanismul politic; există toate celelalte forme de manifestare &icirc;n afara votului și a actului politic propriu-zis. Deci, aicea cred că răm&acirc;ne un spațiu de mișcare alternativ la nesupunerea civică -&nbsp; acțiunea pur și simplu &icirc;n cadrul legii. Și asta ar fi, dacă pot să &icirc;nchei și eu cu o &icirc;ntrebare, de ce sau cum evaluăm eficiența mai bună, să spunem, a unei acțiuni de nesupunere civică față de o acțiune echivalentă sau identică, dar desfășurată &icirc;n condițiile legii?</p>
+<p><strong>Radu Țigănaș:</strong>&nbsp;Noi considerăm că nu este la fel de relevant efectul pe care &icirc;l are un protest sau un act de nesupunere civică, c&acirc;t &icirc;n sine lupta. Eu cred că oamenii ar fi de zece ori mai supărați dacă nu ar putea să nu se supună civic dec&acirc;t dacă ceea ce doresc ei nu s-ar implementa. P&acirc;nă la urmă, instinctul de a lupta pentru ceea ce crezi este ceva uman și cred că, de fapt, aici survine problema &ndash; din dorința lor de a lupta. Pot să conchidă că da, ceea ce doresc poate nu e posibil, dar vreau să lupt pentru chestia asta. Și atunci, efectele de la sf&acirc;rșitul zilei, bune sau rele sunt depășite de actul de a lupta, care e democratic și e esențial pentru acești oameni; deci ar fi o sursă mult mai mare de nemulțumire dec&acirc;t orice cerere ne&icirc;ndeplinită.</p>
+<p><strong>Cristian Neagoe</strong>: Aș interveni și eu. O lege injustă nici măcar nu poate fi considerată o lege. Prin urmare, consimțăm&acirc;ntul de a te supune unei legi nu se extinde și asupra legilor injuste. Nesupunerea civică este o formă de datorie morală a oricărui cetățean față de nedreptățile care apar, inerent, &icirc;ntr-un sistem.</p>
+<p><strong>Intervenție din public</strong>: Fumatul ierbii &icirc;n casă&hellip; nu prea &icirc;nțeleg cum e asta nesupunere civică. Sau ce legătură are adăpostirea unui evreu &icirc;n timpul celui de-al doilea război mondial cu nesupunerea civică? Unde e civicul?</p>
+<p><strong>Cristian Neagoe</strong>: Erau forme diferite de nesupunere civică. &Icirc;n măsura &icirc;n care marijuana este interzisă prin lege, faptul că o consumi și că ai credința că respectiva substanță &icirc;ți face bine, te relaxează, te face să fii mai creativ, să visezi, orice ați vrea să &icirc;nțelegeți prin asta, este o formă de nesupunere civică. Vorbeam despre faptul că ea nu presupune nici un fel de eroism și că e o chestie intimă. La r&acirc;ndul ei, &icirc;mpotrivirea față de poliția nazistă, chiar pasiv, găzduind niște oameni, fie ei și evrei, &icirc;ntr-un sistem &icirc;n care ți-ai putea pierde libertatea sau viața, e o formă de eroism, dar la r&acirc;ndul ei, este una intimă. N-o faci public, nu spui &icirc;n gura mare băcanului &rdquo;vezi că eu am cinci evrei la mine-n mansardă&rdquo;&hellip; despre asta vorbeam. &Icirc;ncercam să &icirc;nțeleg de ce domnul Ciprian Șiulea a invocat eroismul sau lipsa nevoii de eroism &icirc;ntr-o democrație.</p>
+<p><strong>Intervenție din public</strong>: &hellip; am să invoc categoria aia specială de oameni care poate au o afacere și decid să facă totul conform legii, să-și plătească taxele, să nu dea șpagă, să nu facă tot felul de mizerii și-și pun &icirc;n pericol sănătatea, averea, familia ș.a.m.d. Practic, ei fac cu adevărat o nesupunere civică&hellip; Deci &icirc;ntrebarea era: nesupunerea civică se raportează neapărat la legile acelea? Poate fi și altfel de nesupunere civică?</p>
+<p><strong>Radu Țigănaș:</strong>&nbsp;P&acirc;nă la urmă, nesupunerea civică, așa cum am definit-o noi, este atunci c&acirc;nd &icirc;ncalci o lege, o regulă pe care o consideri injustă, indiferent de repercusiuni&hellip; Aceea e un altfel de nesupunere civică&hellip;</p>
+<p><strong>Aceeași intervenție</strong>: &hellip; și legea aia trebuie să fie scrisă neapărat, &icirc;n Monitorul Oficial?</p>
+<p><strong>Cristian Neagoe</strong>: &hellip;Te poate afecta &icirc;n mod direct și poți intra la pușcărie pentru respectiva nesupunere. Sigur, te poți certa cu nevasta pentru felul &icirc;n care ați &icirc;ntors nesupunerea civică &icirc;n cazul menționat, dar implicațiile legale sunt&hellip;</p>
+<p><strong>Radu Țigănaș</strong>: &hellip;Discuția poate fi extinsă. De exemplu, dacă mergi la Roșia Montană, unde, să zicem, ar fi teren privat și se sapă și se distrug munți și tu refuzi să pleci de pe acea proprietate privată pentru că poate este &icirc;mpotriva lor, tot un fel de nesupunere civică este. Practic, tu &icirc;ncalci acea proprietate privată. Nu lupți &icirc;mpotriva statului sau a proprietății private, ci cu ce se &icirc;nt&acirc;mplă acolo.</p>
+<p><strong>Ioana Covei:</strong>&nbsp;Eu aș zice că e o diferență &icirc;ntre a nu face ceea ce fac ceilalți, a fi, poate, puțin excentric și a respecta regulile, și a da dovadă de nesupunere civică. Și, &icirc;n legătură și cu cealaltă &icirc;ntrebare &ndash; mi se pare că e, totuși, o diferență, &icirc;ntre a nu respecta o lege &icirc;nsă a nu face asta pentru a dovedi ceva, de exemplu, a fuma marijuana &icirc;n propria casă, și a urmări, p&acirc;nă la urmă un scop mai &icirc;nalt, și anume convingerea celorlalți ș.a.m.d. Or asta e mai aproape de ce &icirc;nseamnă nesupunerea civică, cred eu. Că p&acirc;nă la urmă, nici Thoreau n-a ieșit, chiar să &icirc;și sacrifice viața pentru idealuri; nu și-a plătit taxele&hellip; Adică există mai multe dimensiuni ale nesupunerii civice și cred că poate de aceea se referea la un moment dat domnul Șiulea la ideea de eroism &ndash; &icirc;n ce măsură facem asta ca să știe alții sau nu&hellip; bine&icirc;nțeles că e discutabil și depinde de protestatar&hellip;</p>
+<p><strong>Ciprian Șiulea</strong>: Mi s-a părut un exemplu excelent pentru echipa noastră neplata taxelor pentru că e punctul de actualitate &icirc;n Rom&acirc;nia. Cu toții avem sentimentul că n-ar trebui să plătim taxele alea; evident, și eu &icirc;l am c&acirc;nd vedem cum sunt cheltuiți banii&hellip; &icirc;n mod clar, nu-ți vine să plătești nici o taxă. Dar asta este o opțiune. Răm&acirc;i &icirc;n societate, așa cum e ea, proastă, &icirc;n cazul ăsta, și &icirc;ncerci să faci ceva sau ieși din societate. Asta este problema.</p>
+<p><strong>Intervenție din public:</strong>&nbsp; Nesupunerea civică este o tactică de influențare a unei decizii publice. Protestul este o altă tactică. Ele sunt diferite. Dacă ne referim la un protest, el este legal, pentru că am obținut o autorizație. Dacă nu, e un flash mob sau este ilegal. S-a dat exemplul cu marijuana&hellip; nu sunt de acord cu interzicerea fumatului de iarbă. Bun, nu fumez acasă. Mă duc &icirc;n fața secției de poliție și chem și ProTV-ul. N-are cum să fie violentă; nu duce la distrugerea proprietății. Nu știu, dacă Oprescu decide să eutanasieze c&acirc;inii, nu mă duc și-i distrug mașina, dacă eu nu sunt de acord. Nu &icirc;ncalc așa, o lege la &icirc;nt&acirc;mplare. Un alt exemplu: nu sunt de acord cu rovinieta, pentru că nu sunt drumuri bune. Aleg să nu mai plătesc rovinieta, &icirc;mi iau amendă, mă duc la poliție și spun că nu-mi mai plătesc rovinieta, mă duc la Pro TV, Antena 1, la orice canal media public&hellip; de aici și ideea de eroism, că ești un pic martir. Este o tactică pe care o folosești &icirc;n funcție de campania ta, de procesul pe care-l desfășori. La fel și greva foamei, dar protestul nu este o formă de nesupunere civică, dec&acirc;t dacă este ilegal. Și repet: &icirc;mi asum public ceva.</p>
+<p><strong>Radu Țigănaș:</strong>&nbsp;Noi suntem de acord cu asta&hellip; Protest &icirc;n acest sens, strict ilegal.</p>
+<p><strong>Intervenție din public:</strong>&nbsp;C&acirc;t la sută din legi sunt făcute astfel &icirc;nc&acirc;t toată lumea să fie de acord cu ele? Iar a doua &icirc;ntrebare care derivă din ce spuneați, echipa afirmatoare, că statul ar trebui să funcționeze ca arbitru: credeți că statul ar avea resursele să funcționeze ca arbitru &icirc;n toate conflictele rezultate de persoanele care ar considera, nu știu, să zicem jumătate din legi ca fiind injuste?</p>
+<p><strong>Cristian Neagoe</strong>: Statul nu funcționează exclusiv &icirc;n limitele legii. Poporul, marele public respectă reguli, nu legi, iar regulile astea sunt &icirc;n perimetrul unui triunghi care, da, are la bază domnia legii, dar celelalte două laturi sunt bunul simț sau logica comună și etica. M-ați &icirc;ntrebat c&acirc;t la sută dintre legi sunt injuste&hellip; ar trebui să le luăm pe r&acirc;nd și să le punem &icirc;n acest triunghi al eticii, logicii și legii. Justețea asta nu ține neapărat de păreri personale. Cum spuneam, &icirc;n măsura &icirc;n care poți introduce &icirc;n triunghiul acesta pe care vi l-am desenat imaginar o lege, sunt convins că bunul simț va dicta dacă legea respectivă este sau nu justă&hellip;</p>
+<p><strong>Radu Țigănaș</strong>: Surprinzător de puține, pentru că majoritatea oamenilor pot să facă o distincție &icirc;ntre ceva ce nu le convine și ceva care este complet greșit. Cred că vedem asta și &icirc;n reacțiile oamenilor la ceea ce se &icirc;nt&acirc;mplă, ca dovadă că multora nu le convine că trebuie să plătească taxe at&acirc;t de mari sau pe orice, dar foarte rar vedem oameni &icirc;n stradă. Da, nu le convine, &icirc;nsă e corect, just.</p>
+<p><strong>Ioana Covei</strong>: Eu spuneam că la un moment dat, justiția se determină printr-un raționament care pornește de la o premisă: dacă toți avem premise diferite, mi se pare că e destul de greu să găsești o lege cu care toții să fim de acord. Sau, ba nu, sunt c&acirc;teva cu care să fim de acord, dar ajungem la un anumit punct unde, p&acirc;nă la urmă, e vorba despre preferințe și cred că asta &icirc;ncerca să spună și echipa mea, că e vorba de o anumită subiectivitate &icirc;n ceea ce privește aceste legi injuste.</p>
+<p><strong>Ciprian Șiulea</strong>: Cred că asta era și ideea &icirc;ntrebării: să sublinieze faptul că nu există o lege pe care toată lumea să o aprecieze ca justă. De ce? Pentru că atunci c&acirc;nd apreciem o lege ca injustă, facem o judecată pur subiectivă. Bunul simț sună frumos, dar e ceva vag și legea exact asta face: formalizează o situație potențial haotică, adică legea &icirc;nseamnă formalizarea acestei societăți care altfel nu are cum să funcționeze.</p>
+<p><strong>Intervenție din public</strong>: Dar ce se &icirc;nt&acirc;mplă dacă există un deficit de democrație, un prag prea &icirc;nalt pentru a forma un partid, cum este &icirc;n Rom&acirc;nia. Suntem pe ultimul loc &icirc;n Uniunea Europeană la acest prag &ndash; avem nevoie de 25.000 semnături și, după asta, avem nevoie de sedii &icirc;n toate județele. E aproape imposibil pentru cineva care nu are finanțare să obțină. Așa, cum modificăm sistemul dacă nu avem acces la sistem pentru că nu avem finanțare?</p>
+<p><strong>Ciprian Șiulea</strong>: Eu nu cred, cel puțin, că nu există nici o situație &icirc;n care nesupunerea civică nu ar fi legitimă. Există, dar cred că trebuie insistat exact la acel criteriu: după ce judecăm ce nesupunere civică ar fi legitimă și care nu? Pentru că nu ne dăm cu toții seama. Oamenii sunt diferiți și cu siguranță putem găsi multe exemple de nesupunere civică care nu ne-ar conveni unei majorități, a celor care suntem acum aici. Vă dau un exemplu simplu: nu știu dacă știți că, de sărbători, o grămadă de doctori &icirc;ntr-o grămadă de spitale refuză să facă avorturi, ceea ce e clar o nesupunere civică, este ilegal. Dar cred că sunt foarte mulți oameni care nu sunt mulțumiți cu situația asta. Deci ce este legitim și ce nu e legitim? &Icirc;n situația cu partidele &ndash; se poate face politică și &icirc;n afara partidelor. Reglementările sunt, &icirc;ntr-adevăr, absurde, dar se poate face și fără &icirc;nființarea unui nou partid.</p>
+<p><strong>Intervenție din public:</strong>&nbsp;&Icirc;n Italia, un student de 22 de ani a participat la un protest destul de vocal: a aruncat un extinctor &icirc;mpotriva forțelor de ordine, a fost arestat și la mai puțin de 24 de ore eliberat, dat &icirc;n grija familiei ș.a.m.d. &Icirc;n Rom&acirc;nia, ați văzut zilele trecute, 15 oameni sunt ridicați de 30 de jandarmi și cu toate astea &ndash; asta e &icirc;ntrebarea pentru prima echipă &ndash; nu acest caz particular, dar &icirc;n realitate putem stabili că sunt premise pentru diferite forme de nesupunere civică, dar pare că nimeni nu se agregă la ele sau că grupurile sunt foarte mici. Dacă aveți o explicație pentru chestia asta&hellip;</p>
+<p><strong>Radu Țigănaș</strong>: Noi discutăm dacă e sau nu legitim &icirc;ntr-o democrație pentru un om sau un milion&hellip;</p>
+<p><strong>Aceeași intervenție</strong>: Eu pornesc de la prezumția că e legitim. De ce nu se &icirc;nt&acirc;mplă?</p>
+<p><strong>Radu Țigănaș:</strong><strong>&nbsp;</strong>Noi luptăm pentru dreptul acelui un om să poată să se nesupună civic, cum ar veni. Noi considerăm că indiferent c&acirc;ți sunt, dacă vor sau nu vor, să poată, moralmente sau legitim vorbind, să acționeze prin această formă de protest.</p>
+<p><strong>Aceeași intervenție</strong>: Privind &icirc;n piață, zic, la lume care ar trebui să facă asta, de ce credeți că nu se &icirc;nt&acirc;mplă &icirc;n realitate? De ce la noi rețeaua de socializare devine o formă de debușeu, c&acirc;nd la alții ea devine o forță de agregare? De ce stăm toată ziua și-l blestemăm pe Oprescu pe Facebook? Asta mă interesează pe mine&hellip;</p>
+<p><strong>Cristian Neagoe</strong>: Nu e scopul acestei echipe să explice apatia cetățenilor rom&acirc;ni&hellip;</p>
+<p><strong>Aceeași intervenție</strong>: Da, dar faceți lobby pentru asta.</p>
+<p><strong>Cristian Neagoe</strong>: Simplul fapt că ne aflăm aici și că discutăm despre ceea ce s-a &icirc;nt&acirc;mplat &icirc;n Piața Universității cred că este un punct &icirc;n plus pentru avansarea acestei idei de societate civilă activă.</p>
+<p><strong>Radu Țigănaș</strong>: Un punct dintr-o mie, să zicem, dar este un punct acolo. Adică trebuie să mai treacă timp. America este &icirc;ntr-o situație ur&acirc;tă de tot de mulți, mulți ani de zile p&acirc;nă c&acirc;nd &icirc;n sf&acirc;rșit s-au trezit și au &icirc;nceput să iasă pe stradă. Nu &icirc;n numere mari av&acirc;nd &icirc;n vedere populația, dar &icirc;n numere din ce &icirc;n ce mai mari. Și noi, fiind un popor mai apatic &icirc;ntre celelalte, o să ne ia și nouă mai mult timp.</p>
+<p><strong>Ioana Covei</strong>: Eu aș zice despre participarea civică din Rom&acirc;nia că sunt, și din punct de vedere sociologic, diferențe &icirc;n ceea ce privește țările din fostul bloc comunist. Adică există niște factori care ne fac, poate, să nu protestăm. Și cred că asta &icirc;ncerca să arate echipa mea: că nu trebuie neapărat să ieșim din apatia asta numai prin forma de protest ilegală, că există at&acirc;tea alte lucruri și dacă n-am mai fi apatici sau dacă vrem &icirc;ntr-adevăr să ne manifestăm &icirc;n cadrul unei legi, atunci putem să facem asta.</p>
+<p><strong>Aceeași intervenție:</strong><strong>&nbsp;</strong>Dar apatia, ca să nu cădem &icirc;ntr-o capcană, nu e un diagnostic&hellip; O mare greșeală despre Africa, de exemplu, era că oamenii mor de foame, dar foamea nu e o boală. Nici apatia nu e o boală, nu e un diagnostic.</p>
+<p><strong>Altă intervenție din public</strong>: P&acirc;nă nu demult, &icirc;n multe state din fostul bloc comunist, o persoană gay risca &icirc;nchisoarea pentru activități normale nouă. &Icirc;n acest caz, aș dori să vă &icirc;ntreb care credeți că este raportul dintre nesupunerea civică și evoluția socială și a sistemului juridic &icirc;ntr-un stat. Adică lăs&acirc;nd deoparte fumatul ierbii&hellip;</p>
+<p><strong>Ciprian Șiulea</strong>: Păi cumva, cred că se poate face o legătură&hellip; e, din nou, o chestie personală care ține de orizontul individual, dar &icirc;n cazul acela, și politică pentru că dacă cineva avea curajul să-și afișeze opțiunea, &icirc;n mod clar era o declarație politică și-și asuma un risc enorm. Dar trebuie delimitată chestia asta: c&acirc;t este scop pur personal, c&acirc;t are o dimensiune civică?</p>
+<p><strong>Aceeași intervenție din public</strong>: Este natura umană. Scop personal sută la sută, dar se &icirc;nt&acirc;mplă &icirc;n foarte multe cazuri și e normal să fie așa&hellip;</p>
+<p><strong>Ioana Covei:</strong>&nbsp;&Icirc;n legătură cu modificarea legislației, haideți să mai luăm un exemplu: cel al feminismului. Eu aș spune că ceea ce a făcut Silvia Plankherst care făcea parte dintr-o organizație care se poziționa clar anti-sistem, care incendia cutii poștale și alte asemenea lucruri a avut mult mai puțin succes &icirc;n contextul schimbării legislației tocmai pentru că acțiunile ei au fost percepute ca fiind o dovadă a faptului că femeile nu meritau să voteze pentru că nu erau destul de mature, emoțional vorbind&hellip;</p>
+<p><strong>Aceeași intervenție din public</strong>: Deci folosește, nu? &Icirc;mi pare rău că te-am &icirc;ntrerupt, dar trăg&acirc;nd o mică concluzie la ceea spuneai mai devreme, deci folosește nesupunerea civică &icirc;n cadrul unor acțiuni sociale&hellip;?</p>
+<p><strong>Ioana Covei:</strong><strong>&nbsp;</strong>Păi nu, asta voiam să spun. &Icirc;n cadrul feminismului au fost mai multe mișcări &icirc;n paralel și &icirc;n general, mișcarea mai moderată, care tocmai a &icirc;ncercat prin mijloace legale să atragă susținători, a avut mai mult succes și a putut apoi să atragă numărul de votanți necesari pentru a duce la schimbarea legislativă. Asta voiam să spun.</p>
+<p><strong>Intervenție din public:</strong><strong>&nbsp;</strong>Este clar că avem o societate nefuncțională, dar uităm un lucru foarte important: trăim &icirc;n democrație și avem pretenția să trăim &icirc;n democrație fără să o construim. La fel cum avem economie de piață, dar nu ne manifestăm ca atare &ndash; avem pretenția să ni se ofere locuri de muncă, uit&acirc;nd că noi suntem cei care creăm locul de muncă. Avem emitenți ai legilor și se manifestă și cei care aplică legea, dar și cei care protestează. Dar eu pot fi chiar și anti-democratic, cum ați spun dumneavoastră. Eu nu cred că e democratic să mă manifest atunci. Eu consider că nesupunerea civică drept ultimă formă democratică, &icirc;nainte fiecare fiind obligat să apeleze la celelalte forme. E adevărat că statul nu ne reprezintă și noi nu știm cine ne reprezintă. At&acirc;ta timp c&acirc;t, dacă vreți, prin lege permitem ca un funcționar public, polițistul, să scrie ce vrea &icirc;n procesul verbal, iar tu pe urmă să te duci și să faci corvoadă prin sala de judecată, avem o problemă&hellip; Considerați că e mai bine manifest&acirc;ndu-ne nesupunerea civică oriunde &icirc;n domeniul public sau ar fi mai bine să avem un spațiu de manifestare? Pentru că &icirc;n momentul c&acirc;nd ne punem &icirc;n mijlocul străzii, e clar că acționăm nedemocratic, lovind &icirc;n drepturile celorlalți. Strada nu e făcută pentru treaba asta și atunci avem o problemă. Deci nu credeți că ar trebui să oferim și soluțiile?</p>
+<p><strong>Cristian Neagoe</strong>: O persoană care comite o faptă, cum spuneați dumneavoastră, se pune &icirc;n mijlocul străzii sau ocupă Bulevardul Magheru, poate face asta &icirc;n legitimă apărare dacă violența la care răspunde este mai mare dec&acirc;t violența pe care o comite. Să luăm exemplul Roșiei Montane&hellip; &Icirc;n măsura &icirc;n care Roșia Montană va fi distrusă printr-o mare carieră de aur, de wolfram, a ocupa Bulevardul Magheru e o violență cu mult mai mică, dar mult mai eficientă pentru a atrage atenția asupra publicului asupra unei probleme care se &icirc;nt&acirc;mplă undeva &icirc;n munți.</p>
+<p><strong>Radu Țigănaș</strong>: P&acirc;nă la urmă, despre ce discutăm aici? Despre faptul că o să &icirc;nt&acirc;rzie niște oameni la muncă, despre faptul că-i incomodăm? Păi acesta e și scopul: să incomodeze oamenii pentru a transmite un mesaj. Asta e chestia: poate mulți oameni nu vor să audă sau nu sunt conștienți că există un astfel de mesaj, dar asta e o modalitate de a atrage atenția la acel mesaj. Intrăm din nou &icirc;n discuția: de ce nesupunerea civică&hellip; Noi considerăm nesupunerea civică atunci c&acirc;nd e un scop, un protest. Nu vreau să fac asta pentru că trebuie schimbată cu altceva&hellip; astea ni se par că sunt implicit legate de nesupunerea civică.</p>
+<p><strong>Intervenție din public</strong>: Dacă nesupunerea civică, atunci ea ar trebui să fie legitimă pentru toată lumea. Ori voi [echipa afirmatoare] porniți de la premisa că oamenii aceia care protestează sau se manifestă &icirc;ntr-un fel de nesupunere civică sunt bonomi, bine intenționați, apără un drept care e aprioric liberal, corespunde democrației. Dar ce ne facem cu toate mișcările, nu știu, ultra-naționaliste, anti-semite, xenofobe, homofobe? Dacă oamenii ăștia ar ieși &icirc;n stradă și, evident, pe cale legală, nu ar putea primi un aviz de protest? E, cumva, și felul &icirc;n care au luat amploare mișcările ultra-naționaliste&hellip;</p>
+<p><strong>Radu Țigănaș</strong>: Foarte bine, nu putem fi ipocriți. Și ei la fel, să iasă &icirc;n stradă, să se nesupună civic, să luptă &icirc;n ce cred. Și după aia publicul va fi cel care va decide dacă ceea ce se spune e corect sau nu. P&acirc;nă la urmă, dacă sunt 10 oameni care susțin ceva care pare extremist sau absurd, lumea informată, democratică și suficient de matură ca să-și dea seama ce e ok și ce nu e ok, majoritatea o să se uite pe l&acirc;ngă ei. P&acirc;nă la urmă, da, asta e puterea acestei democrații, că putem să-i ascultăm individual pe acești oameni, cu tot ce au ei bun sau nu de spus. Nu ar trebui ca statul să ne spună că acești oameni sunt clar absurzi și ar trebui să-i &icirc;nchidem undeva, &icirc;ntr-un beci. Să lăsăm oamenii să decidă dacă sunt absurzi sau nu&hellip;</p>
+<p><strong>Andrei Țăranu:</strong>&nbsp;Dacă-mi permiteți o &icirc;ntrebare tehnică&hellip; cum anume?</p>
+<p><strong>Radu Țigănaș</strong>: Să-i ignore. Sau să facă un anti-protest. Cei care sunt anti-drepturile homosexualilor să facă un alt protest după care să vină alt protest, pro-drepturile homosexualilor&hellip;</p>
+<p><strong>Cristian Neagoe</strong>: &Icirc;ncercați să ne &icirc;ntindeți panta aceea care duce spre o formă de anarhie, unde fiecare ajunge să protesteze pentru cauza proprie, indiferent dacă aceasta este o cauză justă sau nu. Dar &icirc;n definiția pe care am oferit-o nesupunerii civice am folosit ideea de justificare morală. Nu prea văd cum e justificat moral nazismul sau homofobia.</p>
+<p><strong>Aceeași intervenție</strong>: Nazismul, nu, dar să ne g&acirc;ndim la marea comunitate de creștini din Rom&acirc;nia sau anti-semitismul&hellip; să ne g&acirc;ndim la oamenii care continuă să creadă că evreii conduc lumea și au o teorie perfect morală din punctul lor de vedere.</p>
+<p><strong>Radu Țigănaș</strong>: P&acirc;nă la urmă, nimic nu e inerent greșit. Dec&acirc;t unu plus un fac trei. Dar, din nou, ar fi condescendent din partea noastră să considerăm că acești oameni ne sunt inferiori nouă și să le refuzăm această legitimitate pe care o oferim altor oameni, doar pentru că suntem de acord cu ei. Exact pentru că suntem &icirc;ntr-o democrație, chiar nefiind de acord cu ei, pot accepta faptul că acești oameni pot să aibă nesupuneri civice pentru a transmite un mesaj. Nu sunt de acord cu mesajul lor, dar sunt de acord cu democrația, așa că sunt de acord ca și ei să poată transmită mesajul.</p>
+<p><strong>Aceeași intervenție</strong>: Deci libertatea de exprimare fără limite, asta susțineți&hellip;</p>
+<p><strong>Radu Țigănaș</strong>: Păi, altminteri, am pierde&hellip;</p>
+<p><strong>Ioana Covei</strong>: Tocmai de aceea echipa afirmatoare susține că trebuie să lăsăm pe toată lumea să vorbească, dar nu oricum. Și &icirc;ntr-adevăr, nu avem cum să spunem că ceva este just sau nu și c&acirc;nd lucrurile nu sunt inerent greșite, deciziile se iau atunci c&acirc;nd credem că ceva e corect, nu c&acirc;nd suntem cerți că nu putem face această judecată de valoare. Și-atunci, asta e una dintre probleme. P&acirc;nă la urmă, tot la majoritate o să apelăm. Și echipa afirmatoare, ne spune acum că tot majoritatea o să decidă&hellip; că o să-i ignore sau nu.</p>
+<p><strong>Radu Țigănaș:</strong> Acum intrăm &icirc;n chestii de nuanță&hellip; Dar pot fi anumite legi care afectează un anumit grup de oameni, cum ar fi locurile speciale din licee pentru romi. Poate că romii or să iasă &icirc;n stradă să spună că avem locuri speciale, dar nu avem bani pentru cărți&hellip; Atunci ei ar putea să protesteze fără a afecta restul majorității &icirc;n vreun fel. Nu trebuie să ne g&acirc;ndim la situații alb-negru, unde ceea ce vrea 5 la sută este &icirc;n perfectă contradicție cu ce vrea 95 la sută. Nu acesta e cazul, p&acirc;nă la urmă&hellip;</p>
+<p><strong>Intervenție din public:</strong><strong>&nbsp;</strong>Ați spus că nu contează numai regulile, ci putem să ne bazăm pe bunul simț și pe etică și ele sunt, cumva, valabile pentru majoritatea oamenilor. Și tocmai ați fost de acord acum că, de fapt, sunt c&acirc;t se poate de relative&hellip; Ați spus că e inerent că nu toți oamenii vor fi de acord pe anumite subiecte. Și revenind pe partea de incluziune a minorităților, mai ales. Au fost suficient de multe cazuri &icirc;n care proprietari de cluburi au hotăr&acirc;t să nu dea acces &icirc;n respectivul local romilor. De asemenea, dacă stăm să ne g&acirc;ndim la manifestările &icirc;n care să ascultăm ambele părți, dacă nu ar fi existat jandarmii, acel gay pride parade ar fi fost &icirc;năbușit &icirc;n forță de marșul noii drepte care cred că s-a și &icirc;nt&acirc;mplat &icirc;ntr-un anumit an, c&acirc;nd au fost bătuți manifestanți de-acolo destul de rău. La fel s-a &icirc;nt&acirc;mplat și &icirc;n alte părți.</p>
+<p><strong>Radu Țigănaș:</strong>&nbsp;Pe de altă parte, cei care făceau acea paradă erau perfect conștienți de riscurile pe care și le asumă. Nu s-au g&acirc;ndit că merg pe stradă și toată lumea o să-i iubească. Ei știu foarte bine cu ceea ce se luptă &icirc;n această societate.</p>
+<p><strong>Aceeași intervenție</strong>: Punctul meu de vedere era &icirc;n acest moment că bunul simț și etica sunt concepte c&acirc;t se poate de relative și nu putem să ne construim niște păreri sau o societate funcțională doar pe niște aspecte c&acirc;t se poate de relative.</p>
+<p><strong>Radu Țigănaș:</strong>&nbsp;Păi p&acirc;nă la urmă, ne-am construit societatea pe niște concepte morale relative&hellip; Totul e relativ, p&acirc;nă la urmă, dar av&acirc;nd &icirc;n vedere regulile pe care le-am impus noi, ca societate, considerăm că nesupunerea civică intră &icirc;n acest joc.</p>
+<p><strong>Ioana Covei:</strong>&nbsp;Bine, totul e relativ pentru că &icirc;n cadrul unei democrații, lucrurile astea sunt foarte greu de decis. De aceea dezbatem și lucruri care nu ar str&acirc;nge o majoritate comodă. Și atunci &icirc;n aceste cazuri trebuie să discutăm &icirc;n ce măsură are o minoritate dreptul de a nu respecta legea.</p>
+<p><strong>Ciprian Șiulea:</strong>&nbsp;Revenind la o chestiune fundamentală: echipa afirmatoare a spus &icirc;n mai multe r&acirc;nduri că e ceva evident, de bun simț, moral. &Icirc;ntr-adevăr, orice apel la moralitate nu are nicio valabilitate universală, nu are cum să aibă. Sigur, totul e relativ, dar unele lucruri sunt mai puțin relative dec&acirc;t altele&hellip; sistemul legal e singurul sistem formal care&hellip;</p>
+<p><strong>Andrei Țăranu</strong>: &hellip; cel puțin c&acirc;t e valabil, nu este relativ.</p>
+<p><strong>Ciprian Șiulea</strong>: Evident, mulți nu sunt de acord cu multe lucruri, dar ăsta este sistemul. Cred că trebuie să conștientizăm mai bine că nesupunerea civică, chiar dacă unii dintre noi vom considera că e justificată &icirc;n anumite cazuri, reprezintă o ieșire din acest sistem, cu consecințe destul de grave. Eu n-aș minimaliza nici consecințele blocării unei străzi&hellip; Dar sunt și consecințe mai grave, cum e cazul doctorului care, din motive de conștiință și el, refuză să efectueze un avort și poate să distrug viața cuiva. Din nesupunere civică&hellip;</p>
+<p><strong>Intervenție din public</strong>: &Icirc;ntrebarea pentru Ce presupune o decizie politică pură și dacă nesupunerea civică are, &icirc;n viziunea voastră, și rațiunea de a obține &icirc;n final niște decizii politice pure.</p>
+<p><strong>Radu Țigănaș</strong>: Un partid dorește un lucru, celălalt vrea fix opusul, o decizie trebuie luată, așa că trebuie să facă compromisul. &Icirc;ntotdeauna &icirc;ntr-o societate democratică există minusuri care pot accelera anumite probleme sociale. Și uneori, problemele sociale fiind foarte mari, trebuie să acționăm &icirc;ntr-un mod din afara sistemului pentru a combate sistemul pentru că, nu-i așa, căile sunt lungi, dureroase și &icirc;n general, nu sunt foarte eficiente. Așa că oamenii fac tot ce pot pentru a fi auziți măcar, dacă nu neapărat pentru a schimba ceva.</p>
+<p><strong>Intervenție din public:</strong>&nbsp;Credeți că nesupunerea civică este o reacție la faptul că sistemul politic nu aplică legea sau este o reacție la legi care nu țin cont de anumite minorități?</p>
+<p><strong>Cristian Neagoe</strong>: Noi nu suntem &icirc;mpotriva instituțiilor statului sau a domniei legii. Spuneam că instituția nesupunerii civice trebuie să existe &icirc;ntr-o democrație sănătoasă pentru că este o formă, o supapă, un mecanism de autoreglare, de critică a democrației. Democrația are nevoie de controversă, de critică. Din această ciocnire se creează o evoluție socială, a sistemului legislativ și a societății civile.</p>
+<p><strong>Radu Țigănaș:</strong> Și uneori nu este vina nimănui. Uneori poate să se impună o lege cu care toată lumea e de acord, dar care are niște efecte perverse și ulterior ne dăm seama că acea lege care părea bună inițial de fapt nu este at&acirc;t de bună și atunci trebuie să acționăm cumva.</p>
+<p><strong>Aceeași intervenție</strong>: Dar &icirc;n cazul particular al Rom&acirc;niei, este al unei ne&icirc;ncrederi din ce &icirc;n ce mai mari&hellip;</p>
+<p><strong>Radu Țigănaș</strong>: Dar nu ne interesează cazul particular al Rom&acirc;niei. Noi considerăm că nesupunerea civică este valabilă oriunde, &icirc;n orice democrație. &Icirc;n fiecare țară e un caz mai special, dar dacă am vorbi despre Rom&acirc;nia, ar fi altă discuție și am sta aici p&acirc;nă m&acirc;ine dimineață&hellip;</p>
+<p><strong><span style="text-decoration: underline;">Concluzii</span></strong></p>
+<p>Andrei Țăranu: Mi s-a părut o discuție foarte interesantă&hellip; foarte interesantă! Este, dacă vreți, un uriaș exercițiu de &rdquo;rational choice&rdquo;. Nu știu &icirc;n ce măsură afectează sau ar trebui să afecteze, &icirc;n ultimă instanță, o inovație &icirc;n democrație. &Icirc;n științele politice se vorbește de pe vremea lui Sartori, dacă nu cumva dinainte, despre ceea ce ar trebui să fie democrația consociativă, adică abandonarea acestui sistem, al &rdquo;tiraniei majorității&rdquo; și trecerea la un sistem &icirc;n care c&acirc;t mai multe grupuri sociale să fie satisfăcute. Asta presupune, &icirc;ntr-adevăr, pluralism și, implicit, dialog al societății cu statul și al statului cu societatea. Această formulă de pluralism ar presupune o mai mare participare civică, un parteneriat, dacă vreți, &icirc;ntre cetățeni și stat. Nu știu p&acirc;nă &icirc;n clipa de față cine &icirc;ncalcă acest parteneriat, cetățenii sau statul. Așa cum remarca un coleg, există o apatie și de-o parte, și de alta. Există o apatie a statului, dar și a societății pentru că văz&acirc;nd că statul e apatic&hellip; da, apatia se ia.</p>
+<p>Vă mulțumesc foarte mult.</p>
+<p><strong>Monica Mocanu:</strong>&nbsp;Aș vrea să-i invit pe cei care au vorbit dacă s-au situat confortabil pe pozițiile lor pentru că ați fost asimilați de toată lumea care a fost aici ca niște promotori exclusivi ai uneia dintre părți și cred că lucrurile nu sunt tocmai așa.</p>
+<p><strong>Ciprian Șiulea:</strong> &Icirc;n ce mă privește, nu sunt sută la sută pe poziția asumată, dar am &icirc;ncercat să exprim asta.</p>
+<p><strong>Ioana Covei</strong>: Da, nici eu nu sunt neapărat de acord. Nu știu dacă e neapărat nesupunere civică, dar mă duc acum la &rdquo;Universitatea se ocupă și se dezbate&rdquo;, așa că&hellip; (r&acirc;sete). Tot ce voiam să arăt și mi se pare &icirc;ncă un lucru adevărat este c&acirc;t de relative ne pot fi uneori valorile și că asta e destul de greu de echilibrat &icirc;n contextul unor factori decizionali.</p>
+</div>
+                <div class='clear'></div>
+        </div><!-- end main content -->
+         <div class='clear'></div>
+</div>
+<div id="pix"></div>
+
+
+                                </div><!--end main -->
+                                <div id='parteneri'>
+                                    <span class='tr'></span><span class='tl'></span><span class='br'></span><span class='bl'></span><span id="filler"></span>
+                                    <div class='parteneri' id='sustinatori'>
+                                        <span class='floating_text' id='un_proiect'>Un proiect</span>
+                                        <a href='http://www.ardor.org.ro/'><div class='image' id='ardor'>Ardor</div></a>
+                                        <span class='floating_text' id='finantatori'>Finanțatori</span>
+                                        <a href='http://www.opensocietyfoundations.org/'><div class='image' id='open_society'>Open Society Foundation </div></a>
+                                        <a href='http://www.studentiq.ro//'><div class='image' id='memoplus'>MemoPlus</div></a>
+                                        <!-- <a href='http://www.ratiufamilyfoundation.com/'><div class='image' id='FundatiaRatiu'>Ardor</div></a>
+                                        <a href='http://www.eef.md/'><div class='image' id='eef'>East Europe Foundation</div></a>
+                                        <a href='http://www.mts.gov.md/'><div class='image' id='mdminister'>Ministerul Tineretului si Sportului al Republicii Moldova</div></a> -->
+
+                                        <span class='floating_text' id='parteneri_text'>Parteneri</span>
+
+                                        <a href='http://www.policycenter.eu/'><div class='image' id='PolicyCenter'>Policy Center</div></a>
+                                        <a href='http://www.britishcouncil.org/'><div class='image' id='BritishCouncil'>British Council</div></a>
+                                        <a href='http://www.europuls.ro/'><div class='image' id='europuls'>Europuls</div></a>
+                                        <a href='http://www.cere.ro/'><div class='image' id='cere'>Ce-Re</div></a>
+                                        <a href='http://www.primeromania.ro/'><div class='image' id='prime'>Prime Romania</div></a>
+                                        <a href='http://www.cji.ro/'><div class='image' id='cji'>Centrul pentru jurnalism independent</div></a>
+                                        <a href='http://www.aiesectm.ro/'><div class='image' id='aisec'>Aisec</div></a>
+                                        <!-- ===================================================================================================== -->
+                                        <a href='http://www.cogitus.ro/'><div class='image' id='cogitus'>Cogitus</div></a>
+                                        <a href='http://www.adevarul.ro/international/foreign_policy/'><div class='image' id='foreignPolicy'>Foreign Policy</div></a>
+                                        <a href='http://www.elsa.ro/'><div class='image' id='elsa'>Elsa</div></a>
+                                        <a href='http://www.vipromania.ro/'><div class='image' id='vipromania'>Voluntari pentru idei si proiecte</div></a>
+                                        <a href='http://www.ongtrust.ro/'><div class='image' id='ongtrust'>Trust</div></a>
+
+                                        <!-- ===================================================================================================== -->
+                                        <a href='http://www.leap.ro/'><div class='image' id='leap'>Leap</div></a>
+                                        <a href='http://www.younginitiative.org/'><div class='image' id='younginitiative'>Asociatia young initiative</div></a>
+                                        <a href='http://www.asjc.ro/'><div class='image' id='asjc'>Asjc</div></a>
+                                        <a href='http://osut.ro/'><div class='image' id='osut'>Osut</div></a>
+                                        <div class='clear'></div>
+                                    </div>
+                                    <div class='parteneri' id='parteneri_institutionali'>
+                                        <span class='floating_text' id='sponsori_text'>Sus&#539;in&#x0103;tori</span>
+                                        <a href='http://www.cartier.md/'><div class='image' id='cartier_logo'>Editura Cartier</div></a>
+                                        <a href='http://www.pll.md/ro/'><div class='image' id='biblio_logo'>Biblioteca publica de drept</div></a>
+                                        <span class='floating_text' id='institutii_text'>Parteneri institu&#539;ionali</span> 
+                                        <ul id='institutii'>
+                                            <!-- <span class='floating_text' id='institutii_text'>Parteneri institu&#539;ionali:</span> -->
+                                            <li><a href='http://www.politice.ro/'>Facultatea de &#536;tiin&#539;e Politice SNSPA </a></li>
+                                            <li><a href='http://www.comunicare.ro/'>Facultatea de Comunicare &#537;i Rela&#539;ii Publice SNSPA</a></li>
+                                            <li><a href='http://www.fspub.ro/'>Facultatea de &#536;tiin&#539;e Politice Universitatea Bucure&#537;ti</a></li>
+                                            <li><a href='http://www.filosofie.unibuc.ro/'>Facultatea de Filosofie Universitatea Bucure&#537;ti</a></li>
+                                            <li><a href='http://litere.unibuc.ro/'>Facultatea de Litere din Universitatea Bucure&#x015f;ti</a></li>
+                                            <li><a href='http://www.unibuc.ro/ro/fac_fsas_ro'>Facultatea de Sociologie Universitatea Bucure&#537;ti</a></li>
+                                            <li><a href='http://laws.uaic.ro/'>Facultatea de Drept Universitatea Alexandru Ioan Cuza Ia&#537;i</a></li>
+                                            <li><a href='http://www.uaic.ro/uaic/bin/view/Academic/Filosofie'>Facultatea de Filosofie si &#536;tiin&#539;e Social Politice Universitatea AIC Ia&#537;i</a></li>
+                                            <li><a href='http://www.upa.ro/'>Facultatea de Drept si Facultatea de &#x015e;tiin&#x0163;e Politice si Administrative Universitatea Petre Andrei Ia&#x015f;i</a></li> 
+
+                                            <li><a href='http://www.ubbcluj.ro/'>Universitatea Babe&#537;-Bolyai Cluj Napoca</a></li>
+                                            <li><a href='http://www.uvt.ro/'>Universitatea de Vest Timi&#537;oara</a></li>
+                                            <li><a href='http://www.upt.ro/'>Universitatea Politehnica Timi&#537;oara</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class='parteneri' id='parteneri_media'>
+                                        <span class='floating_text' id='media_text'>Parteneri media</span>
+                                        <a href='http://www.hotnews.ro/'><div class='image' id='hotnews'>HotNews</div></a>
+                                        <!-- <a href='http://www.lumebuna.ro/'><div class='image' id='lumebuna'>Lume Buna</div></a> -->
+                                        <a href='http://www.romaniapozitiva.ro/'><div class='image' id='romaniapozitiva'>Romania Pozitiva</div></a>
+                                        <a href='http://totb.ro/'><div class='image' id='thinkoutsidethebox'>Think Outside The Box</div></a>
+                                        <a href='http://www.facebook.com/carevasazica.vip'><div class='image' id='carevasazica'>Carevasazica</div></a>
+                                        <a href='http://www.studentie.ro/'><div class='image' id='studentiero'>Studentie.ro</div></a>
+                                        <a href='http://startub.unibuc.ro/'><div class='image' id='startub'>startub.unibuc.ro</div></a>
+                                        <!-- <a href='http://www.tvr.ro/tvr_cluj.php'><div class='image' id='tvrcluj'>Tvr Cluj</div></a> -->
+                                        <!-- <a href='http://www.radiotransilvania.ro'><div class='image' id='radiotransilvania'>Radio Transilvania</div></a> -->
+                                        <a href='http://iasifun.ziaruldeiasi.ro/'><div class='image' id='iasifun'>Iasi fun</div></a>
+                                        <a href='http://www.ziaruldeiasi.ro/'><div class='image' id='ziaruldeiasi'>Ziarul de Iasi</div></a>
+                                        <a href='http://www.kissfm.ro/timisoara'><div class='image' id='kissfm'>KissFm</div></a>
+
+                                        <div class='clear'></div> 
+                                    </div>
+                                    <div class='clear'></div>
+
+                                </div>	
+                            </div>	<!-- end wrap -->
+                            <div id='footer_mare'>
+                                <div id='footer'>
+                                    <div id='links' class='footer'>
+                                        <div id='menu1' style='margin:auto;'> <ul id='meniu_prinicpal'><li><a href='contacte/index.html'> Contact </a></li>
+<li><a href='clubdebate/index.html'> Cluburile </a></li>
+<li><a href='oamenii/index.html'> Oamenii </a></li>
+<li><a href='proiectul/index.html'> Proiectul </a></li>
+<li><a href='home/index.html'> Acasa </a></li>
+</ul></div><!--end menu-->
+                                    </div><!--
+                                    <div id='contact' class='footer'>
+                                            <h4>Contact</h4>
+                                            <p>office@closer2oxford.ro</p>
+                                            <p>bogdan.draghicescu@closer2oxford.ro<br>
+                                            <span class='detalii'> (asistenta tehnica web - orice probleme legate de site)</span></p>
+                                    </div>
+                                    -->
+                                    <div id='newsletter' class='footer'>
+                                        <script src="../../connect.facebook.net/en_US/all.js#xfbml=1"></script><fb:like href="http://www.facebook.com/pages/Closer2Oxford/162758797069605" width="250" colorscheme="dark"></fb:like>
+                                        <!--<h4>Newsletter</h4>
+                                        <form action='/page/newsletter'>
+                                                <input type='text' name='email'>
+                                                <input type='submit' id='submit' value='>'>
+                                                        
+                                        </form>-->
+                                    </div>
+                                    <div id='credits'>
+                                        Copyright(c) 2021 ARDOR |  Toate drepturile rezervate | Toate logo-urile si sloganurile de pe site sunt proprietate intelectuala inregistrata si nu pot fi reproduse fara acordul explicit al detinatorilor. <br>
+                                            <br /><br />
+                                            <b>Disclaimer</b><br /><i>
+
+                                                Programul educational Closer to Oxford este un program non-profit si nu are o legatura cu universitatea cu acelasi nume, referirea la Oxford avand doar o semnificatie simbolica.
+                                            </i>
+                                    </div>
+
+                                </div>		
+                            </div>		
+
+                            <div id="finantatde">Acest proiect este finantat cu sustinere din partea Comisiei Europene. Aceast publicatie [comunicare] reflecta doar
+                                vederile autorului, iar Comisia nu poate fi facuta  responsabila pentru utilizarea informatiei pe care o contine.</div>
+
+
+                        </body>
+                        </html>

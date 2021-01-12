@@ -1,0 +1,621 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml-strict.dtd">
+<HTML xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+    <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+            <link rel="icon" type="image/png"  href="../../../../../closer2oxford.ro/favicon.html">
+                <link rel="stylesheet" href="../../../var/layout.css" type="text/css">
+                    <title>Closer to Oxford - e timpul pentru argumente!</title>
+                    <link rel="alternate" type="application/rss+xml"  href="../../../rss_feed" title="Stiri Closer2Oxford">
+                        <link rel="image_src" property="og:image"  href="../../../../images/layout/closer2oxford_fb_white.png" />
+                        <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9" />
+<script type='text/javascript' src='../../../../js/jquery-1.4.4.min.js'></script>
+<script>var $j = jQuery.noConflict();</script>
+<script type='text/javascript' src='../../../../js/tinymce/tiny_mce.js'></script>
+<script type='text/javascript' src='../../../../js/jquery.form.js'></script>
+<script type='text/javascript' src='../../../../js/fbLoginRegister.js'></script>
+<script type='text/javascript' src='../../../var/javascript.js'></script>
+<script type='text/javascript' src='../../../../js/jquery.hovertip-1.0.min.js'></script> 
+<script type='text/javascript' src='../../../../js/jquery.jgrowl_minimized.js'></script> 
+<link rel='stylesheet' href='../../../../css/jquery.jgrowl.css' media='screen' type='text/css'> 
+<script type='text/javascript' src='../../../../js/jquery.timer-min.js'></script> 
+<link rel='stylesheet' href='../../../var/gallery.css' media='screen' type='text/css'> 
+<script type='text/javascript' src='../../../var/galerie/jquery.prettyPhoto.js'></script> 
+<style>.hovertip{
+    position:absolute;
+    padding:10px 13px;
+    z-index:2;
+    max-width:300px;
+    color:#303030;
+    background-color:#f5f5b5;
+    border:1px solid #DECA7E;
+    font-family:sans-serif;
+    font-size:12px;
+    line-height:18px;
+    text-align:left;
+    }
+           .normal_text ol,.normal_text ol *{text-align:left !important}
+           .normal_text *{font-weight:normal !important;font-size:12px !important;font-face:tahoma !important}</style> 
+<script type='text/javascript'>$j(document).ready(function(){$j('.tooltip').hovertip({'offset':[20,20]});get_notif();});
+
+if(!Array.indexOf){Array.prototype.indexOf = function(obj){for(var i=0; i<this.length; i++){if(this[i]==obj){return i;}}return -1;}}
+    hashuri = [] ;
+	 var tick_timer= 3000 ;
+ 
+	 function get_notif()
+        {
+		  
+		  //console.log(tick_timer);
+	     
+		  setTimeout(get_notif,tick_timer);
+        
+		   $j.ajax(
+            {
+                url: '/page/notif/show_events',
+                dataType: 'json',
+                data: "{}",
+                success: function(data)
+                    {
+                    $j.each(data,function(index,data){
+                        try
+                            {
+                            if( hashuri.indexOf(data.hash) == -1 )
+                                {
+                                hashuri.push(data.hash);
+                                $j.jGrowl(
+                                    data.str,
+                                    {
+                                        corners:'1px',
+                                        life: data.life,
+                                        header:data.title,
+                                        hash: data.hash,
+                                        sticky: data.sticky,
+                                        close: function(e,m,o)
+                                            {
+                                                $j.ajax({url:'/page/notif/delete_single_event/' + o.hash});
+                                            }
+                                    });
+                                }
+                            }
+                        catch(e){}
+                        })
+                    }
+            });
+        }
+	 </script> 
+ 
+                            
+  <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-19111721-1']);
+  _gaq.push(['_setDomainName', '.closer2oxford.ro']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+    
+                        </head>
+                        <body>
+                            <div id="global_wrap">
+                                <div id="header">
+                                    <a href='../../../../en/index.html'><div id='logo'><img src='../../../../images/layout/sigla.jpg'></div></a>
+                                    <a class='noExternal' href='http://www.facebook.com/pages/Closer2Oxford/162758797069605'><img src='../../../../images/fb.png' style='height:30px;float:right;clear:right;margin:10px 5px 5px 5px;border:none;'/></a>
+                                    <a href='../../../rss_feed'><img src='../../../../images/feed-icon.png' style='height:30px;float:right;clear:right;margin:5px;border:none;'/></a>
+                                </div>
+                                <div id="meniu">
+                                    <div  id='register_login'>
+
+                                        
+  <a href='#' class='todo' id='login'>Login </a> &nbsp;<a href='../../../register.html' class='todo' id='register'>Register</a>
+    <div id='login_box'>
+		  <form action='https://dev.closer2oxford.ro/page/en/login_user/logon' method='post' id='user_login_form'>
+					 <div>Email: <input type='text' name='email'/> </div><br />
+					 <div>Pass: <input type='password' name='passwd'/></div><br />
+					 <a href='#' class='password_forgot'>forgot password?</a>
+					 <input type='hidden' value='/page/en/vezi_meciuri/374/' name='returnto' class='submiter'/><br />
+					 <input type='submit' value='login' name='btn' class='submiter'/><br />
+		  </form>
+		  
+		  <form action='https://dev.closer2oxford.ro/page/en/login_user/reset_user_pw' method='post' id='user_reset_form'>
+					 <div>Email: <input type='text' name='email'/> </div><br />
+					 <a href='#' class='password_forgot'>login?</a>
+					 <input type='hidden' value='/page/en/vezi_meciuri/374/' name='returnto' class='submiter'/><br />
+					 <input type='submit' value='reset' name='btn' class='submiter'/><br />
+		  </form>
+		  
+    </div>
+    
+                                    </div>
+                                    <div id="menu1" style="margin:auto;"> <ul id="meniu_prinicpal">
+                                            <li><a href="../../../contactus/index.html"> Contact us </a></li>
+                                            <li><a href="../../../theteam/index.html"> The team</a></li>
+                                            <li><a href="../../../theproject/index.html"> The project </a></li>
+                                            <li><a href="../../../home_en/index.html"> Home</a></li>
+                                        </ul></div>
+                                </div>
+                                <div id="main">
+                                    <a href='../../../../en.html'><img src="../../../../images/cover/BANNER_c2o_12_DEBATE_ONLINE_results.png" alt=""  usemap="#imgmap_iordania" /></a>
+									<div id='frontpageGallery'> 
+										<script type='text/javascript' src='../../../../js/jquery.hovertip-1.0.min.js'></script> 
+<script type='text/javascript' src='../../../../js/jquery.jgrowl_minimized.js'></script> 
+<link rel='stylesheet' href='../../../../css/jquery.jgrowl.css' media='screen' type='text/css'> 
+<script type='text/javascript' src='../../../../js/jquery.timer-min.js'></script> 
+<link rel='stylesheet' href='../../../var/gallery.css' media='screen' type='text/css'> 
+<style>.hovertip{
+    position:absolute;
+    padding:10px 13px;
+    z-index:2;
+    max-width:300px;
+    color:#303030;
+    background-color:#f5f5b5;
+    border:1px solid #DECA7E;
+    font-family:sans-serif;
+    font-size:12px;
+    line-height:18px;
+    text-align:left;
+    }</style> 
+<script type='text/javascript'>$j(document).ready(function(){$j('.tooltip').hovertip({'offset':[20,20]});get_notif();});
+
+if(!Array.indexOf){Array.prototype.indexOf = function(obj){for(var i=0; i<this.length; i++){if(this[i]==obj){return i;}}return -1;}}
+    hashuri = [] ;
+	 var tick_timer= 3000 ;
+ 
+	 function get_notif()
+        {
+		  
+		  //console.log(tick_timer);
+	     
+		  setTimeout(get_notif,tick_timer);
+        
+		   $j.ajax(
+            {
+                url: '/page/notif/show_events',
+                dataType: 'json',
+                data: "{}",
+                success: function(data)
+                    {
+                    $j.each(data,function(index,data){
+                        try
+                            {
+                            if( hashuri.indexOf(data.hash) == -1 )
+                                {
+                                hashuri.push(data.hash);
+                                $j.jGrowl(
+                                    data.str,
+                                    {
+                                        corners:'1px',
+                                        life: data.life,
+                                        header:data.title,
+                                        hash: data.hash,
+                                        sticky: data.sticky,
+                                        close: function(e,m,o)
+                                            {
+                                                $j.ajax({url:'/page/notif/delete_single_event/' + o.hash});
+                                            }
+                                    });
+                                }
+                            }
+                        catch(e){}
+                        })
+                    }
+            });
+        }
+	 </script> 
+
+										<script type='text/javascript' src='../../../../js/jquery.hovertip-1.0.min.js'></script> 
+<script type='text/javascript' src='../../../../js/jquery.jgrowl_minimized.js'></script> 
+<link rel='stylesheet' href='../../../../css/jquery.jgrowl.css' media='screen' type='text/css'> 
+<script type='text/javascript' src='../../../../js/jquery.timer-min.js'></script> 
+<link rel='stylesheet' href='../../../var/gallery.css' media='screen' type='text/css'> 
+<script type='text/javascript' src='../../../var/galerie/jquery.prettyPhoto.js'></script> 
+<style>.hovertip{
+    position:absolute;
+    padding:10px 13px;
+    z-index:2;
+    max-width:300px;
+    color:#303030;
+    background-color:#f5f5b5;
+    border:1px solid #DECA7E;
+    font-family:sans-serif;
+    font-size:12px;
+    line-height:18px;
+    text-align:left;
+    }</style> 
+<script type='text/javascript'>$j(document).ready(function(){$j('.tooltip').hovertip({'offset':[20,20]});get_notif();});
+
+if(!Array.indexOf){Array.prototype.indexOf = function(obj){for(var i=0; i<this.length; i++){if(this[i]==obj){return i;}}return -1;}}
+    hashuri = [] ;
+	 var tick_timer= 3000 ;
+ 
+	 function get_notif()
+        {
+		  
+		  //console.log(tick_timer);
+	     
+		  setTimeout(get_notif,tick_timer);
+        
+		   $j.ajax(
+            {
+                url: '/page/notif/show_events',
+                dataType: 'json',
+                data: "{}",
+                success: function(data)
+                    {
+                    $j.each(data,function(index,data){
+                        try
+                            {
+                            if( hashuri.indexOf(data.hash) == -1 )
+                                {
+                                hashuri.push(data.hash);
+                                $j.jGrowl(
+                                    data.str,
+                                    {
+                                        corners:'1px',
+                                        life: data.life,
+                                        header:data.title,
+                                        hash: data.hash,
+                                        sticky: data.sticky,
+                                        close: function(e,m,o)
+                                            {
+                                                $j.ajax({url:'/page/notif/delete_single_event/' + o.hash});
+                                            }
+                                    });
+                                }
+                            }
+                        catch(e){}
+                        })
+                    }
+            });
+        }
+	 </script> 
+
+										<style type="text/css">
+										.poze
+										{
+											float:right;
+											width:110px;
+										}
+										.poze a img
+										{    border:none;
+										}
+										.main_content
+										{
+											float:left;
+											width:560px;
+										}
+										</style>
+										
+										 <div class = 'poze'>
+
+    <script>
+    $j(document).ready(function(){
+      		$j("a[rel^='prettyPhoto']").prettyPhoto({theme:'facebook'});
+        });
+    
+    </script>
+    </div> 
+									
+									</div> 
+                                    <!--<div id='stiri-padding'>
+        <div id='stiri_back'>
+                {stiri} 
+    
+               
+        </div>-->
+        
+</div>
+<div  id="content-padding">
+        <div id='sidebar_menu'>
+                <span class='tr'></span>
+                <span class='tl'></span>
+                <span class='br'></span>
+                <span class='bl'></span>
+                <span id="filler"></span>
+                    
+                <ul></ul>
+                
+                <div class='clear'></div>
+        </div>
+        <div id="content">
+                <span class='tr'></span>
+                <span class='tl'></span>
+                <span class='br'></span>
+                <span class='bl'></span>
+                <span id="filler"></span>
+                  <script>
+        $j(document).ready(function(){
+        $j('.discurs_toggler').toggle(
+                function(){
+                $j(this).attr('src', '../../../../images/little_stuff/16-em-down.png');   
+                $j(this).parent().next('.discurs').hide('fast');
+                },
+                function(){
+                $j(this).attr('src', '../../../../images/little_stuff/16-em-up.png');
+                $j(this).parent().next('.discurs').show('fast');
+                });
+            });
+        </script><style>.nowrap{white-space: nowrap;}
+		.noJustify{text-align:left;}
+		</style><h2 class='noJustify'><span class='nowrap'>'The Minions'</span> <span class='notif'>(Affirmative team)</span> vs <span class='nowrap'>'MC - Magical Convincers'</span> <span class='notif'>(Negative team)</span></h2><h3>A1 (Anca Pelesteanu) <img src='../../../../images/little_stuff/16-em-up.png' class='discurs_toggler'></h3>
+            <div class='discurs normal_text'><p>Nowadays, we find ourselves living in a world in which the number of democratic countries has been increasing very rapidly, reaching up to two thirds in 2012. <a  href="#0cf31">[1]</a>&nbsp; &ldquo;<em>Modern </em><em>political democracy is a system of governance in which rulers are held accountable for their actions in the public realm by citizens acting indirectly through the competition and cooperation of their elected representatives."<a href="../../../../../file/D_/Users/Administrator/Downloads/The%20Minions%20-%20A1.doc#_ftn2"><strong>[2]</strong></a>. </em>Overall,<em> </em>democracy is a form of governance for the people, developed through elected representatives, promoting religious, cultural, ethnic and racial equality, justice, liberty and fraternity.</p>
+<p>The western countries are the most emblematic when it comes to democratic systems. Given their major contributions to the world&rsquo;s development, these countries are the most pertinent to help the spread and implementation of democracy as a mean to achieve security, stability, and prosperity for the countries that need and desire them. When there are countries that are not able to pursue the values they opted for, the use of legitimate force is definitely a measure that needs to be considered. &nbsp;</p>
+<p>&nbsp;For this, and the reasons that follow, our team believes that western democracies should spread democracy across the world, even when this involves extreme measures, such as the use of force.</p>
+<p><strong>&nbsp;Argument 1: Democracy needs to be spread because it represents people&rsquo;s will </strong></p>
+<p>Considering the up-given definition of democracy it is obvious that all these values are beneficial for a country&rsquo;s citizens. Moreover, they are compatible, if not similar with those shared by the United Nation itself. In this respect, the United Nations is committed to maintaining international peace and security, developing friendly relations among nations and promoting social progress, better living standards and human rights.<a  href="#0cf33">[3]</a></p>
+<p>Going down to a more practical level, the citizens from democratic countries, are less likely to suffer from internal violence from the government, as R.J. Rummel<a  href="#0cf34">[4]</a> states in one of his studies, mainly because the governmental power is restrained and because of the existence of opposition; they live more prosperous lives because of the long-term economic stability, guaranteed by the free-market principles, and enjoy human rights and fundamental freedoms. Moreover, studies show that in the case of democracies, the situations of violent conflict/wars against one another are very few and statistically insignificant<a  href="#0cf35">[5]</a>.</p>
+<p>Therefore, it is hard to portray a situation according to which there are people who would opt, willingly, for a different, non-democratic type of society. Also, the spread of democracy can bring a set of legitimate advantages to the international system as well: significantly reduced reasons for conflict; common values that determine common ways of communication for efficient cooperation; commercial, economic, cultural, scientific, or any other types of changes.</p>
+<p>To round up, the evidence presented in favor of democracy, as a form of governance which generally improves both the conditions of each nation and the international system as a whole, comes to reafirm our team&rsquo;s position, supporting of the spread of democracy across the world. &nbsp;</p>
+<p><strong>Argument 2: Although obviously not preferable, the implementation of democracy by the use of force is a legitimate option.</strong></p>
+<p>The core aspect is represented by the implementation of a democratic regime, through the free political will of the people, only. The implementation of a democratic system within a certain country is not attainable without the consent of its people. As Barrack Obama said: &ldquo;&hellip;democracy can not be built at the end of a barrel of a gun&rdquo;.<a  href="#0cf36">[6]</a></p>
+<p>On the other hand, there are situations, when the implementation of democracy, even if it&rsquo;s desired by the people, is not permitted by the ruling authorities. This happens in totalitarian regimes, where dictatorships or autocracies do not respect individual rights and liberties of their own countrymen.</p>
+<p>As history relates, there are no dictators that have accepted the establishment of democracy by peaceful means, and in these situations the social unrest leads to internal armed conflicts, so the use of military force has to be considered. Actually, the use of force in the establishment of peace and security is enforced by the UN Charter itself.<a  href="#0cf37">[7]</a></p>
+<p>However, UN is not able to provide solutions for all humanitarian and internal (national) crises all over the world. One of the fundamental principles of the UN Charter<a  href="#0cf38">[8]</a> &ndash; UN is not to intervene in matters that are within the domestic jurisdiction of any state &ndash; can be used by dictatorships for the subjugation of their people.</p>
+<p>It is this case that endorses the possibility of using force by another state or a coalition of states, in support of implementation of democracy.</p>
+<p>Bottom line, although the use of military force is legal by international legislation, it is only justified in extreme situations, on the verge of disaster or of great treath to international stability. In any other situation, a nation&rsquo;s sovereignty should be respected at any extent possible.</p>
+<p>In conclusion, we believe that by presenting their proven commitment to international stability and security and their efficiency in helping other nations solve internal crises, western democracies are by far the most eligible to spread democracy, at its best, across the world, by the most useful means possible.<strong>&nbsp;</strong></p>
+<p><strong>&nbsp;</strong></p>
+<p><strong>&nbsp;</strong></p>
+<div><br /> 
+<hr size="1" />
+<div>
+<p><a  name="0cf31">[1]</a>, Diamond, Larry, 2008, <em>The Spirit of Democracy, </em>using Freedom House data, Statistics on democracy available at http://filipspagnoli.wordpress.com/stats-on-human-rights/statistics-on-freedom/statistics-on-democracy/</p>
+</div>
+<div>
+<p><a  href="#0cf32">[2]</a> Shmitter, Philippe C., and Terry Lynnn, Karl, 1991, <em>What Democracy is&hellip;And what is not</em>, Journal of Democracy, Volume 2, Number3, pg. 75-88</p>
+</div>
+<div>
+<p><a  name="0cf33">[3]</a> UN Charter, art. 1, available at http://www.un.org/en/documents/charter/index.shtml</p>
+</div>
+<div>
+<h1><a href="../../../../../file/D_/Users/Administrator/Downloads/The%20Minions%20-%20A1.doc#_ftnref4"><strong>[4]</strong></a>Lynn-Jones, <strong>Sean M., 1998,</strong> International Security, <strong><em>Why the United States Should Spread Democracy</em></strong><strong>, , using </strong></h1>
+<p>Rummel, R.J., <em>Power Kills: Democracy as a Method of Nonviolence</em> (New Brunswick, N.J.: Transaction Books, 1997), pp. 87-88 available at http://belfercenter.ksg.harvard.edu/publication/2830/why_the_united_states_should_spread_democracy.html</p>
+</div>
+<div>
+<p><a  name="0cf35">[5]</a> &nbsp;Lynn-Jones, <strong>Sean M., 1998,</strong> International Security, <strong><em>Why the United States Should Spread Democracy</em></strong><strong>, , using</strong><strong> </strong>Zeev Maoz and Bruce Russett, <em>Alliance, Contiguity, Wealth, and Political Stability: Is the Lack of Conflict Among Democracies a Statistical Artifact?</em>, International Interactions, Vol. 17, No. 3 (1992), pp. 245-267.</p>
+
+</div>
+<div>
+<p><a  name="0cf36">[6]</a> Sen. Barack Obama, A Way Forward in Iraq, Remarks Before the Chicago Council on Global Affairs (Nov. 20, 2006), available at http://obama.senate.gov/speech/061120-a_way_forward_in_iraq/index.html (last visited Feb. 18, 2008).</p>
+</div>
+<div>
+<p><a  name="0cf37">[7]</a> UN Charter, chapter VII, art 42</p>
+</div>
+<div>
+<p><a  name="0cf38">[8]</a> UN Charter, chapter I, art 1</p>
+</div>
+</div>
+</div><hr><h3>N1 (Por Osama) <img src='../../../../images/little_stuff/16-em-up.png' class='discurs_toggler'></h3>
+            <div class='discurs normal_text'>
+<p>Democratizations</p>
+<p>Democracy means the voice and will of the people</p>
+<p>Democracy means the opinion and the other opinion</p>
+<p>Democracy means free will and freedom</p>
+<p>If democracy carry these meanings how can I apply it in such an opposite principals&nbsp; ? ?</p>
+<p>&nbsp;How could I bring freedom by blockade and violence?</p>
+<p>&nbsp;Applying democracy by force and violence is actually a form of dictatorship</p>
+<p>Democracy represents the will of the people, but does all what Majority says is correct ?</p>
+<p>If people wanted to force government to apply a free Gas selling for example ;&nbsp; does the government have to acquiesces to their demands ? it doesn't make any since ,&nbsp; where is the standards ?where is wisdom ? I can't take democracy if it's not ruling in a suitable way and choosing the best solutions..&nbsp;</p>
+<p>America is the performer of democracy in the world</p>
+<p>Let's look closely about what happens in the U.S.A " The country of Democracy " .</p>
+
+<p>A record 1.1 million students attending public schools in the United States are homeless in 2013. According to the U.S. Department of Education, the number of homeless students has increased by 10 percent in 2013, from 1,065,794 in 2012, to 1,168,354. Forty-three states have reported increases from last year, with 10 states reporting increases of 20 percent or more. The number of homeless children has grown 24 percent over the past three years.[1]</p>
+
+
+<p>The 2012 statistics show that the estimated rate of violent crime was 386.9 offenses per 100,000 inhabitants, and the property crime rate was 2,859.2 offenses per 100,000 inhabitants. While the violent crime rate remained virtually unchanged when compared to the 2011 rate, the property crime rate declined 1.6 percent.</p>
+<p>In 2012, there were an estimated 1,214,462 violent crimes. The violent crimes of murder and non-negligent manslaughter, forcible rape, and aggravated assault increased 1.1 percent, 0.2 percent, and 1.1 percent, respectively. However, the estimated number of robbery offenses declined 0.1 [2]</p>
+
+<p>&nbsp;An estimated 20.4 million people in the United States used some kind of illicit drug in the past 30 days, according to the latest government statistics. About 8.3 percent of all persons age 12 and over are involved in use of illegal drugs or the nonmedical use of prescription drugs.[3]<br /> and there are a rising numbers of of police corruption cases <br /> I really can't imagine what would happen more than that !!<br /> America is holding the democracy flag by its hands? ...</p>
+<p>So why it has killed 113125 of the children women men of Iraq?[4]</p>
+<p>Why it has killed more than 150000 of the children, women of Afghanistan? [5] Is this what democracy provides? Murder, destruction and cruelty</p>
+<p>Does democracy impose the slaughter of women and children?</p>
+<p>Where is your humanity? How do you think that such a callous and unjust system is a successful system to Promote peace in the world?</p>
+<p>United Nations is the publisher of the principle of democracy in the world isn't it?<br /> Where was it when the children of Syria were being killed?</p>
+<p>Where was it when the children of Palestine were being slaughtered on the hands of the Israel?</p>
+<p>Does democracy applied to rich countries that pay for the United Nations and does not apply to poor countries? &nbsp;</p>
+<p>What do you say to the African child who is hungry in a weight not exceeding 10 kg? Where is the United Nations "publisher of democracy "? Where was it when his family was killed?</p>
+<p>This is a dictatorship but wears a beautiful dress called democracy</p>
+<p>What is democracy that you are talking about that leads the European countries to fight &amp; get involved in a world war with a millions of innocent victims because of the greed of the leaders of democracy</p>
+<p>Well do you want to impose democracy by violence? In other words, you want to remove the government by violence and leave the judgment to the people..</p>
+<p>There is no need to explain, we have a living example for us</p>
+<p>Libya</p>
+<p>Libya is hurting and crying because of what her own children are doing !!</p>
+<p>Every day hundreds of deaths rapes and robberies , Is this democracy ?</p>
+<p>This is called chaos</p>
+<p>Libya has paid a high price compared to what you call democracy has paid&nbsp; thousands of victims of children and women</p>
+<p>And also paid a 10 years of free petrol for the United Nations as a price of what you call Democracy, this called greed not humanity.</p>
+<p><br /> And here is some real disadvantages of Democracy:</p>
+<p>- Democracy is more emphasis on quantity than on quality</p>
+<p>- Democracy Based on unnatural equality &amp; in elections Voters do not take interest in election and that leads to something else called:" decreasing the moral standard&rdquo;</p>
+<p>- Democracy is a government of the rich</p>
+<p>&nbsp;- Democracy leads to Misuse of public funds and time</p>
+<p>- Democracy has no stable government&nbsp; <br /> <br /></p>
+
+<p>Recourses &amp; references</p>
+
+<p>[1] <a href="https://www.wsws.org/en/articles/2013/11/29/home-n29.html">https://www.wsws.org/en/articles/2013/11/29/home-n29.html</a></p>
+<p>[2] <a href="http://www.fbi.gov/news/pressrel/press-releases/fbi-releases-2012-crime-statistics" target="_blank">http://www.fbi.gov/news/pressrel/press-releases/fbi-releases-2012-crime-statistics</a></p>
+<p>[3] <a href="http://alcoholism.about.com/od/drugs/a/nsduh_drugs.htm" target="_blank">http://alcoholism.about.com/od/drugs/a/nsduh_drugs.htm</a></p>
+<p>[4] <a href="http://www.alwasatnews.com/3390/news/read/615639/1.htm">http://www.alwasatnews.com/3390/news/read/615639/1.htm</a></p>
+<p>[5] <a href="http://thawra.alwehda.gov.sy/_archive.asp?FileName=72901691720121010184156" target="_blank">http://thawra.alwehda.gov.sy/_archive.asp?FileName=72901691720121010184156</a></p>
+</div><hr><h3>A2 (Valentin Teodorov) <img src='../../../../images/little_stuff/16-em-up.png' class='discurs_toggler'></h3>
+            <div class='discurs normal_text'><p class="western">&nbsp;It seems to us that our opinion on democracy and democratic values was not properly understood and this is highly probably so because to tackle this kind of a complex concept as democracy in two pages of writing is a grueling task.</p>
+<p class="western" lang="ro-RO"><span lang="en-US"><strong>1. However, one cannot have a correct opinion about a certain aspect or concept if he canalizes the efforts of understanding them towards an isolated, particular situation.</strong><span lang="en-US"> In other words you cannot understand the concept of democracy if you try to see it through the eyes of the American democracy. Democracy is not only about applying generally accepted rules; it is more about understanding cultural values, historical endowment and humanitarian aspects. It is about giving people equal opportunities and it is about helping people. There is no such thing as a perfect model, as we, as human beings are not all the same. You cannot have an Irakian democracy applying an American model. You cannot have a Malian democracy applying the French model, and so on. </p>
+<p class="western">Promoting democracy is about providing specific people the opportunity of expressing itself freely, in consonance with its moral, cultural, historical values and religious beliefs. You spoke about criminality, violence, homelessness and corruption rates in USA. These statistics of a particular country are not relevant and representative when discussing democratic systems across the world, and also, they are not about democratic values. USA is certainly not the perfect model for democracy. We do not have an American model of democracy in Romania, Germany does not have an America democracy, nor does Spain, Italy, Sweden or Great Britain. And related to that, you need to think about what kind of democracy you have in your country and think also about the problems your democratic society faces. Aren&rsquo;t they about prosperity, free market, security or criminality? We all have to admit that these kinds of problems can be identified in every country, regardless of their system of government, and they cannot be solved by democracy itself.</p>
+<p class="western" lang="ro-RO"><span lang="en-US">It is obvious now, we hope, that there is no similarity between democracy and dictatorship, as you suggested. Dictatorship cannot be expressed through democratic values. Free elections process will not give rulers that are not empowered by the people&rsquo;s vote. As opposed to dictatorship, democracy relies on power and civic responsibility, exercised by all citizens equally and directly. Moreover, series of studies show that democracy, as opposed to other political systems are more stable<sup><a class="sdfootnoteanc" name="sdfootnote1anc" href="#sdfootnote1sym"><sup>1</sup></a></sup>, and less corrupt<sup><a class="sdfootnoteanc" name="sdfootnote2anc" href="#sdfootnote2sym"><sup>2</sup></a></sup>, this leading to a significant economic growth.<sup><a class="sdfootnoteanc" name="sdfootnote3anc" href="#sdfootnote3sym"><sup>3</sup></a></sup></p>
+<p class="western">To sum up, we have to emphasize that the promotion of democracy by the western countries, from a humanitarian point of view, is not about implementing a certain model of it, but rather about providing a certain people, suppressed by a dictator, the opportunity of choosing the kind of democracy they want in their own country</p>
+<p class="western">&nbsp;</p>
+<p class="western" lang="ro-RO"><span lang="en-US">2. You asked about who killed Syrian children and women. We do not know who the particular perpetrators were, but <span lang="en-US"><strong>it is certain it was not democracy that killed those people.</strong><span lang="en-US"> The military interventions in Libya and other similar situations, as we previously stated in our first speech, was not about enforcing a certain model of democracy, it was about helping the Libyan people overthrow a dictator that ruled the country of more than 40 years. Leaving the country in chaos is not a characteristic of democracy and solving this problem is certainly not the responsibility of other country or other people, but the Libyan people&rsquo;s. The Libyan people were given the opportunity of governing themselves by their own rules. It seemed to us, when reading your paper, that it was the western countries responsibility to govern Libya. Well, we believe it is Libyan people&rsquo;s responsibility and theirs alone. Western countries and UN develop comprehensive plans only for supporting the newly arisen countries to reorganize themselves to help Libyan people rule their own country. </p>
+<p class="western">Moreover, there&rsquo;s no logical reason in inducing violence, corruption, famine and criminality in a country that you are interested in, because democracy is about normal living and working conditions and efficient governmental organizations. There&rsquo;s no democratic country in the world wanting to develop economic, diplomatic, financial, cultural or any other kind of relations, with a country devastated by violence and corruption, lacking any kind of state organizations, rule of law and efficient economic systems.</p>
+<p class="western">In other words, there are two major reasons for promotion of democracy by democratic countries. First of all it is a moral duty that stems from embracing the democratic values, most of them related to human rights and liberties. Secondly, having the necessary financial, economic and diplomatic instruments, democratic countries are able to contribute to creation of large zones governed by democratic principles. In terms of force utilization, it should only be used for creation of necessary social and security conditions for organization of free election process which materializes the expression of the free will of the majority of the people.</p>
+<p class="western">&nbsp;</p>
+<div id="sdfootnote1">
+<p class="sdfootnote-western" lang="ro-RO"><a class="sdfootnotesym" name="sdfootnote1sym" href="#sdfootnote1anc">1</a> Robert J. Mundt, <em>Is 	Democracy stable? As compared to what, </em>available 	at http://www.stier.net/writing/demstab/stability.htm</p>
+</div>
+<div id="sdfootnote2">
+<p class="sdfootnote-western" lang="ro-RO"><a class="sdfootnotesym" name="sdfootnote2sym" href="#sdfootnote2anc">2</a> Kanybek Nur-tegin1 and Hans J. Czap, 2012<em>,  Corruption: 	Democracy, Autocracy, and Political Stability, </em>Economic AnAlysis 	&amp; Policy, Vol. 42 no. , available at 	http://www.eap-journal.com/archive/v42_i1_04-nurteg-czap.pdf</p>
+</div>
+<div id="sdfootnote3">
+<p class="sdfootnote-western" lang="ro-RO"><a class="sdfootnotesym" name="sdfootnote3sym" href="#sdfootnote3anc">3</a> Ranmali Abeyasinghe, 2004,  <em>Democracy, Political Stability, and 	Developing Country Growth: Theory and Evidence</em>, Economics 	Department, available at 	http://digitalcommons.iwu.edu/cgi/viewcontent.cgi?article=1000&amp;context=econ_honproj</p>
+</div></div><hr><h3>N2 (Ibrahim Ammar) <img src='../../../../images/little_stuff/16-em-up.png' class='discurs_toggler'></h3>
+            <div class='discurs normal_text'><p class="Body"><span lang="EN-GB">First of all we are studying democracy and <span lang="EN-GB">looking at the trut<span lang="EN-GB">h and the inner <span lang="EN-GB">aspect of things not only the outer<span lang="EN-GB"> aspects. It seems that democracy is the voice and freedom of people <span lang="EN-GB">but the reality is quite another<span lang="EN-GB">.</p>
+<p class="Body"><span lang="EN-GB">People <span lang="EN-GB">are not <span lang="EN-GB">the ones who created the concept of democracy but governments<span lang="EN-GB"> did, <span lang="EN-GB">by showing that they ha<span lang="EN-GB">ve created a system<span lang="EN-GB"> which totally guarantee<span lang="EN-GB">s people's rights,<span lang="EN-GB"> however the truth <span lang="EN-GB">is these same countries and governments<span lang="IT"> occup<span lang="EN-GB">y other countries and steal their resources and kill <span lang="EN-GB">their sons and rap<span lang="EN-GB">e its daughters in the name of spreading democracy<span lang="EN-GB">.</p>
+<p class="Body">You are asking us to ignore the ugly effects<span lang="EN-GB"> that intervention has had on <span lang="EN-GB">people all around the world by America, In other words, you are asking to ignore 40% of the democratic countries in the world<span lang="EN-GB">. Does this make sense?[1]</p>
+<p class="Body">Let's say that democracy has <span lang="EN-GB">spread through my country<span lang="EN-GB">, is it<span lang="NL"> guarantee<span lang="EN-GB">d that my country will not <span lang="EN-GB">become like the U.S.A<span lang="EN-GB"> with increasing crimes,corruption,murde<span lang="EN-GB">r?</p>
+<p class="Body"><span lang="EN-GB">I am Sorry but I can<span lang="EN-GB">not risk my people to<span lang="EN-GB"> be under such a corrupt system<span lang="EN-GB">. Yes,it's corrupt<span lang="EN-GB">! Any rule&nbsp; proves its failure or success by its results no matter what its content</p>
+<p class="Body">Democracy <span lang="EN-GB">&nbsp;has been proven to be a disaster <span lang="EN-GB">also in countries <span lang="EN-GB">around Europe and we can see that clearly through world war1&amp;2,The demands <span lang="EN-GB">of<span lang="EN-GB"> <span lang="EN-GB">the demonstrators and protesters in the 20s led to millions of&nbsp; human losses in European countries and in the rest of the world,Hitler is the biggest example of <span lang="EN-GB">this, he led Germany to <span lang="EN-GB">destruction and it<span lang="EN-GB"> was a separated <span lang="EN-GB">country for more than 80 years, and all that because democracy<span lang="EN-GB"> failed. </p>
+<p class="Body">How can you say that democracy is different from one country to another?<span lang="EN-GB"> By this do you mean that the voice of the American citizen<span lang="EN-GB">s or British<span lang="EN-GB"> should be 100%<span lang="EN-GB"> considered and the voice of the Iraqi<span lang="EN-GB">s or <span lang="EN-GB">the Libyan<span lang="EN-GB">s only<span lang="EN-GB"> 50%?did we go back to the times of racial segregation between whites and blacks? I don't imagine a system may lead to the degeneration of humanity more than that.</p>
+<p class="Body">Do you <span lang="EN-GB">truly believe that the U.S.A entered Iraq by force to spread democracy? or <span lang="EN-GB">that it entered it to kill its children and rape its daughters and steal its petrol in the name of spreading democracy?</p>
+<p class="Body">In your A1 speech you said that there is a very small percent<span lang="EN-GB">age of crimes and violence in the democratic countries, and now you are saying that there is no state with no violence and crimes</p>
+<p class="Body"><span lang="EN-GB">This is a contradiction. </p>
+<p class="Body">In order to fix your information European countries ha<span lang="EN-GB">ve also high rates of inhumanity cases like homeless cases in UK,Italy,Romania..etc and also<span lang="EN-GB"> the<span lang="EN-GB"> <span lang="EN-GB">prevent<span lang="EN-GB">ion of wearing the headscarf in Franc<span lang="EN-GB">e could be considered a<span lang="EN-GB">gainst the will and freedom of people<span lang="EN-GB">[2].</p>
+<p class="Body">Democracy didn't kill children of Syria? what about weapons that being sold by the U.S.A&amp;UN to the Syrian people to keep the flames of war burning and earning billions of dollars<span lang="EN-GB"> in the process?</p>
+<p class="Body">Death in Iraq,A<span lang="EN-GB">fghanistan,Syria,Libya and other countries in the world <span lang="EN-GB">all due to<span lang="EN-GB"> <span lang="EN-GB">the American-European <span lang="EN-GB">intervention in the name of democracy.[3]</p>
+<p class="Body"><span lang="EN-GB">With regard to the Libyans Have you ever heard before that a revolution has ended with peace<span lang="EN-GB"> and a united country<span lang="EN-GB">? What opportunity <span lang="EN-GB">are you talking about which was given to the Libyan peopl<span lang="EN-GB">e?</p>
+<p class="Body">removing the system and bringing chaos and destruction and killing and stealing the petrol of the state in the name of democracy, is this the opportunity that <span lang="EN-GB">has been given to the Libyan people?&nbsp;</p>
+<p class="Body">Libya was prey to Muammar Gaddafi and now it's a prey to the United Nations in the name of spreading democracy..</p>
+<p class="Body">The United Nations has used this opportunity to solve it's economic crisis by stealing petrol from Libya it has removed the government and spread chaos &nbsp;<span lang="EN-GB">in order to avoid any one <span lang="EN-GB">from stop<span lang="EN-GB">ping it <span lang="EN-GB">&nbsp;<span lang="EN-GB">while steeling these resources.[4] [5]&nbsp;</p>
+<p class="Body"><a name="_GoBack"></a></p>
+<p class="Body">&nbsp;</p>
+<p class="Body">How <span lang="EN-GB">can you say that the chaos in Libya is their own&nbsp; problem?</p>
+<p class="Body"><span lang="EN-GB">We urge you to read the title of the motion well<span lang="EN-GB"> you are <span lang="PT">Contradi<span lang="EN-GB">cting yourselves in other words you are saying:"United Nations is not responsible for spreading democracy in Libya" who is the opposite side here?</p>
+<p class="Body">If the UN really wants the freedom of people then why didn't <span lang="EN-GB">it spread this <span lang="EN-GB">ideal in Libya <span lang="EN-GB">by establishing a new government with new rules?</p>
+<p class="Body">Otherwise why it's name is United Nations?</p>
+<p class="Body">How can <span lang="EN-GB">we accept these ideals from the largest <span lang="EN-GB">organisation of corruption on the planet?&nbsp; like the one who believes that devil can lead him to heaven!!! If democracy has become a way to kill people and steal the capabilities of states and reap billions of dollars<span lang="EN-GB"> from the poor and less fortunate why would<span lang="EN-GB"> we apply it i<span lang="EN-GB">n our country?<br /><br /> <br /> Recourses : <br /> [1] <a href="http://www.infoplease.com/states.html">http://www.infoplease.com/states.html</a><br /> [2] <a href="http://www.theguardian.com/world/2011/apr/11/france-bans-burqa-and-niqab">http://www.theguardian.com/world/2011/apr/11/france-bans-burqa-and-niqab</a><br /> [3]&nbsp; <a href="http://www.washingtonpost.com/world/national-security/cia-begins-weapons-delivery-to-syrian-rebels/2013/09/11/9fcf2ed8-1b0c-11e3-a628-7e6dde8f889d_story.html">http://www.washingtonpost.com/world/national-security/cia-begins-weapons-delivery-to-syrian-rebels/2013/09/11/9fcf2ed8-1b0c-11e3-a628-7e6dde8f889d_story.html</a><br /> [4]&nbsp; <a href="http://www.libyanmission-un.org/ar">http://www.libyanmission-un.org/ar</a><br /> [5] <a href="http://arabic.people.com.cn/31662/8394091.html">http://arabic.people.com.cn/31662/8394091.html</a></p>
+</div><hr><hr><h2>Decision:</h2> <script>
+        $j(document).ready(function(){
+			$j('.decizie_toggler').toggle( 
+				function(){
+					$j(this).attr('src', '../../../../images/little_stuff/16-em-down.png');   
+					$j(this).parent().next('.decizie').hide('fast'); 
+                },
+                function(){
+					$j(this).attr('src', '../../../../images/little_stuff/16-em-up.png');
+					$j(this).parent().next('.decizie').show('fast'); 
+                } 
+			);
+		});</script><div class='decizie'><h3>Ioana Georgescu
+                <img src='../../../../images/little_stuff/16-em-up.png' class='decizie_toggler'></h3><div class='normal_text'><p>My call in this debate went to the Proposition team for the following reasons:<br /><br />First, I believe that overall the proposition team did a better job in building persuasive and relevant arguments , as opposed to team Opposition who relied too much on specific examples and rethorical questions, without linking them to their case and the debate in a convincing way.<br /><br />Second, in regards to the main clashes of the debate, I felt that while neither of the two teams truly engaged with the other side's ideas, the Proposition managed to bring more points home.<br /><br />The main discussion covered the characteristics of democratic states, and whether democracy is indeed a desirable system. I felt that, although arguing that democracy has its flaws and is not an ideal that we should all strive for was a legitimate point for team opposition to make, the analysis was lacking. Opposition's case relied mostly on examples of why life in the USA is horrible, without showing us how that is linked to the system in itself. Moreover, some of the statements made were a bit exagerated or even false. Although team proposition could have done better in defending this point (I will make further comments on this in the individual feedback), I believe they did better in pointing out some general characteristics of democratic systems that can be considered desirable, as well as pointing out the missing link in opposition's argument.<br /><br />Finally, in terms of the legitimacy of using force, i felt that neither team managed to prove their case to its full potential. Proposition relied heavily on the provisions of the UN charter, showing me that the use of force can be legal under international law, but didn't analyse the concrete impact that such a war has, in order to prove that it is justified and that bringing democracy has inherent benefits that overcome the disadvantages brought my wars. On the other hand, opposition only relied on the example of Lybia, which it somewhat misrepresented, and offered no link between this situation and democracy or western intervention, other than some assumptions concerning their motives for intervening. I believe that a good point made here, however, was team proposition pointing out that such use of force is justified by the need for ousting dictators who were abusing their people, although it lacked analysis.<br /><br />In conclusion, given that proposition managed to prove, by some analysis and by better use of research, that democracy is a desirable system that multiple advantages, as well as the fact that force is necessary to remove violent dictators, they win this debate.<br /><br />A1<br /><br />The speech had good English, it was clear and coherent, and all in all had a good style. You did a good job in terms of framing the debate and choosing the arguments. However, the arguments themselves could use a little more work.<br /><br />1st argument: I felt the argument was somewhat circular. In the introduction you specify some benefits of democracy without analysing them or proving them. Then, in the first argument, you state that democracy is obviously desirable given the benefits mentioned previously. You could have also had better analysis on why this is the most desirable system, your statement that "it is hard to imagine why people might want something else" is not enough. Therefore, altough the article is labeled as democracy is what people want, you don't prove that.<br /><br />2nd argument: This argument relies too much on the UN charter. Your duty is not only to show that international law allowes force, but more importantly why this force is sometimes necessary and, in regards to the impact of the use of force, it is justified. In short, show me why we want this, not that we can have it legally.<br /><br />Finally, you make no refference of the moral duty of the states.<br /><br />N1:<br /><br />This speech had a very unclear structure and it was somewhat hard to follow. I think that clearly separating every argument and labeling them would help a lot. In terms of the content, I believe that the two basic ideas were valid: that democracy has flaws, thus it is not desirable, and that intervention is very detrimental to nondemocratic states and their people. The analysis was completely lacking, though, most of the speech consisting of rethorical questions and unsustained assumptions. Whereas rethorical questions can be a good technique in terms of style and pointing out the flaws in the ither team's case, it is a debater's job to go further than simply asking those questions, and to give the answers that prove their own case.<br /><br />Moreover, I felt that there was too much use of "emotional" statements, and not enough actual arguments.<br /><br />A2:&nbsp;<br /><br />1st argument: You do a good job in pointing out that these problems are not necessarily linked to democracy in itself, and that every democratic system has its own particularities. However, I believe it was not the best strategy to explain in so many words how there are different models and the American one is not what we should be looking at. I believe a more comparative approach between democratic systems and nondemocratic ones, pointing out that these issues exist on both sides and that life is better on side democracy woukd have been more useful.<br /><br />2nd argument: Although opposition's argument was poorly developed, thus difficult to rebut, I feel that you: 1. portrayed this argument in a way that was not the best for your case - instead of saying "it is the lybians' role to protect themselves" you could have said "it is western states' duty to help promote people's will when they cannot do so themselves. 2. Didn't really take into consideration the harms that wars bring, showing why democracy is worth it.<br /><br />N2:<br /><br />This speech has some common problems with the 1st opposition speech, regarding the use of the rethorical questions and being too informal. I believe the point on the devastating effects that the spread of democracy in the middle east had was a very good one, but the only analysis on this point was "Death in Iraq,Afghanistan,Syria,Libya and other countries in the world all due to the American-European intervention in the name of democracy", which is just a statement. I believe that, rather than stating that democracy is evil, it would have been more useful to try to show why it is very difficult to have a functional democratic system, especially when it was brought by force, in countries where people have conflicting views regarding western states and that have no experience or tradition of democracy.<br /><br />Punctaje:</p>
+<p>Each speaker received points for Content (maximum 15 points), Strategy (maximum 10 points), Style (maximum 5 points).<br /><br />A1: 11, 8, 5 = 24<br /><br />N1: 9, 8, 3 = 20<br /><br />A2: 11, 7, 5 = 23<br /><br />N2: 9, 7, 3 = 19<br /></p></div>A1 -> 24 points<br>N1 -> 20 points<br>A2 -> 23 points<br>N2 -> 19 points<br>Winning team: <h3 style='display:inline;color:red;'>The Minions (Affirmative team)</h3></div><hr><h3 class='important'>We want your opinion! for this you need to login.</h3>
+                <div class='clear'></div>
+        </div><!-- end main content -->
+         <div class='clear'></div>
+</div>
+<div id="pix"></div>
+                                </div><!--end main -->
+                                <div id='parteneri'>
+                                    <span class='tr'></span><span class='tl'></span><span class='br'></span><span class='bl'></span><span id="filler"></span>
+                                    <div class='parteneri' id='sustinatori'>
+                                        <span class='floating_text' id='un_proiect'>Un proiect</span>
+                                        <a href='https://www.facebook.com/Diwanieh'><div class='image' id='diwanieh' >Diwanieh</div></a>
+                                        <a href='http://www.ardor.org.ro/'><div class='image' id='ardor'>Ardor</div></a>
+										<a href='http://www.annalindhfoundation.org/'><div class='image' id='anna_lindh'>Anna Lindh Foundation</div></a>
+                                        <!-- 
+                                        <span class='floating_text' id='finantatori'>Finanțatori</span>
+										<a href='http://www.opensocietyfoundations.org/'><div class='image' id='open_society'>Open Society Foundation </div></a>
+                                        <a href='http://www.studentiq.ro//'><div class='image' id='memoplus'>MemoPlus</div></a>
+                                        <a href='http://www.ratiufamilyfoundation.com/'><div class='image' id='FundatiaRatiu'>Ardor</div></a>
+                                        <a href='http://www.eef.md/'><div class='image' id='eef'>East Europe Foundation</div></a>
+                                        <a href='http://www.mts.gov.md/'><div class='image' id='mdminister'>Ministerul Tineretului si Sportului al Republicii Moldova</div></a> -->
+
+                                        <span class='floating_text' id='parteneri_text'>Parteneri</span>
+
+                                        <a href='http://www.policycenter.eu/'><div class='image' id='PolicyCenter'>Policy Center</div></a>
+                                        <a href='http://www.britishcouncil.org/'><div class='image' id='BritishCouncil'>British Council</div></a>
+                                        <a href='http://www.europuls.ro/'><div class='image' id='europuls'>Europuls</div></a>
+                                        <a href='http://www.cere.ro/'><div class='image' id='cere'>Ce-Re</div></a>
+                                        <a href='http://www.primeromania.ro/'><div class='image' id='prime'>Prime Romania</div></a>
+                                        <a href='http://www.cji.ro/'><div class='image' id='cji'>Centrul pentru jurnalism independent</div></a>
+                                        <a href='http://www.aiesectm.ro/'><div class='image' id='aisec'>Aisec</div></a>
+                                        <!-- ===================================================================================================== -->
+                                        <a href='http://www.cogitus.ro/'><div class='image' id='cogitus'>Cogitus</div></a>
+                                        <a href='http://www.adevarul.ro/international/foreign_policy/'><div class='image' id='foreignPolicy'>Foreign Policy</div></a>
+                                        <a href='http://www.elsa.ro/'><div class='image' id='elsa'>Elsa</div></a>
+                                        <a href='http://www.vipromania.ro/'><div class='image' id='vipromania'>Voluntari pentru idei si proiecte</div></a>
+                                        <a href='http://www.ongtrust.ro/'><div class='image' id='ongtrust'>Trust</div></a>
+
+                                        <!-- ===================================================================================================== -->
+                                        <a href='http://www.leap.ro/'><div class='image' id='leap'>Leap</div></a>
+                                        <a href='http://www.younginitiative.org/'><div class='image' id='younginitiative'>Asociatia young initiative</div></a>
+                                        <a href='http://www.asjc.ro/'><div class='image' id='asjc'>Asjc</div></a>
+                                        <a href='http://osut.ro/'><div class='image' id='osut'>Osut</div></a>
+                                        <div class='clear'></div>
+                                    </div>
+                                    <div class='parteneri' id='parteneri_institutionali'>
+                                        <span class='floating_text' id='sponsori_text'>Sus&#539;in&#x0103;tori</span>
+                                        <a href='http://www.cartier.md/'><div class='image' id='cartier_logo'>Editura Cartier</div></a>
+                                        <a href='http://www.pll.md/ro/'><div class='image' id='biblio_logo'>Biblioteca publica de drept</div></a>
+                                        <span class='floating_text' id='institutii_text'>Parteneri institu&#539;ionali</span> 
+                                        <ul id='institutii'>
+                                            <!-- <span class='floating_text' id='institutii_text'>Parteneri institu&#539;ionali:</span> -->
+                                            <li><a href='http://www.politice.ro/'>Facultatea de &#536;tiin&#539;e Politice SNSPA </a></li>
+                                            <li><a href='http://www.comunicare.ro/'>Facultatea de Comunicare &#537;i Rela&#539;ii Publice SNSPA</a></li>
+                                            <li><a href='http://www.fspub.ro/'>Facultatea de &#536;tiin&#539;e Politice Universitatea Bucure&#537;ti</a></li>
+                                            <li><a href='http://www.filosofie.unibuc.ro/'>Facultatea de Filosofie Universitatea Bucure&#537;ti</a></li>
+                                            <li><a href='http://litere.unibuc.ro/'>Facultatea de Litere din Universitatea Bucure&#x015f;ti</a></li>
+                                            <li><a href='http://www.unibuc.ro/ro/fac_fsas_ro'>Facultatea de Sociologie Universitatea Bucure&#537;ti</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class='parteneri' id='parteneri_media'>
+                                        <span class='floating_text' id='media_text'>Parteneri media</span>
+                                        <a href='http://www.hotnews.ro/'><div class='image' id='hotnews'>HotNews</div></a>
+                                        <!-- <a href='http://www.lumebuna.ro/'><div class='image' id='lumebuna'>Lume Buna</div></a> -->
+                                        <a href='http://www.romaniapozitiva.ro/'><div class='image' id='romaniapozitiva'>Romania Pozitiva</div></a>
+                                        <a href='http://totb.ro/'><div class='image' id='thinkoutsidethebox'>Think Outside The Box</div></a>
+                                        <a href='http://www.facebook.com/carevasazica.vip'><div class='image' id='carevasazica'>Carevasazica</div></a>
+                                        <a href='http://www.studentie.ro/'><div class='image' id='studentiero'>Studentie.ro</div></a>
+                                        <a href='http://startub.unibuc.ro/'><div class='image' id='startub'>startub.unibuc.ro</div></a>
+                                        <!-- <a href='http://www.tvr.ro/tvr_cluj.php'><div class='image' id='tvrcluj'>Tvr Cluj</div></a> -->
+                                        <!-- <a href='http://www.radiotransilvania.ro'><div class='image' id='radiotransilvania'>Radio Transilvania</div></a> -->
+                                        
+
+                                        <div class='clear'></div> 
+                                    </div>
+                                    <div class='clear'></div>
+
+                                </div>	
+                            </div>	<!-- end wrap -->
+                            <div id='footer_mare'>
+                                <div id='footer'>
+                                    <div id='links' class='footer'>
+                                        
+                                    </div><!--
+                                    <div id='contact' class='footer'>
+                                            <h4>Contact</h4>
+                                            <p>office@closer2oxford.ro</p>
+                                            <p>bogdan.draghicescu@closer2oxford.ro<br>
+                                            <span class='detalii'> (asistenta tehnica web - orice probleme legate de site)</span></p>
+                                    </div>
+                                    -->
+                                    <div id='newsletter' class='footer'>
+                                        <script src="../../../../../connect.facebook.net/en_US/all.js#xfbml=1"></script><fb:like href="http://www.facebook.com/pages/Closer2Oxford/162758797069605" width="250" colorscheme="dark"></fb:like>
+                                        <!--<h4>Newsletter</h4>
+                                        <form action='/page/newsletter'>
+                                                <input type='text' name='email'>
+                                                <input type='submit' id='submit' value='>'>
+                                                        
+                                        </form>-->
+                                    </div>
+                                    <div id='credits'>
+                                        Copyright(c) 2021 ARDOR |  Toate drepturile rezervate | Toate logo-urile si sloganurile de pe site sunt proprietate intelectuala inregistrata si nu pot fi reproduse fara acordul explicit al detinatorilor. <br>
+                                            <br /><br />
+                                            <b>Disclaimer</b><br /><i>
+
+                                                Programul educational Closer to Oxford este un program non-profit si nu are o legatura cu universitatea cu acelasi nume, referirea la Oxford avand doar o semnificatie simbolica.
+                                            </i>
+                                    </div>
+
+                                </div>		
+                            </div>		
+
+                            <div id="finantatde">Acest proiect este finantat cu sustinere din partea Comisiei Europene. Aceast publicatie [comunicare] reflecta doar
+                                vederile autorului, iar Comisia nu poate fi facuta  responsabila pentru utilizarea informatiei pe care o contine.</div>
+
+
+                        </body>
+                        </html>

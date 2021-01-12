@@ -1,0 +1,413 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml-strict.dtd">
+<HTML xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+    <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+            <link rel="icon" type="image/png"  href="../../closer2oxford.ro/favicon.html">
+                <link rel="stylesheet" href="var/layout.css" type="text/css">
+                    <title>Closer to Oxford - e timpul pentru argumente!</title>
+                    <link rel="alternate" type="application/rss+xml"  href="rss_feed" title="Stiri Closer2Oxford">
+                        <!-- <link rel="image_src" property="og:image"  href="/images/layout/closer2oxford_fb_white.png" /> -->
+                        <link rel="image_src" property="og:image"   type="image/jpeg"  href="../uploads/2015/06/9/facebook_icon.html" />
+                        <link rel="image_src" type="image/jpeg"  href="../uploads/2015/06/9/icon-facebook.gif" /> 
+						<meta name="description" content="Closer2Oxford pune în valoare oameni şi argumentele lor, în dezbateri online şi publice alături de tineri şi invitați avizaţi"/>
+                        <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9" />
+<script type='text/javascript' src='../js/jquery-1.4.4.min.js'></script>
+<script>var $j = jQuery.noConflict();</script>
+<script type='text/javascript' src='../js/tinymce/tiny_mce.js'></script>
+<script type='text/javascript' src='../js/jquery.form.js'></script>
+<script type='text/javascript' src='../js/fbLoginRegister.js'></script>
+<script type='text/javascript' src='var/javascript.js'></script>
+<script type='text/javascript' src='../js/jquery.hovertip-1.0.min.js'></script> 
+<script type='text/javascript' src='../js/jquery.jgrowl_minimized.js'></script> 
+<link rel='stylesheet' href='../css/jquery.jgrowl.css' media='screen' type='text/css'> 
+<script type='text/javascript' src='../js/jquery.timer-min.js'></script> 
+<meta name='description' content=''/> 
+<meta name='keywords' content=''/> 
+<style>.hovertip{
+    position:absolute;
+    padding:10px 13px;
+    z-index:2;
+    max-width:300px;
+    color:#303030;
+    background-color:#f5f5b5;
+    border:1px solid #DECA7E;
+    font-family:sans-serif;
+    font-size:12px;
+    line-height:18px;
+    text-align:left;
+    }</style> 
+<script type='text/javascript'>$j(document).ready(function(){$j('.tooltip').hovertip({'offset':[20,20]});get_notif();});
+
+if(!Array.indexOf){Array.prototype.indexOf = function(obj){for(var i=0; i<this.length; i++){if(this[i]==obj){return i;}}return -1;}}
+    hashuri = [] ;
+	 var tick_timer= 3000 ;
+ 
+	 function get_notif()
+        {
+		  
+		  //console.log(tick_timer);
+	     
+		  setTimeout(get_notif,tick_timer);
+        
+		   $j.ajax(
+            {
+                url: '/page/notif/show_events',
+                dataType: 'json',
+                data: "{}",
+                success: function(data)
+                    {
+                    $j.each(data,function(index,data){
+                        try
+                            {
+                            if( hashuri.indexOf(data.hash) == -1 )
+                                {
+                                hashuri.push(data.hash);
+                                $j.jGrowl(
+                                    data.str,
+                                    {
+                                        corners:'1px',
+                                        life: data.life,
+                                        header:data.title,
+                                        hash: data.hash,
+                                        sticky: data.sticky,
+                                        close: function(e,m,o)
+                                            {
+                                                $j.ajax({url:'/page/notif/delete_single_event/' + o.hash});
+                                            }
+                                    });
+                                }
+                            }
+                        catch(e){}
+                        })
+                    }
+            });
+        }
+	 </script> 
+ 
+                            
+  <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-19111721-1']);
+  _gaq.push(['_setDomainName', '.closer2oxford.ro']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+    
+                        </head>
+                        <body>
+                            <div id="global_wrap">
+                                <div id="header">
+                                    <a href='../index.html'><div id='logo'><img src='../images/layout/sigla.jpg'></div></a>
+                                    <a class='noExternal' href='http://www.facebook.com/pages/Closer2Oxford/162758797069605'><img src='../images/fb.png' style='height:30px;float:right;clear:right;margin:10px 5px 5px 5px;border:none;'/></a>
+                                    <a href='rss_feed'><img src='../images/feed-icon.png' style='height:30px;float:right;clear:right;margin:5px;border:none;'/></a>
+                                </div>
+                                <div id="meniu">
+                                    <div  id='register_login'>
+
+                                        
+  <a href='#' class='todo' id='login'>Login </a> &nbsp;<a href='register.html' class='todo' id='register'>Register</a>
+    <div id='login_box'>
+		  <form action='https://dev.closer2oxford.ro/page/ro/login_user/logon' method='post' id='user_login_form'>
+					 <div>Email: <input type='text' name='email'/> </div><br />
+					 <div>Pass: <input type='password' name='passwd'/></div><br />
+					 <a href='#' class='password_forgot'>forgot password?</a>
+					 <input type='hidden' value='/page/dezbatere_cluj_vara_2013' name='returnto' class='submiter'/><br />
+					 <input type='submit' value='login' name='btn' class='submiter'/><br />
+		  </form>
+		  
+		  <form action='https://dev.closer2oxford.ro/page/ro/login_user/reset_user_pw' method='post' id='user_reset_form'>
+					 <div>Email: <input type='text' name='email'/> </div><br />
+					 <a href='#' class='password_forgot'>login?</a>
+					 <input type='hidden' value='/page/dezbatere_cluj_vara_2013' name='returnto' class='submiter'/><br />
+					 <input type='submit' value='reset' name='btn' class='submiter'/><br />
+		  </form>
+		  
+    </div>
+    
+                                    </div>
+                                    <div id='menu1' style='margin:auto;'> <ul id='meniu_prinicpal'><li><a href='contacte/index.html'> Contact </a></li>
+<li><a href='clubdebate/index.html'> Cluburile </a></li>
+<li><a href='oamenii/index.html'> Oamenii </a></li>
+<li><a href='proiectul/index.html'> Proiectul </a></li>
+<li><a href='home/index.html'> Acasa </a></li>
+</ul></div><!--end menu-->
+                                </div>
+                                <div id="main"> 
+                                    <!--<div id='stiri-padding'>
+        <div id='stiri_back'>
+                {stiri} 
+    
+               
+        </div>-->
+        
+</div>
+<div  id="content-padding">
+        <div id='sidebar_menu'>
+                <span class='tr'></span>
+                <span class='tl'></span>
+                <span class='br'></span>
+                <span class='bl'></span>
+                <span id="filler"></span>
+                    
+                <ul></ul>
+                
+                <div class='clear'></div>
+        </div>
+        <div id="content">
+                <span class='tr'></span>
+                <span class='tl'></span>
+                <span class='br'></span>
+                <span class='bl'></span>
+                <span id="filler"></span>
+                <p><strong><em>Dezbatere publica Cluj Napoca</em></strong></p>
+<p><strong><em><img title="Dezbatere publica Cluj" src="../uploads/2013/07/31/dezbatere_C2O_ARDOR_Cluj_George_Jigl%c4%83u_Andreea_O%c8%9bet_Irina_Negru%c8%9biu_Ovidiu_Podaru.euk9oc.html" alt="dezbatere_C2O_ARDOR_Cluj_George Jiglău_Andreea Oțet_Irina Negruțiu_Ovidiu Podaru" width="600" height="450" /><br /></em></strong></p>
+<p><strong>Cluj</strong> &ndash; luni, 1 iulie, la Facultatea de Științe Politice Administrative și ale Comunicării<br /> Echipele:</p>
+<p><strong>Invitati: </strong></p>
+<p><strong>Echipa afirmatoare: George Jiglău - cercetător la C</strong><strong>entrul pentru Studiul Democrației și Andreea Otet &ndash; studenta in anul III la facultatea de Drept UBB</strong></p>
+<p><strong>Vs </strong></p>
+<p><strong>Echipa negatoare: Ovidiu Podaru - profesor &icirc;n cadrul Facultății de Drept și avocat &icirc;n drept administrativ și contravențional si Irina Negrutiu &ndash; studenta in anul III la facultatea de Drept UBB</strong></p>
+<p><strong>Moderator, Bianca Prunea</strong></p>
+<p><strong>&nbsp;</strong></p>
+<p><strong>Bianca Prunea:</strong><strong><em>&nbsp;</em></strong></p>
+<p>Bine ati venit si multumesc si&nbsp; invitatilor pentru prezenta. O sa va spun cam intr-un minut jumatate de ce sunteti aici.</p>
+<p>Sunteti aici pentru ca acesta este evenimentul final de la Closer to Oxford, un proiect de debate online care a avut loc in ultimele luni in mai multe centre universitare din tara si le aveti in fata dumneavoastra pe castigatoarele acestui concurs, colegele mele de la drept, Irina si Andreea, care vor dezbate alaturi de doi profesori pe motiunea &ldquo;E timpul ca amenzile sa fie proportionale cu veniturile.&rdquo; Inainte va voi imparti niste biletele pe care va rog sa votati acum, inainte de a auzi orice argument din partea echipelor pentru ca vrem sa vedem cum va influenteaza pe voi o dezbatere la care asistati si vrem sa vedem exact care va fi finalul, rezulatul final. Aceste voturi vor fi secrete pana la sfarsit, dupa care vom face o comparatie si va vom spune exact cine a castigat si care a fost pozitia voastra ca si spectatori inainte de dezbatere. Nu vreau sa lungesc acest discurs mai mult decat e necesar, vreau sa va spun doar ce se va intampla. Veti auzi 4 discursuri, 2 afirmatoare, 2 negatoare pe aceasta motiune, intre discursuri vorbitorii vor pune intrebari reciproc, iar la sfarsit, dupa cele 4 discrusuri va avea loc o serie de intrebari din partea voastra, de discutii diverse, prin care puteti sa le puneti intrebari referitor la ce ati auzit, puteti sa le aduceti sugestii , daca vi se pare ca nu au adus unele argumente puteau fi imbunatatite, daca o anumita idee care voua vi se parea interesanta, nu a fost prezentata in meci. Asta puteti face la sfarsit. Vom incepe cu echipa afirmatoare, urmand un discurs negator, iar dupa primele doua discursuri va exista o serie de intrebari din partea echipei adverse.</p>
+<p>Inainte de a incepe dezbaterea propriu-zisa, ii voi ruga pe fiecare dintre invitati sa se prezinte, in ordinea in care vor vorbi ca sa nu facem discriminari.</p>
+<p>Buna, numele meu este Andreea Otet, sunt studenta la Drept in anul III, si sunt aici datorita faptului ca am castigat in meciul online in care am sustinut pozitia opusa, adica cealalta parte a mesei, dar cred ca pana la urma acesta e sensul dezbaterilor, sa poti sustine, ambele pozitii.</p>
+<p>Buna, numele meu e George Jiglau, sunt doctorand, cercetator si profesor &ndash; asa cum sunt prezentat aici in facultate, in mediul academic &ndash;&nbsp; la departamentul de stiinte politice din cadrul facultatii. A trecut cam un an de la ultimul meu meci de dezbateri asa ca pe de o parte ma streseaza gandul ca sunt aici, alaturi de trei experti in dezbateri, pe de alta parte ma si motiveaza , asa ca sper sa avem o dezbatere cat mai placuta.</p>
+<p>Ovidiu Podaru, sunt conferentiar in cadrul Facultatii de Drept, probabil ca am fost invitat aici pentru ca predau si drept contraventional . Acum eu nu stiu foarte multe despre miscarea de debate, nu am mai fost niciodata, sper sa ma descurc, dar nu stiu in ce masura va fi asa.</p>
+<p>Numele meu este Irina Negrutiu, sunt studenta la Facultatea de Drept, ma bucur sa am onoarea sa am doi adversari si un coleg de echipa extrem de buni, si sper sa va placa meciul de astazi, ma bucur ca joc in pozitia in care cred si pe care am sustinut-o si in mediul online cu tot dragul si sper ca debate-ul sa fie unul bun.</p>
+<p>O sa va rog sa votati acum pe biletele, da sau nu, ce credeti dumneavoastra si vom incepe dezbaterea cu primul discurs afirmator. Pana se aduna biletele, dorim sa va spunem ca prin acest meci, ceea ce vrem sa facem , este sa popularizam debate-ul, in toata tara si asta pentru ca in prezent nu avem suficienti traineri ca sa existe cluburi in fiecare oras al tarii, asa cum exista In Cluj si in marile centre universitare.&nbsp; Incercam sa popularizam debate-ul ca&nbsp; forma de exercitiu de vorbit in public, prima data in mediul online, pentru ca se spune ca prima frica a oamenilor e cea de a vorbi in public si doar apoi frica de moarte. Nu vad de ce, dar se spune ca asa este, ca tuturor ne este frica sa vorbim in fata unui public, chiar daca nu este neaparat un public foarte larg, primul pas pe care-l facem noi este sa incercam sa invatam studentii sa dezbata chiar daca este online, dupa care speram noi, ca vor incepe sa dezbata si offline si vor ajunge sa faca parte dintr-un club de dezbateri asa cum este cel de la noi din facultate. Asa ca dat fiind ca s-a finalizat partea cu votul, vom incepe dezbaterea propriu-zisa, pentru ca de asta suntem aici si am asteptat cu nerabdare sa vedem ce vor spune invitatii. Discursurile sunt de 5 minute, urmand o serie de 3 minute de intrebari, asa ca fara alte introduceri, ii dau cuvantul Andreei .</p>
+<p><strong><em>&nbsp;</em></strong></p>
+<p><strong>Discurs Andreea Otet (afirmator A1)</strong></p>
+<p>Multumesc mult pentru introducere, voi incepe prin a mentiona ca este o provocare pentru mine sa joc azi impotriva domnului profesor, si o onoare sa joc impotriva Irinei care este si coechipiera mea. Sper sa fie bine pana la final. Motiunea pe care vom dezbate astazi este daca amenzile ar trebui sa fie proportionale cu veniturile sau nu.&nbsp; Inainte de a intra in dezbaterea propriu-zisa, ma voi opri asupra unor termeni.&nbsp; Vorbim despre amenzi, in ideea in care vorbim despre niste sanctiuni pecuniare, aplicate persoanelor care comit o contraventie, indiferent in ce domeniu. In momentul in care ma gandesc la venituri am in vedere veniturile pe care persoana respectiva le-a declarat la finante ca le are la finalul anului anterior. Scopul nostru astazi nu este neaparat sa gasim un mecanism de implementare a acestei motiuni. Acest mecanism poate fi implementat de specialisti in domeniu, poate fi implementat de guvern, scopul nostru astazi, este sa analizam principiul, sa vedem daca el ar merita sau nu implementat si vom lasa pe seama altor oameni implementarea lui. Cu toate acestea noi ne-am gandit la o varianta, nu e o varianta exclusiva, dar e o varianta pe care o putem implementa in vederea acestei idei.&nbsp; Varianta noastra suna in felul urmator : de exemplu am putea sa aplicam nu neaparat un minim si un maxim cum exista la ora actuala, ci un minim si un maxim evaluat in procente in raport de care se vor aplica amenzile.&nbsp; Evident acest mecanism poate sa fie si mai sofisticat, in ideea in care sa poti lua in considerare variabile precum veniturile pe care o persoana le datoreaza cu titlu de intretinere.&nbsp; Evident dupa cum spuneam , nu asta vom discuta astazi, mecanismele ramanand pe seama altor persoane.</p>
+<p>In ceea ce priveste pozitia noastra, am pornit de la ideea ca in varianta existenta la ora actuala, in care amenzile sunt inscrise intr-un minim si maxim nu este neaparat o varianta fericita pentru ca lasa loc la doua ipoteze neacoperite sau care lasa loc la inegalitati. Vorbim pe de o parte despre persoanele care au venituri foarte mari, care comit contraventii, sunt sanctionati din punct de vedere contraventional cu o amenda, dar acea amenda este mult prea mica ca amenda sa-si atinga scopul, motiv pentru care implementarea acestui sistem nu poate sa asigure scopul amenzii.&nbsp; A doua ipoteza la care ne-am gandit ca nu este acoperita in varianta existenta la ora actuala este cea in care o persoana nu are venituri foarte mari, nu poate sa-si achite amenda, sau ar putea sa o achite dar nu in totalitate, motiv pentru care nu o achita deloc.</p>
+<p>Evident ca atunci cand descoperi un sistem care nu functioneaza, ideea este sa il schimbi. Recunoastem ca pot sa apara dificultati in ceea ce priveste implementarea sistemului, dificultati financiare, dificultati in ceea ce priveste inventarierea veniturilor persoanelor, doar ca trebuie sa acceptam ca orice schimbare in bine presupune in acelasi timp si un sacrificiu si ca Romania trebuie sa se debaraseze de ideea ca un lucru este prea greu sau ca un lucru implica prea mult sacrificiu, cu simplul scop de a evolua, de a te dezvolta.</p>
+<p>Ceea ce vrem noi sa scoatem in evidenta, este faptul ca nu vrem neaparat mutarea accentului de la fapta-sanctiune la venit-sanctiune, ceea ce vrem noi sa propunem sunt doua variabile. In primul rand, cea tinand cont de fapta pe care a comis-o persoana respectiva, adica de pericolul pe care fapta l-a adus in societate,&nbsp; pericolul social al faptei, si in al doilea rand, venitul pe care o persoana il detine, motiv pentru care, luand in considerare aceste doua variabile nu se va ajunge la situatia in care o persoana extraordinar de bogata va fi sanctionata extraordinar de excesiv raportat la o fapta mica, pentru ca va conta atat fapta, dupa care se va aplica pedeapsa sau amenda si in functie de venit. La fel o persoana foarte saraca, cu venituri mai mici, va putea fi sanctionata intr-un cuantum in care sa isi permita.</p>
+<p>In principiu cam acestea sunt liniile directoare si principiul la care ne-am gandit, si cam acestea ar fi ratiunile pentru care merita implementat acest sistem. Va multumesc!</p>
+<p>&nbsp;</p>
+<p><strong>Intrebari adresate echipei afirmatoare:</strong></p>
+<p><strong>&nbsp;</strong></p>
+<p><strong>Ovidiu Podaru: </strong>Stiu ca prezenta dezbatere depaseste cadrul juridic, insa nu putem ignora in totalitate aspectul acesta si atunci intrbarea mea este principiul acesta al amenzilor care trebuie sa fie proportionale cu veniturile vi se pare ca respecta Art. 68 din Constitutie? Sau modificam Constitutia si apoi &ndash; ca si asa sunt multe discutii &ndash; si apoi impunem acest principiu? <strong>&nbsp;</strong></p>
+<p><strong>Andreea Otet </strong>Nu putem sa ignoram faptul ca da, s-ar putea sa contravina intr-o oarecare masura ideii de nediscriminare, dar in aceeasi masura ar trebui sa vorbim despre persoanele cu venituri mici care platesc o anumita suma de bani, suma pe care nu si-o permit neaparat, fiind excesiva raportat la situatia lor si atunci de ce nu am vorbi si in acest caz de o discriminare?</p>
+<p><strong>Ovidiu Podaru: </strong>Credeti ca sistemul asta pe care il propuneti e cea mai buna varianta pentru a diminua diferentele care exista, sau am putea imagina si altceva adica vorbind de amenzile de circulatie, unul care isi permite sa plateasca si 100 si 1000 si 10 000 de euro , sigur ca il doare cu cat e suma mai mare, dar o alta situatie,de pilda, cu o sanctiune complementara sa un sistem mai coerent de sanctiuni complementare nu ar fi o varianta mai buna?</p>
+<p><strong>Andreea Otet</strong>: Asta e varianta pe care noi am propus-o astazi... acum, evident ca intotdeauna se pot gasi solutii, noi ca si echipa afirmatoare am propus-o pe asta...</p>
+<p><strong>Ovidiu Podaru: </strong>A treia intrebare si ultima... Ati spus asa, astazi discutam despre principiu nu despre implementarea lui, ca asta nu e treaba noastra, ok... Dar intrebarea mea e urmatoarea, daca principiul asta nu poate fi in concret implementat atunci mai are rost sa discutam despre principiu? Adica, daca macar nu tatonam cat de cat posibilitatile de interpretare discutam de principiu asa ca ne adunam aici?</p>
+<p><strong>Raspuns George Jiglau:</strong>&nbsp; Consideram ca un principiu e foarte usor de implementat pentru ca nu este foarte diferit ca implementare de ce se intampla acum, atat ca schimbarea majora si care credem ca o aducem, mai aproape de realitate e ideea de egalitate, sa zicem, care indiferent de venit, e reflectata mai bine daca aplicam amenzile in functie de procente si nu in functie de cuantumul fix care exista acum. Felul in care oamenii&nbsp; platesc sau nu platesc, si tot ce urmeaza dupa nu difera foarte mult ca logistica de ceea ce se intampla acum.</p>
+<p><strong>Ovidiu Podaru: </strong>Eu as putea sa va dau un exemplu, mie mi se pare ca discutia asta despre echitate, la nivel de princpiu, ca sa va dau exact un exemplu, tot asa, ar trebui sa calculam veniturile dupa cum se declara la finante. Sunt sute de bogati bolnavi de cancer. Cum ar trebui sanctionati contraventional raportat la faptul ca isi plateste acel tratament care te omoara, dar banii aia nu se declara la finante?</p>
+<p><strong>Andreea Otet: </strong>&nbsp;Daca este sa ne raportam la venitul declarat la finante se pot lua totusi in calcul si alte variabile, eu ma gandeam la ipoteza in care chiar daca o persoana are un venit foarte mare, are o alte persoane in intretinere si evident o parte din veniturile ei se duce catre acele persoane. Putem include si alte variabile, de genul celor spuse de dumneavoastra, pot fi luate in calcul in acest sistem mai ales ca si la ora actuala exista tot felul de mecanisme informatice care evidentiaza problemele de felul acesta.</p>
+<p>&nbsp;</p>
+<p><strong>Ovidiu Podaru</strong>: Asta imi aduce aminte de un dicton:&rdquo; ce e simplu e gresit sau fals, ce e complicat e inutilizabil&rdquo;</p>
+<p>&nbsp;</p>
+<p><strong>Discurs Ovidiu Podaru (negator 1)</strong></p>
+<p>Eu nu cred ca o sa folosesc cele 5 minute.&nbsp; Nu stiu, dar prima data cand am vazut motiunea asta, sincer eu fiind avocat, argumentez cam orice, dar sunt unele chestiuni pe care nu vreau sa le argumentez, pentru ca sunt contra principiilor mele generale in viata. Si asta este unul dintre ele, pentru ca eu sunt de acord ca in principiu amenzile nu ar trebui sa fie proportionale cu veniturile.</p>
+<p>Primul lucru care mi-a venit in minte atunci cand am citit motiunea a fost legat de celebra fraza a lui Marx: &ldquo;De la fiecare dupa posibilitati, fiecaruia dupa nevoi&rdquo;. Adica, la nivel filosofic, ce vreau sa va spun este ca aceasta motiune este una mai degraba comunista, socialista decat liberala. Or eu, ca mentalitate sunt liberal si nu am cum sa sutin asa ceva. Dar vreau sa va spun un singur argument, juridic, pentru care nu ni se pare ca aceasta motiune ar trebui sa stea in picioare.&nbsp; Se vorbeste, sau discutam despre amenzi contraventionale si vreau sa stiti, poate unii dintre dumneavoastra nu stiti, in materie contraventionala, exista contraventie si deci, te sanctioneaza indiferent daca fapta este savarsita cu intentie sau din culpa. Adica nu conteaza atitudinea mentala cu privire la fapta. Si atunci imaginati-va doua situatii paralele: o persoana care lucreaza de dimineata pana seara ( si bineinteles castiga ca atare), adica 16 ore pe zi , vine rupt de oboseala acasa si la un moment dat nu observa un &ndash; ca tot veni vorba de amenzi de circulatie &ndash;&nbsp; nu observa un semn de cedeaza trecerea si cauzeaza un accident cu victime sau fara victime, dar sa zicem ca e o contraventie destul de grava si plateste o amenda potrivit veniturilor sale , adica una foarte mare. Vine urmatorul, de la discoteca, sau nu are importanta de unde, nu are niciun venit si intra cu intentie pe drum, fara prioritate si o sa fie amendat de 10 ori mai putin. Unde este fundamentul echitabil al acestui lucru? Si atunci sigur, cei care afirma ar putea veni cu un amendament: de acord, dar sa facem chestia asta doar pentru contraventiile savarsite cu intentie, sa ii sacntionam doar pe cei care o fac intentionat. Le-as replica inca de pe acum ca asta nu se poate. In majoritatea situatiilor, nu ai cum sa stii daca contravenientul ala a trecut din culpa sau intentie pe rosu sau a savarsit in general fapta din intentie sau culpa.&nbsp;</p>
+<p>Pe de alta parte, si cu asta o sa inchei, probabil ca scopul este acela de a asigura un soi de proportionalitate a sanctiunilor, adica sa te doara la fel. Pentru faptele savarsite din culpa un asemnea sistem nu isi atinge rolul sanctionator pentru un motiv foarte simplu: daca eu vin astazi sau cineva vine foarte obosit si trece, uita de semafor, de semnul de cedeaza trecerea probabil din cauza oboselii o sa o faca si data viitoare, indiferent cat a platit. Si atunci alta varianta ar fi sa renunte cu totul la masina, dar asta mie mi se pare ca este deja exagerat.&nbsp; Multumesc!</p>
+<p>&nbsp;</p>
+<p><strong>Intrebari adresate echipei negatoare:</strong></p>
+<p><strong>George Jiglau: </strong>&nbsp;Am eu o intrebare, ati spus cuvintele astea, ca cel putin in acceptiunea&nbsp; noastra ar trebui ca amenda sa doara la fel si ca de asta propunem noi acest sistem si e corect. Dar nu credeti ca atunci cand vorbim despre venit si mai ales despre discrepante mari intre cei mai bogati si cei mai saraci intreaga perceptie asupra vietii si asupra felului in care te doare ceva e schimbata de venitul pe care il ai? Adica nu credeti, ca unul care trece peste un semn de cedeaza trecerea cu o Dacie veche pentru ca e obosit are o cu totul alta perceptie si e afectat intr-un mod cu totul diferit decat unul care se plimba intr-un Audi, intr-o masina de genul asta,&nbsp; care isi permite nu stiu cate masini de genul asta si a mers la discoteca si asa mai departe? Deci e vorba de perceptia asupra vietii si a felului in care sunt afectati diferit.</p>
+<p><strong>Ovidiu Podaru:</strong>&nbsp; Da, dar eu cred ca sistemul in sine nu este bun in sensul ca s-ar putea gasi un alt sistem in care sa te doara relativ la fel, pentru ca o egalitate absoluta nu exista, in general. Dar ar putea sa se propuna alte sisteme, de pilda,in cazul limitei minime si maxime a unei&nbsp; contraventii sa fie marita distanta dintre ele si sigur sa fie aplicata inclusiv in functie de atitudinea cu care s-a savarsit contraventia. Unuia care este mai bogat sa ii dai mai aproape de limita maxima, iar celui mai sarac mai aproape de limita minima, dar in concret nu&nbsp; ca principiu de inserat in lege. Si doi,&nbsp; cred ca exista si un sistem al pedepselor complementare care ar putea la o adica functiona. Stim foarte bine ca daca stai cu carnetul suspendat 30 de zile te doare mai tare decat poate 500 de lei amenda si pe ala bogat il doare sigur mai tare. Adica iti creeaza asa un discomfort in viata incat data viitoare te mai gandesti si eu cred ca acest sistem ar fi , nu stiu, mai bun decat celalalt.</p>
+<p>&nbsp;</p>
+<p><strong>Discurs George Jiglau (afirmator A2)</strong></p>
+<p>O sa incep mai intai prin a aduce cateva contraargumente celor auzite de la domnul&nbsp; profesor. In primul rand ideea asta de la care ati pornit din punct de vedere filosofic, ca sistemul pe care il propunem este unul comunist. Nu cred ca este vorba de asa ceva, dimpotriva, daca e sa ne raportam la ideologii si la doctrine, a avea o cota si acum ma raportez cumva la ideea de impozitare, pentru ca este cat se poate de asemanatoare, a avea o cota unica asa cum chipurile se foloseste si la noi acum, sau cel putin cam acesta este principiul, e un principiu fundamental&nbsp; de dreapta, nicidecum comunist.&nbsp; Indiferent ca folosim cota unica sau progresiva la impozitare sau la amenzi, inevitabil se ajunge la faptul ca care cei care au venituri mai mari, platesc mai mult decat cei care au venituri mai mici. Or asta daca e sa o luam asa, inseamna comunism pe linie, mereu cand percepem&nbsp; bani mai multi de la oameni ajungem la comunism, or pana la un punct pot fi de acord cu asta, dar nu cred ca putem sa punem problema la modul asta. Deci faptul ca noi propunem aplicarea de amenzi raportat la procentul din venit, procent unic sau cu o marja mica de manevra asa cum a spus colega mea, credem ca e o premisa fundamental de dreapta.</p>
+<p>Dar nu credem ca asta este principala problema aici, daca e de dreapta sau de stanga sau comunista sau de alta natura, trebuie sa ne gandim intotdeauna care este scopul amenzii. Scopul amenzii este &ndash; da &ndash; foarte adevarat cel spus de dumneavoastra, acela ca cel care savarseste o contraventie, trebuie sa simta ca este pedepsit. Or, scopul amenzii este acela de a aplica o sanctiune juridica financiara, pentru ca de asta vorbim de amenzi si de asta nu cred ca discutia legata de sisteme complementare este foarte relevanta aici, ele sunt utile nu neg asta. Intr-adevar, este foarte important ca cel care savarseste o infractiune in circulatie sau de alta natura foarte grava sa fie pedepsit prin retragerea permisului sau prin restrangerea unor drepturi pana la urma. Dar acum vorbim despre amenzi, despre bani, or cand vorbim despre bani, e important ca cei care au venituri mult mai mari si care au, cum spuneam atunci cand puneam intrebarea, o cu totul alta perceptie asupra vietii, raportat la venitul pe care-l&nbsp; au, sa simta asta proportional cu venitul lor. Si, sa nu uitam, cum spuneam, care este scopul amenzii, acela de a fi platita si de a avea acest rol de &ldquo;reeducare&rdquo; daca vreti. Si cum a spus foarte bine colega mea, cei care au venituri foarte mari si amenda e mica, nu isi vor da seama, nu vor simti efectul asta de reeducare, cei care au venituri foarte mici si primesc o amenda foarte mare, nu o pot plati si atunci amenda nu e platita, nu isi atinge efectul, deci e clar ca actualul sistem poate fi failibil din ambele puncte de vedere.&nbsp;</p>
+<p>O alta chestiune care a aparut in discutie si pe care cumva colega mea a contracarat-o inca de la inceput, anticipand ideea asta, ca e greu de implementat.&nbsp; Ce se intampla cu bolnavul de cancer care plateste tratament si&nbsp; sigur ca asta ii reduce din veniturile pe care le declara, e o situatie concreta, e reala, poate ca sunt suficienti oameni in situatia asta, dar nu cred ca asta afecteaza fundamental principiul, la fel ca ideea ca s-ar putea ca unii sa nu declare tot.&nbsp; Dar asta e treaba Garzii Financiare si asa mai departe, sa se asigure ca cei care declara venituri o fac asa cum trebuie.&nbsp; La fel, si bolnavul de cancer care plateste un tratament, ar trebui ca atunci cand savarseste o contraventie, sa isi dea seama ca asta ar putea sa ii afecteze tratamentul pe mai departe, deci nu vad de ce ar fi mai greu de implementat sistemul asta. Plus ca si dumneavoastra ati spus mai devreme ca daca avem un cuantum minim si un cuantum maxim intre care se poate varia, iar celui cu venituri mai mari sa i se dea cuantumul maxim, iar celui cu venituri mai mici, cuantumul minim, ni se pare ca asta sustine foarte mult ceea ce propunem noi, exact acelasi lucru, doar ca in afara de procente e vorba de cuantumul minim si maxim, pana la urma aici ramane la latitudina legiuitorului cum reglementeaza cuantumul minim sau maxim. Dar in principal, aici ati fi de acord cu noi ca cei cu venituri mai mari ar trebui sa plateasca mai mult. Una peste alta, pana la urma este vorba despre a asigura egalitate si de a ne asigura ca scopul amenzii este atins. Si repet, felul in care oamenii isi percep acea amenda, pentru ca vorbim despre bani, difera in functie de veniturile proprii, iar actualul sistem e evident mult mai failibil din mai multe puncte de vedere decat cel pe care il propunem noi si care asigura o echitate mult mai mare si in acelasi timp si sanse mai mari ca scopul amenzii sa fie atins.</p>
+<p>&nbsp;</p>
+<p><strong>Discurs Irina Negrutiu (negator n2)</strong></p>
+<p>Inainte sa incep, filosofia alegerii pozitiei negatoare, in cadrul dezbaterii de astazi, a fost ca mai bine joc cu domnul profesor, in loc sa joc impotriva lui. Acestea fiind spuse, urmeaza sa va prezint in continuare cazul negator si sa va explic de ce consider ca pozitia noastra de astazi este nu numai cea preferata mie, dar si cea corecta. In primul rand, voi atinge doua puncte,&nbsp; cel referitor la scopul acestei masuri, pe care a propus-o echipa afirmatoare, tocmai in considerarea faptului ca actualul sistem nu este bun pentru ca nu isi atinge scopul si a doua ca exista alte solutii preferabile celei propuse astazi. Referitor la primul punct, referitor la faptul ca scopul este&nbsp; asigurarea echitatii, si faptul ca trebuie sa se asigure o egalitate, o solutie mai buna, cea mai buna solutie pentru aceasta problema sesizata este, cum a spus si domnul profesor, sa modificam limitele amenzilor astfel incat sa putem sanctiona, in concret, fiecare contravenient in functie nu doar de fapta sa, cat si de circumstantele sale personale.&nbsp; Atunci vom putea sactiona corespunzator si pe cei cu venituri foarte mici si pe cei cu venituri mai mari, dar tinand cont in primul rand de fapta pe care a savarsit-o.</p>
+<p>Apoi referitor la ceea ce spun ei, ca implementarea acestui sistem va face ca si cei saraci sa isi plateasca amenzile, ca toata lumea sa isi plateasca amenzile si se considera ca acest sistem este echitabil, la nivel practic acest lucru nu se va intampla. In primul&nbsp; rand pentru ca cei bogati vor refuza sa isi plateasca amenzile, tocmai pentru ca le considera inechitabile, lucru care se intampla si in Finlanda actualmente, spre exemplu, una din tarile care au implementat masura propusa astazi. Oamenii se gandesc deja sa isi paraseasca tara natala pentru alte sisteme in care&nbsp; considera ca nu sunt sanctionati pentru faptul ca castiga mai mult, decat la nivel de taxe, or nu vorbim despre taxe, ci despre o sanctiune.&nbsp; Nici macar la nivel de rezolvare a eficientei sanctionarii contravenientilor acest lucru nu se intampla, nu-i face sa nu mai savarseasca aceste contraventii pentru ca s-a constatat ca, considerand acest sistem inechitabil ei continua sa savarseasca contraventii.</p>
+<p>Referitor la alte solutii mai usor de implementat am vorbit despre faptul ca vom putea avea sanctiuni complementare, care nu creeaza acest sentiment de inechitate si nu ofera dorinta de a veni in contra sistemului&nbsp; si chiar de a isi declara fals veniturile ca sa poata scapa de amenzile pe care le considera prea mari. Acesta fiind debate-ul de astazi, consider ca sistemul propus are foarte multe puncte slabe pe care nu le putem compensa decat ajungand la adoptarea unui alt sistem sau imbunatatind sistemul actual.</p>
+<p>&nbsp;</p>
+<p><strong>Ovidiu Podaru: </strong>&nbsp;Bun, acum mai mult decat o intrebare, ar fi o clarificare, ca raspuns la ceea ce s-a spus legat sustinerea noastra la nivelul valorilor sanctiunilor.&nbsp; Noi am spus asa: presupunand ca anumite limite minime si maxime ar fi un pic mai distantate decat in momentul de fata, astfel incat in concret s-ar putea aplica amenzi diferite.&nbsp; Insa noi nu am spus ca acest procent, trebuie sa se aplice pe considerente de venit, ci ar putea implica indirect si venitul. Ceea ce trebuie sanctionat in primul rand este atitudinea, adica sigur poate ca iti dai seama dupa masina nu ce venituri are neaparat, dar cam ce avere are persoana, asa o chestie aproximativa.&nbsp; Adica sa ne gandim la o situatie in care &ldquo;X&rdquo; a castigat acum nu stiu cat timp 10 milioane de euro la loto. Ii baga in banca, dar nu in banca, ca da faliment. El nu are niciun venit, cheltuie de acolo, sistemul asta pe care il propuneti nu il atinge deloc. Dar atitudinea lui din Q7 s-ar putea sa fie absolut revoltatoare pentru orice politist si pentru orice cetatean de buna-credinta. Si atunci eu am spus ca, pe de alta parte, exista oameni de afaceri sau oameni extrem de bogati care au muncit fiecare ban si care stiu care este valoarea banului si pentru care o amenda de 100 sau de 200 de lei conteaza pentru ca sunt niste bani pe care i-au muncit si o asemenea amenda mica isi poate atinge rolul preventiv chiar si in cazul lor. Si atunci problema se pune altfel, in situatii concrete, in functie de toate aceste circumstante,&nbsp; omul care sfideaza agentul constatator sa fie amendat la maxim. Si daca ii spune &ldquo;pay ce crezi ca imi faci tu cu 200 de lei ca eu platesc o suma de asta in fiecare zi si tot nu ma afecteaza? &ldquo; atunci ii dai in fiecare zi amenda maxima si pana la urma o sa se linisteasca. Pe de alta parte sistemul pe care l-am propus noi nu are nicio problema de ordin constitutional in sensul ca se da o amenda in functie de atitudinea fiecaruia, deci pot da o amenda sau alta . De ce nu? Daca din start legea porneste de la un sistem inechitabil, atunci este o problema. <strong>&nbsp;</strong></p>
+<p><strong>&nbsp;</strong></p>
+<p><strong>Andreea Otet:</strong>&nbsp; Ceea ce spunem si cand am costruit sistemul pe care l-am prezentat am luat in considerare 2 variabile:<strong> </strong>pe de o parte fapta &ndash; ca principala variabila, dupa care si in ipoteza in care o persoana foarte bogata comite o fapta ilegala ar urma sa ii fie aplicata sanctiunea si in functie de fapta si in functie de venit. <strong>&nbsp;</strong></p>
+<p><strong>&nbsp;</strong></p>
+<p><strong>Ovidiu Podaru: </strong>Problema este ca nu ai cum sa iti dai seama daca respectivul a comis fapta din culpa sau intentionat, esti intr-o intersectie si nu acorzi prioritate si mor 20 de oameni din cauza prostiei tale si spui: &ldquo;Nu am vrut&rdquo;. Erai singur in masina, nu ai de unde sa stii daca chiar nu a vrut si ca era obosit sau pur si simplu nu a vrut sa respecte regula.&nbsp; <strong>&nbsp;</strong></p>
+<p><strong>Andreea Otet: </strong>Acelasi lucru s-ar intampla si daca ai fi obligat sa sanctionezi o persoana intre limita minima si cea maxima. Adica nu e dificultate care sa apara exclusiv la nivelul planului nostru.</p>
+<p>&nbsp;</p>
+<p><strong>Ovidiu Podaru:&nbsp; </strong>Nu stiu daca este chiar asa, pentru ca acolo daca acolo aplici sanctiunea, amenda&nbsp; ce-o fi, ii dai mai spre minim, aici pur si simplu nu o sa aplici sistemul adica, ai o indoiala daca fapta e comisa din culpa sistemul se aplica sau e cu intentie sistemul se aplica&nbsp; <strong>&nbsp;</strong></p>
+<p><strong>George Jiglau </strong>Credem ca e mai putin relevant daca fapta este din culpa,da&nbsp; sunt de acord cu ce spuneti dumneavoastra ca argumente cu un singur amendament: faptul ca nu trebuie sa va raportati la cazuri extreme: adica la cel care a castigat la loto este un caz de exceptie, cel care ia amenda de 200 de lei in fiecare zi, iarasi sunt exceptii, aici discutam despre un principiu care sa se aplice la intreaga societate, iar acolo sunt tot felul de oameni care variaza de la venituri foarte mici la venituri foarte mari. Pentru situatiile extreme din fiecare categorie, fiecare sistem are probleme la aplicare, dar ne referim la principiu in general. <strong>&nbsp;</strong></p>
+<p><strong>Ovidiu Podaru </strong>E adevarat, doar ca suntem in Romania si noi cu principiile nu ne prea descurcam. Am incercat sa vorbesc de sisteme extreme, exemple extreme pentru ca cred ca le intelege toata lumea. Oricum la final, nu o sa existe niciun fel de echitate daca aplicam acest sistem.</p>
+<p><strong>George Jiglau:&nbsp; </strong>Asta e separat de ce discutam astazi<strong>&nbsp;</strong></p>
+<p><strong>Ovidiu Podaru:</strong> Da, asa este, numai ca eu sunt un pic mai pragmatic si imi place sa discut in concret.</p>
+<p>&nbsp;</p>
+<p><strong>Irina Negrutiu: </strong>Spuneati la un moment dat ca practic doriti sa faceti si ceea ce ati propus&nbsp; astazi, este sa sanctionam o persoana pentru o contraventie, luand in calcul si venitul sau. Dar nu este un criteriu care va genera un caracter de inechitate mult mai pronuntat decat este sistemul de fata eventual adaugandu-i-se si sanctiuni complementare?<strong>&nbsp;</strong></p>
+<p><strong>George Jiglau:</strong> De acord, sunt de acord ca trebuie sa existe si masuri complementare si sa se ia in calcul si intregul context cand se savarseste o astfel de infractiune sau orice fel de contraventie. Dar cand discutam despre amenzi, discutam de bani, de asta ne raportam la venit. Pentru ca in sine amenda reprezinta plata unei sume de bani si acea suma de bani reprezinta o parte din venit.&nbsp; Toate celelalte chestiuni, ca se poate retine permisul,ca se face munca in folosul comunitatii in plus, nu reprezinta o problema pentru sistemul nostru pentru ca nu sunt excluse de ceea ce propunem noi.</p>
+<p>&nbsp;</p>
+<p><strong>Ovidiu Podaru:&nbsp; </strong>Da, nu sunt excluse, dar daca am apela la ele, am mai avea nevoie de sistemul celalalt?<strong>&nbsp;</strong></p>
+<p><strong>Andreea Otet:&nbsp; </strong>Admitem posibilitatea aplicarii unor masuri complementare, posibilitate in ipoteza in care o persoana bogata si o persoana saraca in aceeasi circumstanta, au aceeasi atitudine fata de un politist. Cum am putea sa aplicam aceasta idee de pedeapsa complementara? Celui cu venituri mai mari ii aplicam aceeasi pedeapsa- ii aplicam si amenda si masura complementara, iar celui cu venituri mai mici ii aplicam doar amenda?<strong>&nbsp;</strong></p>
+<p><strong>&nbsp;</strong></p>
+<p><strong>Ovidiu Podaru </strong>Nu. Le-am putea aplica la amandoi amenda si sanctiunea complementara si doare la fel. <strong>&nbsp;</strong></p>
+<p>&nbsp;</p>
+<p><strong>Sesiune de intrebari din partea publicului:</strong></p>
+<p>&nbsp;</p>
+<p><strong>Intrebare:</strong> De ce v-ati referit doar la amenzile din contraventional, nu si la amenzile din penal?</p>
+<p><strong>Andreea Otet </strong>Pentru ca mi se pare ca s-ar evidentia mult mai mult cat de mari sunt discriminarile si deja efectele se duc in alta parte, adica cred ca stii mai bine decat mine la ce ma refer...</p>
+<p>&nbsp;</p>
+<p>Teoretic daca raportam amenzile la venit, e foarte plauzibil ca o amenda pentru o sanctiune contraventionala pentru un om cu venituri mari sa depaseasca poate chiar cuantumul special al amenzii penale, caz in care oarecum contrar ideii de proportionaliate a sanctiunilor raportat la fapta comisa...</p>
+<p><strong>Andreea Otet: </strong>Putem sa ne debarasam de pozitia pe care am sustinut-o?</p>
+<p><strong>Moderator:</strong> Asta e momentul la care trebuie sa avem o discutie libera, dar evident va vor fi adresate mai multe intrebari legate de pozitia voastra. V-as incuraja sa va aparati pozitia in continuare, dar putem sa trecem de limita aceasta, sa ducem discutia mai departe de domeniul contraentional.</p>
+<p><strong>Ovidiu Podaru:</strong>&nbsp; Deci atunci probabil ca suntem o echipa de patru oameni, care nu avem nicio chestie de discutat in contradictoriu si prin urmare voi daca cumva sustineti o pozitie opusa sa puneti intrebari.</p>
+<p><strong>Andreea Otet </strong>Prima data cand am vazut motiunea, ma gandeam ca e foarte tentanta pentru persoanele cu venituri mici, pe de alta parte, intr-adevar, daca stai sa analizezi toate circumstantele si consecintele prezentate si azi de domnul profesor si despre care am vorbit si noi in debate-ul online, ajungi sa vezi ca un lucru care suna foarte frumos, poate sa produca niste consecinte foarte nedorite, drastice si inechitabile.</p>
+<p><strong>Ovidiu Podaru:&nbsp; </strong>Da, adica eu nu stiam ca acest sistem se aplica, am aflat azi-dimineata inainte sa ajung aici, ca se aplica in tarile nordice, mai ales in Finlanda. Bun si atunci intrebarea este voua v-ar placea sa traiti in Finlanda? Mie nu, nici in Suedia, nicaieri. Adica e un sistem de impozitare, in primul rand, bazat pe inegalitate. E un sistem de impozitare care ajunge sa ia pana la 70-85% de la om, adica iti ia tot timpul din mana. Cu cat produci mai mult, cu atat iti ia mai mult, gradual. Eu stiu si ca tarile nordice sunt cu rata cea mai mare a sinuciderilor... Deci din punctul asta de vedere marii magnati pleaca de acolo cu domiciliul fiscal de acasa si totul este &ndash; asa sa intelegeti &ndash; nordicii care vin in Cluj si merg la un restaurant spun&nbsp; : &ldquo;Waw&rdquo;, pentru ca la ei nu sunt decat cantine. Foarte rar chestiile de lux si diferentele dintre veniturile minime si maxime cu foarte putine exceptii sunt reduse. Si atunci sigur ca sistemul&nbsp; asta proportional nu produce atatea consecinte negative ca intr-un sistem cum ar fi cel american de pilda unde sunt niste discrepante foarte mari. Adica da, spunem ca masura a fost adoptata in tarile nordice, dar cum se face ca nu a fost adoptata in mult mai multe tari dezvoltate? Sa ne gandim si la asta</p>
+<p>&nbsp;</p>
+<p>Daca echipa negatoare a sustinut ca in contraventional e foarte greu , daca nu imposibil de probat intentia contravenientului, in penal, unde se poate face proba, ar fi fezabil un astfel de sistem &ndash; asa , pur teoretic?</p>
+<p><strong>Ovidiu Podaru : </strong>Nu sunt penalist, deci am scapat de raspuns...</p>
+<p><strong>Andreea Otet:</strong> Mie personal mi se pare ca pe penal, regula nu ar trebui sa fie nicidecum amenda penala, pe diferite considerente. Din nou o sa depasesc pozitia pe care am ocupat-o astazi in meci si o sa vorbesc despre discriminare... ori a aplica acest sistem ar aduce atingere principiului nediscriminarii.</p>
+<p><strong>Irina Negrutiu:</strong> Apropo de faptul ca vorbim despre Finlanda, a existat un caz in care o persoana a primit o amenda pentru depasirea vitezei legale, care fiind calculata raportat la venitul lui a ajuns la o suma fabuloasa undeva la 39 000 de euro. Omul a spus ca daca se poate, el prefera sa faca inchisoare si sa-si pastreze banii, cred ca asta arata ca daca s-ar implementa masura propusa astazi&nbsp; atinge princpiul egalitatii si ai ajunge la situatii in care pedeapsa prin mijloace materiale ar fi mult prea inechitabila.</p>
+<p><strong>Ovidiu Podaru:</strong> Sa aplicam asta in penal mi se pare de-a dreptul revoltator. Adica ganditi-va la o incaierare intr-un bar si la final te pune sa iti declari venitul, ca sa vezi cum te sanctioneaza. Acolo in lupa totul era de la egal la egal. Bine asta e un exemplu tot inspre contraventional, in sensul ca, chiar daca e infractiune de lovire, incaierare, dar sa te gandesti la crima sau orice altceva care se sanctioneaza dupa cati bani ai ....</p>
+<p><strong>Andreea Otet:</strong> Da si atunci daca e o fapta extraordinar de grava, mie mi se pare ca solutia e inchisoarea, singura metoda prin care ajungi la reeducare.&nbsp;</p>
+<p><strong>Intrebare:</strong> Eu nu am o intrebare, ci mai degraba o observatie referitoare la o pozitie aparuta cand se vorbea despre implementarea acestui sistem. Stiu ca nu ar trebui foarte multe detalii, despre cum anume s-ar implementa aceasta motiune, dar nu am putut sa nu observ faptul ca daca am aplica, lipsa informatiilor ar fi o problema.</p>
+<p><strong>Andreea Otet: </strong>Intr-un stat modern, care permite o colaborare intre institutii si in care toata lumea isi face treaba cu seriozitate si exista tot felul de evidente a o gramada de situatii, in aceasta ipoteza, e cea in care s-ar putea implementa cel mai bine aceasta masura. Dar sunt de acord cu ea, ar fi un stat in care se urmareste o evolutie in sensul in care se pastreaza strict o evidenta a populatiei, a veniturilor, a ipostazelor in care se afla persoanele si asa mai departe... Dar asta evident intr-o societate moderna care-si face treaba, usor utopic...</p>
+<p><strong>Ovidiu Podaru:</strong> Dar chiar si asa, intr-un stat asa modern, viata privata pe unde mai e? Daca se stie de banii mei, de ... pentru ca tocmai de asta se feresc cei mai multi?</p>
+<p><strong>Andreea Otet:</strong> Ca la fiecare lucru, poti sa-i gasesti si aspecte bune si aspecte rele si atunci depinde de noi ca oameni cum vrem sa traim. Daca vrem sa acceptam sa ne fie invadata viata privata sau daca nu vrem sa ne fie invadata viata privata, doar ca asa va trebui sa ne multumim cu faptul ca guvernul nu o sa ofere niciodata o lista clara cu persoanele care au drept de vot...</p>
+<p><strong>George Jiglau:</strong>&nbsp;&nbsp; Apropo de ceea ce spuneam, masura necesita strict implicare stuatului in ceea ce priveste cunoasterea veniturilor, nu mai mult de atat.</p>
+<p><strong>Intrebare:</strong> In momentul in care doriti sa sanctionati fapta, despre ce venit vorbiti in mod concret? Despre cel care il are in momentul in care a savarsit fapta? Sau despre cel care il avea in anul anterior? Este echitabil pentru ce a facut? Ce face copilul de bani-gata care daca este sa vorbim despre asta, nu are venit? Sau luam in considerare venitul parintilor? Ce puteti propune?</p>
+<p><strong>Andreea Otet:&nbsp; </strong>Da, exista multe marje, fiecare dintre ele o sa aiba intotdeauna ceva care nu o sa functioneze, o sa se gaseasca intotdeauna exemple si exceptii care nu o sa se incadreze in orice s-ar propune, e foarte greu sa gasesti un sistem care prin implementare sa acopere tot.</p>
+<p><strong>Moderator:</strong> Colegii mei au dreptate cand spun ca la fiecare motiune pe care o avem, si de-o parte si de alta, la fiecare motiune pe care o avem si o dezbatem, de fiecare data cand trebuie sa argumentam, in favoarea sau impotriva unei pozitii trebuie sa luam in calcul o gramada de avantaje si dezavantaje, asa cum au facut fiecare dintre echipe. Nu o sa gasim niciodata o solutie la nicio problema care sa ne multumeasca pe toti , sau care sa rezolve cele mai multe probleme pe care le avem.&nbsp; Ceea ce este suficient sa facem intr-o dezbatere si si in viata reala, zic eu, este sa gasim acea solutie care sa ne multumeasca cat de cat si care sa rezolve problemele cele mai urgente pe care le avem. Cred ca astazi echipa negatoare a reusit sa va demonstreze ca solutia propusa de echipa afirmatoare nu raspunde acestor nevoi.&nbsp; Si prin asta am incercat sa va dezvalui practic rezultatul votului. Daca inainte votul a fost de 18 la 15 pentru echipa afirmatoare, in urma dezbaterii situatia s-a schimbat si echipa negatoare este cea care castiga astazi dezbaterea cu un numar de 22 la 11 voturi. Felicitari pentru ambele echipe!</p>
+<p>Vroiam sa il intreb pe domnul profesor daca si in afara debate-ului isi pastreaza opinia ca limitele intre pedeapsa minima si cea maxima ar trebui sa fie mai mari, in sensul in care ar dauna revizibilitatii sanctiunii?</p>
+<p><strong>Ovidiu Podaru: </strong>Acuma depinde, dar nu cred ca e un pericol atunci cand stabilim niste limite mai largi, decat mai reduse din punctul asta de vedere. Problema e ca intr-adevar nu isi atinge scopul. In materia amenzilor la circulatie de pilda, in 90% din cazuri se aplica amenda minima. Si chiar daca mai pui 3 lei, oricum aia 3 lei sunt in 10% din cazuri. Si atunci, atata timp cat nu exista o schimbare de mentalitate in sistem nu stiu daca ar fi eficient, dar am raspuns in principiu propunand un sistem alternative, pentru ca nu doream sistemul lor.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+                <div class='clear'></div>
+        </div><!-- end main content -->
+         <div class='clear'></div>
+</div>
+<div id="pix"></div>
+
+
+                                </div><!--end main -->
+                                <div id='parteneri'>
+                                    <span class='tr'></span><span class='tl'></span><span class='br'></span><span class='bl'></span><span id="filler"></span>
+                                    <div class='parteneri' id='sustinatori'>
+                                        <span class='floating_text' id='un_proiect'>Un proiect</span>
+                                        <a href='http://www.ardor.org.ro/'><div class='image' id='ardor'>Ardor</div></a>
+                                        <span class='floating_text' id='finantatori'>Finanțatori</span>
+                                        <a href='http://www.opensocietyfoundations.org/'><div class='image' id='open_society'>Open Society Foundation </div></a>
+                                        <a href='http://www.studentiq.ro//'><div class='image' id='memoplus'>MemoPlus</div></a>
+                                        <!-- <a href='http://www.ratiufamilyfoundation.com/'><div class='image' id='FundatiaRatiu'>Ardor</div></a>
+                                        <a href='http://www.eef.md/'><div class='image' id='eef'>East Europe Foundation</div></a>
+                                        <a href='http://www.mts.gov.md/'><div class='image' id='mdminister'>Ministerul Tineretului si Sportului al Republicii Moldova</div></a> -->
+
+                                        <span class='floating_text' id='parteneri_text'>Parteneri</span>
+
+                                        <a href='http://www.policycenter.eu/'><div class='image' id='PolicyCenter'>Policy Center</div></a>
+                                        <a href='http://www.britishcouncil.org/'><div class='image' id='BritishCouncil'>British Council</div></a>
+                                        <a href='http://www.europuls.ro/'><div class='image' id='europuls'>Europuls</div></a>
+                                        <a href='http://www.cere.ro/'><div class='image' id='cere'>Ce-Re</div></a>
+                                        <a href='http://www.primeromania.ro/'><div class='image' id='prime'>Prime Romania</div></a>
+                                        <a href='http://www.cji.ro/'><div class='image' id='cji'>Centrul pentru jurnalism independent</div></a>
+                                        <a href='http://www.aiesectm.ro/'><div class='image' id='aisec'>Aisec</div></a>
+                                        <!-- ===================================================================================================== -->
+                                        <a href='http://www.cogitus.ro/'><div class='image' id='cogitus'>Cogitus</div></a>
+                                        <a href='http://www.adevarul.ro/international/foreign_policy/'><div class='image' id='foreignPolicy'>Foreign Policy</div></a>
+                                        <a href='http://www.elsa.ro/'><div class='image' id='elsa'>Elsa</div></a>
+                                        <a href='http://www.vipromania.ro/'><div class='image' id='vipromania'>Voluntari pentru idei si proiecte</div></a>
+                                        <a href='http://www.ongtrust.ro/'><div class='image' id='ongtrust'>Trust</div></a>
+
+                                        <!-- ===================================================================================================== -->
+                                        <a href='http://www.leap.ro/'><div class='image' id='leap'>Leap</div></a>
+                                        <a href='http://www.younginitiative.org/'><div class='image' id='younginitiative'>Asociatia young initiative</div></a>
+                                        <a href='http://www.asjc.ro/'><div class='image' id='asjc'>Asjc</div></a>
+                                        <a href='http://osut.ro/'><div class='image' id='osut'>Osut</div></a>
+                                        <div class='clear'></div>
+                                    </div>
+                                    <div class='parteneri' id='parteneri_institutionali'>
+                                        <span class='floating_text' id='sponsori_text'>Sus&#539;in&#x0103;tori</span>
+                                        <a href='http://www.cartier.md/'><div class='image' id='cartier_logo'>Editura Cartier</div></a>
+                                        <a href='http://www.pll.md/ro/'><div class='image' id='biblio_logo'>Biblioteca publica de drept</div></a>
+                                        <span class='floating_text' id='institutii_text'>Parteneri institu&#539;ionali</span> 
+                                        <ul id='institutii'>
+                                            <!-- <span class='floating_text' id='institutii_text'>Parteneri institu&#539;ionali:</span> -->
+                                            <li><a href='http://www.politice.ro/'>Facultatea de &#536;tiin&#539;e Politice SNSPA </a></li>
+                                            <li><a href='http://www.comunicare.ro/'>Facultatea de Comunicare &#537;i Rela&#539;ii Publice SNSPA</a></li>
+                                            <li><a href='http://www.fspub.ro/'>Facultatea de &#536;tiin&#539;e Politice Universitatea Bucure&#537;ti</a></li>
+                                            <li><a href='http://www.filosofie.unibuc.ro/'>Facultatea de Filosofie Universitatea Bucure&#537;ti</a></li>
+                                            <li><a href='http://litere.unibuc.ro/'>Facultatea de Litere din Universitatea Bucure&#x015f;ti</a></li>
+                                            <li><a href='http://www.unibuc.ro/ro/fac_fsas_ro'>Facultatea de Sociologie Universitatea Bucure&#537;ti</a></li>
+                                            <li><a href='http://laws.uaic.ro/'>Facultatea de Drept Universitatea Alexandru Ioan Cuza Ia&#537;i</a></li>
+                                            <li><a href='http://www.uaic.ro/uaic/bin/view/Academic/Filosofie'>Facultatea de Filosofie si &#536;tiin&#539;e Social Politice Universitatea AIC Ia&#537;i</a></li>
+                                            <li><a href='http://www.upa.ro/'>Facultatea de Drept si Facultatea de &#x015e;tiin&#x0163;e Politice si Administrative Universitatea Petre Andrei Ia&#x015f;i</a></li> 
+
+                                            <li><a href='http://www.ubbcluj.ro/'>Universitatea Babe&#537;-Bolyai Cluj Napoca</a></li>
+                                            <li><a href='http://www.uvt.ro/'>Universitatea de Vest Timi&#537;oara</a></li>
+                                            <li><a href='http://www.upt.ro/'>Universitatea Politehnica Timi&#537;oara</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class='parteneri' id='parteneri_media'>
+                                        <span class='floating_text' id='media_text'>Parteneri media</span>
+                                        <a href='http://www.hotnews.ro/'><div class='image' id='hotnews'>HotNews</div></a>
+                                        <!-- <a href='http://www.lumebuna.ro/'><div class='image' id='lumebuna'>Lume Buna</div></a> -->
+                                        <a href='http://www.romaniapozitiva.ro/'><div class='image' id='romaniapozitiva'>Romania Pozitiva</div></a>
+                                        <a href='http://totb.ro/'><div class='image' id='thinkoutsidethebox'>Think Outside The Box</div></a>
+                                        <a href='http://www.facebook.com/carevasazica.vip'><div class='image' id='carevasazica'>Carevasazica</div></a>
+                                        <a href='http://www.studentie.ro/'><div class='image' id='studentiero'>Studentie.ro</div></a>
+                                        <a href='http://startub.unibuc.ro/'><div class='image' id='startub'>startub.unibuc.ro</div></a>
+                                        <!-- <a href='http://www.tvr.ro/tvr_cluj.php'><div class='image' id='tvrcluj'>Tvr Cluj</div></a> -->
+                                        <!-- <a href='http://www.radiotransilvania.ro'><div class='image' id='radiotransilvania'>Radio Transilvania</div></a> -->
+                                        <a href='http://iasifun.ziaruldeiasi.ro/'><div class='image' id='iasifun'>Iasi fun</div></a>
+                                        <a href='http://www.ziaruldeiasi.ro/'><div class='image' id='ziaruldeiasi'>Ziarul de Iasi</div></a>
+                                        <a href='http://www.kissfm.ro/timisoara'><div class='image' id='kissfm'>KissFm</div></a>
+
+                                        <div class='clear'></div> 
+                                    </div>
+                                    <div class='clear'></div>
+
+                                </div>	
+                            </div>	<!-- end wrap -->
+                            <div id='footer_mare'>
+                                <div id='footer'>
+                                    <div id='links' class='footer'>
+                                        <div id='menu1' style='margin:auto;'> <ul id='meniu_prinicpal'><li><a href='contacte/index.html'> Contact </a></li>
+<li><a href='clubdebate/index.html'> Cluburile </a></li>
+<li><a href='oamenii/index.html'> Oamenii </a></li>
+<li><a href='proiectul/index.html'> Proiectul </a></li>
+<li><a href='home/index.html'> Acasa </a></li>
+</ul></div><!--end menu-->
+                                    </div><!--
+                                    <div id='contact' class='footer'>
+                                            <h4>Contact</h4>
+                                            <p>office@closer2oxford.ro</p>
+                                            <p>bogdan.draghicescu@closer2oxford.ro<br>
+                                            <span class='detalii'> (asistenta tehnica web - orice probleme legate de site)</span></p>
+                                    </div>
+                                    -->
+                                    <div id='newsletter' class='footer'>
+                                        <script src="../../connect.facebook.net/en_US/all.js#xfbml=1"></script><fb:like href="http://www.facebook.com/pages/Closer2Oxford/162758797069605" width="250" colorscheme="dark"></fb:like>
+                                        <!--<h4>Newsletter</h4>
+                                        <form action='/page/newsletter'>
+                                                <input type='text' name='email'>
+                                                <input type='submit' id='submit' value='>'>
+                                                        
+                                        </form>-->
+                                    </div>
+                                    <div id='credits'>
+                                        Copyright(c) 2021 ARDOR |  Toate drepturile rezervate | Toate logo-urile si sloganurile de pe site sunt proprietate intelectuala inregistrata si nu pot fi reproduse fara acordul explicit al detinatorilor. <br>
+                                            <br /><br />
+                                            <b>Disclaimer</b><br /><i>
+
+                                                Programul educational Closer to Oxford este un program non-profit si nu are o legatura cu universitatea cu acelasi nume, referirea la Oxford avand doar o semnificatie simbolica.
+                                            </i>
+                                    </div>
+
+                                </div>		
+                            </div>		
+
+                            <div id="finantatde">Acest proiect este finantat cu sustinere din partea Comisiei Europene. Aceast publicatie [comunicare] reflecta doar
+                                vederile autorului, iar Comisia nu poate fi facuta  responsabila pentru utilizarea informatiei pe care o contine.</div>
+
+
+                        </body>
+                        </html>

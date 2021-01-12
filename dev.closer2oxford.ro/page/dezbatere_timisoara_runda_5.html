@@ -1,0 +1,702 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml-strict.dtd">
+<HTML xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+    <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+            <link rel="icon" type="image/png"  href="../../closer2oxford.ro/favicon.html">
+                <link rel="stylesheet" href="var/layout.css" type="text/css">
+                    <title>Closer to Oxford - e timpul pentru argumente!</title>
+                    <link rel="alternate" type="application/rss+xml"  href="rss_feed" title="Stiri Closer2Oxford">
+                        <!-- <link rel="image_src" property="og:image"  href="/images/layout/closer2oxford_fb_white.png" /> -->
+                        <link rel="image_src" property="og:image"   type="image/jpeg"  href="../uploads/2015/06/9/facebook_icon.html" />
+                        <link rel="image_src" type="image/jpeg"  href="../uploads/2015/06/9/icon-facebook.gif" /> 
+						<meta name="description" content="Closer2Oxford pune în valoare oameni şi argumentele lor, în dezbateri online şi publice alături de tineri şi invitați avizaţi"/>
+                        <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9" />
+<script type='text/javascript' src='../js/jquery-1.4.4.min.js'></script>
+<script>var $j = jQuery.noConflict();</script>
+<script type='text/javascript' src='../js/tinymce/tiny_mce.js'></script>
+<script type='text/javascript' src='../js/jquery.form.js'></script>
+<script type='text/javascript' src='../js/fbLoginRegister.js'></script>
+<script type='text/javascript' src='var/javascript.js'></script>
+<script type='text/javascript' src='../js/jquery.hovertip-1.0.min.js'></script> 
+<script type='text/javascript' src='../js/jquery.jgrowl_minimized.js'></script> 
+<link rel='stylesheet' href='../css/jquery.jgrowl.css' media='screen' type='text/css'> 
+<script type='text/javascript' src='../js/jquery.timer-min.js'></script> 
+<link rel='stylesheet' href='var/gallery.css' media='screen' type='text/css'> 
+<script type='text/javascript' src='var/galerie/jquery.prettyPhoto.js'></script> 
+<meta name='description' content=''/> 
+<meta name='keywords' content=''/> 
+<style>.hovertip{
+    position:absolute;
+    padding:10px 13px;
+    z-index:2;
+    max-width:300px;
+    color:#303030;
+    background-color:#f5f5b5;
+    border:1px solid #DECA7E;
+    font-family:sans-serif;
+    font-size:12px;
+    line-height:18px;
+    text-align:left;
+    }</style> 
+<script type='text/javascript'>$j(document).ready(function(){$j('.tooltip').hovertip({'offset':[20,20]});get_notif();});
+
+if(!Array.indexOf){Array.prototype.indexOf = function(obj){for(var i=0; i<this.length; i++){if(this[i]==obj){return i;}}return -1;}}
+    hashuri = [] ;
+	 var tick_timer= 3000 ;
+ 
+	 function get_notif()
+        {
+		  
+		  //console.log(tick_timer);
+	     
+		  setTimeout(get_notif,tick_timer);
+        
+		   $j.ajax(
+            {
+                url: '/page/notif/show_events',
+                dataType: 'json',
+                data: "{}",
+                success: function(data)
+                    {
+                    $j.each(data,function(index,data){
+                        try
+                            {
+                            if( hashuri.indexOf(data.hash) == -1 )
+                                {
+                                hashuri.push(data.hash);
+                                $j.jGrowl(
+                                    data.str,
+                                    {
+                                        corners:'1px',
+                                        life: data.life,
+                                        header:data.title,
+                                        hash: data.hash,
+                                        sticky: data.sticky,
+                                        close: function(e,m,o)
+                                            {
+                                                $j.ajax({url:'/page/notif/delete_single_event/' + o.hash});
+                                            }
+                                    });
+                                }
+                            }
+                        catch(e){}
+                        })
+                    }
+            });
+        }
+	 </script> 
+ 
+                            
+  <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-19111721-1']);
+  _gaq.push(['_setDomainName', '.closer2oxford.ro']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+    
+                        </head>
+                        <body>
+                            <div id="global_wrap">
+                                <div id="header">
+                                    <a href='../index.html'><div id='logo'><img src='../images/layout/sigla.jpg'></div></a>
+                                    <a class='noExternal' href='http://www.facebook.com/pages/Closer2Oxford/162758797069605'><img src='../images/fb.png' style='height:30px;float:right;clear:right;margin:10px 5px 5px 5px;border:none;'/></a>
+                                    <a href='rss_feed'><img src='../images/feed-icon.png' style='height:30px;float:right;clear:right;margin:5px;border:none;'/></a>
+                                </div>
+                                <div id="meniu">
+                                    <div  id='register_login'>
+
+                                        
+  <a href='#' class='todo' id='login'>Login </a> &nbsp;<a href='register.html' class='todo' id='register'>Register</a>
+    <div id='login_box'>
+		  <form action='https://dev.closer2oxford.ro/page/ro/login_user/logon' method='post' id='user_login_form'>
+					 <div>Email: <input type='text' name='email'/> </div><br />
+					 <div>Pass: <input type='password' name='passwd'/></div><br />
+					 <a href='#' class='password_forgot'>forgot password?</a>
+					 <input type='hidden' value='/page/dezbatere_timisoara_runda_5' name='returnto' class='submiter'/><br />
+					 <input type='submit' value='login' name='btn' class='submiter'/><br />
+		  </form>
+		  
+		  <form action='https://dev.closer2oxford.ro/page/ro/login_user/reset_user_pw' method='post' id='user_reset_form'>
+					 <div>Email: <input type='text' name='email'/> </div><br />
+					 <a href='#' class='password_forgot'>login?</a>
+					 <input type='hidden' value='/page/dezbatere_timisoara_runda_5' name='returnto' class='submiter'/><br />
+					 <input type='submit' value='reset' name='btn' class='submiter'/><br />
+		  </form>
+		  
+    </div>
+    
+                                    </div>
+                                    <div id='menu1' style='margin:auto;'> <ul id='meniu_prinicpal'><li><a href='contacte/index.html'> Contact </a></li>
+<li><a href='clubdebate/index.html'> Cluburile </a></li>
+<li><a href='oamenii/index.html'> Oamenii </a></li>
+<li><a href='proiectul/index.html'> Proiectul </a></li>
+<li><a href='home/index.html'> Acasa </a></li>
+</ul></div><!--end menu-->
+                                </div>
+                                <div id="main"> 
+                                    <!--<div id='stiri-padding'>
+        <div id='stiri_back'>
+                {stiri} 
+    
+               
+        </div>-->
+        
+</div>
+<div  id="content-padding">
+        <div id='sidebar_menu'>
+                <span class='tr'></span>
+                <span class='tl'></span>
+                <span class='br'></span>
+                <span class='bl'></span>
+                <span id="filler"></span>
+                    
+                <ul></ul>
+                
+                <div class='clear'></div>
+        </div>
+        <div id="content">
+                <span class='tr'></span>
+                <span class='tl'></span>
+                <span class='br'></span>
+                <span class='bl'></span>
+                <span id="filler"></span>
+                <script type='text/javascript' src='../js/jquery.hovertip-1.0.min.js'></script> 
+<script type='text/javascript' src='../js/jquery.jgrowl_minimized.js'></script> 
+<link rel='stylesheet' href='../css/jquery.jgrowl.css' media='screen' type='text/css'> 
+<script type='text/javascript' src='../js/jquery.timer-min.js'></script> 
+<link rel='stylesheet' href='var/gallery.css' media='screen' type='text/css'> 
+<style>.hovertip{
+    position:absolute;
+    padding:10px 13px;
+    z-index:2;
+    max-width:300px;
+    color:#303030;
+    background-color:#f5f5b5;
+    border:1px solid #DECA7E;
+    font-family:sans-serif;
+    font-size:12px;
+    line-height:18px;
+    text-align:left;
+    }</style> 
+<script type='text/javascript'>$j(document).ready(function(){$j('.tooltip').hovertip({'offset':[20,20]});get_notif();});
+
+if(!Array.indexOf){Array.prototype.indexOf = function(obj){for(var i=0; i<this.length; i++){if(this[i]==obj){return i;}}return -1;}}
+    hashuri = [] ;
+	 var tick_timer= 3000 ;
+ 
+	 function get_notif()
+        {
+		  
+		  //console.log(tick_timer);
+	     
+		  setTimeout(get_notif,tick_timer);
+        
+		   $j.ajax(
+            {
+                url: '/page/notif/show_events',
+                dataType: 'json',
+                data: "{}",
+                success: function(data)
+                    {
+                    $j.each(data,function(index,data){
+                        try
+                            {
+                            if( hashuri.indexOf(data.hash) == -1 )
+                                {
+                                hashuri.push(data.hash);
+                                $j.jGrowl(
+                                    data.str,
+                                    {
+                                        corners:'1px',
+                                        life: data.life,
+                                        header:data.title,
+                                        hash: data.hash,
+                                        sticky: data.sticky,
+                                        close: function(e,m,o)
+                                            {
+                                                $j.ajax({url:'/page/notif/delete_single_event/' + o.hash});
+                                            }
+                                    });
+                                }
+                            }
+                        catch(e){}
+                        })
+                    }
+            });
+        }
+	 </script> 
+
+<script type='text/javascript' src='../js/jquery.hovertip-1.0.min.js'></script> 
+<script type='text/javascript' src='../js/jquery.jgrowl_minimized.js'></script> 
+<link rel='stylesheet' href='../css/jquery.jgrowl.css' media='screen' type='text/css'> 
+<script type='text/javascript' src='../js/jquery.timer-min.js'></script> 
+<link rel='stylesheet' href='var/gallery.css' media='screen' type='text/css'> 
+<script type='text/javascript' src='var/galerie/jquery.prettyPhoto.js'></script> 
+<style>.hovertip{
+    position:absolute;
+    padding:10px 13px;
+    z-index:2;
+    max-width:300px;
+    color:#303030;
+    background-color:#f5f5b5;
+    border:1px solid #DECA7E;
+    font-family:sans-serif;
+    font-size:12px;
+    line-height:18px;
+    text-align:left;
+    }</style> 
+<script type='text/javascript'>$j(document).ready(function(){$j('.tooltip').hovertip({'offset':[20,20]});get_notif();});
+
+if(!Array.indexOf){Array.prototype.indexOf = function(obj){for(var i=0; i<this.length; i++){if(this[i]==obj){return i;}}return -1;}}
+    hashuri = [] ;
+	 var tick_timer= 3000 ;
+ 
+	 function get_notif()
+        {
+		  
+		  //console.log(tick_timer);
+	     
+		  setTimeout(get_notif,tick_timer);
+        
+		   $j.ajax(
+            {
+                url: '/page/notif/show_events',
+                dataType: 'json',
+                data: "{}",
+                success: function(data)
+                    {
+                    $j.each(data,function(index,data){
+                        try
+                            {
+                            if( hashuri.indexOf(data.hash) == -1 )
+                                {
+                                hashuri.push(data.hash);
+                                $j.jGrowl(
+                                    data.str,
+                                    {
+                                        corners:'1px',
+                                        life: data.life,
+                                        header:data.title,
+                                        hash: data.hash,
+                                        sticky: data.sticky,
+                                        close: function(e,m,o)
+                                            {
+                                                $j.ajax({url:'/page/notif/delete_single_event/' + o.hash});
+                                            }
+                                    });
+                                }
+                            }
+                        catch(e){}
+                        })
+                    }
+            });
+        }
+	 </script> 
+
+<style type="text/css">
+.poze
+{
+    float:right;
+    width:110px;
+}
+.poze a img
+{    border:none;
+}
+.main_content
+{
+    float:left;
+    width:560px;
+}
+</style>
+
+ <div class = 'poze'>
+            <a class='thumb' href='http://www.youtube.com/watch?v=FUDmJCdGDGc&amp;feature=bf_prev&amp;list=PLB2F21E044C436E78' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../../img.youtube.com/vi/FUDmJCdGDGc/1.jpg' alt='' />
+                <span class='desc'>Afirmator 1</span>
+            </a>
+        
+
+            <a class='thumb' href='http://www.youtube.com/watch?v=vOzR2nF0w5U' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../../img.youtube.com/vi/vOzR2nF0w5U/1.jpg' alt='' />
+                <span class='desc'>Negator 1</span>
+            </a>
+        
+
+            <a class='thumb' href='http://www.youtube.com/watch?v=TkM2xyqZhH4' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../../img.youtube.com/vi/TkM2xyqZhH4/1.jpg' alt='' />
+                <span class='desc'>Cross afirmator-negator</span>
+            </a>
+        
+
+            <a class='thumb' href='http://www.youtube.com/watch?v=OQXJ3Zh-D9Q' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../../img.youtube.com/vi/OQXJ3Zh-D9Q/1.jpg' alt='' />
+                <span class='desc'>Afirmator 2</span>
+            </a>
+        
+
+            <a class='thumb' href='http://www.youtube.com/watch?v=bbnzqA-cd4Q' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../../img.youtube.com/vi/bbnzqA-cd4Q/1.jpg' alt='' />
+                <span class='desc'>Negator 2</span>
+            </a>
+        
+
+            <a class='thumb' href='http://www.youtube.com/watch?v=ENjMn4uDpNY' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../../img.youtube.com/vi/ENjMn4uDpNY/1.jpg' alt='' />
+                <span class='desc'>Discutie cu publicul 1</span>
+            </a>
+        
+
+            <a class='thumb' href='http://www.youtube.com/watch?v=zQEoIxk4KQw&amp;list=PLB2F21E044C436E78&amp;index=8&amp;feature=plpp_video' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../../img.youtube.com/vi/zQEoIxk4KQw/1.jpg' alt='' />
+                <span class='desc'>Discutie cu publicul partea a 2-a</span>
+            </a>
+        
+
+
+    <script>
+    $j(document).ready(function(){
+      		$j("a[rel^='prettyPhoto']").prettyPhoto({theme:'facebook'});
+        });
+    
+    </script>
+    </div>
+
+<div class='main_content'>
+<p><strong>Dezbatere publica Timisoara, Facultatea de Stiinte Policite a Universitatii de Vest</strong></p>
+<p><strong>Luni 9 aprilie 2012, ora 18.00</strong></p>
+<p><strong>&nbsp;</strong></p>
+<p><strong><em>&bdquo;E timpul să decriminalizăm pirateria online?&rdquo; </em></strong></p>
+<p>&nbsp;</p>
+<p>Echipa afirmatoare: <strong>&nbsp;Alina Gavra si Alin Sava </strong></p>
+<p>Echipa negatoare: <strong>Alina Babolea si Adina Fometescu</strong></p>
+<p>Moderator <strong>Emanuel Copilas </strong></p>
+<p>&nbsp;</p>
+<p><strong>&nbsp;</strong></p>
+<p><strong>Alina Gavra discurs A1</strong></p>
+<p>Vă mărturisesc că mă simt ca David &icirc;n faţa Inchiziţiei pentru că urmează să susţin un lucru pe care ştiu că toată lumea &icirc;l crede undeva &icirc;nauntru, &icirc;l practică, &icirc;nsă avem o mică reţinere să ne asumăm acest lucru: DA, este timpul să decriminalizăm pirateria online.</p>
+<p>&Icirc;nainte de a prezenta argumentele haideţi să vedem ce &icirc;nseamnă &ldquo;decriminalizare&rdquo;. &ldquo;Decriminalizarea&rdquo; reprezintă reducerea sau abolirea totală a penalităţilor criminale, &icirc;nsă cu posibilitatea de a aplica anumite amenzi, pe baza unor reglementări stabilite. Aceasta reflectă nişte schimbări sociale şi morale atunci c&acirc;nd societatea nu mai consideră un fenomen ca fiind o crimă. Facem precizarea că, &icirc;n acest caz, susţinem pirateria online pentru uzul şi consumul personal al utilizatorilor, dar nu pentru&nbsp; comercializarea produselor online.</p>
+<p>Pe de altă parte, după cum ştim, &ldquo;pirateria pe internet&rdquo; reprezintă duplicarea şi distribuirea ilegală a materialelor protejate de drepturi de autor pe internet.</p>
+<p>De ce suntem de acord sa decriminalizăm pirateria online? Pentru că, dragii mei, acest concept de piraterie online vazut ca şi o crimă este de fapt un construct social bine creionat si promovat de marile corporaţii, marile case de discuri care au profituri şi interese financiare de a face acest lucru, &icirc;n destrimentul nostru, al consumatorilor, a societăţii. Deoarece pirateria online este cea care a propulsat societatea, cea care a dus la un progres. De ce? G&acirc;ndiţi-vă la contextul &icirc;nvăţăm&acirc;ntului superior, la un cadru academic. Gandiţi-vă la c&acirc;te cărţi, articole ştiinţifice aţi avea voi acces ca şi studenti sau ar avea profesorii noştrii acces. C&acirc;te softuri aţi putea utiliza dacă ar trebui să le plătiţi de fiecare dată şi ce ar insemna acest lucru pe planul dezvoltării noastre personale si academice? Pe planul promovării culturale, si al divertismentului nici nu vreau să intru &icirc;n detalii &icirc;n ceea ce priveşte răsfrangerea numărului de filme pe care putem să le vizualizăm&nbsp; şi să ne bucurăm zi de zi. Mă voi lega strict de un mit, şi anume acel mit al bieţilor autori cărora li se fură proprietatea intelectuală. Haideţi să nuanţăm puţin lucrurile, haideţi să ofer unele exemple care probabil nu sunt foarte cunoscute pentru că nu toată lumea are interesul să le promoveze.</p>
+<p>Dintre cei mai cunoscuţi autori, Paulo Coelho este cel care afirmă ca după ce cărţile sale au fost piratate a avut o creştere fulminantă in v&acirc;nzarea de cărţi. &Icirc;n cazul cinematografiei, filmul &ldquo;A man on Earth&rdquo;, probabil ca nu aţi auzit de el, dar este acel film, o producţie foarte mică din punct de vedere bugetar, care in doar două săptam&acirc;ni după ce a fost postat la liberul acces pe internet a trecut de la locul 11256 ca şi popularitate pe IMDB (n.a. <em>Internet Movie Data Base</em>) la locul 5. Ce &icirc;nseamnă acest lucru: &icirc;nseamnă că publicul este cel care a avut acces, a reuşit sa testeze şi să valideze calitatea unui produs. Ce s-a &icirc;ntamplat mai apoi? La fiecare două mii de utilizatori care au downloadat ilegal filmul, douăzeci de mii de alţi oameni au fost in cinematograf, au cumpărat bilete şi produs v&acirc;nzare filmului. Voi reveni de unde am venit: companiile sunt cele care au interesul de a promova această imagine total negativă a pirateriei. Nu negăm anumite pierderi pe care aceste companii le &icirc;nregistrează, &icirc;nsă ceea ce este important e că trebuie să menţinem nealterat rolul original al internetului, şi anume accesul liber la informaţii, o reţea deschisă tuturor, prin care noi ca şi consumatori avem dreptul de a alege ceea ce vrem sa consumăm. Restul lucrurilor se vor reglementa in timp. Acesta a fost validat si revalidat p&acirc;nă acum. Faptul că cel mai mare tratat contra pirateriei online, ACTA, nu a trecut &icirc;n Parlamentele Nationale şi nici măcar la nivelul Uniunii Europene reprezintă &icirc;nsuşi faptul că societatea nu doreste să i se restricţioneze un drept fundamental, anume cel de acces la informare şi la libertatea de a alege ceea ce vrea să consume.</p>
+<p><strong><span style="text-decoration: underline;">&Icirc;ntrebare Adina Fometescu:</span></strong></p>
+<p>Care e diferenţa &icirc;ntre a fura un CD dintr-un magazin şi a downloda muzică pe internet?</p>
+<p><strong><span style="text-decoration: underline;">Răspuns Alina Gavra:</span></strong></p>
+<p>&Icirc;n primul r&acirc;nd, a downloada o melodie nu implică o pierdere directă, sub formă materială, financiară, cum ar reprezenta acest furt din magazin. Este foarte important de &icirc;nţeles faptul că asistăm la o schimbare de paradigmă. Faptul că mai vedem azi CD-uri &icirc;n magazine este un lucru ce se menţine datorită unor tendinţe din trecut.</p>
+<p><strong><span style="text-decoration: underline;">&Icirc;ntrebare Adina Fometescu:</span></strong></p>
+<p>&Icirc;n momentul &icirc;n care eu downloadez un produs şi nu mai am interesul de a-l cumpăra nu consideraţi că respectiva companie va pierde acea sumă de bani?</p>
+<p><strong><span style="text-decoration: underline;">Răspuns Alina Gavra:</span></strong></p>
+<p>Exact. Foarte bine aţi spus compania respectivă va pierde, şi companiile pierd bani...</p>
+<p><strong><span style="text-decoration: underline;">&Icirc;ntrebare Adina Fometescu:</span></strong></p>
+<p>Multumesc frumos. Dacă &icirc;n momentul de faţă dispunem de site-uri de ştiri care sunt libere tuturor cum periclitează această piraterie online dreptul la informare?</p>
+<p><strong><span style="text-decoration: underline;">Răspuns Alina Gavra:</span></strong></p>
+<p>Este o abordare foarte generală şi inoculată oarecum pentru că acest liber acces la ştirile de la PRO TV sau de la orice alt canal nu sunt at&acirc;t de libere şi nu sunt at&acirc;t de neconstr&acirc;nse politic. Faptul că eu vreau să citesc un articol din &bdquo;The Economist&rdquo; şi să pot face acest lucru gratuit &icirc;mi permite să-mi fac o viziune de ansamblu neconstr&acirc;nsă asupra lumii. Eu vreau să am acces la orice informaţie, nu doar la 3 canale care &icirc;mi oferă nişte informaţii politizate.</p>
+<p><strong><span style="text-decoration: underline;">&Icirc;ntrebare Adina Fometescu:</span></strong></p>
+<p>Dar &icirc;n momentul de faţă majoritatea site-urilor de ştiri sunt gratis. De ce periclităm dreptul la informare?</p>
+<p><strong><span style="text-decoration: underline;">Răspuns Alina Gavra:</span></strong></p>
+<p>Pentru că sunt foarte multe informaţii care momentan se oferă doar contra cost, chiar acest site al &bdquo;The Economist&rdquo; &icirc;ţi permite să vizualizezi doar un număr limitat de ştiri...</p>
+<p><strong><span style="text-decoration: underline;">&Icirc;ntrebare Adina Fometescu:</span></strong></p>
+<p>Şi cum aţi aflat despre acest site?</p>
+<p><strong><span style="text-decoration: underline;">Răspuns Alina Gavra:</span></strong></p>
+<p>Păi datorită tehnologiei, şi este un lucru bun că aceste instrumente, cumva ilegale, funcţionează. Hai să luăm cazul Wikileaks. Dacă voi spuneţi că pirateria este o crimă şi că nu ar trebui niciodată să ajungem la anumite informaţii, nu am ajunge la unele informaţii la care astăzi am ajuns şi nu am avea presiunile care s-au pus datorită acestui site.</p>
+<p><strong><span style="text-decoration: underline;">&Icirc;ntrebare Adina Fometescu:</span></strong></p>
+<p>Dacă unele companii folosesc pirateria online ca şi strategie de marketing, este justificat să obligăm toate companiile să o folosească?</p>
+<p><strong><span style="text-decoration: underline;">Răspuns Alina Gavra:</span></strong></p>
+<p>Sub nicio formă nu vom obliga noi, ca şi consumatori, pe nimeni; piaţa este cea care decide exact. Produsele de calitate vor răm&acirc;ne, celelalte au tot dreptul să se piardă.</p>
+<p>&nbsp;</p>
+<p><strong>Discurs Alina Babolea N1</strong></p>
+<p>&nbsp;</p>
+<p>Mă bucur că ne-am adunat aici pentru tema aceasta. Am să &icirc;ncep prin a clarifica &icirc;ntr-un fel două lucruri care s-au suprapus. A existat o confuzie in ceea ce ne-a fost prezentat p&acirc;nă acum şi aici mă refer la două aspecte: O confuzie &icirc;ntre ce &icirc;nseamnă tehnici de marketing, de promovare a produselor, a operelor, a tot ceea ce practic e proprietate intelectuală (deci cum promovăm) şi pirateria online, pentru că mare parte din discursul anterior a fost axat cumva asupra acestui fapt: că de fapt, faptul că se piratează online, adică se downloadează gratuit şi fără drept şi ilegal, cum spuneau &icirc;n definiţia&nbsp; pe care ne-au prezentat-o, este &icirc;n final o tehnică de marketing, şi că &icirc;n felul acesta practic există un c&acirc;ştig al companiilor care au lansat acele produse, există un c&acirc;ştig al autorilor respectivelor produse şi că toată lumea ar fi fericită &icirc;n contexul aceasta pentru că, de fapt, ne spun ei, tot ceea ce se &icirc;nt&acirc;mplă e o promovare. Că dacă downloadez un film p&acirc;nă la urmă tot merg nişte oameni la cinematograf că &bdquo;s-a făcut mare v&acirc;lvă&rdquo; pe el şi a avut multe downloaduri. Acesta este un aspect şi mă voi concentra puţin asupra lui.</p>
+<p>După cum aţi văzut şi &icirc;n &icirc;ntrebările adresate mai devreme, se spunea cumva că nu putem obliga toate companiile să aplice o astfel de tehnică de marketing. &Icirc;ntrebarea este: e pirateria online o tehnică de marketing? Sau: Cu ce drepturi o putem numi astfel şi o putem legaliza? Că unele companii, că unii autori (ni se dă exemplul lui Paulo Coelho), aleg să &icirc;şi distribuie gratuit opera e una, că acea operă este duplicată şi distribuită ilegal e cu totul altceva. Adică aici intervine dreptul la liberă alegere: e dreptul meu ca şi companie producătoare de software, de exemplu, să distribui un soft open source, sau să oblig utilizatorii care au nevoie de el să-l cumpere. Deci partea cu politica de marketing care e atinsă si obiective de marketing care sunt atinse prin piraterie online este de pus sub semnul &icirc;ntrebării.</p>
+<p>Ce-a de-a doua parte a discursului anterior era concentrată asupra diferenţei &icirc;ntre accesul liber la informaţie şi piraterie: O confuzie din nou deoarece dacă s-ar interzice downloadurile, ... ce se downloadează de fapt? Muzică, filme, softuri de operare etc. Cam despre aceasta vorbim. Nu vorbim despre interzicerea accesului pe site-urile de ştiri, nu vorbim de interzicerea accesului la articole de specialitate. Nu. Vorbim de descărcarea acelor lucrări care sunt muncite, cum era exemplul din &icirc;ntrebarea colegei mele: &bdquo;Care e diferenţa &icirc;ntre a fura un DVD cu un film dintr-un magazin şi a-l downloada ilegal de pe internet?&rdquo;. Practic nu e nicio diferenţă. E aceeaşi daună adusă autorului sau casei respective de film.</p>
+<p>Şi revenim deci, incerc să subliniez: accesul la liberă informaţie nu &icirc;nseamnă să downloadezi filme si muzică de pe internet, nu să downloadezi jocuri, nu să downloadezi programe de operare. Accesul la liberă informaţie &icirc;nseamnă să pot să accesez acele lucruri care mă privesc fiind de interes public, ori pirateria online nu se referă la aceste lucruri de interes public cum că ar fi interzise. Vis-&aacute;-vis de ACTA trebuie menţionat că ACTA e o metodă de implementare. Practic nu ne referim la această temă discut&acirc;nd-o prin perspectiva ACTA. Faptul că ACTA nu a fost aprobată &icirc;n unele tări nu &icirc;nseamnă că, in sine, incriminarea pirateriei ar trebui amendată.</p>
+<p>Noi sustinem astfel două argumente şi anume: &icirc;n primul r&acirc;nd, trebuie protejat dreptul de autor pentru că incurajează creativitatea; odată ce protejezi dreptul de autor ai rezultate mai bune şi, &icirc;n al doilea r&acirc;nd, trebuie amendată pirateria online pentru ca aduce daune economice majore şi aici sunt doar cateva cifre pe care le prezint: 95% din melodiile pe care le ascultăm sunt descărcate ilegal, 42% din programele cu care lucrăm sunt descărcate ilegal la nivel mondial, ceea ce aduce daune marcante: vorbim de pierderi anuale &icirc;n industria muzicală de 13 miliarde de dolari, vorbim de locuri de muncă pierdute din această pricină şi &icirc;n urma statisticilor se ajunge la o valoare fulminantă de 71 de mii de locuri de muncă.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><strong><span style="text-decoration: underline;">&Icirc;ntrebare Alina Gavra:</span></strong></p>
+<p>Vă mulţumim frumos pentru discurs. Am &icirc;nţeles că sunteţi cadru didactic şi voiam să vă &icirc;ntrebăm dacă vreodată aţi dat vreo carte studenţilor sau vreun articol ştiinţific fără ca aceştia să plătească drepturile de autor, şi dacă da, de ce credeţi că a fost moral acest lucru?</p>
+<p><strong><span style="text-decoration: underline;">Răspuns Alina Babolea:</span></strong></p>
+<p>A fost funcţional.</p>
+<p><strong><span style="text-decoration: underline;">&Icirc;ntrebare Alina Gavra:</span></strong></p>
+<p>Pe de altă parte, vorbeaţi despre o imagine a industriei muzicale &icirc;ntr-o formă foarte apocaliptică. Cum vă puteţi explica diversificarea şi cizelarea produselor muzicale, şi continuarea &icirc;nregistrării unor succese fabuloase a unor formaţii, chiar şi &icirc;n condiţiile &icirc;n care muzica le este piratată?</p>
+<p><strong><span style="text-decoration: underline;">Răspuns Alina Babolea:</span></strong></p>
+<p>Este o variantă pe care unii o aleg: acea de a-şi promova prin diverse metode produsele, dar nu poate fi implementată la nivelul tuturor companiilor. De asemenea, nu există o legătură directă &icirc;ntre succesul fulminant al unor companii/artişti şi pirateria online. &Icirc;nsă, &icirc;n momentul &icirc;n care ducem la extrem lucrul acesta şi se ajunge la pierderi &icirc;nregistrate şi vizibile, lucrurile sunt destul de grave. Asta nu &icirc;nseamnă că e o imagine apocaliptică, &icirc;nseamnă doar că e un semn de &icirc;ntrebare şi că incriminarea pirateriei ar duce la c&acirc;ştiguri mai mari şi la dezvoltarea industriei.</p>
+<p><strong><span style="text-decoration: underline;">&Icirc;ntrebare Alina Gavra:</span></strong></p>
+<p>&Icirc;nţeleg, din ceea ce aţi spus, că e de preferat să investim &icirc;n această industrie muzicală chiar şi &icirc;n detrimentul accesului la informare, la cultură al societăţii per ansamblu. Consideraţi că ar fi benefic?</p>
+<p>&nbsp;</p>
+<p><strong><span style="text-decoration: underline;">Răspuns Alina Babolea:</span></strong></p>
+<p>Accesul se păstrează &icirc;n continuare. At&acirc;ta doar că, aşa cum spuneaţi dumneavoastră, nu va mai fi un acces ilegal, pentru că ne spuneaţi, definiţia pirateriei online ca fiind &bdquo;duplicarea şi distribuirea ilegală de material&rdquo;. Nu vom mai face lucruri la modul acesta.</p>
+<p><strong><span style="text-decoration: underline;">&Icirc;ntrebare Alina Gavra:</span></strong></p>
+<p>Şi &icirc;n aceste condiţii, cunoasteţi vreo măsură a statului de a oferi alternative care să menţină &icirc;n continuare nivelul de educare, de dezvoltare personală, academică a indivizilor, care a fost facilitată tocmai prin această piraterie online?</p>
+<p><strong><span style="text-decoration: underline;">Răspuns Alina Babolea:</span></strong></p>
+<p>Tocmai de acea suntem aici, ca să vedem &icirc;n primul r&acirc;nd dacă ar trebui să existe aceste mecanisme, şi din punctul nostru de vedere ar trebui să existe.</p>
+<p>&nbsp;</p>
+<p><strong>Alin Sava discurs A2</strong></p>
+<p>&Icirc;nt&acirc;i aş vrea să lămuresc aspecte, poate chiar din definiţie. Sigur că a downloada ilegal produse nu este chiar OK, dar noi nu susţinem scoaterea de sub incidenţa legii a acestui aspect, noi susţinem doar decriminalizarea, care &icirc;nseamnă doar scoaterea de sub codul penal. Vrem să răm&acirc;nă &icirc;n continuare ca element pedepsibil &icirc;n cadrul codului civil, dacă se &icirc;nt&acirc;mplă cazuri foarte grave. De ce facem acest lucru? Pentru că, aşa cum a arătat colega noastră, credem că, spre deosebire de un furt de CD dintr-un magazin, a downloada materiale de acest gen ajută progresul social prin prisma a trei elemente:</p>
+<p>&Icirc;n primul rand ajută, in dezvoltarea profesională a oamenilor. Pentru că nu trăim &icirc;ntr-un mediu ideal, ci &icirc;ntr-o realitate economică ce ne arată că bugetele sunt limitate. G&acirc;ndiţi-vă ce ar &icirc;nsemna dezvoltarea profesorului &icirc;n universitatea aceasta dacă nu ar avea acces şi la alte baze de date dec&acirc;t cele pe care le pune la dispoziţie universitatea. Sau cum ar fi ca studenţii să &icirc;nveţe după singurul exemplar din bibliotecă: să stea cu r&acirc;ndul, să nu-şi facă xerox peste 25 de pagini sau fară să acceseze materialul online.</p>
+<p>Al doilea argument al nostru a fost pe zonă de entertainment: filme si muzică. Din nou, g&acirc;ndiţi-vă ce ar &icirc;nsemna viaţa voastră dacă singurele produse pe care le-aţi vedea sunt cele pentru care plătiţi un ban. Aţi vedea mult mai puţine filme, aţi asculta mult mai puţină muzică, sau aţi asculta doar muzica impusă la radio sau TV. Ce &icirc;nseamnă acest lucru? &Icirc;nseamnă că, pana la urma, răul produs marilor companii e pus sub semnul &icirc;ntrebării pentru că prin strategii de marketing eficiente poate fi compensat, şi e pus &icirc;n balanţă cu c&acirc;stigul pe care &icirc;l are societatea. Şi p&acirc;nă la urmă societatea e cea care ar trebui să facă legea. Să judece dacă, de exemplu, din 1990 sau 1995, c&acirc;nd a &icirc;nceput expansiunea internetului şi p&acirc;nă astăzi, nu a fost un adevărat progres care a mers m&acirc;nă &icirc;n m&acirc;nă cu pirateria. Din acest punct de vedere credem că nu este un rău at&acirc;t de mare &icirc;nc&acirc;t să fie pus sub incidenţa codului penal şi ar trebui decriminalizat.</p>
+<p>Şi dacă ar fi să răspund&nbsp; &icirc;ntrebarii afirmatorilor: există o mare diferenţă &icirc;ntre a fura un CD din magazin şi a-l downloada. Dacă furi din magazin nu află nimeni; tocmai asta e ideea, să nu afle nimeni. Dacă downloadezi de pe internet s-ar putea chiar să existe un counter care să arate cate downloaduri are acel produs, care arată ceva despre calitatea acelui produs, şi acest lucru este chiar o strategie de marketing. Sigur că producatorilor care investesc &icirc;n continuare &icirc;n produse de proastă calitate s-ar putea să nu le convină această strategie pentru că nu mai cumpărăm produsele după ceea ce scrie pe copertă. Dacă v-aţi uitat pe coperta unei cărţi sau un CD veţi vedea că totul e senzaţional, e premiat, e deosebit, pentru că este un marketing impus de către finanţator, pe c&acirc;nd prin acest proces liber al pieţei care spune &bdquo;OK, c&acirc;te downloaduri are? C&acirc;t de bine este primit de piaţă?&rdquo; se ajunge la un indice calitativ mai bun. Deci, din punctul acesta de vedere, dacă ne ajută să ne dezvoltăm profesional, să ne crestem calitatea vieţii prin accesul la filme şi muzică; şi de asemenea dacă o transformăm &icirc;ntr-o problemă de evoluţie pentru companii, şi anume de a adapta companiile la piaţă, dacă toate lucrurile acestea sunt benefice din perspectiva pirateriei online cred că putem să decriminalizăm pirateria.</p>
+<p>Aş mai face cateva comentarii legate de ceea ce s-a spus anterior: nu este numai o problemă de ce fac autorii. Sigur că p&acirc;nă la urmă totul este la libera alegere a companiei ce face&nbsp; cu produsul. Legat de acele exemple cu Coelho si &bdquo;Man on Earth&rdquo;: sigur, era vorba de o situatie &icirc;n care oamenii şi-au pus de bună voie produsele online. De accea, &icirc;n contextul &icirc;n care singurii care se impotrivesc foarte tare sunt marile companii care nu se adaptează la piaţă, şi &icirc;n contextul &icirc;n care există avantaje pentru formarea profesională, pentru calitatea vieţii, şi, de ce nu, pentru companii in sine ca să formeze noi strategii de marketing cu care să intre pe piaţă, vă rog să vă g&acirc;ndiţi bine dacă nu este deja timpul să decriminalizăm pirateria online.</p>
+<p>&nbsp;</p>
+<p><strong>Discurs N2 Adina Fometescu</strong></p>
+<p>&nbsp;</p>
+<p>Astăzi vreau să vă zic un singur lucru: Distracţia costă, iar echipa afirmatoare ne spune că ar trebui să avem distracţie gratis. Ei bine, NU! Nu ar trebui să avem distracţie gratis.</p>
+<p>O să vă prezint &icirc;n discursul meu in 3 puncte: esenţa cazului afirmator care este protecţia dreptului la informare, al doilea punct se referă la ce &icirc;nseamnă pirateria online şi care sunt pagubele exacte produse de această piraterie online, iar ultimul punct se va referi la strategia inovatoare de marketing pe care o reprezintă pirateria online.</p>
+<p>Să luam primul punct: esenţa cazului afirmator referitor la protecţia dreptului la informare. Nu se periclitează &icirc;n niciun fel dreptul la informare, pentru că statul şi-a dat seama că trebuie asigurat acest drept şi din această cauză toate site-urile sunt gratis, toate sursele de informare sunt gratis. Să ne uitam p&acirc;nă la urmă la ceea ce se piratează de fapt. Se piratează pornografie &icirc;n proporţie de 36%, se piratează filme, jocuri, software etc., iar e-book-urile reprezintă undeva la 0,2%. Aşadar, dacă răm&acirc;ne incriminată această piraterie online nu este afectat dreptul la informare.&nbsp; Deci această piraterie online este folosită pentru distracţie. Pentru că lumea piratează online ca să se distreze, nimic mai mult. Singurul exemplu restricţionat de care s-a vorbit e ziarul &bdquo;The Economist&rdquo;, deci nu considerăm că această restricţionare afectează dreptul la informare. Legat de ideea cu progresul social nu există o corelaţie clară &icirc;ntre faptul că piratăm online şi ajungem la un progres. Nu vedem nici măcar o legătură logică şi noi considerăm că am ajuns la acest progres din cauza informării care, am arătat. nu e legată de pirateria online.</p>
+<p>Să trecem la al doilea punct. Ce &icirc;nseamnă pirateria online? Pur şi simplu &icirc;nseamnă un furt, un transfer nelegitim. Din ce cauză? Un transfer legitim &icirc;nseamnă că ambele părţi sunt de acord. &Icirc;n cazul pirateriei online doar o singură parte este de acord şi anume cea a consumatorilor, pentru că producătorul nu este de acord să &icirc;şi ofere produsul gratis. &Icirc;nsă trecand mai departe, nu trebuie să &icirc;ncurajăm furtul &icirc;ntr-o societate. Nu ar trebui să dăm senzaţia că furtul este ceva &icirc;n regulă şi să-l scoatem de sub incidenţa legii, tocmai pentru că este un furt, unul intelectual, ar trebui să răm&acirc;nă &icirc;n continuare sub incidenţa legii pentru că statul ar trebui să protejeze ambele părţi: at&acirc;t consumatorul c&acirc;t şi producătorul. Şi dacă consumatorul vrea ceva gratis nu &icirc;nseamnă că ar trebui să-i oferim acel lucru. Sunt conştientă că toată lumea vrea ca orice să fie gratis, &icirc;nsă nu &icirc;nseamnă că ar trebui să primească acel lucru gratis. Pur şi simplu spunem că duce la pierderi majore pentru producător. Din ce cauză? Pentru că dacă automat consumatorul nu va mai plăti pentru produsele respective &icirc;nseamnă că automat există pierderi majore financiare. Aşa cum a dat si colega mea exemplu: &icirc;n Statele Unite se pierd anual 12,5 miliarde de dolari din cauza pirateriei online.</p>
+<p>Să vorbim şi despre punctul controverselor: &Icirc;n momentul &icirc;n care un lucru se incriminează automat există nişte controverse, &icirc;nsă pe termen scurt. De exemplu drogurile: &icirc;n momentul &icirc;n care drogurile au fost incriminate şi ilegalizate au fost pe o perioadă scurtă anumite controverse. &Icirc;nsă acum observăm că este absolut normal că consumul de droguri este incriminat. Acelaşi lucru vrem să se intample şi cu pirateria online. Să se ajungă la ideea că nu este OK să furi, nici măcar din punct de vedere intelectual, aşa cum nu este OK să furi un CD dintr-un magazin. Consideram ca este acelasi lucru sa furi intelectual sau sa furi un CD dintr-un magazin.</p>
+<p>Să trecem mai departe şi să vorbim şi despre ce &icirc;nseamnă pirateria ca strategie de marketing. Putem spune că viziunea asupra pirateriei online nu este una unilaterală. Din ce cauză? Dacă unii producatori sau unii artişti, cum ar fi Paulo Coelho, sunt de acord cu această piraterie online nu &icirc;nseamnă că toată lumea este de acord cu această piraterie online. Şi noi spunem că nu este moral să obligi producătorii să-şi dea produsul gratis. P&acirc;nă la urmă este o descurajare a artiştilor noi să intre pe piaţă, pentru că dacă munca lor nu le va garanta un venit, nu vor avea motive să intre pe piată. Noi vă spunem că &icirc;n momentul &icirc;n care există un produs gratis, nu vei mai fi motivat să-l cumperi, iar ei vă ziceau că e bine să testezi produsul &icirc;nainte. Nu este deloc aşa. Dacă vom avea gratis un produs nu vom mai fi motivaţi deloc să cumpărăm produsul respectiv.</p>
+<p>Şi &icirc;n legătură cu diversitatea, putem spune că există şi &icirc;n momentul actual şi afirmatorii nu ne-au demonstrat &icirc;n niciun punct de ce pirateria online e un lucru benefic pentru societate, de ce ar trebui pur şi simplu să nu mai fie incriminată pirateria online şi noi considerăm că din cauza pagubelor morale şi financiare pe care le aduce pirateria online există motive suficiente să fie incriminată &icirc;n continuare.</p>
+<p>Va multumesc!</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><strong><span style="text-decoration: underline;">&Icirc;ntrebare public:</span></strong></p>
+<p>Am doua intrebari pentru echipa afirmatoare. &Icirc;n primul r&acirc;nd nu am fost lămurit cum se rezolvă problema dreptului la proprietate? Consider că dacă decriminalizăm pirateria online trebuie să ne punem problema dreptului la proprietate din puctul de vedere al autorilor.</p>
+<p><strong><span style="text-decoration: underline;">Răspuns Alin Sava:</span></strong></p>
+<p>Meciul nu era unul de strategie, ci mai degrabă unul factual aş putea spune: dacă merită sau nu incriminat &icirc;n funcţie de pagube; s-ar putea g&acirc;ndi o soluţie la nivelul site-urilor de torrent care să plătească o anumită taxă anuală pentru drepturile de autor. Noi nu &icirc;ncercam să demonstrăm neapărat o egalitate din punct de vedere economic, ci mai debrabă că există un beneficiu &icirc;n societate dacă se continuă aceste practici.</p>
+<p><strong><span style="text-decoration: underline;">&Icirc;ntrebare public:</span></strong></p>
+<p>Aşadar, &icirc;n esenţă, argumentul vostru ar fi unul utilitarist. Urmăreşte fericirea generală să &icirc;nteleg?</p>
+<p><strong><span style="text-decoration: underline;">Răspuns Alin Sava:</span></strong></p>
+<p>Oarecum. O paralelă ar fi sănătatea care ar trebui să coste, dar uneori se oferă gratuit pentru că e considerat un lucru important.</p>
+<p><strong><span style="text-decoration: underline;">&Icirc;ntrebare public:</span></strong></p>
+<p>O &icirc;ntrebare pentru echipa negatoare, pe care am văzut că au evitat-o &icirc;n meci. Am dreptul să ofer cuiva o carte care &icirc;mi aparţine spre a fi citită? Am dreptul sa o ofer cuiva care nu a plătit pentru ea?</p>
+<p><strong><span style="text-decoration: underline;">Răspuns Alina Babolea &amp; Adina Fometescu:</span></strong></p>
+<p>Din moment ce am acea carte, inseamna ca este proprietatea mea. Dacă autorii sunt de acord ca informaţiile pe care le deţin să ajungă şi la alte persoane e OK, nu se mai numeşte piraterie. &Icirc;nsă &icirc;n momentul &icirc;n care eu deţin un anumit set de informaţii, anumite construcţii personale care ajung la unele persoane fară acordul meu, atunci vorbim de piraterie.</p>
+<p>&nbsp;</p>
+<p><strong><span style="text-decoration: underline;">&Icirc;ntrebare public:</span></strong></p>
+<p>Reformul&acirc;nd: eu am o carte de Coelho şi nu am acordul fiindcă nu-i cunosc numărul de telefon; am dreptul să o ofer cuiva să o citească?</p>
+<p><strong><span style="text-decoration: underline;">Răspuns Adina Fometescu:</span></strong></p>
+<p>Da.</p>
+<p><strong><span style="text-decoration: underline;">&Icirc;ntrebare public:</span></strong></p>
+<p>&Icirc;ncă o &icirc;ntrebare pentru echipa negatoare. Eu cosider că, ca să ajungem la ceea ce susţineţi dumneavoastră ar trebui investite foarte multe fonduri. Deoarece trebuie prinşi infractorii. Deci statul trebuie să ia bani şi să depună mari eforturi pentru a prinde oamenii care piratează pe internet şi să-i &icirc;ncarcereze. &Icirc;nsă societatea a avut numeroase probleme pe care le-a rezolvat evit&acirc;nd &icirc;ncarcerarea. Deci consideraţi că &icirc;n situaţia noastă, &icirc;n zilele noastre se poate contura o altă metodă?</p>
+<p><strong><span style="text-decoration: underline;">Răspuns Alina Babolea:</span></strong></p>
+<p>Discuţia are două părţi. &Icirc;n primul r&acirc;nd e vorba de &icirc;ntrebarea: &bdquo;E timpul să decriminalizăm?&rdquo;; adică &icirc;n primul r&acirc;nd vorbim de principiu: e bine să se &icirc;nt&acirc;mple lucrul aceasta sau e rău să se &icirc;nt&acirc;mple lucrul acesta, din diverse puncte de vedere: economic, etic, al fericirii utilizatorului şi fericirii producătorului. Aceste aspecte sunt importante. După ce am ajuns la un răspuns aici, atunci vorbim despre implementare. Adică ne răspundem prin această dezbatere la prima parte a problemei: ar trebui incriminată &icirc;n continuare şi ar trebui să găsim o cale să facem aceste lucruri palpabile sau nu?</p>
+<p><strong><span style="text-decoration: underline;">&Icirc;ntrebare public:</span></strong></p>
+<p>&Icirc;nsă la nivel de implementare, nu consideraţi că ar trebui practic să fim urmăriţi pe internet ceea ce ar duce la o &icirc;ncălcare a dreptului la viaţă privată?</p>
+<p><strong><span style="text-decoration: underline;">Răspuns Adina Fometescu:</span></strong></p>
+<p>Am dori să răspundem tot printr-o &icirc;ntrebare: credeţi că, din cauza faptului că e foarte greu să prinzi traficanţii de droguri şi pentru că le &icirc;ncălcăm lor anumite drepturi, ar trebui să-i lăsăm să facă ce vor ei?</p>
+<p><strong><span style="text-decoration: underline;">Interventie Emanuel Copilas:</span></strong></p>
+<p>Se poate continua discuţia şi &icirc;ntr-un mediu privat. P&acirc;nă atunci ce alte &icirc;ntrebări mai sunt?</p>
+<p><strong><span style="text-decoration: underline;">&Icirc;ntrebare public:</span></strong></p>
+<p>O &icirc;ntrebare pentru echipa afirmatoare. Aţi spus că p&acirc;nă acum pirateria a dus la o dezvoltare, &icirc;nsă nu aţi subliniat că a dus la o dezvoltare c&acirc;t timp era incriminată. Dacă am dezincrimina pirateria, iar sunetiştii, compozitorii şi artiştii care contribuie la melodii ar ştii că produsul lor este oferit gratis, credeţi că acest lucru ar mai duce la dezvoltare &icirc;n continuare?</p>
+<p><strong><span style="text-decoration: underline;">Răspuns Alina Gavra:</span></strong></p>
+<p>In primul rand, această dezvoltare nu s-a produs &icirc;n condiţii de dezincriminare, &icirc;nsă chiar faptul că p&acirc;nă astăzi s-a perpetuat acest fenomen al pirateriei ne arată tocmai că acest lucru nu a fost niciodată o problemă reală pentru individ, pentru societate. Nu a dus la pagube comparabile cu cele ale producătorilor şi consumatorilor de droguri. Este un lucru care s-a perpetuat tocmai pentru că a avut rezultate.</p>
+<p><strong><span style="text-decoration: underline;">Răspuns Alin Sava:</span></strong></p>
+<p>Odată pentru zona artiştilor, sunt convins că ei s-ar organiza &icirc;n asociaţii pentru a promova altfel produsele, probabil cer&acirc;nd nişte drepturi de alt gen. Dar nu trebuie tot timpul să ne g&acirc;ndim la muzică şi filme. Eu sunt cadru universitar şi vă spun că Universitatea de Vest nu are acces la cele mai importante baze de date din domeniul psihologiei şi dacă vrei să publici competitiv, nu prea poţi să o faci av&acirc;nd acces la cele cateva baze de date pe care le oferă Vestul. Şi din punctul acesta de vedere sunt convins că o dezincriminare, care ar duce la liberul acces la marile baze de date, ar duce la un progres profesional şi la cunoştinţe mai multe ş.a.m.d. Acest aspect pe zona ştiinţifică, iar pe zona de media haideţi să ne g&acirc;ndim cum se promovează artiştii la ora actuală? Cel mai mult prin mediu online; şi şansele ca ei să fie şi mai activi şi mai cunoscuţi sunt c&acirc;nd lărgeşti canalele de comunicare.</p>
+<p><strong><span style="text-decoration: underline;">Completare Alina Gavra:</span></strong></p>
+<p>Aş adăuga faptul că artiştii au găsit deja mijloace de adaptare. De exemplu, trupa Radio Head şi-a postat albumul online gratuit cer&acirc;ndu-le fanilor să cotizeze &icirc;n funcţie de cum evaluează ei calitatea albumului şi s-au declarat foarte mulţumiţi de suma pe care au str&acirc;ns-o. Totodată, orice artist talentat are şansa de a se afirma prin faptul că &icirc;şi transmite ideile sau cantecele mai departe. Dacă publicul &icirc;l va valida, ulterior &icirc;i va cumpăra albumele, &icirc;i va solicita să tină concerte. Autorii, artiştii nu mai sunt constr&acirc;nşi să facă parte dintr-un concern media, să se supună regulilor monopoliste ale marilor corporaţii. Despre asta vorbim, şi despre libertatea artiştilor: să nu uităm de acest lucru. Şi avem foarte multe exemple pe care le repetăm: prin această schimbare de paradigmă, artiştii au fost primii care s-au adaptat; au găsit mecanisme de a-şi menţine şi promova produsele şi din punct de vedere financiar. Marile corporaţii sunt cele care pierd şi care se tem de pirateria online. Ele sunt şi cele care au bani pentru realizarea studiilor cum că pirateria online dăunează societăţii;să nu uităm &icirc;nsă că in 2008, c&acirc;nd s-au realizat aceste studii, au fost şi alte cauze: criza economică, vorbim de faptul că s-a diversificat oferta şi, bineinteles, că atunci a scăzut şi v&acirc;nzarea unui anumit produs. Cu toate acestea ele &icirc;ncă dau bani să promoveze astfel de mesaje pe care populaţia, după cum vedeţi, nu le acceptă. ACTA nu a fost acceptată de majoritatea ţărilor civilizate in Uniunea Europeană.</p>
+<p><strong><span style="text-decoration: underline;">&Icirc;ntrebare public:</span></strong></p>
+<p>Aş dori să se mai explice de către echipe diferenţa dintre furtul dintr-un magazin şi download-ul ilegal de pe internet. Pentru că ambele aduc teoretic acelaşi prejudicii asupra omului. De ce n-ar fi aceeasi situatie, sau situatii comparabile? Ambele sunt practic fructele muncii unui om, deci e ca si cum l-ai deposeda de rezultatele muncii sale.</p>
+<p><strong><span style="text-decoration: underline;">Răspuns Alin Sava:</span></strong></p>
+<p>Am &icirc;nţeles. Tocmai de accea noi nu am vorbit de eliminarea oricărei sancţiuni şi am vrut doar scoaterea de sub influenţa codului penal. Diferenţa pe care o vedem este la nivel de impact pentru societate şi pentru produs &icirc;n sine. C&acirc;nd furi un CD nu există niciun fel de feedback &icirc;n afară de faptul că ai furat acel lucru. C&acirc;nd downloadezi ilegal, foarte probabil există forumuri despre produsul respectiv şi despre calitatea lui, oamenii isi spun si parerea, se vede c&acirc;t de des a fost downloadat, exista evaluări ale produsului respectiv şi prin felul acesta i se face publicitate. Ceea ce nu se &icirc;nt&acirc;mplă c&acirc;nd furi un CD. Acesta ar fi un aspect important. &Icirc;n privinţa costurilor: in cazul CD-ului costă transportul, manopera ş.a.m.d, in timp ce online doar printr-un singur clic accesezi melodia. Deci raportul costuri/pierdere este mai mic pe internet.</p>
+<p><strong><span style="text-decoration: underline;">Răspuns Adina Fometescu:</span></strong></p>
+<p>Mi se pare că astăzi ambele echipe voiau de fapt sa incriminalizeze pirateria online. Ei voiau să scoată de sub incidenţa codului penal şi să o treacă &icirc;n civil de fapt, ceea ce p&acirc;nă la urmă reprezintă tot o incriminare.</p>
+<p><strong><span style="text-decoration: underline;">Interventie public:</span></strong></p>
+<p>Mi-a placut nuantarea asta, unde trageti linia despre ce ar putea intra sub incidenta dreptului civil si ce ar fi sub incidenta dreptului penal?</p>
+<p><strong><span style="text-decoration: underline;">Răspuns Alin Sava:</span></strong></p>
+<p>Moţiunea se referă la decriminalizare.</p>
+<p><strong><span style="text-decoration: underline;">Răspuns Alina Gavra:</span></strong></p>
+<p>Mai este un argument şi o mare diferenţă &icirc;ntre a fura o carte online şi una de pe raft. Gandiţi-vă că la majoritaea cărţilor din State care sunt de mare interes, pentru tine ca specialist sau ca om, nu vei avea acces pe rafturile din Rom&acirc;nia. La acest film pe care &icirc;l dădeam exemplu &bdquo;A man on Earth&rdquo;, fiind o producţie de două sute de mii de dolari care a fost lansată doar &icirc;n State la cinematografe, pe c&acirc;nd online au existat milione de vizualizări din &icirc;ntreaga lume. Acesta a fost singurul mecanism prin care oamenii au avut performanţă şi au apreciat foarte mult filmul.</p>
+<p><strong><span style="text-decoration: underline;">&Icirc;ntrebare public:</span></strong></p>
+<p>O &icirc;ntrebare pentru echipa negatoare. Legat de ideea că dacă s-ar liberaliza circulaţia produselor, dacă nu s-ar mai obţine un profit pe baza lor, acest lucru ar duce la stoparea creaţiei. Credeţi că dacă piaţa aceasta ar fi liberă pe internet ar mai exista artişti precum Justin Bieber sau Britney Spears, care este evident că produc muzică special pentru profit? Eu cred că s-ar promova astfel calitatea, pentru că dacă artişti precum Pink Floyd ar c&acirc;nta oricum indiferent de dacă ar obţine sau nu bani. Aceeaşi paralelă legată şi de filmele făcute doar pentru profit care nu sunt de calitate, &icirc;n antiteză cu filmele cu buget redus care sunt de calitate şi care apar din pasiunea producătorilor de a le face. Aşadar, daca s-ar liberaliza total circulatia creatiei, rezultatul final nu ar fi promovarea calităţii?</p>
+<p><strong><span style="text-decoration: underline;">Răspuns Adina Fometescu:</span></strong></p>
+<p>Din c&acirc;te cunoaştem noi, ştim că Justin Bieber s-a promovat foarte mult prin intermediul Youtube-ului şi apoi a c&acirc;ştigat o sumă extraordinară de bani prin v&acirc;nzarea de CD-uri. Adică oamenii au văzut care este calitatea artistului prin metode &bdquo;open source&rdquo;, el promov&acirc;ndu-şi liber opera sa, si apoi, din această cauză oamenii au testat şi au cumpărat mai apoi produsul. Noi spunem că este o mare diferenţă c&acirc;nd artistul este de acord să-şi ofere gratis munca. &Icirc;n momentul acela nu vorbim despre piraterie, c&acirc;nd at&acirc;t producătorul c&acirc;t şi consumatorul sunt de acord cu transferul. &Icirc;nsă &icirc;n momentul &icirc;n care eu ca şi producător nu vreau să-mi ofer creaţia mai departe şi &icirc;mi este descărcată, atunci se numeşte piraterie. Şi nu credem că metoda anterioară de promovare e eficientă pentru că artistul pierde foarte mult. Aşa cum am explicat: &icirc;n momentul &icirc;n care ai gratis un produs, nu vei mai avea interesul de a cumpăra acel produs. Dacă nu-l ai gratis, ai interesul să-l cumperi.</p>
+<p><strong><span style="text-decoration: underline;">Răspuns Alina Babolea:</span></strong></p>
+<p>Am &icirc;nteles două dimensiuni ale &icirc;ntrebării: una de artă de dragul artei, cum că ar fi promovată adevărata artă; şi a doua referitoare la dreptul unor agenţi economici, casă de discuri sau producător, care are nişte costuri la producţie pe care vrea să le acopere şi să scotă profit, pentru că acesta este scopul. Pe dimensiunea economică, e clar că pirateria loveşte drastic, pentru că agenţii economici nu &icirc;şi recuperează investiţiile, sau nu le recupereaza pe cat ar dori, si e necesar sa fie incriminata cat mai mult posibil. Vis-a-vis de &bdquo;artă de dragul artei&rdquo; este posibil să fie cernută cumva calitatea dacă utilizatorii au acces liber la tot şi atunci aleg ei, &icirc;nsă nu e o regulă. Aşa cum spunea şi colega mea, sunt contra-exemple. Ideea că un om poate să facă ceva la nesf&acirc;rşit fără niciun c&acirc;ştig poate suna bine la v&acirc;rsta de 16 ani, &icirc;nsă la un moment dat ne dăm seama că nu e chiar aşa. Nu poţi menţine la nesf&acirc;rşit viziunea de &bdquo;artă de dragul artei&rdquo; şi &bdquo;creaţie de dragul creaţiei&rdquo;.</p>
+<p><strong><span style="text-decoration: underline;">Răspuns Alin Sava:</span></strong></p>
+<p>La ideea de calitate putem adauga, &icirc;n primul r&acirc;nd, ca există o cernere, g&acirc;ndindu-ne la c&acirc;ţi artişti există pe zona muzicală: poate ca prin pirateria online scade numărul de v&acirc;nzări de CD-uri, dar dacă ar fi artişti adevăraţi, ar c&acirc;stiga foarte mult din susţinerea de concerte. Aşa se &icirc;nt&acirc;mplă de obicei: cei mai mulţi bani vin din concerte. Iar cei care nu sunt &icirc;n stare să facă bani din concerte sunt acei artişti care ştiu să c&acirc;nte numai cu calculatorul, ei neav&acirc;nd capacităţi de a c&acirc;nta live, şi din punctul nostru de vedere e chiar bine pentru că nu sunt artişti adevăraţi.</p>
+<p><strong><span style="text-decoration: underline;">Interventie public:</span></strong></p>
+<p>O &icirc;ntrebare pentru echipa afirmatoare, vis-a-vis de exemplul pe care l-aţi dat mai devreme cu filmul cu buget de două sute de mii de dolari care a fost difuzat doar in State şi dacă nu ar fi fost internetul nu auzea nimeni de el. &Icirc;ntrebarea este: de ce e bine ca lucrul acesta să se &icirc;nt&acirc;mple gratis? De ce să nu c&acirc;ştige oamenii&nbsp; un ban pun&acirc;nd o taxă, pentru că tehnologia &icirc;ţi permite să distribui fie gratis, fie pe bani?</p>
+<p>&nbsp;<strong><span style="text-decoration: underline;">Răspuns Alina Gavra:</span></strong></p>
+<p>Tocmai aceasta este ideea, că filmul respectiv a c&acirc;ştigat &icirc;n primul r&acirc;nd datorită faptului că a reuşit să ajungă la un număr aşa mare de vizualizari, pe care nu ar fi fost &icirc;n stare să le atingă prin aceste mecanisme tradiţionale. Despre asta vorbim: despre o schimbare de perspectivă.</p>
+<p><strong><span style="text-decoration: underline;">Interventie public:</span></strong></p>
+<p>Logica e următoarea: filmul a avut multe vizualizări pe internet pentru că tehnologia &icirc;ţi permite lucrul acesta, dar nu este demonstrat că doar gratis ar fi avut această notorietate.</p>
+<p><strong><span style="text-decoration: underline;">Răspuns Alin Sava</span></strong><strong><span style="text-decoration: underline;">:</span></strong></p>
+<p>Revenind, dincolo de problema factualo-valorică răm&acirc;ne problema de &bdquo;cum &icirc;i pedepsim?&rdquo; Si nu &icirc;i putem prinde sau dacă &icirc;i prindem le &icirc;ncălcăm drepturi. Şi atunci, dec&acirc;t aşa, mai bine &icirc;i plăteşti statului 2% taxă de informare şi culturalizare. Mi-e greu să cred fizic cum ar putea fi implementată distribuirea negratuită.</p>
+<p><strong><span style="text-decoration: underline;">Răspuns Alina Gavra:</span></strong></p>
+<p>Dar nu ne &icirc;nţelegeţi greşit. Noi nu susţinem acest lucru de dragul furtului. Nu e un furt tocmai aceasta e ideea pentru că at&acirc;ta timp c&acirc;t statul nu ne oferă nouă instrumentele, să luăm exemplul burselor: nu &icirc;mi oferă o bursă suficientă ca să &icirc;mi fac o licenţă, nevorbind de competivitate la nivel european. At&acirc;ta timp c&acirc;t nu există mecanismele care să ofere dezvoltarea la care suntem azi datorită pirateriei, nu, nu este este timpul să criminalizăm pirateria.</p>
+<p><strong><span style="text-decoration: underline;">&Icirc;ntrebare public:</span></strong></p>
+<p>Nu cred că paralela e neapărat funcţională pentru că, dacă vorbim de faptul că universitatea nu are resurse, răspunsul nu este să furăm: avem ca răspuns să facem un cumva să gestionăm fondurile, să ne chinuim să le obţinem mai mari şi mai multe.</p>
+<p><strong><span style="text-decoration: underline;">Răspuns Alina Gavra:</span></strong></p>
+<p>Aşteptăm soluţii.</p>
+<p><strong><span style="text-decoration: underline;">&Icirc;ntrebare public:</span></strong></p>
+<p>Pentru negatori. Ideea că prin piraterie se descarcă multă pornografie, jocuri, filme, muzică şi foarte puţine cărţi. Producţia de pornografie şi jocuri video are ca scop profitul, dar dacă nu se obţine profit pentru acestea nu s-ar mai produce deloc?</p>
+<p><strong><span style="text-decoration: underline;">Răspuns Adina Fometescu:</span></strong></p>
+<p>Da, dar cum am mai spus, oricum nu obţii profit dacă iţi sunt piratate produsele, pentru că se c&acirc;ştigă din v&acirc;nzarea de CD-uri. Şi aici piaţa pe domeniile de pornografie şi jocuri video este mult mai sensibilă, pentru că nu mai putem vorbi de situaţia pe care o descriau afirmatorii mai devreme vis-a-vis de posibilitatea de a susţine concerte, care oricum mi se pare că limitează artistul la a c&acirc;ştiga &icirc;n concerte, ci in acest caz efectul este unul mult mai direct. Deoarece producătorii de filme şi jocuri c&acirc;stigă doar prin v&acirc;nzarea de CD-uri. Şi &icirc;n modul acesta &icirc;i descurajăm foarte mult pe producătorii de filme si jocuri video.</p>
+<p><strong><span style="text-decoration: underline;">Răspuns Alina Babolea:</span></strong></p>
+<p>Cumva echipa afirmatoare a dus discuţia &icirc;n direcţia de acces la articole ştiinţifice, dar dacă privim &icirc;n ansamblu, pirateria online se referă doar &icirc;n proporţie de c&acirc;teva procente la această arie, a materialelor ştiinţifice. Vorbim de peste 98% piratare &bdquo;entertainement&rdquo;. Deci dacă reducem discuţia la zona ştiinţifică pierdem din vedere fenomenul pirateriei online, vorbim despre doar 1% din ce se pirateaza, ceea ce este nereprezentativ si nu justifica restul fenomenului.</p>
+<p><strong><span style="text-decoration: underline;">&Icirc;ntrebare public:</span></strong></p>
+<p>&Icirc;n analiza aceasta, faceţi o comparaţie &icirc;ntre cantitatea de informaţie pe care o ocupă un film sau o melodie şi o carte sau un articol, dar raportul este disproporţionat. O carte ocupă c&acirc;teva sute de kb, iar un film c&acirc;teva sute de Mb. Raportul e cam de 1:1000 ceea ce &icirc;nseamnă că diferenţa se cam echilibrează.</p>
+<p><strong><span style="text-decoration: underline;">Răspuns Adina Fometescu:</span></strong></p>
+<p>Nu era vorba de mărimea fişierului, ci de numărul de transferuri.</p>
+<p><strong><span style="text-decoration: underline;">Răspuns Alina Gavra:</span></strong></p>
+<p>Dupa cum am precizat, aceste studii au fost realizate de companiile producătoare de film şi muzică, care au avut interesul de a prezenta realitatea sub acest aspect. Sunt foarte multe studii ştiinţifice care pun sub semnul &icirc;ntrebării aceste rezultate. Industria muzicală şi cinematografică sunt mai mari şi &icirc;n ceea ce priveşte numărul de produse dec&acirc;t cea ştiinţifică. Acestă latură pe care o dădeam noi ca exemplu, de articole ştiinţifice, a fost doar o parte din ceea ce am prezentat şi nicidecum singurul argument adus.</p>
+<p><strong><span style="text-decoration: underline;">&Icirc;ntrebare public:</span></strong></p>
+<p>O &icirc;ntrebare pentru echipa negatoare. Trăim &icirc;ntr-o eră a tehnologiilor, a comunicaţiilor &icirc;n care accesul la un anumit brand te etichetează ca făc&acirc;nd parte dintr-o anumită categorie. Trăim &icirc;ntr-o ţară săracă, pentru că aceasta e realitatea, cu toate că facem parte din Uniunea Europeană, nu ne permitem să ne cumpărăm filme, jocuri, sotfware deci &icirc;ntrebarea mea e următoarea: c&acirc;ţi din această sală au cumpărat 10 filme şi un program, Windows 7? Nu ridică nimeni m&acirc;na? &Icirc;nseamnă că ar trebui să fim cu toţii la puşcărie pentru că ne folosim calculatorul, ne folosim telefonul şi toţi ne folosim cărţile şi cursurile. Şi un alt lucru pe care aş dori să-l spun: companii mari, cum e Dior, au tolerat şi tolerează &icirc;n continuare ţările sărace să le comercializeze produsele piratate, doar pentru a-şi face publicitate, ulterior deschiz&acirc;ndu-şi sucursale şi magazine &icirc;n acea ţară.</p>
+<p><strong><span style="text-decoration: underline;">Răspuns Adina Fometescu:</span></strong></p>
+<p>Ideea este că dacă toată lumea face un lucru nu &icirc;nseamnă că acel lucru este justificat şi ar trebui scos de sub incidenta legii. &Icirc;n al doilea r&acirc;nd, pentru a nu ştiu c&acirc;ta oară: nu putem generaliza. Dacă o companie are această strategie de marketing de a tolera pirateria, nu &icirc;nseamnă că se aplică tuturor. Nu-i poţi cere unei firme să renunţe la profitul pe care &icirc;l obţine doar pentru că societatea cere acest lucru.</p>
+<p><strong><span style="text-decoration: underline;">&Icirc;ntrebare public:</span></strong></p>
+<p>&Icirc;ncă o completare: mai devreme s-a adus exemplul acela cu cartea, dacă eu iau o carte şi o dau colegei mele constituie un act de piraterie. S-ar potrivi acelaşi lucru şi la filme, muzică ş.a.m.d. ? Există de exemplu site-uri internaţionale care funcţionează pe bază de cont. Eu pot să-mi dau contul şi parola altor persoane, pirat&acirc;nd drepturile de autori.</p>
+<p><strong><span style="text-decoration: underline;">Răspuns Alina Babolea:</span></strong></p>
+<p>&Icirc;n momentul &icirc;n care se vorbeşte de mediul online se presupune că acţiunea se desfăşoară &icirc;n masă. Faptul că tu dai unui prieten acea carte e o scală mică.</p>
+<p><strong><span style="text-decoration: underline;">&Icirc;ntrebare public:</span></strong></p>
+<p>Da. Eu o transmit colegei. Colega o transmite mai departe. Acelaşi lucru se poate &icirc;nt&acirc;mpla şi cu site-urile respective dacă contul şi parola mea ajung pe un forum sau pe un site. Plateste un om si au acces o mie de oameni.</p>
+<p><strong><span style="text-decoration: underline;">Răspuns Alina Babolea:</span></strong></p>
+<p>Lucrurile acestea pot fi amendate leg&acirc;ndu-se IP-urile de utilizator.</p>
+<p><strong><span style="text-decoration: underline;">&Icirc;ntrebare public:</span></strong></p>
+<p>Rom&acirc;nia este una dintre singurele tări din lume unde IP-ul e dinamic, si este foarte greu..</p>
+<p><strong><span style="text-decoration: underline;">Completare public: </span></strong></p>
+<p>Să compari &icirc;mprumutul unei cărţi cu copy/paste online nu e acelaşi lucru. C&acirc;nd dai o carte &icirc;mprumut cuiva tu nu o mai ai, dar c&acirc;nd laşi pe cineva să-şi copieze de la tine muzică, tu ai &icirc;n continuare drept de folosinţă pe creaţiile acelea şi are şi respectiva persoană. Exista o dimensiune fizica aici.</p>
+<p><strong><span style="text-decoration: underline;">Interventie public:</span></strong></p>
+<p>Sunt de acord că companiile respective vor &icirc;ncerca toate posibilităţiile pentru a opri pirateria, dar nu să acuze oamenii care fac download de filme, jocuri ş.a.m.d. Dacă produsele respective se află acolo, noi putem să downloadăm fără să fim criminalizaţi. Aşa şi &icirc;n realitate dacă vine cineva şi &icirc;mi oferă un bax de Coca-Cola, &icirc;l voi lua, că sunt om. Daca imi da un film, ma uit.</p>
+<p><strong><span style="text-decoration: underline;">Răspuns Adina Fometescu:</span></strong></p>
+<p>Acesta este varianta ideală de care vorbiţi dumneavoastră, &icirc;nsă de ce, spre exemplu, nu mergeţi &icirc;n acest moment să furaţi portofelul cuiva? De frică să nu ajungeţi la &icirc;nchisoare. Tocmai acelaşi principiu se aplică şi aici. Trebuie să acţionăm at&acirc;t la nivelul persoanelor care uploadează acele produse pe internet, c&acirc;t şi asupra celor care downloadeză p&acirc;nă la urmă. Este un mod mai eficient de a acţiona asupra acestei probleme, dec&acirc;t dacă acţionăm asupra doar unei părţi.</p>
+<p>Se aplica acelasi principiu, indiferent daca furi un CD dintr-un magazin sau daca furi online, fiindca este acelasi produs pana la urma: se pierde o anumita suma de bani, unii oameni au muncit pentru asta.</p>
+<p>Pe de alta parte, raspund ideei de a fi artist fara remuneratie, si a face &bdquo;arta de dragul artei&rdquo;: aceasta nu poate fi impusa artistului.</p>
+<p><strong><span style="text-decoration: underline;">Interventie Teo Blidaru:</span></strong></p>
+<p>Ok, din pacate trebuie sa intervin, discutia e interesanta, insa cred ca poate fi continuata si mai tarziu. Intervin, deci, pentru votul final: rog pe toti cei care au aparate de vot sa voteze inca o data; repet, 1 inseamna Da, este timpul sa decriminalizam pirateria online si 2 inseamna Nu, nu suntem de acord.</p>
+<p>[Publicul voteaza si se afiseaza votul final]</p>
+<p><strong><span style="text-decoration: underline;">Interventie Teo Blidaru:</span></strong></p>
+<p>De obicei, exista o discutie prin care comparam votul initial si votul final. Initial, au existat mai multe persoane care nu au fost de acord cu motiunea, iar in votul final a fost in favoarea afirmatorilor.</p>
+<p>Vreau sa va multumesc pentru prezenta din aceasta seara, amintindu-va ca aceasta dezbatere a facut parte din runda de primavara a proiectului Closer to Oxford. Multumim, de asemenea, si partenerilor nostri in proiect: OSUT, AIESEC Timisoara si, bineinteles, ELSA, cat si Facultatii de Stiinte Politice cu care speram sa colaboram cat mai mult in continuare, sperand sa tinem si alte dezbateri Closer to Oxford in acest amfiteatru. Va invit sa vizitati si site-ul proiectului Closer to Oxford si, mai mult, cine este interesat, sa ne contacteze ca sa facem si niste meciuri de debate, ceea ce am facut deja cu o parte a colegilor prezenti pe podium si s-ar putea sa va placa sa jucati, ca ei, in echipe, nu doar sa priviti. Va multumim!</p>
+<p>&nbsp;</p>
+<p><strong><br /></strong></p>
+</div>
+                <div class='clear'></div>
+        </div><!-- end main content -->
+         <div class='clear'></div>
+</div>
+<div id="pix"></div>
+
+
+                                </div><!--end main -->
+                                <div id='parteneri'>
+                                    <span class='tr'></span><span class='tl'></span><span class='br'></span><span class='bl'></span><span id="filler"></span>
+                                    <div class='parteneri' id='sustinatori'>
+                                        <span class='floating_text' id='un_proiect'>Un proiect</span>
+                                        <a href='http://www.ardor.org.ro/'><div class='image' id='ardor'>Ardor</div></a>
+                                        <span class='floating_text' id='finantatori'>Finanțatori</span>
+                                        <a href='http://www.opensocietyfoundations.org/'><div class='image' id='open_society'>Open Society Foundation </div></a>
+                                        <a href='http://www.studentiq.ro//'><div class='image' id='memoplus'>MemoPlus</div></a>
+                                        <!-- <a href='http://www.ratiufamilyfoundation.com/'><div class='image' id='FundatiaRatiu'>Ardor</div></a>
+                                        <a href='http://www.eef.md/'><div class='image' id='eef'>East Europe Foundation</div></a>
+                                        <a href='http://www.mts.gov.md/'><div class='image' id='mdminister'>Ministerul Tineretului si Sportului al Republicii Moldova</div></a> -->
+
+                                        <span class='floating_text' id='parteneri_text'>Parteneri</span>
+
+                                        <a href='http://www.policycenter.eu/'><div class='image' id='PolicyCenter'>Policy Center</div></a>
+                                        <a href='http://www.britishcouncil.org/'><div class='image' id='BritishCouncil'>British Council</div></a>
+                                        <a href='http://www.europuls.ro/'><div class='image' id='europuls'>Europuls</div></a>
+                                        <a href='http://www.cere.ro/'><div class='image' id='cere'>Ce-Re</div></a>
+                                        <a href='http://www.primeromania.ro/'><div class='image' id='prime'>Prime Romania</div></a>
+                                        <a href='http://www.cji.ro/'><div class='image' id='cji'>Centrul pentru jurnalism independent</div></a>
+                                        <a href='http://www.aiesectm.ro/'><div class='image' id='aisec'>Aisec</div></a>
+                                        <!-- ===================================================================================================== -->
+                                        <a href='http://www.cogitus.ro/'><div class='image' id='cogitus'>Cogitus</div></a>
+                                        <a href='http://www.adevarul.ro/international/foreign_policy/'><div class='image' id='foreignPolicy'>Foreign Policy</div></a>
+                                        <a href='http://www.elsa.ro/'><div class='image' id='elsa'>Elsa</div></a>
+                                        <a href='http://www.vipromania.ro/'><div class='image' id='vipromania'>Voluntari pentru idei si proiecte</div></a>
+                                        <a href='http://www.ongtrust.ro/'><div class='image' id='ongtrust'>Trust</div></a>
+
+                                        <!-- ===================================================================================================== -->
+                                        <a href='http://www.leap.ro/'><div class='image' id='leap'>Leap</div></a>
+                                        <a href='http://www.younginitiative.org/'><div class='image' id='younginitiative'>Asociatia young initiative</div></a>
+                                        <a href='http://www.asjc.ro/'><div class='image' id='asjc'>Asjc</div></a>
+                                        <a href='http://osut.ro/'><div class='image' id='osut'>Osut</div></a>
+                                        <div class='clear'></div>
+                                    </div>
+                                    <div class='parteneri' id='parteneri_institutionali'>
+                                        <span class='floating_text' id='sponsori_text'>Sus&#539;in&#x0103;tori</span>
+                                        <a href='http://www.cartier.md/'><div class='image' id='cartier_logo'>Editura Cartier</div></a>
+                                        <a href='http://www.pll.md/ro/'><div class='image' id='biblio_logo'>Biblioteca publica de drept</div></a>
+                                        <span class='floating_text' id='institutii_text'>Parteneri institu&#539;ionali</span> 
+                                        <ul id='institutii'>
+                                            <!-- <span class='floating_text' id='institutii_text'>Parteneri institu&#539;ionali:</span> -->
+                                            <li><a href='http://www.politice.ro/'>Facultatea de &#536;tiin&#539;e Politice SNSPA </a></li>
+                                            <li><a href='http://www.comunicare.ro/'>Facultatea de Comunicare &#537;i Rela&#539;ii Publice SNSPA</a></li>
+                                            <li><a href='http://www.fspub.ro/'>Facultatea de &#536;tiin&#539;e Politice Universitatea Bucure&#537;ti</a></li>
+                                            <li><a href='http://www.filosofie.unibuc.ro/'>Facultatea de Filosofie Universitatea Bucure&#537;ti</a></li>
+                                            <li><a href='http://litere.unibuc.ro/'>Facultatea de Litere din Universitatea Bucure&#x015f;ti</a></li>
+                                            <li><a href='http://www.unibuc.ro/ro/fac_fsas_ro'>Facultatea de Sociologie Universitatea Bucure&#537;ti</a></li>
+                                            <li><a href='http://laws.uaic.ro/'>Facultatea de Drept Universitatea Alexandru Ioan Cuza Ia&#537;i</a></li>
+                                            <li><a href='http://www.uaic.ro/uaic/bin/view/Academic/Filosofie'>Facultatea de Filosofie si &#536;tiin&#539;e Social Politice Universitatea AIC Ia&#537;i</a></li>
+                                            <li><a href='http://www.upa.ro/'>Facultatea de Drept si Facultatea de &#x015e;tiin&#x0163;e Politice si Administrative Universitatea Petre Andrei Ia&#x015f;i</a></li> 
+
+                                            <li><a href='http://www.ubbcluj.ro/'>Universitatea Babe&#537;-Bolyai Cluj Napoca</a></li>
+                                            <li><a href='http://www.uvt.ro/'>Universitatea de Vest Timi&#537;oara</a></li>
+                                            <li><a href='http://www.upt.ro/'>Universitatea Politehnica Timi&#537;oara</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class='parteneri' id='parteneri_media'>
+                                        <span class='floating_text' id='media_text'>Parteneri media</span>
+                                        <a href='http://www.hotnews.ro/'><div class='image' id='hotnews'>HotNews</div></a>
+                                        <!-- <a href='http://www.lumebuna.ro/'><div class='image' id='lumebuna'>Lume Buna</div></a> -->
+                                        <a href='http://www.romaniapozitiva.ro/'><div class='image' id='romaniapozitiva'>Romania Pozitiva</div></a>
+                                        <a href='http://totb.ro/'><div class='image' id='thinkoutsidethebox'>Think Outside The Box</div></a>
+                                        <a href='http://www.facebook.com/carevasazica.vip'><div class='image' id='carevasazica'>Carevasazica</div></a>
+                                        <a href='http://www.studentie.ro/'><div class='image' id='studentiero'>Studentie.ro</div></a>
+                                        <a href='http://startub.unibuc.ro/'><div class='image' id='startub'>startub.unibuc.ro</div></a>
+                                        <!-- <a href='http://www.tvr.ro/tvr_cluj.php'><div class='image' id='tvrcluj'>Tvr Cluj</div></a> -->
+                                        <!-- <a href='http://www.radiotransilvania.ro'><div class='image' id='radiotransilvania'>Radio Transilvania</div></a> -->
+                                        <a href='http://iasifun.ziaruldeiasi.ro/'><div class='image' id='iasifun'>Iasi fun</div></a>
+                                        <a href='http://www.ziaruldeiasi.ro/'><div class='image' id='ziaruldeiasi'>Ziarul de Iasi</div></a>
+                                        <a href='http://www.kissfm.ro/timisoara'><div class='image' id='kissfm'>KissFm</div></a>
+
+                                        <div class='clear'></div> 
+                                    </div>
+                                    <div class='clear'></div>
+
+                                </div>	
+                            </div>	<!-- end wrap -->
+                            <div id='footer_mare'>
+                                <div id='footer'>
+                                    <div id='links' class='footer'>
+                                        <div id='menu1' style='margin:auto;'> <ul id='meniu_prinicpal'><li><a href='contacte/index.html'> Contact </a></li>
+<li><a href='clubdebate/index.html'> Cluburile </a></li>
+<li><a href='oamenii/index.html'> Oamenii </a></li>
+<li><a href='proiectul/index.html'> Proiectul </a></li>
+<li><a href='home/index.html'> Acasa </a></li>
+</ul></div><!--end menu-->
+                                    </div><!--
+                                    <div id='contact' class='footer'>
+                                            <h4>Contact</h4>
+                                            <p>office@closer2oxford.ro</p>
+                                            <p>bogdan.draghicescu@closer2oxford.ro<br>
+                                            <span class='detalii'> (asistenta tehnica web - orice probleme legate de site)</span></p>
+                                    </div>
+                                    -->
+                                    <div id='newsletter' class='footer'>
+                                        <script src="../../connect.facebook.net/en_US/all.js#xfbml=1"></script><fb:like href="http://www.facebook.com/pages/Closer2Oxford/162758797069605" width="250" colorscheme="dark"></fb:like>
+                                        <!--<h4>Newsletter</h4>
+                                        <form action='/page/newsletter'>
+                                                <input type='text' name='email'>
+                                                <input type='submit' id='submit' value='>'>
+                                                        
+                                        </form>-->
+                                    </div>
+                                    <div id='credits'>
+                                        Copyright(c) 2021 ARDOR |  Toate drepturile rezervate | Toate logo-urile si sloganurile de pe site sunt proprietate intelectuala inregistrata si nu pot fi reproduse fara acordul explicit al detinatorilor. <br>
+                                            <br /><br />
+                                            <b>Disclaimer</b><br /><i>
+
+                                                Programul educational Closer to Oxford este un program non-profit si nu are o legatura cu universitatea cu acelasi nume, referirea la Oxford avand doar o semnificatie simbolica.
+                                            </i>
+                                    </div>
+
+                                </div>		
+                            </div>		
+
+                            <div id="finantatde">Acest proiect este finantat cu sustinere din partea Comisiei Europene. Aceast publicatie [comunicare] reflecta doar
+                                vederile autorului, iar Comisia nu poate fi facuta  responsabila pentru utilizarea informatiei pe care o contine.</div>
+
+
+                        </body>
+                        </html>

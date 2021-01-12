@@ -1,0 +1,532 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml-strict.dtd">
+<HTML xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+    <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+            <link rel="icon" type="image/png"  href="../../../../../closer2oxford.ro/favicon.html">
+                <link rel="stylesheet" href="../../../var/layout.css" type="text/css">
+                    <title>Closer to Oxford - e timpul pentru argumente!</title>
+                    <link rel="alternate" type="application/rss+xml"  href="../../../rss_feed" title="Stiri Closer2Oxford">
+                        <!-- <link rel="image_src" property="og:image"  href="/images/layout/closer2oxford_fb_white.png" /> -->
+                        <link rel="image_src" property="og:image"   type="image/jpeg"  href="../../../../uploads/2015/06/9/facebook_icon.html" />
+                        <link rel="image_src" type="image/jpeg"  href="../../../../uploads/2015/06/9/icon-facebook.gif" /> 
+						<meta name="description" content="Closer2Oxford pune în valoare oameni şi argumentele lor, în dezbateri online şi publice alături de tineri şi invitați avizaţi"/>
+                        <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9" />
+<script type='text/javascript' src='../../../../js/jquery-1.4.4.min.js'></script>
+<script>var $j = jQuery.noConflict();</script>
+<script type='text/javascript' src='../../../../js/tinymce/tiny_mce.js'></script>
+<script type='text/javascript' src='../../../../js/jquery.form.js'></script>
+<script type='text/javascript' src='../../../../js/fbLoginRegister.js'></script>
+<script type='text/javascript' src='../../../var/javascript.js'></script>
+<script type='text/javascript' src='../../../../js/jquery.hovertip-1.0.min.js'></script> 
+<script type='text/javascript' src='../../../../js/jquery.jgrowl_minimized.js'></script> 
+<link rel='stylesheet' href='../../../../css/jquery.jgrowl.css' media='screen' type='text/css'> 
+<script type='text/javascript' src='../../../../js/jquery.timer-min.js'></script> 
+<style>.hovertip{
+    position:absolute;
+    padding:10px 13px;
+    z-index:2;
+    max-width:300px;
+    color:#303030;
+    background-color:#f5f5b5;
+    border:1px solid #DECA7E;
+    font-family:sans-serif;
+    font-size:12px;
+    line-height:18px;
+    text-align:left;
+    }
+           .normal_text ol,.normal_text ol *{text-align:left !important}
+           .normal_text *{font-weight:normal !important;font-size:12px !important;font-face:tahoma !important}</style> 
+<script type='text/javascript'>$j(document).ready(function(){$j('.tooltip').hovertip({'offset':[20,20]});get_notif();});
+
+if(!Array.indexOf){Array.prototype.indexOf = function(obj){for(var i=0; i<this.length; i++){if(this[i]==obj){return i;}}return -1;}}
+    hashuri = [] ;
+	 var tick_timer= 3000 ;
+ 
+	 function get_notif()
+        {
+		  
+		  //console.log(tick_timer);
+	     
+		  setTimeout(get_notif,tick_timer);
+        
+		   $j.ajax(
+            {
+                url: '/page/notif/show_events',
+                dataType: 'json',
+                data: "{}",
+                success: function(data)
+                    {
+                    $j.each(data,function(index,data){
+                        try
+                            {
+                            if( hashuri.indexOf(data.hash) == -1 )
+                                {
+                                hashuri.push(data.hash);
+                                $j.jGrowl(
+                                    data.str,
+                                    {
+                                        corners:'1px',
+                                        life: data.life,
+                                        header:data.title,
+                                        hash: data.hash,
+                                        sticky: data.sticky,
+                                        close: function(e,m,o)
+                                            {
+                                                $j.ajax({url:'/page/notif/delete_single_event/' + o.hash});
+                                            }
+                                    });
+                                }
+                            }
+                        catch(e){}
+                        })
+                    }
+            });
+        }
+	 </script> 
+ 
+                            
+  <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-19111721-1']);
+  _gaq.push(['_setDomainName', '.closer2oxford.ro']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+    
+                        </head>
+                        <body>
+                            <div id="global_wrap">
+                                <div id="header">
+                                    <a href='../../../../index.html'><div id='logo'><img src='../../../../images/layout/sigla.jpg'></div></a>
+                                    <a class='noExternal' href='http://www.facebook.com/pages/Closer2Oxford/162758797069605'><img src='../../../../images/fb.png' style='height:30px;float:right;clear:right;margin:10px 5px 5px 5px;border:none;'/></a>
+                                    <a href='../../../rss_feed'><img src='../../../../images/feed-icon.png' style='height:30px;float:right;clear:right;margin:5px;border:none;'/></a>
+                                </div>
+                                <div id="meniu">
+                                    <div  id='register_login'>
+
+                                        
+  <a href='#' class='todo' id='login'>Login </a> &nbsp;<a href='../../../register.html' class='todo' id='register'>Register</a>
+    <div id='login_box'>
+		  <form action='https://dev.closer2oxford.ro/page/ro/login_user/logon' method='post' id='user_login_form'>
+					 <div>Email: <input type='text' name='email'/> </div><br />
+					 <div>Pass: <input type='password' name='passwd'/></div><br />
+					 <a href='#' class='password_forgot'>forgot password?</a>
+					 <input type='hidden' value='/page/ro/vezi_meciuri/53/' name='returnto' class='submiter'/><br />
+					 <input type='submit' value='login' name='btn' class='submiter'/><br />
+		  </form>
+		  
+		  <form action='https://dev.closer2oxford.ro/page/ro/login_user/reset_user_pw' method='post' id='user_reset_form'>
+					 <div>Email: <input type='text' name='email'/> </div><br />
+					 <a href='#' class='password_forgot'>login?</a>
+					 <input type='hidden' value='/page/ro/vezi_meciuri/53/' name='returnto' class='submiter'/><br />
+					 <input type='submit' value='reset' name='btn' class='submiter'/><br />
+		  </form>
+		  
+    </div>
+    
+                                    </div>
+                                    <div id='menu1' style='margin:auto;'> <ul id='meniu_prinicpal'><li><a href='../../../contacte/index.html'> Contact </a></li>
+<li><a href='../../../clubdebate/index.html'> Cluburile </a></li>
+<li><a href='../../../oamenii/index.html'> Oamenii </a></li>
+<li><a href='../../../proiectul/index.html'> Proiectul </a></li>
+<li><a href='../../../home/index.html'> Acasa </a></li>
+</ul></div><!--end menu-->
+                                </div>
+                                <div id="main"> 
+                                    <!--<div id='stiri-padding'>
+        <div id='stiri_back'>
+                {stiri} 
+    
+               
+        </div>-->
+        
+</div>
+<div  id="content-padding">
+        <div id='sidebar_menu'>
+                <span class='tr'></span>
+                <span class='tl'></span>
+                <span class='br'></span>
+                <span class='bl'></span>
+                <span id="filler"></span>
+                    
+                <ul></ul>
+                
+                <div class='clear'></div>
+        </div>
+        <div id="content">
+                <span class='tr'></span>
+                <span class='tl'></span>
+                <span class='br'></span>
+                <span class='bl'></span>
+                <span id="filler"></span>
+                  <script>
+        $j(document).ready(function(){
+        $j('.discurs_toggler').toggle(
+                function(){
+                $j(this).attr('src', '../../../../images/little_stuff/16-em-down.png');   
+                $j(this).parent().next('.discurs').hide('fast');
+                },
+                function(){
+                $j(this).attr('src', '../../../../images/little_stuff/16-em-up.png');
+                $j(this).parent().next('.discurs').show('fast');
+                });
+            });
+        </script><style>.nowrap{white-space: nowrap;}
+		.noJustify{text-align:left;}
+		</style><h2 class='noJustify'><span class='nowrap'>'Voluntari-A'</span> <span class='notif'>(afirmatori)</span> vs <span class='nowrap'>'Alina si Denisa'</span> <span class='notif'>(negatori)</span></h2><h3>A1 () <img src='../../../../images/little_stuff/16-em-up.png' class='discurs_toggler'></h3>
+            <div class='discurs normal_text'><p>E timpul ca mass media privata sa aiba responsabilitati educationale fata de public=</p>
+<p><strong>Introducere</strong>: Atunci cand 2 din 3 oameni cred ca informatiile provenite din mass-media sunt conforme cu realitatea si prezentate obiectiv [1] si pentru 80% din populatie televizorul reprezinta principal sursa de informare in privinta politicii [2], trebuie sa ne intrebam daca nu ar trebui sa impunem standarde si noi responsabilitati in domeniul mass-media, pentru a ne asigura ca publicul nu va adopta automat idei propagandiste, informatii trunchiate, asa cum se intampla acum.</p>
+<p><strong>Definitii</strong>: Prin responsabilitati educationale intelegem obligatia canalelor media private de a promova, intr-o cantitate satisfacatoare, programe de interes educational, precum: documentare, adaptari artistice, programe culturale, campanii de informare asupra unor probleme de interes piblic (prevenirea epidemiilor, probleme supuse referendum-urilor la nivel national) etc.</p>
+<p><strong>Interpretarea motiunii:&nbsp;</strong>Vom justifica necesitatea introducerii obiectivelor de ordin educativ printre obligatiile legale ale mass-mediei private, in acelasi mod in care sunt prevazute in cazul mijloacelor media publice, luand in considerare efectele pe care aceasta schimbare le-ar produce.</p>
+<p><strong>Contextul:</strong>&nbsp;Conform legislatiei actuale, doar canalele publice si-au insusit rolul educational, insa programele de acest gen au o aplicabilitate scazuta: in primul rand,&nbsp; cotele de audienta ale massmediei publice sunt mult mai scazute (5% Romania [3]), iar in al doilea rand, si aceste canale prefera sa difuzeze programe orientate spre consum, non-educationale pentru a se mentine in competitia pentru audienta.</p>
+<p>Pe de alta parte, sesizam o crestere a influentei mass-mediei, si de asemenea o crestere a efectelor negative generate de continutul acesteia in ce priveste comportamentele deviante [4], adoptarea de opinii gresite alimentate de media [5] [6], lipsa unei optiuni politice reale, lipsa activismului social.</p>
+<p><strong>Ideea centrala</strong>:</p>
+<p>Datorita influentei sale dovedite, se justifica introducerea programelor educationale in scopul transmiterii unor mesaje mai clare si mai corecte, care determina comportamente sociale imbunatatite.</p>
+<p>Argumente:</p>
+<ul>
+<li><strong>Mass media privata ar trebui sa aiba responsabilitati educationale pentru ca are o atat de mare influenta</strong></li>
+</ul>
+<p>Tocmai pentru ca mass-media are atata influenta asupra unui auditoriu neavizat si credul[7], trebuie sa preia si responsabilitatea acestei influente. Pentru ca media are un rol atat de mare in formare opiniilor si sustinerea ferma a deciziilor privitoare la viata socio-politica, este important sa ne asiguram ca libertatea presei nu duce la promovarea unor concepte false sau opinii daunatoare, lucru care se intampla. Mass media trebuie sa ofere instrumente pentru formarea unor opinii corecte si informate, trebuie sa arate publicului ce e bine sa faca si ce nu, tocmai pentru ca auditoriul&nbsp; rareori stie sa priveasca analitic si realist. Singurul mod de a determina mass-media sa isi indeplineasca rolul este de a o oblige sa difuzeze programe educative si de interes in loc de programe comerciale, politizate sau senzationaliste.</p>
+
+<ul>
+<li><strong>Mass media privata poate obtine rezultate acolo unde alte mijloace nu ajung</strong></li>
+</ul>
+<p>Pentru ca mass media privata acopera uniform si aproape in totalitate populatia unei zone, de cele mai multe ori mesajele difuzate prin astfel de canale ajung mult mai eficient la publicul tinta decat prin alte mijloace care fie au acoperire limitata, fie sunt foarte costisitoare sau nu la fel de rapide. Uneori, DOAR prin intermediul mass-mediei s-a putut ajunge la anumite segmente de populatie [8]. De asemenea, promovarea prin aceste canale a fost adesea mai eficienta, chiar cand nu era singurul mijloc de comunicare, datorita caracterului interactiv si accesului usor la informatie.[ 9]</p>
+<p><strong>&nbsp;</strong></p>
+<ul>
+<li><strong>O astfel de implementare va avea ca efect responsabilizarea educationala a mass-mediei private</strong></li>
+</ul>
+<p>Responsabilizarea educationala este esentiala deoarece duce in timp la cresterea calitatii fenomenului social si la dezvoltarea spiritului critic al publicului. Atunci cand hranesti publicul cu informatie de proasta calitate si nu-i oferi o perspectiva corecta asupra realitatii,&nbsp; acesta nu va face efortul de a sorta aceasta informatie, ci va imbratisa una dintre multele opinii nefundamentate [10]. Pe masura insa ce publicul este &lsquo;&rsquo;educat&rdquo; prin furnizarea de informatii limpezi, bine orientate, va incepe sa gestioneze singur aceste resurse, facand alegeri corecte, ceea ce va duce la o crestere a calitatii fenomenului social, precum si la dezvoltarea spiritului critic al receptorilor, ceea numim &ldquo;media literacy&rdquo;. [11]</p>
+<p><strong>Concluzia:&nbsp;</strong>Daca mass-media privata ar fi constransa spre prezentarea mesajelelor educationale, efectele acestora vor fi vizibile la nivelul societatii. Aceste efecte vor fi semnificative, atat datorita raspandirii ample a mesajelor, cat si din cauza influentei pe care mass-media privata o are asupra oamenilor .</p>
+<p><strong>&nbsp;</strong></p>
+<p><strong>Surse:</strong></p>
+<p>1.&nbsp; <strong>1.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong>&nbsp;BBC/Reuters/Media Center poll: Trust in Media , Globescan Incorporated, 3 mai 2006<a href="../../../index.html">http://www.globescan.com/news_archives/bbcreut.html</a></p>
+<p>2.&nbsp; <strong>2.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong>&ldquo;Influenta media asupra comportamentului electoral&rdquo;, raport final, septembrie-octombrie 2007, Centrul de Sociologie Urbana si Regionala pentru CNA<a href="../../../index.html">http://www.cna.ro/IMG/pdf/Inf_media_elect_CNA2007.pdf</a></p>
+<p>3.&nbsp; <strong>3.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong>Programele TVR, TVR online, 29 martie 2007,<a href="../../../index.html">http://www.tvr.ro/articol_organizatie.php?id=14HYPERLINK "http://www.tvr.ro/articol_organizatie.php?id=14&amp;c=192"&amp;HYPERLINK "http://www.tvr.ro/articol_organizatie.php?id=14&amp;c=192"c=192</a></p>
+<p>4.&nbsp; <strong>4.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong>&ldquo;The influence of media violence on youth&rdquo;, Craig A. Anderson, Leonard Berkowitz, Edward Donnerstein and co. Psychological science in the public interest, American Psychology Society, vol.4, no.3, Decembrie 2003,<a href="../../../index.html">http://www.psychologicalscience.org/pdf/pspi/pspi43.pdf</a></p>
+<p>5.&nbsp; <strong>5.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong>&ldquo;Public opinion, the media and their influence on public policy&rdquo;, Aris Jameson, Helium,<a href="../../../index.html">http://www.helium.com/items/1036958-public-opinion-the-media-and-their-influence-on-public-policy</a></p>
+<p>6.&nbsp; <strong>6.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong>&ldquo;Americans are pretty confused about cap and trade&rdquo;, Good Politics Blog,Andrew Price, 12 mai 2009&nbsp;<a href="../../../index.html">http://www.good.is/post/americans-are-pretty-confused-about-cap-and-trade/</a></p>
+<p>7.&nbsp; <strong>7.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong>BBC/Reuters/Media Center poll: Trust in Media , Globescan Incorporated, 3 mai 2006http://www.globescan.com/news_archives/bbcreut.html</p>
+<p>8.&nbsp; <strong>8.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong>&ldquo;The penetrating educational effect of a mass-media based fund-raising campaign &ldquo;Heart for life&rdquo;&rdquo;,&nbsp;<a href="../../../index.html">F&oslash;nneb&oslash; V</a>,&nbsp;<a href="../../../index.html">S&oslash;gaard AJ</a>., Institute of Community Medicine, University of Tromso, Norvegia, publicat in Scandinavian Journal of Social Medicine, septembrie 1990,<a href="../../../index.html">http://www.ncbi.nlm.nih.gov/pubmed/2237326</a></p>
+<p>9.&nbsp; <strong>9.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong>&ldquo;Effects of mass media educational intervention during the 2005 cholera epidemic in Iran&rdquo;, Mohammad-Hossein Baghianimoghadam, Mohammad-Hasan Ehrampoush, Behnam Baghianimoghadam, Yazd University of Medical Sciences, publicat in 2009 in Iranian Journal of Clinical Infectious Diseases&nbsp;<a href="../../../index.html">http://www.sid.ir/en/VEWSSID/J_pdf/122020HYPERLINK "http://www.sid.ir/en/VEWSSID/J_pdf/122020090208.pdf"0HYPERLINK "http://www.sid.ir/en/VEWSSID/J_pdf/122020090208.pdf"90208.pdf</a></p>
+<p>10.<strong>10.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong>&ldquo;Television drove viewers to the web to explore Obama-Muslim Rumors, study finds&rdquo;, Science Daily, 27 septembrie 2010, in care se arata ca 12 % din populatie chiar a crezut ca Obama este musulman&nbsp;<a href="../../../index.html">http://www.sciencedaily.com/releases/2010/09/100927175042.htm</a></p>
+<p>11.<strong>11.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong>&ldquo;What is Media Literacy&rdquo;, Media Awareness Network, http://www.media-awareness.ca/english/teachers/media_literacy/what_is_media_literacy.cfm</p>
+<p><strong>&nbsp;</strong></p>
+
+
+</div><hr><h3>N1 (Alina Tudose) <img src='../../../../images/little_stuff/16-em-up.png' class='discurs_toggler'></h3>
+            <div class='discurs normal_text'><p><strong>E timpul ca mass media private sa aiba responsabilitati educationale fata de public</strong></p>
+<p>Intr-adevar, suntem de acord ca televizorul este prezent aproape in fiecare casa la ora actuala, atat ca sursa de informare alaturi de radio, presa scrisa, afise si alte canale de transmitere a informatiilor, cat si ca sursa de divertisment, asemeni revistelor, filmelor, teatru etc. De asemenea, suntem de acord că la ora actuala masele sunt foarte slab informate si din cauza informatiilor trunchiate (pe care fie le primesc astfel, fie nu le pot recepta ei integral) comportamentele sunt usor deviate. Cu toate acestea, consideram ca impunerea de noi standarde si responsabilitati in domeniul mass-media nu ar solutiona problema. Conceptul cheie in jurul caruia se contureaza solutionarea problemei poarta numele de media litteracy, ceea ce presupune un concurs de competente menite sa ofere cadrul necesar oamenilor spre a putea descifra intr-un mod critic/analitic mesajele pe care le primeste din partea media. Bunaoara, schimbarea care se cere este la nivelul individului si, implicit, al maselor, si nu la nivelul mass-media private care este, in acelasi timp, si o afacere.</p>
+<p>Intelegem preocuparea afirmatorilor pentru promovarea programelor educationale in randul media, insa consideram insuficienta <strong>definirea termenilor</strong>. O cantitate satisfacatoare din perspectiva noastra, este deja atinsa de media private care deja difuzeaza programe cu caracter educational. Mai mult decat atat, observam o disconconcordanta intre problema identificata (un public dezinformat din cauza informatiilor trunchiate prezentate in presa) si solutionarea prevazuta in discurs (introducerea de noi programe educationale intr-o cantitate satisfacatoare care oricum exista si in prezent<a  href="#8b8c1">[1]</a>).</p>
+<p>Referitor la <strong>contextul</strong> descris de afirmatori, tinem sa mentionam ca legislatia actuala reglementeaza deja aceasta problema intrucat conform art. 3 alin. 2 din Legea audiovizualului (LEGE Nr. 504 din 11 iulie 2002)<a  href="#8b8c2">[2]</a> toti radiodifuzorii au obligatia sa asigure informarea obiectiva a publicului prin prezentarea corecta a faptelor si evenimentelor si sa favorizeze libera formare a opiniilor. Mai mult, este recomandata transmisia tuturor felurilor de programe pentru a asigura libertatea de comunicare, pluralismul politic si social, diversitatea culturale, educarea si divertismentul publicului etc. In cele din urma, cireasa de pe tort este art. 6, alin. (1) si (2) din legea mai sus mentionata care subliniaza urmatoarele: (1) Cenzura de orice fel asupra comunicării audiovizuale este interzisă. (2) Independenţa editorială a radiodifuzorilor este recunoscută şi garantată de prezenta lege. In aceste conditii, noile standarde propuse de catre echipa afirmatoare nu isi gasesc justificarea in reglementarile legislative in vigoare.</p>
+<p>In continuare vom arata detaliat de ce argumentele aduse de echipa afirmatoare nu sustin cazul si nu rezolva problema. De asemenea, in final, vom ilustra de ce consideram ca, in conditiile reglementarilor existente, nu se justifica introducerea de noi reglementari pentru promovarea de programe educationale.</p>
+<p>In mare, argumentele echipei afirmatoare sunt urmatoarele:</p>
+<ol>
+<li>Mass-media ar trebui sa aiba obiective educationale pentru ca are o influenta foarte mare asupra publicului.</li>
+</ol>
+<p>Acest argument are o la fel de mare buba ca influenta pe care o are mass-media asupra publicului. Din perspectiva echipei afirmatoare, orice are influenta mare asupra a altceva, trebuie sa fie reglementat intr-un anume fel. Nimic mai fals. Se poate considera ca si filmele difuzate la TV au o influenta foarte mare asupra publicului larg, dar asta nu inseamna ca ar trebui sa facem toate filmele documentare sau &bdquo;enciclopedie&rdquo;. Asa cum e ea conceputa in momentul de fata, mass media se prezinta ca un mediu de comunicare fierbinte, deschis, care permite exprimarea libera a tuturor opiniilor, exact asa cum ar trebui sa fie. Argumentul afirmator se incheie cu propunerea de a OBLIGA mass-media private sa difuzeze programe educationale. In acest punct al rationamentului, ne intrebam unde mai este democratia in care se presupune ca traim si care deja este pusa la indoiala?</p>
+<ol>
+<li>Mass media private pot obtine rezultate acolo unde alte mijloace nu ajung</li>
+</ol>
+<p>Nu ne-am propus sa negam potentialul magnific al mass-media, insa acest lucru nu ne indreptateste sa monopolizam ceea ce se vrea a fi &bdquo;cainele de paza&rdquo; al democratiei. Sa nu mai mentionam ca cea mai importanta forta educationala o are familia si grupurile de prieteni care pot intr-adevar sa ajunga la miezul problemei si sa formeze sau sa schimbe un individ.</p>
+<ol>
+<li>Aceasta implementare (OBLIGAREA mass-media sa difuzeze programe educationale intr-o masura &bdquo;satisfacatoare&rdquo;) va avea ca efect responsabilizarea educationala a mass-media private</li>
+</ol>
+<p>Bun, deci ceea ce ne spun afirmatorii este ca: daca obligam mass-media sa faca ceva ce ii va reduce venitul, o vom responsabiliza. Pe deasupra, dupa ce o responsabilizam, ce ne face pe noi sa pariem pe faptul ca noile emisiuni &bdquo;educative&rdquo; vor fi de o calitate superioara si realmente eficiente? Sa credem aceasta ar insemna sa fim visatori. Mass-media, pe langa a fi un canal de comunicare al oamenilor pentru oameni, el este si o afacere. O astfel de implementare nu ar face decat sa inrautateasca atitudinea mass-media fata de societate, ceea ce ar duce la un haos comunicational.</p>
+<p>Mergand pe linia de concluzionare a echipei afirmatorilor, si noi suntem de acord ca efectele unei astfel de schimbari in mass-media ar fi vizibile la nivelul societatii. Suntem inca insa reticente cu privire la valenta pe care acestea o vor avea (pozitive sau negative). Inclinam sa credem ca balanta va merge spre negativ.</p>
+<p>In continuare, pentru a ne intari demersul argumentativ, noi chiar consideram ca o astfel de masura nu este necesara. Spunem aceasta intrucat, la ora actuala, avem un cadru legal si o institutie care reglementeaza si sustin atat limitele cat si drepturile desfasurarii activitatii in cadrul mass-media. Un astfel de exemplu este Decizia nr. 114 din 14 oct. 2002 privind dreptul la replica si rectificare, publicat in M. Of, nr. 773/24 oct. 2002.<a  href="#8b8c3">[3]</a></p>
+<p>La linia de sosire, consideram ca prin argumentarea noastra am demonstrat lipsa unei necesitati reale a implementarii de noi standarde educationale pentru mass-media private si incheiem prin a reaminti ca masurile coercitive se dovedesc, de cele mai multe ori, contraproductive. Educatia este foarte importanta pentru individ si pentru societate, dar sursa de formare trebuie cautata in individ si nu in modificarea factorilor externi care se presupune ca il influenteaza. Orice intalnim pe parcursul dezvoltarii noastre, desi nu poarta eticheta de produs educational, intr-un fel sau altul ne educa, fie prin exemplu, fie prin contra-exemplu. Tot ce ne trebuie este un cadru de competente care sa ne ajuta sa descifram si sa interiorizam informatiile primite in forma cea mai potrivita pentru noi.</p>
+
+<div><br /> 
+<hr size="\\&quot;1\\&quot;" />
+<div>
+<p><a  name="8b8c1">[1]</a> &ldquo;Copii contra parinti&rdquo; &ndash; emisiune difuzata pe National TV, &nbsp;&ldquo;Omul care adduce cartea&rdquo; &ndash; PRO TV, &ldquo;Supernanny&rdquo; &ndash; Prima TV</p>
+</div>
+<div>
+<p><a  name="8b8c2">[2]</a> Art. 3 alin. (2) din Legea audiovizualului (LEGE Nr. 504 din 11 iulie 2002), http://arhiva.cna.ro/legea504/lege_audiov.pdf</p>
+</div>
+<div>
+<p><a  name="8b8c3">[3]</a> <em>Decizia nr. 114 din 14 oct. 2002 privind dreptul la replica si rectificare, publicat in M. Of, nr. 773/24 oct. 2002, </em>http://www.cdep.ro/pls/legis/legis_pck.htp_act_text?idt=38378</p>
+</div>
+</div>
+</div><hr><h3>A2 () <img src='../../../../images/little_stuff/16-em-up.png' class='discurs_toggler'></h3>
+            <div class='discurs normal_text'><p>Inainte de a intra in resustinerea cazului afirmator trebuie facute cateva precizari cu privire la definitii si context.</p>
+<p>Poate ca expresia &bdquo;cantitate satisfacatoare&rdquo; nu este cea mai clara in definirea responsabilitatilor educationale, insa este evident ca echipa afirmatoare doreste ca televiziunile sa difuzeze <strong>intr-o proportie mai mare</strong> programe cu rol educativ fata de situatia actuala, fara a ne propune insa&nbsp; sa transformam toate posturile de televiziune in Discovery Channel sau Teleenciclopeida asa cum au inteles pe alocuri negatorii. Prin urmare atacurile cu privire la cenzura sau monopolizare sunt nefondate, intrucat masura noastra ar duce cel mult la o rearanjare a grilei de programe.</p>
+<p>In ceea ce priveste <strong>contexul, </strong>echipa negatoare trateaza cu superficialitate importanta acestei dezbateri. In primul rand, ei se folosesc de un <strong>apel la natura</strong> in incercarea a ne convinge de faptul ca introducerea de programe suplimentare cu rol educativ nu este justificata in virtutea art. 6 (2) din Legea audiovizualului. Ori dezbaterea nu ne propune sa demonstram ca o astfel de masura este justificabila potrivit cadrul legislativ actual, ci ne provoaca sa demonstram ca masura este justificabila la nivel valoric sau din prisma impactului pe care il va avea asupra societatii, indiferent de legile actuale, care pot fi oricand schimbate. In al doilea rand, recomandarea este diferita de obligativate. Daca legislatia actuala &bdquo;recomanda&rdquo; diversitatea programelor (incluzand aici si programele educative), noi dorim ca televiziunile private sa fie obligate sa difuzeze o mai mare proportie de programe educative.</p>
+<p>In continuare vom resustine cazul afirmator raspunzand la doua intrebari care ne vor evidentia totodata &nbsp;punctele cheie din aceasta dezbatere: I<strong>) Cine face educatia? ; II) Care vor fi efectele negatvie introducerii masurii propuse?</strong></p>
+<p><strong>I)Cine face educatia?</strong></p>
+<p>Echipa negatoare sustine in repetate randuri ca educatia telespectatorilor este o chestiune ce se face la nivelul fiecarui individ si prin urmare doar ei pot actiona in dezvoltarea lor educationala. Factori externi, inclusiv programele transmise de posturile private de televiziune, nu au nici un rol in acest capitol si prin urmare masura supusa dezbaterii ar fi ineficienta. Insa, negatorii comit doua greseli majore in adoptarea acestei perspective. Pe de o parte, este vorba de o incoerenta interna, ei acceptand rolul important in educatia indivizilor pe care il joaca famialia si grupurile. Pe de alta parte este vorba de o informatie eronata. Potrivit lui Sartori[1] copiii de astazi petrec chiar mai mult timp in fata televizorului decat la scoala, institutia clasica de formare educationala. Prin urmare avem motive serioase sa credem ca televiziunea joaca un rol important in modelarea opiniilor, atitudinilor, valorilor si comportamentelor indivizilor. Asadar, intrucat televiziunea si in general factorii externi joaca un rol important in formarea indivizilor masura supusa discutiei se poate dovedi extrem de eficienta in formarea unor cetateni mai informati si responsabili.</p>
+<p><strong>II) Care vor fi efectele negatvie introducerii masurii propuse?</strong></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Pe parcursul discursului negator putem descoperi mai multe efecte negative presupuse ale introducerii acestei masuri cum ar fi:1) afectarea democratiei, 2) haosul comunicational provcat de nemultumirile posturilor private, 3)ineficienta masurilor coercitive.</p>
+<p>1)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Specificam inca odata ca masura propusa dezbaterii nu impune cenzura sau restrangerea libertatii de exprimare, ci doar includerea in grila de programe a unui numar mai mare de programe educative. Chiar daca libertatea de exprimare ar fi restransa, democratia nu ar fi cu nimic afectata intrucat exista cazuri in care aceasta libertate este limitata (ex: negarea Holocaustului).</p>
+<p>2)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Oricat de nemultumite ar fi posturile private de impunerea acestei masuri suntem departe de a ajunge la un haos cuminicational. Dupa cum spun si negatorii, posturile private sunt societati comerciale interesate de profit, astfel incat, avand in vedere ca masura se aplica in mod egal tuturor televiziunilor, ele vor trebui sa realizeze programe educative cat mai interesante pentru telespectaori astfel incat sa atraga cat mai multe audienta.</p>
+<p>3)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Aceasta ultima ipoteza a echipei negatoare ramane la nivel de speculatie. Ba mai mult decat atat, putem crede chiar contrariul, masurile coercitive fiind cele care au dus de exemplu la aparitia Statului sau &nbsp;la respectarea regulilor de circulatie, si in general la orice aspect legat de organizarea activatii umane.</p>
+
+<p>Am demonstrat astazi ca programele transmise de posturile private de televizune pot avea un impcat semnificativ la nivelul indivizilor.&nbsp; Asadar, am prefera cu totii ca acest impact sa fie unul pozitiv prin transmiterea de programe educative. Mai mult decat atat am demonstrat ca impunerea acestei masuri posturilor private de televziune nu produce efecte sociale negative. Prin urmare &bdquo;este timpul ca posturile private de televiziune sa aiba resposabilitati educative fata de public&rdquo;.</p>
+
+
+
+
+<p>[1] Sartori, Giovanni. <em>Homo Videns. </em><em>Imbecilizarea prin televiziune si post &ndash; gandirea. </em>2005. Humanitas: Bucuresti.</p>
+</div><hr><h3>N2 (Andreea- Denisa Tudor) <img src='../../../../images/little_stuff/16-em-up.png' class='discurs_toggler'></h3>
+            <div class='discurs normal_text'><p><strong>NU E timpul ca mass media private sa aiba responsabilitati educationale fata de public</strong></p>
+<p><strong>E adevarat ca ne-am dori cu totii sa fim in Arcadia unde totul e numai lapte si miere, iar toata lumea sa fie inconjurata de materiale educationale, sa fie educabila si, in cele din urma, chiar educata. Din fericire pentru noi, traim intr-un spatiu concret, intr-un anumit timp si cu alte caracteristici specifice. Mai specific, nu discutam aici si acum despre un plan al ideilor, despre concepte abstracte, ci despre probleme reale, intr-o tara cunoscuta, cu o anumita legislatie si asa mai departe. Prin urmare, exista un aspect care se cere lamurit:</strong></p>
+<p>Afirmatorii au spus ca dezbaterea ar trebui purtata la nivel de valoare, dar ei insisi vorbesc de masuri concrete, aplicate avand in vedere legislaia in vigoare. In cazul acesta pare usor nedrept sa ignoram legea cand vine vorba de ceea ce deja este reglementat.</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Acestea fiind spuse, revenim la dezbaterea noastra asupra televiziunilor private si ceea ce acestea ar trebui sau nu sa faca. </p>
+<p>Argumentul central al echipei afirmatoare a fost urmatorul: Televiziunile private au acoperire foarte mare de unde rezulta ca acestea au influenta foarte mare. Prin urmare, televiziunile private fac educatia. Pana aici, ce intelegem noi este ca daca ceva are raspnadire foarte mare atunci are in mod necesar si capacitate foarte mare de influenta si in mod necesare va avea un rol important in educatia societatii. Mai departe, daca acest mijloc cu un potential atat mare va fi supus unor masuri coercitive de reglare a grilei de programe, atunci in mod necesar televiziunile private se vor modifica nu numai la nivel strict factual (vor face ce li se spune), ci chiar vor avea o alta atitudine vis-a-vis de societate (ceea ce inseamna realmente o responsabilizare). In al doilea discurs, afirmatorii au venit in sprijinul primului afirmand ca&nbsp; televiziunile, asa cum spune Sartori, sunt cel mai frecvent utilizat mijloc de <em>informare. </em>(copiii petrec mai mult timp in fata tv-ului decat cu familia).</p>
+<p>Mergand strict pe linia argumentativa a afirmatorilor, demersul acestora este deficitar in aceea ca implicatia conform careia tot ce are o influenta foarte mare asupra societatii ar trebui responsabilizat social. Dupa cum mai mai spus, exista multe alte medii cu influenta foarte mare care nu sunt oligate in niciun fel sa-si asume <em>responsabilitati educationale </em>(care, apropos, inca nu au fost clar definite.)<em>. </em>Internetul are o la fel de mare raspandire ca televiziunile private, iar copiii sunt fascinati de acest nou mijloc. Ce ar fi sa propunem sa apara in primele pagini pe google doar articole care sunt intr-o oarecare masura educationale?</p>
+<p>Lasand acest aspect deoparte, masura propusa de afirmatori este ca televiziunile private sa-si schimbe grila de programe astfel incat sa poate fi incluse mai multe programe educationale si sustin ca acest fapt nu se numeste cenzura. Dimpotriva, daca vom impune ca anumite educationale sa ocupe un anumit spatiu de difuzare, automat alte programe vor fi scoase. Prin urmare, acestea vor fi cenzurate. Aditional, o alta situatie ar interveni aici, dar nu o vom dezvolta: Daca noi schimbam program de <em>entertainment </em>care atrage atatia privitori si care face ca televizorul sa fie preferat atator oameni, cu un program de educatie, cine ne poate asigura ca oamenii vor continua sa priveasca aceste programe si nu vor cauta <em>circ </em>in alta parte?</p>
+<p>Mai departe, asertiunea afirmatorilor cu privire la afirmatia noastra in ceea ce privesc efectele negative ale masurilor coercitive este nefondata. Aceasta nu este o speculatie ci, mai degraba, un fapt demonstrat stiintific. Un exemplu este prohibitia din Statele Unite din perioada 1920-1933 care in loc sa diminueaze consumul de alcool, l-a marit. Ca efecte secundare, criminalitatea a crescut considerabil astfel ca aceste masuri s-au dovedit contraproductive.</p>
+<p><strong>Cine face educatia? </strong>Educatia o face scoala pentru ca este singura in masura sa ofere un continut adecvat fiecarei varste, intr-un cadru propice si care intr-adevar sa aiba efecte benefice. Tot ce exista pe langa, galeata in care putem introduce televiziunea, internetul, revistele etc. sunt medii cu potential educational dar acest potential nu poate si nici nu trebuie reglementat sistematic pentru a oferi educatie.</p>
+<p><strong>Ce efecte negative ar putea aduce aceasta masura?</strong></p>
+<p>In primul rand nu ar avea efecte, dar s-ar consuma resurse considerabile pentru implemetarea ei. Mai departe, impunerea unui anumit tip de programe in detrimentul celor deja preferate de publicul larg ar putea duce la nemultumiri din partea consumatorilor de televiziune, cat si a detinatorilor posturilor. &nbsp;</p>
+<p>In cele din urma, aceasta dezbatere pare a fi mult o lupta a locurilor comune. Este limpede ca atat afirmatorii cat si noi, negatorii, avem pareri diferite in ceea ce priveste responsabilitatea educationala: daca afirmatorii considera ca o emisiune despre istoria tarii este educativa, noi consideram ca orice emisiune poate educa. Depinde ce intelegem prin educare, iar acesta este termenul a carui definitie lipseste. <em>&nbsp;</em>Consideram ca, desi demersul argumentativ a fost anevoios, prezentarea argumentelor a fost suficient pentru a va demonstra ca <strong>NU</strong> <strong>este timpul ca televiziunile private <strong>sa aiba responsabilitati educationale fata de public.</strong></strong></p>
+</div><hr><hr><h2>Decizia:</h2> <script>
+        $j(document).ready(function(){
+			$j('.decizie_toggler').toggle( 
+				function(){
+					$j(this).attr('src', '../../../../images/little_stuff/16-em-down.png');   
+					$j(this).parent().next('.decizie').hide('fast'); 
+                },
+                function(){
+					$j(this).attr('src', '../../../../images/little_stuff/16-em-up.png');
+					$j(this).parent().next('.decizie').show('fast'); 
+                } 
+			);
+		});</script><div class='decizie'><h3>George Maxim
+                <img src='../../../../images/little_stuff/16-em-up.png' class='decizie_toggler'></h3><div class='normal_text'><p>Partea 1 &ndash; Comentarii generale si individuale</p>
+<p>Runda a fost una aprig disputata, bine structurata la nivel de discursuri individuale, in care ambele echipe au avut argumente bune si mai putin reusite.</p>
+<p>Cazul afirmator este clar, dar exista o neclaritate majora, anume unde exact se doreste a se interveni: la nivel de mesaj (conform cu idea centrala), auditoriu sau mass media (conform argumentelor). Idea centrala care a reiesit din discursul A1 este ca &ldquo;pe masura [&hellip;] spiritului critic al receptorilor&rdquo;. Totodata, acest argument cauzal este deficitar deoarece daca maine canalele private ar incepe sa difuzeze emisiuni educationale cotele de rating ar trebui sa ramana aceleasi si publicul va incepe sa aibe &ldquo;media literacy&rdquo;.</p>
+<p>Contraargumentarea din partea negatorilor incepe prin a se declara de acord cu carentele educationale ale cetatenilor pe care le considera punctul central al dezbaterii. Mai departe se prezinta 2 neclaritati: 1) acea cantitate &ldquo;suficienta&rdquo; si 2) discordanta (nu &ldquo;disconconcordanta&rdquo;) intre problema mesajului si masurile adresate publicului (ambele corect semnalate). Primul atac legat de cadrul legal este unul pertinent deoarece exista reglementari legale care sunt puse in aplicare de o institutie cu atributii corespunzatoare (CNA). A doua insa nu este persuasiva deoarece in orice dezbatere cadrul legal se considera perfectibil si este de datoria afirmatorilor sa propuna masuri noi si sa incerce sa demonstreze efectele benefice ale acestora (lucru care se intampla). Referitor la contraargumentarea punctuala a cazului, atacul negatorilor la primul argument afirmator este nefondat si o falsa dilema (ori cadrul actual ori totalitarism media); o analogie pertinenta a reglementarilor in cadrul democratiei este cea clasica legata de dreptul unui cetatean de a-si misca liber mana care se opreste acolo unde incepe fata urmatorului cetatean. A doua linie de contraargumentare este una valida si ridica problema rolului familiei in educatie si exploateaza slaba cauzalitate din cazul afirmator expusa mai sus. Totodata, este foarte recomandat ca atunci cand o echipa foloseste un exemplu (&ldquo;Decizia nr. 114 din 14 oct. 2002&rdquo;) sa prezinte toate detaliile relevante legate de acesta pentru a intelege scopul folosirii lui si nu doar sa-l enunte.</p>
+<p>Discursul concluziv afirmator combate eficient atacurile negatoare legate de monopolizarea televiziunilor si stabileste un cadru echilibrat pentru continuarea rundei. Respingerea argumentului la natura este pertinent, desi mai corect, ar fi introducerea argumentului negator in categoria argumentelor la traditie. Totodata, conform dovezii prezentate este clar ca televiziunea joaca un rol major in cadrul educatiei indivizilor, o reglementare a acesteia fiind imperios necesara. Legat de efectele negative (nu &ldquo;negatvie&rdquo;), primele 2 efecte sunt respinse corect, cu mentiunea ca intr-un stat democratic exista un cadru legal pentru orice domeniu de activitate, diferenta intre diversii competitori este abilitatea acestora de a genera profit, fara a incalca cadrul operational impus de stat. A treia respingere este insa una lacunara deoarece ambele echipe pot doar sa speculeze asupra efectelor care ar putea sa apara, niciuna din ele prezentand dovezi suficient de persuasive.</p>
+<p>Discursul concluziv negator aduce idei bune dar face in preambul aceiasi confuzie majora: cadrul legal intr-o dezbatere reprezinta un punct de pornire si control pentru a asigura noutatea masurilor propuse de afirmatori si nu un argument final pe care afirmatorii decid sa-l ignore. Analogia cu Internetul nu este una valida deoarece, in cadrul Internetului utilizatorii au instrumente de control si selectie a informatiei mult mai puternice decat in cadrul televiziunii si totodata, pentru ca tot in cadrul televiziunii exista o trasabilitate a informatiei clara fapt care genereaza o responsabilitate mult mai mare a emitatorilor. Urmatoarea confuzie majora este cea legata de diferenta intre cenzura si reglementare: cenzura inseamna interventie in continut sau suprimare a informatiei, iar reglementare inseamna controlul raspandirii informatiei intr-un mediu adecvat (prin analogie cenzura inseamna suprimarea oricaror reportaje legate de violenta iar reglementare inseamna difuzarea acestora, dar cu asigurarea ca va avea loc intr-un cadru corespunzator cu ora de audienta). Orice mediu de informare in masa trebuie supus unor minime reguli tocmai pentru a evita haosul comunicational, dezinformarea, manipularea etc. Atacul legat de resursele necesare implementarii are potential persuasiv dar trebuia efectuat la nivel de N1 si nu in discursul conclusiv. In fine, concluzia centrala a discursului conclusiv negator se refera la definitia termenului de educare, atac in contradictie cu primul discurs negator care accepta educarea ca insusirea de &ldquo;media literacy&rdquo; (&ldquo;Conceptul cheie [&hellip;] o afacere&rdquo;) ca si punct central al rundei.</p>
+<p>Partea 2 &ndash; Verdict si punctaje</p>
+<p>In concluzie, runda a fost una coerenta, usor de urmarit si arbitrat. Afirmatorii stabilesc noutatea masurilor lor in cadrul legal si argumenteaza convingator efectele lor pozitive. Negatorii nu reusesc sa aduca o linie de contrargumentare eficienta si sufera din cauza confuziilor intre termenii folositi si contradicitia interna mai sus prezentata. Ergo, VERDICTUL MERGE CATRE ECHIPA AFIRMATOARE.</p>
+<table border="1" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td width="128" valign="top">
+<p>Vorbitor</p>
+</td>
+<td width="128" valign="top">
+<p>Continut</p>
+</td>
+<td width="128" valign="top">
+<p>Strategie</p>
+</td>
+<td width="128" valign="top">
+<p>Stil</p>
+</td>
+<td width="128" valign="top">
+<p>Total</p>
+</td>
+</tr>
+<tr>
+<td width="128" valign="top">
+<p>A1</p>
+</td>
+<td width="128" valign="top">
+<p>11</p>
+</td>
+<td width="128" valign="top">
+<p>8</p>
+</td>
+<td width="128" valign="top">
+<p>4</p>
+</td>
+<td width="128" valign="top">
+<p>23</p>
+</td>
+</tr>
+<tr>
+<td width="128" valign="top">
+<p>N1</p>
+</td>
+<td width="128" valign="top">
+<p>10</p>
+</td>
+<td width="128" valign="top">
+<p>8</p>
+</td>
+<td width="128" valign="top">
+<p>5</p>
+</td>
+<td width="128" valign="top">
+<p>23</p>
+</td>
+</tr>
+<tr>
+<td width="128" valign="top">
+<p>A2</p>
+</td>
+<td width="128" valign="top">
+<p>14</p>
+</td>
+<td width="128" valign="top">
+<p>8</p>
+</td>
+<td width="128" valign="top">
+<p>4</p>
+</td>
+<td width="128" valign="top">
+<p>26</p>
+</td>
+</tr>
+<tr>
+<td width="128" valign="top">
+<p>N2</p>
+</td>
+<td width="128" valign="top">
+<p>9</p>
+</td>
+<td width="128" valign="top">
+<p>9</p>
+</td>
+<td width="128" valign="top">
+<p>4</p>
+</td>
+<td width="128" valign="top">
+<p>22</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>A1 -> 23 puncte<br>N1 -> 23 puncte<br>A2 -> 26 puncte<br>N2 -> 22 puncte<br>Castiga echipa: <h3 style='display:inline;color:red;'>Voluntari-A (afirmatori)</h3></div><hr><h3 class='important'>Vrem parerea ta! Pentru asta, trebuie sa te loghezi.</h3>
+                <div class='clear'></div>
+        </div><!-- end main content -->
+         <div class='clear'></div>
+</div>
+<div id="pix"></div>
+
+
+                                </div><!--end main -->
+                                <div id='parteneri'>
+                                    <span class='tr'></span><span class='tl'></span><span class='br'></span><span class='bl'></span><span id="filler"></span>
+                                    <div class='parteneri' id='sustinatori'>
+                                        <span class='floating_text' id='un_proiect'>Un proiect</span>
+                                        <a href='http://www.ardor.org.ro/'><div class='image' id='ardor'>Ardor</div></a>
+                                        <span class='floating_text' id='finantatori'>Finanțatori</span>
+                                        <a href='http://www.opensocietyfoundations.org/'><div class='image' id='open_society'>Open Society Foundation </div></a>
+                                        <a href='http://www.studentiq.ro//'><div class='image' id='memoplus'>MemoPlus</div></a>
+                                        <!-- <a href='http://www.ratiufamilyfoundation.com/'><div class='image' id='FundatiaRatiu'>Ardor</div></a>
+                                        <a href='http://www.eef.md/'><div class='image' id='eef'>East Europe Foundation</div></a>
+                                        <a href='http://www.mts.gov.md/'><div class='image' id='mdminister'>Ministerul Tineretului si Sportului al Republicii Moldova</div></a> -->
+
+                                        <span class='floating_text' id='parteneri_text'>Parteneri</span>
+
+                                        <a href='http://www.policycenter.eu/'><div class='image' id='PolicyCenter'>Policy Center</div></a>
+                                        <a href='http://www.britishcouncil.org/'><div class='image' id='BritishCouncil'>British Council</div></a>
+                                        <a href='http://www.europuls.ro/'><div class='image' id='europuls'>Europuls</div></a>
+                                        <a href='http://www.cere.ro/'><div class='image' id='cere'>Ce-Re</div></a>
+                                        <a href='http://www.primeromania.ro/'><div class='image' id='prime'>Prime Romania</div></a>
+                                        <a href='http://www.cji.ro/'><div class='image' id='cji'>Centrul pentru jurnalism independent</div></a>
+                                        <a href='http://www.aiesectm.ro/'><div class='image' id='aisec'>Aisec</div></a>
+                                        <!-- ===================================================================================================== -->
+                                        <a href='http://www.cogitus.ro/'><div class='image' id='cogitus'>Cogitus</div></a>
+                                        <a href='http://www.adevarul.ro/international/foreign_policy/'><div class='image' id='foreignPolicy'>Foreign Policy</div></a>
+                                        <a href='http://www.elsa.ro/'><div class='image' id='elsa'>Elsa</div></a>
+                                        <a href='http://www.vipromania.ro/'><div class='image' id='vipromania'>Voluntari pentru idei si proiecte</div></a>
+                                        <a href='http://www.ongtrust.ro/'><div class='image' id='ongtrust'>Trust</div></a>
+
+                                        <!-- ===================================================================================================== -->
+                                        <a href='http://www.leap.ro/'><div class='image' id='leap'>Leap</div></a>
+                                        <a href='http://www.younginitiative.org/'><div class='image' id='younginitiative'>Asociatia young initiative</div></a>
+                                        <a href='http://www.asjc.ro/'><div class='image' id='asjc'>Asjc</div></a>
+                                        <a href='http://osut.ro/'><div class='image' id='osut'>Osut</div></a>
+                                        <div class='clear'></div>
+                                    </div>
+                                    <div class='parteneri' id='parteneri_institutionali'>
+                                        <span class='floating_text' id='sponsori_text'>Sus&#539;in&#x0103;tori</span>
+                                        <a href='http://www.cartier.md/'><div class='image' id='cartier_logo'>Editura Cartier</div></a>
+                                        <a href='http://www.pll.md/ro/'><div class='image' id='biblio_logo'>Biblioteca publica de drept</div></a>
+                                        <span class='floating_text' id='institutii_text'>Parteneri institu&#539;ionali</span> 
+                                        <ul id='institutii'>
+                                            <!-- <span class='floating_text' id='institutii_text'>Parteneri institu&#539;ionali:</span> -->
+                                            <li><a href='http://www.politice.ro/'>Facultatea de &#536;tiin&#539;e Politice SNSPA </a></li>
+                                            <li><a href='http://www.comunicare.ro/'>Facultatea de Comunicare &#537;i Rela&#539;ii Publice SNSPA</a></li>
+                                            <li><a href='http://www.fspub.ro/'>Facultatea de &#536;tiin&#539;e Politice Universitatea Bucure&#537;ti</a></li>
+                                            <li><a href='http://www.filosofie.unibuc.ro/'>Facultatea de Filosofie Universitatea Bucure&#537;ti</a></li>
+                                            <li><a href='http://litere.unibuc.ro/'>Facultatea de Litere din Universitatea Bucure&#x015f;ti</a></li>
+                                            <li><a href='http://www.unibuc.ro/ro/fac_fsas_ro'>Facultatea de Sociologie Universitatea Bucure&#537;ti</a></li>
+                                            <li><a href='http://laws.uaic.ro/'>Facultatea de Drept Universitatea Alexandru Ioan Cuza Ia&#537;i</a></li>
+                                            <li><a href='http://www.uaic.ro/uaic/bin/view/Academic/Filosofie'>Facultatea de Filosofie si &#536;tiin&#539;e Social Politice Universitatea AIC Ia&#537;i</a></li>
+                                            <li><a href='http://www.upa.ro/'>Facultatea de Drept si Facultatea de &#x015e;tiin&#x0163;e Politice si Administrative Universitatea Petre Andrei Ia&#x015f;i</a></li> 
+
+                                            <li><a href='http://www.ubbcluj.ro/'>Universitatea Babe&#537;-Bolyai Cluj Napoca</a></li>
+                                            <li><a href='http://www.uvt.ro/'>Universitatea de Vest Timi&#537;oara</a></li>
+                                            <li><a href='http://www.upt.ro/'>Universitatea Politehnica Timi&#537;oara</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class='parteneri' id='parteneri_media'>
+                                        <span class='floating_text' id='media_text'>Parteneri media</span>
+                                        <a href='http://www.hotnews.ro/'><div class='image' id='hotnews'>HotNews</div></a>
+                                        <!-- <a href='http://www.lumebuna.ro/'><div class='image' id='lumebuna'>Lume Buna</div></a> -->
+                                        <a href='http://www.romaniapozitiva.ro/'><div class='image' id='romaniapozitiva'>Romania Pozitiva</div></a>
+                                        <a href='http://totb.ro/'><div class='image' id='thinkoutsidethebox'>Think Outside The Box</div></a>
+                                        <a href='http://www.facebook.com/carevasazica.vip'><div class='image' id='carevasazica'>Carevasazica</div></a>
+                                        <a href='http://www.studentie.ro/'><div class='image' id='studentiero'>Studentie.ro</div></a>
+                                        <a href='http://startub.unibuc.ro/'><div class='image' id='startub'>startub.unibuc.ro</div></a>
+                                        <!-- <a href='http://www.tvr.ro/tvr_cluj.php'><div class='image' id='tvrcluj'>Tvr Cluj</div></a> -->
+                                        <!-- <a href='http://www.radiotransilvania.ro'><div class='image' id='radiotransilvania'>Radio Transilvania</div></a> -->
+                                        <a href='http://iasifun.ziaruldeiasi.ro/'><div class='image' id='iasifun'>Iasi fun</div></a>
+                                        <a href='http://www.ziaruldeiasi.ro/'><div class='image' id='ziaruldeiasi'>Ziarul de Iasi</div></a>
+                                        <a href='http://www.kissfm.ro/timisoara'><div class='image' id='kissfm'>KissFm</div></a>
+
+                                        <div class='clear'></div> 
+                                    </div>
+                                    <div class='clear'></div>
+
+                                </div>	
+                            </div>	<!-- end wrap -->
+                            <div id='footer_mare'>
+                                <div id='footer'>
+                                    <div id='links' class='footer'>
+                                        <div id='menu1' style='margin:auto;'> <ul id='meniu_prinicpal'><li><a href='../../../contacte/index.html'> Contact </a></li>
+<li><a href='../../../clubdebate/index.html'> Cluburile </a></li>
+<li><a href='../../../oamenii/index.html'> Oamenii </a></li>
+<li><a href='../../../proiectul/index.html'> Proiectul </a></li>
+<li><a href='../../../home/index.html'> Acasa </a></li>
+</ul></div><!--end menu-->
+                                    </div><!--
+                                    <div id='contact' class='footer'>
+                                            <h4>Contact</h4>
+                                            <p>office@closer2oxford.ro</p>
+                                            <p>bogdan.draghicescu@closer2oxford.ro<br>
+                                            <span class='detalii'> (asistenta tehnica web - orice probleme legate de site)</span></p>
+                                    </div>
+                                    -->
+                                    <div id='newsletter' class='footer'>
+                                        <script src="../../../../../connect.facebook.net/en_US/all.js#xfbml=1"></script><fb:like href="http://www.facebook.com/pages/Closer2Oxford/162758797069605" width="250" colorscheme="dark"></fb:like>
+                                        <!--<h4>Newsletter</h4>
+                                        <form action='/page/newsletter'>
+                                                <input type='text' name='email'>
+                                                <input type='submit' id='submit' value='>'>
+                                                        
+                                        </form>-->
+                                    </div>
+                                    <div id='credits'>
+                                        Copyright(c) 2021 ARDOR |  Toate drepturile rezervate | Toate logo-urile si sloganurile de pe site sunt proprietate intelectuala inregistrata si nu pot fi reproduse fara acordul explicit al detinatorilor. <br>
+                                            <br /><br />
+                                            <b>Disclaimer</b><br /><i>
+
+                                                Programul educational Closer to Oxford este un program non-profit si nu are o legatura cu universitatea cu acelasi nume, referirea la Oxford avand doar o semnificatie simbolica.
+                                            </i>
+                                    </div>
+
+                                </div>		
+                            </div>		
+
+                            <div id="finantatde">Acest proiect este finantat cu sustinere din partea Comisiei Europene. Aceast publicatie [comunicare] reflecta doar
+                                vederile autorului, iar Comisia nu poate fi facuta  responsabila pentru utilizarea informatiei pe care o contine.</div>
+
+
+                        </body>
+                        </html>

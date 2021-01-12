@@ -1,0 +1,329 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml-strict.dtd">
+<HTML xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+    <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+            <link rel="icon" type="image/png"  href="../../closer2oxford.ro/favicon.html">
+                <link rel="stylesheet" href="var/layout.css" type="text/css">
+                    <title>Closer to Oxford - e timpul pentru argumente!</title>
+                    <link rel="alternate" type="application/rss+xml"  href="rss_feed" title="Stiri Closer2Oxford">
+                        <!-- <link rel="image_src" property="og:image"  href="/images/layout/closer2oxford_fb_white.png" /> -->
+                        <link rel="image_src" property="og:image"   type="image/jpeg"  href="../uploads/2015/06/9/facebook_icon.html" />
+                        <link rel="image_src" type="image/jpeg"  href="../uploads/2015/06/9/icon-facebook.gif" /> 
+						<meta name="description" content="Closer2Oxford pune în valoare oameni şi argumentele lor, în dezbateri online şi publice alături de tineri şi invitați avizaţi"/>
+                        <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9" />
+<script type='text/javascript' src='../js/jquery-1.4.4.min.js'></script>
+<script>var $j = jQuery.noConflict();</script>
+<script type='text/javascript' src='../js/tinymce/tiny_mce.js'></script>
+<script type='text/javascript' src='../js/jquery.form.js'></script>
+<script type='text/javascript' src='../js/fbLoginRegister.js'></script>
+<script type='text/javascript' src='var/javascript.js'></script>
+<script type='text/javascript' src='../js/jquery.hovertip-1.0.min.js'></script> 
+<script type='text/javascript' src='../js/jquery.jgrowl_minimized.js'></script> 
+<link rel='stylesheet' href='../css/jquery.jgrowl.css' media='screen' type='text/css'> 
+<script type='text/javascript' src='../js/jquery.timer-min.js'></script> 
+<meta name='description' content=''/> 
+<meta name='keywords' content=''/> 
+<style>.hovertip{
+    position:absolute;
+    padding:10px 13px;
+    z-index:2;
+    max-width:300px;
+    color:#303030;
+    background-color:#f5f5b5;
+    border:1px solid #DECA7E;
+    font-family:sans-serif;
+    font-size:12px;
+    line-height:18px;
+    text-align:left;
+    }</style> 
+<script type='text/javascript'>$j(document).ready(function(){$j('.tooltip').hovertip({'offset':[20,20]});get_notif();});
+
+if(!Array.indexOf){Array.prototype.indexOf = function(obj){for(var i=0; i<this.length; i++){if(this[i]==obj){return i;}}return -1;}}
+    hashuri = [] ;
+	 var tick_timer= 3000 ;
+ 
+	 function get_notif()
+        {
+		  
+		  //console.log(tick_timer);
+	     
+		  setTimeout(get_notif,tick_timer);
+        
+		   $j.ajax(
+            {
+                url: '/page/notif/show_events',
+                dataType: 'json',
+                data: "{}",
+                success: function(data)
+                    {
+                    $j.each(data,function(index,data){
+                        try
+                            {
+                            if( hashuri.indexOf(data.hash) == -1 )
+                                {
+                                hashuri.push(data.hash);
+                                $j.jGrowl(
+                                    data.str,
+                                    {
+                                        corners:'1px',
+                                        life: data.life,
+                                        header:data.title,
+                                        hash: data.hash,
+                                        sticky: data.sticky,
+                                        close: function(e,m,o)
+                                            {
+                                                $j.ajax({url:'/page/notif/delete_single_event/' + o.hash});
+                                            }
+                                    });
+                                }
+                            }
+                        catch(e){}
+                        })
+                    }
+            });
+        }
+	 </script> 
+ 
+                            
+  <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-19111721-1']);
+  _gaq.push(['_setDomainName', '.closer2oxford.ro']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+    
+                        </head>
+                        <body>
+                            <div id="global_wrap">
+                                <div id="header">
+                                    <a href='../index.html'><div id='logo'><img src='../images/layout/sigla.jpg'></div></a>
+                                    <a class='noExternal' href='http://www.facebook.com/pages/Closer2Oxford/162758797069605'><img src='../images/fb.png' style='height:30px;float:right;clear:right;margin:10px 5px 5px 5px;border:none;'/></a>
+                                    <a href='rss_feed'><img src='../images/feed-icon.png' style='height:30px;float:right;clear:right;margin:5px;border:none;'/></a>
+                                </div>
+                                <div id="meniu">
+                                    <div  id='register_login'>
+
+                                        
+  <a href='#' class='todo' id='login'>Login </a> &nbsp;<a href='register.html' class='todo' id='register'>Register</a>
+    <div id='login_box'>
+		  <form action='https://dev.closer2oxford.ro/page/ro/login_user/logon' method='post' id='user_login_form'>
+					 <div>Email: <input type='text' name='email'/> </div><br />
+					 <div>Pass: <input type='password' name='passwd'/></div><br />
+					 <a href='#' class='password_forgot'>forgot password?</a>
+					 <input type='hidden' value='/page/coach' name='returnto' class='submiter'/><br />
+					 <input type='submit' value='login' name='btn' class='submiter'/><br />
+		  </form>
+		  
+		  <form action='https://dev.closer2oxford.ro/page/ro/login_user/reset_user_pw' method='post' id='user_reset_form'>
+					 <div>Email: <input type='text' name='email'/> </div><br />
+					 <a href='#' class='password_forgot'>login?</a>
+					 <input type='hidden' value='/page/coach' name='returnto' class='submiter'/><br />
+					 <input type='submit' value='reset' name='btn' class='submiter'/><br />
+		  </form>
+		  
+    </div>
+    
+                                    </div>
+                                    <div id='menu1' style='margin:auto;'> <ul id='meniu_prinicpal'><li><a href='contacte/index.html'> Contact </a></li>
+<li><a href='clubdebate/index.html'> Cluburile </a></li>
+<li><a href='oamenii/index.html'> Oamenii </a></li>
+<li><a href='proiectul/index.html'> Proiectul </a></li>
+<li><a href='home/index.html'> Acasa </a></li>
+</ul></div><!--end menu-->
+                                </div>
+                                <div id="main"> 
+                                    <!--<div id='stiri-padding'>
+        <div id='stiri_back'>
+                {stiri} 
+    
+               
+        </div>-->
+        
+</div>
+<div  id="content-padding">
+        <div id='sidebar_menu'>
+                <span class='tr'></span>
+                <span class='tl'></span>
+                <span class='br'></span>
+                <span class='bl'></span>
+                <span id="filler"></span>
+                <ul class='submeniu'><a href='clubdebate.html'><li>Club debate  </li></a><a href='coach.html'><li>Coach  </li></a><a href='tainer.html'><li>Trainer  </li></a><a href='profesor.html'><li>Profesor  </li></a><a href='arbitru.html'><li>Arbitru  </li></a></ul>    
+                <ul></ul>
+                
+                <div class='clear'></div>
+        </div>
+        <div id="content">
+                <span class='tr'></span>
+                <span class='tl'></span>
+                <span class='br'></span>
+                <span class='bl'></span>
+                <span id="filler"></span>
+                <p><strong>DEBATE COACH / </strong><strong>&ldquo;antrenor de debate&rdquo;</strong></p>
+<p><a href="../documents/cluburi/coach.pdf">Textul in format pdf</a>&nbsp;</p>
+<p>&nbsp;</p>
+<p><strong><br /></strong></p>
+<p>Coach-ul ocupă un rol central &icirc;n cadrul activităților de debate. Prin faptul că familiarizează studenții cu practica dezbaterilor, că &icirc;ncearcă să le insufle abilitățile necesare pentru discursul public și analiza critică a unor chestiuni complicate, ei sunt cei care oferă studenților baza necesară pentru o activitate de succes &icirc;n dezbateri și public speaking. Aceștia au o influență enormă &icirc;n viața studenților și sunt promotorii activi ai libertății de expresie și discuției critice.</p>
+<p>Exercițiul dezbaterii oferă beneficii enorme studenților, o dată pentru că cizelează simțul critic și examinarea analitică a chestiunilor complexe, dar și pentru că dezvoltă &icirc;ncrederea &icirc;n sine. Din aceste motive, asociatiile de dezbateri &icirc;ncurajează puternic introducerea dezbaterilor ca unealtă de educație non tradițională.</p>
+<p>&nbsp;<strong>I.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </strong><strong>Toți educatorii trebuie să &icirc;mpărtășească anumite asumpții pedagogice:</strong></p>
+<p>&nbsp;<em>1.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </em><em>Educatorii trebuie să realizeze că discursul public și dezbaterile academice sunt activități care pun studentul &icirc;n centrul atenției.</em></p>
+<p>Participarea la activități de debate și public speaking &icirc;ncurajează studenții să fie &ldquo;consumatori&rdquo; analitici, critici și documentați ai discursurilor. Aceste calități sunt dezvoltate &icirc;n r&acirc;ndul debaterilor mai cu seamă c&acirc;nd li se oferă ocazia să-și exprime și cizeleze ideile și să-și găsească propriile voci.</p>
+<p>&nbsp;<em>2.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </em><em>Educatorii trebuie să aibă o cultură generală bogată și să fie dispuși să &icirc;mpărtășească cunoștințe și informații cu alții.</em></p>
+<p>Trainerii, profesorii și coach-ii trebuie să fie deschiși dpdv intelectual și dispuși să &icirc;și sprijine debaterii &icirc;n procesul de documentare. Mai mult, educatorii trebuie să ofere informații adecvate (at&acirc;t generale c&acirc;t și specifice) pentru a-și sprijini studenții &icirc;n a &icirc;nțelege chestiunile &icirc;n discuție. &Icirc;nsă, studenții &icirc;nșiși (și nu coach-ii sau profesorii) sunt cei care trebuie să-și construiască un caz de debate, să analizeze resursele, să dezvolte strategii. &Icirc;n procesul de &icirc;nvățare, rolul trainerului, profesorului și al coach-ului trebuie să fie acela de facilitator.</p>
+<p>&nbsp;<em>3.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </em><em>Educatorii trebuie să fie organizați.</em></p>
+<p>Trainerii, profesorii și coach-ii trebuie să planifice cu grijă timpul &ndash; cel de predare, de exerciții șamd. Fiecare sesiune trebuie să aibă obiective definite clar și &icirc;n urma fiecărei sesiuni trainerul, profesorul sau coach-ul ar trebui să evalueze măsura &icirc;n care au fost atinse obiectivele propuse, folosindu-se de criterii de evaluare prestabilite.</p>
+<p>&nbsp;<em>4.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </em><em>Educatorii trebuie să creeze un mediu plăcut și propice &icirc;nvățării.</em></p>
+<p>Un mediu plăcut și propice &icirc;nvățării este un mediu &icirc;n care toți studenții primesc atenția cuvenită și &icirc;n care sunt provocați să-și atingă potențialul. Acest obiectiv este atins atunci c&acirc;nd educatorii depun eforturi pentru ca studenții debateri să se implice activ &icirc;n procesul &icirc;nvățării. ARDOR consideră că expunerea la mediul competitiv al dezbaterilor și la evenimente de public speaking oferă studenților oportunități de examinare a chestiunilor de interes public dar și de testare a abilităților dob&acirc;ndite la club. Coach-ii contribuie &icirc;n mod semnificativ la acest proces : ei sunt cei care &icirc;i introduc pe studenți &icirc;n mediul dezbaterilor și discursului public, și &icirc;i ghidează &icirc;n timpul exercițiilor, research-ului și discuțiilor. Un coach bun este acela care reușește să insufle studenților &icirc;ncrederea &icirc;n sine și abilitățile necesare pentru a deveni persoane cu curiozitate intelectuală, spirit de explorator al chestiunilor stringente și cu bunăvoința de a se implica &icirc;n diferite provocări oferite de comunitate. Cel mai important, totuși, este că coach-ii sunt educatori și modele care exercită o influență inestimabilă asupra debaterilor.</p>
+<p>&nbsp;</p>
+<p>&nbsp;<strong>II.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </strong><strong>Standardele și nivelele de implicare ale coach-ilor:</strong></p>
+<p><strong>&nbsp;</strong></p>
+<p>Coach-ii au și un rol foarte important de administrare. Fără contribuția lor, infrastructura care permite participarea studenților &icirc;n activitățile de debate nu ar exista.</p>
+<p>&nbsp;<em>A.&nbsp;&nbsp;&nbsp;&nbsp; </em><em>Coach-ii trebuie să aibă un angajament față de studenții (debaterii) lor</em></p>
+<p>Ei trebuie să se comporte precum un &icirc;ndrumător responsabil, a cărui principală grijă este bunăstarea debaterilor săi. Studenții trebuie să se simtă mereu confortabil &icirc;n prezența coach-ului lor.</p>
+<p>&nbsp;<em>B.&nbsp;&nbsp;&nbsp;&nbsp; </em><em>Coachii trebuie să aibă un comportament etic și profesionist, și ar trebui să &icirc;ncurajeze un comportament etic și &icirc;n r&acirc;ndul debaterilor pe care &icirc;i &icirc;ndrumă</em></p>
+<p>Deși rolul unui coach nu este acela de educator moral, acesta trebuie să &icirc;ncerce pe c&acirc;t posibil să insufle &icirc;n echipa pe care o &icirc;ndrumă valori precum respectul, fair play-ul, onestitatea intelectuală - calități care nu trebuie afectate de presiunea competitivității. Mai mult, coach-ii ar trebui să reprezinte niște modele pentru debaterii lor, av&acirc;nd un comportament etic, responsabil, profesionist, nu doar &icirc;n cadrul turneelor și competițiilor, dar și &icirc;n activitatea de club sau &icirc;n responsabilitățile administrative.</p>
+<p>&nbsp;<em>C.&nbsp;&nbsp;&nbsp;&nbsp; </em><em>Un coach trebuie să fie un administrator eficient</em></p>
+<p>Un coach trebuie să-și managerieze echipa cu eficiență și responsabilitate, ar trebui să faciliteze și să coordoneze &icirc;nt&acirc;lniri regulate, accentu&acirc;nd necesitatea activităților și exercițiilor constante. Mai mult, un coach trebuie să-și demonstreze bunăvoință de a-și ajuta echipa să-și &icirc;mbogățească resursele și uneori chiar și fondurile (prin susținerea lor &icirc;n abordarea sponsorilor, de pildă).</p>
+<p>&Icirc;n calitatea lor (și) de administratori ai unei echipe, de recruteri de noi membri, coach-ii ar trebui să adere mereu la principii precum corectitudinea, egalitatea, non discriminarea. &Icirc;n plus, pentru a cultiva o atmosferă de grup plăcută, este imperativ ca un coach să dezvolte o relație matură, profesională și productivă cu debaterii săi. Coach-ii pot &icirc;ncuraja nu doar dezbaterea unor chestiuni stringente ale comunității, ci și implicarea ale debaterilor săi &icirc;n diferite cauze, efortul voluntar și exercitarea datoriilor civice.</p>
+<p>&nbsp;<em>D.&nbsp;&nbsp;&nbsp; </em><em>Un coach ar trebui să promoveze participarea, implicarea și dezvoltarea personală a oricărui membru</em></p>
+<p>Un coach ar trebui să se concentreze pe distribuirea rolurilor &icirc;n echipă &icirc;n funcție de experiența personală a debaterilor. Coach-ul trebuie să le ofere studenților oportunitatea să-și asume anumite roluri, angaj&acirc;ndu-se să le ofere asistență și sprijin. Totodată, un coach trebuie să facă eforturi să &ldquo;fidelizeze&rdquo; membrii.</p>
+<p><em>E.&nbsp;&nbsp;&nbsp;&nbsp; </em><em>Un coach trebuie să se asigure că resursele eduaționale sunt disponibile tuturor, nu numai elitelor/v&acirc;rfurilor.</em></p>
+<p>ARDOR pleacă de la premisa că discursul public și dezbaterile sunt metode de educație non formală cruciale pentru stabilizarea și dezvoltarea unei democrații. Prin urmare toți tinerii, ca viitori participanți &icirc;n viața politică/publică, trebuie să aibă acces la resursele de care dispune clubul. Pornind de la acest spirit democratic, cluburile de debate trebuie să facă tot posibilul ca activitățile, resursele educaționale, informațiile să fie accesibile tuturor celor interesați, indiferent de background-ul acestora. Totodată, succesul &icirc;n acitivitatea competițională nu trebuie să fie o condiție pentru participarea membrilor la activitatea de club.</p>
+                <div class='clear'></div>
+        </div><!-- end main content -->
+         <div class='clear'></div>
+</div>
+<div id="pix"></div>
+
+
+                                </div><!--end main -->
+                                <div id='parteneri'>
+                                    <span class='tr'></span><span class='tl'></span><span class='br'></span><span class='bl'></span><span id="filler"></span>
+                                    <div class='parteneri' id='sustinatori'>
+                                        <span class='floating_text' id='un_proiect'>Un proiect</span>
+                                        <a href='http://www.ardor.org.ro/'><div class='image' id='ardor'>Ardor</div></a>
+                                        <span class='floating_text' id='finantatori'>Finanțatori</span>
+                                        <a href='http://www.opensocietyfoundations.org/'><div class='image' id='open_society'>Open Society Foundation </div></a>
+                                        <a href='http://www.studentiq.ro//'><div class='image' id='memoplus'>MemoPlus</div></a>
+                                        <!-- <a href='http://www.ratiufamilyfoundation.com/'><div class='image' id='FundatiaRatiu'>Ardor</div></a>
+                                        <a href='http://www.eef.md/'><div class='image' id='eef'>East Europe Foundation</div></a>
+                                        <a href='http://www.mts.gov.md/'><div class='image' id='mdminister'>Ministerul Tineretului si Sportului al Republicii Moldova</div></a> -->
+
+                                        <span class='floating_text' id='parteneri_text'>Parteneri</span>
+
+                                        <a href='http://www.policycenter.eu/'><div class='image' id='PolicyCenter'>Policy Center</div></a>
+                                        <a href='http://www.britishcouncil.org/'><div class='image' id='BritishCouncil'>British Council</div></a>
+                                        <a href='http://www.europuls.ro/'><div class='image' id='europuls'>Europuls</div></a>
+                                        <a href='http://www.cere.ro/'><div class='image' id='cere'>Ce-Re</div></a>
+                                        <a href='http://www.primeromania.ro/'><div class='image' id='prime'>Prime Romania</div></a>
+                                        <a href='http://www.cji.ro/'><div class='image' id='cji'>Centrul pentru jurnalism independent</div></a>
+                                        <a href='http://www.aiesectm.ro/'><div class='image' id='aisec'>Aisec</div></a>
+                                        <!-- ===================================================================================================== -->
+                                        <a href='http://www.cogitus.ro/'><div class='image' id='cogitus'>Cogitus</div></a>
+                                        <a href='http://www.adevarul.ro/international/foreign_policy/'><div class='image' id='foreignPolicy'>Foreign Policy</div></a>
+                                        <a href='http://www.elsa.ro/'><div class='image' id='elsa'>Elsa</div></a>
+                                        <a href='http://www.vipromania.ro/'><div class='image' id='vipromania'>Voluntari pentru idei si proiecte</div></a>
+                                        <a href='http://www.ongtrust.ro/'><div class='image' id='ongtrust'>Trust</div></a>
+
+                                        <!-- ===================================================================================================== -->
+                                        <a href='http://www.leap.ro/'><div class='image' id='leap'>Leap</div></a>
+                                        <a href='http://www.younginitiative.org/'><div class='image' id='younginitiative'>Asociatia young initiative</div></a>
+                                        <a href='http://www.asjc.ro/'><div class='image' id='asjc'>Asjc</div></a>
+                                        <a href='http://osut.ro/'><div class='image' id='osut'>Osut</div></a>
+                                        <div class='clear'></div>
+                                    </div>
+                                    <div class='parteneri' id='parteneri_institutionali'>
+                                        <span class='floating_text' id='sponsori_text'>Sus&#539;in&#x0103;tori</span>
+                                        <a href='http://www.cartier.md/'><div class='image' id='cartier_logo'>Editura Cartier</div></a>
+                                        <a href='http://www.pll.md/ro/'><div class='image' id='biblio_logo'>Biblioteca publica de drept</div></a>
+                                        <span class='floating_text' id='institutii_text'>Parteneri institu&#539;ionali</span> 
+                                        <ul id='institutii'>
+                                            <!-- <span class='floating_text' id='institutii_text'>Parteneri institu&#539;ionali:</span> -->
+                                            <li><a href='http://www.politice.ro/'>Facultatea de &#536;tiin&#539;e Politice SNSPA </a></li>
+                                            <li><a href='http://www.comunicare.ro/'>Facultatea de Comunicare &#537;i Rela&#539;ii Publice SNSPA</a></li>
+                                            <li><a href='http://www.fspub.ro/'>Facultatea de &#536;tiin&#539;e Politice Universitatea Bucure&#537;ti</a></li>
+                                            <li><a href='http://www.filosofie.unibuc.ro/'>Facultatea de Filosofie Universitatea Bucure&#537;ti</a></li>
+                                            <li><a href='http://litere.unibuc.ro/'>Facultatea de Litere din Universitatea Bucure&#x015f;ti</a></li>
+                                            <li><a href='http://www.unibuc.ro/ro/fac_fsas_ro'>Facultatea de Sociologie Universitatea Bucure&#537;ti</a></li>
+                                            <li><a href='http://laws.uaic.ro/'>Facultatea de Drept Universitatea Alexandru Ioan Cuza Ia&#537;i</a></li>
+                                            <li><a href='http://www.uaic.ro/uaic/bin/view/Academic/Filosofie'>Facultatea de Filosofie si &#536;tiin&#539;e Social Politice Universitatea AIC Ia&#537;i</a></li>
+                                            <li><a href='http://www.upa.ro/'>Facultatea de Drept si Facultatea de &#x015e;tiin&#x0163;e Politice si Administrative Universitatea Petre Andrei Ia&#x015f;i</a></li> 
+
+                                            <li><a href='http://www.ubbcluj.ro/'>Universitatea Babe&#537;-Bolyai Cluj Napoca</a></li>
+                                            <li><a href='http://www.uvt.ro/'>Universitatea de Vest Timi&#537;oara</a></li>
+                                            <li><a href='http://www.upt.ro/'>Universitatea Politehnica Timi&#537;oara</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class='parteneri' id='parteneri_media'>
+                                        <span class='floating_text' id='media_text'>Parteneri media</span>
+                                        <a href='http://www.hotnews.ro/'><div class='image' id='hotnews'>HotNews</div></a>
+                                        <!-- <a href='http://www.lumebuna.ro/'><div class='image' id='lumebuna'>Lume Buna</div></a> -->
+                                        <a href='http://www.romaniapozitiva.ro/'><div class='image' id='romaniapozitiva'>Romania Pozitiva</div></a>
+                                        <a href='http://totb.ro/'><div class='image' id='thinkoutsidethebox'>Think Outside The Box</div></a>
+                                        <a href='http://www.facebook.com/carevasazica.vip'><div class='image' id='carevasazica'>Carevasazica</div></a>
+                                        <a href='http://www.studentie.ro/'><div class='image' id='studentiero'>Studentie.ro</div></a>
+                                        <a href='http://startub.unibuc.ro/'><div class='image' id='startub'>startub.unibuc.ro</div></a>
+                                        <!-- <a href='http://www.tvr.ro/tvr_cluj.php'><div class='image' id='tvrcluj'>Tvr Cluj</div></a> -->
+                                        <!-- <a href='http://www.radiotransilvania.ro'><div class='image' id='radiotransilvania'>Radio Transilvania</div></a> -->
+                                        <a href='http://iasifun.ziaruldeiasi.ro/'><div class='image' id='iasifun'>Iasi fun</div></a>
+                                        <a href='http://www.ziaruldeiasi.ro/'><div class='image' id='ziaruldeiasi'>Ziarul de Iasi</div></a>
+                                        <a href='http://www.kissfm.ro/timisoara'><div class='image' id='kissfm'>KissFm</div></a>
+
+                                        <div class='clear'></div> 
+                                    </div>
+                                    <div class='clear'></div>
+
+                                </div>	
+                            </div>	<!-- end wrap -->
+                            <div id='footer_mare'>
+                                <div id='footer'>
+                                    <div id='links' class='footer'>
+                                        <div id='menu1' style='margin:auto;'> <ul id='meniu_prinicpal'><li><a href='contacte/index.html'> Contact </a></li>
+<li><a href='clubdebate/index.html'> Cluburile </a></li>
+<li><a href='oamenii/index.html'> Oamenii </a></li>
+<li><a href='proiectul/index.html'> Proiectul </a></li>
+<li><a href='home/index.html'> Acasa </a></li>
+</ul></div><!--end menu-->
+                                    </div><!--
+                                    <div id='contact' class='footer'>
+                                            <h4>Contact</h4>
+                                            <p>office@closer2oxford.ro</p>
+                                            <p>bogdan.draghicescu@closer2oxford.ro<br>
+                                            <span class='detalii'> (asistenta tehnica web - orice probleme legate de site)</span></p>
+                                    </div>
+                                    -->
+                                    <div id='newsletter' class='footer'>
+                                        <script src="../../connect.facebook.net/en_US/all.js#xfbml=1"></script><fb:like href="http://www.facebook.com/pages/Closer2Oxford/162758797069605" width="250" colorscheme="dark"></fb:like>
+                                        <!--<h4>Newsletter</h4>
+                                        <form action='/page/newsletter'>
+                                                <input type='text' name='email'>
+                                                <input type='submit' id='submit' value='>'>
+                                                        
+                                        </form>-->
+                                    </div>
+                                    <div id='credits'>
+                                        Copyright(c) 2021 ARDOR |  Toate drepturile rezervate | Toate logo-urile si sloganurile de pe site sunt proprietate intelectuala inregistrata si nu pot fi reproduse fara acordul explicit al detinatorilor. <br>
+                                            <br /><br />
+                                            <b>Disclaimer</b><br /><i>
+
+                                                Programul educational Closer to Oxford este un program non-profit si nu are o legatura cu universitatea cu acelasi nume, referirea la Oxford avand doar o semnificatie simbolica.
+                                            </i>
+                                    </div>
+
+                                </div>		
+                            </div>		
+
+                            <div id="finantatde">Acest proiect este finantat cu sustinere din partea Comisiei Europene. Aceast publicatie [comunicare] reflecta doar
+                                vederile autorului, iar Comisia nu poate fi facuta  responsabila pentru utilizarea informatiei pe care o contine.</div>
+
+
+                        </body>
+                        </html>

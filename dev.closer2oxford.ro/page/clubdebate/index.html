@@ -1,0 +1,341 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml-strict.dtd">
+<HTML xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+    <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+            <link rel="icon" type="image/png"  href="../../../closer2oxford.ro/favicon.html">
+                <link rel="stylesheet" href="../var/layout.css" type="text/css">
+                    <title>Closer to Oxford - e timpul pentru argumente!</title>
+                    <link rel="alternate" type="application/rss+xml"  href="../rss_feed" title="Stiri Closer2Oxford">
+                        <!-- <link rel="image_src" property="og:image"  href="/images/layout/closer2oxford_fb_white.png" /> -->
+                        <link rel="image_src" property="og:image"   type="image/jpeg"  href="../../uploads/2015/06/9/facebook_icon.html" />
+                        <link rel="image_src" type="image/jpeg"  href="../../uploads/2015/06/9/icon-facebook.gif" /> 
+						<meta name="description" content="Closer2Oxford pune în valoare oameni şi argumentele lor, în dezbateri online şi publice alături de tineri şi invitați avizaţi"/>
+                        <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9" />
+<script type='text/javascript' src='../../js/jquery-1.4.4.min.js'></script>
+<script>var $j = jQuery.noConflict();</script>
+<script type='text/javascript' src='../../js/tinymce/tiny_mce.js'></script>
+<script type='text/javascript' src='../../js/jquery.form.js'></script>
+<script type='text/javascript' src='../../js/fbLoginRegister.js'></script>
+<script type='text/javascript' src='../var/javascript.js'></script>
+<script type='text/javascript' src='../../js/jquery.hovertip-1.0.min.js'></script> 
+<script type='text/javascript' src='../../js/jquery.jgrowl_minimized.js'></script> 
+<link rel='stylesheet' href='../../css/jquery.jgrowl.css' media='screen' type='text/css'> 
+<script type='text/javascript' src='../../js/jquery.timer-min.js'></script> 
+<meta name='description' content=''/> 
+<meta name='keywords' content=''/> 
+<style>.hovertip{
+    position:absolute;
+    padding:10px 13px;
+    z-index:2;
+    max-width:300px;
+    color:#303030;
+    background-color:#f5f5b5;
+    border:1px solid #DECA7E;
+    font-family:sans-serif;
+    font-size:12px;
+    line-height:18px;
+    text-align:left;
+    }</style> 
+<script type='text/javascript'>$j(document).ready(function(){$j('.tooltip').hovertip({'offset':[20,20]});get_notif();});
+
+if(!Array.indexOf){Array.prototype.indexOf = function(obj){for(var i=0; i<this.length; i++){if(this[i]==obj){return i;}}return -1;}}
+    hashuri = [] ;
+	 var tick_timer= 3000 ;
+ 
+	 function get_notif()
+        {
+		  
+		  //console.log(tick_timer);
+	     
+		  setTimeout(get_notif,tick_timer);
+        
+		   $j.ajax(
+            {
+                url: '/page/notif/show_events',
+                dataType: 'json',
+                data: "{}",
+                success: function(data)
+                    {
+                    $j.each(data,function(index,data){
+                        try
+                            {
+                            if( hashuri.indexOf(data.hash) == -1 )
+                                {
+                                hashuri.push(data.hash);
+                                $j.jGrowl(
+                                    data.str,
+                                    {
+                                        corners:'1px',
+                                        life: data.life,
+                                        header:data.title,
+                                        hash: data.hash,
+                                        sticky: data.sticky,
+                                        close: function(e,m,o)
+                                            {
+                                                $j.ajax({url:'/page/notif/delete_single_event/' + o.hash});
+                                            }
+                                    });
+                                }
+                            }
+                        catch(e){}
+                        })
+                    }
+            });
+        }
+	 </script> 
+ 
+                            
+  <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-19111721-1']);
+  _gaq.push(['_setDomainName', '.closer2oxford.ro']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+    
+                        </head>
+                        <body>
+                            <div id="global_wrap">
+                                <div id="header">
+                                    <a href='../../index.html'><div id='logo'><img src='../../images/layout/sigla.jpg'></div></a>
+                                    <a class='noExternal' href='http://www.facebook.com/pages/Closer2Oxford/162758797069605'><img src='../../images/fb.png' style='height:30px;float:right;clear:right;margin:10px 5px 5px 5px;border:none;'/></a>
+                                    <a href='../rss_feed'><img src='../../images/feed-icon.png' style='height:30px;float:right;clear:right;margin:5px;border:none;'/></a>
+                                </div>
+                                <div id="meniu">
+                                    <div  id='register_login'>
+
+                                        
+  <a href='#' class='todo' id='login'>Login </a> &nbsp;<a href='../register.html' class='todo' id='register'>Register</a>
+    <div id='login_box'>
+		  <form action='https://dev.closer2oxford.ro/page/ro/login_user/logon' method='post' id='user_login_form'>
+					 <div>Email: <input type='text' name='email'/> </div><br />
+					 <div>Pass: <input type='password' name='passwd'/></div><br />
+					 <a href='#' class='password_forgot'>forgot password?</a>
+					 <input type='hidden' value='/page/clubdebate/' name='returnto' class='submiter'/><br />
+					 <input type='submit' value='login' name='btn' class='submiter'/><br />
+		  </form>
+		  
+		  <form action='https://dev.closer2oxford.ro/page/ro/login_user/reset_user_pw' method='post' id='user_reset_form'>
+					 <div>Email: <input type='text' name='email'/> </div><br />
+					 <a href='#' class='password_forgot'>login?</a>
+					 <input type='hidden' value='/page/clubdebate/' name='returnto' class='submiter'/><br />
+					 <input type='submit' value='reset' name='btn' class='submiter'/><br />
+		  </form>
+		  
+    </div>
+    
+                                    </div>
+                                    <div id='menu1' style='margin:auto;'> <ul id='meniu_prinicpal'><li><a href='../contacte/index.html'> Contact </a></li>
+<li><a href='index.html'> Cluburile </a></li>
+<li><a href='../oamenii/index.html'> Oamenii </a></li>
+<li><a href='../proiectul/index.html'> Proiectul </a></li>
+<li><a href='../home/index.html'> Acasa </a></li>
+</ul></div><!--end menu-->
+                                </div>
+                                <div id="main"> 
+                                    <!--<div id='stiri-padding'>
+        <div id='stiri_back'>
+                {stiri} 
+    
+               
+        </div>-->
+        
+</div>
+<div  id="content-padding">
+        <div id='sidebar_menu'>
+                <span class='tr'></span>
+                <span class='tl'></span>
+                <span class='br'></span>
+                <span class='bl'></span>
+                <span id="filler"></span>
+                <ul class='submeniu'><a href='../clubdebate.html'><li>Club debate  </li></a><a href='../coach.html'><li>Coach  </li></a><a href='../tainer.html'><li>Trainer  </li></a><a href='../profesor.html'><li>Profesor  </li></a><a href='../arbitru.html'><li>Arbitru  </li></a></ul>    
+                <ul></ul>
+                
+                <div class='clear'></div>
+        </div>
+        <div id="content">
+                <span class='tr'></span>
+                <span class='tl'></span>
+                <span class='br'></span>
+                <span class='bl'></span>
+                <span id="filler"></span>
+                <p><strong>CLUBUL DE DEBATE</strong></p>
+<p><strong>&nbsp;</strong></p>
+<p><span>Oferta de cluburi de debate a ARDOR (Asociaţia Rom&acirc;nă de Dezbateri, Oratorie şi Retorică este disponibilă<span class="Apple-converted-space">&nbsp;</span></span><strong><a href="http://ardor.org.ro/main.php?content=lista_cluburi" target="_blank">aici</a></strong><span><strong>.</strong> </span></p>
+<p><span>Te invităm să contactezi asociatia nationala sau asociatiile regionale pentru a stabili modalitatea de participare intr-un club (de elevi sau studenti)<br /></span></p>
+<p>&nbsp;</p>
+<p>nota : Textul de mai jos este preluat din standardele IDEA (International Debate Educational Association, www.idebate.org), la care ARDOR este membra.</p>
+<p>&nbsp;</p>
+<p><strong>&nbsp;</strong><strong>I.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </strong><strong>Identitatea de grup</strong></p>
+<p>Cluburile de debate pot exista &icirc;n cadrul liceelor, facultăților, organizațiilor de tineret șamd. C&acirc;nd este găzduit de o instituție de &icirc;nvățăm&acirc;nt, clubul de debate devine, cel mai probabil, o activitate extra-curiculară. &Icirc;n cazul unui centru de tineret, dezbaterile pot funcționa &icirc;n cadrul programelor educaționale oferite de instituția respectivă.</p>
+<p>Cluburile de debate funcționează cel mai bine atunci c&acirc;nd există un puternic sentiment de identitate a grupului, c&acirc;nd membrii simt că sunt parte dintr-o comunitate. C&acirc;nd se creează această atmosferă, toți membrii grupului simt bucuria victoriilor, iar dezamăgirea eșecurilor, odată &icirc;mpărtășită, este mult diminuată. Această identitate a grupului nu este un obiectiv &ldquo;mistic&rdquo;, posibil a fi &icirc;mplinit doar printr-o alăturare potrivită, norocoasă a c&acirc;torva oameni care sunt &ldquo;pe aceeași lungime de undă&rdquo;. Mai degrabă este ceva ce se poate crea prin acțiuni concrete. Acești pași presupun administrarea spațiului, a timpului și organizarea structurii clubului.<em>&nbsp;</em></p>
+<p><em>Spațiul</em></p>
+<p>Este important pentru un club de debate să aibă o &ldquo;casă&rdquo;, o &icirc;ncăpere dedicată activităților de club. &Icirc;n acest spațiu ar trebui să existe dicționare, publicații din diferite domenii, cărți și articole, &icirc;n funcție de fondurile de care dispune clubul. Totodată, acest spațiul trebuie să găzduiască istoricul clubului- rezultate din turnee, suveniruri, anecdote, copii ale cazurilor de debate de la competiții, trofee și fotografii. &Icirc;n mod ideal, resursele ar trebui să fie direct accesibile debaterilor, fără intermedierea vreunui coach/profesor.</p>
+<p>&nbsp;</p>
+<p>Aceast spațiu trebuie să permită interacțiunea studenților/elevilor. Un sentiment de camaraderie poate fi insuflat prin experiența muncii &icirc;n echipă, dar și prin activități de socializare. Prieteniile nu pot fi fabricate printr-un decret, &icirc;nsă pot fi &icirc;ncurajate prin punerea la dispoziția membrilor a unui spațiu prietenos. C&acirc;nd se &icirc;ndreaptă spre clubul de debate, studenții trebuie să simtă că &icirc;i așteaptă un spațiu al discuțiilor și al activităților placute și utile, unde pot &icirc;mpărtăși cu alți debateri plăcerea de a dezbate.<em>&nbsp;</em></p>
+<p><em>&Icirc;nt&acirc;lnirile de club și sesiunile de lucru</em></p>
+<p>Este esențial ca membrii clubului să se &icirc;nt&acirc;lnească &icirc;n mod regulat. O variantă ar fi să se impună o &icirc;nt&acirc;lnire săptăm&acirc;nală. Chiar dacă unii dintre membri nu sunt implicați &icirc;n vreo competiție din viitorul apropiat (sau chiar dacă nu există nici o competiție &icirc;n viitorul apropiat), ei se pot &icirc;nt&acirc;lni cu membrii echipei pentru a discuta chestiunile care sunt de interes pentru echipa lor sau pentru a se pune la curent cu activitatea clubului. &Icirc;n mod evident, majoritatea &icirc;nt&acirc;lnirilor de club trebuie dedicate exersării dezbaterilor. Dezbaterile amicale de la club pot avea loc pe o moțiune care se va dezbate &icirc;ntr-o competiție viitoare sau pe o tema controversată &icirc;n societate la acel moment, sau care le suscită debaterilor interesul. Timpul dedicat exersării și rundelor de debate de la club este cel &icirc;n care debaterii &ldquo;cresc&rdquo; cel mai mult. Există o mulțime de lucruri care se &icirc;nvață (numai) la&nbsp;competiții, &icirc;nsă practica periodică este cea care asigură o creștere &ldquo;organică&rdquo;, o &icirc;mbogățire a cunoștințelor și o șlefuire a abilităților de discurs public.<em>&nbsp;</em></p>
+<p><em>Organizarea și leadershipul clubului</em></p>
+<p>La &icirc;nceput, un club depinde mult de leadership-ul și de experiența celor care sunt coach sau profesori. O dată &icirc;nsă ce activitatea clubului se stabilizează, o bună parte din activitatea de leadership poate fi preluată de studenții &icirc;nșiși. Orice club este compus din debateri mai noi și alții &ldquo;cu vechime&rdquo;. Cei mai experimentați pot fi &icirc;ndrumătorii noilor veniți, experiența lor competițională și nu numai le permite să fie un fel de &ldquo;profesori empatici&rdquo; pentru cei nou veniți, mai ales că nu cu mulți ani &icirc;n urmă ei erau &icirc;n aceeași poziție, și deci știu care sunt temerile, preocupările și atitudinea unui proaspăt debater. &Icirc;n termeni practici, statutul acesta de &ldquo;&icirc;ndrumător&rdquo; presupune arbitrarea meciurilor de la club, &icirc;nsoțirea noilor debateri la competiții și feedback-ul constructiv referitor la performanța acestora etc. &Icirc;n timpul de pregătire (<em>prep time</em>) dinaintea meciurilor amicale, debaterii mai experimentați &icirc;i pot sprijini pe cei noi &icirc;n construirea cazului de debate. Beneficiile sunt de ambele părți: cei novici au multe de &icirc;nvățat de la cei experimentați și sunt ambiționați de rezultatele lor, iar cei cu vechime sunt m&acirc;ndri de rezultatele echipei pe care o &icirc;ndrumă, &icirc;mpărtășind cu aceasta bucuria succesului.</p>
+<p>&Icirc;n mare, echipa unui club are responsabilitățile enumerate mai sus. Este posibil ca &icirc;n unele cluburi să existe roluri bine definite pentru membri. &Icirc;n alte cuvinte, studenții membri pot fi aleși &icirc;n funcții precum: președinte, secretar, responsabil cu bugetul, sau cu recrutarea șamd. Studenții care adoptă poziții administrative sunt foarte importanți &icirc;n bunul mers al clubului și trebuie prețuiți ca atare. Organizarea turneelor, pregătirea &icirc;nregistrărilor debaterilor, administrarea tab-ului unei competiții, decontarea biletelor de călătorie etc sunt toate chestiuni importante ce țin de &ldquo;bucătăria internă&rdquo; a unui club.<em>&nbsp;</em></p>
+<p><em>Recrutare și retenție/fidelizare</em></p>
+<p>Prima sarcină de &icirc;ndeplinit &icirc;n momentul recrutării de noi membri de club este informarea acestora &ndash; mulți dintre studenți și profesori nu cunosc practica dezbaterilor, sau au o părere eronată despre debate ca fiind o activitate ce presupune multă vorbărie/demagogie goală sau agresivitate. Cei mai mulți nu știu că este vorba de o metodă de educație non formală ce promovează documentarea, fair play-ul și curiozitatea intelectuală. Una dintre&nbsp; cele mai bune metode de informare a publicului larg este de a organiza o dezbatere demonstrativă.&nbsp;</p>
+<p>Mulți studenți vor fi atrași datorită dimensiunii competitive a dezbaterilor academice, și aceștia trebuie să fie asigurați&nbsp; că accesul la competiții nu este garantat doar &ldquo;veteranilor&rdquo;. Dar este important ca studenții să &icirc;nțeleagă beneficiile intelectuale și nu numai ale implicării &icirc;n activitatea de club. Este de datoria leaderilor clubului de a organiza evenimente și activități care să mențină viu interesul studenților pentru dezbateri. Mai mult, dacă studenții exersează rar sau participă &icirc;n foarte puține competiții, ei &icirc;și vor pierde &icirc;n scurt timp interesul. Echipele care exersează insuficient vor c&acirc;știga arareori runde/competiții de debate.</p>
+<p>&Icirc;n același timp, activitatea din cadrul clubului nu trebuie sa fie exclusiv orientată spre dezbateri. Există roluri potrivite pentru oricare membru, chiar dacă acesta din urmă nu este dintre cei mai&nbsp;buni debateri. Sunt tineri cărora le face plăcere să se ocupe de activitățile organizatorice și/sau administrative, sau care sunt foarte talentați &icirc;n atragerea de noi membri.</p>
+<p>Mai departe, importante pentru coeziunea grupului sunt și activitățile care nu sunt tangențiale cu debate-ul. Meciuri de ping-pong, șah, discuții prelungite &icirc;n cafenele sunt doar c&acirc;teva dintre activitățile de socializare care și-au dovedit eficiența. Mai presus de toate, studenții clubului trebuie să &icirc;nțeleagă&nbsp; că singurele condiții pentru a fi membru le reprezintă dedicarea și voința de a se implica activ. Succesul &icirc;n competiții nu are cum să fie garantat pentru fiecare membru din club. Debaterii trebuie să știe că inclusiv c&acirc;nd nu aduc trofee, ei au un loc &icirc;n club și apartenența lor la grup este apreciată.</p>
+<p>&nbsp;</p>
+<ol>
+<li><strong>II.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </strong><strong>Clubul de debate &icirc;n comunitatea studențească și nu numai</strong></li>
+</ol>
+<p>&Icirc;n mod evident, beneficiile dezbaterilor sunt &icirc;mpărtășite &icirc;n primul r&acirc;nd de cei care le practică. Și totuși, sunt multe de spus despre felul &icirc;n care publicul se schimbă, chiar dacă doar nuanțat și chiar dacă doar uneori. Concret, spectatorii unei runde bune de dezbateri &icirc;nțeleg maniere diferite de a privi o chestiune de interes public. &Icirc;n aceste condiții, devine foarte important ca activitatea de la club să fie popularizată. Spectatorii, fie că sunt din cadrul facultății sau din afara acesteia, pot fi invitați să participe la diferite evenimente/ competiții de debate. Moțiunile trebuie anunțate din timp &icirc;n cadrul comunității, pentru ca cei interesați de temă să &icirc;și poată face timp pentru a participa la această competiție de idei. Și, bine&icirc;nțeles, clubul de debate trebuie să-și facă publice rezultatele. O echipă de debate cu rezultate notabile merită aprecierea comunității academice. De cele mai multe ori, revistele studențești, site-ul sau forum-ul facultății stau la dispoziția clubului pentru astfel de anunțuri. Sau, de ce nu, clubul &icirc;și poate edita propriul newsletter.</p>
+<p>&nbsp;</p>
+<p><strong>Clubul de debate ar trebui să fie guvernat de următoarele principii:</strong></p>
+<p><em>A: un club trebuie să permită membrilor săi să se &icirc;nt&acirc;lnească periodic</em></p>
+<p>Activitățile de debate și public speaking sunt activități educaționale care necesită pregătire, lucru &icirc;n echipă și efort consistent. Prin urmare, membrii clubului trebuie &icirc;ncurajați să se &icirc;nt&acirc;lnească periodic (săptăm&acirc;nal sau la două săptăm&acirc;ni), și nu să se limiteze la c&acirc;teva &icirc;nt&acirc;lniri ad hoc, &icirc;naintea unor competiții. Scopul acestor &icirc;nt&acirc;lniri poate varia, de la pregătire &icirc;n echipă (traininguri, documentare, brainstorming), la runde de dezbateri &ldquo;amicale&rdquo;, la socializare. Spațiu dedicat activităților de club&nbsp; trebuie să permită elevilor/studenților să discute ne&icirc;ntrerupți, să se pregătească pentru diferite evenimente de dezbateri, să se documentsze, sa ia notițe și să dezbată.</p>
+<p><br /> <em>B. Un club ar trebui să promoveze participarea, implicarea activă și dezvoltarea fiecăruia dintre membri:</em></p>
+<p>Un club de debate trebuie să se concentreze asupra tuturor membrilor, &icirc;n funcție de experiența acestora &icirc;n diferite activități. Rolurile trebuie &icirc;mpărțite &icirc;ntre membri, astfel &icirc;nc&acirc;t să fie promovată munca &icirc;n echipă și &icirc;nvățarea continuă de la colegii de club. Debaterii mai experimentați sunt &icirc;ncurajați să-i sprijine pe cei &icirc;ncepători, ei pot prelua funcția de coach al unei echipe de &icirc;ncepători.</p>
+<p>Totodată, este foarte important ca orice club de debate să facă eforturi constante pentru a-și ține membrii aproape.</p>
+<p>&nbsp;</p>
+<p><em>C. Clubul de debate trebuie să ofere membrilor oportunități de participare la diferite evenimente</em></p>
+<p>Activitățile unui club nu ar trebui să se limiteze la sesiunile de pregătire și la dezbaterile &ldquo;amicale&rdquo;, ci ar trebui să ofere șansa membrilor de a participa la activități &icirc;n afara clubului. Acestea ar putea consta &icirc;n activități organizate &icirc;n colaborare cu alte cluburi de debate, turnee de dezbateri (locale, regionale, naționale, internaționale), evenimente publice, forumuri. Cluburile au obligația de a lua inițiativa &icirc;n a promova organizarea de evenimente (de exemplu, prin invitarea altor cluburi la dezbaterile proprii, prin colaborarea &icirc;n organizarea unor turnee locale etc).</p>
+<p><em>&nbsp;</em></p>
+<p><em>D. Orice club trebuie să se asigure că resursele educaționale sunt la dispoziția tuturor membrilor, nu doar a c&acirc;torva &ldquo;</em><em>v&acirc;rfuri</em><em>&rdquo;</em></p>
+<p>ARDOR pleacă de la premisa că discursul public și dezbaterile sunt metode de educație non formală cruciale pentru stabilizara și dezvoltarea unei democrații. Prin urmare, toți tinerii, ca viitori participanți &icirc;n viața politică/publică, trebuie să aibă acces la resursele de care dispune clubul. Pornind de la acest spirit democratic, cluburile de debate trebuie să facă tot posibilul ca activitățile, resursele educaționale, informațiile să fie accesibile tuturor celor interesați, indiferent de background-ul acestora. Nu &icirc;n ultimul r&acirc;nd, succesul &icirc;n activitatea competițională nu trebuie să fie o condiție pentru participarea membrilor la activitățile de club.</p>
+                <div class='clear'></div>
+        </div><!-- end main content -->
+         <div class='clear'></div>
+</div>
+<div id="pix"></div>
+
+
+                                </div><!--end main -->
+                                <div id='parteneri'>
+                                    <span class='tr'></span><span class='tl'></span><span class='br'></span><span class='bl'></span><span id="filler"></span>
+                                    <div class='parteneri' id='sustinatori'>
+                                        <span class='floating_text' id='un_proiect'>Un proiect</span>
+                                        <a href='http://www.ardor.org.ro/'><div class='image' id='ardor'>Ardor</div></a>
+                                        <span class='floating_text' id='finantatori'>Finanțatori</span>
+                                        <a href='http://www.opensocietyfoundations.org/'><div class='image' id='open_society'>Open Society Foundation </div></a>
+                                        <a href='http://www.studentiq.ro//'><div class='image' id='memoplus'>MemoPlus</div></a>
+                                        <!-- <a href='http://www.ratiufamilyfoundation.com/'><div class='image' id='FundatiaRatiu'>Ardor</div></a>
+                                        <a href='http://www.eef.md/'><div class='image' id='eef'>East Europe Foundation</div></a>
+                                        <a href='http://www.mts.gov.md/'><div class='image' id='mdminister'>Ministerul Tineretului si Sportului al Republicii Moldova</div></a> -->
+
+                                        <span class='floating_text' id='parteneri_text'>Parteneri</span>
+
+                                        <a href='http://www.policycenter.eu/'><div class='image' id='PolicyCenter'>Policy Center</div></a>
+                                        <a href='http://www.britishcouncil.org/'><div class='image' id='BritishCouncil'>British Council</div></a>
+                                        <a href='http://www.europuls.ro/'><div class='image' id='europuls'>Europuls</div></a>
+                                        <a href='http://www.cere.ro/'><div class='image' id='cere'>Ce-Re</div></a>
+                                        <a href='http://www.primeromania.ro/'><div class='image' id='prime'>Prime Romania</div></a>
+                                        <a href='http://www.cji.ro/'><div class='image' id='cji'>Centrul pentru jurnalism independent</div></a>
+                                        <a href='http://www.aiesectm.ro/'><div class='image' id='aisec'>Aisec</div></a>
+                                        <!-- ===================================================================================================== -->
+                                        <a href='http://www.cogitus.ro/'><div class='image' id='cogitus'>Cogitus</div></a>
+                                        <a href='http://www.adevarul.ro/international/foreign_policy/'><div class='image' id='foreignPolicy'>Foreign Policy</div></a>
+                                        <a href='http://www.elsa.ro/'><div class='image' id='elsa'>Elsa</div></a>
+                                        <a href='http://www.vipromania.ro/'><div class='image' id='vipromania'>Voluntari pentru idei si proiecte</div></a>
+                                        <a href='http://www.ongtrust.ro/'><div class='image' id='ongtrust'>Trust</div></a>
+
+                                        <!-- ===================================================================================================== -->
+                                        <a href='http://www.leap.ro/'><div class='image' id='leap'>Leap</div></a>
+                                        <a href='http://www.younginitiative.org/'><div class='image' id='younginitiative'>Asociatia young initiative</div></a>
+                                        <a href='http://www.asjc.ro/'><div class='image' id='asjc'>Asjc</div></a>
+                                        <a href='http://osut.ro/'><div class='image' id='osut'>Osut</div></a>
+                                        <div class='clear'></div>
+                                    </div>
+                                    <div class='parteneri' id='parteneri_institutionali'>
+                                        <span class='floating_text' id='sponsori_text'>Sus&#539;in&#x0103;tori</span>
+                                        <a href='http://www.cartier.md/'><div class='image' id='cartier_logo'>Editura Cartier</div></a>
+                                        <a href='http://www.pll.md/ro/'><div class='image' id='biblio_logo'>Biblioteca publica de drept</div></a>
+                                        <span class='floating_text' id='institutii_text'>Parteneri institu&#539;ionali</span> 
+                                        <ul id='institutii'>
+                                            <!-- <span class='floating_text' id='institutii_text'>Parteneri institu&#539;ionali:</span> -->
+                                            <li><a href='http://www.politice.ro/'>Facultatea de &#536;tiin&#539;e Politice SNSPA </a></li>
+                                            <li><a href='http://www.comunicare.ro/'>Facultatea de Comunicare &#537;i Rela&#539;ii Publice SNSPA</a></li>
+                                            <li><a href='http://www.fspub.ro/'>Facultatea de &#536;tiin&#539;e Politice Universitatea Bucure&#537;ti</a></li>
+                                            <li><a href='http://www.filosofie.unibuc.ro/'>Facultatea de Filosofie Universitatea Bucure&#537;ti</a></li>
+                                            <li><a href='http://litere.unibuc.ro/'>Facultatea de Litere din Universitatea Bucure&#x015f;ti</a></li>
+                                            <li><a href='http://www.unibuc.ro/ro/fac_fsas_ro'>Facultatea de Sociologie Universitatea Bucure&#537;ti</a></li>
+                                            <li><a href='http://laws.uaic.ro/'>Facultatea de Drept Universitatea Alexandru Ioan Cuza Ia&#537;i</a></li>
+                                            <li><a href='http://www.uaic.ro/uaic/bin/view/Academic/Filosofie'>Facultatea de Filosofie si &#536;tiin&#539;e Social Politice Universitatea AIC Ia&#537;i</a></li>
+                                            <li><a href='http://www.upa.ro/'>Facultatea de Drept si Facultatea de &#x015e;tiin&#x0163;e Politice si Administrative Universitatea Petre Andrei Ia&#x015f;i</a></li> 
+
+                                            <li><a href='http://www.ubbcluj.ro/'>Universitatea Babe&#537;-Bolyai Cluj Napoca</a></li>
+                                            <li><a href='http://www.uvt.ro/'>Universitatea de Vest Timi&#537;oara</a></li>
+                                            <li><a href='http://www.upt.ro/'>Universitatea Politehnica Timi&#537;oara</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class='parteneri' id='parteneri_media'>
+                                        <span class='floating_text' id='media_text'>Parteneri media</span>
+                                        <a href='http://www.hotnews.ro/'><div class='image' id='hotnews'>HotNews</div></a>
+                                        <!-- <a href='http://www.lumebuna.ro/'><div class='image' id='lumebuna'>Lume Buna</div></a> -->
+                                        <a href='http://www.romaniapozitiva.ro/'><div class='image' id='romaniapozitiva'>Romania Pozitiva</div></a>
+                                        <a href='http://totb.ro/'><div class='image' id='thinkoutsidethebox'>Think Outside The Box</div></a>
+                                        <a href='http://www.facebook.com/carevasazica.vip'><div class='image' id='carevasazica'>Carevasazica</div></a>
+                                        <a href='http://www.studentie.ro/'><div class='image' id='studentiero'>Studentie.ro</div></a>
+                                        <a href='http://startub.unibuc.ro/'><div class='image' id='startub'>startub.unibuc.ro</div></a>
+                                        <!-- <a href='http://www.tvr.ro/tvr_cluj.php'><div class='image' id='tvrcluj'>Tvr Cluj</div></a> -->
+                                        <!-- <a href='http://www.radiotransilvania.ro'><div class='image' id='radiotransilvania'>Radio Transilvania</div></a> -->
+                                        <a href='http://iasifun.ziaruldeiasi.ro/'><div class='image' id='iasifun'>Iasi fun</div></a>
+                                        <a href='http://www.ziaruldeiasi.ro/'><div class='image' id='ziaruldeiasi'>Ziarul de Iasi</div></a>
+                                        <a href='http://www.kissfm.ro/timisoara'><div class='image' id='kissfm'>KissFm</div></a>
+
+                                        <div class='clear'></div> 
+                                    </div>
+                                    <div class='clear'></div>
+
+                                </div>	
+                            </div>	<!-- end wrap -->
+                            <div id='footer_mare'>
+                                <div id='footer'>
+                                    <div id='links' class='footer'>
+                                        <div id='menu1' style='margin:auto;'> <ul id='meniu_prinicpal'><li><a href='../contacte/index.html'> Contact </a></li>
+<li><a href='index.html'> Cluburile </a></li>
+<li><a href='../oamenii/index.html'> Oamenii </a></li>
+<li><a href='../proiectul/index.html'> Proiectul </a></li>
+<li><a href='../home/index.html'> Acasa </a></li>
+</ul></div><!--end menu-->
+                                    </div><!--
+                                    <div id='contact' class='footer'>
+                                            <h4>Contact</h4>
+                                            <p>office@closer2oxford.ro</p>
+                                            <p>bogdan.draghicescu@closer2oxford.ro<br>
+                                            <span class='detalii'> (asistenta tehnica web - orice probleme legate de site)</span></p>
+                                    </div>
+                                    -->
+                                    <div id='newsletter' class='footer'>
+                                        <script src="../../../connect.facebook.net/en_US/all.js#xfbml=1"></script><fb:like href="http://www.facebook.com/pages/Closer2Oxford/162758797069605" width="250" colorscheme="dark"></fb:like>
+                                        <!--<h4>Newsletter</h4>
+                                        <form action='/page/newsletter'>
+                                                <input type='text' name='email'>
+                                                <input type='submit' id='submit' value='>'>
+                                                        
+                                        </form>-->
+                                    </div>
+                                    <div id='credits'>
+                                        Copyright(c) 2021 ARDOR |  Toate drepturile rezervate | Toate logo-urile si sloganurile de pe site sunt proprietate intelectuala inregistrata si nu pot fi reproduse fara acordul explicit al detinatorilor. <br>
+                                            <br /><br />
+                                            <b>Disclaimer</b><br /><i>
+
+                                                Programul educational Closer to Oxford este un program non-profit si nu are o legatura cu universitatea cu acelasi nume, referirea la Oxford avand doar o semnificatie simbolica.
+                                            </i>
+                                    </div>
+
+                                </div>		
+                            </div>		
+
+                            <div id="finantatde">Acest proiect este finantat cu sustinere din partea Comisiei Europene. Aceast publicatie [comunicare] reflecta doar
+                                vederile autorului, iar Comisia nu poate fi facuta  responsabila pentru utilizarea informatiei pe care o contine.</div>
+
+
+                        </body>
+                        </html>

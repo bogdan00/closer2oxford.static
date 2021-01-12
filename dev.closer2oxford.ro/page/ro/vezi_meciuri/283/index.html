@@ -1,0 +1,553 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml-strict.dtd">
+<HTML xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+    <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+            <link rel="icon" type="image/png"  href="../../../../../closer2oxford.ro/favicon.html">
+                <link rel="stylesheet" href="../../../var/layout.css" type="text/css">
+                    <title>Closer to Oxford - e timpul pentru argumente!</title>
+                    <link rel="alternate" type="application/rss+xml"  href="../../../rss_feed" title="Stiri Closer2Oxford">
+                        <!-- <link rel="image_src" property="og:image"  href="/images/layout/closer2oxford_fb_white.png" /> -->
+                        <link rel="image_src" property="og:image"   type="image/jpeg"  href="../../../../uploads/2015/06/9/facebook_icon.html" />
+                        <link rel="image_src" type="image/jpeg"  href="../../../../uploads/2015/06/9/icon-facebook.gif" /> 
+						<meta name="description" content="Closer2Oxford pune în valoare oameni şi argumentele lor, în dezbateri online şi publice alături de tineri şi invitați avizaţi"/>
+                        <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9" />
+<script type='text/javascript' src='../../../../js/jquery-1.4.4.min.js'></script>
+<script>var $j = jQuery.noConflict();</script>
+<script type='text/javascript' src='../../../../js/tinymce/tiny_mce.js'></script>
+<script type='text/javascript' src='../../../../js/jquery.form.js'></script>
+<script type='text/javascript' src='../../../../js/fbLoginRegister.js'></script>
+<script type='text/javascript' src='../../../var/javascript.js'></script>
+<script type='text/javascript' src='../../../../js/jquery.hovertip-1.0.min.js'></script> 
+<script type='text/javascript' src='../../../../js/jquery.jgrowl_minimized.js'></script> 
+<link rel='stylesheet' href='../../../../css/jquery.jgrowl.css' media='screen' type='text/css'> 
+<script type='text/javascript' src='../../../../js/jquery.timer-min.js'></script> 
+<style>.hovertip{
+    position:absolute;
+    padding:10px 13px;
+    z-index:2;
+    max-width:300px;
+    color:#303030;
+    background-color:#f5f5b5;
+    border:1px solid #DECA7E;
+    font-family:sans-serif;
+    font-size:12px;
+    line-height:18px;
+    text-align:left;
+    }
+           .normal_text ol,.normal_text ol *{text-align:left !important}
+           .normal_text *{font-weight:normal !important;font-size:12px !important;font-face:tahoma !important}</style> 
+<script type='text/javascript'>$j(document).ready(function(){$j('.tooltip').hovertip({'offset':[20,20]});get_notif();});
+
+if(!Array.indexOf){Array.prototype.indexOf = function(obj){for(var i=0; i<this.length; i++){if(this[i]==obj){return i;}}return -1;}}
+    hashuri = [] ;
+	 var tick_timer= 3000 ;
+ 
+	 function get_notif()
+        {
+		  
+		  //console.log(tick_timer);
+	     
+		  setTimeout(get_notif,tick_timer);
+        
+		   $j.ajax(
+            {
+                url: '/page/notif/show_events',
+                dataType: 'json',
+                data: "{}",
+                success: function(data)
+                    {
+                    $j.each(data,function(index,data){
+                        try
+                            {
+                            if( hashuri.indexOf(data.hash) == -1 )
+                                {
+                                hashuri.push(data.hash);
+                                $j.jGrowl(
+                                    data.str,
+                                    {
+                                        corners:'1px',
+                                        life: data.life,
+                                        header:data.title,
+                                        hash: data.hash,
+                                        sticky: data.sticky,
+                                        close: function(e,m,o)
+                                            {
+                                                $j.ajax({url:'/page/notif/delete_single_event/' + o.hash});
+                                            }
+                                    });
+                                }
+                            }
+                        catch(e){}
+                        })
+                    }
+            });
+        }
+	 </script> 
+ 
+                            
+  <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-19111721-1']);
+  _gaq.push(['_setDomainName', '.closer2oxford.ro']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+    
+                        </head>
+                        <body>
+                            <div id="global_wrap">
+                                <div id="header">
+                                    <a href='../../../../index.html'><div id='logo'><img src='../../../../images/layout/sigla.jpg'></div></a>
+                                    <a class='noExternal' href='http://www.facebook.com/pages/Closer2Oxford/162758797069605'><img src='../../../../images/fb.png' style='height:30px;float:right;clear:right;margin:10px 5px 5px 5px;border:none;'/></a>
+                                    <a href='../../../rss_feed'><img src='../../../../images/feed-icon.png' style='height:30px;float:right;clear:right;margin:5px;border:none;'/></a>
+                                </div>
+                                <div id="meniu">
+                                    <div  id='register_login'>
+
+                                        
+  <a href='#' class='todo' id='login'>Login </a> &nbsp;<a href='../../../register.html' class='todo' id='register'>Register</a>
+    <div id='login_box'>
+		  <form action='https://dev.closer2oxford.ro/page/ro/login_user/logon' method='post' id='user_login_form'>
+					 <div>Email: <input type='text' name='email'/> </div><br />
+					 <div>Pass: <input type='password' name='passwd'/></div><br />
+					 <a href='#' class='password_forgot'>forgot password?</a>
+					 <input type='hidden' value='/page/ro/vezi_meciuri/283/' name='returnto' class='submiter'/><br />
+					 <input type='submit' value='login' name='btn' class='submiter'/><br />
+		  </form>
+		  
+		  <form action='https://dev.closer2oxford.ro/page/ro/login_user/reset_user_pw' method='post' id='user_reset_form'>
+					 <div>Email: <input type='text' name='email'/> </div><br />
+					 <a href='#' class='password_forgot'>login?</a>
+					 <input type='hidden' value='/page/ro/vezi_meciuri/283/' name='returnto' class='submiter'/><br />
+					 <input type='submit' value='reset' name='btn' class='submiter'/><br />
+		  </form>
+		  
+    </div>
+    
+                                    </div>
+                                    <div id='menu1' style='margin:auto;'> <ul id='meniu_prinicpal'><li><a href='../../../contacte/index.html'> Contact </a></li>
+<li><a href='../../../clubdebate/index.html'> Cluburile </a></li>
+<li><a href='../../../oamenii/index.html'> Oamenii </a></li>
+<li><a href='../../../proiectul/index.html'> Proiectul </a></li>
+<li><a href='../../../home/index.html'> Acasa </a></li>
+</ul></div><!--end menu-->
+                                </div>
+                                <div id="main"> 
+                                    <!--<div id='stiri-padding'>
+        <div id='stiri_back'>
+                {stiri} 
+    
+               
+        </div>-->
+        
+</div>
+<div  id="content-padding">
+        <div id='sidebar_menu'>
+                <span class='tr'></span>
+                <span class='tl'></span>
+                <span class='br'></span>
+                <span class='bl'></span>
+                <span id="filler"></span>
+                    
+                <ul></ul>
+                
+                <div class='clear'></div>
+        </div>
+        <div id="content">
+                <span class='tr'></span>
+                <span class='tl'></span>
+                <span class='br'></span>
+                <span class='bl'></span>
+                <span id="filler"></span>
+                  <script>
+        $j(document).ready(function(){
+        $j('.discurs_toggler').toggle(
+                function(){
+                $j(this).attr('src', '../../../../images/little_stuff/16-em-down.png');   
+                $j(this).parent().next('.discurs').hide('fast');
+                },
+                function(){
+                $j(this).attr('src', '../../../../images/little_stuff/16-em-up.png');
+                $j(this).parent().next('.discurs').show('fast');
+                });
+            });
+        </script><style>.nowrap{white-space: nowrap;}
+		.noJustify{text-align:left;}
+		</style><h2 class='noJustify'><span class='nowrap'>'S & S'</span> <span class='notif'>(afirmatori)</span> vs <span class='nowrap'>'Rationalizers'</span> <span class='notif'>(negatori)</span></h2><h3>A1 (Stefania Heler) <img src='../../../../images/little_stuff/16-em-up.png' class='discurs_toggler'></h3>
+            <div class='discurs normal_text'><p> Buna seara,</p>
+<p>Motiunea acestei runde se intituleaza&ldquo;<strong>E timpul ca amenzile sa fie proportionale cu veniturile</strong>&rdquo;.</p>
+<p><strong>Termenii cheie</strong> ai motiunii sunt :</p>
+<ul type="disc">
+<li style="mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; line-height: normal; mso-list: l0 level1 lfo1; tab-stops: list .5in;"><strong><em>Amenda</em></strong>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </li>
+</ul>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Sanctiune penala,administrativa,civila ce consta in plata unei sume de bani,aplicata in urma incalcarii unei norme legale(definitie conform dictionarului juridic)</p>
+<ul type="disc">
+<li style="mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; line-height: normal; mso-list: l1 level1 lfo2; tab-stops: list .5in;"><strong><em>Venitur</em></strong>i:</li>
+</ul>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -reprezinta o suma de bani care revine unei persoane sau firme dintr-o activitate prestata sau din proprietatea detinuta,intr-o perioada de timp </p>
+
+<p>Asadar echipa afirmatoare sustine ca amenzile ar trebui sa aiba valori individualizate,in functie de venitul celui sanctionat,cu cat venitul acestuia e mai mare cu atat amenda va avea un cost mai ridicat. Practic in calcularea sumei de plata in cazul unei amenzi ,se vor lua in calcul2constituente majore,gravitatea faptei savarsite si venitul pesoanei amendate.</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Mentionam ca prin amenzi echipa afirmatoare nu intelege numai amenzi rutiere,ci si administrative,civile etc. si ca ne vom referi la adoptarea acestei masuri in Romania .</p>
+<p><strong>SQ</strong>:<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Momentan in Romania sistemul nu prevede individualizarea financiara a amenzilor.Ele sunt stabilite in functie de gravitatea faptelor,al pericolului social pe care il reprezinta.Amenzile rutiere ele depind si de numarul de puncte amenda,un punct amenda fiind10%din valoarea salariului min.brut/economie.</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; In perioada 01- 02.05.2013 totalul contraventiilor aplicate a fost de 21.051,din care:<br /> &nbsp;Legea61/1991-3.273, O.U.G.195/2002 Rep., din care: 15.560, alcool &ndash; 333,viteza - 6.710.&nbsp;</p>
+<p>Pentru a putea avea o imagine mai clara asupra acestui meci, va propunem sa utilizam un <strong>criteriu</strong> pentru a judeca daca este sau nu justificata implementarea unei astfel de masuri.</p>
+<p>Asadar, criteriul propus de echipa afirmatoare este <strong><em>sensibilitatea</em></strong>,astfel vom putea vedea daca implementarea acestei motiuni aduce beneficii sau nu.</p>
+<p><strong>Argumentul 1:Implementarea acestei masuri ar impiedica&nbsp; unii cetateni sa&rdquo;isi permita&ldquo;sa comita infractiuni</strong></p>
+<p>In momentul de fata in Romania amenzile rutiere au valori cuprinse intre 70 si 700RON,valori care pentru un conducator auto al carui venit lunar este de peste 10000 RON, aceasta suma este una neglijabila.Practic nerespectare culorii rosii a semaforului se penalizeaza cu maxim 175 RON, infractiune ce pune in pericol viata altor participanti la trafic.Totusi 175 RON e suma pe care o pot lasa la un restaurant decent 3persoane la un pranz&hellip;</p>
+<p>Un alt exemplu este cel al amenzilor pentru parcare , a caror valoare este de 70lei-achitare pana in primele 15 zile calendaristice de la data comunicarii actului de constatare a abaterii (inclusiv ziua abaterii),150lei din a saisprezecea zi de la data comunicarii si 40lei &icirc;n cazul achitarii &icirc;n primele 48h de la abatere pentru parcarile din Timisoara.&nbsp;</p>
+<p>Pentru perturbarea linistii publice legea nr.61/1991 republicata in 2011 ,alin.24&rdquo;&nbsp;provocarea ori participarea efectivă la scandal, &icirc;n locuri sau localuri publice&rdquo; prevede amenzi cuprinse intre 200- 1000RON.</p>
+<p>Exemplele de mai sus sunt mai mult decat sugestive pentru faptul ca <strong><em>unii cetateni nu resimt caracterul punitive al amenzilor, sumele prevazute de acestea fiind neglijabile, ceea ce duce la facilitarea nerespectarii legii.</em></strong></p>
+<p><strong>Argumentul 2:Aceasta metoda de amendare realizeaza o egalare a efectului amenzilor asupra cetatenilor.</strong></p>
+<p>Practic,o amenda de120RON e resimtita intr-un fel de un cetateanA cu un venit lunar de 1200(valoare aproximativa a salariului mediu in Romania)si intr-un alt fel de un cetateanB ce castiga12000 RON.In cazulA valoarea amenzii reprezinta10% din salar, in timp ce in cel de-al doilea reprezinta1%.CetateanulB ar fi mult prea putin afectat financiar de aceasta amenda.</p>
+<p>Insa aplicarea amenzilor individualizate in functie de venit,ar reusi sa elimine aceste diferente si cetatenii sa suporte in mod egal financiar vorbind,consecintele neregulilor comise.</p>
+<p><strong>Argumentul 3:Amendarea proportionala cu veniturile faciliteaza colectarea amenzilor</strong></p>
+<p>&nbsp;Unii cetateni cu venituri reduse,nu isi permit sa achite amenzile, astfel adunand penalitati, deci sume mai mari, pe care nu le vor putea suporta.O adaptare a amenzilor la venituri va permite si celor saraci sa isi achite contraventiile,fiind proportionale situatiei lor financiare. Astfel va creste contributia la bugetul de stat,se vor evita demersurile costistoare pentru stat pentru recuperarea lor.</p>
+<p>Marele <strong>avantaj </strong>al acestei masuri este ca ar putea <strong>aduce mai multi bani la bugetul de stat</strong>,ce ar putea fi reinvestiti <strong>si in acelasi timp,ar constrange cetatenii sa respecte legea.</strong></p>
+<p>Din punct de vedere al sensibilitatii metodei, echipa afirmatoare a demonstrat ca implementarea amenzilor proportionale cu veniturile ar determina o mai buna respectare a legii prin sporirea caracterului punitiv al acestora ,acolo unde este cazul si ar avea un efect de egalizare a suportabilitatii costurilor unei amenzi de catre cetatean,imbunatatind si colectarea darilor.</p>
+<p>Va multumim!<br style="mso-special-character: line-break;" /> <br style="mso-special-character: line-break;" /> </p>
+<p>Referinte:</p>
+<p>http://www.clr.ro/rep_htm/L61_1991_Rep3.htm</p>
+<p>http://www.legislatia-rutiera.ro/raspunderea-contraventionala.oug/valoare+amenda/</p>
+<p>http://www.tion.ro/vedeti-cum-va-functiona-noul-timpark-cum-se-va-plati-parcarea-si-ce-taxe-de-penalizare-vor-fi/1250572</p>
+<p>http://legislatie.autoraid.ro/amenzi_circulatie.html</p>
+<p>http://www.politisti.ro/topic/7302-situa%C5%A3ia-sanc%C5%A3iunilor-contraven%C5%A3ionale-aplicate/</p>
+<p>Resurse puse la dispozitie de C2O</p>
+<table class="MsoNormalTable" style="width: 100.0%; mso-cellspacing: 0in; mso-yfti-tbllook: 1184; mso-padding-alt: 0in 0in 0in 0in;" border="0" cellspacing="0" cellpadding="0" width="100%">
+<tbody>
+<tr style="mso-yfti-irow: 0; mso-yfti-firstrow: yes; mso-yfti-lastrow: yes;">
+<td style="width: 20.0%; padding: 0in 0in 0in 0in;" width="20%" valign="top">&nbsp;</td>
+<td style="width: 80.0%; padding: 0in 0in 0in 0in;" width="80%">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+
+
+<table class="MsoNormalTable" style="width: 100.0%; mso-cellspacing: 0in; mso-yfti-tbllook: 1184; mso-padding-alt: 0in 0in 0in 0in;" border="0" cellspacing="0" cellpadding="0" width="100%">
+<tbody>
+<tr style="mso-yfti-irow: 0; mso-yfti-firstrow: yes; mso-yfti-lastrow: yes;">
+<td style="width: 20.0%; padding: 0in 0in 0in 0in;" width="20%" valign="top">
+<p style="margin-bottom: .0001pt; line-height: normal;">&nbsp;</p>
+</td>
+<td style="width: 80.0%; padding: 0in 0in 0in 0in;" width="80%">
+<p style="margin-bottom: .0001pt; line-height: normal;">&nbsp;</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+
+
+<p><span style="font-size: 12.0pt; line-height: 115%;">&nbsp; </p></div><hr><h3>N1 (Felicia Crețu) <img src='../../../../images/little_stuff/16-em-up.png' class='discurs_toggler'></h3>
+            <div class='discurs normal_text'>
+<p>Salutam echipa afirmatoare si ii multumim pentru primul discurs.</p>
+<p>Acceptam definirea termenilor cheie.</p>
+<p>Considerand primul argument, echipa afirmatoare ne-a oferit multe exemple din care reiese ca amenzilor le corespund sume &ldquo;neglijabile&rdquo;, de aceea unii cetateni &ldquo;isi permit&rdquo; sa incalce legea.</p>
+<p>Echipa negatoare tine sa puncteze ca efectul nu este neaparat cel evidentiat de afirmatori. Faptul ca valoarea unei amenzi este mica, nu implica faptul ca legea nu va fi respectata de catre cetateni. Totodata, echipa afirmatoare generalizeaza, aratand ca bogatasii sunt cei care isi permit incalcari, insa nivelul de cultura si educatie este factorul ce ar duce la respectarea legii sau nu, si nu valoarea amenzii in comparatie cu venitul individului vizat.</p>
+<p>Mai mult decat atat, factorii ce determina pe cineva sa comita o incalcare sunt mai presus de valorea unei amenzi. Conform unui sondaj realizat de www.onepoll.com, fiecare britanic incalca legea in fiecare zi, o treime din ei nu sunt deranjati de acest fapt, iar 58%considerand incalcarile minore<strong>[2]</strong>.Alt exemplu concludent este cel al Finlandei, tara cu cel mai progresit sistem amendare in fuctie de venit, unde, desi valoarea amenzii medii a fost dublata pana la 219$, numarul amenzilor pentru viteza excesiva a ramas constant, de asemenea, neinreginstrandu-se nicio scadere in numarul accidentelor de circulatie<strong>[3]</strong>. Acest exemplu ne arata ca indiferent de valoare amenzii, mare sau mica, dependenta de venit sau nu, cetatenii continua sa incalce legea. Prin urmare, cuantificarea amenzilor in functie de venit nu va motiva cetatenii si nici acea categorie care &ldquo;isi permite&rdquo; sa respecte mai&nbsp; mult legea, daca nu o faceau pana acum.</p>
+<p>Cel de-al doilea argument al echipei afirmatoare ne pune in fata unei egalizari a impactului pedepsei. Aici echipa negatoare adreseaza o intrebare: de ce ar trebui cetatenii cu venituri mai mari sa fie &ldquo;afectati financiar&rdquo; si &ldquo;sa suporte in mod egal financiar consecintele neregulilor comise&rdquo;? In plus, chiar daca amenda ar fi proportionala cu venitul, nu se va obtine o egalitate a impactului, intrucat acesta nu este direct dependent de venit. Trebuie luati in considerare si alti factori. Spre exemplu, o persoana ce intretine o familie, are un venit de care poate dispune mai mic, fata de alta care nu trebuie sa intretina o familie. Astfel, impactul asupra celei dintai este mai mare.</p>
+<p>O alta inegalitate intervine atunci cand amenda se calculeaza in fuctie de venit, si nu de avere, care reprezinta totalitatea bunurilor si a banilor in posesia cuiva<strong>[4]</strong>. Spre exemplu, tinerii, pot avea un venit mare, dar nicio proprietate, si vice versa, valoarea proprietatilor unei familii sa depaseasca cu mult venitul net mic. Prin urmare, stabiliarea amenzii proportional cu veniturile nu face decat sa introduca noi inegalitati, si nu sa egalizeze impactul.</p>
+<p>Cel de-al treilea argument&nbsp; sustine o facilitare a colectarii amenzilor, pentru ca vor fi mai usor de achitat de catre cetatenii cu venituri reduse. Echipa negatoare mentioneaza ca , intrucat nu a fost prezentata nicio o modalitate de calcul a amenzii, nu se poate stabili daca aceasta va fi mai mica decat era anterior.&nbsp; In ceea ce priveste amenzile de circulatie, un exemplu este cel al proiectului de lege al senatorului Iulian Urban, care nu prevede schimbari pentru persoanele cu venit anual mai mic de 50.000 lei, valoarea unui punct amenda ramanand acceasi ca pana acum (10% din salariul minim brut pe economie)<strong>[5]</strong>.</p>
+<p>In continuare, vom prezenta argumentele echipei noastre.</p>
+<p><em>O amenda trebuie sa fie proportionala cu gravitatea incalcarii, si nu cu venitul contravenientului</em>.&nbsp; Daca 2 persoane au savarsit acceasi incalcare, in aceleasi conditii, cu acelasi efect, si pretul platit pentru incalcare trebuie sa fie acelasi. Daca valoarea amenzii este mai mare, atunci se presupune ca si dauna adusa societatii este mai mare. Mai mult decat atat, se pot ajunge la situatii in care amenda platita de o persoana cu venit mai mare pentru o incalcare mai putin grava sa fie mai mare, fata de amenda platita de o persoana cu venituri substantial mai mici, dar savarsind o incalcare cu gravitate mult mai mare. Prin urmare, amenda in functie de venit nu este o modalitate echitabila de calcul a unei amenzi, care ar trebui sa depinda numai de gravitatea faptei.</p>
+<p><em>Statul trebuie sa asigure sanse si oportunitati egale, </em>nu sa defavorizeze o persoana cu venit mai mare, facand ca amenzile sa para mai mult o taxa a bogatilor, nu o metoda de responsabilizare a societatii si asigurare a linistei publice.</p>
+<p>&nbsp;<strong>Referinte: -</strong>&nbsp;</p>
+<p>[1]-<a href="http://www.sfgate.com/news/article/Speeding-fines-being-linked-to-income-in-Europe-3275939.php">http://www.sfgate.com/news/article/Speeding-fines-being-linked-to-income-in-Europe-3275939.php</a></p>
+<p>[2]-<a href="http://www.telegraph.co.uk/news/uknews/law-and-order/3044794/How-we-all-break-the-law-every-day.html">http://www.telegraph.co.uk/news/uknews/law-and-order/3044794/How-we-all-break-the-law-every-day.html</a></p>
+<p>[3]-<a href="http://www.stayfreemagazine.org/public/wsj_finland.html">http://www.stayfreemagazine.org/public/wsj_finland.html</a></p>
+
+<p>[4]-<a href="http://www.nytimes.com/2012/11/19/opinion/to-reduce-inequality-tax-wealth-not-income.html?pagewanted=1&amp;_r=3">http://www.nytimes.com/2012/11/19/opinion/to-reduce-inequality-tax-wealth-not-income.html?pagewanted=1&amp;_r=3</a></p>
+<p>[5]-<a href="http://www.urbaniulian.ro/2010/04/06/cazier-auto-pentru-soferi-aplicarea-de-amenzi-progresive-functie-de-repetabilitatea-si-gravitatea-incalcarii-codului-rutier-si-amenzi-functie-de-veniturile-contravenientului/">http://www.urbaniulian.ro/2010/04/06/cazier-auto-pentru-soferi-aplicarea-de-amenzi-progresive-functie-de-repetabilitatea-si-gravitatea-incalcarii-codului-rutier-si-amenzi-functie-de-veniturile-contravenientului/</a></p>
+
+
+</div><hr><h3>A2 (Sebastian Avram) <img src='../../../../images/little_stuff/16-em-up.png' class='discurs_toggler'></h3>
+            <div class='discurs normal_text'><p>Buna seara,</p>
+<p>Revenim cu discursul celui de-al doilea discurs afirmator.</p>
+<p>Avand in vedere faptul ca nu am avut un contra-atac negator al criteriului,consideram ca vom judeca in continuare efectele acestei masuri prin prisma&ldquo;sensibilitatii masurii&rdquo;.</p>
+<p>Primul atac negator vizeaza argumentul 1,conform caruia o impozitare proportional cu venitul ar aduce o sporire a efectului punitiv al amenzii.Dorim sa vorbim putin despre rolurile amenzilor: amenda are pe de o parte un rol punitiv si unul preventiv,asadar aplicarea de amenzi antreneaza2obiective:pedepsirea si descurajarea.Echipa afirmatoare v-a prezentat in discursul precedent cum aceste doua obiective nu sunt indeplinite pe deplin datorita valorilor scazute ale ale amenzilor.</p>
+<p>Aplicarea sistemului de amendare diferentiata in functie de venit ar aduce un plus de sensibilitate sistemului de&ldquo;pedepsire&rdquo;a cetatenilor,actionand indeosebi pe partea de descurajare,pentru ca o suma mare de plata este mult mai descurajanta pentru un cetatean mai instarit decat actualele amenzi cu valori derizorii.Asadar,din punct de vedere al sensibiltatii metodei, aplicarea amendarii diferentiate proportional cu veniturile aduce un plus.</p>
+<p>Un alt atac la nivelul argumentului 1 este reprezentat de factorul care duce la respectarea/nerespectarea legii.Conform negatorilor acesta ar fi reprezentat de nivelul de educatie si cultura ,care in vizunea lor este direct proportional cu gradul de respectare a legii.</p>
+<p>Nu negam ca exista o corelatie intre educatia civica ,implicarea sociala si respectarea legii, dar intre nivelul de cultura si educatie si respectarea legii nu exista un raport de directa proportionalitate.Chiar in cazul negator observam exemple de state cu o cultura si civilizatie superioare tarii in noastre in care negatorii identifica incalcari numeroase ale legii,exemple ce nu sunt concordante cu restrangerea facuta si acceptata de si de negatori,la Romania</p>
+<p>Un prim exemplu ce ne vine acum in minte este cel al Printului Charles al Marii Britanii care in 2012a fost acuzat ca nu isi plateste taxele pentru ducatul Cornwell,caz care evident nu poate fi pus pe seama nivelului scazut de educatie sau cultura.</p>
+<p>La baza respectarii legii sta pe langa conoasterea acesteia,teama de consecintele nerespectarii ei si masurile punitive.</p>
+<p>Suntem acuzati de generalizare cu privire la&rdquo;bogatasii&rdquo;care isi permit incalcari, insa o analiza ceva mai atenta, in ansamblu,a cazului afirmator va releva faptul ca discutam despre ambele extreme ale scarii sociale.Mai mult decat atat,cei saraci nu prea pot sa isi&ldquo;permita&rdquo;incalcarile din punct de vedere financiar,uneori valorile standard actuale ale amenzilor putand fi chiar prea mari pentru veniturile lor,ceea ce ne duce la cel de-al doilea argument afirmator,necesitatea egalizarii efectului financiar al amenzii.</p>
+<p>Atacurile la argumentul doi sunt formulate sub forma a doua intrebari&nbsp; la care am dori sa raspundem in cele ce urmeaza:&ldquo;de ce ar trebui cetatenii cu venituri mai mari sa fie afectati financiar si sa suporte in mod egal financiar consecintele neregulilor comise?&rdquo;ar trebui sa fie afectati financiar tocmai pentru a se respecta scopurile amendarii,cel punitiv si cel preventiv.Adaparea sumei de plata proportionala cu veniturile sporeste atat efectul punitiv cat si cel preventiv.</p>
+<p>Un cetatean care are un venit de10 000RON lunar suma de700RON&nbsp; nu are acelasi impact ca asupra unui cetatean ce castiga 1400 RON,salariu mediu pe economie in Romania.Pentru unul suma este usor &ldquo;suportabila,in timp ce pentru cel de-al doilea ar putea pune probleme de supravietuire in luna respectiva,reprezentand jumatate din salar.</p>
+<p>Acesta este motivul pentru care consideram ca e necesara egalizarea impactului amenzii asupra cetateanului din punct de vedere financiar,pentru ca veniturile reduse sa reuseasca sa acopere costurile amenzii fara a pune probleme&ldquo;de supravietuire&rdquo;,iar veniturile crescute sa&ldquo;simta&rdquo;totusi efectul acesteia.</p>
+<p>Referitor la efectul amenzii asupra familiei,aici echipa negatoare ne arata inca un beneficiu al metodei propuse de noi,cel al responsabilizarii cetateanului.Cetateanul cu familie probabil se va gandi de doua ori inainte sa comita o ilegalitate,stiind ca din venitul sau o suma mai mare va putea retrasa in urma amenzii,devenind asadar mai responsabil.</p>
+<p>Dorim de asemenea sa readucem in atentia dumneavoastra&nbsp; definitia veniturilor,acceptata de negatori,conform careia veniturile reprezinta:&rdquo;o suma de bani care revine unei persoane sau firme dintr-o activitate prestata sau din proprietatea detinuta,intr-o perioada de timp &ldquo;,astfel consideram ca este inutila discutia referitoare la posesorii de proprieteti ce nu ai&ldquo;venituri&rdquo;- conform negatorilor.</p>
+<p>Referitor la cel de-al treilea argument si contra-atacul lui modalitatea de calculare a amenzii va fi cea de pana acum, mentionata in starea de fapt,de asemenea acceptata de negatori, careia i se &nbsp;va adauga calcularea proportional cu venitul.Acest argument insa se refera la&nbsp; faptul ca o data ce avem un sistem de amendare adaptat la puterea de plata a cetateanului,pe de o parte vom avea mai multi bani colectati din amenzi,iar cei ce nu isi permiteau plata lor pana acum,nu vor mai avea acest impediment.</p>
+<p>Cazul negator consideram ca poate fi contraargumentat in bloc de cazul afirmator in sine,intrucat reprezinta opusul ideilor afirmatoare enuntate in primul discurs.</p>
+<p>De asemenea dorim sa mentionam ca nu gasim o corelatie intre resursele prezentate de negatori si modul in care ele au fost intrepretate pe parcursul primului discurs.</p>
+<p>Va multumim!</p>
+
+
+</div><hr><h3>N2 (Veronica Coroi) <img src='../../../../images/little_stuff/16-em-up.png' class='discurs_toggler'></h3>
+            <div class='discurs normal_text'><p>Salutare.</p>
+<p>&Icirc;n calitatea mea de negator voi reitera poziția echipei mele, prezent&icirc;nd ariile de conflict și motivele pentru care amenzile nu trebuie să fie proporționale cu veniturile.</p>
+<p>&Icirc;n primul r&icirc;nd, am vrea să ne aratăm nedumerirea față de decizia de a nu contra argumenta argumentele echipei noastre, dar și de a ne neglija exemplele relevante, care ne prezintă scenarii probabile care ar avea loc odată cu adoptarea unei astfel de măsuri. &Icirc;n condițiile &icirc;n care &icirc;n Rom&acirc;nia există doar inițiativă unei astfel de legi, nu putem opera cu exemple din țară, &icirc;nsă exemplul străin trebuie să-l folosim pentru a &icirc;nțelege dacă e necesară o astfel de inițiativă sau nu și dacă este aplicabilă.</p>
+<p>&Icirc;n cazul primului argument, echipa afirmatoare ne-a oferit exemple de sume ale amenzii, fără a explica cum anume acestea nu se fac resemțite sau a aduce dovezi &icirc;n acest sens, precum a și explica cum afectează &icirc;n mod punitiv și preventiv. &Icirc;n acest caz, echipa noastră răm&icirc;ne pe poziția că valoarea unei amenzi nu afectează gradul de responsabilizare a cetățenilor, precum am menționat există factorul educativ, precum și mesajele și campaniile sociale, care nu ar face o distincție at&icirc;t de mare &icirc;ntre clase sociale, dar ar stimula &icirc;nțelegerea importanței respectării legii pentru liniștea și ordinea publică. Ideea unei societăți ordonate și conștiente emult mai r&icirc;vnită de cetățenii rom&acirc;ni, dec&icirc;t o amendă mai mică sau mare. Din păcate, nivelul corupției &icirc;n țară la nivel &icirc;nalt e un fapt existent și permite posibilitatea evitării acestor amenzi, &icirc;n r&icirc;ndul acelei categorii de cetățeni care, conform afirmatorilor, nu pot fi puși la punct. Și tocmai această categorie e cea la care referă exemplele N1, din Marea Britanie și Finlanda, cetățeni care obișnuiesc să &icirc;ncalce legea și pentru care, de fapt, a și fost implementată amendarea proporțională veniturilor, dar nu și-au schimbat atitudinea. Deci, observăm că nu amendarea proporțională e soluția problemei actuale, e nevoie de o metodă ce nu implică factorul material, ci social. Pentru restul persoanelor, &icirc;n afară de această categorie, sistemul actual de amendare e suficient, iar responsabilitatea acestora nu se schimbă după suma amenzii.Exemplul Prințului Charles,adus de afirmatori, de alfel, e unul care nu poate fi pus nici pe seama valorii amenzii, fiind mai mult vorba de o schimbare de lege[1].</p>
+<p>&Icirc;n cazul argumentului 2 nu poate fi vorba de o egalare, c&icirc;nd, din contra, inițiativa pare să discrimineze persoanele cu venituri mari, care, de alfel, de cele mai multe ori e rodul unei munci asidue. Ceea ce ține de amenzile acordate clasei sociale de jos, după cum am menționat, propunerea senatorului Urban nu prevede schimbări. Acest argument e unul relativ și dependent de metoda de calculare a amenzilorm care diferă &icirc;n fiecare stat. Egalarea necesară e cea de șanse, pentru ca să se creeze o societate omogenă, astfel și veniturile ar fi aproximativ aceleași, astfel s-ar evita situațiile exmplificate de afimatori, precum &ndash; supraviețuirea și simțirea acută a efectului.</p>
+<p>Argumentul colectării poate fi &icirc;nțeles la fel ca cel de micșorarea a numărului accidentelor, &icirc;n ambele cazuri &icirc;ncălcările sau neplătirea nu ține de bani, ci factorii sus numiți. Ideea negatorilor că sistemul lor ar permite săracilor să plătească, dar și statului să colecteze suficiente resurse e foarte generalistă, utopică și imposibil de probat. Salutăm propunerea, &icirc;nsă nu putem trece peste aspectul socialist, dar și denaturarea scopului primar al amenzii, nu de suplinirea veniturilor statului, ci prevenirea situațiilor de pericol, perturbării liniștei publice.</p>
+<p>Astfel, considerăm că amendarea proporțională veniturilor nu e soluția pentru problema enunțată &icirc;n status quo, dar nici nu &icirc;ndreptățește criteriul de sensibilizare. &Icirc;n loc de concetrarea energiei, ideilor și banilor asupra acestei propuneri, considerăm relevantă studierea problemei de la rădăcină, adică din societatea, pentru a veni cu o metodă eficientă, nediscrimatorie, care ar veni ca un suport pentru rolul amendării &icirc;n societate.</p>
+<p>&nbsp;&nbsp;<strong>Referinte: -</strong></p>
+<p>&nbsp;1 - <a href="http://www.dailybusiness.ro/stiri-finante-banci/printul-charles-cu-taxe-neplatite-la-un-venit-de-18-mil-lire-sterline-84167/">http://www.dailybusiness.ro/stiri-finante-banci/printul-charles-cu-taxe-neplatite-la-un-venit-de-18-mil-lire-sterline-84167/</a></p>
+<p>sursele oferite de c2o</p>
+</div><hr><hr><h2>Decizii:</h2> <script>
+        $j(document).ready(function(){
+			$j('.decizie_toggler').toggle( 
+				function(){
+					$j(this).attr('src', '../../../../images/little_stuff/16-em-down.png');   
+					$j(this).parent().next('.decizie').hide('fast'); 
+                },
+                function(){
+					$j(this).attr('src', '../../../../images/little_stuff/16-em-up.png');
+					$j(this).parent().next('.decizie').show('fast'); 
+                } 
+			);
+		});</script><div class='decizie'><h3>Mihai Pomarlan
+                <img src='../../../../images/little_stuff/16-em-up.png' class='decizie_toggler'></h3><div class='normal_text'><p>Admitand 'sensibilitatea' ca si criteriu- un criteriu cam vag de altfel - ramane o problema. Ce scop au amenzile pana la urma? Ideea masurii amenzilor proportionale cu veniturile nu e sa creasca suferinta celor mai instariti asa pur si simplu. Ambele echipe sunt de acord ca amenzile au un rol de pedeapsa pentru si descurajare a unor actiuni antisociale. Deci e interesant de vazut daca aceasta masura e eficace, deci e interesant de privit in jur, prin alte tari unde se aplica, si a se vedea ce se intampla acolo. Si o data ce am studiat niste cazuri de aplicare a unor asemenea masuri, de interpretat in mod favorabil pentru echipa proprie.</p>
+
+<p>Negatorii fac asta. Cred ca analiza lor putea fi mai adanca; ok, se iau de doua ori, in medie, mai multi bani prin amenzi si cu toate acestea acelasi numar de amenzi se emit in Finlanda. Dar poate ca Finlandezii deja conduc mai prudent decat alte natii? Poate ca legislatia a devenit mai aspra si au sporit si incidentele amendabile? In fine, analiza Negatoare exista si Afirmatorii nu incearca sa-i gaseasca hibe. Se rezuma la a spune, nu-i aplicabila pe restrangerea Romania. Ceea ce nu-i suficient. O dezbatere nu trebuie sa fie absurda, iar a elimina experienta altora din discutie e absurd.</p>
+
+<p>Ni se spune in repetate randuri in cazul Afirmator ca o amenda mai mare va afecta mai mult un buzunar mai bogat decat una fixa care sa poate fi platita, in principiu, si de un cetatean mai sarac. Ok, aritmetica e evidenta, dar care-i scopul pe care-l urmarim? Vrem ca oamenii sa nu incalce legea. Cu toate acestea, o incalca la fel si daca avem amenzi proportionale.</p>
+
+<p>Fiindca nu avem motive sa o implementam, devine cruciala alta intrebare- de ce sa nu implementam masura propusa de motiune. Ce dezavantaje aduce, ce nedreptati apar. Asadar devine important cazul negator. O fi el aruncat la capat de discurs, dar trebuie atacat. A ne rezuma la a spune ca este atacabil in bloc prin sustinerea cazului Afirmator nu e suficient. Ideea intr-o dezbatere e sa argumentam. Ideea nu e sa lasam publicului teme pentru acasa.</p>
+
+<p>Decizia mea este<strong>&nbsp;pentru Negatori.</strong></p>
+
+<p>O ultima precizare. Dezbaterea s-a jucat si am interpretat-o din punct de vedere practic. Iata aritmetica amenzilor, iata efectele unei asemenea politici, merita sau nu. Dezbaterea se voia insa una de principiu. Indivizii X si Y comit fiecare aceeasi paguba societatii. Aceasta impune o pedeapsa pentru fiecare. Ce inseamna in acest context "echitabil" or "egal"? Din ce punct de vedere sa privim?</p>
+
+<p>Din punct de vedere al sistemului social, "egal" inseamna "egal" in termeni absoluti. Daca orasul Timisoara, prin intermediul politiei, face rost de doua sume de bani de la doi vitezomani, nu conteaza starea lor de bogatie. Daca o amenda aduce mai mult la cufarul local, e mai mare. Orasul a castigat mai mult. Punct.</p>
+
+<p>Din punct de vedere individual, "egal" se poate interpreta in termeni relativi. 100RON nu inseamna mult cand sunt alti 10000 in portofel. Deci pentru ca impactul unei amenzi asupra unor indivizi sa fie similar, trebuie calculata amenda proportional cu ce-si pot acestia permite.</p>
+
+<p>Intrebarea este atunci daca societatea are dreptul ca, pentru aceeasi paguba comisa, sa impuna retributii care din punctul sau de vedere sunt diferite; deci sa 'castige' de pe urma unei amenzi mai mult decat de pe urma celeilalte. Formulat astfel, tinde spre Negatori, asa ca am sa dau si alta formulare a problemei, care sa tinda spre Afirmatori. Intrebarea este daca pentru aceeasi paguba societatea are dreptul sa impuna consecinte care din punctul de vedere individual au acelasi impact.</p>
+
+<p>O problema similara sunt impozitele. De ce nu platim toti sume matematic egale, indiferent de venit? Pe langa motive pragmatice (impozitul fix ar fi sau de neplatit pentru unii, sau ineficient in a construi un buget), exista si ideea ca veniturile mari sunt posibile datorita unei folosiri mai mari a resurselor sociale. Deci implica datorii mai mari fata de societate.</p>
+
+<p>Se pot gasi idei similare si pentru motiunea de azi? Aceea ar fi fost dezbaterea urmarita.</p>
+
+
+<p>A1:</p>
+
+<p>O punere in scena buna a motiunii, prin definitii clare. Dar criteriul nu e bine explicat. Sensibilitatea oamenilor? Sensibilitatea motiunii? La ce? Si o data prezentat, criteriul trebuie legat de fiecare argument ca sa vedem de ce argumentul, cu ajutorul criteriului, sprijina motiunea. Legatura dintre argumentul 3 si sensibilitate, de exemplu, nu e deloc evidenta.</p>
+
+<p>Argumentele 1 si 2 sunt de fapt acelasi argument.</p>
+
+<p>Argumentul 3 nu e bine explicat. Nu ar fi stricat precizarea ca amenzile vor fi ajustate si in jos pentru a fi mai usor de platit (Negatorii sesizeaza problema).</p>
+
+<p>Continut: 12</p>
+<p>Strategie: 8</p>
+<p>Stil: 3</p>
+<p>Total: 23</p>
+
+
+<p>N1:</p>
+
+<p>Criteriul Afirmator ar trebui atacat. E neclar, nu e legat bine de argumente- chestiunile acestea trebuie precizate. Si nu strica a incerca impunerea unui criteriu propriu. De obicei asta aduce un avantaj.</p>
+
+<p>Cazul propriu ar fi trebuit explicat mai bine. Se emite ca simpla afirmatie "Daca 2 persoane au savarsit acceasi incalcare, in aceleasi conditii, cu acelasi efect, si pretul platit pentru incalcare trebuie sa fie acelasi". Ori, tocmai asta se discuta. V. analiza de mai sus, de dupa decizie.</p>
+
+<p>Continut: 13</p>
+<p>Strategie: 8</p>
+<p>Stil: 3</p>
+<p>Total: 24</p>
+
+
+<p>A2:</p>
+
+<p>Cazul Negator trebuie respins explicit.</p>
+
+<p>Exemplele din alte tari sunt relevante si trebuie explicate favorabil pozitiei proprii, nu ignorate pe motiv ca depasesc restrangerea. Negatorii nu incearca sa demonstreze ca nu avem nevoie de amenzi proportionale in Finlanda. Ei incearca sa arate ca, pe baza experientei Finlandeze, nu avem nevoie de amenzi proportionale in Romania.&nbsp;"dorim sa mentionam ca nu gasim o corelatie intre resursele prezentate de negatori si modul in care ele au fost intrepretate pe parcursul primului discurs": ce vrea sa insemne asta? Unui cititor neutru ii este clar cum isi folosesc Negatorii referintele.</p>
+
+<p>Continut: 10</p>
+<p>Strategie: 7</p>
+<p>Stil: 3</p>
+<p>Total: 20</p>
+
+<p>N2:</p>
+
+<p>Eventual acum ar fi fost o ocazie de a mai explica argumentele din cazul propriu (desi ultimul discurs e cam tarziu). Oricum, discursul isi indeplineste rolul de a inchide meciul in favoarea echipei proprii.</p>
+
+<p>Continut: 13</p>
+<p>Strategie: 9</p>
+<p>Stil: 3</p>
+<p>Total: 25</p>
+</div>A1 -> 23 puncte<br>N1 -> 24 puncte<br>A2 -> 20 puncte<br>N2 -> 25 puncte<br>Castiga echipa: <h3 style='display:inline;color:red;'>Rationalizers (negatori)</h3></div><hr><div class='decizie'><h3>Bianca Dragomir
+                <img src='../../../../images/little_stuff/16-em-up.png' class='decizie_toggler'></h3><div class='normal_text'><p>
+<div><span style="font-family: arial, helvetica, sans-serif;">A fost un meci bun, cu idei cu potențial. Apreciez documentarea, &icirc;n speță la echipa negatoare, stilul curat &icirc;n exprimare al ambelor echipe, c&acirc;t și fairplay-ul de care au dat dovadă. Felicitări și vă &icirc;ncurajez să continuați!</div>
+<div><span style="font-family: arial, helvetica, sans-serif;">A1</div>
+<div><span style="font-family: arial, helvetica, sans-serif;">- &icirc;ncearcă să fii c&acirc;t mai clar și relevant &icirc;n exprimare - criteriul propus de tine este "sensibilitatea" - dar a cui? Spui ca astfel vom vedea dacă moțiunea aduce beneficii, dar cititorul discursului nu &icirc;nțelege la ce te referi</div>
+<div><span style="font-family: arial, helvetica, sans-serif;">- spațiul e o resursă limitată &icirc;n dezbaterea online - așa că nu oferi informații care nu te ajută să argumentezi - de ce era necesară această informație (incompletă, de altfel?): " In perioada 01- 02.05.2013 totalul contraventiilor aplicate a fost de 21.051,din care: 15.560, alcool &ndash; 333,viteza - 6.710."&nbsp;</div>
+<div><span style="font-family: arial, helvetica, sans-serif;">- nu e clar unde ai folosit referințele, &icirc;n sprijinul căror idei - folosește note de subsol</div>
+<div><span style="font-family: arial, helvetica, sans-serif;">- e foarte bine că dai titlu argumentelor - ajută cititorul să parcugă mai ușor conținutul</div>
+<div><span style="font-family: arial, helvetica, sans-serif;">- E nevoie de mai multă analiză pentru ca argumentele să capete greutate: de ex, arg 1 - amenzile sunt relativ mici, deci oamenii nu le resimt ca pe niște pedepse, deci comit infracțiuni. De unde știi că pentru oamenii care comit infracțiuni sumele sunt neglijabile? De unde știm care e pragul lor psihologic și financiar &icirc;n funcție de care se simt afectați sau nu de o pedeapsă? Oamenii comit ilegalități *datorită faptului* că nu sunt sensibili la o pedeapsă anterioară? Oare nu comit ilegalități pentru că au alte motivații personale, indiferent de pedeapsa care &icirc;&icirc; așteaptă (și pe care ei poate au convingerea că o pot evita dacă sunt atenți)?</div>
+<div><span style="font-family: arial, helvetica, sans-serif;">De asemenea, spui că măsura ar &icirc;nlesni colectarea amenzilor - plec&acirc;nd de la premisa că motivul pentru care oamenii nu plătesc amenzile e că nu și le permit. Aici sunt multe de discutat - dacă nu le plătesc din neglijență (uita)? Sau pentru că nu vor, ca un gest &icirc;mpotriva statului care &icirc;&icirc; pedepsește financiar? Mai apoi, de unde știm că o dată proporționale cu veniturile amenzile nu vor deveni și mai usturătoare pentru o anumită categorie de oameni și, conform raționamentului tău (nedemonstrat), ăși vor permite și mai puțin să le plătească?</div>
+<div><span style="font-family: arial, helvetica, sans-serif;">A1:Implementarea acestei masuri ar impiedica &nbsp;unii cetateni sa&rdquo;isi permita&ldquo;sa comita infractiuni</div>
+<div><span style="font-family: arial, helvetica, sans-serif;">A2:Aceasta metoda de amendare realizeaza o egalare a efectului amenzilor asupra cetatenilor.</div>
+<div><span style="font-family: arial, helvetica, sans-serif;">A3:Amendarea proportionala cu veniturile faciliteaza colectarea amenzilor</div>
+<div><span style="font-family: arial, helvetica, sans-serif;"><br /></div>
+<div><span style="font-family: arial, helvetica, sans-serif;">N1:</div>
+<div><span style="font-family: arial, helvetica, sans-serif;">- ai un discurs curat, bine structurat și de aceea e ușor de urmărit</div>
+<div><span style="font-family: arial, helvetica, sans-serif;">- ataci eficient argumentul unu, suger&acirc;nd că motivația/ demersuș psihologic al celor care &icirc;ncalcă legea e puțin corelat cu ideea de amendă și/sau cu valoarea ei. Apreciez că te folosește de exemple concrete ale unor țări pentru a face argumentul tangibil (a fugit &icirc;nsă referința 1? unde e ea folosită &icirc;n discurs?)</div>
+<div><span style="font-family: arial, helvetica, sans-serif;">- arați mai multe fețe ale inegalității (arg 2 afirmator), dincolo de indicatorul simplu (de observat) al veniturilor și sugerezi că măsura poate da naștere la noi disproporții (apreciez că ai parcurs textul despre taxarea progresivă din the NYT, chiar dacă temele nu se suprapun &icirc;n totalitate, e o bună resursă și pentru acest meci)</div>
+<div><span style="font-family: arial, helvetica, sans-serif;">-referitor la argumentul 3 sesizezi bine că nu e clar dacă amenzile scad pntru cei despre care se presupune că au dificultăți &icirc;n a le plăti. Puteai &icirc;ntări contraargumentul subliniind că un sistem de colectare al amenzilor deficitar e și el vinovat de gaura din buget cauzată de neplata amenzilor - dacă statul ar fi mai priceput &icirc;n a colecta amenzi s-ar diminua problema.</div>
+<div><span style="font-family: arial, helvetica, sans-serif;">-argumentul negator referitor la legătura dintre răul provocat &icirc;n societate și greutatea amenzii are potențial, dar nu e pus &icirc;n balanță cu ideea de echitate propusă de afirmatori, conform căreia ca să devii conștient că ai produs un rău &icirc;n societate, pedeapsa trebuie să te afecteze,și dacă ești &icirc;nstărit s-ar putea să nu conștientizezi, tocmai pentru că pedeapsa e neglijabilă pentru tine</div>
+<div><span style="font-family: arial, helvetica, sans-serif;"><br /></div>
+<div><span style="font-family: arial, helvetica, sans-serif;">A2</div>
+<div><span style="font-family: arial, helvetica, sans-serif;">- explici bine de ce la nivel teoretic dimensiunea punitivă și de factor de descurajare este corelată cu asprimea pedepsei - &icirc;nsă nu ai dovezi care să susțină această observație (care e de bun simț, dar uneori societatea funcționează contraintuitiv, de aceea trebuie testat empiric ceea ce, &icirc;n teorie, pare să aibă sens. De exemplu, se pare că foarte mulți oameni continuă să fumeze chiar dacă țigările se scumpesc foarte mult...)</div>
+<div><span style="font-family: arial, helvetica, sans-serif;">- faptul că faci o concesie negatorilor nu e un lucru rău prin definiție (e un semn de maturitate să spui "da, puteți avea dreptate &icirc;ntr-un anumit punct, dar...." ș și apoi să explici de ce, totuși, &nbsp;tu ai mai multă dreptate. &Icirc;nsă referința la cultură și educație nu e &icirc;n folosul vostru - pentru că spui că factorul acesta e neproporțional cu tendința de a comite ilegalități - &icirc;nsă nu ai demonstrat anterior de ce există o relație poporțională &icirc;ntre valoarea amenzii și probabilitatea ca oamenii să &icirc;ncalce mai puțin legea.</div>
+<div><span style="font-family: arial, helvetica, sans-serif;">- discuția despre venituri nu e irelevantă, negatorii vă acceptă definițiile dar spun că măsura neglijează o realitate importantă - și anume că veniturile nu sunt singurul indicator al bunăstării cuiva, și că amendarea proporțională cu veniturile poate crea disfuncții și inegalități - lucruri pe care voi vreți să le evitați/minimizați</div>
+<div><span style="font-family: arial, helvetica, sans-serif;">- &icirc;ncerci reconstrucția argumentului referitor la colectare, dar nu &icirc;l &icirc;ntărești - negatorii sugeraseră că dacă puterea de plată e &icirc;n discuție - pntru unii starea de fapt va răm&acirc;ne aceeași, pentru c probabil va exista oo sumă minimă pentru amendă (altfel cei fără venituri n-ar plăti deloc? aș adăuga eu).&nbsp;</div>
+<div><span style="font-family: arial, helvetica, sans-serif;">-acuzi echipa negatoare că nu există o corelație &icirc;ntre resurse și argumetele lor, &icirc;nsă nu te explici. Eu a sesizat legătura parcurg&acirc;nd acele articole și văz&acirc;nd că susțin ideile negatoare</div>
+<div><span style="font-family: arial, helvetica, sans-serif;">N2</div>
+<div><span style="font-family: arial, helvetica, sans-serif;">- discursul tău este curat și corect, lucru facilitat și de faptul că antevorbitorul tău nu &icirc;ți oferă suficientă analiză suplimentară care să te pună mai mult "la muncă". Prin urmare, la nivel de conținut, nu ai multe de adăugat peste ce s-a spus la nivel de negator 1, dar duci corect mai departe ideile voastre negatoare</div>
+<div><span style="font-family: arial, helvetica, sans-serif;">- pentru că mai aveai suficient spațiu, puteai să reiei ideea de la N1 să să o analizezi mai nuanțat - aceea referitoare la egalitatea răului comi s&icirc;n socieate, ca singur factor relevant &icirc;n stabilirea unei pedepse</div>
+<div><span style="font-family: arial, helvetica, sans-serif;">- atenție, menționezi la &icirc;nceput că vei vorbi de arii de conlict, dar ulterior te raportezi tot la argumentele (propuse de afirmatori). &Icirc;n ariile de conflict stabilești tu clash-ul de idei, de exemplu o arie ar fi: "valoarea amenzii ca factor preventiv" - ei spun asta, noi spunem asta și avem drepatte pentru că, apoi aria de conflict bazată p "echitate/egalitate" - etc. Tu te referi la aceste idei dar te exprimi raport&acirc;ndu-te la structura cazului afirmator, pe cele 3 argumente.</div>
+<div><span style="font-family: arial, helvetica, sans-serif;">Decizia:</div>
+<div><span style="font-family: arial, helvetica, sans-serif;">Meciul este c&acirc;știgat de echipa negatoare, pentr că reușește să arate &icirc;n mod constant de ce premisele afirmatorilor sunt speculații (premise legate de cum funcționează pedepsele/factorii de descurajare) și, prin urmare, soluțiile propuse nu reușesc să răspundă adevăratelor motive pentru care oamenii &icirc;ncalcă legea/nu-și plătesc amenzile. De asemenea, chiar dacă premisele afirmatorilor ar fi acceptate, contra-exemplele negatorilor referitoare la țări care au impus deja această măsură demonstrează clar ineficiența planului - mai ales că afirmatorii pretind că vor fi mai puține ilegalități comise.</div>
+<div><span style="font-family: arial, helvetica, sans-serif;">Chiar dacă măsura nu scade numărul de incidente, afirmatorii ar putea să conducă discuția &icirc;n favoarea lor pe tăr&acirc;mul unei dezbateri referitoare la principiile de echitate, justiție. E afirmă că oamenii trebuie să sufere cu aceeași tărie pentru faptele lor, pe c&acirc;nd negatorii spun că oamenii trebuie să sufere nici mai mult nici mai puțin dec&acirc;t o cere gravitatea faptei lor. Discuția pe principii e așadar oprită la mijloc, nici una dintre echipe nu mă convinge, dar negatorii fac un efort suplimentar și dovedesc că, chiar dacă am accepta ideea afirmatoare de echitate, se creează noi inegalități pentru că veniturile nu sunt un bun indicator al bunăstării cuiva.</div>
+<div><span style="font-family: arial, helvetica, sans-serif;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Conținut &nbsp; Strategie &nbsp; Stil &nbsp; Total</div>
+<div><span style="font-family: arial, helvetica, sans-serif;">A1 &nbsp; &nbsp; &nbsp;11 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;7 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;4 &nbsp; &nbsp; &nbsp; 22</div>
+<div><span style="font-family: arial, helvetica, sans-serif;">N1 &nbsp; &nbsp; 13 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 9 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;4 &nbsp; &nbsp; &nbsp; 26</div>
+<div><span style="font-family: arial, helvetica, sans-serif;">A2 &nbsp; &nbsp; &nbsp;11 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;7 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;4 &nbsp; &nbsp; &nbsp; 22</div>
+<div><span style="font-family: arial, helvetica, sans-serif;">N2 &nbsp; &nbsp; 12 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 9 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;4 &nbsp; &nbsp; &nbsp; 25</div>
+</p></div>A1 -> 22 puncte<br>N1 -> 26 puncte<br>A2 -> 22 puncte<br>N2 -> 25 puncte<br>Castiga echipa: <h3 style='display:inline;color:red;'>Rationalizers (negatori)</h3></div><hr><h3 class='important'>Vrem parerea ta! Pentru asta, trebuie sa te loghezi.</h3><h3>Clasament meci</h3><p>Medii punctaje</p>A1 -> 22.50 puncte<br>N1 -> 25.00 puncte<br>A2 -> 21.00 puncte<br>N2 -> 25.00 puncte<br>Castiga echipa: <h3 style='display:inline;color:red;'>Rationalizers (negatori)</h3>
+                <div class='clear'></div>
+        </div><!-- end main content -->
+         <div class='clear'></div>
+</div>
+<div id="pix"></div>
+
+
+                                </div><!--end main -->
+                                <div id='parteneri'>
+                                    <span class='tr'></span><span class='tl'></span><span class='br'></span><span class='bl'></span><span id="filler"></span>
+                                    <div class='parteneri' id='sustinatori'>
+                                        <span class='floating_text' id='un_proiect'>Un proiect</span>
+                                        <a href='http://www.ardor.org.ro/'><div class='image' id='ardor'>Ardor</div></a>
+                                        <span class='floating_text' id='finantatori'>Finanțatori</span>
+                                        <a href='http://www.opensocietyfoundations.org/'><div class='image' id='open_society'>Open Society Foundation </div></a>
+                                        <a href='http://www.studentiq.ro//'><div class='image' id='memoplus'>MemoPlus</div></a>
+                                        <!-- <a href='http://www.ratiufamilyfoundation.com/'><div class='image' id='FundatiaRatiu'>Ardor</div></a>
+                                        <a href='http://www.eef.md/'><div class='image' id='eef'>East Europe Foundation</div></a>
+                                        <a href='http://www.mts.gov.md/'><div class='image' id='mdminister'>Ministerul Tineretului si Sportului al Republicii Moldova</div></a> -->
+
+                                        <span class='floating_text' id='parteneri_text'>Parteneri</span>
+
+                                        <a href='http://www.policycenter.eu/'><div class='image' id='PolicyCenter'>Policy Center</div></a>
+                                        <a href='http://www.britishcouncil.org/'><div class='image' id='BritishCouncil'>British Council</div></a>
+                                        <a href='http://www.europuls.ro/'><div class='image' id='europuls'>Europuls</div></a>
+                                        <a href='http://www.cere.ro/'><div class='image' id='cere'>Ce-Re</div></a>
+                                        <a href='http://www.primeromania.ro/'><div class='image' id='prime'>Prime Romania</div></a>
+                                        <a href='http://www.cji.ro/'><div class='image' id='cji'>Centrul pentru jurnalism independent</div></a>
+                                        <a href='http://www.aiesectm.ro/'><div class='image' id='aisec'>Aisec</div></a>
+                                        <!-- ===================================================================================================== -->
+                                        <a href='http://www.cogitus.ro/'><div class='image' id='cogitus'>Cogitus</div></a>
+                                        <a href='http://www.adevarul.ro/international/foreign_policy/'><div class='image' id='foreignPolicy'>Foreign Policy</div></a>
+                                        <a href='http://www.elsa.ro/'><div class='image' id='elsa'>Elsa</div></a>
+                                        <a href='http://www.vipromania.ro/'><div class='image' id='vipromania'>Voluntari pentru idei si proiecte</div></a>
+                                        <a href='http://www.ongtrust.ro/'><div class='image' id='ongtrust'>Trust</div></a>
+
+                                        <!-- ===================================================================================================== -->
+                                        <a href='http://www.leap.ro/'><div class='image' id='leap'>Leap</div></a>
+                                        <a href='http://www.younginitiative.org/'><div class='image' id='younginitiative'>Asociatia young initiative</div></a>
+                                        <a href='http://www.asjc.ro/'><div class='image' id='asjc'>Asjc</div></a>
+                                        <a href='http://osut.ro/'><div class='image' id='osut'>Osut</div></a>
+                                        <div class='clear'></div>
+                                    </div>
+                                    <div class='parteneri' id='parteneri_institutionali'>
+                                        <span class='floating_text' id='sponsori_text'>Sus&#539;in&#x0103;tori</span>
+                                        <a href='http://www.cartier.md/'><div class='image' id='cartier_logo'>Editura Cartier</div></a>
+                                        <a href='http://www.pll.md/ro/'><div class='image' id='biblio_logo'>Biblioteca publica de drept</div></a>
+                                        <span class='floating_text' id='institutii_text'>Parteneri institu&#539;ionali</span> 
+                                        <ul id='institutii'>
+                                            <!-- <span class='floating_text' id='institutii_text'>Parteneri institu&#539;ionali:</span> -->
+                                            <li><a href='http://www.politice.ro/'>Facultatea de &#536;tiin&#539;e Politice SNSPA </a></li>
+                                            <li><a href='http://www.comunicare.ro/'>Facultatea de Comunicare &#537;i Rela&#539;ii Publice SNSPA</a></li>
+                                            <li><a href='http://www.fspub.ro/'>Facultatea de &#536;tiin&#539;e Politice Universitatea Bucure&#537;ti</a></li>
+                                            <li><a href='http://www.filosofie.unibuc.ro/'>Facultatea de Filosofie Universitatea Bucure&#537;ti</a></li>
+                                            <li><a href='http://litere.unibuc.ro/'>Facultatea de Litere din Universitatea Bucure&#x015f;ti</a></li>
+                                            <li><a href='http://www.unibuc.ro/ro/fac_fsas_ro'>Facultatea de Sociologie Universitatea Bucure&#537;ti</a></li>
+                                            <li><a href='http://laws.uaic.ro/'>Facultatea de Drept Universitatea Alexandru Ioan Cuza Ia&#537;i</a></li>
+                                            <li><a href='http://www.uaic.ro/uaic/bin/view/Academic/Filosofie'>Facultatea de Filosofie si &#536;tiin&#539;e Social Politice Universitatea AIC Ia&#537;i</a></li>
+                                            <li><a href='http://www.upa.ro/'>Facultatea de Drept si Facultatea de &#x015e;tiin&#x0163;e Politice si Administrative Universitatea Petre Andrei Ia&#x015f;i</a></li> 
+
+                                            <li><a href='http://www.ubbcluj.ro/'>Universitatea Babe&#537;-Bolyai Cluj Napoca</a></li>
+                                            <li><a href='http://www.uvt.ro/'>Universitatea de Vest Timi&#537;oara</a></li>
+                                            <li><a href='http://www.upt.ro/'>Universitatea Politehnica Timi&#537;oara</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class='parteneri' id='parteneri_media'>
+                                        <span class='floating_text' id='media_text'>Parteneri media</span>
+                                        <a href='http://www.hotnews.ro/'><div class='image' id='hotnews'>HotNews</div></a>
+                                        <!-- <a href='http://www.lumebuna.ro/'><div class='image' id='lumebuna'>Lume Buna</div></a> -->
+                                        <a href='http://www.romaniapozitiva.ro/'><div class='image' id='romaniapozitiva'>Romania Pozitiva</div></a>
+                                        <a href='http://totb.ro/'><div class='image' id='thinkoutsidethebox'>Think Outside The Box</div></a>
+                                        <a href='http://www.facebook.com/carevasazica.vip'><div class='image' id='carevasazica'>Carevasazica</div></a>
+                                        <a href='http://www.studentie.ro/'><div class='image' id='studentiero'>Studentie.ro</div></a>
+                                        <a href='http://startub.unibuc.ro/'><div class='image' id='startub'>startub.unibuc.ro</div></a>
+                                        <!-- <a href='http://www.tvr.ro/tvr_cluj.php'><div class='image' id='tvrcluj'>Tvr Cluj</div></a> -->
+                                        <!-- <a href='http://www.radiotransilvania.ro'><div class='image' id='radiotransilvania'>Radio Transilvania</div></a> -->
+                                        <a href='http://iasifun.ziaruldeiasi.ro/'><div class='image' id='iasifun'>Iasi fun</div></a>
+                                        <a href='http://www.ziaruldeiasi.ro/'><div class='image' id='ziaruldeiasi'>Ziarul de Iasi</div></a>
+                                        <a href='http://www.kissfm.ro/timisoara'><div class='image' id='kissfm'>KissFm</div></a>
+
+                                        <div class='clear'></div> 
+                                    </div>
+                                    <div class='clear'></div>
+
+                                </div>	
+                            </div>	<!-- end wrap -->
+                            <div id='footer_mare'>
+                                <div id='footer'>
+                                    <div id='links' class='footer'>
+                                        <div id='menu1' style='margin:auto;'> <ul id='meniu_prinicpal'><li><a href='../../../contacte/index.html'> Contact </a></li>
+<li><a href='../../../clubdebate/index.html'> Cluburile </a></li>
+<li><a href='../../../oamenii/index.html'> Oamenii </a></li>
+<li><a href='../../../proiectul/index.html'> Proiectul </a></li>
+<li><a href='../../../home/index.html'> Acasa </a></li>
+</ul></div><!--end menu-->
+                                    </div><!--
+                                    <div id='contact' class='footer'>
+                                            <h4>Contact</h4>
+                                            <p>office@closer2oxford.ro</p>
+                                            <p>bogdan.draghicescu@closer2oxford.ro<br>
+                                            <span class='detalii'> (asistenta tehnica web - orice probleme legate de site)</span></p>
+                                    </div>
+                                    -->
+                                    <div id='newsletter' class='footer'>
+                                        <script src="../../../../../connect.facebook.net/en_US/all.js#xfbml=1"></script><fb:like href="http://www.facebook.com/pages/Closer2Oxford/162758797069605" width="250" colorscheme="dark"></fb:like>
+                                        <!--<h4>Newsletter</h4>
+                                        <form action='/page/newsletter'>
+                                                <input type='text' name='email'>
+                                                <input type='submit' id='submit' value='>'>
+                                                        
+                                        </form>-->
+                                    </div>
+                                    <div id='credits'>
+                                        Copyright(c) 2021 ARDOR |  Toate drepturile rezervate | Toate logo-urile si sloganurile de pe site sunt proprietate intelectuala inregistrata si nu pot fi reproduse fara acordul explicit al detinatorilor. <br>
+                                            <br /><br />
+                                            <b>Disclaimer</b><br /><i>
+
+                                                Programul educational Closer to Oxford este un program non-profit si nu are o legatura cu universitatea cu acelasi nume, referirea la Oxford avand doar o semnificatie simbolica.
+                                            </i>
+                                    </div>
+
+                                </div>		
+                            </div>		
+
+                            <div id="finantatde">Acest proiect este finantat cu sustinere din partea Comisiei Europene. Aceast publicatie [comunicare] reflecta doar
+                                vederile autorului, iar Comisia nu poate fi facuta  responsabila pentru utilizarea informatiei pe care o contine.</div>
+
+
+                        </body>
+                        </html>

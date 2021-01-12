@@ -1,0 +1,521 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml-strict.dtd">
+<HTML xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+    <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+            <link rel="icon" type="image/png"  href="../../closer2oxford.ro/favicon.html">
+                <link rel="stylesheet" href="var/layout.css" type="text/css">
+                    <title>Closer to Oxford - e timpul pentru argumente!</title>
+                    <link rel="alternate" type="application/rss+xml"  href="rss_feed" title="Stiri Closer2Oxford">
+                        <!-- <link rel="image_src" property="og:image"  href="/images/layout/closer2oxford_fb_white.png" /> -->
+                        <link rel="image_src" property="og:image"   type="image/jpeg"  href="../uploads/2015/06/9/facebook_icon.html" />
+                        <link rel="image_src" type="image/jpeg"  href="../uploads/2015/06/9/icon-facebook.gif" /> 
+						<meta name="description" content="Closer2Oxford pune în valoare oameni şi argumentele lor, în dezbateri online şi publice alături de tineri şi invitați avizaţi"/>
+                        <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9" />
+<script type='text/javascript' src='../js/jquery-1.4.4.min.js'></script>
+<script>var $j = jQuery.noConflict();</script>
+<script type='text/javascript' src='../js/tinymce/tiny_mce.js'></script>
+<script type='text/javascript' src='../js/jquery.form.js'></script>
+<script type='text/javascript' src='../js/fbLoginRegister.js'></script>
+<script type='text/javascript' src='var/javascript.js'></script>
+<script type='text/javascript' src='../js/jquery.hovertip-1.0.min.js'></script> 
+<script type='text/javascript' src='../js/jquery.jgrowl_minimized.js'></script> 
+<link rel='stylesheet' href='../css/jquery.jgrowl.css' media='screen' type='text/css'> 
+<script type='text/javascript' src='../js/jquery.timer-min.js'></script> 
+<meta name='description' content=''/> 
+<meta name='keywords' content=''/> 
+<style>.hovertip{
+    position:absolute;
+    padding:10px 13px;
+    z-index:2;
+    max-width:300px;
+    color:#303030;
+    background-color:#f5f5b5;
+    border:1px solid #DECA7E;
+    font-family:sans-serif;
+    font-size:12px;
+    line-height:18px;
+    text-align:left;
+    }</style> 
+<script type='text/javascript'>$j(document).ready(function(){$j('.tooltip').hovertip({'offset':[20,20]});get_notif();});
+
+if(!Array.indexOf){Array.prototype.indexOf = function(obj){for(var i=0; i<this.length; i++){if(this[i]==obj){return i;}}return -1;}}
+    hashuri = [] ;
+	 var tick_timer= 3000 ;
+ 
+	 function get_notif()
+        {
+		  
+		  //console.log(tick_timer);
+	     
+		  setTimeout(get_notif,tick_timer);
+        
+		   $j.ajax(
+            {
+                url: '/page/notif/show_events',
+                dataType: 'json',
+                data: "{}",
+                success: function(data)
+                    {
+                    $j.each(data,function(index,data){
+                        try
+                            {
+                            if( hashuri.indexOf(data.hash) == -1 )
+                                {
+                                hashuri.push(data.hash);
+                                $j.jGrowl(
+                                    data.str,
+                                    {
+                                        corners:'1px',
+                                        life: data.life,
+                                        header:data.title,
+                                        hash: data.hash,
+                                        sticky: data.sticky,
+                                        close: function(e,m,o)
+                                            {
+                                                $j.ajax({url:'/page/notif/delete_single_event/' + o.hash});
+                                            }
+                                    });
+                                }
+                            }
+                        catch(e){}
+                        })
+                    }
+            });
+        }
+	 </script> 
+ 
+                            
+  <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-19111721-1']);
+  _gaq.push(['_setDomainName', '.closer2oxford.ro']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+    
+                        </head>
+                        <body>
+                            <div id="global_wrap">
+                                <div id="header">
+                                    <a href='../index.html'><div id='logo'><img src='../images/layout/sigla.jpg'></div></a>
+                                    <a class='noExternal' href='http://www.facebook.com/pages/Closer2Oxford/162758797069605'><img src='../images/fb.png' style='height:30px;float:right;clear:right;margin:10px 5px 5px 5px;border:none;'/></a>
+                                    <a href='rss_feed'><img src='../images/feed-icon.png' style='height:30px;float:right;clear:right;margin:5px;border:none;'/></a>
+                                </div>
+                                <div id="meniu">
+                                    <div  id='register_login'>
+
+                                        
+  <a href='#' class='todo' id='login'>Login </a> &nbsp;<a href='register.html' class='todo' id='register'>Register</a>
+    <div id='login_box'>
+		  <form action='https://dev.closer2oxford.ro/page/ro/login_user/logon' method='post' id='user_login_form'>
+					 <div>Email: <input type='text' name='email'/> </div><br />
+					 <div>Pass: <input type='password' name='passwd'/></div><br />
+					 <a href='#' class='password_forgot'>forgot password?</a>
+					 <input type='hidden' value='/page/dezbatere_bucuresti_vara_2013' name='returnto' class='submiter'/><br />
+					 <input type='submit' value='login' name='btn' class='submiter'/><br />
+		  </form>
+		  
+		  <form action='https://dev.closer2oxford.ro/page/ro/login_user/reset_user_pw' method='post' id='user_reset_form'>
+					 <div>Email: <input type='text' name='email'/> </div><br />
+					 <a href='#' class='password_forgot'>login?</a>
+					 <input type='hidden' value='/page/dezbatere_bucuresti_vara_2013' name='returnto' class='submiter'/><br />
+					 <input type='submit' value='reset' name='btn' class='submiter'/><br />
+		  </form>
+		  
+    </div>
+    
+                                    </div>
+                                    <div id='menu1' style='margin:auto;'> <ul id='meniu_prinicpal'><li><a href='contacte/index.html'> Contact </a></li>
+<li><a href='clubdebate/index.html'> Cluburile </a></li>
+<li><a href='oamenii/index.html'> Oamenii </a></li>
+<li><a href='proiectul/index.html'> Proiectul </a></li>
+<li><a href='home/index.html'> Acasa </a></li>
+</ul></div><!--end menu-->
+                                </div>
+                                <div id="main"> 
+                                    <!--<div id='stiri-padding'>
+        <div id='stiri_back'>
+                {stiri} 
+    
+               
+        </div>-->
+        
+</div>
+<div  id="content-padding">
+        <div id='sidebar_menu'>
+                <span class='tr'></span>
+                <span class='tl'></span>
+                <span class='br'></span>
+                <span class='bl'></span>
+                <span id="filler"></span>
+                    
+                <ul></ul>
+                
+                <div class='clear'></div>
+        </div>
+        <div id="content">
+                <span class='tr'></span>
+                <span class='tl'></span>
+                <span class='br'></span>
+                <span class='bl'></span>
+                <span id="filler"></span>
+                <p><strong><span style="text-decoration: underline;">Dezbatere publică București</span></strong></p>
+<p>Sala de consiliu, Facultatea de Sociologie și Asistență Socială,</p>
+<p>Miercuri, 26 iunie, ora 18:30</p>
+<p><img src="../uploads/2013/07/31/dezbatere_C2O_ARDOR_Bucuresti_George_Visan_Maria_Antica_Monica_Mocanu_Serban_Pitic_Andrei_Pantu.vm34n5.jpg" alt="dezbatere_C2O_ARDOR_Bucuresti_George Visan_Maria Antica_Monica Mocanu_Serban Pitic_Andrei Pantu" width="560" height="284" /></p>
+<p><strong><em>&bdquo;E timpul ca amenzile să fie proporționale cu veniturile?</em></strong><strong><em>&rdquo;</em></strong></p>
+<p><strong><em>&nbsp;</em></strong></p>
+<p><strong>Echipa afirmatoare: George Vișan </strong>(analist politic, publicist și membru fondator la Civitas Politics) și <strong>Maria Antică </strong>(absolventă de Științe Politice, cu un master &icirc;n Relații Internaționale, SNSPA)</p>
+<p><strong>Echipa negatoare: Andrei Panțu </strong>(editorialist la Vox Publica și specialist &icirc;n Științe Politice și Relații Internaționale) și <strong>Șerban Pitic </strong>(membru ARGO și ARDOR Muntenia, finalist la Campionatul Mondial de Dezbateri pentru Studenți)</p>
+<p>&nbsp;</p>
+<p><strong>Moderator: Monica Mocanu</strong>, ARDOR</p>
+<p>&nbsp;</p>
+<p><strong>Monica Mocanu</strong></p>
+<p>&nbsp;</p>
+<p>Această dezbatere este parte a programului <em>Closer2Oxford</em>, care are din ce &icirc;n ce mai mulți prieteni. O să vă rog să &icirc;mi permiteți să &icirc;i salut, rapid, pe cei c&acirc;țiva dintre ei. Pe cei patru, pe care &icirc;i vedeți aici, l&acirc;ngă mine, o să &icirc;i las la sf&acirc;rșit pentru că ei se vor &ldquo;produce&rdquo; imediat, &icirc;n debate-ul de start al dezbaterii publice. Dar mai &icirc;nt&acirc;i c&acirc;teva lucruri despre proiect: este un program de dezbateri online, de seminarii de lectură critică și dezbateri publice, cu care ARDOR iese &icirc;n &icirc;nt&acirc;mpinarea nevoii și a comunității de debateri, dar și a comunității studențești din patru, din cinci centre universitare deja (București, Iași, Cluj, Timișoara, Sibiu) plus două centre din Republica Moldova, utiliz&acirc;nd instrumentul debate-ului ca formulă de start și ca formulă de provocare intelectuală asupra unor subiecte de interes public. Despre subiectul despre care discutăm acum o să vă vorbesc un pic mai &icirc;ncolo.</p>
+<p>&nbsp;</p>
+<p>&Icirc;mi face plăcere să &icirc;i salut pe Lorena și Victor, de la MemoPlus, compania Walmark. Ei sunt &nbsp;proaspeții susținători ai proiectului și vă voi dezvălui că datorită lor am și avut acele premii &icirc;n această rundă și le mulțumesc, cu această ocazie. Vedeți că ei susțin și alte lucruri frumoase legate de cultură și de promovarea valorilor și ne bucurăm că au venit alături de noi. Lorena, dacă vrei să spui c&acirc;teva cuvinte, sau...</p>
+<p>&nbsp;</p>
+<p><strong>Lorena Maria (MemoPlus, Walmark):</strong></p>
+<p><strong>&nbsp;</strong></p>
+<p>Vă mulțumim și noi că ne-ați invitat. Despre MemoPlus nu știu c&acirc;te știți dar importante sunt proiectele pe care le susțin, cum este acesta dar și proiectul <em>Rom&acirc;ni frumoși</em>, despre care găsiți informații pe masă și afară, și vă invităm &icirc;n online și &icirc;n offline să aflați c&acirc;t mai multe despre motivul pentru care ne aflăm aici.</p>
+<p>&nbsp;</p>
+<p><strong>Monica Mocanu (moderator)</strong></p>
+<p><strong>&nbsp;</strong></p>
+<p>Mulțumesc!</p>
+<p>Subiectul de astăzi, ca să &icirc;ncepem frontal, este dacă amenzile ar trebui să fie proporționale cu veniturile. Este un subiect care a ieșit la vot, &icirc;ntr-un poll online, concur&acirc;nd cu alte două subiecte: unul despre politicile care ar putea, sau nu, să limiteze fenomenul de <em>brain drain</em> și celălalt legat de libertatea de acces asupra documentelor, produselor universităților. Acest subiect a c&acirc;știgat, pe ultima sută de metri, bătălia, cumva, și prin urmare pe acest subiect a avut loc o dezbatere online despre care o să ne spună la un moment dat al doilea invitat al nostru, sociologul Barbu Mateescu, căruia &icirc;i fac cu m&acirc;na. O să ne spună c&acirc;teva lucruri despre cum arată pattern-urile pe subiectele de debate online, dar o să &icirc;l las mai t&acirc;rziu, a spus că vrea să vorbească după debate.</p>
+<p>&nbsp;</p>
+<p>Pentru a &icirc;ncepe discuția, așa cum facem de obicei, &icirc;ncepem cu un debate, &icirc;n care avem ca invitați, de la dreapta la st&acirc;nga, două platforme care au acceptat să vină: George Vișan de la Civitas Politics și Andrei Panțu de la Vox Publica, &icirc;nsoțiți de doi colegi de-ai mei, mai mult sau mai puțin debateri consacrați: Șerban Pitic, pe care multă lume de aici &icirc;l cunoaște, și &icirc;ncheind cu Maria Antică, noua prietenă a ARDOR, care va și &icirc;ncepe dezbaterea.</p>
+<p>&nbsp;</p>
+<p><strong>Maria Antică (afirmator 1) &ndash; discurs 1</strong></p>
+<p><strong>&nbsp;</strong></p>
+<p>E bine dacă mă ridic sau, dacă nu vă deranjează, al putea sta foarte bine și jos. O să răm&acirc;n &icirc;n picioare pentru că dacă dau din m&acirc;ini mai mult s-ar putea să vă conving mai bine dec&acirc;t cu ce scot pe gură. Mai puțin inițiată &icirc;n debate-ul online, abia astăzi inițiată &icirc;n cel face to face așa că dacă veți vedea vreun soi de emoție sau b&acirc;lb&acirc;ială, scuzele mele de pe acum.</p>
+<p>&nbsp;</p>
+<p>&Icirc;n altă ordine de idei, noi ar trebui să susținem astăzi, și asta vom susține, că amenzile ar trebui să fie sau să devină proporționale cu veniturile și avem trei argumente principale. &Icirc;n primul r&acirc;nd,&nbsp; de ce amenzile? Nu ar mai fi și alte metode coercitive sau, mă rog, de prevenție a efectelor? Păi, amenzile funcționează și voi reveni mai t&acirc;rziu cu mai multe exemple care să susțină ipoteza asta. &Icirc;n al doilea r&acirc;nd, ar trebui să știm despre ce amenzi vorbim, pentru că nu putem să generalizăm și să extrapolăm așa, &icirc;ntr-un spațiu vid, și vom aduce &icirc;n discuție faptul că ne referim strict la amenzile de circulație, deși știu că asta a fost tema principală &icirc;n dezbaterea din online. Am fi vrut să extindem dar considerăm că este o discuție foarte importantă tocmai din cauza gravității accidentelor de circulație și din cauza, sau datorită beneficiilor pe care o astfel de măsură, și anume proporționalitatea amenzilor cu veniturile, ar putea să o aibă, eu știu, &icirc;n micșorarea numărului de accidente. Și &icirc;n al treilea r&acirc;nd, poziția noastră este că, deși ca o consecință a aplicării unui astfel de principiu s-ar putea spune că nu s-ar mai respecta egalitatea &icirc;n fața legilor c&acirc;tă vreme &icirc;i tratezi pe oameni diferențiat pentru aceeași infracțiune, noi susținem că este necesară proporționalitatea amenzilor cu veniturile tocmai pentru că ar asigura și o egalitate a efectelor pe care astfel de măsuri le-ar avea, și nu numai &icirc;n calitate juridică, strict &icirc;n fața legii.</p>
+<p>&nbsp;</p>
+<p>Acestea fiind spuse, &nbsp;dacă nu vă supărați cred că v-aș putea, deși nu vreau să vă șochez at&acirc;t de tare, dar sunt convinsă că toată lumea știe că una dintre definițiile oamenilor, sau al omului &icirc;n general, vine de la Aristotel care spunea că omul este un animal social, un animal politic. Surprinzător, lucrul acesta a fost demonstrat, cumva, odată cu trecerea timpului dar ce relevanță are că omul este un animal social cu treaba cu amenzile? &Icirc;n fond, care-i legătura? Păi, am putea pleca de la rolul pe care &icirc;l au amenzile sau, mă rog, de la scopul pe care astfel de amenzi &icirc;l are &icirc;n vedere atunci c&acirc;nd sunt aplicate. &nbsp;Și din punctul nostru de vedere, amenzile au două roluri: unu &ndash; acela de prevenție sau, eventual, de coerciție, ceea ce &icirc;nseamnă cumva un rol instrumental al amenzilor, și &icirc;n al doilea r&acirc;nd un rol normativ, un rol care e menit cumva să creeze niște reguli morale, dacă &icirc;mi permiteți. Oamenii reacționează foarte bine la recompense, la pedepse, la răsplăți și temerea cea mai mare este de sancțiune pentru că sancțiunea, &icirc;n general, atrage asupra sa &icirc;n primul r&acirc;nd un cost practic, care se reflectă &icirc;n amenda financiară și, &icirc;n al doilea r&acirc;nd, un cost social &icirc;n sensul &icirc;n care dacă tu, ca individ, nu ești conectat sau dacă &icirc;ncalci, cumva, niște reguli care sunt general acceptate de societate, practice vei fi sanționat &icirc;n raport cu statutul tău de om, de cetățean cinstit &icirc;n acea țară. Există niște academicieni din Statele Unite care au demonstrat printr-un studiu pe care l-au derulat &icirc;n anii 2000 că amenzile sunt mult mai benefice dec&acirc;t detenția pentru că, &icirc;n studiul lor empiric au demonstrat că cei care au fost &icirc;nchiși, de exemplu, au recidivat &icirc;n proporție de mai mult de 50% dec&acirc;t cei care au fost sancționați prin amenzi.</p>
+<p>&nbsp;</p>
+<p>Revenim la genul de amenzi pe care noi &icirc;l avem &icirc;n vedere, și anume amenzile de circulație. De ce cele de circulație și nu altele? Păi pentru că gravitatea accidentelor de circulație este extrem, extrem de mare. &Icirc;n Rom&acirc;nia, anul trecut, au fost 2000 de morți și 9000 de răniți, conform statisticilor Politiei Rutiere Rom&acirc;ne, comparativ cu cei din Afghanistan care au murit: 20. Nicio legătură? Toată legătura pentru că e vorba de siguranța cetățenilor rom&acirc;ni, oameni care pe teritoriul Rom&acirc;niei nu ar trebui să fie expuși la riscuri, mor &icirc;ntr-o cantitate mult mai mare dec&acirc;t cei care sunt expuși la riscuri foarte mari.</p>
+<p>&nbsp;</p>
+<p>Pentru egalitatea consecințelor &icirc;l voi lăsa pe colegul meu să vă explice mai mult pentru că mi s-a terminat timpul. Mulțumesc.</p>
+<p>&nbsp;</p>
+<p><strong>Cross examination 1</strong></p>
+<p><strong>Șerban Pitic (negator 1): </strong>Atunci o să am eu o &icirc;ntrebare: diin punctul tău, sau din punctul vostru de vedere, cam &icirc;n ce proporție realistă oamenii foarte bogați sunt responsabili pentru accidentele de circulație?</p>
+<p>&nbsp;</p>
+<p><strong>Maria Antică (afirmator 1): </strong>Noi nu spunem că doar oamenii bogați sunt responsabili pentru accidentele de circulație. Poziția noastră este că oamenii bogați, și &icirc;n fond, probabil că aici se duce toată discuția: că oamenii bogați nu sunt pedepsiți echitabil sau, mă rog, consecințele pe care oamenii bogați le suportă pentru &icirc;ncălcarea legii nu sunt la fel de mari ca pentru cei care nu au același venit. Și atunci s-ar putea ca pedeapsă primită să nu mai fie percepută ca o pedeapsă.</p>
+<p>&nbsp;</p>
+<p><strong>Șerban Pitic (negator 1): </strong>Ok, și-atunci &icirc;ntrebarea mea de follow up ar fi: și-atunci n-ar fi correct ca toate prețurile să fie proporționale cu veniturile pentru ca efectele să fie resimțite egal de toată lumea?</p>
+<p>&nbsp;</p>
+<p><strong>Maria Antică (afirmator 1): </strong>Noi avem &icirc;n vedere doar amenzile privitoare la circulație pentru că acestea sunt cele mai grave. Dacă am extrapola, bine&icirc;nțeles că s-ar putea aplica principiile astea dar interesul acum ar fi să scădem, cumva, numărul de accidente care e din ce &icirc;n ce mai mare sau, mă rog, e la cote ridicate.</p>
+<p>&nbsp;</p>
+<p><strong>Serban Pitic (negator 1) &ndash; discurs 2</strong></p>
+<p><strong>&nbsp;</strong></p>
+<p>Bună ziua, doamnelor și domnilor, sau bună seara, e seară deși e lumină. Aș vrea să vă vorbesc despre c&acirc;teva lucruri care mi se par foarte importante in dezbaterea de astăzi. &Icirc;n argumentele proprii, &icirc;n argumentele noastre constructive, o să vă vorbim &icirc;n primul r&acirc;nd despre cum e o problemă falsă, e o cauză falsă identificată a problemei morților din cauza accidentelor de circulație. Care e o problemă reală. Credem că e o problemă faptul că mulți oameni mor pe șosele. Credem că e o problemă &icirc;ntr-adevăr, că mersul cu mașina pare să fie mai periculos dec&acirc;t multe alte lucruri pe care le considerăm, &icirc;n general, periculoase, cum ar fi terorismul, cum ar fi războaiele. E o problemă dar noi spunem că cauza este identificată greșit la nivelul măsurii ăsteia, &icirc;n general. &Icirc;n al doilea r&acirc;nd, vrem să vă vorbim despre cum sistemul este injust. Sistemul propus de echipa afirmatoare este un sistem injust pe care nu ar trebui să &icirc;l acceptăm chiar dacă am presupune că efectele ar fi cumva benefice, pentru că pur și simplu transmite un mesaj pe care statul nu ar trebui să &icirc;l transmită.</p>
+<p>&nbsp;</p>
+<p>Dar &icirc;nainte de asta aș vrea să vă vorbesc despre c&acirc;teva din lucrurile pe care le-am auzit &icirc;n primul discurs al echipei afirmatoare. Bun, de la &icirc;nceput am auzit discuția asta că ar trebui să existe o egalitate de efecte, o egalitate a rezultatelor sau a ceea ce resimte fiecare om pedepsit de amenzi. C&acirc;teva probleme aici. &Icirc;n primul r&acirc;nd, noi spunem că &icirc;nsuși sistemul economic &icirc;n care trăim respinge ideea egalității efectelor pentru că prin simplul fapt că lucrurile au prețuri egale pentru toată lumea &icirc;nseamnă că un om mai sărac resimte un efect pozitiv mult mai greu dec&acirc;t un om mai bogat. Pur și simplu există o inegalitate a efectelor. Noi spunem că lucrul ăsta nu poate fi atins, &icirc;n sine, &icirc;n societatea &icirc;n care trăim. Noi spunem că dacă o facem, pur și simplu, la nivelul amenzilor, nu &icirc;nseamnă nimic. &Icirc;nseamnă pur și simplu că trăim &icirc;ntr-un spațiu inconsecvent &icirc;n care &icirc;ncercăm să aplicăm egalitatea efectelor &icirc;ntr-o anumită instanță, dar nu o aplicăm &icirc;n celelalte instanțe. Noi spunem că dacă echipa afirmatoare ar vrea să susțină asta, ar trebui să susțină de ce, cum și dacă ar trebui să implementăm egalitatea efectelor &icirc;n general &icirc;n societate, pentru că noi spunem că dacă nu se face lucrul ăsta &icirc;n general, nu vedem de ce ar trebui făcut aici.</p>
+<p>&nbsp;</p>
+<p>Mai mult dec&acirc;t at&acirc;t, noi spunem că nu e, de fapt, o inegalitate a efectelor. De ce? Și aici cumva, vreau să intru &icirc;n primul meu argument despre cum e o cauză greșită. Noi spunem că răul social cauzat de accident nu este mai grav atunci c&acirc;nd este făcut de un om bogat dec&acirc;t dacă e făcut de un om sărac. Noi spunem că motivul pentru care aplicăm sanțiuni penale, &icirc;n general, este pentru o măsură de apărare socială &icirc;n general. Pentru că vrem să pedepsim și să prevenim pentru un rău social cauzat. Noi spunem că pedeapsa trebuie să fie proporțională cu răul social cauzat, nu trebuie să fie proporțională cu c&acirc;t de mult resimte pedeapsa persoana &icirc;n cauză. Noi spunem că dacă am presupune asta, presupunerea ne-ar duce la ideea că bogații sunt, cumva, de vină pentru că sunt bogați, sau că bogăția &icirc;n sine este o vină și noi spunem că asta nu e ceva legitim. Noi spunem că, la sf&acirc;rșitul zilei, ce trebuie să urmărim printr-o pedeapsă este să urmărim pedepsirea răului social sau o prevenție eficientă.</p>
+<p>&nbsp;</p>
+<p>De ce nu creăm o prevenție eficientă? Pentru că cauzele reale ale faptului că avem accidente nu este faptul că bogații fac foarte multe accidente plătind amenzi pe bandă rulanta. &Icirc;n primul r&acirc;nd, noi spunem că majoritatea oamenilor care fac accidente nu sunt oameni bogați. Sunt oameni cu venituri medii sau mici. Mai mult dec&acirc;t at&acirc;t, spunem că de ce &icirc;n Rom&acirc;nia există o problemă mare cu respectarea regulilor de circulație este pentru că poliția nu &icirc;și face datoria, nu este suficient de prezentă și pentru că există corupție masivă &icirc;n sistemul impunerii amenzilor pentru &icirc;ncălcarea regulilor de circulație. Ori, mai mult dec&acirc;t at&acirc;ta, ce spunem noi este că genul ăsta de măsură &icirc;ncurajează exact genul de șmecherie care face de cele mai multe ori pe cei nu neapărat bogați dar pe cei cu pile, cu un anumit tip de statut care le permite să scape de pedepse să reușească să facă asta și mai mult. Pentru că ceea ce face este că &icirc;ncurajează ca omul bogat, să zicem, c&acirc;nd este prins cu o &icirc;ncălcare a regulilor de circulație, va avea, &icirc;n primul r&acirc;nd, o motivare să &icirc;ncerce să dea șpagă. Și șpaga aceea s-ar putea să fie mai mare pentru că deja costul amenzii e foarte mare. Șpaga fiind mai mare, este și o motivație &icirc;n plus pentru agentul de circulație să primească șpaga asta &icirc;n plus. Deci noi spunem că corupția, care este principalul motiv pentru care avem o lipsă de respectare a amenzilor de circulație, este ceva care este &icirc;ncurajat de măsura despre care discutăm.</p>
+<p>&nbsp;</p>
+<p>Deci, ce v-am spus este că, &icirc;n primul r&acirc;nd nu rezolvăm problema reală pentru că majoritatea oamenilor care comit accidente de circulație nu sunt oameni foarte bogați, nu despre ei vorbim. &Icirc;n al doilea r&acirc;nd, oricum &icirc;n cazurile astea &icirc;ncurajăm corupția și, &icirc;n al treilea r&acirc;nd, noi spunem că asumarea unei amenzi nu este o chestiune de calcul rațional. Nimeni nu &icirc;și pune problema: <em>haide să &icirc;ncalc regula asta de circulație pentru că &icirc;mi permit să plătesc amenda</em>. Motivele pentru care apar regulile de circulație sunt pentru că: unu, oamenii nu se g&acirc;ndesc la consecințe, oamenii acționează impulsiv și pentru că trăim &icirc;ntr-o cultură &icirc;n care regulile de circulație nu sunt respectate pentru că nu există o cultură a respectului față de lege. Astea-s lucrurile care ar trebui schimbate, nu proporționalitatea amenzilor.</p>
+<p>&nbsp;</p>
+<p><strong>Cross examination 2</strong></p>
+<p><strong>&nbsp;</strong></p>
+<p><strong>Maria Antică (afirmator 1): </strong>Ai vorbit la &icirc;nceputul discursului tău despre sistemul economic actual care, de fapt, este inegal &icirc;n sine, și de ce am &icirc;ncerca să impunem un soi de egalitate &icirc;n cel juridic și ai dat un exemplu că săracii și bogații plătesc la fel de mult pentru același produs, asta a fost ideea, nu? Ești de acord că poți cumpăra o p&acirc;ine at&acirc;t la un leu și &icirc;n același timp una la cinci lei, av&acirc;nd pe piață mai multe opțiuni, at&acirc;t pentru bogați, c&acirc;t și pentru săraci?</p>
+<p>&nbsp;</p>
+<p><strong>Șerban Pitic (negator 1): </strong>Da, dar asta e irelevant. E vorba că același produs e plătit cu același preț, pentru că aici plătești un produs ca să primești un beneficiu. Aici trebuie să plătești o amendă pentru că ai cauzat un rol social. Ceea ce am spus cu egalitatea bogaților și a săracilor pur și simplu &icirc;nseamnă că &icirc;n sistemul nostrum economic nu este &icirc;n sine admisă ideea egalității rezultatelor. De ce să facem aici o excepție?</p>
+<p>&nbsp;</p>
+<p><strong>Maria Antică (afirmator 1): </strong>Pentru că avem &icirc;n vedere consecințele și, eu știu, stoparea acelor infracțiuni. Dar revin la ideea cu viteza: că dacă depășești viteza, un om sărac și unul bogat vor plăti aceeași amendă pentru că așa este corect. Ești de acord, totuși, că dacă depășești viteza și calci pe cineva la trecerea de pietoni, cel sărac care va plăti o amendă fixă, o va simți mult mai mult dec&acirc;t cel bogat, care permite să dea acea sumă și care, la r&acirc;ndul lui, nu va simți niciun fel de consecință și care nu va simți nicio răspunere &icirc;n conștiința lui pentru faptul că a plătit o sumă mică iar costurile nu au fost foarte mari că a omor&acirc;t pe cineva. &nbsp;&nbsp;</p>
+<p><strong>&nbsp;</strong></p>
+<p><strong>Șerban Pitic (negator 1): </strong>Nu, &icirc;n practică nu pentru că pur și simplu, dacă omori pe cineva, nu plătești amendă, te duci la pușcărie, ți se ia carnetul iar astea sunt, genul de costuri pe care le plătește orice om, indiferent c&acirc;t de bogat e.</p>
+<p>&nbsp;</p>
+<p><strong>Maria Antică (afirmator 1): </strong>Să spunem că n-ai călcat pe nimeni la trecere dar faptul că ai depășit viteza cu 50 de km pe oră și ai expus oamenii din jur la un pericol de accidentare&hellip;</p>
+<p>&nbsp;</p>
+<p><strong>Șerban Pitic (negator 1): </strong>Asta e posibil să se &icirc;nt&acirc;mple, deși cred că, unu: asta se &icirc;nt&acirc;mplă foarte rar și, &icirc;n al doilea r&acirc;nd, faptul că există pedepse care sunt cu adevărat grave pentru accidentarea cuiva reprezintă demotivare destulă și pentru un om bogat să nu depășească limita de viteză. P&acirc;nă la urmă ne interesează rezultatele: dacă moare cineva sau nu.</p>
+<p>&nbsp;</p>
+<p><strong>George Vișan (afirmator 2): </strong>Șerban a făcut la final o afirmație de genul că regulile &icirc;n Rom&acirc;nia, normele legii, cele sociale sunt &icirc;ncălcate nu &icirc;n urma unui calcul rațional, cost-beneficii. Problema totuli e, nu crezi că există totuși un raport de tip cost-beneficiu? Adică dacă o persoană știe că nu va fi pedepsită sau că pedeapsa nu e at&acirc;t de intensă, satisfacția pe care o va deriva el din &icirc;ncălcarea legii va fi oarecum mare?</p>
+<p>&nbsp;</p>
+<p><strong>Șerban Pitic (negator 1): </strong>Nu cred că asta e relevant pentru că ce se &icirc;nt&acirc;mplă este că oamenii simt că nu vor fi pedepsiți din cauză că nu se aplică pedepse, sau pentru că se ia șpagă și se scapă foarte ieftin. Ar fi mult mai eficient, de exemplu, dacă am avea pedepse precum luarea carnetului, precum pușcăria pentru lucrurile cu adevărat grave.</p>
+<p>&nbsp;</p>
+<p><strong>George Vișan (afirmator 2): </strong>Există, se poate lua carnetul, nicio problemă, dar se poate, cum s-a mai dovedit &icirc;n o groază de cazuri particulare, se poate conduce mașina și fără carnet și chiar s-au comsi accidente de persoane care aveau permisul reținut. Nici aceasta nu este o măsură coercitivă coerentă, p&acirc;nă la urmă.</p>
+<p>&nbsp;</p>
+<p><strong>Șerban Pitic (negator 1):</strong> Problema, p&acirc;nă la urmă, răm&icirc;ne faptul că nu se aplică pedepsele. Și nu rezolvați faptul că nu se aplică pedepsele aplic&acirc;nd amenzi proporționale. Oricum se revine la o categorie foarte restr&acirc;nsă de oameni pentru că majoritatea oamenilor au venituri medii sau mici și ei &icirc;n continuare vor plăti aceleași amenzi, pentru ei nu se schimbă nimic, &icirc;n majoritatea situațiilor nu se schimbă absolut nimic.</p>
+<p>&nbsp;</p>
+<p><strong>George Vișan (afirmator 2) &ndash; discurs 3</strong></p>
+<p><strong>&nbsp;</strong></p>
+<p>Bună seara. Voi continua apărarea cauzei noastre acolo de unde a pornit colega mea. Noi c&acirc;nd ne-am g&acirc;ndit la acest sistem nu am avut neapărat &icirc;n vedere o aplicare generică asupra tuturor infracțiunilor de circulație. Ne-am g&acirc;ndit la infracțiunile cele mai grave, acele depășiri de viteze, de exemplu, cu mai mult de 20 de km la oră, acțiuni care sunt de mare risc, care implică neglijență și lipsă de respect at&acirc;t față de lege, c&acirc;t și față partenerii de trafic. Ne-am g&acirc;ndit să aplicăm această sancțiune severă, amenda proporțională, tuturor participanților la trafic care fac aceste probleme, indiferent de venituri dar calibr&acirc;nd această amendă conform veniturilor lor, această contravenție va avea un efect pozitiv la final. Va crește costurile, indiferent de cine face aceste infracțiuni, va crește costurile lor față de restul societății și &icirc;n final va duce poate, sperăm noi, la o scădere a tragediilor care au loc pe drumurile Rom&acirc;niei.</p>
+<p>&nbsp;</p>
+<p>Noi vedem acest mecanism &icirc;n primul r&acirc;nd cu scop descurajator. &Icirc;n momentul &icirc;n care știi că indiferent de veniturile tale, vei plăti o amendă echivalentă cu 10% din salariul tău sau din veniturile tale lunare calculate, &icirc;ți va veni mai greu să apeși pedala de accelerație. &Icirc;mi veți spune că e un pic mai dificil de aplicat acest lucru. Eii, nu e chiar. Avem exemplul Finlandei unde o asemenea lege există: &icirc;n momentul &icirc;n care un șofer este detectat de poliție prin radar sau prin patrule că el depășește viteza legală cu mai mult de 20 de km la oră, este oprit, poliția are acces la baza de date a ANAF-ului finlandez și i se servește pe loc o amendă proporțională cu 10% din veniturile sale. Nu vreau să complic foarte mult, să creăm prea multă birocrație, se va baza foarte mult pe venitul lunar și se va aplica sub forma unei taxe fixe. Amenda va fi de 10% dintr-un salariu sau dintr-un venit lunar.</p>
+<p>&nbsp;</p>
+<p>Legat de problema justeței, noi nu acuzăm bogații că sunt de vină pentru accidente sau spunem că ei sunt de vină pentru depășirea legală. Nu dorim să atribuim vini care nu există. Pe de altă parte, persoanele care au mașini și care sunt implicate &icirc;n trafic, indiferent de venituri, știu că există &icirc;n lege niște remedii serioase pentru cei care &icirc;ncalcă legea, atunci se vor g&acirc;ndi mai cu atenție la modul cum conduc și dacă și dacă decid să depășească viteza legală.</p>
+<p>&nbsp;</p>
+<p>&Icirc;n altă ordine de idei, a fost spus de către echipa negatoare faptul că noi dorim un fel de egalitate de rezultate. Dacă prin acest lucru &icirc;nseamnă că sunt mai puține accidente ne asumăm această egalitate. Indiferent dacă ești bogat sau sărac sau dacă ai venituri medii, trebuie să iei &icirc;n considerare faptul că există la final amenzi serioase pentru &icirc;ncălcarea regulilor din trafic.</p>
+<p>&nbsp;</p>
+<p>Pe de altă parte, nu va fi doar un instrument, cel puțin nu credem că va fi singurul instrument care va ajuta la &icirc;mbunătățirea situației actuale &icirc;n privința accidentelor de circulație. Credem și noi că această măsură ar fi eficientă dacă ar face parte dintr-un pachet mai larg de măsuri.</p>
+<p>&nbsp;</p>
+<p><strong>Cross examination 3</strong></p>
+<p><strong>&nbsp;</strong></p>
+<p><strong>Andrei Panțu (negator 2): </strong>Ai dat exemplul Finlandei. Totuși, ca o remarcă, aș spune că societatea finlandeză este la ani lumină de cea rom&acirc;nească, o societate structurată cu totul și cu totul altfel, are o clasă de mijloc destul de solidă, au avut un parcurs foarte lung p&acirc;nă să ajungă aici. De ce n-am &icirc;ncerca să ajungem ca Finlanda și să aplicăm după aceea proporționalitatea amenzilor? &nbsp;<strong>&nbsp;</strong></p>
+<p>&nbsp;</p>
+<p><strong>George Vișan (afirmator 2): </strong>C&acirc;nd am folosit exemplul Finlandei&hellip;<strong>&nbsp;</strong></p>
+<p>&nbsp;</p>
+<p><strong>Andrei Panțu (negator 2): </strong>Sau oricare alta, Elveția parcă mai implementează, Danemarca&hellip;</p>
+<p>&nbsp;</p>
+<p><strong>George Vișan (afirmator 2): </strong>&Icirc;n general, amenzile proporționale cu veniturile sunt practicate &icirc;n statele nordice, ca publicul să fie conștient de acest lucru. Pe de altă parte, eu cred că av&acirc;nd &icirc;n vedere situația din Rom&acirc;nia, Rom&acirc;nia se află pe locul 5 &icirc;n ceea ce privește morții din accidentele de circulație, credem că o asemenea măsură ar putea fi utilă. Nu cred că i-am sărăci extraordinar pe cei care au mașini, indiferent de veniturile lor. Credem, &icirc;nsă, că ar fi o garanție &icirc;n plus a respectării legii. Și mai trebuie spus următorul lucru: &icirc;n momentul &icirc;n care achiziționezi o mașină, indiferent că ești &icirc;n Rom&acirc;nia (&icirc;n Finlanda, de exemplu, costurile achizionării unei mașini sunt mult mai mari dec&acirc;t &icirc;n Rom&acirc;nia), ai un anumit statut social, mai ales &icirc;n Rom&acirc;nia, unde mașina este considerată un simbol al statutului social. Deci trebuie să fii conștient că acest &ldquo;simbol&rdquo; vine cu anumite costuri, primul cost nefiind neapărat cel pe care &icirc;l plătești la reprezentanță, sau la dealer, ci costul față de lege. Că dacă folosești acest mijloc de circulație &icirc;n mod ilegal, vei plăti.</p>
+<p>&nbsp;</p>
+<p><strong>Monica Mocanu (moderator): </strong>At&acirc;t, astea au fost, cumva, extra. M-ați luat prin surprindere. Vreau discursul tău dar &icirc;n condițiile astea, și ei vor putea să &icirc;ți adreseze o &icirc;ntrebare la final.</p>
+<p>&nbsp;</p>
+<p><strong>Andrei Panțu (negator 2): </strong>Să-mi spuneți dacă mă vedeți, dacă mă auziți sau mă ridic &icirc;n picioare&hellip;</p>
+<p>&nbsp;</p>
+<p>Amenzi proporționale cu veniturile, sună foarte bine &icirc;n teorie, s-ar urmări o egalitate a efectelor și probabil că ar putea să funcționeze &icirc;n țările nordice, &icirc;n Elveția. &Icirc;n Rom&acirc;nia, &icirc;nsă, avem anumite probleme care ne-ar &icirc;mpiedica să implementăm amenzile proporționale. Cea mai importantă ar fi evaziunea fiscală. Avem, chiar și &icirc;n cele mai optimiste evaluări, cam 30% din economie este subterană, deci avem foarte multe venituri nedeclarate, la negru sau la gri. Deci doar o parte din bani sunt puși pe cartea de muncă, restul se plătesc pe sub masă iar asta ne-ar duce, pur și simplu, la foarte multe inechități dacă am aplica amenzile proporționale. Pur și simplu, cei care sunt plătiți la negru sau la gri ar scăpa mult mai ușor dec&acirc;t cei care au fost destul de fraieri &icirc;nc&acirc;t să &icirc;și declare veniturile.</p>
+<p>&nbsp;</p>
+<p>Altă inechitate ar veni din faptul că, din multe motive pe care nu mai stau aici să le discut aici, veniturile mari nu sunt &icirc;ntotdeauna corelate cu averi mari și invers: avem cetățeni cu venituri mari dar cu resurse, cu avere destul de mică, pe de altă parte avem mulți cetățeni care au averi mari &icirc;nsă nu au venituri, sau nu sunt trecuți cu venituri. Din cauza asta ar fi, iarăși, nedrept &icirc;n Rom&acirc;nia să aplicăm amenzi proporționale cu veniturile. Am nedreptăți, inevitabil, pe unii.</p>
+<p>&nbsp;</p>
+<p>Că tot vorbeam de evaziune fiscală, asta mă duce la un alt posibil efect negativ al aplicării amenzilor proporționale, și anume, foarte simplu, lumea ar fi &icirc;ncurajată să-și declare și mai &nbsp;puțin veniturile. Ar fi &icirc;ncă un motiv &icirc;n plus pentru a munci la negru sau la gri, pentru a nu mai avea salariile puse pe cartea de muncă sau a avea 8 milioane, 10 milioane, iar restul să fie plătiți neoficial.</p>
+<p>&nbsp;</p>
+<p>Un alt motiv pentru care, la modul cel mai general (acum nu vorbesc numai de Rom&acirc;nia, poate mai ales de Rom&acirc;nia pentru care n-ar functiona at&acirc;t de bine) este birocrația la care ne-ar aduce o asemenea măsură. Ar &icirc;nsemna o amendă proporțională cu veniturile, ar &icirc;nsemna noi formulare, noi drumuri pe care șoferii ar trebui să le facă, stat la cozi la alte ghișee și așa mai departe, ar &icirc;ngreuna excesiv situația pentru șoferi, &icirc;n genere. Din toate motivele astea nu cred că ar avea, per total, efecte pozitive amenzile proporționale. Cred că avem alte cauze care stau la baza accidentelor multiple din Rom&acirc;nia, care pot fi atacate altfel. De exemplu, prin examenul auto, care a și &icirc;nceput să fie din ce &icirc;n ce mai strict &icirc;n ultimii ani: se ia mult mai greu carnetul, mai ales la examenul de traseu. Sigur, efectele se vor vedea &icirc;n timp, &icirc;ncă mai avem mulți șoferi care și-au luat examenele așa cum le-au luat: dat șpagă și așa mai departe, le-au trecut relativ ușor, nu au avut examenul at&acirc;t de greu.</p>
+<p>&nbsp;</p>
+<p>Și așa, ca o ultimă măsură, pe care aș propune-o &icirc;n locul amenzilor proporționale cu veniturile, ar fi pur și simplu niște amenzi proporționale și sancțiuni &icirc;n general, inclusiv de ordin penal atunci c&acirc;nd este cazul, proporționale cu gravitatea delictului, cu gravitatea &icirc;ncălcării regulilor de circulație. Cred că asta ar reduce mult mai degrabă numărul accidentelor. Mulțumesc!</p>
+<p>&nbsp;</p>
+<p><strong>Cross examination 4</strong></p>
+<p><strong>&nbsp;</strong></p>
+<p><strong>Maria Antică (afirmator 1): </strong>Spuneai, la un moment dat, că un asemenea sistem de aplicare a amenzilor proporționale nu ar putea funcționa la noi din mai multe motive expuse de tine. Să presupunem că am avea un sistem &icirc;n care ar funcționa, ca teoria s-ar aplica și &icirc;n realitate, ai considera &icirc;n continuare că nu ar putea să ducă la scăderea numărului de accidente &icirc;n Rom&acirc;nia?</p>
+<p>&nbsp;</p>
+<p><strong>Andrei Panțu (negator 2): </strong>Mai avem mult p&acirc;nă acolo și cred că sunt și multe alte cauze care stau la baza numărului mare de accidente, inclusiv cultura noastră, lipsa unor campanii duse la nivel național de conștientizare a șoferilor &icirc;n legătură cu responsabilitatea lor, cu gravitatea posibilelor rezultate ale accidentelor și asta ar fi, cred eu, mult mai important.</p>
+<p>&nbsp;</p>
+<p><strong>Maria Antică (afirmator 1): </strong>Am &icirc;nțeles. Și ca o mică &icirc;ntrebare, apropo de campanii, de exemplu campaniile ar fi mult mai luate &icirc;n serios și mult mai interiorizate dec&acirc;t faptul că ar trebui să scoți din buzunar o sumă exorbitant de mare ca să plătești pentru fapta pe care ai comis-o? Adică, comparativ, care ar avea efectul imediat, cel puțin, mai eficient? &Icirc;n Finlanda s-a dat o amendă de 200.000 de Euro pentru depășirea vitezei cu 20 de km pe oră. Pentru orice avere, oric&acirc;t de mare ar fi, 200.000 de Euro este o sumă destul de mare.</p>
+<p>&nbsp;</p>
+<p><strong>Andrei Panțu (negator 2): </strong>Foarte adevărat dar asta i-ar descuraja doar pe cei cu veniturile &icirc;ntr-adevăr foarte mari</p>
+<p>&nbsp;</p>
+<p><strong>Maria Antică (afirmator 1): </strong>și medii&hellip;</p>
+<p>&nbsp;</p>
+<p><strong>Andrei Panțu (negator 2): </strong>Venituri medii nu sunt chiar așa de multe. Nu avem o clasă de mijloc așa de consolidată ca &icirc;n Finlanda.</p>
+<p>&nbsp;</p>
+<p><strong>Monica Mocanu (moderator): </strong>Aș propune să votăm la sf&acirc;rșitul &icirc;ntregii discuții din mai multe motive pe care vi le voi spune pe parcurs. Vă mulțumesc (vorbitorilor)! O cafea ne trebuia. Eu știu motivele declarate pentru care invitații din marginile extreme au venit să facă debate. Știu motivele pentru care mulți dintre voi faceți debate dar aș vrea să răm&acirc;nem la subiectul amenzilor, deocamdată. Cred că mulți dintre voi aveți &icirc;ntrebări, sau sper să aveți &icirc;ntrebări. Aș vrea să &icirc;l invit pe Barbu să ne spună cum a fost subiectul acesta abordat &icirc;n dezbaterea online și după aceea să vă auzim vocile tuturor.</p>
+<p>&nbsp;</p>
+<p><strong>Barbu Mateescu (sociolog): </strong>Bună seara tuturor, mă numesc Barbu Mateescu, sunt sociolog, 99 la sută sociolog, 1 la sută debater. &Icirc;n clipa de față eu realizez un studiu prinvind valorile care au fost atinse &icirc;n dezbaterile online de-a lungul timpului, inclusiv pe aceasta temă și lucrurile pe care o să le aduc &icirc;n discuție nu sunt neapărat legate de componenta de debate c&acirc;t cum s-au poziționat, &icirc;n genere, afirmatorii și negatorii față de subiecte. Care au fost rutele, daca tot se discută &icirc;n termeni rutieri, șoselele utilizate pentru a &icirc;ncerca să &icirc;i convingă pe arbitri și să obțină victoria.</p>
+<p>&nbsp;</p>
+<p>Această temă a fost atinsă și &icirc;n dezbaterile care au avut loc &icirc;n Republica Moldova sau, mai bine spus, av&acirc;nd &icirc;n vedere că a fost totul online, au fost echipe care erau din Republica Moldova. Ca remarcă generală privind dezbaterea de astăzi, dacă aș fi văzut transcriptul ei și n-aș fi știut că ea a avut loc la București, aș fi spus că ea a avut loc &icirc;n Republica Moldova &nbsp;pentru că foarte multe din temele, sau modul &icirc;n care a fost discutată tema, și anume această noțiune de egalitate &icirc;n efecte, efecte asupra celui care &icirc;ncalcă legea și &icirc;n ce măsură oamenii bogați internalizează această măsură la fel de mult precum cei cu venituri medii și mici, cam așa s-au poziționat echipele din Republica Moldova și, &icirc;ntr-o măsură mai mică, și cele din Rom&acirc;nia. Echipele din Rom&acirc;nia au vorbit, și ca să vă spun aici, marea majoritate a echipelor din Rom&acirc;nia, mai ales acelea afirmatoare, s-au concentrat pe justețea socială și economică a unui sistem proporțional. Deși e relativ acest exemplu, ceva de genul de ce un impozit progresiv este mai bun dec&acirc;t o cotă unică. Deci s-a ajuns inclusiv la argumente, la discuții foarte puternice despre capitalism, despre ce &icirc;nseamnă să ajungi bogat &icirc;n Rom&acirc;nia, și nu &icirc;ntr-un caz ideal, &icirc;n ce măsură societatea trebuie să răsplătească averea. Dezbaterea a fost mult mai politică și ideologică, dacă vreți, dec&acirc;t cea de astăzi, care mi s-a părut că s-a axat mai mult pe componenta psihologică, sau chiar juridice. Sunt foarte interesat să aud cum va curge dezbaterea care &icirc;ncepe acum, dezbaterea neoficială dar asta voiam să vă spun, a fost o dezbatere foarte diferită de majoritatea celor din online și de cu totul altă natură.</p>
+<p>&nbsp;</p>
+<p><strong>Intervenții public</strong></p>
+<p><strong>&nbsp;</strong></p>
+<p><strong>Bianca Dragomir: </strong>Aveți niște date, studii care să releve faptul că astfel de amenzi au scăzut numărul incidentelor rutiere &icirc;n r&acirc;ndul bogaților &icirc;n state precum Finlanda?</p>
+<p>&nbsp;</p>
+<p><strong>Maria Antică (afirmator 1): </strong>Nu aș putea să &icirc;ți dau date statistice care să demonstreze că a scăzut numărul incidentelor &icirc;n r&acirc;ndul bogaților dar pot să &icirc;ți spun că &icirc;n studiul făcut &icirc;n Finlanda de poliția lor a arătat că cel puțin 60 la sută din populația țării este de acord cu această măsură.</p>
+<p>&nbsp;</p>
+<p><strong>Claudiu Toader: </strong>Eu am ceva de spus pentru fiecare echipă &icirc;n parte, &icirc;n primul r&acirc;nd pentru echipa afirmatoare. Am auzit statistica aia din partea primului vorbitor al echipei afirmatoare cum că &icirc;nchiderea nu ar fi la fel de eficientă precum este o amendă. Mie nu mi se pare că asta-i neapărat corectă pentru că dacă ar fi să o luăm așa, atunci ar trebui să amendăm oamenii pentru omucidere și asta ar fi mai productiv. Eu nu consider că asta e adevărat ci mai degrabă, faptul că oamenii recidivează este din cauza naturii motivului pentru care ești &icirc;nchis. Adică, de regulă motivele pentru care iei amendă nu sunt at&acirc;t de severe pe c&acirc;t sunt chestiile pentru care ești &icirc;nchis, ca atare chestiile pentru care ești &icirc;nchis nu le faci din &icirc;nt&acirc;mplare ci din cauza unui stil de viață și ăsta-i motivul pentru care recidivează mai mult oamenii care sunt &icirc;nchiși.</p>
+<p>&nbsp;</p>
+<p><strong>Maria Antică (afirmator 1): </strong>&Icirc;ntr-adevăr, studiul pe care l-am citit eu spunea că oamenii care sunt &icirc;nchiși recidivează &icirc;ntr-o măsură mult mai mare dec&acirc;t cei care primesc amenzi. &Icirc;n fond, era vorba despre ce se &icirc;nt&acirc;mplă după ce primești un stil de pedeapsă. &Icirc;ntr-adevăr, faptul că ești &icirc;nchis acolo&hellip;s-ar putea să mai ai și alte probleme și s-ar putea să vrei să te răzbuni, sunt mai multe cauze dar ce contează, sau ce a contat pentru mine a fost efectul: ce efect a avut, sau ce ai făcut după ce ai primit o pedeapsă? Dacă ai făcut &icirc;nchisoare ai trecut deja prin chinul ăla și nu te mai costă nimic să o mai faci &icirc;ncă o dată fără nicio problemă. Asta e pentru o anumită categorie de oameni, dar pentru oamenii normali, eu știu, mediocri, ăia care nu prea fac lucruri interesante, faptul că primesc o amendă s-ar putea să fie o sancțiune mult mai mare din punct de vedere social și financiar . Oamenii ăia poate nu ar ajunge niciodată să facă &icirc;nchisoare. Pentru ei, faptul că au primit o amendă e o pedeapsă destul de mare, &icirc;n sensul ăsta.</p>
+<p>&nbsp;</p>
+<p><strong>Claudiu Toader: </strong>A doua &icirc;ntrebare este pentru Șerban care spune că bă, da oamenii ăștia care fac chestii nasoale nu spun că o să calce pe pedală pentru că &icirc;și permit să plătească amenda. Unde, dacă ăsta e cazul și amenzile nu sunt folosite ca deterrent și efectul de deterrent nu contează, atunci orice sancțiuni am pune pentru speeding și alte infracțiuni legate de trafic ar fi complet ineficiente. Mai degrabă, cum văd eu problema, este că &icirc;n momentul &icirc;n care punem o amendă nu o facem pentru ca oamenii ăia o să se &icirc;ntoarcă magic la viață doar pentru că plătesc o amendă, nu plătim o amendă pentru că trebuie să plătim o amendă ci pentru că trebuie să pedepsim persoana respectivă, unde impactul este complet diferit. Dacă o persoană are un venit de 20.000 de Euro pe an nu va resimți amenda aceea minusculă unde o persoană care are un salariu de 8 milioane va simți amenda respectivă iar mie mi se pare că asta era dezbaterea propriu-zisă.</p>
+<p>&nbsp;</p>
+<p><strong>Șerban Pitic (negator 1): </strong>&Icirc;n majoritatea cazurilor, cel mai mare factor motivant pentru a călca pe pedală e faptul că nu se aplică pedepse, nu faptul că pedeapsa e prea mică. Pentru că marea majoritate a oamenilor nu au venituri care ar coresponda cu o amendă de 200.000 de Euro, vorbim aici de ceva de genul top 5 la sută. Pentru majoritatea oamenilor, oricum, discuția asta nu se aplică deloc fiindcă aceia ar plăti același tip de amenzi pe care &icirc;l plătesc și acuma. Pentru cei care au, &icirc;ntr-adevăr, bani și pentru care amenzile de 5 milioane nu &icirc;nseamnă nimic ce susțineam și ce susțin eu este că, unu: majoritatea nu &icirc;ncalcă regulile pentru că nu vor să le &icirc;ncalce, există o minoritate care le &icirc;ncalcă, așa cum o fac și ceilalți, neg&acirc;ndindu-se la consecințe fiindcă-s nervoși, fiindcă se simt ei foarte tari și nu se g&acirc;ndesc la consecințe, există genul ăsta de comportament irațional și pe ăsta nu poți să &icirc;l previi cu niciun fel de pedeapsă. Și da, ai dreptate, după aia răm&acirc;ne rolul punitiv dar &icirc;n ceea ce privește rolul punitiv, este corect să pedepsim răul social cauzat. La fel cum eu nu am o vină pentru că-s mai bogat. Dacă am creat un rău social, societatea trebuie să ceară de la mine același gen de lucru. Dacă eu se &icirc;nt&acirc;mplă să fiu, nu știu, o persoană mai&hellip;o persoană pentru care libertatea &icirc;nseamnă mult mai mult dec&acirc;t pentru o altă persoană, asta nu &icirc;nseamnă că trebuie să mi se aplice o pedeapsă diferită. Ăsta e genul de aprecieri care nu ar trebui făcute pur și simplu. Sunt bogat, sunt sărac, trebuie să fiu pedepsit pentru ceea ce am făcut. Ar fi absurd, să zicem, dacă se &icirc;nt&acirc;mplă ca cineva să calce prea tare pe pedală &icirc;ntr-un moment oarecare să i se ia 200.000 de Euro, chiar dacă are milioane. Probabil banii ăia au deja o destinație.Orice om bogat nu &icirc;și pune banii la saltea ci, mai degrabă &icirc;i folosesc. Sunt niște bani care probabil se iau din niște investiții, din niște destinații utile.</p>
+<p>&nbsp;</p>
+<p><strong>Măriuca Murariu: </strong>Apropo de ce spuneai, Șerban. Totuși, ce spuneai contrazice cumva felul &icirc;n care funcționează sistemul. Contrazice un pic sistemul justițiar pentru că tocmai, se iau &icirc;n considerare tot felul de contexte și de situații atenuante, să zicem. Dacă ești nebun și ai ucis pe cineva, contează că ești nebun, da? Astfel &icirc;nc&acirc;t efectul pe care-l produci să fie, &icirc;ntr-o formă sau alta, echitabil cu altcineva care poate a comis același lucru dar care nu primește aceeași pedeapsă. Deci nu se aplică neapărat ce spui și atunci argumentul de tipul &ldquo;sistemul e corupt, sistemul e injust&rdquo; ergo &ldquo;nu contează ce tip de amendă impunem sau ce tip de coerciție impunem&rdquo; ne face tuturor un dezavantaj, inclusiv vouă, &nbsp;pentru că susține că inclusiv cel care există nu funcționează. Cred că dezbaterea era mai mult despre ce tip de coerciție, chiar &icirc;n cazul &icirc;n care sistemul ar funcționa ideal, chiar &icirc;n cazul &icirc;n care n-ar fi corupție: ar fi mai bine să avem amenzi proporționale cu veniturile sau nu? Pentru că dacă spui &ldquo;oricum e corupt, oricum vor fi șpăgi&rdquo;, știi, nu puteți susține niciun fel de coerciție. Și de asta se leagă și de ce spunea Claudiu, cred că ai simțit aceeași chestie. Vreau doar să &icirc;nchei cu o informație pe care am aflat-o chiar &icirc;nainte de a veni aici. Citeam &icirc;n Ziarul Financiar că MAE are un proiect de lege prin care vor să &icirc;ntețească amenzile, felul &icirc;n care ele se colectează, adică să existe inclusiv plată online, procesul verbal să fie cu semnătură de primire, deci să faciliteze colectarea pentru că, un fapt curios &icirc;n Rom&acirc;nia, numai un sfert din amenzile care au fost date &icirc;n cazul amenzilor de rutiere au fost colectate. Deci numai 25 la sută sunt, de fapt, colectate &icirc;n total.</p>
+<p>&nbsp;</p>
+<p><strong>George Vișan (afirmator 2): </strong>&nbsp;Da, este similar cu situația privitoare la amenzile date pentru impozite pentru că se acumulează și nu ai cum să le plătești, sau ca stat să le colectezi. Atunci c&acirc;nd am g&acirc;ndit poziția noastră m-am g&acirc;ndit și la aspectul ăsta. De aceea, cel mai simplu ar fi să existe o corelare &icirc;n care ofițerul care dă amenda să aibă acces la baza de date a ANAF-ului, unde ești trecut cu salariul la zi sau cu sursa de venit și &icirc;n momentul &icirc;n care apare o discrepanță &icirc;ntre ceea ce apare acolo și ai la fața locului, să se meargă mai departe. Mă g&acirc;ndeam și la <em>spill over effects</em>. Cred că &icirc;n anumite situații este o măsură prin care descurajezi și evaziunea fiscală: &icirc;n momentul &icirc;n care vezi pe cineva care conduce un Bentley de 250.000 de Euro iar el apare &icirc;n baza ANAF-ului că primește ajutoare de la statul rom&acirc;n pentru că e sărac sau nu poate munci, deja acolo este ceva &icirc;n neregulă și trebuie să se intervină. &Icirc;n opinia mea, amenda trebuie plătită pe loc și prin mijloace electronice tocmai pentru a scăpa de problema corupției și ca să existe și o garanție că, totuși, nu apare un fel de mică &icirc;nțelegere &icirc;ntre agent și contravenient, să fie &icirc;nregistrată plata sau pur și simplu polițistul să stea &icirc;n fața camerei de luat vederi a mașinii, dacă totuși mașinile de poliție au &icirc;n momentul de față camere de luat vederi. &Icirc;n momentul &icirc;n care există o probă video e cam greu să spui că nu s-a plătit. Cu c&acirc;t ai o dovadă electronică solidă cu care e greu de contestat, mica corupție va dispărea și ea.</p>
+<p>&nbsp;</p>
+<p><strong>Șerban Pitic (negator 1): </strong>Aș vrea să fac și eu o precizare legat de chestiunea cu situațiile atenuante: nu-i așa ușor, e o distincție foarte importantă. Circumstanțele atenuante se referă la situații, la condiții care fac vina mai puțin vina mai puțin importantă sau care diminuează vina, accentuează vina &icirc;n cazul celor agravante. Bogăția nu e genul ăsta de fapt, nu diminuează sau accentuează vina. Pur și simplu e vorba de un rău social egal pe care &icirc;nsă &icirc;l pedepsești mai mult pentru faptul că o persoană e bogată și de fapt acolo există o judecată de valoare, undeva &icirc;n subsolul acestei politici, că bogații, cumva, au ceva ce nu merită. Și asta &icirc;ntr-adevăr poate să fie o dezbatere interesantă dar cred că trebuie demonstrată ideea asta &icirc;nainte de a o aplica.</p>
+<p>&nbsp;</p>
+<p><strong>George Vișan (afirmator 2): </strong>Nu sunt nici eu adeptul suspiciunii că bogații ar comite mai multe accidente, dar, dar, și aici &icirc;mi aduc aminte de un caz foarte recent &icirc;n care un t&acirc;năr de 20 de ani, al cărui tată era bancher, a condus sub influența alcoolului și a ucis două persoane iar mașina de poliție a &icirc;ncercat &icirc;n primul r&acirc;nd, să le ofere mită polițiștilor și c&acirc;nd a văzut că nu acceptă mita, a &icirc;nceput să &icirc;i amenințe cu părintele care era șef de bancă și, deci, o să aveți probleme. Există, cred, anumite persoane, anumiți indivizi &icirc;n Rom&acirc;nia cu astfel de mentalități de aceea cred că uneori trebuie luate &icirc;n considerare și aceste fapte.</p>
+<p>&nbsp;</p>
+<p><strong>Șerban Pitic (negator 1): </strong>Aș vrea să fac un mic comentariu. Da, vorbim de o persoană bogată care a fost nepăsătoare și agresivă dar putem să vorbim și de o persoană săracă care era nepăsătoare și agresivă și să-i amenințe cu violența. Nu poate să amenințe cu bani dar poate să amenințe cu violența. Banii sunt un instrument adică, din nou, vorbim de același gen de răspuns, de același gen de personalitate. Evident, nu putem susține că oamenii bogați nu doresc niciodată să facă rău, ideea este că nu putem folosi acest factor ca, cumva, să susținem o cauză, să presupunem că e o vină &icirc;n plus pentru cei care sunt bogați.</p>
+<p>&nbsp;</p>
+<p><strong>Andrei Tiut: </strong>Bună seara, sunt Andrei Tiut de la Civitas Politics. Dacă &icirc;nțeleg bine, echipa negatoare apasă pedala foarte tare pe ideea că pedeapsa trebuie să fie proporționată cu răul social provocat, corect? Și &icirc;ntr-un anumit sens, ceea ce susțineți voi este implicit o justiție reparatorie, chit că nu plătești reparațiile &icirc;napoi către victimă ci către societate, este tot un tip de justiție reparatorie. Ori aici este o discuție interesantă pentru că, mă rog, &icirc;n abstract, putem argumenta, dar &icirc;n concret funcția reparatorie se practică &icirc;n c&acirc;teva societăți tribale: un Afganistan, un Pakistan, un Caucaz. &Icirc;n lumea din care facem noi parte, nu argumentez acum că e neapărat bine sau nu, dar lumea din care facem noi parte sistemul penal are ca scop prevenția. Aceasta se poate face &icirc;n două moduri: prin teamă, și aici &icirc;ntr-o anumită măsură cealaltă echipă a &icirc;ncercat să argumenteze că bogații se tem mai greu și nu &icirc;i &icirc;nvinovățim dar facem o observație că se tem mai greu, și pe urmă se bazează, deși mai puțin important pentru problema asta, pe reabilitare. Și atunci, din punctul meu de vedere, dacă vreți să vă bazați argumentul pe o justiție reparatorie, trebuie să vă asumați și acest fapt: că ne asemănăm cu acel tip de justiție și cu valori care &icirc;n mod normal ne sunt străine.</p>
+<p>&nbsp;</p>
+<p><strong>Șerban Pitic: </strong>Noi nu ne bazam pe o justiție reparatorie, pur și simplu spuneam că &icirc;n cadrul sistemului de justiție pe care &icirc;l avem noi, care este unul bazat pe prevenție mai degrabă, există și principiul egalității &icirc;n fața legii. &Icirc;n dreptul penal, &icirc;n mod deosebit, există conceptul de pedeapsă care trebuie să fie proporțională cu răul făcut, adică nu trebuie să fie disproporțional, cineva să fie pedepsit mai mult pentru același rău social făcut. Adică, &icirc;n sistemul nostru penal și &icirc;n sistemul nostru de justiție prevenția nu e singurul factor, trebuie să fie și echitabil, există și o anumită idee de egalitate &icirc;n fața legii. Și dacă vorbim de o prevenție, realist vorbind, teama nu este un factor de motivare foarte bun.</p>
+<p>&nbsp;</p>
+<p><strong>George Vișan: </strong>Ba da, dacă nu ar exista frica de rigoarea legii cred că &icirc;n nicio societate o lege nu ar fi aplicată. Există, &icirc;ntr-adevăr, și acordul voluntar dar &icirc;n esență, fără teamă, legea nu poate fi aplicată.</p>
+<p>&nbsp;</p>
+<p><strong>Șerban Pitic (negator 1): </strong>&Icirc;n majoritatea situațiilor c&acirc;nd legea se respectă e prin acordul dat. Și mai ales &icirc;n societățile de care vorbim, &icirc;n țările nordice, ăsta-i, de fapt, marele plus: că legea se respectă pentru că există un <em>bind</em> , oamenii acceptă normele și le &icirc;mbrățișează, le consideră ale lor și trebuie respectate. &Icirc;n Rom&acirc;nia nu se tratează regulile așa și asta e, de fapt, diferența specifică.</p>
+<p>&nbsp;</p>
+<p><strong>Andrei Tiut: </strong>Dacă &icirc;ntr-adevăr e at&acirc;t de important principiul proporționalității cu fapta, de ce evoluează at&acirc;t de mult pedeapsa &icirc;n timp, de ce nu e nicio problemă ca eu, statul rom&acirc;n, să te pedepsesc astăzi cu o amendă de 3 lei și m&acirc;ine cu o amendă de 10 lei? Asta rupe principiul proporționalității și aruncă pedeapsa &icirc;n zona prevențiilor: eu te pedepsesc astăzi cu 10 lei pentru că mă g&acirc;ndesc că este mai eficient, m&acirc;ine am văzut că nu este eficient și are efecte perverse, scad &icirc;napoi la 5 lei.</p>
+<p>&nbsp;</p>
+<p><strong>Șerban Pitic (negator 1):</strong> Asta nu ține de proporționalitate. E vorba că cineva care a făcut ceva de 5 ori face un rău social mai mare&hellip;</p>
+<p>&nbsp;</p>
+<p><strong>Andrei Tiut: </strong>Nu, fix pe aceeași pedeapsă se schimbă codul penal și schimbă pedeapsa, asta spuneam eu.</p>
+<p>&nbsp;</p>
+<p>&nbsp;<strong>Șerban Pitic (negator 1):</strong> Pentru că altfel nu ar putea să evolueze legile. E &icirc;ntr-adevăr o problemă dar asta e valabil oric&acirc;nd se schimbă legile.</p>
+<p>&nbsp;</p>
+<p><strong>Roxana Marin: </strong>Ca să &icirc;i răspund lui Andrei, sunt mai multe motive pentru care se fac modificări codului penal : venitul mediu, creșteri, timpul, e un număr de factori care au un impact asupra modificării legilor, nu cred că&hellip; &Icirc;n fine, cred că s-a &icirc;nțeles ce vreau să zic. Eu sunt Roxana Marin, sunt profesoara lui Claudiu la liceul Coșbuc. Ce vreau să zic: eu am votat&hellip;nu divulg. &Icirc;n fine, eu aș vrea să &icirc;mi afirm părerea cum că o poziție cum e cea a echipei afirmatoare pune &icirc;n mare pericol răspunderea civică &icirc;n r&acirc;ndul cetățenilor. Adică, dacă am aplica un sistem prin care bogații ar plăti mai mult pentru aceeași faptă comisă de un om mai sărac, am presupune &icirc;n stilul acela ușor aroganto-platoniciano-ceva că bogații sunt mai deștepți, mai responsabili, mai &ldquo;superiori&rdquo;, ca să zic așa (mi-ați auzit ghilimelele, da?) și așa mai departe. Adică e un mare pericol acesta. Nu știu exact, &icirc;n Finlanda ați zis că se aplică sistemul ăsta... No, acuma eu cred că oamenii ăia sunt egali de bogați, egal de corecți și egal de ok, adică e o societate care, cresc&acirc;nd &icirc;ntr-un comfort mai consecvent dec&acirc;t cel de care s-a bucurat o țară precum Rom&acirc;nia, presupun că sunt diferențe mai mici, mai puțini notabile de la o categorie socială la alta. Pe c&acirc;nd &icirc;ntr-o societate precum e cea rom&acirc;nească, un model ca acela prezintă niște riscuri foarte grave, adică așteptăm de la cei bogați să... Nu știu, e o inegalitate despre care cred că echipa negatoare a reușit să avertizeze destul de corespunzător și pentru care &icirc;i salut.</p>
+<p>&nbsp;</p>
+<p><strong>Andrei Panțu (negator 2): </strong>Da este, este. Adică dacă ne uităm numai la coeficientul Gini care măsoară inegalitățile, Finlanda e una dintre țările care stă cel mai bine &icirc;n lume, are aproape 23, 24, pe o scară de la 0 la 1. Rom&acirc;nia a sărit peste 30, cred că avea 33, ceva de genul ăsta.</p>
+<p>&nbsp;</p>
+<p><strong>Maria Antică (afirmator 1): </strong>Dacă &icirc;mi permiți, Roxana, ca un comentariu la ce ai spus tu, eu ce &icirc;nțeleg este că o astfel de abordare ar antagoniza cumva clasele sociale care recunoaștem că există: cei bogați, cei săraci și clasele de mijloc, da? Asta e ideea? Care e riscul?</p>
+<p>&nbsp;</p>
+<p><strong>Roxana Marin: </strong>Nu știu dacă m-am dus at&acirc;t de departe cu proiecția mea asupra efectelor. Pur și simplu mi se pare că principiul inegalității pe care se fondează o astfel de abordare e unul periculos și &icirc;ntr-o societate &icirc;n care oricum legea nu se respectă și așa mai departe, oricum, ultimul lucru pe care ai vrea să &icirc;l faci este să accentuezi diferența &icirc;ntre răspunderea socială, &icirc;nțelegi ce vreau să spun? Adică să &icirc;i zici săracului, bun, tu ai &icirc;ncălcat legea x &icirc;ți dăm 10 lei amendă, iar tu cel bogat o să &icirc;ți dăm 30.000 de lei amendă pentru că ești bogat. Ce-o să &icirc;nvețe cei doi din această chestie? A cui e răspunderea pentru a face societatea una mai bună? Cum ă să &icirc;l &icirc;ncurajeze chestia asta pe omul acela să nu continue să &icirc;ncalce legea respectivă pentru că, mmm, &icirc;nțelegi? Cred că, &icirc;n ultimă instanță, s-ar porni o ghetoizare și așa pornită &icirc;n evoluția Rom&acirc;niei.</p>
+<p>&nbsp;</p>
+<p><strong>George Vișan (afirmator 2): </strong>Cred că poziția noastră a fost prost &icirc;nțeleasă. Noi nu am de la o premisă progresivă a acestei amenzi. De exemplu, amenda va fi proporțională &icirc;n sensul că va fi un procent fix din venit. Deci dacă ai un venit de 1400 de lei lunar și ai depășit viteza cu 25 de km la oră, vei primi o amendă egală cu 10 la sută din cei 1400 de lei. Ideea e ca acei 10% să doară la fel de tare at&acirc;t pentru cineva cu un venit mediu c&acirc;t și pentru cineva cu un venit peste mediu.</p>
+<p>&nbsp;</p>
+<p><strong>Roxana Marin: </strong>Efectul asupra individului eu &icirc;nțeleg că asta poate să fie dar asupra societății, &icirc;mpărțirea răspunderii sociale. Vorbim de o &icirc;mpărțire a responsabilității sociale.</p>
+<p>&nbsp;</p>
+<p><strong>George Vișan (afirmator 2): </strong>Nu cred. Ar fi dacă am avea oarecum trepte, cum era &icirc;nainte impozitul progresiv: 11, 24, 36, 48. Ne-am g&acirc;ndit și la acest aspect și am zis că răm&acirc;nem &icirc;n logica taxei unice, care există acuma: plătești 16 la sută impozit chit că ai 1400 de lei venit lunar, fie că ai 1400 de Euro. Din punct de vedere matematic, statul ia mai mult de la acela cu 1400 de Euro pe lună dec&acirc;t de la cel cu 1400 de lei.</p>
+<p>&nbsp;</p>
+<p><strong>Roxana Marin: </strong>Asta poate fi discutat dar pe o altă moțiune, nu pe asta cu amenzile.</p>
+<p>&nbsp;</p>
+<p><strong>Marius ...: </strong>Marius ..sunt, sunt profesor la Titulescu și aș vrea să subliniez, să sugerez faptul că echipa afirmatoare și moțiunea nu dorește, de fapt, să facem un tratament diferențiat, să tratăm cetățenii &icirc;n mod diferit. Noi practic dorim să tratăm cetățenii &icirc;n mod egal și să plătească fiecare același gen de pedeapsă. Pentru un om sărac, o sumă de 500 de lei, de exemplu, reprezintă un anumit procent din venit sau avere pe c&acirc;nd pentru un cetățean mai bogat, care are venituri mai mari sau o avere mai mare, această sumă reprezintă un procent mult mai mic. Și atunci, este ca și cum cei doi cetățeni ar fi, de fapt, tratați diferit plătind aceeași sumă. Vrem să sugerăm ca cetățenii să fie tratați la fel, adică să plătească același procent din venit sau avere pentru aceeași faptă și, merg&acirc;nd mai departe pe principiul pedepsei conform răului produs, probabil că aici, deși este greu și faptele mai grave produc efecte și nu sunt doar contravenții, de exemplu infracțiuni care produc și efecte fizice asupra persoanelor, ar trebui să se dea probabil posibilitatea judecătorului să stabilească &icirc;n momentul &icirc;n care se desfășoară procesul și se cer despăgubiri, să se poată cere daune conform, de asemenea, cu averea sau cu veniturile.</p>
+<p>&nbsp;</p>
+<p><strong>George Vișan (afirmator 2): </strong>&Icirc;n instanța civilă, există așa ceva.</p>
+<p>&nbsp;</p>
+<p><strong>Marius ...:</strong> Există dar nu se cere amenda raportat la avere. Adică judecătorul ar putea să fie ajutat de lege, legea să &icirc;i poată permite să impună o pedeapsă ca procent din avere. Și avem precedent &icirc;n Rom&acirc;nia: Consiliul Concurenței dă amenzi un procent din cifra de afaceri a firmei.</p>
+<p>&nbsp;</p>
+<p><strong>Șerban Pitic (negator 1): </strong>Chiar mi se pare important de subliniat că &nbsp;nu putem g&acirc;ndi &icirc;n felul acesta, &bdquo;e la fel, e același efect&rdquo; și pur și simplu e corect pentru că bogații simt mai puțin banii luați. E o chestiune incorectă din mai multe puncte de vedere. &Icirc;n general nu ne raportăm așa la pedepse. Adică dacă am vrea să facem asta, să vedem efectul individual, ar trebui să vedem o sumedenie de factori subiectivi, de exemplu s-ar putea ca pentru unii oameni să &icirc;nsemne mai puțin faptul de a fi &icirc;nchis, lucrurile sunt interminabile &icirc;n practică. Dar nici nu ar trebui să &icirc;ncercăm să facem asta. Probabil dacă am face un sistem informatic care ar lua &icirc;n calcul un milion de date statistice, e posibil să putem să determinăm că pentru mine e mai rău să fiu &icirc;nchis dec&acirc;t Claudiu. E de fapt invers dar ideea e că nu o facem pentru asta. Ideea e că o facem pentru bogăție pentru că acolo e o prezumpție &icirc;mpotriva oamenilor bogați de fapt. E chestia asta care răm&acirc;ne &icirc;n substrat. Și &icirc;n al doilea r&acirc;nd pentru că chiar nu e același lucru. Oamenii care au foarte mulți bani de obicei au niște destinații pentru ei. Bine, putem să zicem că se duc &icirc;n Tenerife sau așa mai departe dar de fapt există niște investiții care se fac acolo, există niște destinații: banii ăia pot să fie &icirc;n bancă și deci folosiți mai departe, deci nu e același lucru. Pur și simplu se fac mai multe cu banii respectivi. Costul nu e neapărat proporțional: dacă primesc o amendă de 200.000 de Euro dacă am un milion de Euro, costul nu e același ca pentru cineva care primește o amendă de 200 de lei pentru cineva cu o mie de lei. Nu e aceeași &icirc;nsemnătate pur și simplu pentru că banii ăia, fiind mai mulți, au destinații multiple, și asta adaugă &icirc;nsemnătate și pentru persoana &icirc;n cauză și pentru societate &icirc;n general pentru că banii ăia produc efecte &icirc;n societate și c&acirc;nd sunt luați din circulație creează și un rău social. Adică chiar nu e același tip de efect. Și chiar dacă efectul ar fi un pic mai mare, sigur proporționalitatea nu produce un efect egal, e ceva foarte greu de determinat. Nu putem să ajungem la ideea, nu putem să cuantificăm ce &icirc;nseamnă un efect egal așa că putem să &icirc;ncercăm să căutăm o pedeapsă egală.</p>
+<p>&nbsp;</p>
+<p><strong>Marius ...: </strong>Aici aș vrea să adaug, eu fiind profesor de economie sunt un pic setat pe asta, o persoană cu venituri foarte mari tinde să economisească și să nu utilizeze, &icirc;n general, cea mai mare parte din venituri pe c&acirc;nd eu, cu venituri mici, &icirc;n mod sigur voi cheltui toți banii pe consum. Am putea spune că eu, cu cei 500 de lei pe care mi i-a luat statul, aș fi cheltuit această sumă și statul ar fi &icirc;ncasat-o din impozite pe c&acirc;nd bogatul, cu cei 100, 200 de mii de Euro, nu numai că nu numai că nu &icirc;i investea dar probabil că nici nu &icirc;i ținea &icirc;n vreo bancă din Rom&acirc;nia. Și atunci, s-ar putea ca eu să produc mai multe efecte pozitive statului cu cei 500 de mii de lei dec&acirc;t bogatul cu 200 de mii de Euro.</p>
+<p>&nbsp;</p>
+<p><strong>Tatiana: </strong>Voiam să fac o precizare la ceea ce a zis doamna profesoară, mai exact asupra aplicării principiului proporționalității care nu mi se pare periculos ci mai degrabă nepotrivit pentru că mă g&acirc;ndesc că ar trebui să facem o paralelă &icirc;ntre ceea ce se &icirc;nt&acirc;mplă acum. Și anume că majoritatea accidentelor sunt produse de șoferi care au venituri mici și mijlocii și am observat că problema pe care s-a pus accentul a fost cea a bogaților. &Icirc;n momentul ăsta ar trebui să facem o paralelă &icirc;ntre cele două categorii și să vedem că acum săracii simt amenzile usturătoare la veniturile pe care le au și, cu toate astea, nu se &icirc;nt&acirc;mplă nimic, nu se ia nicio măsură. Ce măsură s-ar lua &icirc;n cazul &icirc;n care bogații ar primi amenzi pe care le-ar simți? Bănuiesc că efectul ar fi același. Mai degrabă aș merge pe principiul pe care l-a zis Maria mai devreme despre educare: că dacă populația sau producătorii autovehiculelor ar fi educați sau s-ar face campanii de educare &icirc;n sensul acesta, bănuiesc că așa nu s-ar mai ajunge la foarte multe accidente. Și eu așa văd soluția, practic.</p>
+<p>&nbsp;</p>
+<p><strong>Sergiu:&nbsp; </strong>Eu sunt Segiu și sunt student aici, la sociologie. Vreau să ridic două discuții. Prima: am observat că s-a pus foarte puțin accentul pe contribuția la bugetul statului. Procentual nu știu dacă putem spune că va fi o contribuție semnificativ mai mare care ar putea fi folosită &icirc;n alte domenii care ar putea să &icirc;mbunătățească, eventual, prin campanii de promovare ale poliției, de exemplu. Și a doua discuție, referitor la punctele care s-au dezbătut p&acirc;nă acum, cred că ne &icirc;nv&acirc;rtim &icirc;n jurul definițiilor, că 500 de lei e egal cu 5000 de lei și 14 procente sunt egale cu 14 procente. Pur și simplu obșnuim societatea cu una dintre variante și asta e.</p>
+<p><strong>&nbsp;</strong></p>
+<p><strong>Raluca Petrescu: </strong>O scurtă intervenție, &icirc;ncerc să diger acest <em>asta e!</em>. Am o &icirc;ntrebare comună pentru ambele echipe &icirc;nsă vreau să mă leg de ce s-a spus anterior pentru că mi se pare foarte important apropo de dinamica sălii, cum au loc intervențiile. Cuv&acirc;ntul cheie din ce s-a prezentat anterior este <em>natural</em>. Dacă se ajunge <em>&icirc;n mod natural</em>, care seamănă foarte mult cu un <em>asta e</em> dar asta e o altă discuție și n-aș vrea să ajungem acolo. &nbsp;</p>
+<p>&nbsp;</p>
+<p>Ceea ce m-ar fi interesat pe mine să aud &icirc;n seara aceasta ideea teoretică de dreptate distributivă. Asta era dorința mea proprie și personală dar evident că nu se impunea &icirc;n mod automat tuturor discursurilor. Ceea ce aş fi vrut să valorificăm din acest punct teoretic este faptul că, aşa cum spunea şi domnul profesor Morar, ceea ce &icirc;n mod aparent pare o inechitate, o inegalitate, de fapt vine să restabilească o lipsă de egalitate. Adică aparenţele sunt &icirc;nşelătoare, &icirc;n primă instanţă.</p>
+<p>&nbsp;</p>
+<p>&Icirc;ntrebarea concretă era dacă s-a avut &icirc;n vedere a se ocoli aspectul teoretic și dacă s-a optat pentru o discuție mult mai aplicată, practică și dacă da, de ce, evident.</p>
+<p>&nbsp;</p>
+<p><strong>Maria Antică (afirmator 1): </strong>Noi da, am avut o mică dezbatere dacă ar trebui să abordăm subiectul mai degrabă normativ, sau &icirc;n sensul ăsta teoretic sau dacă ar trebui să fie o abordare cumva mai practică. S-a ajuns la concluzia că o abordare mai practică ar fi mult mai aproape de public sau că explicația ar fi mult mai tangibilă.</p>
+<p>&nbsp;</p>
+<p><strong>Raluca Petrescu: </strong>Apropo de c&acirc;t de debatable este să consideri că bogatul a ajuns bogat pentru că s-ar fi comis niște circumstanțe injuste față de omul sărac. &Icirc;n punctul T zero, cineva ar fi fost favorizat ca să ajungă bogat &icirc;ntr-un T n și atunci bogatul ar trebui penalizat pentru că el a ajuns bogat și săracul a rămas sărac, ceea ce e o dezbatere suculentă.</p>
+<p>&nbsp;</p>
+<p><strong>Bianca Dragomir: </strong>Cred că se repetă ideea aceasta și Șerban a repetat-o, că de ce le asumăm o vină bogaților. Chiar nu cred că e valabil asta și ceilalți vorbitori au remarcat că bogatul are, de bine de rău, niște instrumente pe care noi nu le avem și că puși &icirc;n fața unor situații limită, ei se descurcă cu instrumentele pe care le au și că vrem să le tăiem din resurse, fără să asumăm că ei sunt oameni mai răi sau că există vreun cost-beneficiu sau vreun calcul de orice fel. Și că lucrurile așa sunt și că am vrea să le reducem șansa ca ei să &icirc;și pună la bătaie resursele. Asta e &icirc;ntrebarea către tine, nu dacă le dăm o vină &icirc;n plus sau că ne e ciudă...</p>
+<p>&nbsp;</p>
+<p><strong>Șerban Pitic (negator 1): </strong>Eu ce spuneam este că nu e ca și cum le iei aceste instrumente, vrei mai degrabă să faci o măsură preventivă dar eu ce am spus mai devreme este că nu e echitabil pentru că nu poți să cuantifici că o proporție din venit &icirc;nseamnă aceeași daună pentru persoana respectivă pentru că pur și simplu &icirc;nseamnă altceva. La nivelul la care lucrezi cu sute de mii de euro, probabil că consumul tău individual nu e acolo. Adică ai vrea să faci tot așa un impact similar cu cel care are 10 milioane și &icirc;i iei 2, probabil că bogatului ar trebui să &icirc;i iei 97 la sută din venit pentru că probabil eu, ca milionar, nu cheltui 8 milioane pe lună pentru existența mea. &nbsp;&nbsp;</p>
+                <div class='clear'></div>
+        </div><!-- end main content -->
+         <div class='clear'></div>
+</div>
+<div id="pix"></div>
+
+
+                                </div><!--end main -->
+                                <div id='parteneri'>
+                                    <span class='tr'></span><span class='tl'></span><span class='br'></span><span class='bl'></span><span id="filler"></span>
+                                    <div class='parteneri' id='sustinatori'>
+                                        <span class='floating_text' id='un_proiect'>Un proiect</span>
+                                        <a href='http://www.ardor.org.ro/'><div class='image' id='ardor'>Ardor</div></a>
+                                        <span class='floating_text' id='finantatori'>Finanțatori</span>
+                                        <a href='http://www.opensocietyfoundations.org/'><div class='image' id='open_society'>Open Society Foundation </div></a>
+                                        <a href='http://www.studentiq.ro//'><div class='image' id='memoplus'>MemoPlus</div></a>
+                                        <!-- <a href='http://www.ratiufamilyfoundation.com/'><div class='image' id='FundatiaRatiu'>Ardor</div></a>
+                                        <a href='http://www.eef.md/'><div class='image' id='eef'>East Europe Foundation</div></a>
+                                        <a href='http://www.mts.gov.md/'><div class='image' id='mdminister'>Ministerul Tineretului si Sportului al Republicii Moldova</div></a> -->
+
+                                        <span class='floating_text' id='parteneri_text'>Parteneri</span>
+
+                                        <a href='http://www.policycenter.eu/'><div class='image' id='PolicyCenter'>Policy Center</div></a>
+                                        <a href='http://www.britishcouncil.org/'><div class='image' id='BritishCouncil'>British Council</div></a>
+                                        <a href='http://www.europuls.ro/'><div class='image' id='europuls'>Europuls</div></a>
+                                        <a href='http://www.cere.ro/'><div class='image' id='cere'>Ce-Re</div></a>
+                                        <a href='http://www.primeromania.ro/'><div class='image' id='prime'>Prime Romania</div></a>
+                                        <a href='http://www.cji.ro/'><div class='image' id='cji'>Centrul pentru jurnalism independent</div></a>
+                                        <a href='http://www.aiesectm.ro/'><div class='image' id='aisec'>Aisec</div></a>
+                                        <!-- ===================================================================================================== -->
+                                        <a href='http://www.cogitus.ro/'><div class='image' id='cogitus'>Cogitus</div></a>
+                                        <a href='http://www.adevarul.ro/international/foreign_policy/'><div class='image' id='foreignPolicy'>Foreign Policy</div></a>
+                                        <a href='http://www.elsa.ro/'><div class='image' id='elsa'>Elsa</div></a>
+                                        <a href='http://www.vipromania.ro/'><div class='image' id='vipromania'>Voluntari pentru idei si proiecte</div></a>
+                                        <a href='http://www.ongtrust.ro/'><div class='image' id='ongtrust'>Trust</div></a>
+
+                                        <!-- ===================================================================================================== -->
+                                        <a href='http://www.leap.ro/'><div class='image' id='leap'>Leap</div></a>
+                                        <a href='http://www.younginitiative.org/'><div class='image' id='younginitiative'>Asociatia young initiative</div></a>
+                                        <a href='http://www.asjc.ro/'><div class='image' id='asjc'>Asjc</div></a>
+                                        <a href='http://osut.ro/'><div class='image' id='osut'>Osut</div></a>
+                                        <div class='clear'></div>
+                                    </div>
+                                    <div class='parteneri' id='parteneri_institutionali'>
+                                        <span class='floating_text' id='sponsori_text'>Sus&#539;in&#x0103;tori</span>
+                                        <a href='http://www.cartier.md/'><div class='image' id='cartier_logo'>Editura Cartier</div></a>
+                                        <a href='http://www.pll.md/ro/'><div class='image' id='biblio_logo'>Biblioteca publica de drept</div></a>
+                                        <span class='floating_text' id='institutii_text'>Parteneri institu&#539;ionali</span> 
+                                        <ul id='institutii'>
+                                            <!-- <span class='floating_text' id='institutii_text'>Parteneri institu&#539;ionali:</span> -->
+                                            <li><a href='http://www.politice.ro/'>Facultatea de &#536;tiin&#539;e Politice SNSPA </a></li>
+                                            <li><a href='http://www.comunicare.ro/'>Facultatea de Comunicare &#537;i Rela&#539;ii Publice SNSPA</a></li>
+                                            <li><a href='http://www.fspub.ro/'>Facultatea de &#536;tiin&#539;e Politice Universitatea Bucure&#537;ti</a></li>
+                                            <li><a href='http://www.filosofie.unibuc.ro/'>Facultatea de Filosofie Universitatea Bucure&#537;ti</a></li>
+                                            <li><a href='http://litere.unibuc.ro/'>Facultatea de Litere din Universitatea Bucure&#x015f;ti</a></li>
+                                            <li><a href='http://www.unibuc.ro/ro/fac_fsas_ro'>Facultatea de Sociologie Universitatea Bucure&#537;ti</a></li>
+                                            <li><a href='http://laws.uaic.ro/'>Facultatea de Drept Universitatea Alexandru Ioan Cuza Ia&#537;i</a></li>
+                                            <li><a href='http://www.uaic.ro/uaic/bin/view/Academic/Filosofie'>Facultatea de Filosofie si &#536;tiin&#539;e Social Politice Universitatea AIC Ia&#537;i</a></li>
+                                            <li><a href='http://www.upa.ro/'>Facultatea de Drept si Facultatea de &#x015e;tiin&#x0163;e Politice si Administrative Universitatea Petre Andrei Ia&#x015f;i</a></li> 
+
+                                            <li><a href='http://www.ubbcluj.ro/'>Universitatea Babe&#537;-Bolyai Cluj Napoca</a></li>
+                                            <li><a href='http://www.uvt.ro/'>Universitatea de Vest Timi&#537;oara</a></li>
+                                            <li><a href='http://www.upt.ro/'>Universitatea Politehnica Timi&#537;oara</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class='parteneri' id='parteneri_media'>
+                                        <span class='floating_text' id='media_text'>Parteneri media</span>
+                                        <a href='http://www.hotnews.ro/'><div class='image' id='hotnews'>HotNews</div></a>
+                                        <!-- <a href='http://www.lumebuna.ro/'><div class='image' id='lumebuna'>Lume Buna</div></a> -->
+                                        <a href='http://www.romaniapozitiva.ro/'><div class='image' id='romaniapozitiva'>Romania Pozitiva</div></a>
+                                        <a href='http://totb.ro/'><div class='image' id='thinkoutsidethebox'>Think Outside The Box</div></a>
+                                        <a href='http://www.facebook.com/carevasazica.vip'><div class='image' id='carevasazica'>Carevasazica</div></a>
+                                        <a href='http://www.studentie.ro/'><div class='image' id='studentiero'>Studentie.ro</div></a>
+                                        <a href='http://startub.unibuc.ro/'><div class='image' id='startub'>startub.unibuc.ro</div></a>
+                                        <!-- <a href='http://www.tvr.ro/tvr_cluj.php'><div class='image' id='tvrcluj'>Tvr Cluj</div></a> -->
+                                        <!-- <a href='http://www.radiotransilvania.ro'><div class='image' id='radiotransilvania'>Radio Transilvania</div></a> -->
+                                        <a href='http://iasifun.ziaruldeiasi.ro/'><div class='image' id='iasifun'>Iasi fun</div></a>
+                                        <a href='http://www.ziaruldeiasi.ro/'><div class='image' id='ziaruldeiasi'>Ziarul de Iasi</div></a>
+                                        <a href='http://www.kissfm.ro/timisoara'><div class='image' id='kissfm'>KissFm</div></a>
+
+                                        <div class='clear'></div> 
+                                    </div>
+                                    <div class='clear'></div>
+
+                                </div>	
+                            </div>	<!-- end wrap -->
+                            <div id='footer_mare'>
+                                <div id='footer'>
+                                    <div id='links' class='footer'>
+                                        <div id='menu1' style='margin:auto;'> <ul id='meniu_prinicpal'><li><a href='contacte/index.html'> Contact </a></li>
+<li><a href='clubdebate/index.html'> Cluburile </a></li>
+<li><a href='oamenii/index.html'> Oamenii </a></li>
+<li><a href='proiectul/index.html'> Proiectul </a></li>
+<li><a href='home/index.html'> Acasa </a></li>
+</ul></div><!--end menu-->
+                                    </div><!--
+                                    <div id='contact' class='footer'>
+                                            <h4>Contact</h4>
+                                            <p>office@closer2oxford.ro</p>
+                                            <p>bogdan.draghicescu@closer2oxford.ro<br>
+                                            <span class='detalii'> (asistenta tehnica web - orice probleme legate de site)</span></p>
+                                    </div>
+                                    -->
+                                    <div id='newsletter' class='footer'>
+                                        <script src="../../connect.facebook.net/en_US/all.js#xfbml=1"></script><fb:like href="http://www.facebook.com/pages/Closer2Oxford/162758797069605" width="250" colorscheme="dark"></fb:like>
+                                        <!--<h4>Newsletter</h4>
+                                        <form action='/page/newsletter'>
+                                                <input type='text' name='email'>
+                                                <input type='submit' id='submit' value='>'>
+                                                        
+                                        </form>-->
+                                    </div>
+                                    <div id='credits'>
+                                        Copyright(c) 2021 ARDOR |  Toate drepturile rezervate | Toate logo-urile si sloganurile de pe site sunt proprietate intelectuala inregistrata si nu pot fi reproduse fara acordul explicit al detinatorilor. <br>
+                                            <br /><br />
+                                            <b>Disclaimer</b><br /><i>
+
+                                                Programul educational Closer to Oxford este un program non-profit si nu are o legatura cu universitatea cu acelasi nume, referirea la Oxford avand doar o semnificatie simbolica.
+                                            </i>
+                                    </div>
+
+                                </div>		
+                            </div>		
+
+                            <div id="finantatde">Acest proiect este finantat cu sustinere din partea Comisiei Europene. Aceast publicatie [comunicare] reflecta doar
+                                vederile autorului, iar Comisia nu poate fi facuta  responsabila pentru utilizarea informatiei pe care o contine.</div>
+
+
+                        </body>
+                        </html>

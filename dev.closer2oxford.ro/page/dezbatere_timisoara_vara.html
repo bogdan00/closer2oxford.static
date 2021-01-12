@@ -1,0 +1,643 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml-strict.dtd">
+<HTML xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+    <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+            <link rel="icon" type="image/png"  href="../../closer2oxford.ro/favicon.html">
+                <link rel="stylesheet" href="var/layout.css" type="text/css">
+                    <title>Closer to Oxford - e timpul pentru argumente!</title>
+                    <link rel="alternate" type="application/rss+xml"  href="rss_feed" title="Stiri Closer2Oxford">
+                        <!-- <link rel="image_src" property="og:image"  href="/images/layout/closer2oxford_fb_white.png" /> -->
+                        <link rel="image_src" property="og:image"   type="image/jpeg"  href="../uploads/2015/06/9/facebook_icon.html" />
+                        <link rel="image_src" type="image/jpeg"  href="../uploads/2015/06/9/icon-facebook.gif" /> 
+						<meta name="description" content="Closer2Oxford pune în valoare oameni şi argumentele lor, în dezbateri online şi publice alături de tineri şi invitați avizaţi"/>
+                        <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9" />
+<script type='text/javascript' src='../js/jquery-1.4.4.min.js'></script>
+<script>var $j = jQuery.noConflict();</script>
+<script type='text/javascript' src='../js/tinymce/tiny_mce.js'></script>
+<script type='text/javascript' src='../js/jquery.form.js'></script>
+<script type='text/javascript' src='../js/fbLoginRegister.js'></script>
+<script type='text/javascript' src='var/javascript.js'></script>
+<script type='text/javascript' src='../js/jquery.hovertip-1.0.min.js'></script> 
+<script type='text/javascript' src='../js/jquery.jgrowl_minimized.js'></script> 
+<link rel='stylesheet' href='../css/jquery.jgrowl.css' media='screen' type='text/css'> 
+<script type='text/javascript' src='../js/jquery.timer-min.js'></script> 
+<link rel='stylesheet' href='var/gallery.css' media='screen' type='text/css'> 
+<script type='text/javascript' src='var/galerie/jquery.prettyPhoto.js'></script> 
+<meta name='description' content=''/> 
+<meta name='keywords' content=''/> 
+<style>.hovertip{
+    position:absolute;
+    padding:10px 13px;
+    z-index:2;
+    max-width:300px;
+    color:#303030;
+    background-color:#f5f5b5;
+    border:1px solid #DECA7E;
+    font-family:sans-serif;
+    font-size:12px;
+    line-height:18px;
+    text-align:left;
+    }</style> 
+<script type='text/javascript'>$j(document).ready(function(){$j('.tooltip').hovertip({'offset':[20,20]});get_notif();});
+
+if(!Array.indexOf){Array.prototype.indexOf = function(obj){for(var i=0; i<this.length; i++){if(this[i]==obj){return i;}}return -1;}}
+    hashuri = [] ;
+	 var tick_timer= 3000 ;
+ 
+	 function get_notif()
+        {
+		  
+		  //console.log(tick_timer);
+	     
+		  setTimeout(get_notif,tick_timer);
+        
+		   $j.ajax(
+            {
+                url: '/page/notif/show_events',
+                dataType: 'json',
+                data: "{}",
+                success: function(data)
+                    {
+                    $j.each(data,function(index,data){
+                        try
+                            {
+                            if( hashuri.indexOf(data.hash) == -1 )
+                                {
+                                hashuri.push(data.hash);
+                                $j.jGrowl(
+                                    data.str,
+                                    {
+                                        corners:'1px',
+                                        life: data.life,
+                                        header:data.title,
+                                        hash: data.hash,
+                                        sticky: data.sticky,
+                                        close: function(e,m,o)
+                                            {
+                                                $j.ajax({url:'/page/notif/delete_single_event/' + o.hash});
+                                            }
+                                    });
+                                }
+                            }
+                        catch(e){}
+                        })
+                    }
+            });
+        }
+	 </script> 
+ 
+                            
+  <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-19111721-1']);
+  _gaq.push(['_setDomainName', '.closer2oxford.ro']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+    
+                        </head>
+                        <body>
+                            <div id="global_wrap">
+                                <div id="header">
+                                    <a href='../index.html'><div id='logo'><img src='../images/layout/sigla.jpg'></div></a>
+                                    <a class='noExternal' href='http://www.facebook.com/pages/Closer2Oxford/162758797069605'><img src='../images/fb.png' style='height:30px;float:right;clear:right;margin:10px 5px 5px 5px;border:none;'/></a>
+                                    <a href='rss_feed'><img src='../images/feed-icon.png' style='height:30px;float:right;clear:right;margin:5px;border:none;'/></a>
+                                </div>
+                                <div id="meniu">
+                                    <div  id='register_login'>
+
+                                        
+  <a href='#' class='todo' id='login'>Login </a> &nbsp;<a href='register.html' class='todo' id='register'>Register</a>
+    <div id='login_box'>
+		  <form action='https://dev.closer2oxford.ro/page/ro/login_user/logon' method='post' id='user_login_form'>
+					 <div>Email: <input type='text' name='email'/> </div><br />
+					 <div>Pass: <input type='password' name='passwd'/></div><br />
+					 <a href='#' class='password_forgot'>forgot password?</a>
+					 <input type='hidden' value='/page/dezbatere_timisoara_vara' name='returnto' class='submiter'/><br />
+					 <input type='submit' value='login' name='btn' class='submiter'/><br />
+		  </form>
+		  
+		  <form action='https://dev.closer2oxford.ro/page/ro/login_user/reset_user_pw' method='post' id='user_reset_form'>
+					 <div>Email: <input type='text' name='email'/> </div><br />
+					 <a href='#' class='password_forgot'>login?</a>
+					 <input type='hidden' value='/page/dezbatere_timisoara_vara' name='returnto' class='submiter'/><br />
+					 <input type='submit' value='reset' name='btn' class='submiter'/><br />
+		  </form>
+		  
+    </div>
+    
+                                    </div>
+                                    <div id='menu1' style='margin:auto;'> <ul id='meniu_prinicpal'><li><a href='contacte/index.html'> Contact </a></li>
+<li><a href='clubdebate/index.html'> Cluburile </a></li>
+<li><a href='oamenii/index.html'> Oamenii </a></li>
+<li><a href='proiectul/index.html'> Proiectul </a></li>
+<li><a href='home/index.html'> Acasa </a></li>
+</ul></div><!--end menu-->
+                                </div>
+                                <div id="main"> 
+                                    <!--<div id='stiri-padding'>
+        <div id='stiri_back'>
+                {stiri} 
+    
+               
+        </div>-->
+        
+</div>
+<div  id="content-padding">
+        <div id='sidebar_menu'>
+                <span class='tr'></span>
+                <span class='tl'></span>
+                <span class='br'></span>
+                <span class='bl'></span>
+                <span id="filler"></span>
+                    
+                <ul></ul>
+                
+                <div class='clear'></div>
+        </div>
+        <div id="content">
+                <span class='tr'></span>
+                <span class='tl'></span>
+                <span class='br'></span>
+                <span class='bl'></span>
+                <span id="filler"></span>
+                <script type='text/javascript' src='../js/jquery.hovertip-1.0.min.js'></script> 
+<script type='text/javascript' src='../js/jquery.jgrowl_minimized.js'></script> 
+<link rel='stylesheet' href='../css/jquery.jgrowl.css' media='screen' type='text/css'> 
+<script type='text/javascript' src='../js/jquery.timer-min.js'></script> 
+<link rel='stylesheet' href='var/gallery.css' media='screen' type='text/css'> 
+<style>.hovertip{
+    position:absolute;
+    padding:10px 13px;
+    z-index:2;
+    max-width:300px;
+    color:#303030;
+    background-color:#f5f5b5;
+    border:1px solid #DECA7E;
+    font-family:sans-serif;
+    font-size:12px;
+    line-height:18px;
+    text-align:left;
+    }</style> 
+<script type='text/javascript'>$j(document).ready(function(){$j('.tooltip').hovertip({'offset':[20,20]});get_notif();});
+
+if(!Array.indexOf){Array.prototype.indexOf = function(obj){for(var i=0; i<this.length; i++){if(this[i]==obj){return i;}}return -1;}}
+    hashuri = [] ;
+	 var tick_timer= 3000 ;
+ 
+	 function get_notif()
+        {
+		  
+		  //console.log(tick_timer);
+	     
+		  setTimeout(get_notif,tick_timer);
+        
+		   $j.ajax(
+            {
+                url: '/page/notif/show_events',
+                dataType: 'json',
+                data: "{}",
+                success: function(data)
+                    {
+                    $j.each(data,function(index,data){
+                        try
+                            {
+                            if( hashuri.indexOf(data.hash) == -1 )
+                                {
+                                hashuri.push(data.hash);
+                                $j.jGrowl(
+                                    data.str,
+                                    {
+                                        corners:'1px',
+                                        life: data.life,
+                                        header:data.title,
+                                        hash: data.hash,
+                                        sticky: data.sticky,
+                                        close: function(e,m,o)
+                                            {
+                                                $j.ajax({url:'/page/notif/delete_single_event/' + o.hash});
+                                            }
+                                    });
+                                }
+                            }
+                        catch(e){}
+                        })
+                    }
+            });
+        }
+	 </script> 
+
+<script type='text/javascript' src='../js/jquery.hovertip-1.0.min.js'></script> 
+<script type='text/javascript' src='../js/jquery.jgrowl_minimized.js'></script> 
+<link rel='stylesheet' href='../css/jquery.jgrowl.css' media='screen' type='text/css'> 
+<script type='text/javascript' src='../js/jquery.timer-min.js'></script> 
+<link rel='stylesheet' href='var/gallery.css' media='screen' type='text/css'> 
+<script type='text/javascript' src='var/galerie/jquery.prettyPhoto.js'></script> 
+<style>.hovertip{
+    position:absolute;
+    padding:10px 13px;
+    z-index:2;
+    max-width:300px;
+    color:#303030;
+    background-color:#f5f5b5;
+    border:1px solid #DECA7E;
+    font-family:sans-serif;
+    font-size:12px;
+    line-height:18px;
+    text-align:left;
+    }</style> 
+<script type='text/javascript'>$j(document).ready(function(){$j('.tooltip').hovertip({'offset':[20,20]});get_notif();});
+
+if(!Array.indexOf){Array.prototype.indexOf = function(obj){for(var i=0; i<this.length; i++){if(this[i]==obj){return i;}}return -1;}}
+    hashuri = [] ;
+	 var tick_timer= 3000 ;
+ 
+	 function get_notif()
+        {
+		  
+		  //console.log(tick_timer);
+	     
+		  setTimeout(get_notif,tick_timer);
+        
+		   $j.ajax(
+            {
+                url: '/page/notif/show_events',
+                dataType: 'json',
+                data: "{}",
+                success: function(data)
+                    {
+                    $j.each(data,function(index,data){
+                        try
+                            {
+                            if( hashuri.indexOf(data.hash) == -1 )
+                                {
+                                hashuri.push(data.hash);
+                                $j.jGrowl(
+                                    data.str,
+                                    {
+                                        corners:'1px',
+                                        life: data.life,
+                                        header:data.title,
+                                        hash: data.hash,
+                                        sticky: data.sticky,
+                                        close: function(e,m,o)
+                                            {
+                                                $j.ajax({url:'/page/notif/delete_single_event/' + o.hash});
+                                            }
+                                    });
+                                }
+                            }
+                        catch(e){}
+                        })
+                    }
+            });
+        }
+	 </script> 
+
+<style type="text/css">
+.poze
+{
+    float:right;
+    width:110px;
+}
+.poze a img
+{    border:none;
+}
+.main_content
+{
+    float:left;
+    width:560px;
+}
+</style>
+
+ <div class = 'poze'>
+            <a class='thumb' href='../uploads/2011/09/23/inceput_timisoara.wyl91z.png' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../uploads/2011/09/23/thumb_inceput_timisoara.wyl91z.png' alt='' />
+                <span class='desc'></span>
+            </a>
+        
+
+            <a class='thumb' href='http://www.youtube.com/watch?v=wNR4bo3owYo' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../../img.youtube.com/vi/wNR4bo3owYo/1.jpg' alt='' />
+                <span class='desc'>Discurs A1 - Cătălin Artenie</span>
+            </a>
+        
+
+            <a class='thumb' href='http://www.youtube.com/watch?v=iPMQG6uuoWY' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../../img.youtube.com/vi/iPMQG6uuoWY/1.jpg' alt='' />
+                <span class='desc'>Discurs N1 - Sergiu Cârlan</span>
+            </a>
+        
+
+            <a class='thumb' href='http://www.youtube.com/watch?v=PDaJUqycEJM' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../../img.youtube.com/vi/PDaJUqycEJM/1.jpg' alt='' />
+                <span class='desc'>Discurs A2 - Adriana Nica</span>
+            </a>
+        
+
+            <a class='thumb' href='http://www.youtube.com/watch?v=_-x0gqa-pHE' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../../img.youtube.com/vi/_-x0gqa-pHE/1.jpg' alt='' />
+                <span class='desc'>Discurs N2 - Gheorghe Mihai</span>
+            </a>
+        
+
+            <a class='thumb' href='http://www.youtube.com/watch?v=qYn_xAi0UH8' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../../img.youtube.com/vi/qYn_xAi0UH8/1.jpg' alt='' />
+                <span class='desc'>Discutie cu publicul</span>
+            </a>
+        
+
+            <a class='thumb' href='../uploads/2011/09/23/final_timisoara.5h2rsj.png' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../uploads/2011/09/23/thumb_final_timisoara.5h2rsj.png' alt='' />
+                <span class='desc'></span>
+            </a>
+        
+
+
+    <script>
+    $j(document).ready(function(){
+      		$j("a[rel^='prettyPhoto']").prettyPhoto({theme:'facebook'});
+        });
+    
+    </script>
+    </div>
+
+<div class='main_content'>
+<p><strong>Timisoara, Facultatea de Drept din cadrul Universitatii de Vest, 14 iunie 2011, ora 14:00</strong></p>
+<p><strong>Echipa afirmatoare:</strong></p>
+<p>Adriana Nica, jurnalist, timisoara.ro</p>
+<p>Catalin Artenie, student, anul II, Facultatea de Drept</p>
+<p><strong>Echipa negatoare:</strong></p>
+<p>Gheorghe Mihai, profesor universitar, Facultatea de Drept</p>
+<p>Sergiu C&acirc;rlan, student, anul II, Facultatea de Drept</p>
+<p><strong>Moderator:</strong>&nbsp;Andreea Nistor, ARDOR Banat</p>
+<p><strong>Catalin Artenie (Afirmator 1):</strong></p>
+<p>&nbsp;&bdquo;Modul &icirc;n care s-a predat religia &icirc;i &icirc;nspaim&icirc;nta pe elevi&ldquo;. Nu sunt doar cuvintele mele, ci cuvintele fostului ministru al educatiei, Mircea Miclea, care spune acest lucru. Suntem &icirc;n stadiul &icirc;n care exista 18.300 de biserici si doar 4.700 scoli generale, dar echipa afirmatoare nu este deranjata de acest lucru. De ce suntem deranjati, &icirc;nsa? Suntem descurajati de acest concubinaj artificial &icirc;ntre religie si predarea &icirc;n scoli. Noi suntem aici astazi pentru a va explica de ce nu este un concubinaj fericit, de ce aceste doua elemente nu se potrivesc &icirc;n societatea rom&acirc;neasca &icirc;n momentul de fata. Ca urmare, suntem aici ca sa sustinem ca este timpul sa renuntam la acest lucru.</p>
+<p>Un prim lucru: voi explica din punct de vedere legal, de principiu, de ce aceasta masura nu este una necesara si de ce este un lucru rau sa fie predata religia, &icirc;n acest mod, confesional, asa cum se preda &icirc;n momentul de fata, cu aceste prevederi care sunt aplicate &icirc;n mod obligatoriu; va voi explica de ce, desi nu pare asa, este obligatoriu &icirc;n momentul de fata si este un dezavantaj acest lucru; iar, cu personalul pe care &icirc;l avem astazi, de ce lucrul acesta este un lucru foarte rau &icirc;n societate.</p>
+<p>&Icirc;n primul r&acirc;nd as vrea sa spun ca primul lucru deranjant este faptul ca &icirc;n scolile publice din Rom&acirc;nia se preda religia &icirc;ntr-un mod confesional. Ce &icirc;nseamna asta? &Icirc;nseamna ca avem mai multe dezavantaje care reies de aici. De exemplu, la Pascani exista un caz destul recent (nu voi numi exact religia la care s-a predat respectivul lucru), dar s-a predat faptul ca catolicii sunt posedati de diavol. Este un exemplu. &Icirc;ntr-adevar, pare foarte socant, dar nu este un exemplu singular si va voi spune imediat care este izvorul acestor exemple, fiindca nu este persoana respectiva vinovata, nu, este o cauza unica pentru acest lucru. &Icirc;n afara de asta, exista de asemenea profesori care &icirc;i &icirc;nvata pe ortodocsi la scoala faptul ca alte practici ale altor religii sunt prozelitiste si demonice &mdash; iar acesta este un lucru foarte rau &icirc;n societate.</p>
+<p>Dar sa privim chiar la sfaturile din cartile respective, spun&acirc;nd ca poate profesorii sunt de vina. Sfaturi de genul: &bdquo;faceti-va prieteni credinciosi&rdquo;; sau pilda centrala fiind &icirc;n jurul ideii de &bdquo;daca nu esti credincios, primesti o pedeapsa&rdquo; &mdash; amenintarea cu iadul ca un catalizator al religiei si al credintei, un lucru foarte negativ, pentru ca ajungem iar la cuvintele fostului ministru al educatiei, care spune ca acest lucru &icirc;i &icirc;nspaim&acirc;nta pe elevi. Nu vrem sa &icirc;i &icirc;nspaim&acirc;ntam pe elevi, vrem sa &icirc;i educam pe elevi. De aceea este Ministerul &Icirc;nvatam&acirc;ntului, si de aceea face parte din stat, si de aceea orice neregula &icirc;n acest sens pune &icirc;n pericol laicitatea statului: fiindca laic, &icirc;nsemn&acirc;nd omenesc, lumesc, acest lucru intra &icirc;n contradictie cu orice credinta religioasa. Trebuie sa ne debarasam total de acest lucru.</p>
+<p>Si acum o sa vin la articolul 32 din Constitutie, care, &icirc;n aparenta, este un punct bun pentru echipa negatoare, care spune ca poate exista si ca trebuie sa existe o predare religioasa &icirc;n scoli. Da, corect, predare religioasa, suntem de acord cu lucrul acesta, dar nu predarea religiei &icirc;ntr-un mod confesional. Suntem de acord cu echipa negatoare sa existe un curs despre predarea comparata a diferitelor religii prin prisma istoriei religiilor la scoala, dar nu suntem de acord ca religiile majoritare sa &icirc;si impuna, &icirc;n modul &icirc;n care o fac acum, un sistem de propaganda si de educare din start a copiilor &icirc;n acest sens. De ce spun propaganda si de ce sunt asa de vehement &icirc;n legatura cu acest lucru? Fiindca Legea 1/2011, legea actuala a educatiei, include anumite masuri care sunt foarte, foarte rele si le voi lua pe r&acirc;nd.</p>
+<p>Prima masura este faptul ca, spre deosebire de legea trecuta, nu mai poti sa scrii tu &icirc;nsuti cererea prin care sa refuzi ora de religie ca religie ortodoxa dec&acirc;t daca ai 18 ani; acum &icirc;ti trebuie si dupa 16 ani acordul parintilor, un lucru negativ, un lucru care, din prisma sistemului descurajeaza elevul sa spuna &ldquo;Nu vreau sa &icirc;nvat despre religa mea la scoala, vreau sa &icirc;nvat despre hinduism&rdquo;, &bdquo;Vreau sa nu &icirc;nvat nimic, vreau sa fiu ateu, vreau sa fiu rationalist&rdquo;. Acesta este lucrul care trebuie sa se &icirc;nt&acirc;mple &icirc;n momentul de fata, pentru ca acesta este un lucru democratic si asta ne asigura ca nu e pusa &icirc;n pericol laicitatea statului rom&acirc;n.</p>
+<p>Mai mult decat at&acirc;t, ce as vrea sa spun aici este ca personalul didactic care preda &icirc;n scoli este unul este ales conform unor protocoale cu &mdash; bine&icirc;nteles &mdash; Biserica Ortodoxa Rom&acirc;na, conform Legii 487. Ce presupune acest lucru? Se face o diferentiere &icirc;ntre ceilalti profesori, &icirc;n conditiile &icirc;n care ei ajung acolo si &icirc;n care sunt sanctionati, depinz&acirc;nd bine&icirc;nteles de organismele culturale care &icirc;i propaga &icirc;n acea functie. Acesta este iar un lucru foarte negativ. Unde se ajunge cu acest lucru si unde se ajunge cu aceste &icirc;ncalcari? Cu aceste &icirc;ncalcari se ajunge la faptul ca copiii sunt obligati ca, &icirc;n momentul &icirc;n care ajung la scoala, sa mosteneasca faptul ca ei sunt de religie ortodoxa, urm&acirc;nd ca ei, daca vor, sau daca li se pare destul de important, sau, mai de graba, daca parintii lor vor, sa refuze acest lucru.</p>
+<p>Practic li se da dreptul de a refuza o obligatie, ceea ce este absurd, &icirc;n momentul de fata. Echipa negatoare trebuie sa demonstreze ca este un lucru bun ca toata lumea sa porneasca de la premisa ca face parte din religia ortodoxa; c&acirc;t timp ei demonstreaza lucrul asta, si c&acirc;t timp demonstreaza ca &icirc;n momentul de fata &icirc;n societate se poate preda religia &icirc;n mod confesional si sanatos pentru societatea rom&acirc;neasca, din punctul meu de vedere c&acirc;stiga acest meci. Multumesc!</p>
+<p>Andreea Nistor: Catalin spunea &icirc;n dscursul sau: unu la m&acirc;na, ca echipa lui nu este de acord cu ideea de predare confesionala a religiilor &icirc;n scoli; &icirc;n al doilea r&acirc;nd sustinea cu vehementa faptul ca este foarte dificil pentru un elev sau o persoana care studiaza &icirc;n Romania sa opteze pentru a nu studia religia si, mai mult dec&acirc;t at&acirc;t, chiar si &icirc;n cazul &icirc;n care va studia religia &icirc;n scoala, felul &icirc;n care aceasta este predata nu este deloc benefic pentru optiunile personale ale individului respectiv si nu prea &icirc;i da optiunea sa aleaga &icirc;ntre lucrurile pe care &icirc;si doreste sa le studieze. O sa avem acum 3 minute dedicate &icirc;ntrebarilor din partea celeilalte echipe, asa ca o sa &icirc;l rog pe dl. profesor Gheorghe Mihai si pe Sergiu sa &icirc;i adreseze lui Catalin &icirc;ntrebarile &icirc;n legatura cu discursul pe care tocmai l-a avut, timp de 3 minute. O sa te rog, eventual, sa te ridici putin ca sa se auda &icirc;ntrebarile si catre sala.</p>
+<p><strong>Cross 1:</strong></p>
+<p>Sergiu C&acirc;rlan: Spuneai ca predarea religiilor se face &icirc;n mod confesional si te refereai la religia ortodoxa, &icirc;n speta, vorbeai despre religia ortodoxa...</p>
+<p>Catalin Artenie: Ca un exemplu, desigur.</p>
+<p>Sergiu C&acirc;rlan: As vrea sa te &icirc;ntreb de unde ai dedus tu lucrul acesta, din moment ce legea educatiei spune foarte clar si foarte bine ca exista posibilitatea oricarui elev (sigur &icirc;n acord cu parintii acestuia) sa aleaga sa participe la orele de religie conform propriei confesiuni? Iar toate confesiunile sunt recunoscute de stat. Altfel spus, exista posibilitatea ca fiecare cetatean, respectiv fiecare elev, sa studieze religia &icirc;n propria sa confesiune &icirc;n scolile de stat.</p>
+<p>Catalin Artene Am sa raspund prin doua puncte importante: Un punct important este faptul ca eu v-am exemplificat ca, &icirc;ntr-un mod foarte rigid, ai dreptul la o optiune, &icirc;nsa felul &icirc;n care pornesti si felul &icirc;n care ti se &icirc;ngreuneaza exercitarea acestui drept este unul discriminatoriu fata de persoanele care doresc sa nu faca ore de religie &icirc;n cadrul orelor obligatorii de religie ortodoxa de la scoala. &Icirc;ntr-adevar, poti alege alte optiuni, dintre cele care sunt prevazute de curicula. Sa nu credeti ca toate cultele din lume &mdash; ca daca sunt sa zicem 20 de hindusi sau vacanisti, ne putem face un cult special pentru asta si vom lua note bune ca sa putem concura din punct de vedere competitiv cu colegii nostri care sunt ortodocsi sau religiosi. &Icirc;nsasi aceasta schismare &icirc;ntre faptul ca de acum &icirc;ncolo vom fi elevi ortodocsi, elevi catolici si elevi musulmani este un lucru rau. Exista rapoarte &icirc;n Franta, precum raportul Stasi, care arata ca aceasta schismare din start &icirc;n ceea ce priveste despartirea elevilor la ora de religie aduce foarte mari dezavantaje la nivel social, &icirc;n ceea ce priveste discriminarea. Asta este un lucru rau.</p>
+<p>Gheorghe Mihai: Vreau sa te &icirc;ntreb ceva. Care e antonimul cuv&acirc;ntului &bdquo;laic&rdquo;?</p>
+<p>Catalin Artenie: Al cuv&acirc;ntului &bdquo;laic&rdquo;?</p>
+<p>Gheorghe Mihai: Da! Antonimul.</p>
+<p>Catalin Artenie: Cred ca &bdquo;spiritual&rdquo;. Probabil si &bdquo;sacru&rdquo; este un cuv&acirc;nt...</p>
+<p>Andreea Nistor: Multumim lui Catalin pentru faptul ca a raspuns la &icirc;ntrebarile echipei adverse. Din acest moment, este r&acirc;ndul echipei opozitiei sa tina discursul prin care sa demonstreze ca lucrurile pe care le-a spus cealalta echipa nu sunt valide, sa sustina proprile argumente vizavi de motiune. Din echipa dumneavoastra, cine va vorbi? Sergiu, ai cuv&acirc;ntul.</p>
+<p><strong>Sergiu C&acirc;rlan&nbsp; - discurs Negator 1</strong></p>
+<p>Noi, ca echipa negatoare, va trebui sa infirmam motiunea, si anume faptul ca predarea religiei &icirc;n scoli pune &icirc;n pericol laicitatea statului rom&acirc;n. Si aici as vrea sa aduc o adaugire definitiei date de colegul meu termenului de &bdquo;laicitate&rdquo;. Ce este laicitatea? Ai spus ceva de genul &bdquo;neimixtiune a statului in chestiuni religioase&rdquo;. Ei bine, laicitatea, respectiv secularismul, asa cum a fost el promovat de-a lungul timpului, avea trei principii de baza si anume: neutralitatea statului cu privire la toate confesiunile religioase; lucrul acesta &icirc;l vedem &icirc;n Rom&acirc;nia &icirc;n primul r&acirc;nd prin faptul ca &icirc;n Rom&acirc;nia nu exista o religie de stat, nu exista ceva oficial; apoi, un stat secular, respectiv un stat laic, este un stat care &icirc;i asigura pe toti cetatenii ca manifestarea propriilor credinte, indiferent de care sunt acestea, este permisa; asadar, un stat laic, &icirc;n conditiile &icirc;n care este si democratic (pentru ca vorbim despre Rom&acirc;nia, asa cum ne spune motiunea), nu poate lasa la o parte fenomenul religios ca realitate sociala, nu o poate ignora doar pentru ca termenul de laicitate spune ca statul nu trebuie sa se interpuna &icirc;n chestiuni religioase. Secularismul spune ca statul nu trebuie sa se lase influentat de Biserica, nu trebuie sa se lase influentat de religie, ca institutie, nu ca nu trebuie sa aiba un punct de vedere cu privire la acest fenomen social, &icirc;ntruc&acirc;t e imposibil. E ridicol sa sustinem ca religia trebuie sa o lasam la o parte, din moment ce 98% din populatia Rom&acirc;niei are o anumita religie.</p>
+<p>Apoi, referitor la caracterul obligatoriu sau optional al participarii la orele de religie: Participarea la orele de religie nu este obligatorie. Este prevazut &icirc;n legea &icirc;nvatam&acirc;ntului, avem dovada articolul 18: &bdquo;elevii pot participa la orele de religie conform propriilor confesiuni&rdquo;; si alineatul doi spune ca la cerere se poate renunta. Sigur, cum a spus si colegul meu, daca sunt minori este nevoie de acordul parintilor, sunt sub influenta acestora, sub autoritatea acestora; mi se pare c&acirc;t se poate de normal. Religia, cum am spus, este un fenomen; este, sa zicem, un mod de organizare &icirc;n care oamenii &icirc;si exteriorizeaza cumva partea spirituala; a fost prezenta de 6 000 de ani &icirc;ncoace &icirc;n constinta si &icirc;n viata oamenilor; elementul cultural, social si istoric nu poate nega lucrul acesta; este imposibil sa excludem religia din sfera sociala.</p>
+<p>Revenind la cifre &mdash; vreau sa dau c&acirc;teva cifre: &Icirc;n Rom&acirc;nia, undeva la 90% dintre cetateni se considera crestini, mai exact crestin-ortodocsi, pentru ca asa se &icirc;nt&acirc;mpla, este o realitate. Nu este nicio problema. Undeva la 95% sunt crestini sub orice alta forma, acum ne punem &icirc;ntrebarea: Statul ce face? Este de acord cu predarea religiei &icirc;n scoli? Altfel spus, statul sustine religia ortodoxa sau religia crestina? Nu. De ce nu face lucrul acesta? Pentru ca, avand &icirc;n vedere ca sunt aproximativ 95% persoane care sunt crestini, care se considera crestini, este c&acirc;t se poate de normal ca statul sa ofere garantiile necesare exercitiului credintei, din moment ce cetatenii o cer. Daca 95% din cetateni cer statului sa faca ceva, este normal ca statul sa ofere. Daca celelalte cinci procente cer statului sa faca ceva, este la fel de normal ca statul sa o faca.</p>
+<p>Apoi, revenind putin la argumentele lui Catalin: Spunea ca unii profesori vorbesc &icirc;n fel si chip despre ce se &icirc;nt&acirc;mpla daca nu respecti anumite chestiuni de ordin religios. Aici nu putem vorbi dec&acirc;t despre un abuz al profesorilor. Revenind la chestiunile pe care le-ai spus cu privire la publicatii, la cartile care se predau &icirc;n scoli; ei bine aici e, din nou, o problema &icirc;n ceea ce priveste selectarea acestor materiale. Rolul predarii religiei &icirc;n scoli nu este &icirc;ndoctrinarea, pentru ca daca elementul obligational nu exista &icirc;ntr-un stat, nu esti obligat sa participi la ora de religie. Nu poti fi &icirc;ndoctrinat dec&acirc;t daca esti obligat. Nu te poti &icirc;ndoctrina fara ca elementul obligational sa existe. Poti participa sau nu. Te poti lasa &icirc;ndoctrinat sau nu te poti lasa &icirc;ndoctrinat. Ei bine, consideram ca, date fiind aceste lucruri (o data, neutralitatea statului; apoi, posibilitatea oricarui cetatean de a-si alege propria religie, propria credinta si de a si-o manifesta asa cum doreste; respectiv, neinfluenta bisericii &icirc;n ceea ce priveste chestiunile de ordin politic), nu putem sustine ca laicitatea unui stat este pusa la &icirc;ndoiala doar prin prisma faptului ca se preda religia &icirc;n scoli. Si, ca un scurt exemplu, vreau sa dau exemplul Italiei: &icirc;n Italia, prezenta simbolurilor religioase &icirc;n scoli este obligatorie, si asta nu se &icirc;nt&acirc;mpla deoarece Italia nu este un stat laic, ci se &icirc;nt&acirc;mpla deoarece istoria si traditia statului italian impune lucrul acesta; nu putem nega aceste realitati. Asadar, cred ca predarea religiei &icirc;n scoli nu afecteaza &icirc;n niciun fel laicitatea statului rom&acirc;n.</p>
+<p>&nbsp;</p>
+<p><strong>Cross 2:</strong></p>
+<p><strong>Catalin Artenie:</strong> Ai sustinut faptul ca statul nu este influentat de Biserica. Ce parere ai despre interventia Patriarhului Daniel &icirc;n Camera Deputatilor prin care cere schimbarea celor trei amendamente din Legea educatiei, privind o data statutul profesorilor, apoi ideea de a nu mai fi posibila prezenta istoriei religiilor sau a istoriei artelor ca alternativa la predarea religiei? Ce parere ai despre acest lucru?</p>
+<p><strong>Sergiu C&acirc;rlan:</strong> Este simplu: este o propunere legislativa, care este la &icirc;nedm&acirc;na oricarui cetatean, a oricarui grup de cetateni, dupa cum bine stim din dreptul constitutional, care sa &icirc;ndeplineasca anumite conditii...</p>
+<p><strong>Catalin Artenie:</strong> Deci vrei sa sustii ca este parerea lui proprie, nu a Bisericii Ortodoxe Rom&acirc;ne?</p>
+<p><strong>Sergiu C&acirc;rlan:</strong> Asta nu are nicio importanta. Este o propunere legislativa. Faptul ca Biserica Ortodoxa Rom&acirc;na propune ceva sau faptul ca un grup de nebuni propune ceva, sau faptul ca un alt grup de nebuni propune altceva, indiferent ce &icirc;nseamna aceasta &mdash; sunt propuneri legislative care nu influenteaza.</p>
+<p><strong>Gheorghe Mihai:</strong> Un ONG, vrei sa spui, dar ONG-urile nu sunt grupuri de nebuni, dragule.</p>
+<p><strong>Sergiu C&acirc;rlan:</strong> Nu, nu. M-am referit la grupuri de cetateni, de persoane, indiferent sub ce forma se manifesta.</p>
+<p><strong>Catalin Artenie:</strong> Ati spus ca religia nu este obligatorie &icirc;n scoala. Atunci de ce face parte din trunchiul comun, daca nu este obligatorie?</p>
+<p><strong>Sergiu C&acirc;rlan:</strong> Face parte din trunchiul comul pentru ca majoritatea cetatenilor, adica aproximativ 90% din cei care se considera crestini, respectiv, &icirc;n cazul vostru, ortodocsi, cer ca religia sa fie predata &icirc;n scoli. Dovada este ca parintii accepta ca elevii, copiii lor, sa participe la orele de religie.</p>
+<p><strong>Catalin Artenie:</strong> Ce &icirc;nseamna sa fii crestin, dupa parerea ta?</p>
+<p><strong>Sergiu C&acirc;rlan:</strong> Sa sustii niste principii si niste idei care au ca fundament principiile crestine, asa cum au fost ele dezvoltate din primele secole. Asta &icirc;nseamna.</p>
+<p><strong>Gheorghe Mihai:</strong> Nu, nu. Tu nu esti crestin.</p>
+<p><strong>Adriana Nica:</strong> Ai spus ca nu te poti lasa &icirc;ndoctrinat de predarea religiei. Religia este o doctrina. Cum nu te poti lasa &icirc;ndoctrinat pred&acirc;ndu-se o doctrina?</p>
+<p><strong>Sergiu C&acirc;rlan:</strong> Nu te poti lasa &icirc;ndoctrinat daca nu accepti &icirc;ndoctrinarea.</p>
+<p><strong>Gheorghe Mihai:</strong> Crestinismul are doctrine, dar el &icirc;nsusi nu e doctrina. Asa cum dreptul are doctrine, dar el, dreptul, nu este doctrina, asa cum arta are doctrine, dar ea &icirc;nsasi nu e doctrina, asa cum morala are doctrine, dar ea &icirc;nsasi nu e doctrina.</p>
+<p><strong>Catalin Artenie:</strong> O ultima &icirc;ntrebare. Vreau sa te &icirc;ntreb de ce exercitiul credintei trebuie facut neaparat &icirc;n cadrul scolii? Care este legatura &icirc;ntre ele? Nu poate fi facut doar &icirc;n biserica si acasa, &icirc;n familie? Asta e &icirc;ntrebarea.</p>
+<p><strong>Sergiu C&acirc;rlan:</strong> Pai este simplu. Revenind la ce ti-am spus &icirc;nainte, se presupune ca religia nu &icirc;nvata neaparat doctrine, nu? Religia &icirc;nvata valori morale, valori spirituale, relatii interculturale, interpersonale, valori civice si asa mai departe. Daca cetatenii cer ca religia sa fie predata &icirc;n scoli, consider&acirc;nd ca &icirc;n felul acesta copiii lor vor fi mai bine educati &icirc;n baza principiilor crestine, de ce sa nu se &icirc;nt&acirc;mple lucrul acesta?</p>
+<p><strong>Andreea Nistor:</strong> Multumim frumos pentru discurs. Este r&acirc;ndul echipei care sustine motiunea astazi sa argumenteze &icirc;n favoarea motiunii. Am sa o rog pe doamna Adriana Nica sa sustina acest discurs. Va fi un discurs interesant pentru noi. Sergiu tocmai explica &icirc;n argumentele sale de ce este foarte important sa facem diferenta &icirc;ntre influenta pe care o exercita Biserica asupra societatii si a &icirc;nvatam&acirc;ntului si predarea religiei &icirc;n scoli, pur si simplu, ca atare; si ca acele probleme pe care le sesizase Catalin &icirc;n discursul lui sunt mai degraba probleme de procedura, sau legate de felul &icirc;n care profesorii fac acest lucru. O rog pe doamna Adriana Nica sa resustina pozitia echipei pro. Aveti cuv&acirc;ntul timp de cinci minute.</p>
+<p><strong>Adriana Nica &ndash; discurs Afirmator 2</strong></p>
+<p>Eu sunt ceva mai putin patimasa dec&acirc;t colegii mei. Ei au facut referire la niste principii din Constitutie, din legi fundamentale, din Legea &icirc;nvatam&acirc;ntului, eu vreau sa va spun ca eu cred &icirc;n doua seturi de legi: ale lui Einstein si ale lui Iisus; dar mai cred de asemenea ca nicio religie nu &icirc;l are pe Dumnezeu si ca Dumnezu nu are nicio religie. Mai cred de asemenea ca Rom&acirc;nia nu este pregatita la ora actuala sa predea religie unor copii. Ne uitam la televizor si ne uitam la ce se &icirc;nt&acirc;mpla &icirc;n biserici, si &icirc;n scoala rom&acirc;neasca, si &icirc;n sistemul de &icirc;nvatam&acirc;nt rom&acirc;nesc, si peste tot nu vedem dec&acirc;t oameni dogmatici, isterici. Rar pe limba lor sunt &icirc;ntr-adevar valori mari, mai mult spirituale. Cred ca omul nu poate trai &icirc;n afara spiritului si ca omul este o fiinta spirituala, crd ca trebuie sa mearga la biserica si sa invete ce &icirc;nseamna crestinism si ce &icirc;nseamna toate religiile si care sunt confesiunile crestinismului, dar cred ca lucrul acesta trebuie sa &icirc;l &icirc;nvete &icirc;n lacasele de cult. Cred ca &icirc;n scoala ar trebui sa ram&acirc;na istoria religiilor a lui Eliade si sa ram&acirc;na religia ca o forma de &icirc;nvatare, de manipulare &icirc;n masa, de promovare a culturii &icirc;n masa. Manipulare nu neaparat &icirc;n sensul negativ, voi aveti tot timpul impresia ca manipulare &icirc;nseamna ceva rau. Nu, masele pot fi manipulate, valorile morale pot fi manipulari, dar nu neaparat &icirc;n sensul negativ. Si cred foarte tare ca, acolo unde un parinte, un preot cu har, ne poate spune care sunt valorile si de ce trebuie noi sa facem distinctia foarte clara &icirc;ntre bine si rau. Pentru ca asta ne &icirc;nvata religia &icirc;n primul r&acirc;nd, diferenta &icirc;ntre bine si rau, si nu &icirc;ntre iad si rai, care sunt doar doua notiuni inventate tot de o religie, sau tot de niste preoti. &Icirc;n Biblie se pune mai putin accentul pe asta. Oameni care sa ne formam fara sa fi citit vreodata Biblia, fara sa fi &icirc;nteles vreodata ce a &icirc;nsemnat venirea lui Iisus pe pam&acirc;nt, nu ne putem forma si nu suntem oameni, nu ajungem dec&acirc;t animale. Dar, din pacate, lucrul asta trebuie sa &icirc;l &icirc;nvatam de la oameni cu har. Iar experienta mi-a aratat ca profesorii de religie din scoli aleg sa devina profesori de religie pentru ca n-au gasit alt job, alt loc de munca, si nu pentru ca ar avea har. Daca s-ar face o selectie clara, (nu stiu cum, n-am &icirc;nca solutii) poate da, dar p&acirc;na atunci, sa ram&acirc;na &icirc;n locurile &icirc;n care cel putin selectia sau interventia o face Dumnezeu. Va multumesc!</p>
+<p><strong>Andreea Nistor:</strong> Dupa primele doua discursuri am avut cate o sesiune de &icirc;ntrebari, din acest moment am ajuns &icirc;n partea finala a dezbaterii noastre. Ultimele doua discursuri din partea fiecarei echipe se succed fara sa mai avem un timp alocat &icirc;ntrebarilor. Din acest motiv, o sa &icirc;l rog pe domnul profesor Gheorghe Mihai sa ne explice care este pozitia echipei dumnealui &icirc;n legatura cu tema pe care o dezbatem astazi si, de ce nu, sa traga si concluziile pentru discutia care s-a purtat astazi &icirc;n &icirc;ntregul ei. Domnule profesor, aveti cuv&acirc;ntul.</p>
+<p><strong>Gheorghe Mihai &ndash; discurs Negator 2</strong></p>
+<p>&Icirc;n primul r&acirc;nd, eu nu am ce cauta aici, nu era locul meu aici. Va multumesc pentru invitatie, dar eu &icirc;n 5 minute nu am cum sa explic problema pentru ca stiu prea multe pe aceasta tema. Asa &icirc;nc&acirc;t nu pot expedia un raspuns pro sau contra. Am acasa o carte pe care am &icirc;nceput-o, a unui englez, nu &icirc;mi cereti numele. Cartea se cheama &ldquo;Despre energii, &icirc;ntre stiinta si religie&rdquo;. Am citit vreo opt pagini din cartea asta, dupa aceea m-am repezit la pagina 236 unde facea o analiza, dar nici aceea nu am dus-o p&acirc;na la capat, nu aveam numai asta de facut. &Icirc;mi dati sase minute?</p>
+<p><strong>Andreea Nistor:</strong> Sase sa fie.</p>
+<p><strong>Gheorghe Mihai:</strong> Hai sa &icirc;ncepem cu &icirc;nceputul: noi ne-am &icirc;nt&acirc;lnit aici pentru a raspunde la o &icirc;ntrebare sau pentru a dezbate o tema? Din punct de vedere retoric, una este sa pui &icirc;ntrebarea care iti ofera o alternativa (&icirc;n cazul nostru doua), alta este o tema care &icirc;ti sugereaza sa nu o ataci, sa o sustii. O sa ma situez adapt&acirc;ndu-ma, find o persoana adaptabila, dupa Darwin (pentru care nu am nici cea mai mica stima, dar am citit cartea &ldquo;Originea speciilor&rdquo;, ca asa esti obligat &mdash; chiar daca nu-l respecti pe autor, &icirc;i citesti cartea).</p>
+<p>Fiind adaptabil, hai sa ma situez pe niste raspunsuri &mdash; dar nu &icirc;nainte de a pune c&acirc;teva &icirc;ntrebari retorice, deci nu astept raspunsul dumneavoastra. Dragii mei, clasa &icirc;nt&acirc;ia, pe care am facut-o eu &icirc;n T&acirc;rgul Iasiului &mdash; &icirc;n clasa &icirc;nt&acirc;ia am avut un preot, Parintele Petrovanu, Dumnezeu sa &icirc;l odihneasca, care ne-a &icirc;nvatat religie un an de zile. &Icirc;n anul urmator, a venit legea cu scoaterea religiei din scoala si am facut biologie, geografie. Am facut si o stiinta, daca se cheama stiinta, care se chema Bazele Darwinismului. Domnul profesor Constantin mi-a predat Bazele Darwinismului. Un an de zile m-a necajit cu Bazele Darwinismului. &Icirc;n facultate, &icirc;n prima facultate, dascalii nostrii vroiau sa ne scoata atei deplini si desav&acirc;rsiti si totali. Eu am facut cinci ani de facultate de filozofie, si atunci ne-au bagat, pe bune, doi ani de biologie, facuti cu profesorul Corneliu Zolinean, seful catedrei de biologie. Si el nu ne-a facut propaganda, el ne-a &icirc;nvatat biologie la catarama, ca si cum am fi fost studenti la biologie. Vine madame Budeanu, sefa catedrei de chimie organica, ne preda doi ani de chimie organica &icirc;n paralel cu biologia, chimie organica la catarama, cu laboratoare, ca si cum noi ar fi trebuit sa iesim chimisti. Nu a ajuns asta (asta &icirc;n anul &icirc;nt&acirc;i si doi), &icirc;n anii trei si patru am facut doi ani de fizica, la catarama; fizica cu profesorul Godim, cu care sunt &icirc;n relatii bune si acum. Si, paralel cu fizica, am facut matematica, cu profesorul de geometrie analitica, care ne-a &icirc;nvatat, nu s-a jucat cu noi. Ne-a luat ca si cum am iesi matematicieni; n-am iesit. Capac la toate, &icirc;n anul cinci am facut un semestru de constiinta, cum e si executarea silita, care se chema, &bdquo;Concluzii filozofice...&rdquo;. La asta mi-am dat si lucrarea de licenta eu, &bdquo;Concluzii filozofice privind stiintele contemporane ale naturii&rdquo;. Cam lung titlul... Dar ce vroia sub acest titlu? Ce s-a studiat? Sa tragem noi concluzii materialist-dialectice, desi oamenii de stiinta nu asta fac, ei descopera atomul, descopera nu stiu ce, pe-o functie, pe alta. Dar de aceea se spune ca stiintele sunt fenomenale. Toate stiintele sunt fenomenale pentru ca studiaza fenomene. Si atunci filozofia vine si zice &ldquo;Ia adu tu fenomenele acestea si spune ce gasesti asupra lor&rdquo;. Hai ca va dati seama ce stiam eu sa gasesc la 23 de ani amar&acirc;ti ai mei, dupa at&acirc;ta...</p>
+<p><strong>Andreea Nistor:</strong> Primele 5 minute din discursul dumneavoastra deja s-au scurs</p>
+<p><strong>Gheorghe Mihai:</strong> Vreau sa va atrag atentia asupra educatiei formale, asta este educatia formala pe care am primit-o &icirc;n scoala primara, &icirc;n liceu, &icirc;n facultate. &Icirc;n acesti ani de scoala primara, gimnaziu, liceu si facultate, eu am fost prezent &icirc;n Biserica Sf&acirc;ntul Dumitru, la slujba parintelui Petrovanu. Nu m-a &icirc;mpins nimeni, nu zicea mama &ldquo;Du-te, mai, hai valea!&rdquo;. Crestin ortodox, laolalta cu toti copiii din mahala. Asta nu m-a oprit sa fiu membru PCR, am fost membru PCR, cum sa nu? Nicio treaba una cu alta. Am dat o jertfa ca sa-mi salvez p&acirc;inea. Comunistii nu mi-au spus niciodata &ldquo;Ce cauti la biserica?&rdquo;. Toata lumea stia. Nu numai de mine, de toti ceilalti. Am &icirc;ncheiat subiectul, trec la un alt subiect care va e drag dumneavoastra.</p>
+<p>Eu am spus-o studentilor mei, &icirc;n Constitutia norvegiana este prevazut&nbsp;<em>expressis verbis: </em>&bdquo;religia cetatenilor din Norvegia este religia crestin-calvinista&rdquo;. Prevedere constitutionala! Cateva articole mai jos, spune: &ldquo;libertatea de constiinta este garantata &icirc;n Norvegia&rdquo;. Deci, voi sa stiti un lucru &mdash; noi, statul norvegian, ocrotim religia crestina-calvinista; voi, ceilalti, care vreti sa fiti altceva, treaba voastra, nu va opreste nimeni. Constitutia daneza prevede&nbsp;<em>expressis verbis</em>&nbsp;ca statul danez este stat crestin calvinist. Bine&icirc;nteles ca este prevazut mai departe: &ldquo;libertatea de constiinta este garantata tuturor oamenilor&rdquo;, nu e nicio problema. Constiutia greaca &mdash; verificati! &mdash; da prioritate&nbsp;<em>expressis verbis</em>&nbsp;crestinismului-ortodox, pe care &icirc;l ocroteste, &icirc;i da subventii si alte chestii de genul asta. Pe de alta parte, c&acirc;teva articole mai jos, spune: &ldquo;libertatea de constiinta este garantata tuturor cetatenilor greci&rdquo;. C&acirc;te exemple am dat? Trei. Pot sa continui si cu alte exemple de tari europene, membre ale Uniunii Europene.Suedia, de exemplu, Malta si alte state. C&acirc;nd sunt asemenea prevederi, ce &icirc;nseamna laicitate? Ce &icirc;nseamna scoaterea religiei din scoala, ce &icirc;nseamna laicitate? Laicitatea este &bdquo;non-bisericosul&rdquo;, de asta am &icirc;ntrebat antonimul lui &ldquo;laic&rdquo;. &ldquo;Laic&rdquo; este &bdquo;non-bisericos&rdquo;, nu &icirc;mpotriva religiei, vezi Dictionarul limbii rom&acirc;ne. Si atunci, libertatea de a alege o are fiecare, sa faca sau sa nu faca. Eu nu cred ca &icirc;n scoala se &icirc;nvata religie. Am vazut manuale, baiatul meu tot religie face si ma uit &icirc;n manuale. Aia nu e religie.</p>
+<p><strong>Adriana Nica:</strong> Nici rom&acirc;na nu se mai face &icirc;n scoala, domnule profesor!</p>
+<p><strong>Gheorghe Mihai:</strong> Domnisoara, stiu foarte bine ce prapad este &icirc;n scoala noastra. Prapad, ruina &icirc;nvatam&acirc;ntului rom&acirc;nesc. Stiu foarte bine, am conversatii cu colegi de-ai mei care vin de prin alte parti si spun: &ldquo;Domnule, ce se &icirc;nt&acirc;mpla?&rdquo; Si pe noi asta ne doare... Dragii mei, din 1990 si p&acirc;na acum au fost 21 de milioane de avorturi &icirc;n Rom&acirc;nia, 21 de milioane de avorturi &icirc;n Rom&acirc;nia, milioane, milioane. Ce se cheama copiii aceia de la 14 ani p&acirc;na la 45 de ani? &rdquo;Doamne ajuta sa scap de sarcina asta!&rdquo; Infractionalitatea &icirc;n Rom&acirc;nia &icirc;ntre anii 1990 si ora actuala a crescut de 16 ori. Noi &icirc;n 1990 aveam 40.000 de oameni care executau pedeapsa cu &icirc;nchisoarea si acum avem 800.000. 800.000! Sa va aduc alte argumente: Stiti c&acirc;ti tineri &icirc;ntre 14 ani si 32 de ani sunt consumatori de droguri? Stiti c&acirc;ti sunt? De droguri si de etnobotanice, la ora actuala. Acum trei zile am aflat informatia. Aproape un milion, aproape un milion. C&acirc;nd am auzit, Doamne!</p>
+<p><strong>Participant din public:</strong> Dar si numarul credinciosilor a crescut tot de 20 de ori.</p>
+<p><strong>Gheorghe Mihai: </strong>Hai sa &icirc;ti zic aici si de numarul credinciosilor. Cineva de aici a spus de 18.000 de lacasuri de rugaciune. Domnule, locasurile alea nu sunt 18.000! Dar sa zicem. Locasurile alea de rugaciune sunt pentru cele 18 milioane de rom&acirc;ni care sunt &icirc;n Rom&acirc;nia, ca cinci au plecat. Pe l&acirc;nga cele 300 si nu stiu c&acirc;te de scoli sunt de la clasa &icirc;nt&acirc;i p&acirc;na la clasa a XII-a. De la a XII-a unde sunt? Pe urma facem vinovat... Ce e aia dogma, domnule? Vedeti ce usor se arunca cu parul? Ce este aceea o dogma? Daca nu stim sa vorbim, mai bine sa tacem. Dogma! Ce este aia o dogma? Vedeti, nu avem suficienta cultura ca sa luam atitudine. Mai bine ne informam, cum a facut baiatul asta, s-a straduit. De aia am spus ca nu era locul meu aici. Locul meu era aici daca era cineva sa &icirc;mi sara &icirc;n cap cu argumente pe masura si aunci sa discut, dar asa ne dam cu parerea la ce nu trebuie. C&acirc;ti dintre voi stiu rugaciunea &ldquo;Tatal nostru&rdquo;? Si c&acirc;t, hai sa analizam, e dogma acolo?</p>
+<p>Raportat la ce am auzit aici: nu preotii au inventat crestinismul. Cand apar preotii? Stiti? &Icirc;n secolul IV. Epistola catre Corinteni a Sf. Apostol Pavel a fost scrisa &icirc;n anul 54. &Icirc;n anul 54! Unsprezece ani dupa rastignirea M&acirc;ntuitorului Iisus Hristos. La 11 ani! G&acirc;nditi-va! Din &lsquo;89, &icirc;n 2001 vine unul si spune &ldquo;Uite cum e cu revolutia!&rdquo;. Ca sa &icirc;ntelegeti ce &icirc;nseamna 11 ani. Ei! Acolo, &icirc;n scrisoarea catre Corinteni veti &icirc;nt&acirc;lni cuvantul &ldquo;iad&rdquo;. Deci cuv&acirc;ntul &ldquo;iad&rdquo; nu este o inventie a popilor. Popii au aparut dupa &icirc;nca 200 si ceva de ani. Nu-i adevarat?</p>
+<p><strong>Participant din public:</strong> Moise nu era preot?</p>
+<p><strong>Gheorghe Mihai:</strong> Schimbi &icirc;ntelesul, Schimbi cu totul &icirc;ntelesul! El era rabin.</p>
+<p><strong>Participant din public:</strong> Si asta nu &icirc;nseamna preot?</p>
+<p><strong>Gheorghe Mihai:</strong> Da, dragul meu, scrie ca da. &Icirc;n Vechiul Testament preot scrie, dar are alt &icirc;nteles. Si hindusii au preoti, draga, nu? Si asa mai departe.</p>
+<p><strong>Participant din public:</strong> Dar de ce ar fi nevoie de o persoana &icirc;ntre o persoana si Dumnezeu, &icirc;n dialogul asta? De ce ar trebui sa intervina un preot?</p>
+<p><strong>Gheorghe Mihai:</strong> Dar nu intervine nimeni, daca nu &icirc;l accepti si nu ai nevoie de el. Dar ce, eu c&acirc;nd ma duc pe c&acirc;mp &icirc;l chem pe preot?</p>
+<p>&nbsp;</p>
+<p><strong>Discutie cu audienta:</strong></p>
+<p><strong>Andreea Nistor:</strong> O sa am o rugaminte, &icirc;mi cer scuze ca va &icirc;ntrerup,&nbsp;partea a doua a acestei &icirc;nt&acirc;lniri este dedicata tocmai dialogului dintre voi, cei din sala si domnul profesor.</p>
+<p><strong>Gheorghe Mihai:</strong> Nu, eu nu vreau sa dialoghez. Eu vreau sa se citeasca ce scrie aici. Cine mi-a dat h&acirc;rtia asta?</p>
+<p><strong>Adriana Nica:</strong> Eu.</p>
+<p><strong>Gheorghe Mihai:</strong> Uite, asta este ceea ce trebuie sa citim cu atentie.</p>
+<p><strong>Adriana Nica:</strong> Sunt doua argumente a doi oameni de cultura din Rom&acirc;nia, pe care eu &icirc;i stimez foarte mult: Andrei Plesu si Ion Vianu. Ei au scris despre tema asta. Plesu spune ca &ldquo;Orice traitor in spatiul crestinatatii trebuie sa stie ce contine Biblia, care este istoria crestinismului, care sunt diferentele dintre feluritele confesuni religioase crestine&rdquo;, iar Ion Vianu: &ldquo;De-a lungul istoriei omenirii religia este mereu prezenta, religia este o componenta a civilizatiei, daca nu avem notiuni despre istoria religiilor, nu putem &icirc;ntelege istoria civilizatiilor. Daca nu &icirc;ntelegem simbolurile religioase, cele mai multe din monumente si opere de arta ne ram&acirc;n straine. Nu poti sa fii un om de cultura fara sa cunosti viata spirituala a lumii, si scoala este locul unde se propaga cultura. &Icirc;n acest sens, predarea religiei &icirc;n scoala este justificata. Daca omul contemporan nu ar fi fost obisnuit cu faptul ca libera constiinta face sa aleaga mereu &icirc;ntre bine si rau, calauzit de precedentul evanghelic, civilizatia moderna nu s-ar fi construit. Este o caracteristica crestina credinta ca omul a fost creat cu &icirc;nsusirea de a deosebi binele de rau. Omul religios occidental a dezvoltat sentimentul raspunderii, nu numai &icirc;n fata autoritatii lumesti, ci si fata de instanta tainica, cuibarita &icirc;n sinele ad&acirc;nc, fata de Divinitate. &rdquo;</p>
+<p><strong>Gheorghe Mihai:</strong> Stiti ce scrie &icirc;n constitutia maghiara, da?</p>
+<p><strong>Participant din public:</strong> E o problema, aici face referire la sine. Deja, daca credem &icirc;n existenta unui sine, nu prea avem cum sa credem &icirc;n existenta unui Dumnezeu. Sinele e ceva care automat scoate puterea aia, atotputernicia aia, separata de noi. Sinele e &icirc;n noi, e &icirc;n fiecare din noi.</p>
+<p><strong>Adriana Nica:</strong> Daca tu poti sa te apropi de Divinitate fara preot, asta &icirc;nseamna ca poti sa &icirc;nveti si fara profesor, asta &icirc;nseamna ca poti sa mergi si fara ajutorul mamei tale la sase luni.</p>
+<p><strong>Gheorghe Mihai:</strong> Este momentul &icirc;n care omul nu e creat dupa chipul si asemanarea lemurienilor, ci dupa chipul si asemanarea lui Dumnezeu. Dumnezeu este sinele nostru.</p>
+<p><strong>Participant din public:</strong> Atunci de ce ni-l prezinta ca ceva exterior noua?</p>
+<p><strong>Gheorghe Mihai:</strong> Cine ni-l prezinta?</p>
+<p><strong>Participant din public:</strong> Biblia si preotii.</p>
+<p><strong>Gheorghe Mihai:</strong> Nu-i adevarat. Apropo de fumatul tigarii, vedeti ce rai suntem? Stim ca au fost 20 de milioane de avorturi, dar noi facem &icirc;n continuare. Stim ca fumatul ne face rau, dar noi fumam &icirc;n continuare. Stim ca alcoolismul &icirc;n Rom&acirc;nia a crescut de 12 ori, dar noi consumam &icirc;n continuare alcool.</p>
+<p><strong>Participant din public:</strong> Cine decide ce e bine si ce e rau, dumneavoastra?</p>
+<p><strong>Gheorghe Mihai:</strong> Nu, eu decid ce e bine si ce e rau pentru mine.[...]</p>
+<p><strong>Participant din public:</strong> Asa, ai zis ca 98% dintre rom&acirc;ni sunt crestini.</p>
+<p><strong>Sergiu C&acirc;rlan:</strong> Aproximativ, peste 95%.</p>
+<p><strong>Participant din public:</strong> Peste 95%. Aici as vrea sa te &icirc;ntreb: Am venit eu cu o cifra, nu stiu daca este exacta sau nu; 90 % dintre femei gatesc si au gatit din perioada matriarhala, deci practic face parte din cultura lor. De ce nu se mai preda gatitul &icirc;n scoli?</p>
+<p><strong>Sergiu C&acirc;rlan:</strong> Pentru ca nu e necesar.</p>
+<p><strong>Participant din public:</strong> Pai de ce, ca am evoluat si totusi se mai practica. &Icirc;n perioada victoriana era o practica generala, adica toate femeile &icirc;nvatau sa gateasca. Am evoluat, nu mai avem nevoie de chestiile astea.&nbsp;</p>
+<p><strong>Participant din public:</strong> Tu ai identificat argumentul istoric. Argmentul istoric nu e foarte pertinent. Lumea evolueaza.</p>
+<p><strong>Catalin Artenie:</strong> Argumentul &icirc;n sine este unul care nu are nici un fundament, doar faptul ca s-a &icirc;nt&acirc;mplat un lucru p&acirc;na acum nu demonstreaza ca trebuie sa se &icirc;nt&acirc;mple si de acum &icirc;ncolo. Este un apel la traditie fara sens.</p>
+<p><strong>Sergiu C&acirc;rlan:</strong> Nu asta demonstreaza, ca daca s-a &icirc;nt&acirc;mplat p&acirc;na acum, trebuie sa se &icirc;nt&acirc;mple &icirc;n continuare. La ce m-am referit cu argumentul asta: tu nu poti sa negi rolul religiei &icirc;ntr-o societate, &icirc;ntruc&acirc;t este o realitate de 2000 de ani, aproximativ.</p>
+<p><strong>Participant din public:</strong> Dar nu este un argument istoric, este o statistica, pe baza recensam&acirc;ntului care s-a facut.</p>
+<p><strong>Sergiu C&acirc;rlan:</strong> Eu nu ma refer la statistica asta, eu ma refer la perioada de 2000 de ani &icirc;n care statul rom&acirc;n a fost influentat de religia crestina. Nu poti renunta pur si simplu la influenta religiei crestine &icirc;ntr-un stat, din moment ce peste 90 % dintre oameni...</p>
+<p><strong>Participant din public:</strong> Nu despre asta discut&acirc;m, nimeni nu a presupus acest lucru, sa renuntam complet la ea. E vorba daca sa facem acest lucru &icirc;n scoli sau nu.</p>
+<p><strong>Participant din public:</strong> Sa-ti mai zic o chestie. Daca stam sa ne g&acirc;ndim, &icirc;n perioada &icirc;n care am descoperit focul, fiecare om avea cel putin 20 de zei. Stai putin, am evoluat, nu mai avem 20 de zei, avem un zeu. Ne-am explicat fenomenele naturale, nu mai avem nevoie de un zeu al focului, de un zeu al apei, de un zeu al oricui. Am evoluat. Va veni momentul c&acirc;nd vom trece si peste ultimul Dumnezeu.</p>
+<p><strong>Sergiu C&acirc;rlan:</strong> Vorbim de un stat laic si de un stat democratic &icirc;n acelasi timp. Daca vorbesti despre un stat laic si de un sat democratic &icirc;n acelasi timp, nu poti sa spui sa interzicem religia &icirc;n scoli.</p>
+<p><strong>Catalin Artenie:</strong> Dar cine a facut asta? Am presupus ca &icirc;nlocuim religia &icirc;n scoli cu un curs de istoria religiilor. Deci noi nu am discutat asa &icirc;n dezbaterea asta.</p>
+<p><strong>Adriana Nica:</strong> Voi vorbiti doua lucruri diferite. El &icirc;l condamna pe Dumnezeu, voi vorbiti de religie. Dumnezeu nu are nicio religie. A venit Iisus si a zis: &ldquo;Eu sunt crestinismul&rdquo;?</p>
+<p><strong>Participant din public:</strong> Ati &icirc;nteles gresit, eu condamn tot ce &icirc;nseamna zeitate, nu &icirc;l condamn pe Dumnezeu.</p>
+<p><strong>Catalin Artenie:</strong> Explica-mi de ce este o idee proasta predarea istoriei religiilor &icirc;n scoli.</p>
+<p><strong>Sergiu C&acirc;rlan:</strong> Nu este o idee proasta. Dar faptul ca se preda religia la modul confesional, asa cum se preda acum, cu posibilitatea tuturor de a accepta ce vor ei, nu pune &icirc;n pericol laicitatea statului rom&acirc;n.</p>
+<p><strong>Participant din public:</strong> Tu ai spus ca noi credem &icirc;n Dumnezeu de 2000 de ani si trebuie sa credem &icirc;n continuare, eu am venit[...]</p>
+<p><strong>Sergiu C&acirc;rlan:</strong> Marcus Aurelius si Epicur faceau niste mici definitii ale statului secular: neutralitate, o data; apoi imixtiunea Bisericii &icirc;n treburile statului, garantia manifestarii oricarei religii &icirc;n conditiile &icirc;n care vorbim &icirc;n acelasi timp de un stat secular si un stat democratic. Nu poti spune ca esti un stat democratic si un stat laic, cum este Rom&acirc;nia, daca retezi predarea religiei sau, ma rog, daca interzici prezenta simbolurilor religioase, sa spunem, pentru ca atunci ai reteza identitatea religioasa, identitatea nationala, care sunt constitutionale, democratice prezente &icirc;n oricare stat al lumii.</p>
+<p><strong>Catalin Artenie:</strong> Este Franta un stat laic si democratic, dupa parerea ta?</p>
+<p><strong>Sergiu C&acirc;rlan:</strong> Sigur.</p>
+<p><strong>Participant din public:</strong> Este SUA un stat laic si democratic?</p>
+<p><strong>Sergiu C&acirc;rlan:</strong> Franta este o varianta de stat laic si democratic.</p>
+<p><strong>Catalin Artenie:</strong> De ce se interzic &icirc;nsemnele religioase &icirc;n scoli, crucile mari, valul islamic si alte masuri?</p>
+<p><strong>Sergiu C&acirc;rlan:</strong> E problema lor.</p>
+<p><strong>Catalin Artenie:</strong> Nu exista nicio explicatie pentru asta? E pur si simplu un fapt?</p>
+<p><strong>Sergiu C&acirc;rlan:</strong> E pur si simplu un stat mai laic dec&acirc;t statul rom&acirc;n, dar asta nu face statul rom&acirc;n sa fie mai putin laic.</p>
+<p><strong>Adriana Nica:</strong>&nbsp; Nu &icirc;nteleg de ce trebuie sa va comparati tot timpul cu cineva de afara. De ce nu va comparati cu voi &icirc;nsiva?</p>
+<p><strong>Participant din public:</strong> Ne facem ca ploua. Cine este statul rom&acirc;n? Noi!</p>
+<p><strong>Participant din public:</strong> Vreau sa &icirc;ti amintesc de contractul social. Ce spune contractul social?</p>
+<p><strong>Andreea Nistor:</strong> Ca sa revenim putin la lucrurile pe care le-au dezbatut cele doua echipe astazi, as vrea sa rog si celelalte prsoane din sala, care deocamdata nu ne-au spus parerea lor despre lucrurile pe care le-au auzit, sa ne spuna care dintre cele doua echipe a impresionat mai mult si care a fost motivul pentru care acum, la finalul dezbaterii, au fost convinsi de una dintre cele doua. Stai numai putin, &icirc;ti dau tie cuv&acirc;ntul, dar &icirc;nainte vreau sa vad daca mai e cineva care vrea sa mai spuna ceva despre ce am discutat.</p>
+<p><strong>Participant din public:</strong> Parerea mea e ca tema este c&acirc;t se poate de vaga, foarte vaga. Predarea religiei &icirc;nseamna multe.</p>
+<p><strong>Participant din public: &bdquo;</strong>Pune &icirc;n pericol&rdquo;. Uau, deci chiar religia pune &icirc;n pericol statul rom&acirc;n! Cred ca tema ar putea fi mai specifca si mai nuantata.</p>
+<p><strong>Participant din public:</strong> O sa &icirc;i raspund lui la &icirc;ntrebare. Statul nu sustine direct nici o religie, corect? Deci avem libertatea de opinie, dar, prin politicieni, care profita de capitalul politic pe care &icirc;l prezinta religia, pierdem. Pierdem prin subventii, pierdem prin scutiri fata de ONG-uri si fata de Biserica. Pierdem prin cadouri din astea de milioane de dolari pentru biserici.</p>
+<p><strong>Participant din public:</strong> Asta nu tine de sfera religiei &mdash; oamenii care fac parte din religie, dar care &icirc;si &icirc;ncalca propria dogma. Pentru ca cei care fac lucrurile astea trebuie sa se adapteze religiei pe care spun ca o practica. Pentru ca ei nu practica religia asa cum este.</p>
+<p><strong>Catalin Artenie:</strong> Cum putem sustine neutralitatea de care vorbeste colegul meu, conform lui Marcus Aurelius, care era, apropo, umanist? Cum putem vorbi de acest lucru, cum putem vorbi de neutralitate, c&acirc;nd, eu ca si musulman &icirc;n Rom&acirc;nia, trebuie sa refuz religia crestin-ortodoxa, ca sa pot sa-mi afirm religia mea? Trebuie sa refuz printr-o cerere faptul ca nu sunt crestin ortodox.</p>
+<p><strong>Sergiu C&acirc;rlan:</strong> Da, bine&icirc;nteles, este o chestiune de procedura.</p>
+<p><strong>Participant din public:</strong> Cum de procedura, c&acirc;nd te discrimineaza din start? &Icirc;ncalci drepturile omului, &icirc;ncalci conventia CEDO, prin simplul fapt ca &icirc;l obligi sa nu mai vrea sa fie ortodox.</p>
+<p><strong>Sergiu C&acirc;rlan:</strong> Este o chestuine de procedura, te duci si semnezi.</p>
+<p><strong>Andreea Nistor:</strong> Poti sa ne dai, te rog, Denis, un exemplu de cum vezi tu aceasta procedura, astfel &icirc;nc&acirc;t sa nu fie discriminatorie fata de celalalte confesiuni?</p>
+<p><strong>Catalin Artenie:</strong> Simplu. Sa declare fiecare de ce religie este, de la &icirc;nceput.</p>
+<p><strong>Participant din public:</strong> Problema sistemului este una si problema religiei este alta.</p>
+<p><strong>Catalin Artenie:</strong> Sunt foarte de acord cu asta.</p>
+<p><strong>Participant din public:</strong> De aia am spus ca este vag.</p>
+<p><strong>Participant din public:</strong> Pai da, dar ca sa rezolvam sistemul trebuie sa scapam de aia din scoala, ca sa nu mai profite politicienii de capitalul politic. E un ciclu foarte periculos. &Icirc;i trimitem, &icirc;i educam &icirc;ntr-ale credintei, ca mai apoi sa le spunem &icirc;n biserica ce sa voteze.</p>
+<p>&nbsp;</p>
+<p><strong><br /></strong></p>
+</div>
+                <div class='clear'></div>
+        </div><!-- end main content -->
+         <div class='clear'></div>
+</div>
+<div id="pix"></div>
+
+
+                                </div><!--end main -->
+                                <div id='parteneri'>
+                                    <span class='tr'></span><span class='tl'></span><span class='br'></span><span class='bl'></span><span id="filler"></span>
+                                    <div class='parteneri' id='sustinatori'>
+                                        <span class='floating_text' id='un_proiect'>Un proiect</span>
+                                        <a href='http://www.ardor.org.ro/'><div class='image' id='ardor'>Ardor</div></a>
+                                        <span class='floating_text' id='finantatori'>Finanțatori</span>
+                                        <a href='http://www.opensocietyfoundations.org/'><div class='image' id='open_society'>Open Society Foundation </div></a>
+                                        <a href='http://www.studentiq.ro//'><div class='image' id='memoplus'>MemoPlus</div></a>
+                                        <!-- <a href='http://www.ratiufamilyfoundation.com/'><div class='image' id='FundatiaRatiu'>Ardor</div></a>
+                                        <a href='http://www.eef.md/'><div class='image' id='eef'>East Europe Foundation</div></a>
+                                        <a href='http://www.mts.gov.md/'><div class='image' id='mdminister'>Ministerul Tineretului si Sportului al Republicii Moldova</div></a> -->
+
+                                        <span class='floating_text' id='parteneri_text'>Parteneri</span>
+
+                                        <a href='http://www.policycenter.eu/'><div class='image' id='PolicyCenter'>Policy Center</div></a>
+                                        <a href='http://www.britishcouncil.org/'><div class='image' id='BritishCouncil'>British Council</div></a>
+                                        <a href='http://www.europuls.ro/'><div class='image' id='europuls'>Europuls</div></a>
+                                        <a href='http://www.cere.ro/'><div class='image' id='cere'>Ce-Re</div></a>
+                                        <a href='http://www.primeromania.ro/'><div class='image' id='prime'>Prime Romania</div></a>
+                                        <a href='http://www.cji.ro/'><div class='image' id='cji'>Centrul pentru jurnalism independent</div></a>
+                                        <a href='http://www.aiesectm.ro/'><div class='image' id='aisec'>Aisec</div></a>
+                                        <!-- ===================================================================================================== -->
+                                        <a href='http://www.cogitus.ro/'><div class='image' id='cogitus'>Cogitus</div></a>
+                                        <a href='http://www.adevarul.ro/international/foreign_policy/'><div class='image' id='foreignPolicy'>Foreign Policy</div></a>
+                                        <a href='http://www.elsa.ro/'><div class='image' id='elsa'>Elsa</div></a>
+                                        <a href='http://www.vipromania.ro/'><div class='image' id='vipromania'>Voluntari pentru idei si proiecte</div></a>
+                                        <a href='http://www.ongtrust.ro/'><div class='image' id='ongtrust'>Trust</div></a>
+
+                                        <!-- ===================================================================================================== -->
+                                        <a href='http://www.leap.ro/'><div class='image' id='leap'>Leap</div></a>
+                                        <a href='http://www.younginitiative.org/'><div class='image' id='younginitiative'>Asociatia young initiative</div></a>
+                                        <a href='http://www.asjc.ro/'><div class='image' id='asjc'>Asjc</div></a>
+                                        <a href='http://osut.ro/'><div class='image' id='osut'>Osut</div></a>
+                                        <div class='clear'></div>
+                                    </div>
+                                    <div class='parteneri' id='parteneri_institutionali'>
+                                        <span class='floating_text' id='sponsori_text'>Sus&#539;in&#x0103;tori</span>
+                                        <a href='http://www.cartier.md/'><div class='image' id='cartier_logo'>Editura Cartier</div></a>
+                                        <a href='http://www.pll.md/ro/'><div class='image' id='biblio_logo'>Biblioteca publica de drept</div></a>
+                                        <span class='floating_text' id='institutii_text'>Parteneri institu&#539;ionali</span> 
+                                        <ul id='institutii'>
+                                            <!-- <span class='floating_text' id='institutii_text'>Parteneri institu&#539;ionali:</span> -->
+                                            <li><a href='http://www.politice.ro/'>Facultatea de &#536;tiin&#539;e Politice SNSPA </a></li>
+                                            <li><a href='http://www.comunicare.ro/'>Facultatea de Comunicare &#537;i Rela&#539;ii Publice SNSPA</a></li>
+                                            <li><a href='http://www.fspub.ro/'>Facultatea de &#536;tiin&#539;e Politice Universitatea Bucure&#537;ti</a></li>
+                                            <li><a href='http://www.filosofie.unibuc.ro/'>Facultatea de Filosofie Universitatea Bucure&#537;ti</a></li>
+                                            <li><a href='http://litere.unibuc.ro/'>Facultatea de Litere din Universitatea Bucure&#x015f;ti</a></li>
+                                            <li><a href='http://www.unibuc.ro/ro/fac_fsas_ro'>Facultatea de Sociologie Universitatea Bucure&#537;ti</a></li>
+                                            <li><a href='http://laws.uaic.ro/'>Facultatea de Drept Universitatea Alexandru Ioan Cuza Ia&#537;i</a></li>
+                                            <li><a href='http://www.uaic.ro/uaic/bin/view/Academic/Filosofie'>Facultatea de Filosofie si &#536;tiin&#539;e Social Politice Universitatea AIC Ia&#537;i</a></li>
+                                            <li><a href='http://www.upa.ro/'>Facultatea de Drept si Facultatea de &#x015e;tiin&#x0163;e Politice si Administrative Universitatea Petre Andrei Ia&#x015f;i</a></li> 
+
+                                            <li><a href='http://www.ubbcluj.ro/'>Universitatea Babe&#537;-Bolyai Cluj Napoca</a></li>
+                                            <li><a href='http://www.uvt.ro/'>Universitatea de Vest Timi&#537;oara</a></li>
+                                            <li><a href='http://www.upt.ro/'>Universitatea Politehnica Timi&#537;oara</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class='parteneri' id='parteneri_media'>
+                                        <span class='floating_text' id='media_text'>Parteneri media</span>
+                                        <a href='http://www.hotnews.ro/'><div class='image' id='hotnews'>HotNews</div></a>
+                                        <!-- <a href='http://www.lumebuna.ro/'><div class='image' id='lumebuna'>Lume Buna</div></a> -->
+                                        <a href='http://www.romaniapozitiva.ro/'><div class='image' id='romaniapozitiva'>Romania Pozitiva</div></a>
+                                        <a href='http://totb.ro/'><div class='image' id='thinkoutsidethebox'>Think Outside The Box</div></a>
+                                        <a href='http://www.facebook.com/carevasazica.vip'><div class='image' id='carevasazica'>Carevasazica</div></a>
+                                        <a href='http://www.studentie.ro/'><div class='image' id='studentiero'>Studentie.ro</div></a>
+                                        <a href='http://startub.unibuc.ro/'><div class='image' id='startub'>startub.unibuc.ro</div></a>
+                                        <!-- <a href='http://www.tvr.ro/tvr_cluj.php'><div class='image' id='tvrcluj'>Tvr Cluj</div></a> -->
+                                        <!-- <a href='http://www.radiotransilvania.ro'><div class='image' id='radiotransilvania'>Radio Transilvania</div></a> -->
+                                        <a href='http://iasifun.ziaruldeiasi.ro/'><div class='image' id='iasifun'>Iasi fun</div></a>
+                                        <a href='http://www.ziaruldeiasi.ro/'><div class='image' id='ziaruldeiasi'>Ziarul de Iasi</div></a>
+                                        <a href='http://www.kissfm.ro/timisoara'><div class='image' id='kissfm'>KissFm</div></a>
+
+                                        <div class='clear'></div> 
+                                    </div>
+                                    <div class='clear'></div>
+
+                                </div>	
+                            </div>	<!-- end wrap -->
+                            <div id='footer_mare'>
+                                <div id='footer'>
+                                    <div id='links' class='footer'>
+                                        <div id='menu1' style='margin:auto;'> <ul id='meniu_prinicpal'><li><a href='contacte/index.html'> Contact </a></li>
+<li><a href='clubdebate/index.html'> Cluburile </a></li>
+<li><a href='oamenii/index.html'> Oamenii </a></li>
+<li><a href='proiectul/index.html'> Proiectul </a></li>
+<li><a href='home/index.html'> Acasa </a></li>
+</ul></div><!--end menu-->
+                                    </div><!--
+                                    <div id='contact' class='footer'>
+                                            <h4>Contact</h4>
+                                            <p>office@closer2oxford.ro</p>
+                                            <p>bogdan.draghicescu@closer2oxford.ro<br>
+                                            <span class='detalii'> (asistenta tehnica web - orice probleme legate de site)</span></p>
+                                    </div>
+                                    -->
+                                    <div id='newsletter' class='footer'>
+                                        <script src="../../connect.facebook.net/en_US/all.js#xfbml=1"></script><fb:like href="http://www.facebook.com/pages/Closer2Oxford/162758797069605" width="250" colorscheme="dark"></fb:like>
+                                        <!--<h4>Newsletter</h4>
+                                        <form action='/page/newsletter'>
+                                                <input type='text' name='email'>
+                                                <input type='submit' id='submit' value='>'>
+                                                        
+                                        </form>-->
+                                    </div>
+                                    <div id='credits'>
+                                        Copyright(c) 2021 ARDOR |  Toate drepturile rezervate | Toate logo-urile si sloganurile de pe site sunt proprietate intelectuala inregistrata si nu pot fi reproduse fara acordul explicit al detinatorilor. <br>
+                                            <br /><br />
+                                            <b>Disclaimer</b><br /><i>
+
+                                                Programul educational Closer to Oxford este un program non-profit si nu are o legatura cu universitatea cu acelasi nume, referirea la Oxford avand doar o semnificatie simbolica.
+                                            </i>
+                                    </div>
+
+                                </div>		
+                            </div>		
+
+                            <div id="finantatde">Acest proiect este finantat cu sustinere din partea Comisiei Europene. Aceast publicatie [comunicare] reflecta doar
+                                vederile autorului, iar Comisia nu poate fi facuta  responsabila pentru utilizarea informatiei pe care o contine.</div>
+
+
+                        </body>
+                        </html>

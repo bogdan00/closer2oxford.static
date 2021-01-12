@@ -1,0 +1,587 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml-strict.dtd">
+<HTML xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+    <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+            <link rel="icon" type="image/png"  href="../../closer2oxford.ro/favicon.html">
+                <link rel="stylesheet" href="var/layout.css" type="text/css">
+                    <title>Closer to Oxford - e timpul pentru argumente!</title>
+                    <link rel="alternate" type="application/rss+xml"  href="rss_feed" title="Stiri Closer2Oxford">
+                        <!-- <link rel="image_src" property="og:image"  href="/images/layout/closer2oxford_fb_white.png" /> -->
+                        <link rel="image_src" property="og:image"   type="image/jpeg"  href="../uploads/2015/06/9/facebook_icon.html" />
+                        <link rel="image_src" type="image/jpeg"  href="../uploads/2015/06/9/icon-facebook.gif" /> 
+						<meta name="description" content="Closer2Oxford pune în valoare oameni şi argumentele lor, în dezbateri online şi publice alături de tineri şi invitați avizaţi"/>
+                        <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9" />
+<script type='text/javascript' src='../js/jquery-1.4.4.min.js'></script>
+<script>var $j = jQuery.noConflict();</script>
+<script type='text/javascript' src='../js/tinymce/tiny_mce.js'></script>
+<script type='text/javascript' src='../js/jquery.form.js'></script>
+<script type='text/javascript' src='../js/fbLoginRegister.js'></script>
+<script type='text/javascript' src='var/javascript.js'></script>
+<script type='text/javascript' src='../js/jquery.hovertip-1.0.min.js'></script> 
+<script type='text/javascript' src='../js/jquery.jgrowl_minimized.js'></script> 
+<link rel='stylesheet' href='../css/jquery.jgrowl.css' media='screen' type='text/css'> 
+<script type='text/javascript' src='../js/jquery.timer-min.js'></script> 
+<link rel='stylesheet' href='var/gallery.css' media='screen' type='text/css'> 
+<script type='text/javascript' src='var/galerie/jquery.prettyPhoto.js'></script> 
+<meta name='description' content=''/> 
+<meta name='keywords' content=''/> 
+<style>.hovertip{
+    position:absolute;
+    padding:10px 13px;
+    z-index:2;
+    max-width:300px;
+    color:#303030;
+    background-color:#f5f5b5;
+    border:1px solid #DECA7E;
+    font-family:sans-serif;
+    font-size:12px;
+    line-height:18px;
+    text-align:left;
+    }</style> 
+<script type='text/javascript'>$j(document).ready(function(){$j('.tooltip').hovertip({'offset':[20,20]});get_notif();});
+
+if(!Array.indexOf){Array.prototype.indexOf = function(obj){for(var i=0; i<this.length; i++){if(this[i]==obj){return i;}}return -1;}}
+    hashuri = [] ;
+	 var tick_timer= 3000 ;
+ 
+	 function get_notif()
+        {
+		  
+		  //console.log(tick_timer);
+	     
+		  setTimeout(get_notif,tick_timer);
+        
+		   $j.ajax(
+            {
+                url: '/page/notif/show_events',
+                dataType: 'json',
+                data: "{}",
+                success: function(data)
+                    {
+                    $j.each(data,function(index,data){
+                        try
+                            {
+                            if( hashuri.indexOf(data.hash) == -1 )
+                                {
+                                hashuri.push(data.hash);
+                                $j.jGrowl(
+                                    data.str,
+                                    {
+                                        corners:'1px',
+                                        life: data.life,
+                                        header:data.title,
+                                        hash: data.hash,
+                                        sticky: data.sticky,
+                                        close: function(e,m,o)
+                                            {
+                                                $j.ajax({url:'/page/notif/delete_single_event/' + o.hash});
+                                            }
+                                    });
+                                }
+                            }
+                        catch(e){}
+                        })
+                    }
+            });
+        }
+	 </script> 
+ 
+                            
+  <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-19111721-1']);
+  _gaq.push(['_setDomainName', '.closer2oxford.ro']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+    
+                        </head>
+                        <body>
+                            <div id="global_wrap">
+                                <div id="header">
+                                    <a href='../index.html'><div id='logo'><img src='../images/layout/sigla.jpg'></div></a>
+                                    <a class='noExternal' href='http://www.facebook.com/pages/Closer2Oxford/162758797069605'><img src='../images/fb.png' style='height:30px;float:right;clear:right;margin:10px 5px 5px 5px;border:none;'/></a>
+                                    <a href='rss_feed'><img src='../images/feed-icon.png' style='height:30px;float:right;clear:right;margin:5px;border:none;'/></a>
+                                </div>
+                                <div id="meniu">
+                                    <div  id='register_login'>
+
+                                        
+  <a href='#' class='todo' id='login'>Login </a> &nbsp;<a href='register.html' class='todo' id='register'>Register</a>
+    <div id='login_box'>
+		  <form action='https://dev.closer2oxford.ro/page/ro/login_user/logon' method='post' id='user_login_form'>
+					 <div>Email: <input type='text' name='email'/> </div><br />
+					 <div>Pass: <input type='password' name='passwd'/></div><br />
+					 <a href='#' class='password_forgot'>forgot password?</a>
+					 <input type='hidden' value='/page/dezbatere_timisoara_primavara' name='returnto' class='submiter'/><br />
+					 <input type='submit' value='login' name='btn' class='submiter'/><br />
+		  </form>
+		  
+		  <form action='https://dev.closer2oxford.ro/page/ro/login_user/reset_user_pw' method='post' id='user_reset_form'>
+					 <div>Email: <input type='text' name='email'/> </div><br />
+					 <a href='#' class='password_forgot'>login?</a>
+					 <input type='hidden' value='/page/dezbatere_timisoara_primavara' name='returnto' class='submiter'/><br />
+					 <input type='submit' value='reset' name='btn' class='submiter'/><br />
+		  </form>
+		  
+    </div>
+    
+                                    </div>
+                                    <div id='menu1' style='margin:auto;'> <ul id='meniu_prinicpal'><li><a href='contacte/index.html'> Contact </a></li>
+<li><a href='clubdebate/index.html'> Cluburile </a></li>
+<li><a href='oamenii/index.html'> Oamenii </a></li>
+<li><a href='proiectul/index.html'> Proiectul </a></li>
+<li><a href='home/index.html'> Acasa </a></li>
+</ul></div><!--end menu-->
+                                </div>
+                                <div id="main"> 
+                                    <!--<div id='stiri-padding'>
+        <div id='stiri_back'>
+                {stiri} 
+    
+               
+        </div>-->
+        
+</div>
+<div  id="content-padding">
+        <div id='sidebar_menu'>
+                <span class='tr'></span>
+                <span class='tl'></span>
+                <span class='br'></span>
+                <span class='bl'></span>
+                <span id="filler"></span>
+                    
+                <ul></ul>
+                
+                <div class='clear'></div>
+        </div>
+        <div id="content">
+                <span class='tr'></span>
+                <span class='tl'></span>
+                <span class='br'></span>
+                <span class='bl'></span>
+                <span id="filler"></span>
+                <script type='text/javascript' src='../js/jquery.hovertip-1.0.min.js'></script> 
+<script type='text/javascript' src='../js/jquery.jgrowl_minimized.js'></script> 
+<link rel='stylesheet' href='../css/jquery.jgrowl.css' media='screen' type='text/css'> 
+<script type='text/javascript' src='../js/jquery.timer-min.js'></script> 
+<link rel='stylesheet' href='var/gallery.css' media='screen' type='text/css'> 
+<style>.hovertip{
+    position:absolute;
+    padding:10px 13px;
+    z-index:2;
+    max-width:300px;
+    color:#303030;
+    background-color:#f5f5b5;
+    border:1px solid #DECA7E;
+    font-family:sans-serif;
+    font-size:12px;
+    line-height:18px;
+    text-align:left;
+    }</style> 
+<script type='text/javascript'>$j(document).ready(function(){$j('.tooltip').hovertip({'offset':[20,20]});get_notif();});
+
+if(!Array.indexOf){Array.prototype.indexOf = function(obj){for(var i=0; i<this.length; i++){if(this[i]==obj){return i;}}return -1;}}
+    hashuri = [] ;
+	 var tick_timer= 3000 ;
+ 
+	 function get_notif()
+        {
+		  
+		  //console.log(tick_timer);
+	     
+		  setTimeout(get_notif,tick_timer);
+        
+		   $j.ajax(
+            {
+                url: '/page/notif/show_events',
+                dataType: 'json',
+                data: "{}",
+                success: function(data)
+                    {
+                    $j.each(data,function(index,data){
+                        try
+                            {
+                            if( hashuri.indexOf(data.hash) == -1 )
+                                {
+                                hashuri.push(data.hash);
+                                $j.jGrowl(
+                                    data.str,
+                                    {
+                                        corners:'1px',
+                                        life: data.life,
+                                        header:data.title,
+                                        hash: data.hash,
+                                        sticky: data.sticky,
+                                        close: function(e,m,o)
+                                            {
+                                                $j.ajax({url:'/page/notif/delete_single_event/' + o.hash});
+                                            }
+                                    });
+                                }
+                            }
+                        catch(e){}
+                        })
+                    }
+            });
+        }
+	 </script> 
+
+<script type='text/javascript' src='../js/jquery.hovertip-1.0.min.js'></script> 
+<script type='text/javascript' src='../js/jquery.jgrowl_minimized.js'></script> 
+<link rel='stylesheet' href='../css/jquery.jgrowl.css' media='screen' type='text/css'> 
+<script type='text/javascript' src='../js/jquery.timer-min.js'></script> 
+<link rel='stylesheet' href='var/gallery.css' media='screen' type='text/css'> 
+<script type='text/javascript' src='var/galerie/jquery.prettyPhoto.js'></script> 
+<style>.hovertip{
+    position:absolute;
+    padding:10px 13px;
+    z-index:2;
+    max-width:300px;
+    color:#303030;
+    background-color:#f5f5b5;
+    border:1px solid #DECA7E;
+    font-family:sans-serif;
+    font-size:12px;
+    line-height:18px;
+    text-align:left;
+    }</style> 
+<script type='text/javascript'>$j(document).ready(function(){$j('.tooltip').hovertip({'offset':[20,20]});get_notif();});
+
+if(!Array.indexOf){Array.prototype.indexOf = function(obj){for(var i=0; i<this.length; i++){if(this[i]==obj){return i;}}return -1;}}
+    hashuri = [] ;
+	 var tick_timer= 3000 ;
+ 
+	 function get_notif()
+        {
+		  
+		  //console.log(tick_timer);
+	     
+		  setTimeout(get_notif,tick_timer);
+        
+		   $j.ajax(
+            {
+                url: '/page/notif/show_events',
+                dataType: 'json',
+                data: "{}",
+                success: function(data)
+                    {
+                    $j.each(data,function(index,data){
+                        try
+                            {
+                            if( hashuri.indexOf(data.hash) == -1 )
+                                {
+                                hashuri.push(data.hash);
+                                $j.jGrowl(
+                                    data.str,
+                                    {
+                                        corners:'1px',
+                                        life: data.life,
+                                        header:data.title,
+                                        hash: data.hash,
+                                        sticky: data.sticky,
+                                        close: function(e,m,o)
+                                            {
+                                                $j.ajax({url:'/page/notif/delete_single_event/' + o.hash});
+                                            }
+                                    });
+                                }
+                            }
+                        catch(e){}
+                        })
+                    }
+            });
+        }
+	 </script> 
+
+<style type="text/css">
+.poze
+{
+    float:right;
+    width:110px;
+}
+.poze a img
+{    border:none;
+}
+.main_content
+{
+    float:left;
+    width:560px;
+}
+</style>
+
+ <div class = 'poze'>
+            <a class='thumb' href='../uploads/2011/10/3/timisoara_inc.xkl5go.png' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../uploads/2011/10/3/thumb_timisoara_inc.xkl5go.png' alt='' />
+                <span class='desc'></span>
+            </a>
+        
+
+            <a class='thumb' href='http://www.youtube.com/watch?v=seam09X5_Ck' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../../img.youtube.com/vi/seam09X5_Ck/1.jpg' alt='' />
+                <span class='desc'>Discurs Cristian Clipa - invitat  (A1)</span>
+            </a>
+        
+
+            <a class='thumb' href='http://www.youtube.com/watch?v=dfEXV8LacUU' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../../img.youtube.com/vi/dfEXV8LacUU/1.jpg' alt='' />
+                <span class='desc'>Cros 1</span>
+            </a>
+        
+
+            <a class='thumb' href='http://www.youtube.com/watch?v=GM2s8F7pgS8' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../../img.youtube.com/vi/GM2s8F7pgS8/1.jpg' alt='' />
+                <span class='desc'>Discurs Adrian Marcu - invitat (N1)</span>
+            </a>
+        
+
+            <a class='thumb' href='http://www.youtube.com/watch?v=kLJ9_nN27EM' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../../img.youtube.com/vi/kLJ9_nN27EM/1.jpg' alt='' />
+                <span class='desc'>Cros 2</span>
+            </a>
+        
+
+            <a class='thumb' href='http://www.youtube.com/watch?v=sGt-LTmuVI4' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../../img.youtube.com/vi/sGt-LTmuVI4/1.jpg' alt='' />
+                <span class='desc'>Discurs Vlad Icleanu - student (A2)</span>
+            </a>
+        
+
+            <a class='thumb' href='http://www.youtube.com/watch?v=uObimGVliaI' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../../img.youtube.com/vi/uObimGVliaI/1.jpg' alt='' />
+                <span class='desc'>Cros 3</span>
+            </a>
+        
+
+            <a class='thumb' href='http://www.youtube.com/watch?v=J2ckUIrv0_8' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../../img.youtube.com/vi/J2ckUIrv0_8/1.jpg' alt='' />
+                <span class='desc'>Discurs Alin Ciobanu - student (N2)</span>
+            </a>
+        
+
+            <a class='thumb' href='../uploads/2011/04/29/dezbatere_timisoara_1.iknczd.jpg' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../uploads/2011/04/29/thumb_dezbatere_timisoara_1.iknczd.jpg' alt='' />
+                <span class='desc'></span>
+            </a>
+        
+
+            <a class='thumb' href='../uploads/2011/04/29/dezbatere_timisoara_2.4grlwx.jpg' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../uploads/2011/04/29/thumb_dezbatere_timisoara_2.4grlwx.jpg' alt='' />
+                <span class='desc'></span>
+            </a>
+        
+
+            <a class='thumb' href='../uploads/2011/04/29/dezbatere_timisoara_3.5f2mv8.jpg' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../uploads/2011/04/29/thumb_dezbatere_timisoara_3.5f2mv8.jpg' alt='' />
+                <span class='desc'></span>
+            </a>
+        
+
+            <a class='thumb' href='../uploads/2011/04/29/dezbatere_timisoara_4.yh4grl.jpg' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../uploads/2011/04/29/thumb_dezbatere_timisoara_4.yh4grl.jpg' alt='' />
+                <span class='desc'></span>
+            </a>
+        
+
+            <a class='thumb' href='../uploads/2011/04/29/dezbatere_timisoara_5.jt1au6.jpg' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../uploads/2011/04/29/thumb_dezbatere_timisoara_5.jt1au6.jpg' alt='' />
+                <span class='desc'></span>
+            </a>
+        
+
+            <a class='thumb' href='../uploads/2011/10/3/timisoara_final.rqu9z7.png' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../uploads/2011/10/3/thumb_timisoara_final.rqu9z7.png' alt='' />
+                <span class='desc'></span>
+            </a>
+        
+
+
+    <script>
+    $j(document).ready(function(){
+      		$j("a[rel^='prettyPhoto']").prettyPhoto({theme:'facebook'});
+        });
+    
+    </script>
+    </div>
+
+<div class='main_content'>
+<p><strong>Timisoara, Universitatea de Vest, 14 aprilie 2011</strong></p>
+<p>Echipa afirmatoare: Cristian Clipa, avocat şi profesor universitar la Facultatea de Drept; Vlad Icleanu</p>
+<p>Echipa negatoare: Adrian Marcu, jurnalist şi profesor universitar la Facultatea de Medicină; Alin Ciobanu</p>
+<p>Moderator: Marian Odangiu, scriitor şi profesor universitar</p>
+<p>&nbsp;</p>
+<p><strong>Cristian Clipa (Afirmator 1)</strong></p>
+<p>Se spune &icirc;ntotdeauna că lucrurile grele &icirc;ncep cu mine, iar atunci c&acirc;nd se pune problema ca două sau mai multe persoane să ia cuv&acirc;ntul &icirc;n public, de regulă cei care urmează să asculte cele ce urmează a fi spuse &icirc;şi propun să inceapă cu mine. Nu am nici experienţa de a vorbi &icirc;n public, nici experienţa de a vorbi unui număr at&acirc;t de ridicat de persoane deodată; profesiile pe care eu le exercit de vreo 12 ani, presupun aproape săptăm&acirc;nal o &icirc;nt&acirc;lnire cu circa 200-300 de studenţi la fiecare curs şi o &icirc;nt&acirc;lnire cu nişte săli de judecată cam de vreo patru ori pe săptăm&acirc;nă &icirc;n repetate r&acirc;nduri pe parcursul unei zile.</p>
+<p>De ce credem noi, cei pe care ne vedeţi &icirc;n acestă parte a sălii, că p&acirc;nă la urmă e mai important dreptul cetăţeanului de a fi informat dec&acirc;t dreptul personalităţii publice, dreptul demnitarului, de a-i fi protejată viaţa privată? Există o serie &icirc;ntreagă de texte constituţionale şi risc să devin plicticos, n-am sa le menţionez, care vorbesc, după caz, fie de dreptul cetăţenilor de a fi informaţi, care este un drept fundamental, fie despre dreptul persoanei, ce presupune un singular, de a i se proteja şi garanta viaţa privată, viaţa de familie. Noi credem că, din momentul &icirc;n care o persoană ocupă o funcţie publică sau o demnitate publică, &icirc;n orice caz, &icirc;n momentul &icirc;n care devine exponentul statului, al puterii publice, devine automat, paradoxal, un cetăţean de rangul al doilea, suferă un soi de, cum spuneau romanii, <em>capitis deminutio</em>, un soi de retezare a capacităţii lui juridice. De ce? Pentru că e dator a expune celor &icirc;n folosul cărora guvernează sau administrează faptele sale, indiferent dacă acestea au strict legătură cu profesia exercitată,sau cu viaţa lui de familie. Ce se ascunde, de fapt, &icirc;n spatele celor care &icirc;şi doresc foare tare ca dreptul la viaţă privată să fie mai puternic dec&acirc;t dreptul cetăţenilor la informaţie? Aş putea să dau c&acirc;teva exemple. Se ascund contracte administrative, &icirc;ndeosebi cele de achiziţii publice sau de concesiune, atribuite &icirc;n condiţii extrem de tenebroase; se ascund conduite pe care unii europarlamentari, de aici sau nu, le numesc lobby, dar care adăpostesc venituri dintre cele mai puţin fiscalizate; se ascunde o decizie administrativă sau politică aproape secretizată. Faptul că decidenţii de astăzi sau de m&acirc;ine &icirc;şi creează tot felul de instrumente de apărare &icirc;mpotriva oricărei imixtiuni &icirc;n viaţa lor privată, de cele mai multe ori, nu sunt altceva aceste instrumente dec&acirc;t forme de protecţie a propriilor conduite ilicite, imorale.&rdquo;&Icirc;mi protejez&rdquo;, spune politicianul, &rdquo;viaţa privată, pentru că, nu-i aşa, &icirc;n cadrul vieţii mele private s-ar putea să desfăşor o activitate de lobby care să nu ducă neapărat la satisfacerea unui interes public, poate doar a unui interes personal&rdquo;. Faptul că cetăţeanul nu este neapărat şi nu &icirc;ntotdeauna foarte bine informat cu privire la ce se &icirc;nt&acirc;mplă &icirc;n bucătăria deciziei publice, duce la frustrări şi la ne&icirc;ncrederi. Atunci c&acirc;nd deciedentul politic sau funcţionarul public este exagerat adăpostit de, eu ştiu, dreptul la viaţă privată, are toate premisele să desfăşoare un act sau o activitate contrară interesului public.</p>
+<p>&Icirc;nchei această primă parte a celor spuse, crez&acirc;nd că &icirc;n ecuaţia pe care cu greu, cu foarte mare dificultate, o vom decripta astăzi &icirc;naintea dumneavoastră, avem de a face cu trei actori: un politician sau un demnitar, dornic de o c&acirc;t mai consistentă protecţie a vieţii sale, indiferent că vorbim de aspecte de viaţă privată sau aspecte legate de modul &icirc;n care &icirc;şi exercită profesiunea, e un prim actor. De un cetăţean care, din lipsă de informare, devine frustrat şi ne&icirc;ncrezător, iar &icirc;ntre cei doi se &icirc;ntrepune de cele mai multe ori omul de presă, jurnalistul. Dacă ar fi să dăm o imagine de proces judiciar &icirc;n care să &icirc;i plasăm pe cei trei, politicianul ar fi cel care stă undeva, &icirc;ntr-o zonă foarte bine protejată de avocaţi extrem de bine pregătiţi, cetăţeanul beneficiază de o asistenţă juridică din oficiu, iar jurnalistul este victima fără apărare. Multumesc!</p>
+<p>&nbsp;</p>
+<p><strong>Cros</strong><strong>s 1</strong></p>
+<p><strong>Alin Ciobanu:</strong> Discursul dumneavoastră a fost strict cu privire la suprapunerea a două drepturi unul al cetăţenilori la informare şi altul al demnitarilor la viaţă privată şi aţi justificat incluziunea din viaţa privată a demnitarului prin faptul că au un rol şi practic &icirc;şi dau oarecum acordul &icirc;ntruc&acirc;t să se intre &icirc;n acest contract. Dar &icirc;n viaţa privată a demnitarilor sunt şi alte persoane care nu sunt neapărat demnitari: copii, rude, prieteni şi aşa mai departe. &Icirc;n ce măsură o asemenea incluziune ar fi justificată?</p>
+<p><strong>Marian Odangiu:</strong> Cu alte cuvinte, p&acirc;nă la urmă merge această zonă a protecţiei vieţii private? De unde p&acirc;nă unde ţine viaţa privată?</p>
+<p><strong>Cristian Clipa:</strong> Ceilalţi membri ai familiei demnitarului, vrem sau nu vrem sa acceptăm, sunt victime colaterale, pentru că respectivul demnitar, &icirc;n momentul &icirc;n care se implică &icirc;n viaţa publică, are oricum de c&acirc;ştigat, at&acirc;t el c&acirc;t şi familia sa. C&acirc;ştigă prestigiul de imagine, care se răsfr&acirc;nge şi asupra celorlalţi membri ai familiei, c&acirc;ştigă reputaţie, deci are o serie &icirc;ntreagă de atuuri. Există un contrabalans, un soi de cumpănire a acestor beneficii. Faptul că, poate, şi viaţa privată a soţiei devine expusă, ca &icirc;ntr-un soi de con de lumină, poate şi viaţa privată a copiilor, dar este un risc asumat, un risc oricum mult mai puţin important din punct de vedere valoric raportat la coordonata interes public, decăt nevoia comunităţii de a fi informată. Şi, ca să fiu mai puţin academic, nu cred că un politician se poate ascunde sub fustele graţioasei sale soţii pentru a derula activităţi contrare acestui interes public.</p>
+<p><strong>Marian Odangiu:</strong> Interesantă &icirc;ntrebarea... Aveţi şi alte &icirc;ntrebări?</p>
+<p><strong>Alin</strong><strong> Ciobanu:</strong> O nuanţare, aş putea spune: &Icirc;n cazul recent al vameşilor, care sunt acuzaţi de corupţie, sunt destule sugestii că aceştia şi-au ascuns averea &icirc;n patrimoniul soţiei, mamei şi aşa mai departe şi să zicem că sunt anumite propuneri către extinderea declaraţiei de avere, nu numai la demnitari ci şi la anumite persoane din familie, p&acirc;nă unde se poate merge aşa? Se poate pune asta pe numele verişorului de-al treilea. P&acirc;nă unde ne putem duce?</p>
+<p><strong>Cristian Clipa:</strong> V-aţi deplasat, voit sa nu, dinspre o chestiune ce ţine de condiţia dreptului la viaţă privată, &icirc;nspre o zonă care ţine de protecţia proprietăţii, mai ales de prezumţia de care fiecare dintre noi ne bucurăm, a caracterului licit, deci legal al dob&acirc;ndirii averii. Trebuie să vă redecoraţi &icirc;ntrebarea, altminteri eu sunt pus &icirc;n situaţia de a da un răspuns, dar care este &icirc;n afara subiectului discutat.</p>
+<p><strong>Marian Odangiu:</strong> Cred că &icirc;ţi pot sări &icirc;n ajutor. Ştiu sau intuiesc de unde vine nevoia lui de a face observaţia, pentru că argumentaţia dumneavoastră pro-cetăţean a mers foarte mult &icirc;nspre zona economică. Probabil de aici o anume derută, pentru că, dacă suntem de acord, aici vorbim despre viaţa privată a factorilor decidenţi. Aici este o mare problemă: pe care &icirc;i socotim factori decidenţi? După părerea mea, lucrurile nu sunt at&acirc;t de sofisticate, se pot stabili limite &icirc;n zona decizională foarte clare &ndash; cine are obligaţia de a-şi face transparentă viaţa privată...</p>
+<p><strong>Cristian Clipa:</strong> Cel care este implicat, direct sau indirect, mijlocit sau nemijlocit, &icirc;n gestionarea afacerilor publice, indiferent că vorbim de elemente cuantificabile, patrimoniale, sau de interese care ţin de siguranţa naţională, ordinea publica şi aşa mai departe, c&acirc;t timp persoana in cauză gestionează &icirc;n numele şi &icirc;n reprezentarea unei puteri anumite atribuţii precum a legitima, a sancţiona, a administra, a autoriza, este &icirc;n zona &icirc;n care trebuie să renunţe la acest deplin beneficiu al protecţiei integrale a vieţii private. Avem un text de lege, nu vă voi plictisi cu texte de lege, cei de fata nu au neapărat legătură cu lumea dreptului, care spune exact ce se inţelege prin viaţă privată: &bdquo;inclusiv coordonatele ce ţin de statusul economic al persoanei&rdquo;, deci averea persoanei constituie p&acirc;nă la urmă un element care intră &icirc;n noţiunea aceasta mai largă a vieţii private.</p>
+<p><strong>Marian Odangiu:</strong> Multumesc. Cred că a fost o precizare extrem de importantă, pentru că, după vorba lui Voltaire, &icirc;nainte de a vorbi, trebuie să ne precizăm termenii. E foarte important că s-a făcut această precizare: ce &icirc;nseamnă &bdquo;persoană publică&rdquo;, p&acirc;nă unde merge această persoană publică &icirc;n numele căreia pretind protecţia vieţii private, un soi de &bdquo;noli me tangere&rdquo; ca dedesubt să se poată camufla, fie şi sub această extrem de modernă formulă a lobby-ului, Avem exemple recente, penibile, a tot felul de afaceri deopotrivă ilicite şi imorale. Am să fac o observaţie, dar nu vreau neapărat un răspuns. Există demnitari care provoacă deconspirarea vieţii private, se expun, cu alte cuvinte, dar nu accidental, d&acirc;nd paparazzilor substanţă, ci o fac deliberat, pentru că deconspirarea vieţii private &icirc;nseamnă de fapt notorietate, celebritate, e adevărat, un fel de spumă, o băşică de săpun, după vorba lui Eminescu. Ne &icirc;ntoarcem la echipa negatoare, la cei care spun &rdquo;OK, aşteptaţi, aveţi pacienţă, dragi rom&acirc;ni, nu este timpul sa deconspirăm viaţa privată&rdquo;. Paradoxal, vine de la un jurnalist dintr-o zonă media destul de deschisă, dacă vreţi, părţii acesteia de viaţă privată.</p>
+<p>&nbsp;</p>
+<p><strong>Adrian Marcu (Negator 1)</strong></p>
+<p>Trebuie să vă mărturisesc că sunt pus &icirc;ntr-o situaţie complicată, nu &icirc;ntocmai potrivită propriilor mele credinţe şi idealuri, dar &icirc;n fine, asta &icirc;mi este sarcina. Aşadar va trebui să combat poziţiile echipei afirmatoare &icirc;ntruc&acirc;t, ca jurnalist(şi ca jurnalist de atitudine, de analiză, de comentariu, dacă vreţi), sunt şi eu la r&acirc;ndul meu membru universitar la Facultatea de Medicină, ramura de Sociologie,o să spun că e foarte complicat, că este o linie extrem de variabilă, o valenţă foarte subţire şi foarte delicată această poveste complicată a dreptului la imagine privată. Fireşte că, repet, ca om care face jurnalism de aproape 20 de ani, de la 16 -17 ani am &icirc;nceput, de copil, am avut inevitabil &icirc;nt&acirc;lniri diverse cu oameni din sfera politică: de la domnul preşedinte Iliescu, cel at&acirc;t de mult pus sub lupă &icirc;n anii'90, p&acirc;nă la celebrul Adrian Năstase, un personaj extrem de controversat, şi &icirc;ncoace revenim spre generaţia actuală de politicieni cu care am putut să stau de vorbă &icirc;n varii momente. Din acest punct de vedere trebuie să spun că poziţia mea este puţin delicată &icirc;ntruc&acirc;t şi eu &icirc;n general pledez &icirc;n actul de jurnalism pentru dreptul la imagine, dar cu anumite bariere. Spun, aşa cum spunea domnul profesor mai devreme, cine se pune &icirc;n slujba cetăţeanului este un slujitor al poporului şi să spunem &icirc;n momentul &icirc;n care deţine o proprietete publică, deţine şi nişte mijloace importante, fireşte financiare, &icirc;nsă totuşi mă văd nevoit să combat această poziţie pentru că &icirc;n Rom&acirc;nia, de pildă, repet, acest tip de plan etic, moral, profesional &icirc;n care joacă media, televiziunea, presa scrisă mai puţin astăzi, cu lumea politică, cu lumea dreptului, dacă vreţi, este &icirc;ncă un plan destul de fragil. Trăim &icirc;ntr-o societate destul de fragilă din punct de vedere emoţional, din punct de vedere etic şi mai ales chiar şi profesional, dupa 50 de ani de comunism, după care ne căutăm nişte repere, &icirc;n primul r&acirc;nd de natură morală şi este foarte greu să le descoperim după experienţe sociale şi politice extrem de delicate. Din acest punct de vedere, este de discutat &icirc;ntr-adevăr, p&acirc;nă unde merge acest drept la incluziune privată, la imagine privată. Domnul profesor a argumentat &icirc;n special pun&acirc;nd &icirc;n prin plan acţiuni de natură oneroasă pe care, de pildă, aceşti politicieni importanţi, demnitari publici, le ascund sub acest imperativ al protecţiei publice şi spune că &icirc;ntr-adevăr şi familia, &icirc;ntr-un fel sau altul, este beneficiară a poziţiei pe care şi-o asumă spre exemplu un ministru, nu mai spunem de un prim-ministru, un preşedinte de ţară, un parlamentar important. Problema &icirc;nsă este p&acirc;nă unde se merge cu acest drept şi dacă nu cumva, dincolo de această situaţie, a drepturilor să spunem colaterale pe care le-ar obţine, notorietate, faptul că este &icirc;n prim-plan, că familia ar avea de c&acirc;ştigat. Sigur, e de acceptat şi acest lucru, dacă există o etică suficient de bine elaborată din partea media &icirc;nainte de toate, şi aici vă spun &icirc;n cunoştinţă de cauză, am lucrat foarte mulţi ani, &icirc;n presa locală fireşte, inclusiv la Realitatea TV Timişoara vreo 2 ani de zile, care este astăzi un subiect de dezbatere din punct de vedere al eticii jurnalismului &icirc;n Rom&acirc;nia, &icirc;n cazul V&acirc;ntu versus cazul Traian Băsescu, dacă este să o luăm din punct de vedere imaginativ. Din acest punct de vedere aş spune că, din nefericire, există o limită totuşi p&acirc;nă la care, din nefericire spun, dar pe de altă parte are o susţinere &icirc;n adevăr, există o limită pentru că &icirc;n Rom&acirc;nia, media &icirc;mprenă cu opinia publică, din păcate, &icirc;ncă nu au acel suficient discernăm&acirc;nt de nautră civică &icirc;nainte de toate, pentru a analiza c&acirc;t este, să spunem, apel la drept privat, c&acirc;t este, să spunem, interes pubic de a afla anumite chestiuni de natură, sigur, oneroasă ale demnitarilor din funcţii publice sau politice importante. Din acest punct de vedere aş argumenta, sigur cazul Severin nu ne ajută, care este un caz clasic de corupţie, &icirc;n opinia mea, cei care sunt la The Sunday Times nu degeaba au descoperit şi pe bună dreptate, dar aş spune că atunci c&acirc;nd vorbim de dreptul cetăţeanului la informaţie nu ne referim doar la aspectele de natură comercială, financiară, pe care le-ar incumba, le-ar presupune faptul că faci politică, pentru că asta ar &icirc;nsemna că cei 400 şi ceva de parlamentari, &icirc;mpreună cu preşedintele, &icirc;mpreună cu şefii de consilii judeţene, &icirc;nsemn&acirc;nd arheologia puterii &icirc;n Rom&acirc;nia, sunt toţi susceptibili de a fi corupţi. Deci dacă pornim de la această premisă, ideea de democraţie reprezentativă pică automat, adică vorbim de un non-sens &icirc;n acest moment şi mă tem că ne apropiem mai degrabă de Biafra sau dacă vreţi de celebrul Congo, &icirc;n 2004,c&acirc;nd se vorbea de Adrian Năstase, dec&acirc;t de ideea de democraţie &icirc;n cadrul Uniunii Europene.</p>
+<p>Mai este un alt aspect foarte important, pe care &icirc;l expun &icirc;n postura de atac, dacă vreţi, calitatea presei sub aspectul moral şi etic este şi ea o discuţie. De pildă despre ce fel de media, ce fel de vehicul media, discutăm c&acirc;nd analizăm pe cineva, pentru că o să vă dau cazul Monei Muscă, care a fost lapidat pubic de jurnalişti importanţi, pe care eu &icirc;i apreciez, de genul Cristian Tudor Popescu, Mircea Mihăieş şi alţi profesori de aici, &icirc;n fine, Horia Roman Patapievici, lista poate continua. Deci oameni cu o reputaţie jurnalistică &icirc;n general indubitabilă. Şi iată că, pentru c&acirc;teva chestiuni legate de un trecut, să spunem, uşor tenebros al Doamnei Muscă, Doamna Muscă a fost profesoară aici, pentru cei care nu ştiaţi, prin anii 70 la limbi străine, pentru că ar fi scris c&acirc;teva notiţe despe nişte studenţi străini, care nu &icirc;i afecta pe aceştia, &icirc;n sensul clasic al cuv&acirc;ntului, a trebuit să retragă din Parlament şi probabil este un gest destul de firesc de sanitate intr-o democraţie, dar mai, mult dec&acirc;t at&acirc;t, ceea ce a fost extrem de grav şi unde presa a jucat un rol extrem de trist, că s-a ajuns la un soi de execuţie publică. Adică s-a ajuns p&acirc;nă &icirc;ntr-acolo &icirc;nc&acirc;t doamna Muscă a fost votată un fel de inamic public numărul 1. C&acirc;tă vreme foarte multe alte figuri ale vieţii publice, din varii domenii, au fost mai departe păstraţi sub un soi de imagine iconoclastică. Din acest punct de vedere, trebuie să avem foarte multă grijă p&acirc;nă unde mergem şi, eu sunt de acord, dacă este vorba de contracte publice, dacă e vorba de afaceri, să mergem p&acirc;nă la capăt şi să devoalăm tot ceea ce se &icirc;nt&acirc;mplă &icirc;n jurul acestor personaje, care au un rol public. Dar trebuie să avem foarte mare atenţie c&acirc;nd vorbim de imaginea personală, pentru că nu se poate ca cei din familie să sufere, &icirc;n mod nefiresc, dacă lucrurile nu sunt probate cu adevărat, pentru o asemenea acuzaţie. Pentru că, ştiţi cum se spune &icirc;n media, o imagine face c&acirc;t o mie de cuvinte, e de ajuns să arătăm pe cineva că umblă cu o valiză diplomat şi să spunem că acolo se afla un milion de dolari, luaţi sub formă de mită, ca să &icirc;l lapidăm pe acel om, să &icirc;l excludem efectiv din viaţa publică. Au fost cazuri, mai dau un singur exemplu şi apoi o să &icirc;nchei, un celebru premier francez, prin anii &lsquo;90, Pierre B&eacute;r&eacute;govoy, şi-a pus capăt zilelor, &icirc;ntruc&acirc;t a fost pus la zid pentru o acţiune de natura celei invocate de tabăra adversă, de presupusă corupţie, &icirc;ntre timp organele de cercetare penală franceză, judecătoria, procurorii, nu au găsit suficient de multe probe, omul &icirc;n schimb a fost găsit mort &icirc;n propria casă, sinucig&acirc;ndu-se, practic lu&acirc;ndu-şi viaţa. Deci aici este o mare chestiune pentru care ar trebui să pledăm şi cu at&acirc;t mai mult &icirc;n contextul &icirc;n care Rom&acirc;nia, ne place sau nu, este şi experienţa mea de vreo 15 -16 ani, media la nivel rezonabil nu are &icirc;ncă, din păcate, nici la nivelul publicului larg, nici la nivelul media şi sigur nici la nivelul demnitarului public suficientă soliditate de natură democtratică, ideatică, imagologică, pentru a susţine această teză. Vă mulţumesc!</p>
+<p>&nbsp;</p>
+<p><strong>Cros</strong><strong>s 2</strong></p>
+<p><strong>Marian Odangiu:</strong> Adrian a făcut exact ceea ce mă aşteptam să facă &ndash; a pledat &icirc;mpotriva propriei sale credinţe de dragul ideilor, un joc. Oricum, a introdus &icirc;n dezbaterea noastră c&acirc;teva nuanţe extrem de importante, re&icirc;ndemn&acirc;ndu-vă, &icirc;ntr-o altă formă, să luaţi &icirc;n considerare faptul că sunt trei poli: pe de o parte, aceste personalităţi decidente, excelent definite de domnul profesor Clipa; pe de altă parte, media (iar, postura &icirc;n care se află media rom&acirc;nească a fost prezentată, deşi nu &icirc;n foarte multe amănunte, de Adrian); şi a venit elementul de bază: noi, cetăţenii, care avem drepturi. Iar aici am să adresez ambelor echipe, &icirc;nainte de a le da cuv&acirc;ntul celor din echipa afirmatoare să &icirc;i sancţioneze pe adversari, v-aş propune &icirc;ncă o temă importantă de reflecţie: dacă avem dreptul, ca cetăţeni, la informaţie corectă şi echidistantă, dacă nu obiectivă. Obiectiv nu există, fiţi convinşi de asta. Nu există informaţie transmisă obiectiv, dar poate exista informaţie transmisă corect şi echidistant. Şi mă &icirc;ntorc la tema de plecare, pentru că, &icirc;n societatea noastră inerţială, e o mare dilemă. Avem acest drept la informaţii, dar ce facem cu ele? <em>Cui prodest</em> dreptul cetăţeanului la informaţii? Cele patru sau cinci runde de alegeri au demonstrat absolut că efectul implicării &icirc;n zona vieţii private nu are niciun impact asupra momentului aceluia fatal &icirc;n care cetăţeanul rom&acirc;n pune ştampila şi pune &icirc;n urnă buletinul de vot. Ori, aceasta este baza democraţiei. P&acirc;nă la urmă, dincolo de orice fel de discuţie, dreptul nostru de a fi informaţi trebuie să aibă o consecinţă concretă. Asta e democraţia: au greşit, OK, nu &icirc;i impuşcăm pentru că nu e democratic, nu &icirc;i mitraliem precum Gaddafi, dar &icirc;i sancţionăm prin vot.</p>
+<p><strong>Vlad Icleanu:</strong> &Icirc;n contextul &icirc;n care ne vorbeaţi de faptul că mass-media şi societatea civilă rom&acirc;nească nu au suficientă maturitate pentru a taxa-o indirect, &icirc;n ce măsură personajele politice rom&acirc;neşti, demnitarii, au suficientă maturitate politică şi discernăm&acirc;nt pentru a ne gestiona ţara aşa cum trebuie, &icirc;n lipsa unei aşa-zise verificări din partea cetăţenilor?</p>
+<p><strong>Adrian Marcu:</strong> Este foarte simplu. Nu e obligaţia demnitarilor să-şi asume acest tip de reacţie dacă media, din păcate, &icirc;n Rom&acirc;nia este &icirc;n continuare labilă şi slabă pentru că este un exemplu indubitabil şi foarte corect adus &icirc;n discuţie. Este incredibil, trăim &icirc;ntr-o ţară care &icirc;n 20 de ani de democraţie reprezentativă, asta &icirc;nseamnă parlamentarism, n-am auzit o demisie răsunătoare, repet, am dat cazul Doamnei Muscă pentru că a fost un caz de decenţă, am cunoscut-o personal, singurul caz &icirc;n 20 de ani. Deci &icirc;n momentul &icirc;n care vorbim de dreptul privat de a ne gestiona imaginea ca demnitari, vorbim şi de impactul pe care cei care se ocupă de acest drept şi &icirc;l devoalează, media &icirc;n primul r&acirc;nd &ndash;  nu? &ndash; are o capacitate de a influenţa. De asemenea vorbim şi despre cei cărora le sunt adresate acest tip de mesaje, de popor. C&acirc;tă vreme poporul rom&acirc;n, din păcate nu are acest discernăm&acirc;nt construit &icirc;n 20 de ani, &icirc;nc&acirc;t după o informaţie de presă importantă dintr-o campanie media să ia o decizie, nu să iasă &icirc;n public cu mitraliera, doamne fereşte, sau să ia de urechi pe cineva &icirc;n Piaţa Universităţii sau &icirc;n Piaţa Victoriei, ci dimpotrivă să ştampileze la vot, pentru că acolo se produce declicul democratic, decontul democratic, da? Printr-o schimbare de voinţă politică, de putere, altminteri vorbim despre un soi de autarhie, nici decum de o democraţie reprezentativă. Atunci ne &icirc;ntrebăm şi noi &icirc;n ce măsură, aceşti demnitari de care faceţi vorbire, sunt cu adevărat de pus la zid, pentru că eu pot să accept şi să merg p&acirc;nă la capăt şi sunt absolut de acord cu dumneavoastră, repet şi &icirc;n postura de om de media, că trebuie mers p&icirc;nă la capăt şi devoalat &icirc;n cazuri de corupţie, de consumarea oneroasă a banului public, de minciună publică, politică, dar cu condiţia ca acele argumente venite din partea media, a opiniei publice, a justiţiei să fie construite pe nişte argumente corecte şi să &icirc;şi facă efectele. C&acirc;tă vreme de 20 de ani, repet, nu am avut nici demisii, nici contaminări şi aici avem un om de drept, căci aici e o altă discuţie, că şi justiţia are un rol fundamental, din păcate este una din marile probleme ale societăţii rom&acirc;neşti, alături de media sunt de acord, vorbim de o zbatere pe uscat a peştelui. Deci din acest punct de vedere am senzaţia că este totul un eşec construit de cineva, nu din umbră, nu sunt adeptul teoriei conspiraţiei, ci e un eşec de raţiune, despre asta vorbim. Atunci apelul la imagine publică trebuie reg&icirc;ndit, retrasat şi, să spun aşa, reconstruit, o reconstrucţie a imaginii publice &icirc;n Rom&acirc;nia, pentru că eşecuri de acest fel precum spuneţi dumneavoastră, la care faceţi apel şi spuneţi că ar trebui duse p&icirc;nă la capăt, politicianul să răspundă. El poate fi prins, poate fi pus la zid, poate fi exonerat de greşeală, dacă e cazul, dar cu argumente şi de o media influentă, puternică şi de o opinie publică de calitate, care să &icirc;nţeleagă demersurile părţii respective, deci ale justiţiei, ale mediei şi ale opiniei publice. Deocamdată nu avem &icirc;n Rom&acirc;nia acest tip de reacţie.</p>
+<p>&nbsp;</p>
+<p><strong>Vlad Icleanu (Afirmator 2)</strong></p>
+<p>Nici nu mai ştiu cum să &icirc;ncep, iniţial vroiam să spun că eu sunt omul care aprinde lumina şi mă duc să aprind becul, dar becul s-a aprins, aşa că cred că o să merg să &icirc;l sting iar. Şi acum că am aprins din nou lumina, să revenim la ceea ce s-a discutat efectiv &icirc;n discursuri &icirc;n acest meci şi &icirc;n ceea ce vroiam să vă spun o să ating trei puncte importante. Punctul numărul unu se numeşte asumarea, asumarea de către personajul public, &icirc;n cazul de faţă demnitarul, că din momentul &icirc;n care el decide să intre &icirc;n viaţa politică, o parte din viaţa lui intimă va fi expusă. Punctul doi, la mine pe foaie se numeşte limite şi a fost o discuţie foarte intensă despre unde ne oprim, unde tragem linia, ce fel de graniţe aparăm şi dacă avem sau nu instrumentele necesare, aceşti trei actori care sunt presa, cetăţenii şi oameni politici, care dacă sunt sau nu pregătiţi să gestioneze acest drept la informare, respectiv acest drept la viaţă privată. Eu o să vă demonstrez că cetăţenii Rom&acirc;niei, nu că sunt pregătiţi, că nici nu ne interesează dacă sunt sau nu pregătiţi, că acest drept ar trebui să &icirc;l avem oricum. Şi ultimul meu punct argumentează de ce acest context al Rom&acirc;niei nu va putea fi niciodată reparat prin suprimarea unui drept pe care cetăţenii &icirc;l au. Şi o să &icirc;ncep cu acesta, pentru că ceea ce propune echipa opoziţiei astăzi, ne spune că avem un popor, care nu este el perfect, suntem cu toţii de acord cu asta, avem o mass-media care nici ea nu străluceşte, suntem de acord şi cu asta şi calea spre a face un pas &icirc;nainte este să le luăm cetăţenilor dreptul la informare. Nu credem că acest pas &icirc;nainte se va realiza aşa, credem că aceste drepturi ar trebui să răm&acirc;nă aşa cum sunt şi lipsa dreptului la viaţă privată e o adevărată controversă. Un mare minus pe care &icirc;l are această dezbate re de astăzi dar şi orice dezbatere din lume, de fapt orice context din lume este că nu ştie ce &icirc;nseamnă viaţa privată. Pentru că nu există o definiţie a vieţii private, nu eu spun asta, spune Curtea Europeană a Drepturilor Omului şi citez &ldquo;nu este nici posibilă, nici necesară găsirea unei definiţii exhaustive a noţiunii de viaţă privată.&rdquo; Deci asta spune Curtea Europeană a Drepturilor Omului . &Icirc;n schimb ce ştim, ştim ce &icirc;nseamnă dreptul cetăţenilor la informare care este libertatea lor de a primi informaţii &icirc;n mod obiectiv. Acum ce &icirc;nseamnă obiectiv din punctul meu de vedere şi din punctul Guvernului de vedere, din punctul de vedere al afirmatorilor &icirc;n această dezbatere, &icirc;n momentul &icirc;n care mass-media nu este monopolizată de un singur organ &icirc;n momentul de faţă, adică nu avem un singur post de televiziune şi avem mai multe, putem spune că informaţia este obiectivă deoarece vine din mai multe puncte de vedere, vine din mai multe surse, mai multe posturi de televiziune. Referitor la unde tragem linia, un punct foarte important &icirc;n dezbatere, iarăşi opinia echipei afirmatoare &icirc;n ceea ce priveşte limita dintre drepturi este acolo unde acţiunile demnitarilor nu influenţează &icirc;n niciun fel viaţa publică. Şi acţiunile lor suntem cu toţii conştienţi că influenţează &icirc;n orice moment viaţa nu doar a lor ci şi a noastră şi de aceea dreptul cetăţenilor la informare trebuie şi va prima &icirc;ntotdeauna &icirc;n faţa dreptului demnitarilor la viaţa privată şi asta mă duce la ultimul punct şi anume asumarea. Că p&acirc;nă şi politicienii sunt conştienţi de acest lucru, ei &icirc;şi asumă această expunere a vieţii private, unii sunt de acord cu ea, alţii nu sunt de acord cu ea, alţii se folosesc de ea doar ca instrument de manipulare. Acest lucru nu contează, contează faptul că dreptul lor la viaţă privată &icirc;n momentul &icirc;n care ei devin demnitari este &icirc;ncălcat şi ei &icirc;şi asumă acest lucru şi că aşa cum bine a punctat antevorbitorul meu din echipa afirmatoare, acest lucru are şi anumite beneficii. Vorbeam de ce se &icirc;nt&acirc;mplă cu familile celor care sunt expuşi public, ei bine ei şi familile lor au anumite beneficii, au c&acirc;ştigul de reputaţie, au c&acirc;ştigul de imagine, deci practic acest mic discomfort nu este comparabil cu avantajele pe care at&acirc;t ei le au căt şi societatea &icirc;n sine. Aşadar, &icirc;n &icirc;ncheiere aş vrea să spun că av&acirc;nd &icirc;n vedere că avem avantaje dacă respectăm acest drept de informare al cetăţenilor, av&acirc;nd &icirc;n vedere că viaţa privată nu este un concept foarte bine definit şi că viaţa privată a demnitarilor &icirc;n special nu este un lucru la care se face apel pentru că şi demnitarii sunt de acord să li se &icirc;ncalce dreptul la viaţa privată, este clar că dreptul cetăţenilor la informare este cel care primează &icirc;n faţa dreptului viaţa intimă al demnitarilor.</p>
+<p>&nbsp;</p>
+<p><strong>Cros 3</strong></p>
+<p><strong>Alin</strong><strong> Ciobanu:</strong> Aţi menţionat o blocare a accesului la informare pe care afirmaţi dumneavoastră noi am cere-o. Noi nu cerem o blocare totală &icirc;n sensul să lăsăm o cortină infinită şi absolut opacă peste viaţa demnitarilor, ci pur şi simplu aratăm că este evident că anumite nuanţări sunt necesare, anumite limite.</p>
+<p><strong>Vlad Icleanu: </strong>Adică limitarea parţială a unui drept nu reprezintă limitarea lui totală, asta &icirc;ncercaţi să sugeraţi?</p>
+<p><strong>Alin</strong><strong> Ciobanu:</strong> Da. Limitarea victimelor colaterale, asta ar fi poate o idee &icirc;n măsura &icirc;n care este posibilă ar fi de urmărit.</p>
+<p><strong>Vlad Icleanu:</strong> Măsura &icirc;n care este posibilă este un aspect foarte important pentru că nu credem că vor exista vreodată instrumentele necesare unei limitări ale impactului expuneri vieţii private a demnitarilor, vis-a-vis de membri familiei lor. Pentru că acest lucru nu este pur şi simplu posibil.</p>
+<p>&nbsp;</p>
+<p><strong>Alin</strong><strong> Ciobanu (Negator 2)</strong></p>
+<p>Bună ziua! Numele meu este Alin Marcel Ciobanu, sunt student &icirc;n anul I la Facultatea de Construcţii şi sunt &icirc;n echipa negatoare, voi &icirc;ncerca să vă conving că anumite nuanţări sunt necesare, deci moţiunea ar trebui respisă &icirc;n forma &icirc;n care se află. &Icirc;n sinteză p&acirc;nă acum practic s-a putut observa că toate cele trei discursuri ţinute p&acirc;nă &icirc;n acest moment acceptă fără prea multe semne de &icirc;ntrebare faptul că dreptul cetăţenilor la informare este important şi că nici nu se pune &icirc;n discuţie ca acesta să fie &icirc;ncălcat &icirc;n toate situaţiile, problema se pune strict &icirc;n cazurile limită &icirc;n care interesul este oarecum limitat. Vreau să subliniez două detalii ale moţiunii şi anume moţiunea spune &ldquo;E timpul ca dreptul cetăţenilor la informare să fie mai important dec&acirc;t dreptul demnitarilor la viaţa privată&rdquo;. O astfel de formulare fără să-şi schimbe esenţa ar fi &ldquo;ar fi bine dacă &icirc;n fiecare caz de suprapunere &icirc;nt&acirc;lnit dreptul cetăţenilor la informare să fie mai important dec&acirc;t dreptul demnitarilor la viaţa privată&rdquo;, &icirc;n fiecare caz. La o analiză superficial, privind strict grosier, răspunsul este da, dar dacă ne uităm &icirc;n detalii, de exemplu este un caz devenit relativ recent celebru cu fiul unei doamne deputat care este supus unui linşaj mediatic pe care cu siguranţă că nu-l merită, pentru faptul că are pe Facebook nişte poze &icirc;n care face ceva cu care noi am putea să nu fim de acord. E pur şi simplu o victimă pentru care nu există absolut niciun interes public cu privire la ce face acel copil &icirc;ntr-o altă ţară, nu face pe bani publici. &Icirc;n ce măsură doamna Plăcintă are dreptul să facă şi viaţa copilului său publică, &icirc;n ce măsură are dreptul să facă această decizie? Av&acirc;nd &icirc;n vedere că acela este major. Un alt aspect pe care vreau să &icirc;l luaţi &icirc;n seamă este faptul că persoanele care acceptă să &icirc;şi spele rufele &icirc;n public tind să aibă un nivel de educaţie şi de civilizaţie, de pregătire profesională ceva mai redus dec&acirc;t cele care consideră importantă o anumită decenţă. Dacă nu ne dorim ca personaje de tipul Gigi Becali sau Vadim Tudor sau Oana Zăvoranu să ne definească tiparul general pentru demnitari, atunci poate că anumite limite ar fi de luat &icirc;n seamă. Dacă credeţi că Gigi Becali este un exemplu dus departe pentru că respectivul domn are venituri foarte mari sau aşa mai departe, vă aduc aminte de cazul Irinei Loghin care a propus arestarea lui. Din acest motiv deşi nu contest &icirc;n esenţă această moţiune consider că punctual se pot aduce &icirc;mbunătăţiri majore la moţiune şi din acest motiv consider că moţiunea ca &icirc;ntreg trebuie să fie respinsă, se poate formula &icirc;ntr-un mod mult mai bun, mult mai benefic. At&acirc;t am avut de spus şi vă mulţumesc pentru atenţie!</p>
+</div>
+                <div class='clear'></div>
+        </div><!-- end main content -->
+         <div class='clear'></div>
+</div>
+<div id="pix"></div>
+
+
+                                </div><!--end main -->
+                                <div id='parteneri'>
+                                    <span class='tr'></span><span class='tl'></span><span class='br'></span><span class='bl'></span><span id="filler"></span>
+                                    <div class='parteneri' id='sustinatori'>
+                                        <span class='floating_text' id='un_proiect'>Un proiect</span>
+                                        <a href='http://www.ardor.org.ro/'><div class='image' id='ardor'>Ardor</div></a>
+                                        <span class='floating_text' id='finantatori'>Finanțatori</span>
+                                        <a href='http://www.opensocietyfoundations.org/'><div class='image' id='open_society'>Open Society Foundation </div></a>
+                                        <a href='http://www.studentiq.ro//'><div class='image' id='memoplus'>MemoPlus</div></a>
+                                        <!-- <a href='http://www.ratiufamilyfoundation.com/'><div class='image' id='FundatiaRatiu'>Ardor</div></a>
+                                        <a href='http://www.eef.md/'><div class='image' id='eef'>East Europe Foundation</div></a>
+                                        <a href='http://www.mts.gov.md/'><div class='image' id='mdminister'>Ministerul Tineretului si Sportului al Republicii Moldova</div></a> -->
+
+                                        <span class='floating_text' id='parteneri_text'>Parteneri</span>
+
+                                        <a href='http://www.policycenter.eu/'><div class='image' id='PolicyCenter'>Policy Center</div></a>
+                                        <a href='http://www.britishcouncil.org/'><div class='image' id='BritishCouncil'>British Council</div></a>
+                                        <a href='http://www.europuls.ro/'><div class='image' id='europuls'>Europuls</div></a>
+                                        <a href='http://www.cere.ro/'><div class='image' id='cere'>Ce-Re</div></a>
+                                        <a href='http://www.primeromania.ro/'><div class='image' id='prime'>Prime Romania</div></a>
+                                        <a href='http://www.cji.ro/'><div class='image' id='cji'>Centrul pentru jurnalism independent</div></a>
+                                        <a href='http://www.aiesectm.ro/'><div class='image' id='aisec'>Aisec</div></a>
+                                        <!-- ===================================================================================================== -->
+                                        <a href='http://www.cogitus.ro/'><div class='image' id='cogitus'>Cogitus</div></a>
+                                        <a href='http://www.adevarul.ro/international/foreign_policy/'><div class='image' id='foreignPolicy'>Foreign Policy</div></a>
+                                        <a href='http://www.elsa.ro/'><div class='image' id='elsa'>Elsa</div></a>
+                                        <a href='http://www.vipromania.ro/'><div class='image' id='vipromania'>Voluntari pentru idei si proiecte</div></a>
+                                        <a href='http://www.ongtrust.ro/'><div class='image' id='ongtrust'>Trust</div></a>
+
+                                        <!-- ===================================================================================================== -->
+                                        <a href='http://www.leap.ro/'><div class='image' id='leap'>Leap</div></a>
+                                        <a href='http://www.younginitiative.org/'><div class='image' id='younginitiative'>Asociatia young initiative</div></a>
+                                        <a href='http://www.asjc.ro/'><div class='image' id='asjc'>Asjc</div></a>
+                                        <a href='http://osut.ro/'><div class='image' id='osut'>Osut</div></a>
+                                        <div class='clear'></div>
+                                    </div>
+                                    <div class='parteneri' id='parteneri_institutionali'>
+                                        <span class='floating_text' id='sponsori_text'>Sus&#539;in&#x0103;tori</span>
+                                        <a href='http://www.cartier.md/'><div class='image' id='cartier_logo'>Editura Cartier</div></a>
+                                        <a href='http://www.pll.md/ro/'><div class='image' id='biblio_logo'>Biblioteca publica de drept</div></a>
+                                        <span class='floating_text' id='institutii_text'>Parteneri institu&#539;ionali</span> 
+                                        <ul id='institutii'>
+                                            <!-- <span class='floating_text' id='institutii_text'>Parteneri institu&#539;ionali:</span> -->
+                                            <li><a href='http://www.politice.ro/'>Facultatea de &#536;tiin&#539;e Politice SNSPA </a></li>
+                                            <li><a href='http://www.comunicare.ro/'>Facultatea de Comunicare &#537;i Rela&#539;ii Publice SNSPA</a></li>
+                                            <li><a href='http://www.fspub.ro/'>Facultatea de &#536;tiin&#539;e Politice Universitatea Bucure&#537;ti</a></li>
+                                            <li><a href='http://www.filosofie.unibuc.ro/'>Facultatea de Filosofie Universitatea Bucure&#537;ti</a></li>
+                                            <li><a href='http://litere.unibuc.ro/'>Facultatea de Litere din Universitatea Bucure&#x015f;ti</a></li>
+                                            <li><a href='http://www.unibuc.ro/ro/fac_fsas_ro'>Facultatea de Sociologie Universitatea Bucure&#537;ti</a></li>
+                                            <li><a href='http://laws.uaic.ro/'>Facultatea de Drept Universitatea Alexandru Ioan Cuza Ia&#537;i</a></li>
+                                            <li><a href='http://www.uaic.ro/uaic/bin/view/Academic/Filosofie'>Facultatea de Filosofie si &#536;tiin&#539;e Social Politice Universitatea AIC Ia&#537;i</a></li>
+                                            <li><a href='http://www.upa.ro/'>Facultatea de Drept si Facultatea de &#x015e;tiin&#x0163;e Politice si Administrative Universitatea Petre Andrei Ia&#x015f;i</a></li> 
+
+                                            <li><a href='http://www.ubbcluj.ro/'>Universitatea Babe&#537;-Bolyai Cluj Napoca</a></li>
+                                            <li><a href='http://www.uvt.ro/'>Universitatea de Vest Timi&#537;oara</a></li>
+                                            <li><a href='http://www.upt.ro/'>Universitatea Politehnica Timi&#537;oara</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class='parteneri' id='parteneri_media'>
+                                        <span class='floating_text' id='media_text'>Parteneri media</span>
+                                        <a href='http://www.hotnews.ro/'><div class='image' id='hotnews'>HotNews</div></a>
+                                        <!-- <a href='http://www.lumebuna.ro/'><div class='image' id='lumebuna'>Lume Buna</div></a> -->
+                                        <a href='http://www.romaniapozitiva.ro/'><div class='image' id='romaniapozitiva'>Romania Pozitiva</div></a>
+                                        <a href='http://totb.ro/'><div class='image' id='thinkoutsidethebox'>Think Outside The Box</div></a>
+                                        <a href='http://www.facebook.com/carevasazica.vip'><div class='image' id='carevasazica'>Carevasazica</div></a>
+                                        <a href='http://www.studentie.ro/'><div class='image' id='studentiero'>Studentie.ro</div></a>
+                                        <a href='http://startub.unibuc.ro/'><div class='image' id='startub'>startub.unibuc.ro</div></a>
+                                        <!-- <a href='http://www.tvr.ro/tvr_cluj.php'><div class='image' id='tvrcluj'>Tvr Cluj</div></a> -->
+                                        <!-- <a href='http://www.radiotransilvania.ro'><div class='image' id='radiotransilvania'>Radio Transilvania</div></a> -->
+                                        <a href='http://iasifun.ziaruldeiasi.ro/'><div class='image' id='iasifun'>Iasi fun</div></a>
+                                        <a href='http://www.ziaruldeiasi.ro/'><div class='image' id='ziaruldeiasi'>Ziarul de Iasi</div></a>
+                                        <a href='http://www.kissfm.ro/timisoara'><div class='image' id='kissfm'>KissFm</div></a>
+
+                                        <div class='clear'></div> 
+                                    </div>
+                                    <div class='clear'></div>
+
+                                </div>	
+                            </div>	<!-- end wrap -->
+                            <div id='footer_mare'>
+                                <div id='footer'>
+                                    <div id='links' class='footer'>
+                                        <div id='menu1' style='margin:auto;'> <ul id='meniu_prinicpal'><li><a href='contacte/index.html'> Contact </a></li>
+<li><a href='clubdebate/index.html'> Cluburile </a></li>
+<li><a href='oamenii/index.html'> Oamenii </a></li>
+<li><a href='proiectul/index.html'> Proiectul </a></li>
+<li><a href='home/index.html'> Acasa </a></li>
+</ul></div><!--end menu-->
+                                    </div><!--
+                                    <div id='contact' class='footer'>
+                                            <h4>Contact</h4>
+                                            <p>office@closer2oxford.ro</p>
+                                            <p>bogdan.draghicescu@closer2oxford.ro<br>
+                                            <span class='detalii'> (asistenta tehnica web - orice probleme legate de site)</span></p>
+                                    </div>
+                                    -->
+                                    <div id='newsletter' class='footer'>
+                                        <script src="../../connect.facebook.net/en_US/all.js#xfbml=1"></script><fb:like href="http://www.facebook.com/pages/Closer2Oxford/162758797069605" width="250" colorscheme="dark"></fb:like>
+                                        <!--<h4>Newsletter</h4>
+                                        <form action='/page/newsletter'>
+                                                <input type='text' name='email'>
+                                                <input type='submit' id='submit' value='>'>
+                                                        
+                                        </form>-->
+                                    </div>
+                                    <div id='credits'>
+                                        Copyright(c) 2021 ARDOR |  Toate drepturile rezervate | Toate logo-urile si sloganurile de pe site sunt proprietate intelectuala inregistrata si nu pot fi reproduse fara acordul explicit al detinatorilor. <br>
+                                            <br /><br />
+                                            <b>Disclaimer</b><br /><i>
+
+                                                Programul educational Closer to Oxford este un program non-profit si nu are o legatura cu universitatea cu acelasi nume, referirea la Oxford avand doar o semnificatie simbolica.
+                                            </i>
+                                    </div>
+
+                                </div>		
+                            </div>		
+
+                            <div id="finantatde">Acest proiect este finantat cu sustinere din partea Comisiei Europene. Aceast publicatie [comunicare] reflecta doar
+                                vederile autorului, iar Comisia nu poate fi facuta  responsabila pentru utilizarea informatiei pe care o contine.</div>
+
+
+                        </body>
+                        </html>

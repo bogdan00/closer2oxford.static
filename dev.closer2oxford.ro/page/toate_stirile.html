@@ -1,0 +1,379 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml-strict.dtd">
+<HTML xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+    <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+            <link rel="icon" type="image/png"  href="../../closer2oxford.ro/favicon.html">
+                <link rel="stylesheet" href="var/layout.css" type="text/css">
+                    <title>Closer to Oxford - e timpul pentru argumente!</title>
+                    <link rel="alternate" type="application/rss+xml"  href="rss_feed" title="Stiri Closer2Oxford">
+                        <!-- <link rel="image_src" property="og:image"  href="/images/layout/closer2oxford_fb_white.png" /> -->
+                        <link rel="image_src" property="og:image"   type="image/jpeg"  href="../uploads/2015/06/9/facebook_icon.html" />
+                        <link rel="image_src" type="image/jpeg"  href="../uploads/2015/06/9/icon-facebook.gif" /> 
+						<meta name="description" content="Closer2Oxford pune în valoare oameni şi argumentele lor, în dezbateri online şi publice alături de tineri şi invitați avizaţi"/>
+                        <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9" />
+<script type='text/javascript' src='../js/jquery-1.4.4.min.js'></script>
+<script>var $j = jQuery.noConflict();</script>
+<script type='text/javascript' src='../js/tinymce/tiny_mce.js'></script>
+<script type='text/javascript' src='../js/jquery.form.js'></script>
+<script type='text/javascript' src='../js/fbLoginRegister.js'></script>
+<script type='text/javascript' src='var/javascript.js'></script>
+<script type='text/javascript' src='../js/jquery.hovertip-1.0.min.js'></script> 
+<script type='text/javascript' src='../js/jquery.jgrowl_minimized.js'></script> 
+<link rel='stylesheet' href='../css/jquery.jgrowl.css' media='screen' type='text/css'> 
+<script type='text/javascript' src='../js/jquery.timer-min.js'></script> 
+<meta name='description' content=''/> 
+<meta name='keywords' content=''/> 
+<style>.hovertip{
+    position:absolute;
+    padding:10px 13px;
+    z-index:2;
+    max-width:300px;
+    color:#303030;
+    background-color:#f5f5b5;
+    border:1px solid #DECA7E;
+    font-family:sans-serif;
+    font-size:12px;
+    line-height:18px;
+    text-align:left;
+    }</style> 
+<script type='text/javascript'>$j(document).ready(function(){$j('.tooltip').hovertip({'offset':[20,20]});get_notif();});
+
+if(!Array.indexOf){Array.prototype.indexOf = function(obj){for(var i=0; i<this.length; i++){if(this[i]==obj){return i;}}return -1;}}
+    hashuri = [] ;
+	 var tick_timer= 3000 ;
+ 
+	 function get_notif()
+        {
+		  
+		  //console.log(tick_timer);
+	     
+		  setTimeout(get_notif,tick_timer);
+        
+		   $j.ajax(
+            {
+                url: '/page/notif/show_events',
+                dataType: 'json',
+                data: "{}",
+                success: function(data)
+                    {
+                    $j.each(data,function(index,data){
+                        try
+                            {
+                            if( hashuri.indexOf(data.hash) == -1 )
+                                {
+                                hashuri.push(data.hash);
+                                $j.jGrowl(
+                                    data.str,
+                                    {
+                                        corners:'1px',
+                                        life: data.life,
+                                        header:data.title,
+                                        hash: data.hash,
+                                        sticky: data.sticky,
+                                        close: function(e,m,o)
+                                            {
+                                                $j.ajax({url:'/page/notif/delete_single_event/' + o.hash});
+                                            }
+                                    });
+                                }
+                            }
+                        catch(e){}
+                        })
+                    }
+            });
+        }
+	 </script> 
+ 
+                            
+  <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-19111721-1']);
+  _gaq.push(['_setDomainName', '.closer2oxford.ro']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+    
+                        </head>
+                        <body>
+                            <div id="global_wrap">
+                                <div id="header">
+                                    <a href='../index.html'><div id='logo'><img src='../images/layout/sigla.jpg'></div></a>
+                                    <a class='noExternal' href='http://www.facebook.com/pages/Closer2Oxford/162758797069605'><img src='../images/fb.png' style='height:30px;float:right;clear:right;margin:10px 5px 5px 5px;border:none;'/></a>
+                                    <a href='rss_feed'><img src='../images/feed-icon.png' style='height:30px;float:right;clear:right;margin:5px;border:none;'/></a>
+                                </div>
+                                <div id="meniu">
+                                    <div  id='register_login'>
+
+                                        
+  <a href='#' class='todo' id='login'>Login </a> &nbsp;<a href='register.html' class='todo' id='register'>Register</a>
+    <div id='login_box'>
+		  <form action='https://dev.closer2oxford.ro/page/ro/login_user/logon' method='post' id='user_login_form'>
+					 <div>Email: <input type='text' name='email'/> </div><br />
+					 <div>Pass: <input type='password' name='passwd'/></div><br />
+					 <a href='#' class='password_forgot'>forgot password?</a>
+					 <input type='hidden' value='/page/toate_stirile' name='returnto' class='submiter'/><br />
+					 <input type='submit' value='login' name='btn' class='submiter'/><br />
+		  </form>
+		  
+		  <form action='https://dev.closer2oxford.ro/page/ro/login_user/reset_user_pw' method='post' id='user_reset_form'>
+					 <div>Email: <input type='text' name='email'/> </div><br />
+					 <a href='#' class='password_forgot'>login?</a>
+					 <input type='hidden' value='/page/toate_stirile' name='returnto' class='submiter'/><br />
+					 <input type='submit' value='reset' name='btn' class='submiter'/><br />
+		  </form>
+		  
+    </div>
+    
+                                    </div>
+                                    <div id='menu1' style='margin:auto;'> <ul id='meniu_prinicpal'><li><a href='contacte/index.html'> Contact </a></li>
+<li><a href='clubdebate/index.html'> Cluburile </a></li>
+<li><a href='oamenii/index.html'> Oamenii </a></li>
+<li><a href='proiectul/index.html'> Proiectul </a></li>
+<li><a href='home/index.html'> Acasa </a></li>
+</ul></div><!--end menu-->
+                                </div>
+                                <div id="main"> 
+                                    <!--<div id='stiri-padding'>
+        <div id='stiri_back'>
+                {stiri} 
+    
+               
+        </div>-->
+        
+</div>
+<div  id="content-padding">
+        <div id='sidebar_menu'>
+                <span class='tr'></span>
+                <span class='tl'></span>
+                <span class='br'></span>
+                <span class='bl'></span>
+                <span id="filler"></span>
+                    
+                <ul></ul>
+                
+                <div class='clear'></div>
+        </div>
+        <div id="content">
+                <span class='tr'></span>
+                <span class='tl'></span>
+                <span class='br'></span>
+                <span class='bl'></span>
+                <span id="filler"></span>
+                <ul class='toate_stirile'><li><a href='10_sfaturi.html'> <span class='content'><span class='titlu'>10 sfaturi dupa runda 10</span><br><span class='details'>Trainerii C2O au parcurs meciurile din runda 10 si au observ [..]</span></span><span class='notif timestamp'>[2014-02-07 16:34:17]</span></a></li> <li><a href='abonamente_british_council_vara.html'> <span class='content'><span class='titlu'>Abonamente la British Council Library pe 3 luni sunt disponibile pentru: </span><br><span class='details'>&nbsp;
+Bucuresti:&nbsp;George Matu,&nbsp;Octav Popescu,&nbs [..]</span></span><span class='notif timestamp'>[2011-07-08 16:04:45]</span></a></li> <li><a href='abonamente_fp_runda_6.html'> <span class='content'><span class='titlu'>Abonamente la Foreign Policy Romania</span><br><span class='details'>Abonamente la Foreign Policy Romania pe un an merg la:&nbsp; [..]</span></span><span class='notif timestamp'>[2012-07-10 15:22:13]</span></a></li> <li><a href='ai_cont.html'> <span class='content'><span class='titlu'>Ai aflat dacă eşti afirmator sau negator?</span><br><span class='details'>Dacă ai deja o echipă din prima rundă, e nevoie să ţi-o [..]</span></span><span class='notif timestamp'>[2011-02-19 22:17:45]</span></a></li> <li><a href='anul2incifre.html'> <span class='content'><span class='titlu'>Anul al II-lea în cifre:</span><br><span class='details'>&nbsp;&Icirc;ncepem al doilea an din viața C2O cu o tonă d [..]</span></span><span class='notif timestamp'>[2011-10-16 15:35:49]</span></a></li> <li><a href='anunt_clasamente_runda_5.html'> <span class='content'><span class='titlu'>Clasamentele rundei a 5-a sunt gata!</span><br><span class='details'>Aici puteți vedea at&acirc;t verdictele c&acirc;t și feedb [..]</span></span><span class='notif timestamp'>[2012-04-01 00:33:40]</span></a></li> <li><a href='anunt_dezbatere_runda_5.html'> <span class='content'><span class='titlu'> A patra dezbatere publică din rundă, la Cluj în 10 mai  </span><br><span class='details'>Dezbaterea de la Cluj &icirc;i aduce &icirc;n echipă afirma [..]</span></span><span class='notif timestamp'>[2012-05-09 17:51:00]</span></a></li> <li><a href='arbitraj%2bsi%2bclasamente.html'> <span class='content'><span class='titlu'>arbitraj si clasamente</span><br><span class='details'>&nbsp;&Icirc;n acest weekend vor fi obţinute arbitrajele. & [..]</span></span><span class='notif timestamp'>[2010-11-12 15:26:53]</span></a></li> <li><a href='arbitraj%2bsi%2bclasamente%2b(update).html'> <span class='content'><span class='titlu'>arbitraj si clasamente (update)</span><br><span class='details'>Un update scurt dar foarte important : clasamentele sunt viz [..]</span></span><span class='notif timestamp'>[2010-11-15 15:39:57]</span></a></li> <li><a href='bucuresti_primavara.html'> <span class='content'><span class='titlu'>Dezbaterea din Bucuresti</span><br><span class='details'>Dezbaterea din Bucuresti: joi 14 aprilie, ora 15.30
+Sediul  [..]</span></span><span class='notif timestamp'>[2011-04-07 11:08:12]</span></a></li> <li><a href='calendar-debate-9.html'> <span class='content'><span class='titlu'>Calendar debate online</span><br><span class='details'>
+ Sugestii de lectură pentru runda a 9-a&Icirc;n sprijinul [..]</span></span><span class='notif timestamp'>[2013-05-12 09:43:45]</span></a></li> <li><a href='anunt%2binvitatie.html'> <span class='content'><span class='titlu'>Anun? de invita?ie în rund? online. </span><br><span class='details'><p>Anunţ de invitaţie &icirc;n rundă online.&nbsp;</p>
+ [..]</span></span><span class='notif timestamp'>[2010-10-25 04:19:07]</span></a></li> <li><a href='anunt_runda_11.html'> <span class='content'><span class='titlu'>Inregistreaza-te in runda si dezbate despre necesitatea Paradei Gay Pride!</span><br><span class='details'>Closer 2 Oxford isi pune la dispozitie instrumentele - platf [..]</span></span><span class='notif timestamp'>[2014-02-05 11:37:34]</span></a></li> <li><a href='arbitraj_runda_7.html'> <span class='content'><span class='titlu'>Meciurile rundei a 7-a se află în proces de arbitraj </span><br><span class='details'>P&acirc;nă duminică, 25 noiembrie, discursurile participan [..]</span></span><span class='notif timestamp'>[2012-11-24 01:59:18]</span></a></li> <li><a href='calendar%2bactivitati.html'> <span class='content'><span class='titlu'>calendar activitati</span><br><span class='details'>
+Calendarul de activitati al seriei de toamna C2O:
+Debate  [..]</span></span><span class='notif timestamp'>[2010-10-30 19:57:46]</span></a></li> <li><a href='calendar_runda_5.html'> <span class='content'><span class='titlu'>Calendar runda a 5-a</span><br><span class='details'>
+Vineri 16 martie şi S&acirc;mbătă 17martie postare disc [..]</span></span><span class='notif timestamp'>[2012-03-17 18:15:01]</span></a></li> <li><a href='calendar_runda_6.html'> <span class='content'><span class='titlu'>Calendar runda a 6-a  </span><br><span class='details'>Perioada de inregistrare extinsa pana in 23 iuniePrimul disc [..]</span></span><span class='notif timestamp'>[2012-06-20 13:11:27]</span></a></li> <li><a href='calendar_runda_7.html'> <span class='content'><span class='titlu'>Calendarul de postare a discursurilor</span><br><span class='details'>Luni 12 noiembrie şi marţi 13 noiembrie, postarea discursu [..]</span></span><span class='notif timestamp'>[2012-11-12 00:20:37]</span></a></li> <li><a href='calendar_runda_primavara.html'> <span class='content'><span class='titlu'>Calendarul de postare a discursurilor rundei curente:</span><br><span class='details'>Luni şi Marţi&nbsp; (18 şi 19 februarie) discursul afirma [..]</span></span><span class='notif timestamp'>[2013-02-17 16:57:08]</span></a></li> <li><a href='calendar_runda_primavara_2014.html'> <span class='content'><span class='titlu'>Calendar runda 11</span><br><span class='details'>Calendarul rundei de primavara este urmatorul:
+14-15 Februa [..]</span></span><span class='notif timestamp'>[2014-02-14 01:11:02]</span></a></li> <li><a href='calendar_vara.html'> <span class='content'><span class='titlu'>Calendar runda 3</span><br><span class='details'>Calendarul pentru runda online este urmatorul:
+26 aprilie-6 [..]</span></span><span class='notif timestamp'>[2011-04-28 01:05:50]</span></a></li> <li><a href='clasamentul-rundei.html'> <span class='content'><span class='titlu'>Clasamentul rundei 9</span><br><span class='details'>Clasamentul rundei&nbsp;va fi disponibil joi 30 mai.Am solic [..]</span></span><span class='notif timestamp'>[2013-05-29 10:05:04]</span></a></li> <li><a href='clasament_runda_10.html'> <span class='content'><span class='titlu'>Clasamentul rundei a 10-a este disponibil</span><br><span class='details'>Clasamentul rundei 10 este acum disponibil. Felicitari tutur [..]</span></span><span class='notif timestamp'>[2013-11-14 16:08:40]</span></a></li> <li><a href='calendar_runda_toamna.html'> <span class='content'><span class='titlu'>Calendar runda de toamnă</span><br><span class='details'>&nbsp;
+Poll ul are deadline 20 octombrie, urm&acirc;nd o pe [..]</span></span><span class='notif timestamp'>[2011-10-16 15:42:49]</span></a></li> <li><a href='castigatorI_primavara.html'> <span class='content'><span class='titlu'>Câştigătorii premiilor în vouchere/ abonamente la BC</span><br><span class='details'>Echipa Closer2Oxford anunţă distribuţia celor 40 de vouch [..]</span></span><span class='notif timestamp'>[2011-03-23 13:53:09]</span></a></li> <li><a href='clasamente_runda_8.html'> <span class='content'><span class='titlu'>Clasamentul rundei 8</span><br><span class='details'>Click aici pentru Clasamentul rundei a 8-a
+&nbsp;
+Nota ref [..]</span></span><span class='notif timestamp'>[2013-03-08 19:41:48]</span></a></li> <li><a href='clasamente_runda_9.html'> <span class='content'><span class='titlu'>Clasament disponibil</span><br><span class='details'>
+Suntem gata! Clasamentul acestei runde este disponibil&nbs [..]</span></span><span class='notif timestamp'>[2013-05-31 12:44:44]</span></a></li> <li><a href='clasament_runda_6.html'> <span class='content'><span class='titlu'>Clasament runda 6</span><br><span class='details'>13 meciuri despre democratie. O fi un semn?Meciurile acestei [..]</span></span><span class='notif timestamp'>[2012-07-10 15:21:48]</span></a></li> <li><a href='conferinta_cluj_vara.html'> <span class='content'><span class='titlu'>Protagonisti in debate la Cluj, 9 iunie</span><br><span class='details'>
+
+
+Echipa afirmatoare are in componenta pe prof Alexandru [..]</span></span><span class='notif timestamp'>[2011-06-06 14:58:21]</span></a></li> <li><a href='conferinta_timisoara_vara.html'> <span class='content'><span class='titlu'>Protagonisti in debate la Timisoara</span><br><span class='details'>Afirmatori sunt prof Gheorghe Mihai (avocat) si Catalin Arte [..]</span></span><span class='notif timestamp'>[2011-06-10 10:44:43]</span></a></li> <li><a href='clasament_runda11.html'> <span class='content'><span class='titlu'>Clasamentul rundei a 11-a este gata</span><br><span class='details'>&nbsp;
+
+Felicitam toti participantii pentru o runda cu sch [..]</span></span><span class='notif timestamp'>[2014-03-08 15:57:23]</span></a></li> <li><a href='clasament_toamna_2011.html'> <span class='content'><span class='titlu'>Runda online isi anunta clasamentul</span><br><span class='details'>Aici puteţi vedea rezultatele rundei online pe moţiunea
+& [..]</span></span><span class='notif timestamp'>[2011-11-23 04:22:04]</span></a></li> <li><a href='conferinta_bucuresti_vara.html'> <span class='content'><span class='titlu'>Protagonisti in debate la Bucuresti, joi 9 iunie </span><br><span class='details'>Toma Patrascu (ASUR) si Victor Draghicescu (absolvent Drept  [..]</span></span><span class='notif timestamp'>[2011-06-06 14:57:27]</span></a></li> <li><a href='conferinta_iasi_vara.html'> <span class='content'><span class='titlu'>Protagonisti in debate la Iasi, vineri 10 iunie </span><br><span class='details'>
+Afirmatori: Mark Bucuci (Universitatea Petre Andrei) si Ma [..]</span></span><span class='notif timestamp'>[2011-06-06 15:00:41]</span></a></li> <li><a href='conferinte%2bprimavara.html'> <span class='content'><span class='titlu'>Incep conferintele seriei de primavara</span><br><span class='details'>&nbsp;Vino, voteaza si discuta cu invitatii in&nbsp;Cluj (5  [..]</span></span><span class='notif timestamp'>[2011-04-05 14:15:31]</span></a></li> <li><a href='daca_ai_intarziat.html'> <span class='content'><span class='titlu'>După deadline</span><br><span class='details'>S-au &icirc;nchis &icirc;nregistrările și nu ai apucat sa  [..]</span></span><span class='notif timestamp'>[2011-05-07 00:31:02]</span></a></li> <li><a href='deadine%2binregistrare.html'> <span class='content'><span class='titlu'>deadine inregistrare</span><br><span class='details'>Dedline-ul de inregistrare pe site este&nbsp;vineri 29 octom [..]</span></span><span class='notif timestamp'>[2010-10-20 19:10:19]</span></a></li> <li><a href='deadline-uri.html'> <span class='content'><span class='titlu'>deadline-uri</span><br><span class='details'>Discursurile afirmatoare si negatoare trebuie postate in dea [..]</span></span><span class='notif timestamp'>[2010-11-05 16:24:55]</span></a></li> <li><a href='closer2oxford_trece_prutul.html'> <span class='content'><span class='titlu'>Closer to Oxford trece Prutul!</span><br><span class='details'>
+Iniţiat &icirc;n 2010 &icirc;n Bucureşti, Cluj, Iaşi,Ti [..]</span></span><span class='notif timestamp'>[2012-10-18 00:50:38]</span></a></li> <li><a href='cum_inregistrezi_echipa.html'> <span class='content'><span class='titlu'>Cum să îţi înregistrezi echipa în trei paşi:</span><br><span class='details'>
+1.&nbsp;Te &icirc;nregistrezi individual pe site&nbsp;www. [..]</span></span><span class='notif timestamp'>[2013-01-23 03:43:13]</span></a></li> <li><a href='deadline_extins_runda_8.html'> <span class='content'><span class='titlu'>Runda curentă are deadline 17 februarie</span><br><span class='details'>Toate datele necesare se gasesc la secţiunea&nbsp;register. [..]</span></span><span class='notif timestamp'>[2013-02-13 02:18:14]</span></a></li> <li><a href='dezbatere_parada_Buc.html'> <span class='content'><span class='titlu'>Dezbatere PRO/CONTRA Marsul Diversitatii</span><br><span class='details'>&nbsp;
+ Comunicat de presă
+București, 10 iunie
+Miercuri [..]</span></span><span class='notif timestamp'>[2014-06-10 14:51:28]</span></a></li> <li><a href='dezbatere_publica_iasi_runda_5.html'> <span class='content'><span class='titlu'>Dezbatere publică la Iași, 2 mai </span><br><span class='details'>Miercuri, 2 mai, &icirc;ncep&acirc;nd cu ora 18:15, la Unive [..]</span></span><span class='notif timestamp'>[2012-05-01 15:01:56]</span></a></li> <li><a href='dezbateri_bucuresti_timisoara_runda_5.html'> <span class='content'><span class='titlu'>In 9 si 10 aprilie, dezbateri publice la Timisoara si Bucuresti</span><br><span class='details'>La Timisoara Alin Sava &amp; Alina Gavra intra in "lupta" co [..]</span></span><span class='notif timestamp'>[2012-04-09 13:13:25]</span></a></li> <li><a href='comunicat_presa_2011.html'> <span class='content'><span class='titlu'>Closer to Oxford - un model de dezbatere asteptat</span><br><span class='details'>Care sunt raspunderile etice pe care o persoana este datoare [..]</span></span><span class='notif timestamp'>[2011-07-20 23:11:51]</span></a></li> <li><a href='dezbateri_primavara.html'> <span class='content'><span class='titlu'>Dezbateri Sesiunea de primăvară</span><br><span class='details'>&nbsp;Au fost postate transcrierile, pozele şi video-urile  [..]</span></span><span class='notif timestamp'>[2011-04-29 05:51:51]</span></a></li> <li><a href='dezbateri_publice_timisoara_toamna_2011.html'> <span class='content'><span class='titlu'>Dezbateri publice la Bucuresti si Timisoara in 14 decembrie</span><br><span class='details'>
+Nesupunerea civica este legitima intr-o democratie?
+Emanu [..]</span></span><span class='notif timestamp'>[2011-12-11 23:02:31]</span></a></li> <li><a href='dezbateri_transcrieri_toamna.html'> <span class='content'><span class='titlu'>Dezbaterile si transcrierile editiei din toamna</span><br><span class='details'>Dezbaterile si transcrierile din cele patru centre universit [..]</span></span><span class='notif timestamp'>[2011-01-06 00:41:21]</span></a></li> <li><a href='discurs%2ba2%2bprimavara.html'> <span class='content'><span class='titlu'>Discurs A2</span><br><span class='details'>Este randul Afirmatorilor sa posteze pe site, zile de postar [..]</span></span><span class='notif timestamp'>[2011-03-07 05:53:19]</span></a></li> <li><a href='debate_aprilie_2013.html'> <span class='content'><span class='titlu'>7 centre universitare intra în runda de vară 2013. Ce moțiune dezbatem?</span><br><span class='details'>&Icirc;ncepem runda de vară Closer to Oxford cu forțe noi! [..]</span></span><span class='notif timestamp'>[2013-04-10 00:14:49]</span></a></li> <li><a href='dezbatere_iasi_nesupunere_civica.html'> <span class='content'><span class='titlu'>Luni 16 ianuarie, dezbatere publica la Iasi</span><br><span class='details'>Ce facem cand spatiile publice, din care, de cele mai multe  [..]</span></span><span class='notif timestamp'>[2012-01-11 16:54:41]</span></a></li> <li><a href='discurs%2bN2.html'> <span class='content'><span class='titlu'>Discurs N2</span><br><span class='details'>Discursul de Negator 2 trebuie &nbsp;pus pe site miercuri si [..]</span></span><span class='notif timestamp'>[2011-03-09 18:35:42]</span></a></li> <li><a href='discurs_negator1_primavara.html'> <span class='content'><span class='titlu'>Discurs N1</span><br><span class='details'>&nbsp;Discursul negatorilor 1 se postează pe site s&acirc;m [..]</span></span><span class='notif timestamp'>[2011-03-05 07:10:17]</span></a></li> <li><a href='familia_ratiu.html'> <span class='content'><span class='titlu'> Fundaţia Familiei Raţiu ni se alătură</span><br><span class='details'>&nbsp;Suntem onoraţi să anunţăm faptul că Fundaţia Fam [..]</span></span><span class='notif timestamp'>[2010-12-27 21:07:42]</span></a></li> <li><a href='final%2brunda%2bprimavara.html'> <span class='content'><span class='titlu'> Finalul rundei de primăvară </span><br><span class='details'>Runda de primăvară a luat sf&acirc;rşit (pentru cele mai  [..]</span></span><span class='notif timestamp'>[2011-03-11 07:45:47]</span></a></li> <li><a href='guest_debate_primavara_2013.html'> <span class='content'><span class='titlu'>guest_debate_primavara_2013</span><br><span class='details'>
+Guest Debate Closer to Oxford
+
+
+Moţiune: Este timpul s [..]</span></span><span class='notif timestamp'>[2013-03-03 21:13:53]</span></a></li> <li><a href='iasi_primavara.html'> <span class='content'><span class='titlu'>Daca e marţi, e dezbatere la Iaşi</span><br><span class='details'>&nbsp;Marţi 12 aprilie, ora 19, sala de conferinţe din cla [..]</span></span><span class='notif timestamp'>[2011-04-11 00:17:38]</span></a></li> <li><a href='incepe_runda_de_primavara.html'> <span class='content'><span class='titlu'>Începe runda a doua </span><br><span class='details'>
+Primul discurs afirmator se posteaza joi si vineri, pe pag [..]</span></span><span class='notif timestamp'>[2011-03-03 05:57:29]</span></a></li> <li><a href='inceput_runda_10.html'> <span class='content'><span class='titlu'>Începe runda a 10-a Closer2Oxford!</span><br><span class='details'>Așadar, să-i dăm drumul: pentru &icirc;nceput, dați un c [..]</span></span><span class='notif timestamp'>[2013-10-01 23:13:14]</span></a></li> <li><a href='inregistrari_primavara.html'> <span class='content'><span class='titlu'>Perioada de inregistrare</span><br><span class='details'>&nbsp;
+Perioada de inregistrari este 7-27 februarie.
+echip [..]</span></span><span class='notif timestamp'>[2011-02-07 00:32:06]</span></a></li> <li><a href='inscrie-te.html'> <span class='content'><span class='titlu'>inscrie-te</span><br><span class='details'>Din 20 octombrie te poți &icirc;nscrie alături de un coleg [..]</span></span><span class='notif timestamp'>[2010-10-15 01:49:03]</span></a></li> <li><a href='interviu_2015.html'> <span class='content'><span class='titlu'>"Nici una din partile implicate nu ar trebui sa se ofenseze usor intr-o dezbatere". Interviu</span><br><span class='details'>7 participanti la competitia Closer2Oxford au raspuns unui i [..]</span></span><span class='notif timestamp'>[2015-08-21 18:13:10]</span></a></li> <li><a href='jurizare_vara.html'> <span class='content'><span class='titlu'>Runda a treia la jurizat</span><br><span class='details'>&nbsp;
+Salut! Meciurile rundei a treia s-au &icirc;ncheiat  [..]</span></span><span class='notif timestamp'>[2011-05-16 08:32:26]</span></a></li> <li><a href='lansare_toamna_2011.html'> <span class='content'><span class='titlu'> Lansare seria de toamna 2011</span><br><span class='details'>
+Editia a doua a proiectului va incepe in 15 octombrie.&nbs [..]</span></span><span class='notif timestamp'>[2011-09-29 01:30:23]</span></a></li> <li><a href='limita_cuvinte.html'> <span class='content'><span class='titlu'>Limita de cuvinte</span><br><span class='details'>Runda aceasta am decis sa aplicam mai strict regulile legate [..]</span></span><span class='notif timestamp'>[2011-05-07 05:31:54]</span></a></li> <li><a href='motiunea%2baleasa.html'> <span class='content'><span class='titlu'>motiunea aleasa</span><br><span class='details'>Motiunea aleasa pentru prima runda de debate online este:
+" [..]</span></span><span class='notif timestamp'>[2010-10-20 16:04:51]</span></a></li> <li><a href='dezbateri_publice9.html'> <span class='content'><span class='titlu'>Specialiști și studenți în 5 dezbateri publice</span><br><span class='details'>Specialiști și studenți investighează oportunitatea amen [..]</span></span><span class='notif timestamp'>[2013-06-19 10:48:38]</span></a></li> <li><a href='inregistrari-runda10.html'> <span class='content'><span class='titlu'>Inregsitrari runda 10 C2O</span><br><span class='details'>
+Start inregistrari in runda a 10-a
+
+
+Intra in dezbatere [..]</span></span><span class='notif timestamp'>[2013-10-10 11:40:32]</span></a></li> <li><a href='motiunea_castigatoare_primavara.html'> <span class='content'><span class='titlu'>Sesiunea de primăvară a votului online s-a încheiat </span><br><span class='details'>&nbsp;Moţiunea c&acirc;ştigatoare (cu 43%) a sesiunii de v [..]</span></span><span class='notif timestamp'>[2011-02-07 22:58:16]</span></a></li> <li><a href='inregistrari_runda_toamna_2012.html'> <span class='content'><span class='titlu'>Înregistrează-te în runda a 7-a şi dezbate despre publicitatea adresată copiilor!</span><br><span class='details'>
+Moţiunea &ldquo;E timpul să interzicem publicitatea care [..]</span></span><span class='notif timestamp'>[2012-10-25 00:04:57]</span></a></li> <li><a href='motiunile%2bvotate.html'> <span class='content'><span class='titlu'>motiunile votate</span><br><span class='details'>motiunile votate in perioada 14-20 oct au fost:
+1. e timpul [..]</span></span><span class='notif timestamp'>[2010-10-24 23:11:08]</span></a></li> <li><a href='multumiri_voluntarilor.html'> <span class='content'><span class='titlu'>multumiri_voluntarilor</span><br><span class='details'>Nominalizam aici voluntarii debateri din Bucuresti, Iasi, Cl [..]</span></span><span class='notif timestamp'>[2011-06-29 00:19:20]</span></a></li> <li><a href='newslettere.html'> <span class='content'><span class='titlu'>newslettere</span><br><span class='details'>&nbsp;Puteti accesa aici newsletterele de pana acum:
+
+News [..]</span></span><span class='notif timestamp'>[2011-08-09 20:40:15]</span></a></li> <li><a href='newsletter_7.html'> <span class='content'><span class='titlu'>Newsletter 7</span><br><span class='details'>Toate datele rundei anterioare stranse intr-un newsletter, n [..]</span></span><span class='notif timestamp'>[2012-05-31 16:22:43]</span></a></li> <li><a href='news_newsletter.html'> <span class='content'><span class='titlu'>Avem newsletter!</span><br><span class='details'>Avem newsletter!
+Am instalat pe site o facilitate de newsle [..]</span></span><span class='notif timestamp'>[2011-02-06 23:15:54]</span></a></li> <li><a href='noul%2bcalendar.html'> <span class='content'><span class='titlu'>noul calendar</span><br><span class='details'>&nbsp;
+Calendarul de activitati al seriei de toamna C2O:
+D [..]</span></span><span class='notif timestamp'>[2010-11-08 16:41:00]</span></a></li> <li><a href='postare_vara_discurs2.html'> <span class='content'><span class='titlu'>Se întâmplă acum!</span><br><span class='details'>&Icirc;n aceste zile se postează discursul Negator 1 pe sit [..]</span></span><span class='notif timestamp'>[2011-05-09 13:46:51]</span></a></li> <li><a href='premii.html'> <span class='content'><span class='titlu'>premii</span><br><span class='details'>Primii 16 debateri din clasamentul rundelor de debate online [..]</span></span><span class='notif timestamp'>[2010-10-19 13:57:40]</span></a></li> <li><a href='premii_inteligent_life_vara.html'> <span class='content'><span class='titlu'>Premii pe un an la Intelligent Life vor primi</span><br><span class='details'>Andrei Leferman,&nbsp;Lucian&nbsp;Valsan,&nbsp;Dragos Movila [..]</span></span><span class='notif timestamp'>[2011-06-19 16:06:33]</span></a></li> <li><a href='premii_primavara.html'> <span class='content'><span class='titlu'>Pe lângă gustul victoriei, premii!</span><br><span class='details'>Pe langa experienta (in sine) a unei dezbateri reusite, prem [..]</span></span><span class='notif timestamp'>[2011-02-27 18:37:49]</span></a></li> <li><a href='premiu_gala_societatii_civile.html'> <span class='content'><span class='titlu'>Premiul Galei Societatii Civile</span><br><span class='details'>Premiul I la Gala Societatii Civile se acordaaaa
+programulu [..]</span></span><span class='notif timestamp'>[2011-06-10 10:50:31]</span></a></li> <li><a href='prima%2brunda.html'> <span class='content'><span class='titlu'>prima runda</span><br><span class='details'>Prima runda de debate va avea loc in intervalul 1-8 noiembri [..]</span></span><span class='notif timestamp'>[2010-10-24 23:14:20]</span></a></li> <li><a href='oferta_foreign_policy.html'> <span class='content'><span class='titlu'>Foreign Policy - discount 50%pentru Closer2Oxford</span><br><span class='details'>Primii parteneri care vin alaturi de noi in incurajarea dial [..]</span></span><span class='notif timestamp'>[2011-07-23 13:30:54]</span></a></li> <li><a href='premii%2babonamente%2btoamna.html'> <span class='content'><span class='titlu'>premii abonamente toamna</span><br><span class='details'>&nbsp;Posesorii abonamentelor pe un an la Foreign Policy Rom [..]</span></span><span class='notif timestamp'>[2011-01-12 19:34:32]</span></a></li> <li><a href='premii_runda4.html'> <span class='content'><span class='titlu'>Abonamente la British Council Library (runda a 4-a)</span><br><span class='details'>Dragi colegi, urmatorii veti putea beneficia de abonamente l [..]</span></span><span class='notif timestamp'>[2012-01-03 20:04:46]</span></a></li> <li><a href='prima%2bzi%2bde%2bdebate%2bonline.html'> <span class='content'><span class='titlu'>prima zi de debate online</span><br><span class='details'>&nbsp;Azi, 3 noiembrie, a debutat prima rundă de debate onl [..]</span></span><span class='notif timestamp'>[2010-11-03 12:40:08]</span></a></li> <li><a href='probleme%2btehnice.html'> <span class='content'><span class='titlu'>probleme tehnice</span><br><span class='details'>&nbsp;Din cauza problemelor tehnice care au apărut cu situl [..]</span></span><span class='notif timestamp'>[2010-11-06 00:48:11]</span></a></li> <li><a href='resurse_lectura_runda_7.html'> <span class='content'><span class='titlu'>Sugestii de lectură pentru runda a 7-a</span><br><span class='details'>
+&nbsp;&Icirc;n sprijinul pregătirii cazurilor pe tema&nbs [..]</span></span><span class='notif timestamp'>[2012-10-25 15:29:25]</span></a></li> <li><a href='rezultate_runda_7.html'> <span class='content'><span class='titlu'>Rezultatele rundei a 7-a sunt gata</span><br><span class='details'>Toate pledoariile şi arbitrajele pot fi văzute&nbsp;aici&n [..]</span></span><span class='notif timestamp'>[2012-11-29 12:53:19]</span></a></li> <li><a href='premii_runda_5.html'> <span class='content'><span class='titlu'>Ce te așteaptă daca participi (dar) şi dacă vei câştiga meciul?</span><br><span class='details'>&nbsp;
+Abonamente cu reducere semnificativă la&nbsp;Foreig [..]</span></span><span class='notif timestamp'>[2012-03-02 17:22:45]</span></a></li> <li><a href='premii_runda_7.html'> <span class='content'><span class='titlu'>Dupa runda a şaptea, premiile merg astfel</span><br><span class='details'>Abonamentele pe trei luni la Bibliotecile British Council di [..]</span></span><span class='notif timestamp'>[2013-01-09 20:26:13]</span></a></li> <li><a href='premii_urnda_5.html'> <span class='content'><span class='titlu'>Ce te așteaptă daca participi (dar) şi dacă vei câştiga meciul?</span><br><span class='details'>
+Abonamente cu reducere semnificativă la&nbsp;Foreign Poli [..]</span></span><span class='notif timestamp'>[2012-03-02 17:08:39]</span></a></li> <li><a href='premii_vara.html'> <span class='content'><span class='titlu'>Premii Sesiune Vară</span><br><span class='details'>Cu toate că debate-ul online e incitant şi provocator, exi [..]</span></span><span class='notif timestamp'>[2011-04-30 02:23:45]</span></a></li> <li><a href='procedura_inregistrare.html'> <span class='content'><span class='titlu'> Procedura de înregistrare </span><br><span class='details'>
+1. &Icirc;nregistrează-te la secţiunea Register. Cei car [..]</span></span><span class='notif timestamp'>[2011-02-13 23:54:18]</span></a></li> <li><a href='rezultate_vara.html'> <span class='content'><span class='titlu'>rezultatele in curand</span><br><span class='details'>In urma jurizarilor avem 52% castigatori negatori si 48% cas [..]</span></span><span class='notif timestamp'>[2011-05-21 00:39:50]</span></a></li> <li><a href='rezultate_vot_runda_6.html'> <span class='content'><span class='titlu'>Procente Poll</span><br><span class='details'>Procentele poll-ului sunt:
+E timpul să interzicem publicit [..]</span></span><span class='notif timestamp'>[2012-06-07 13:23:56]</span></a></li> <li><a href='runda_pirati.html'> <span class='content'><span class='titlu'> Termen de înregistrare – 15 martie. O dezbatere "tare" despre pirateria online</span><br><span class='details'>Pentru că sunt multe lucruri de citit pe tema acesta, prelu [..]</span></span><span class='notif timestamp'>[2012-03-08 23:33:03]</span></a></li> <li><a href='runda_vara.html'> <span class='content'><span class='titlu'>A început runda a treia a proiectului </span><br><span class='details'>&nbsp;Poll 19-23 aprilie, &icirc;nregistrări debate online  [..]</span></span><span class='notif timestamp'>[2011-04-19 23:25:06]</span></a></li> <li><a href='program_primavara.html'> <span class='content'><span class='titlu'>Program  rundă:</span><br><span class='details'>Luni si marti (28 feb si 1 martie) prelungire inregistrare e [..]</span></span><span class='notif timestamp'>[2011-02-27 18:39:45]</span></a></li> <li><a href='resurse_runda_11.html'> <span class='content'><span class='titlu'>Resurse lectura runda 11</span><br><span class='details'>&Icirc;n sprijinul pregătirii cazurilor pe tema&nbsp;E timp [..]</span></span><span class='notif timestamp'>[2014-02-06 13:04:15]</span></a></li> <li><a href='rezultate%2brunda%2bde%2bprimavara.html'> <span class='content'><span class='titlu'>Rezultate Runda de Primavara</span><br><span class='details'>Salutari! &nbsp;
+&nbsp;&nbsp; Ne bucuram sa putem anunta ca [..]</span></span><span class='notif timestamp'>[2011-03-16 19:00:35]</span></a></li> <li><a href='runda11_dezbateri.html'> <span class='content'><span class='titlu'>Dezbaterile publice din runda a 11-a continua la Iasi, Cluj si Bucuresti</span><br><span class='details'>Subiectul "E timpul sa afirmam ca parada gay pride e inca ne [..]</span></span><span class='notif timestamp'>[2014-04-05 13:44:18]</span></a></li> <li><a href='rundele%2burmatoare.html'> <span class='content'><span class='titlu'>rundele urmatoare</span><br><span class='details'>
+Rundele de Primavara si Vara&nbsp;2011
+
+
+Runda de prima [..]</span></span><span class='notif timestamp'>[2011-01-12 19:35:32]</span></a></li> <li><a href='seminarii%2bprimavara.html'> <span class='content'><span class='titlu'>Seminarii Primăvară </span><br><span class='details'>Seria aceasta continuă!
+&Icirc;n perioada 19 martie -4 apr [..]</span></span><span class='notif timestamp'>[2011-03-17 16:49:51]</span></a></li> <li><a href='seminarii_toamna_2011.html'> <span class='content'><span class='titlu'>Seminarii toamna</span><br><span class='details'>Seminariile de lectură critică şi argumentare vor avea lo [..]</span></span><span class='notif timestamp'>[2011-11-26 05:49:02]</span></a></li> <li><a href='seminar_cluj_vara.html'> <span class='content'><span class='titlu'>Seminarul de lectura critica la cluj</span><br><span class='details'>Se va &icirc;ntampla in weekendul 28-29 mai, detaliile vor f [..]</span></span><span class='notif timestamp'>[2011-05-23 22:34:11]</span></a></li> <li><a href='rolul_publicitatii_adresate_copiilor.html'> <span class='content'><span class='titlu'>Rolul publicităţii adresate copiilor - opinia Mădălinei Moraru - guest speaker</span><br><span class='details'>Mădălina Moraru &icirc;şi expune opinia privitoare la rol [..]</span></span><span class='notif timestamp'>[2012-11-24 15:47:47]</span></a></li> <li><a href='rundaLGBT_exchange.html'> <span class='content'><span class='titlu'>Două ocazii pe care nu le întâlnești decât la Closer2Oxford - un debate asupra paradei Gay Pride și un exchange în Iordania</span><br><span class='details'>Două ocazii pe care nu le &icirc;nt&acirc;lnești dec&acirc [..]</span></span><span class='notif timestamp'>[2014-02-04 11:47:03]</span></a></li> <li><a href='seminar_iasi_timisoara_vara.html'> <span class='content'><span class='titlu'>Weekend-ul 4-5 iunie  vine cu seminarii la Iasi si Timisoara</span><br><span class='details'>
+Lectura critica si argumentare.
+De intors pe toate partil [..]</span></span><span class='notif timestamp'>[2011-05-29 01:47:58]</span></a></li> <li><a href='seminar_iasi_vara.html'> <span class='content'><span class='titlu'>Poţi participa şi tu la seminarul de lecturã criticã din Iaşi!</span><br><span class='details'>&Icirc;n zilele de 4 şi 5 iunie va avea loc seminarul de le [..]</span></span><span class='notif timestamp'>[2011-05-29 01:51:49]</span></a></li> <li><a href='runda_12_iordania.html'> <span class='content'><span class='titlu'>Runda a 12-a C2O internationala</span><br><span class='details'>
+Runda a 12-a Closer to Oxford este prima runda internation [..]</span></span><span class='notif timestamp'>[2014-04-05 13:39:24]</span></a></li> <li><a href='runda_13_incepe.html'> <span class='content'><span class='titlu'>A început runda a 13-a Closer2Oxford!</span><br><span class='details'>
+&nbsp;
+Dacă eşti student, masterand sau elev &icirc;n c [..]</span></span><span class='notif timestamp'>[2015-06-13 17:00:22]</span></a></li> <li><a href='runda_5_inceput.html'> <span class='content'><span class='titlu'>Începe runda a 5-a </span><br><span class='details'>Azi deschidem o nouă rundă in Closer to Oxford, &icirc;ntr [..]</span></span><span class='notif timestamp'>[2012-02-18 14:47:32]</span></a></li> <li><a href='runda_5_inscrieri.html'> <span class='content'><span class='titlu'>Înscrieri runda 5</span><br><span class='details'>&Icirc;nregistrările pot &icirc;ncepe pentru runda a 5 a!
+ [..]</span></span><span class='notif timestamp'>[2012-02-24 22:37:51]</span></a></li> <li><a href='runda_8nov.html'> <span class='content'><span class='titlu'>Runda de debate online incepe in 8 noiembrie</span><br><span class='details'>Inregistrarile echipelor continua pana marti 8 noiembrie.&nb [..]</span></span><span class='notif timestamp'>[2011-11-03 14:34:19]</span></a></li> <li><a href='sesiune_qa_runda10.html'> <span class='content'><span class='titlu'>Sesiune online de Questions&Answers pentru debaterii din runda a 10-a</span><br><span class='details'><p><span>De vineri pana luni (15 - 17 nov), debaterii din runda a 10-a se pot intalni online cu trainerii C2O - Bianca Dragomir, Liviu Gajora, Raluca Bogdan - la o discutie informala despre orice legat de debate. Speram ca lamuririle acestea sa fie utile pentru rundele urmatoare, alaturi de feedback-ul pe care tocmai l-au primit de la arbitri.&nbsp;</span></p>
+ [..]</span></span><span class='notif timestamp'>[2013-11-14 16:19:58]</span></a></li> <li><a href='spam.html'> <span class='content'><span class='titlu'>spam</span><br><span class='details'>ATENTIE! unele mailuri din partea sitului pot ajunge in fold [..]</span></span><span class='notif timestamp'>[2010-10-26 13:20:19]</span></a></li> <li><a href='stire_noi_resurse_lectura.html'> <span class='content'><span class='titlu'>Noi resurse de lectura</span><br><span class='details'>&nbsp;
+In sprijinul cercetarii motiunii propuse, aveti cate [..]</span></span><span class='notif timestamp'>[2011-10-24 18:06:10]</span></a></li> <li><a href='stire_perioada_inreg.html'> <span class='content'><span class='titlu'>Perioada de inregistrari a echipelor a inceput:</span><br><span class='details'>
+In perioada 21 octombrie - 31 octombrie 2011 iti poti inre [..]</span></span><span class='notif timestamp'>[2011-10-21 01:17:20]</span></a></li> <li><a href='sugestii%2bde%2blectura.html'> <span class='content'><span class='titlu'>sugestii de lectura</span><br><span class='details'>S-au updatat resursele de lectura cu noi materiale utile, fo [..]</span></span><span class='notif timestamp'>[2010-10-30 19:57:06]</span></a></li> <li><a href='runda_doi.html'> <span class='content'><span class='titlu'>Votează moţiunea pentru runda a doua </span><br><span class='details'>
+
+Salut, programul Closer to Oxford continua cu runda a do [..]</span></span><span class='notif timestamp'>[2011-02-01 21:33:35]</span></a></li> <li><a href='runda_vara_final.html'> <span class='content'><span class='titlu'>Runda a treia online la final</span><br><span class='details'>Salut, aici  se pot vedea rezultatele de la runda de vară
+ [..]</span></span><span class='notif timestamp'>[2011-05-21 15:57:00]</span></a></li> <li><a href='seminarii-runda9.html'> <span class='content'><span class='titlu'>Cursuri de argumentare si lectura critica</span><br><span class='details'>
+In aceasta runda, va invitam sa exersati dialogul argument [..]</span></span><span class='notif timestamp'>[2013-06-03 09:57:30]</span></a></li> <li><a href='sugestii_runda_6.html'> <span class='content'><span class='titlu'>Sugestii de lectură runda 6</span><br><span class='details'>Sugestii de lectură despre situarea țărilor pe indexul li [..]</span></span><span class='notif timestamp'>[2012-06-12 12:05:00]</span></a></li> <li><a href='sugestii_runda_8.html'> <span class='content'><span class='titlu'>Sugestii de lectură pentru runda a 8-a </span><br><span class='details'>&Icirc;n sprijinul pregătirii cazurilor pe tema&nbsp;E timp [..]</span></span><span class='notif timestamp'>[2013-01-29 00:14:48]</span></a></li> <li><a href='sugestii_runda_9.html'> <span class='content'><span class='titlu'>Sugestii de lectură pentru runda a 9-a</span><br><span class='details'>&Icirc;n sprijinul pregătirii cazurilor pe tema&nbsp;E timp [..]</span></span><span class='notif timestamp'>[2013-05-03 23:07:20]</span></a></li> <li><a href='sugestI_runda_10.html'> <span class='content'><span class='titlu'>Sugestii de lectură pentru runda a 10-a</span><br><span class='details'>&Icirc;n sprijinul pregătirii cazurilor pe tema&nbsp;E timp [..]</span></span><span class='notif timestamp'>[2013-10-14 20:20:46]</span></a></li> <li><a href='sugesti_vara.html'> <span class='content'><span class='titlu'>sugesti_vara</span><br><span class='details'>Sugestiile de lectură vă pot ghida &icirc;n abordarea moţ [..]</span></span><span class='notif timestamp'>[2011-04-30 01:42:22]</span></a></li> <li><a href='seminarii_debate_in_weekend_10-11_mar.html'> <span class='content'><span class='titlu'>Seminarii de debate si argumentare în acest weekend (10 si 11 martie)</span><br><span class='details'>&Icirc;n acest weekend, Closer to Oxford vă propune trei se [..]</span></span><span class='notif timestamp'>[2012-03-06 17:36:23]</span></a></li> <li><a href='seminarii_vara.html'> <span class='content'><span class='titlu'>Seminariile de argumentare și lectură critică</span><br><span class='details'>Seminariile vor avea loc &icirc;n runda a treia după următ [..]</span></span><span class='notif timestamp'>[2011-05-16 08:39:05]</span></a></li> <li><a href='seminar_chisinau_primavara_2013.html'> <span class='content'><span class='titlu'>Seminar de argumentare și lectură critică la Chișinău</span><br><span class='details'>
+&Icirc;n weekendul 16-17 martie, la Chișinău, 20 de stud [..]</span></span><span class='notif timestamp'>[2013-03-19 15:27:07]</span></a></li> <li><a href='start_inscrieri_runda_9.html'> <span class='content'><span class='titlu'>Start înregistrări runda 9 @ Closer to Oxford</span><br><span class='details'>
+Start &icirc;nregistrări runda 9 @ Closer to Oxford
+
+&I [..]</span></span><span class='notif timestamp'>[2013-04-16 16:09:31]</span></a></li> <li><a href='timisoara_primavara.html'> <span class='content'><span class='titlu'>Dezbaterea din Timisoara</span><br><span class='details'>Joi 14 aprilie ora 15
+Universitatea de Vest, Facultatea de  [..]</span></span><span class='notif timestamp'>[2011-04-10 08:45:14]</span></a></li> <li><a href='transcrieri_vara.html'> <span class='content'><span class='titlu'>Transcrieri conferințe vară</span><br><span class='details'>Sesiune Vară -&nbsp;E timpul sa afirmăm că predarea relig [..]</span></span><span class='notif timestamp'>[2011-07-06 00:47:02]</span></a></li> <li><a href='stire_dezbatere_timisoara_runda_11.html'> <span class='content'><span class='titlu'>Dezbatere la Timisoara despre paradele Gay Pride</span><br><span class='details'>Joi 3 aprilie 2014 la Libraria Cartea de Nisip din Timisoara [..]</span></span><span class='notif timestamp'>[2014-05-07 08:50:59]</span></a></li> <li><a href='studiu_dezbateri.html'> <span class='content'><span class='titlu'>studiu valori studenti</span><br><span class='details'>&Icirc;n iulie 2013, Barbu Mateescu - sociolog, a realizat p [..]</span></span><span class='notif timestamp'>[2013-07-24 10:16:16]</span></a></li> <li><a href='tutorial_nou.html'> <span class='content'><span class='titlu'>Tutorial (nou) de argumentare</span><br><span class='details'>Tutorial (nou) de argumentare [..]</span></span><span class='notif timestamp'>[2011-10-22 20:43:38]</span></a></li> <li><a href='update_program_primavara.html'> <span class='content'><span class='titlu'>Program up-datat</span><br><span class='details'>&Icirc;ncă o zi de pregătire!
+Site-ul va permite &icirc;n [..]</span></span><span class='notif timestamp'>[2011-02-28 22:40:31]</span></a></li> <li><a href='voteaza%2bmotiunea.html'> <span class='content'><span class='titlu'>voteaza motiunea</span><br><span class='details'>Te invităm să votezi&nbsp;p&acirc;nă pe 20 octombrie&nbsp [..]</span></span><span class='notif timestamp'>[2010-10-15 01:46:02]</span></a></li> <li><a href='vot_runda_iv.html'> <span class='content'><span class='titlu'>Motiunile rundei a IV -a au fost votate</span><br><span class='details'>E timpul ca in Rom&acirc;nia studiile superioare să coste m [..]</span></span><span class='notif timestamp'>[2011-10-21 01:26:39]</span></a></li> <li><a href='zece_testimoniale_2012.html'> <span class='content'><span class='titlu'> Zece testimoniale despre Closer to Oxford, la începutul celui de-al treilea an </span><br><span class='details'>Gasiti in acest document zece testimoniale despre Closer2Oxf [..]</span></span><span class='notif timestamp'>[2012-10-02 04:58:44]</span></a></li> <li><a href='vot_vara.html'> <span class='content'><span class='titlu'>Final voturi pentru runda 3</span><br><span class='details'>S-a terminat cea de-a treia sesiune de vot pentru moţiunea  [..]</span></span><span class='notif timestamp'>[2011-04-25 12:53:20]</span></a></li> </ul>
+                <div class='clear'></div>
+        </div><!-- end main content -->
+         <div class='clear'></div>
+</div>
+<div id="pix"></div>
+
+
+                                </div><!--end main -->
+                                <div id='parteneri'>
+                                    <span class='tr'></span><span class='tl'></span><span class='br'></span><span class='bl'></span><span id="filler"></span>
+                                    <div class='parteneri' id='sustinatori'>
+                                        <span class='floating_text' id='un_proiect'>Un proiect</span>
+                                        <a href='http://www.ardor.org.ro/'><div class='image' id='ardor'>Ardor</div></a>
+                                        <span class='floating_text' id='finantatori'>Finanțatori</span>
+                                        <a href='http://www.opensocietyfoundations.org/'><div class='image' id='open_society'>Open Society Foundation </div></a>
+                                        <a href='http://www.studentiq.ro//'><div class='image' id='memoplus'>MemoPlus</div></a>
+                                        <!-- <a href='http://www.ratiufamilyfoundation.com/'><div class='image' id='FundatiaRatiu'>Ardor</div></a>
+                                        <a href='http://www.eef.md/'><div class='image' id='eef'>East Europe Foundation</div></a>
+                                        <a href='http://www.mts.gov.md/'><div class='image' id='mdminister'>Ministerul Tineretului si Sportului al Republicii Moldova</div></a> -->
+
+                                        <span class='floating_text' id='parteneri_text'>Parteneri</span>
+
+                                        <a href='http://www.policycenter.eu/'><div class='image' id='PolicyCenter'>Policy Center</div></a>
+                                        <a href='http://www.britishcouncil.org/'><div class='image' id='BritishCouncil'>British Council</div></a>
+                                        <a href='http://www.europuls.ro/'><div class='image' id='europuls'>Europuls</div></a>
+                                        <a href='http://www.cere.ro/'><div class='image' id='cere'>Ce-Re</div></a>
+                                        <a href='http://www.primeromania.ro/'><div class='image' id='prime'>Prime Romania</div></a>
+                                        <a href='http://www.cji.ro/'><div class='image' id='cji'>Centrul pentru jurnalism independent</div></a>
+                                        <a href='http://www.aiesectm.ro/'><div class='image' id='aisec'>Aisec</div></a>
+                                        <!-- ===================================================================================================== -->
+                                        <a href='http://www.cogitus.ro/'><div class='image' id='cogitus'>Cogitus</div></a>
+                                        <a href='http://www.adevarul.ro/international/foreign_policy/'><div class='image' id='foreignPolicy'>Foreign Policy</div></a>
+                                        <a href='http://www.elsa.ro/'><div class='image' id='elsa'>Elsa</div></a>
+                                        <a href='http://www.vipromania.ro/'><div class='image' id='vipromania'>Voluntari pentru idei si proiecte</div></a>
+                                        <a href='http://www.ongtrust.ro/'><div class='image' id='ongtrust'>Trust</div></a>
+
+                                        <!-- ===================================================================================================== -->
+                                        <a href='http://www.leap.ro/'><div class='image' id='leap'>Leap</div></a>
+                                        <a href='http://www.younginitiative.org/'><div class='image' id='younginitiative'>Asociatia young initiative</div></a>
+                                        <a href='http://www.asjc.ro/'><div class='image' id='asjc'>Asjc</div></a>
+                                        <a href='http://osut.ro/'><div class='image' id='osut'>Osut</div></a>
+                                        <div class='clear'></div>
+                                    </div>
+                                    <div class='parteneri' id='parteneri_institutionali'>
+                                        <span class='floating_text' id='sponsori_text'>Sus&#539;in&#x0103;tori</span>
+                                        <a href='http://www.cartier.md/'><div class='image' id='cartier_logo'>Editura Cartier</div></a>
+                                        <a href='http://www.pll.md/ro/'><div class='image' id='biblio_logo'>Biblioteca publica de drept</div></a>
+                                        <span class='floating_text' id='institutii_text'>Parteneri institu&#539;ionali</span> 
+                                        <ul id='institutii'>
+                                            <!-- <span class='floating_text' id='institutii_text'>Parteneri institu&#539;ionali:</span> -->
+                                            <li><a href='http://www.politice.ro/'>Facultatea de &#536;tiin&#539;e Politice SNSPA </a></li>
+                                            <li><a href='http://www.comunicare.ro/'>Facultatea de Comunicare &#537;i Rela&#539;ii Publice SNSPA</a></li>
+                                            <li><a href='http://www.fspub.ro/'>Facultatea de &#536;tiin&#539;e Politice Universitatea Bucure&#537;ti</a></li>
+                                            <li><a href='http://www.filosofie.unibuc.ro/'>Facultatea de Filosofie Universitatea Bucure&#537;ti</a></li>
+                                            <li><a href='http://litere.unibuc.ro/'>Facultatea de Litere din Universitatea Bucure&#x015f;ti</a></li>
+                                            <li><a href='http://www.unibuc.ro/ro/fac_fsas_ro'>Facultatea de Sociologie Universitatea Bucure&#537;ti</a></li>
+                                            <li><a href='http://laws.uaic.ro/'>Facultatea de Drept Universitatea Alexandru Ioan Cuza Ia&#537;i</a></li>
+                                            <li><a href='http://www.uaic.ro/uaic/bin/view/Academic/Filosofie'>Facultatea de Filosofie si &#536;tiin&#539;e Social Politice Universitatea AIC Ia&#537;i</a></li>
+                                            <li><a href='http://www.upa.ro/'>Facultatea de Drept si Facultatea de &#x015e;tiin&#x0163;e Politice si Administrative Universitatea Petre Andrei Ia&#x015f;i</a></li> 
+
+                                            <li><a href='http://www.ubbcluj.ro/'>Universitatea Babe&#537;-Bolyai Cluj Napoca</a></li>
+                                            <li><a href='http://www.uvt.ro/'>Universitatea de Vest Timi&#537;oara</a></li>
+                                            <li><a href='http://www.upt.ro/'>Universitatea Politehnica Timi&#537;oara</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class='parteneri' id='parteneri_media'>
+                                        <span class='floating_text' id='media_text'>Parteneri media</span>
+                                        <a href='http://www.hotnews.ro/'><div class='image' id='hotnews'>HotNews</div></a>
+                                        <!-- <a href='http://www.lumebuna.ro/'><div class='image' id='lumebuna'>Lume Buna</div></a> -->
+                                        <a href='http://www.romaniapozitiva.ro/'><div class='image' id='romaniapozitiva'>Romania Pozitiva</div></a>
+                                        <a href='http://totb.ro/'><div class='image' id='thinkoutsidethebox'>Think Outside The Box</div></a>
+                                        <a href='http://www.facebook.com/carevasazica.vip'><div class='image' id='carevasazica'>Carevasazica</div></a>
+                                        <a href='http://www.studentie.ro/'><div class='image' id='studentiero'>Studentie.ro</div></a>
+                                        <a href='http://startub.unibuc.ro/'><div class='image' id='startub'>startub.unibuc.ro</div></a>
+                                        <!-- <a href='http://www.tvr.ro/tvr_cluj.php'><div class='image' id='tvrcluj'>Tvr Cluj</div></a> -->
+                                        <!-- <a href='http://www.radiotransilvania.ro'><div class='image' id='radiotransilvania'>Radio Transilvania</div></a> -->
+                                        <a href='http://iasifun.ziaruldeiasi.ro/'><div class='image' id='iasifun'>Iasi fun</div></a>
+                                        <a href='http://www.ziaruldeiasi.ro/'><div class='image' id='ziaruldeiasi'>Ziarul de Iasi</div></a>
+                                        <a href='http://www.kissfm.ro/timisoara'><div class='image' id='kissfm'>KissFm</div></a>
+
+                                        <div class='clear'></div> 
+                                    </div>
+                                    <div class='clear'></div>
+
+                                </div>	
+                            </div>	<!-- end wrap -->
+                            <div id='footer_mare'>
+                                <div id='footer'>
+                                    <div id='links' class='footer'>
+                                        <div id='menu1' style='margin:auto;'> <ul id='meniu_prinicpal'><li><a href='contacte/index.html'> Contact </a></li>
+<li><a href='clubdebate/index.html'> Cluburile </a></li>
+<li><a href='oamenii/index.html'> Oamenii </a></li>
+<li><a href='proiectul/index.html'> Proiectul </a></li>
+<li><a href='home/index.html'> Acasa </a></li>
+</ul></div><!--end menu-->
+                                    </div><!--
+                                    <div id='contact' class='footer'>
+                                            <h4>Contact</h4>
+                                            <p>office@closer2oxford.ro</p>
+                                            <p>bogdan.draghicescu@closer2oxford.ro<br>
+                                            <span class='detalii'> (asistenta tehnica web - orice probleme legate de site)</span></p>
+                                    </div>
+                                    -->
+                                    <div id='newsletter' class='footer'>
+                                        <script src="../../connect.facebook.net/en_US/all.js#xfbml=1"></script><fb:like href="http://www.facebook.com/pages/Closer2Oxford/162758797069605" width="250" colorscheme="dark"></fb:like>
+                                        <!--<h4>Newsletter</h4>
+                                        <form action='/page/newsletter'>
+                                                <input type='text' name='email'>
+                                                <input type='submit' id='submit' value='>'>
+                                                        
+                                        </form>-->
+                                    </div>
+                                    <div id='credits'>
+                                        Copyright(c) 2021 ARDOR |  Toate drepturile rezervate | Toate logo-urile si sloganurile de pe site sunt proprietate intelectuala inregistrata si nu pot fi reproduse fara acordul explicit al detinatorilor. <br>
+                                            <br /><br />
+                                            <b>Disclaimer</b><br /><i>
+
+                                                Programul educational Closer to Oxford este un program non-profit si nu are o legatura cu universitatea cu acelasi nume, referirea la Oxford avand doar o semnificatie simbolica.
+                                            </i>
+                                    </div>
+
+                                </div>		
+                            </div>		
+
+                            <div id="finantatde">Acest proiect este finantat cu sustinere din partea Comisiei Europene. Aceast publicatie [comunicare] reflecta doar
+                                vederile autorului, iar Comisia nu poate fi facuta  responsabila pentru utilizarea informatiei pe care o contine.</div>
+
+
+                        </body>
+                        </html>

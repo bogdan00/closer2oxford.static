@@ -1,0 +1,541 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml-strict.dtd">
+<HTML xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+    <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+            <link rel="icon" type="image/png"  href="../../../../../closer2oxford.ro/favicon.html">
+                <link rel="stylesheet" href="../../../var/layout.css" type="text/css">
+                    <title>Closer to Oxford - e timpul pentru argumente!</title>
+                    <link rel="alternate" type="application/rss+xml"  href="../../../rss_feed" title="Stiri Closer2Oxford">
+                        <!-- <link rel="image_src" property="og:image"  href="/images/layout/closer2oxford_fb_white.png" /> -->
+                        <link rel="image_src" property="og:image"   type="image/jpeg"  href="../../../../uploads/2015/06/9/facebook_icon.html" />
+                        <link rel="image_src" type="image/jpeg"  href="../../../../uploads/2015/06/9/icon-facebook.gif" /> 
+						<meta name="description" content="Closer2Oxford pune în valoare oameni şi argumentele lor, în dezbateri online şi publice alături de tineri şi invitați avizaţi"/>
+                        <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9" />
+<script type='text/javascript' src='../../../../js/jquery-1.4.4.min.js'></script>
+<script>var $j = jQuery.noConflict();</script>
+<script type='text/javascript' src='../../../../js/tinymce/tiny_mce.js'></script>
+<script type='text/javascript' src='../../../../js/jquery.form.js'></script>
+<script type='text/javascript' src='../../../../js/fbLoginRegister.js'></script>
+<script type='text/javascript' src='../../../var/javascript.js'></script>
+<script type='text/javascript' src='../../../../js/jquery.hovertip-1.0.min.js'></script> 
+<script type='text/javascript' src='../../../../js/jquery.jgrowl_minimized.js'></script> 
+<link rel='stylesheet' href='../../../../css/jquery.jgrowl.css' media='screen' type='text/css'> 
+<script type='text/javascript' src='../../../../js/jquery.timer-min.js'></script> 
+<style>.hovertip{
+    position:absolute;
+    padding:10px 13px;
+    z-index:2;
+    max-width:300px;
+    color:#303030;
+    background-color:#f5f5b5;
+    border:1px solid #DECA7E;
+    font-family:sans-serif;
+    font-size:12px;
+    line-height:18px;
+    text-align:left;
+    }
+           .normal_text ol,.normal_text ol *{text-align:left !important}
+           .normal_text *{font-weight:normal !important;font-size:12px !important;font-face:tahoma !important}</style> 
+<script type='text/javascript'>$j(document).ready(function(){$j('.tooltip').hovertip({'offset':[20,20]});get_notif();});
+
+if(!Array.indexOf){Array.prototype.indexOf = function(obj){for(var i=0; i<this.length; i++){if(this[i]==obj){return i;}}return -1;}}
+    hashuri = [] ;
+	 var tick_timer= 3000 ;
+ 
+	 function get_notif()
+        {
+		  
+		  //console.log(tick_timer);
+	     
+		  setTimeout(get_notif,tick_timer);
+        
+		   $j.ajax(
+            {
+                url: '/page/notif/show_events',
+                dataType: 'json',
+                data: "{}",
+                success: function(data)
+                    {
+                    $j.each(data,function(index,data){
+                        try
+                            {
+                            if( hashuri.indexOf(data.hash) == -1 )
+                                {
+                                hashuri.push(data.hash);
+                                $j.jGrowl(
+                                    data.str,
+                                    {
+                                        corners:'1px',
+                                        life: data.life,
+                                        header:data.title,
+                                        hash: data.hash,
+                                        sticky: data.sticky,
+                                        close: function(e,m,o)
+                                            {
+                                                $j.ajax({url:'/page/notif/delete_single_event/' + o.hash});
+                                            }
+                                    });
+                                }
+                            }
+                        catch(e){}
+                        })
+                    }
+            });
+        }
+	 </script> 
+ 
+                            
+  <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-19111721-1']);
+  _gaq.push(['_setDomainName', '.closer2oxford.ro']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+    
+                        </head>
+                        <body>
+                            <div id="global_wrap">
+                                <div id="header">
+                                    <a href='../../../../index.html'><div id='logo'><img src='../../../../images/layout/sigla.jpg'></div></a>
+                                    <a class='noExternal' href='http://www.facebook.com/pages/Closer2Oxford/162758797069605'><img src='../../../../images/fb.png' style='height:30px;float:right;clear:right;margin:10px 5px 5px 5px;border:none;'/></a>
+                                    <a href='../../../rss_feed'><img src='../../../../images/feed-icon.png' style='height:30px;float:right;clear:right;margin:5px;border:none;'/></a>
+                                </div>
+                                <div id="meniu">
+                                    <div  id='register_login'>
+
+                                        
+  <a href='#' class='todo' id='login'>Login </a> &nbsp;<a href='../../../register.html' class='todo' id='register'>Register</a>
+    <div id='login_box'>
+		  <form action='https://dev.closer2oxford.ro/page/ro/login_user/logon' method='post' id='user_login_form'>
+					 <div>Email: <input type='text' name='email'/> </div><br />
+					 <div>Pass: <input type='password' name='passwd'/></div><br />
+					 <a href='#' class='password_forgot'>forgot password?</a>
+					 <input type='hidden' value='/page/ro/vezi_meciuri/170/' name='returnto' class='submiter'/><br />
+					 <input type='submit' value='login' name='btn' class='submiter'/><br />
+		  </form>
+		  
+		  <form action='https://dev.closer2oxford.ro/page/ro/login_user/reset_user_pw' method='post' id='user_reset_form'>
+					 <div>Email: <input type='text' name='email'/> </div><br />
+					 <a href='#' class='password_forgot'>login?</a>
+					 <input type='hidden' value='/page/ro/vezi_meciuri/170/' name='returnto' class='submiter'/><br />
+					 <input type='submit' value='reset' name='btn' class='submiter'/><br />
+		  </form>
+		  
+    </div>
+    
+                                    </div>
+                                    <div id='menu1' style='margin:auto;'> <ul id='meniu_prinicpal'><li><a href='../../../contacte/index.html'> Contact </a></li>
+<li><a href='../../../clubdebate/index.html'> Cluburile </a></li>
+<li><a href='../../../oamenii/index.html'> Oamenii </a></li>
+<li><a href='../../../proiectul/index.html'> Proiectul </a></li>
+<li><a href='../../../home/index.html'> Acasa </a></li>
+</ul></div><!--end menu-->
+                                </div>
+                                <div id="main"> 
+                                    <!--<div id='stiri-padding'>
+        <div id='stiri_back'>
+                {stiri} 
+    
+               
+        </div>-->
+        
+</div>
+<div  id="content-padding">
+        <div id='sidebar_menu'>
+                <span class='tr'></span>
+                <span class='tl'></span>
+                <span class='br'></span>
+                <span class='bl'></span>
+                <span id="filler"></span>
+                    
+                <ul></ul>
+                
+                <div class='clear'></div>
+        </div>
+        <div id="content">
+                <span class='tr'></span>
+                <span class='tl'></span>
+                <span class='br'></span>
+                <span class='bl'></span>
+                <span id="filler"></span>
+                  <script>
+        $j(document).ready(function(){
+        $j('.discurs_toggler').toggle(
+                function(){
+                $j(this).attr('src', '../../../../images/little_stuff/16-em-down.png');   
+                $j(this).parent().next('.discurs').hide('fast');
+                },
+                function(){
+                $j(this).attr('src', '../../../../images/little_stuff/16-em-up.png');
+                $j(this).parent().next('.discurs').show('fast');
+                });
+            });
+        </script><style>.nowrap{white-space: nowrap;}
+		.noJustify{text-align:left;}
+		</style><h2 class='noJustify'><span class='nowrap'>'Alin si Salomeea'</span> <span class='notif'>(afirmatori)</span> vs <span class='nowrap'>'Andrei si Lucian 113'</span> <span class='notif'>(negatori)</span></h2><h3>A1 (Alin Marcel Ciobanu) <img src='../../../../images/little_stuff/16-em-up.png' class='discurs_toggler'></h3>
+            <div class='discurs normal_text'><p>Echipa afirmatoare &icirc;ncepe prin&nbsp; <strong>definirea descriptivă</strong> a pirateriei şi a decriminalizării, &icirc;n contextul acestei dezbateri.</p>
+<p><strong>a.Pirateria</strong> &nbsp;reprezintă orice faptă de a pune la dispoziţie public (sub orice formă) o lucrare asupra căreia nu se deţin drepturi, incriminată prin A.C.T.A., P.I.P.A., S.O.P.A. și alte convenții internaționale de această natură. Subliniem că acestea nu condamnă doar folosirea nelicențiată a unor produse &icirc;n cadrul unor activități comerciale, ci propun consecințe dure &ndash; amenzi&nbsp; foarte mari și / sau ani de &icirc;nchisoare - pentru fapte care pornesc de la descărcarea neautorizată a unei melodii, a unui film sau a unui program de calculator. &nbsp;Punerea la dispoziţie este o infracţiune, chiar dacă nu se obţin beneficii materiale,reglementată &icirc;n Rom&acirc;nia de Art. 139 indice 8 din Legea 8/1996 modificată şi completată.</p>
+<p><strong>b.Decriminalizarea </strong>se referă la<strong> </strong>declarare a unei fapte drept non-crimă, datorită pierderii caracterului deosebit de periculos pentru societate &icirc;n condiţiile schimbărilor sociale survenite.</p>
+<p>Decriminalizarea nu exclude &icirc;ntotdeauna interdicţia faptelor vizate. Uneori ele răm&icirc;n interzise, doar că sunt considerate mai puţin periculoase (de exemplu, contravenţii), iar făptuitorii riscă sancţiuni mai bl&acirc;nde.</p>
+<p>Datorită spațiului extrem de limitat raportat la dimensiunea subiectului, am dori ca &icirc;n această dezbatere să ne focalizăm atenția strict pe relația dintre industria multimedia și piraterie privită la nivel de societate statală.</p>
+<p>Noi, afirmatorii, vom &icirc;ncerca să vă convingem să adoptați moțiunea care propune decriminalizarea pirateriei pe internet deoarece:</p>
+<p>i)metodele de combatere a pirateriei ar &icirc;ncălca &icirc;n mod grav dreptul la viață privată al individului și</p>
+<p>ii)implementarea ACTA nu permite exercitarea controlului public</p>
+<p>iii)implementarea măsurilor anti-piraterie<strong>&nbsp; </strong>este ineficientă</p>
+
+<p>i)<strong>Metodele de combatere a pirateriei online &icirc;ncălca &icirc;n mod grav dreptul la viață privată al individului </strong></p>
+<p>Dincolo de culegerea de informații punctuale despre cazuri de piraterie și luarea unor măsuri &icirc;n aceste situații, activitățile de acest fel n-ar putea fi detectate dec&acirc;t printr-o formă de monitorizare și verificare a traficului de date. Neștiind <em>a priori</em> care sunt datele care urmează a fi verificate &icirc;n vederea detectării eventualelor cazuri de piraterie, intruziunile &icirc;n spațiul privat sunt inevitabile. Aşadar nu reuşeşte să stabilească un echilibru &icirc;ntre protecţia drepturilor de proprietate intelectuală şi apărarea drepturilor fundamentale ale societăţii, ca &icirc;ntreg, cum ar fi libertatea de exprimare, liberul acces la informaţie, cultură şi viaţă privată; drepturi stipulate &icirc;n Constituție şi &icirc;n Declarația Universală a Drepturilor Omului.</p>
+<p>ii)<strong>Implementarea ACTA nu permite exercitarea controlului public</strong></p>
+<p>Acesta &icirc;şi propune să creeze o nouă instituţie, &bdquo;Comisia ACTA&rdquo;, fără să definească &icirc;nsă obligaţiile sau garanţiile necesare pentru ca acest organism să funcţioneze &icirc;ntr-o manieră deschisă, transparentă şi inclusivă, care să permită exercitarea unui control public asupra actiunilor sale.&nbsp; Astfel constituie un exemplul prost dat de lumea liberă &icirc;n fața regimurilor autoritare &icirc;n raport cu libertatea internetului. Este primul pas către dictatură.</p>
+
+<p>iii)<strong>Implementarea măsurilor anti-piraterie &nbsp;este ineficientă</strong>. Activitățile de piraterie nu pot fi oprite prin blocarea site-urilor sau a soft-urilor prin care acestea se realizează la un anumit moment pentru simplul motiv că interesul utilizatorilor provoacă imediat realizarea altora care să le ia locul; mai mult dec&acirc;t at&acirc;t, unele țări acceptă aceste activități ca fiind perfect legale și astfel, utilizatorii au posibilitatea piratării folosind intermediari din acele zone. Sancțiunile ar fi total ineficiente. &nbsp;Obţiunea amendării &icirc;ntregii populații cu o sumă mică n-ar fi dec&acirc;t o taxă &icirc;n plus care răm&acirc;ne &icirc;n societate (echivalentă cu mutarea unei sume de bani din buzunarul st&acirc;ng &icirc;n cel drept); obţiunea amenzilor mari ar duce la blocajul economic al societății și prin urmare, falimentul companiilor multimedia &ldquo;apărate&rdquo;. Pedepsele cu &icirc;nchisoarea ar fi imposibil de aplicat dat fiind numărul mare de eventuali deținuți. Mai răm&acirc;ne ipoteza &icirc;n care un număr redus de persoane ar fi sancționate &icirc;n mod exemplar și prin aceste &ldquo;execuții publice&rdquo; să forțeze utilizatorii să-și schimbe obiceiurile, opţiune preferată &icirc;n acest moment.[1]</p>
+<p>Pe l&acirc;ngă aceste motive, ar mai fi de luat &icirc;n calcul a) limita extrem de neclară dintre piraterie și produs original, b) posibilitățile de adaptare ignorate de industrie &ndash; cazurile Radiohead și &ldquo;The Man on Earth&rdquo; și c) puținele alternative la piraterie sau &ldquo;abstinență&rdquo; existente &icirc;n unele cazuri. Argumente abordate mai pe larg &icirc;n discursul următor c&acirc;nd vom propune și o eventuală soluție la situația actuală (<em>refidelizarea consumatorilor ca și clienți prin revenirea la o ofertă de produse de calitate reală</em>).</p>
+
+<p>[1] http://www.huffingtonpost.co.uk/2012/03/13/richard-odwyer-extradition-to-the-us-approved-theresa-may_n_1341696.html</p></div><hr><h3>N1 (Andrei Chiper-Leferman) <img src='../../../../images/little_stuff/16-em-up.png' class='discurs_toggler'></h3>
+            <div class='discurs normal_text'><p>Conform A1, pirateria este&nbsp;<em>&rdquo;incriminată prin ACTA, PIPA., SOPA și alte convenții internaționale de această natură&rdquo;.</em></p>
+<p>Vom argumenta &icirc;nsă că proiectele de lege precum ACTA , PIPA sau&nbsp; SOPA sunt doar rezultatele unei supra-legiferări, datorate tocmai nivelelor crescute (și cresc&acirc;nde) ale pirateriei online [1] mențion&acirc;nd și faptul că&nbsp; există &icirc;n prezent un cadru legal autohton c&acirc;t și și european care apără proprietatea intelectuală, &icirc;ncadr&acirc;nd copyright-ul, brevetele, mărcile &icirc;nregistrate, etc. Se poate argumenta și faptul că problematica proiectelor de lege internaționale precum ACTA nu constă &icirc;n scopul lor (de a opri pirateria pe Internet) ci &icirc;n mijloacele prin care se &icirc;ncearcă acest lucru : &icirc;ncălcarea &rdquo;<em>dreptului la viață privată al individului</em>&rdquo; adus &icirc;n discuție de A1.</p>
+
+<p>Cităm din textul&nbsp;<strong>Anti-Counterfeiting Trade Agreement</strong>&nbsp;(<strong>ACTA</strong>) [2], sau &rdquo;<strong>Acordul comercial de combatere a contrafacerii</strong>&rdquo;, paragraful 4 al articolului 27 :<br /> (4) &rdquo;<em>O parte poate să furnizeze, &icirc;n conformitate cu actele sale cu putere de lege și cu normele sale administrative, autorităților sale competente autoritatea de a solicita unui furnizor de servicii online să divulge rapid unui titular al dreptului suficiente informații pentru a identifica un abonat despre al cărui cont se presupune că a fost utilizat pentru &icirc;ncălcare, atunci c&acirc;nd respectivul titular al dreptului a depus o cerere, suficientă din punct de vedere juridic&rdquo;</em></p>
+<p>Paragraful de mai sus este cel incriminat. &nbsp;&Icirc;n ce măsură se &icirc;ncalcă &rdquo;dreptul la viață privată&rdquo; (sau cel la intimitate pe internet) este &icirc;nsă foarte discutabil : cererea de divulgare a datelor personale se face doar &icirc;n scopul de a identifica o persoană care se face vinovată de&nbsp;&icirc;ncălcarea unei legi, av&acirc;nd motive și dovezi suficiente, &rdquo;din punct de vedere juridic&rdquo; și &rdquo;&icirc;n conformitate cu actele sale cu putere de lege și cu normele sale administrative&rdquo;.</p>
+<p>A afirma că acestea reprezintă &rdquo;primul pas spre dictatură&rdquo; este puțin exagerat. Prin urmare considerăm că i)&nbsp;<strong>Metodele de combatere a pirateriei online NU &icirc;ncălca &icirc;n mod grav dreptul la viață privată al individului.</strong></p>
+<p><strong>&nbsp;</strong></p>
+<p>Scopul ACTA, conform Comisiei Europene pentru comerț este protejarea ideilor și inovațiilor, iar ACTA nu va schimba nici legea europeană existentă și nici nu va introduce un sistem de monitorizare a Internetului așa cum este speculat. [3] (&Icirc;n orice caz, soarta proiectului este incertă.)</p>
+<p>Astfel considerăm că ii)&nbsp;<strong>Implementarea ACTA</strong>&nbsp;<strong><span style="text-decoration: line-through;">nu</strong>&nbsp;<strong>NU permite exercitarea controlului public</strong></p>
+<p><strong>&nbsp;</strong></p>
+<p>Nu a fost luată niciodată &icirc;n serios &rdquo;<span style="text-decoration: line-through;">Obţiunea&nbsp;opțiunea amendării &icirc;ntregii populații cu o sumă mică&rdquo; ca măsură preventivă și nu se poate vorbi de &rdquo;execuții publice&rdquo; &icirc;n cazul unor indivizi care au făcut afaceri pe baza pirateriei și apoi au fost obligați să răspundă legal.&nbsp;Sursa citată de A1 nu aduce &icirc;n dezbatere date sau statistici noi, ci o opinie a unui ziar online partizan politic.&nbsp;Dacă vorbim despre &rdquo;<em>limita extrem de neclară dintre piraterie și produs original</em>&rdquo;, &rdquo;<em>puținele alternative</em>&rdquo; sau &rdquo;<em>refidelizarea consumatorilor</em>&rdquo; vorbim despre <em>afirmații nedovedite.&nbsp;Industria s-a adaptat mereu cerințelor consumatorului, fie că vorbim despre cinematografie 3D, distribuția muzicii pe Internet sau posibilitatea de a juca gratuit un joc virtual pe o perioadă limitată de timp, fiind mereu de calitate &icirc;naltă, &icirc;ntruc&acirc;t costurile mari investite &icirc;n ele se vor recuperate prin consumul de către populația generală. </em>Chiar dacă &rdquo;<em>activitățile de piraterie nu pot fi oprite</em>&rdquo; &icirc;ntotdeauna,&nbsp; pirateria poate fi descurajată. Orice companie privată are dreptul de a reclama furtul muncii sau a produsului intelectual propriu și a asigura prevenirea acestuia prin toate mijloacele legale. Astfel, putem spune că <strong>&nbsp;&nbsp;iii)Implementarea măsurilor anti-piraterie NU &nbsp;este ineficientă.</strong></p>
+
+<p>&nbsp;A1 trece de asemenea cu vederea alte aspecte ale pirateriei, de natură etică, economică și legală :</p>
+
+<p>- Dacă &rdquo;<em>Pirateria&nbsp;reprezintă orice faptă de a pune la dispoziţie public o lucrare asupra căreia nu se deţin drepturi</em>&rdquo; atunci este foarte clar că pirateria nu este etică.</p>
+
+<p>- Principalul motor al economiei este competiția. Producătorul nu poate concura cu pirații, care profită din munca lui.&nbsp;</p>
+
+<p>- Prețurile produselor vor fi mai mari &icirc;n consecință. Investițiile vor scădea.</p>
+
+<p>- Fiind lipsiți de un procent din profitul muncii lor,&nbsp; o parte din producători nu vor mai avea stimulentul de a continua.</p>
+
+<p>- Sunt alternative gratuite (Freeware) față de piraterie. Există multe programe sau canale media care pun la dispoziție muzică și divertisment, profit&acirc;nd doar din donații și publicitate.</p>
+
+<p>*******************************************************************************</p>
+
+<p>[1]&nbsp;<a href="http://www.nationmaster.com/graph/cri_sof_pir_rat-crime-software-piracy-rate">http://www.nationmaster.com/graph/cri_sof_pir_rat-crime-software-piracy-rate</a></p>
+
+<p>[2] Textul ACTA :&nbsp;<a href="http://register.consilium.europa.eu/servlet/driver?page=Result&amp;lang=EN&amp;typ=Advanced&amp;cmsid=639&amp;ff_COTE_DOCUMENT=12196/11&amp;ff_COTE_DOSSIER_INST=&amp;ff_TITRE=&amp;ff_FT_TEXT=&amp;ff_SOUS_COTE_MATIERE=&amp;dd_DATE_DOCUMENT=&amp;document_date_single_comparator=&amp;document_date_single_date=&amp;document_date_from_date=&amp;document_date_to_date=&amp;dd_DATE_REUNION=&amp;meeting_date_single_comparator=&amp;meeting_date_single_date=&amp;meeting_date_from_date=&amp;meeting_date_to_date=&amp;fc=ALLLANG&amp;srm=25&amp;md=100&amp;ssf=DATE_DOCUMENT+DESC">http://register.consilium.europa.eu/servlet/driver?page=Result&amp;lang=EN&amp;typ=Advanced&amp;cmsid=639&amp;ff_COTE_DOCUMENT=12196/11&amp;ff_COTE_DOSSIER_INST=&amp;ff_TITRE=&amp;ff_FT_TEXT=&amp;ff_SOUS_COTE_MATIERE=&amp;dd_DATE_DOCUMENT=&amp;document_date_single_comparator=&amp;document_date_single_date=&amp;document_date_from_date=&amp;document_date_to_date=&amp;dd_DATE_REUNION=&amp;meeting_date_single_comparator=&amp;meeting_date_single_date=&amp;meeting_date_from_date=&amp;meeting_date_to_date=&amp;fc=ALLLANG&amp;srm=25&amp;md=100&amp;ssf=DATE_DOCUMENT+DESC</a></p>
+
+<p>[3]&nbsp;<a href="http://ec.europa.eu/trade/tackling-unfair-trade/acta/">http://ec.europa.eu/trade/tackling-unfair-trade/acta/</a></p></div><hr><h3>A2 (Salomeea Romanescu) <img src='../../../../images/little_stuff/16-em-up.png' class='discurs_toggler'></h3>
+            <div class='discurs normal_text'><p>Negatorii pretind că &lsquo;problemele cu A.C.T.A. se limitează la mijloace&rsquo;; &icirc;i informăm de existența bibliotecilor care distribuie (semi)gratuit materiale protejate cu drepturi de autor; consideră că ar trebui &icirc;nchise?</p>
+<p>Interpretarea articolului din A.C.T.A. ignoră o parte importantă &ndash; &ldquo;[&hellip;]al cărui cont se presupune că[&hellip;]&rdquo;. Termenul subliniat este relevant și din păcate, ignorat de negatori. Autoritățile nu pot stabili că o informație dintr-un flux de date este (sau nu) protejată cu drepturi de autor fără a citi acea informație &icirc;nainte de a o &lsquo;eticheta&rsquo;; intruziunea &icirc;n viața privată a utilizatorului verificat este astfel inevitabilă.</p>
+<p>N-am sugerat că amendarea preventivă a &icirc;ntregii populații cu o sumă mică ar fi o măsură propusă, ci am &icirc;ncercat să subliniem caracterul de masă al fenomenului piratării și ineficiența eventualelor măsuri (ori primim &ldquo;toți&rdquo; amenzi mici / mari, ori suntem &ldquo;toți&rdquo; privați de libertate, ori acceptăm existența &ldquo;țapilor ispășitori&rdquo; ca fiind morală). Aparent, am fost prea subtili. Ne cerem scuze.</p>
+<p>Comisia ACTA sugerează crearea unei poliţii necontrolabile a internetului.</p>
+
+<p>`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Dacă pirateria organizată nu este etică atunci <strong>este etic: </strong></p>
+<p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>să deţii drepturi de autor pentru ceva ce nu ai creat tu firmă privată </strong>producătoare/distribuitoare<strong>, </strong></p>
+<p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>să plăteşti pentru copii online, ce nu presupun costuri&nbsp; sau </strong></p>
+<p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>analog</strong> <strong>ca băncile&nbsp; comerciale să &icirc;mprumute bani create printr-un click şi să perceapă dob&acirc;nzi </strong>pentru ei?</p>
+<p>Modelul economic al site-urilor / soft-urilor de tip Freeware (bazat pe reclame, donații și conturi &lsquo;profi&rsquo;) este preluat &icirc;n mod fidel de la site-urile de tip torrents. Observă cineva ironia?</p>
+<p>Mai departe, ne susținem poziția afirmatoare pe baza:</p>
+<p><strong>i)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </strong><strong>limitei neclare dintre piraterie și material original, </strong></p>
+<p><strong>ii)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </strong><strong>&nbsp;existenței posibilităților de adaptare, </strong></p>
+<p><strong>iii)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </strong><strong>lipsei alternativelor la piraterie sau abstinență </strong></p>
+<p>i) &lt;&lt;Mi-am scris &icirc;ntotdeauna fiecare carte &icirc;n umbra lăsată de alta, &icirc;n oblicitatea ei, cumva &ldquo;cu materialul clientului&rdquo;.&gt;&gt;[1]</p>
+<p>Negatorii ignoră natură &lsquo;organică&rsquo; a culturii, faptul că &ldquo;limbajul nu există &icirc;n stare sălbatică&rdquo;. Orice lucrare nouă se bazează pe cultura deja existentă, pe un &lsquo;spațiu public&rsquo;. E imposibil să transmiți ceva unui public fără a folosi un număr de elemente de legătură pe care să-ți bazezi partea de originalitate. Ce-ar putea transmite o carte scrisă folosind doar cuvinte noi, un alfabet original ș.a.m.d.? C&acirc;t avem dreptul să preluăm dintr-un produs existent? &ndash; să zicem un c&acirc;ntec. Schimbarea unei note din patru ajunge? Dar dacă schimb și numele proprii din text? Dacă reformulez propozițiile? Dacă schimb o notă din trei, sau trei din cinci? Dacă păstrez doar formatul poveștii și tipurile personajelor? Ajungem inevitabil la &icirc;ntrebări de tipul &ldquo;c&acirc;t de mult &icirc;nseamnă &lsquo;o grămadă&rsquo;?&rdquo;, la un profund subiectivism, deci la injustiție.</p>
+<p>Mai mult, există idei descoperite &icirc;n mod independent de părți diferite (Teorema lui Pitagora a fost descoperită și de indieni, și de chinezi[2]; calculul diferențial descoperit de către Leibnitz și Newton[3] ș.a.m.d.). Cine &icirc;ncasează drepturile de autor &icirc;n asemenea situații? Se &icirc;mpart &icirc;n mod egal, le ia primul pe toate&hellip;?</p>
+<p>ii) Posibilități de adaptare la condițiile curente există, au fost &icirc;ncercate deja. Trupa <em>Radiohead</em>[4] și-a pus albumul la descărcat gratuit pe propriul site. Succesul economic (bazat pe donații) a fost masiv. De ce? Pentru că trupa a realizat un produs de calitate și reacția publicului țintă a fost inevitabilă. Fanii care n-ar fi cumpărat albumul &icirc;n original (indiferent de motive) au fost &lsquo;fidelizați&rsquo;, iar fanii care le-ar fi cumpărat albumul au făcut donații (pentru a-și urmări interesul de a avea parte de noi albume ale formației). Similar, filmul &ldquo;<em>The Man from Earth</em>&rdquo;[5] și recentul spectacol al lui Louis C.K.[6] s-au bucurat de succes. Acea parte din industrie care nu promovează falși artiști n-are de ce să se teamă de piraterie; este reclamă gratuită. Pierd doar cei care se limitează la &lsquo;rețete&rsquo; &ndash; decoltee ad&acirc;nci, explozii, mașini rapide, marketing agresiv ș.a.m.d..</p>
+<p>iii) Disponibilitatea produselor nu este globală. Sunt zone &icirc;n care singura alternativă la piraterie este abstinența. Producătorii nu și-au distribuit produsul și &icirc;n acele zone, deci nu există posibilitatea de achiziționare. &Icirc;n aceste cazuri, planul economic al producătorilor nu include venituri de la cei care trăiesc &icirc;n acele zone, și de aici rezultă că eventualele pierderi nu vin din &icirc;ncasările reduse cauzate de actele de piraterie locală. Ba dimpotrivă, piratarea stimulează cererea acelui produs de la distribuitorii locali de către oameni care altfel n-ar fi aflat de existența produsului.</p>
+
+<p>&nbsp;[1] Jean-Luc Henning &ndash; &ldquo;Apologia plagiatului&rdquo;, pag. 19, editura Art, 2009</p>
+<p>[2] Stephen Hawking &ndash; &ldquo;God Created the Integers&rdquo;, pag. 21-24, editura Penguin Books, 2005</p>
+<p>[3] Stephen Hawking &ndash; &ldquo;God Created the Integers&rdquo;, pag. 365-373, editura Penguin Books, 2005</p>
+<p>[4]http://www.zeropaid.com/news/9026/radiohead_shocks_record_industry_with_free_download_of_new_album/</p>
+<p>[5] http://en.wikipedia.org/wiki/The_Man_from_Earth</p>
+<p>[6] http://techcrunch.com/2011/12/10/sabo/</p>
+<p>&nbsp;[7] Jean-Luc Henning &ndash; &ldquo;Apologia plagiatului&rdquo;, pag. 41, editura Art, 2009</p>
+</div><hr><h3>N2 (Lucian Vâlsan) <img src='../../../../images/little_stuff/16-em-up.png' class='discurs_toggler'></h3>
+            <div class='discurs normal_text'><p>A2 &icirc;ncepe printr-o <strong>falsă analogie</strong>. Bibliotecile, prin activitatea lor, nu comit piraterie din două motive simple: cărţile pe care le deţin le-au cumpărat şi o parte din banii str&acirc;nşi din v&acirc;nzarea permiselor de bibliotecă sunt redirecţionaţi către Uniunea Scriitorilor sau chiar către autorii &icirc;ncă &icirc;n viaţă ale căror cărţi sunt distribuite astfel. &Icirc;n plus, multe cărţi sunt acolo prin voinţa autorilor.</p>
+<p>A2 continuă prin a afirma că nu se poate determina dacă fluxurile de date sunt protejate de copyright sau nu &ndash; ceea ce este fals. Se poate identifica sursa fluxurilor de date iar c&acirc;nd aceasta este un tracker de torrente sau un hub dc++, nici nu mai este nevoie de inspectarea atentă a fluxurilor de date.</p>
+<p>&Icirc;n al treilea r&acirc;nd A2 &icirc;ncearcă o ironie care nu face altceva dec&acirc;t să-l contrazică pe coechipierul său.</p>
+<p>&ldquo;N-am sugerat că amendarea &icirc;ntregii populaţii cu o sumă mică ar fi o măsură propusă&rdquo; &ndash; Nu, dar afirmatorii au sugerat că aceasta ar putea fi mai bine transformată &icirc;n contravenţie, or contravenţiile reprezintă &icirc;n cele mai multe cazuri exact sancţiuni cu amnezi şi mai rar cu muncă &icirc;n folosul comunităţii.[1]</p>
+<p>&Icirc;n al patrulea r&acirc;nd, le amintim afirmatorilor că <strong>este perfect etic şi legal</strong> să deţii drepturi de autor pentru lucrări pe care nu le-ai produs tu, at&acirc;ta vremea c&acirc;t le-ai cumpărat de la autor sau ţi-au fost cedate de către acesta. Mai mult, este perfect etic să vinzi copii online. Afirmaţia că acestea <em>nu presupun costuri</em> este falsă. Serverele trebuiesc &icirc;ntreţinute, sistemele de operare de pe acestea trebuiesc cumpărate iar energia electrică de asemenea trebuie plătită de compania ce deţine serverul.</p>
+<p>Analog şi &icirc;n cazul băncilor comerciale, at&acirc;ta timp c&acirc;t au acoperire pentru ei &ndash; dacă nu au, intră &icirc;n faliment şi nu e &icirc;n interesul lor. Afirmatorii folosesc <strong>falsa dihotomie</strong> &icirc;n &icirc;ncercarea de a-şi susţine poziţia.</p>
+<p>&Icirc;n al cincilea rand, &icirc;n argumentul notat &ldquo;i)&rdquo;, afirmatorii ignoră faptul că drepturile de autor nu sunt perpetue. Ele &icirc;şi au efectul pe o anumită perioadă de timp, după care intră &icirc;n ceea ce ei numesc &ldquo;spaţiu public&rdquo;.[2] Mai apoi, afirmatorii continuă să ignore şi faptul că există deja legislaţie care stabileşte clar p&acirc;nă unde se poate merge cu inspiraţia şi care e limita dintre aceasta şi plagiat. &Icirc;n plus, autorul care simte că opera sa a fost plagiată poate da &icirc;n judecată presupusul plagiator &icirc;n virtutea aceloraşi legi.</p>
+<p>Exemplele oferite &icirc;n acest sens nu se susţin pentru că pe vremea lui Pitagora nu exista conceptual de copyright iar controversa privind relaţia Leibniz-Newton s-a tranşat tocmai prin numirea ei astfel, cu toate că Newton n-a avut totuşi nicio dovadă că descoperise calculul independent de munca lui Leibniz şi/sau &icirc;naintea acestuia.[3]</p>
+<p>Argumentul notat &ldquo;ii)&rdquo; nu se susţine dec&acirc;t &icirc;n contexte restr&acirc;nse. Există şi alte trupe, inclusiv din Rom&acirc;nia care au ales să-şi distribuie gratuit muzica. &Icirc;nsă asta nu &icirc;nseamnă că toţi artiştii ar trebui sau că pot face acelaşi lucru. Trupele aflate la primul album ar ajunge să fie şi la ultimul lor album dacă ar proceda precum Radiohead. Este dreptul artiştilor de a decide să-şi distribuie munca gratuit sau să aleagă să perceapă taxă pentru a beneficia de munca lor.</p>
+<p>Argumentul notat &ldquo;iii)&rdquo; nu se susţine din simplul fapt că accesul la munca unui artist este un privilegiu şi nu un drept. Aşa cum un local are dreptul de a-şi selecta clientela, acelaşi lucru &icirc;l poate face şi un artist sau un producător de filme.</p>
+<p>Nu există dreptul de a vedea ultimul film apărut sau de a asculta ultima melodie a unei trupe. Există cel mult voinţa de a face asta, preţul pentru &icirc;ntreprinderea acţiunii şi privilegiul de a avea acces. Artiştii nu pot şi nu trebuie să fie obligaţi să facă muncă de caritate şi protecţie socială şi nu pot şi nu trebuie să fie obligaţi să asigure accesul tuturor la munca lor. Iar cei care nu au acces nu au dreptul să fure proprietatea intelectuală a altuia pe motiv că nu există librărie sau cinematograf &icirc;n oraşul său. Are libertatea de a-şi deschide aşa ceva dacă &icirc;ntr-adevăr există cerere.</p>
+<p>Av&acirc;nd &icirc;n vedere toate aceste aspecte, echipa negatoare conchide că nu este cazul ca pirateria pe Internet să fie decriminalizată.</p>
+
+<p>[1] http://dexonline.ro/definitie/contraven%C8%9Bie</p>
+<p>[2] http://en.wikipedia.org/wiki/Copyright</p>
+<p>[3] http://en.wikipedia.org/wiki/Leibniz%E2%80%93Newton_calculus_controversy</p></div><hr><hr><h2>Decizia:</h2> <script>
+        $j(document).ready(function(){
+			$j('.decizie_toggler').toggle( 
+				function(){
+					$j(this).attr('src', '../../../../images/little_stuff/16-em-down.png');   
+					$j(this).parent().next('.decizie').hide('fast'); 
+                },
+                function(){
+					$j(this).attr('src', '../../../../images/little_stuff/16-em-up.png');
+					$j(this).parent().next('.decizie').show('fast'); 
+                } 
+			);
+		});</script><div class='decizie'><h3>George Maxim
+                <img src='../../../../images/little_stuff/16-em-up.png' class='decizie_toggler'></h3><div class='normal_text'><p>Feedback runda &nbsp;170</p>
+<p>Partea 1 &ndash; Remarci individuale</p>
+<p>Afirmatorul 1:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<ul>
+<li>Per total un discurs bun, clar si structurat</li>
+<li>&ldquo;Este primul pas către dictatură&rdquo;- atentie la formularea usor fortata</li>
+<li>&ldquo;unele țări acceptă aceste activități ca fiind perfect legale&rdquo;- cateva exemple in acest sens ar fi fost de mare ajutor</li>
+<li>&ldquo;Obţiunea amendării &icirc;ntregii populații cu o sumă mică&hellip;&rdquo;- panta alunecoasa din punct de vedere logic, mai ales deoarece nu s-a demonstrat in avans raspandirea fenomenului de piraterie intr-o asemenea proportie incat daca s-ar aplica acest procedeu s-ar ajunge ca la nivel practice, schimbul de informatii online sa fie blocat</li>
+<li>&ldquo;limita extrem de neclară dintre piraterie și produs original&rdquo; &ndash; tocmai legislatia in vigoare stipuleaza clar care sunt acele limite intre piraterie si original</li>
+</ul>
+<p>Negatorul 1:</p>
+<ul>
+<li>De asemenea o contraargumentare pertinenta </li>
+<li>Paragraful care apare taiat nu este deloc clar: fie este o eroare tehnica fie procedeul in sine nu are rolul scontat si nu ajuta la intelegerea demersului negator</li>
+<li>&ldquo;Există multe programe sau canale media care pun la dispoziție muzică și divertisment, profit&acirc;nd doar din donații și publicitate&rdquo; &ndash; iarasi, cateva exemple ar fi fost necesare </li>
+</ul>
+<p>Afirmatorul 2:</p>
+<ul>
+<li>&ldquo;Autoritățile nu pot stabili că o informație dintr-un flux de date este (sau nu) protejată cu drepturi de autor fără a citi acea informație &icirc;nainte de a o &lsquo;eticheta&rsquo;; intruziunea &icirc;n viața privată a utilizatorului verificat este astfel inevitabilă&rdquo;- nu neaparat; daca de exemplu se constatata un volum de trafic al datelor foarte mare se poate justifica suspiciunea transferului de date fraudulos; mai mult, acest flux este directionat prin siteuri/programe care sunt cunoscute ca sustinand astfel de practici exista un temei pentru investigarea acelor informatii</li>
+<li>&ldquo;Aparent, am fost prea subtili. Ne cerem scuze&rdquo; &ndash; Aprecierile de natura calitativa a discursurilor si interpretarilor oponentilor ar fi de dorit sa fie facute <strong>doar</strong> de catre arbitri nu si de participanti</li>
+<li>Exemplele legate de caracterul etic fie nu sunt pertinente (exemplul drepturilor de autor care sunt reglementate) fie sunt nu sunt relevante (exemplul bancilor)</li>
+<li>&ldquo;piratarea stimulează cererea acelui produs de la distribuitorii locali de către oameni care altfel n-ar fi aflat de existența produsului&rdquo;- singura stimulare ar fi cea frauduloasa deoarece nu se prezinta acea motivatie care ar face utilizatorii care pana acum au beneficiat de produs in mod gratuit si ilegal sa treaca in legalitate</li>
+</ul>
+<p>Negatorul 2:</p>
+<ul>
+<li>Un discurs excelent, singura observatie este cea legata de necesitatea unui paragraf legat de principalele arii de conflict care sa complementeze contraargumentarea punctuala</li>
+</ul>
+<p>Partea 2 &ndash; Verdict si punctaje</p>
+<p>Echipa negatoare reuseste sa demonteze rationamentele afirmatoare, si chiar daca primul discurs negator sufera la nivel de consistenta, ce de-al doilea inclina balanta. Verdictul merge catre echipa negatoare.</p>
+<p>Felicitari ambelor echipe pentru o runda reusita!</p>
+<table border="1" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td width="128" valign="top">
+<p>Vorbitor</p>
+</td>
+<td width="128" valign="top">
+<p>Continut</p>
+</td>
+<td width="128" valign="top">
+<p>Strategie</p>
+</td>
+<td width="128" valign="top">
+<p>Stil</p>
+</td>
+<td width="128" valign="top">
+<p>Total</p>
+</td>
+</tr>
+<tr>
+<td width="128" valign="top">
+<p>A1</p>
+</td>
+<td width="128" valign="top">
+<p>10</p>
+</td>
+<td width="128" valign="top">
+<p>9</p>
+</td>
+<td width="128" valign="top">
+<p>4</p>
+</td>
+<td width="128" valign="top">
+<p>23</p>
+</td>
+</tr>
+<tr>
+<td width="128" valign="top">
+<p>N1</p>
+</td>
+<td width="128" valign="top">
+<p>9</p>
+</td>
+<td width="128" valign="top">
+<p>9</p>
+</td>
+<td width="128" valign="top">
+<p>4</p>
+</td>
+<td width="128" valign="top">
+<p>22</p>
+</td>
+</tr>
+<tr>
+<td width="128" valign="top">
+<p>A2</p>
+</td>
+<td width="128" valign="top">
+<p>13</p>
+</td>
+<td width="128" valign="top">
+<p>8</p>
+</td>
+<td width="128" valign="top">
+<p>4</p>
+</td>
+<td width="128" valign="top">
+<p>25</p>
+</td>
+</tr>
+<tr>
+<td width="128" valign="top">
+<p>N2</p>
+</td>
+<td width="128" valign="top">
+<p>14</p>
+</td>
+<td width="128" valign="top">
+<p>9</p>
+</td>
+<td width="128" valign="top">
+<p>4</p>
+</td>
+<td width="128" valign="top">
+<p>27</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</div>A1 -> 23 puncte<br>N1 -> 22 puncte<br>A2 -> 25 puncte<br>N2 -> 27 puncte<br>Castiga echipa: <h3 style='display:inline;color:red;'>Andrei si Lucian 113 (negatori)</h3></div><hr><h3 class='important'>Vrem parerea ta! Pentru asta, trebuie sa te loghezi.</h3>
+                <div class='clear'></div>
+        </div><!-- end main content -->
+         <div class='clear'></div>
+</div>
+<div id="pix"></div>
+
+
+                                </div><!--end main -->
+                                <div id='parteneri'>
+                                    <span class='tr'></span><span class='tl'></span><span class='br'></span><span class='bl'></span><span id="filler"></span>
+                                    <div class='parteneri' id='sustinatori'>
+                                        <span class='floating_text' id='un_proiect'>Un proiect</span>
+                                        <a href='http://www.ardor.org.ro/'><div class='image' id='ardor'>Ardor</div></a>
+                                        <span class='floating_text' id='finantatori'>Finanțatori</span>
+                                        <a href='http://www.opensocietyfoundations.org/'><div class='image' id='open_society'>Open Society Foundation </div></a>
+                                        <a href='http://www.studentiq.ro//'><div class='image' id='memoplus'>MemoPlus</div></a>
+                                        <!-- <a href='http://www.ratiufamilyfoundation.com/'><div class='image' id='FundatiaRatiu'>Ardor</div></a>
+                                        <a href='http://www.eef.md/'><div class='image' id='eef'>East Europe Foundation</div></a>
+                                        <a href='http://www.mts.gov.md/'><div class='image' id='mdminister'>Ministerul Tineretului si Sportului al Republicii Moldova</div></a> -->
+
+                                        <span class='floating_text' id='parteneri_text'>Parteneri</span>
+
+                                        <a href='http://www.policycenter.eu/'><div class='image' id='PolicyCenter'>Policy Center</div></a>
+                                        <a href='http://www.britishcouncil.org/'><div class='image' id='BritishCouncil'>British Council</div></a>
+                                        <a href='http://www.europuls.ro/'><div class='image' id='europuls'>Europuls</div></a>
+                                        <a href='http://www.cere.ro/'><div class='image' id='cere'>Ce-Re</div></a>
+                                        <a href='http://www.primeromania.ro/'><div class='image' id='prime'>Prime Romania</div></a>
+                                        <a href='http://www.cji.ro/'><div class='image' id='cji'>Centrul pentru jurnalism independent</div></a>
+                                        <a href='http://www.aiesectm.ro/'><div class='image' id='aisec'>Aisec</div></a>
+                                        <!-- ===================================================================================================== -->
+                                        <a href='http://www.cogitus.ro/'><div class='image' id='cogitus'>Cogitus</div></a>
+                                        <a href='http://www.adevarul.ro/international/foreign_policy/'><div class='image' id='foreignPolicy'>Foreign Policy</div></a>
+                                        <a href='http://www.elsa.ro/'><div class='image' id='elsa'>Elsa</div></a>
+                                        <a href='http://www.vipromania.ro/'><div class='image' id='vipromania'>Voluntari pentru idei si proiecte</div></a>
+                                        <a href='http://www.ongtrust.ro/'><div class='image' id='ongtrust'>Trust</div></a>
+
+                                        <!-- ===================================================================================================== -->
+                                        <a href='http://www.leap.ro/'><div class='image' id='leap'>Leap</div></a>
+                                        <a href='http://www.younginitiative.org/'><div class='image' id='younginitiative'>Asociatia young initiative</div></a>
+                                        <a href='http://www.asjc.ro/'><div class='image' id='asjc'>Asjc</div></a>
+                                        <a href='http://osut.ro/'><div class='image' id='osut'>Osut</div></a>
+                                        <div class='clear'></div>
+                                    </div>
+                                    <div class='parteneri' id='parteneri_institutionali'>
+                                        <span class='floating_text' id='sponsori_text'>Sus&#539;in&#x0103;tori</span>
+                                        <a href='http://www.cartier.md/'><div class='image' id='cartier_logo'>Editura Cartier</div></a>
+                                        <a href='http://www.pll.md/ro/'><div class='image' id='biblio_logo'>Biblioteca publica de drept</div></a>
+                                        <span class='floating_text' id='institutii_text'>Parteneri institu&#539;ionali</span> 
+                                        <ul id='institutii'>
+                                            <!-- <span class='floating_text' id='institutii_text'>Parteneri institu&#539;ionali:</span> -->
+                                            <li><a href='http://www.politice.ro/'>Facultatea de &#536;tiin&#539;e Politice SNSPA </a></li>
+                                            <li><a href='http://www.comunicare.ro/'>Facultatea de Comunicare &#537;i Rela&#539;ii Publice SNSPA</a></li>
+                                            <li><a href='http://www.fspub.ro/'>Facultatea de &#536;tiin&#539;e Politice Universitatea Bucure&#537;ti</a></li>
+                                            <li><a href='http://www.filosofie.unibuc.ro/'>Facultatea de Filosofie Universitatea Bucure&#537;ti</a></li>
+                                            <li><a href='http://litere.unibuc.ro/'>Facultatea de Litere din Universitatea Bucure&#x015f;ti</a></li>
+                                            <li><a href='http://www.unibuc.ro/ro/fac_fsas_ro'>Facultatea de Sociologie Universitatea Bucure&#537;ti</a></li>
+                                            <li><a href='http://laws.uaic.ro/'>Facultatea de Drept Universitatea Alexandru Ioan Cuza Ia&#537;i</a></li>
+                                            <li><a href='http://www.uaic.ro/uaic/bin/view/Academic/Filosofie'>Facultatea de Filosofie si &#536;tiin&#539;e Social Politice Universitatea AIC Ia&#537;i</a></li>
+                                            <li><a href='http://www.upa.ro/'>Facultatea de Drept si Facultatea de &#x015e;tiin&#x0163;e Politice si Administrative Universitatea Petre Andrei Ia&#x015f;i</a></li> 
+
+                                            <li><a href='http://www.ubbcluj.ro/'>Universitatea Babe&#537;-Bolyai Cluj Napoca</a></li>
+                                            <li><a href='http://www.uvt.ro/'>Universitatea de Vest Timi&#537;oara</a></li>
+                                            <li><a href='http://www.upt.ro/'>Universitatea Politehnica Timi&#537;oara</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class='parteneri' id='parteneri_media'>
+                                        <span class='floating_text' id='media_text'>Parteneri media</span>
+                                        <a href='http://www.hotnews.ro/'><div class='image' id='hotnews'>HotNews</div></a>
+                                        <!-- <a href='http://www.lumebuna.ro/'><div class='image' id='lumebuna'>Lume Buna</div></a> -->
+                                        <a href='http://www.romaniapozitiva.ro/'><div class='image' id='romaniapozitiva'>Romania Pozitiva</div></a>
+                                        <a href='http://totb.ro/'><div class='image' id='thinkoutsidethebox'>Think Outside The Box</div></a>
+                                        <a href='http://www.facebook.com/carevasazica.vip'><div class='image' id='carevasazica'>Carevasazica</div></a>
+                                        <a href='http://www.studentie.ro/'><div class='image' id='studentiero'>Studentie.ro</div></a>
+                                        <a href='http://startub.unibuc.ro/'><div class='image' id='startub'>startub.unibuc.ro</div></a>
+                                        <!-- <a href='http://www.tvr.ro/tvr_cluj.php'><div class='image' id='tvrcluj'>Tvr Cluj</div></a> -->
+                                        <!-- <a href='http://www.radiotransilvania.ro'><div class='image' id='radiotransilvania'>Radio Transilvania</div></a> -->
+                                        <a href='http://iasifun.ziaruldeiasi.ro/'><div class='image' id='iasifun'>Iasi fun</div></a>
+                                        <a href='http://www.ziaruldeiasi.ro/'><div class='image' id='ziaruldeiasi'>Ziarul de Iasi</div></a>
+                                        <a href='http://www.kissfm.ro/timisoara'><div class='image' id='kissfm'>KissFm</div></a>
+
+                                        <div class='clear'></div> 
+                                    </div>
+                                    <div class='clear'></div>
+
+                                </div>	
+                            </div>	<!-- end wrap -->
+                            <div id='footer_mare'>
+                                <div id='footer'>
+                                    <div id='links' class='footer'>
+                                        <div id='menu1' style='margin:auto;'> <ul id='meniu_prinicpal'><li><a href='../../../contacte/index.html'> Contact </a></li>
+<li><a href='../../../clubdebate/index.html'> Cluburile </a></li>
+<li><a href='../../../oamenii/index.html'> Oamenii </a></li>
+<li><a href='../../../proiectul/index.html'> Proiectul </a></li>
+<li><a href='../../../home/index.html'> Acasa </a></li>
+</ul></div><!--end menu-->
+                                    </div><!--
+                                    <div id='contact' class='footer'>
+                                            <h4>Contact</h4>
+                                            <p>office@closer2oxford.ro</p>
+                                            <p>bogdan.draghicescu@closer2oxford.ro<br>
+                                            <span class='detalii'> (asistenta tehnica web - orice probleme legate de site)</span></p>
+                                    </div>
+                                    -->
+                                    <div id='newsletter' class='footer'>
+                                        <script src="../../../../../connect.facebook.net/en_US/all.js#xfbml=1"></script><fb:like href="http://www.facebook.com/pages/Closer2Oxford/162758797069605" width="250" colorscheme="dark"></fb:like>
+                                        <!--<h4>Newsletter</h4>
+                                        <form action='/page/newsletter'>
+                                                <input type='text' name='email'>
+                                                <input type='submit' id='submit' value='>'>
+                                                        
+                                        </form>-->
+                                    </div>
+                                    <div id='credits'>
+                                        Copyright(c) 2021 ARDOR |  Toate drepturile rezervate | Toate logo-urile si sloganurile de pe site sunt proprietate intelectuala inregistrata si nu pot fi reproduse fara acordul explicit al detinatorilor. <br>
+                                            <br /><br />
+                                            <b>Disclaimer</b><br /><i>
+
+                                                Programul educational Closer to Oxford este un program non-profit si nu are o legatura cu universitatea cu acelasi nume, referirea la Oxford avand doar o semnificatie simbolica.
+                                            </i>
+                                    </div>
+
+                                </div>		
+                            </div>		
+
+                            <div id="finantatde">Acest proiect este finantat cu sustinere din partea Comisiei Europene. Aceast publicatie [comunicare] reflecta doar
+                                vederile autorului, iar Comisia nu poate fi facuta  responsabila pentru utilizarea informatiei pe care o contine.</div>
+
+
+                        </body>
+                        </html>

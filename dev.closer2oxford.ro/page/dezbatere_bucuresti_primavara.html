@@ -1,0 +1,782 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml-strict.dtd">
+<HTML xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+    <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+            <link rel="icon" type="image/png"  href="../../closer2oxford.ro/favicon.html">
+                <link rel="stylesheet" href="var/layout.css" type="text/css">
+                    <title>Closer to Oxford - e timpul pentru argumente!</title>
+                    <link rel="alternate" type="application/rss+xml"  href="rss_feed" title="Stiri Closer2Oxford">
+                        <!-- <link rel="image_src" property="og:image"  href="/images/layout/closer2oxford_fb_white.png" /> -->
+                        <link rel="image_src" property="og:image"   type="image/jpeg"  href="../uploads/2015/06/9/facebook_icon.html" />
+                        <link rel="image_src" type="image/jpeg"  href="../uploads/2015/06/9/icon-facebook.gif" /> 
+						<meta name="description" content="Closer2Oxford pune în valoare oameni şi argumentele lor, în dezbateri online şi publice alături de tineri şi invitați avizaţi"/>
+                        <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9" />
+<script type='text/javascript' src='../js/jquery-1.4.4.min.js'></script>
+<script>var $j = jQuery.noConflict();</script>
+<script type='text/javascript' src='../js/tinymce/tiny_mce.js'></script>
+<script type='text/javascript' src='../js/jquery.form.js'></script>
+<script type='text/javascript' src='../js/fbLoginRegister.js'></script>
+<script type='text/javascript' src='var/javascript.js'></script>
+<script type='text/javascript' src='../js/jquery.hovertip-1.0.min.js'></script> 
+<script type='text/javascript' src='../js/jquery.jgrowl_minimized.js'></script> 
+<link rel='stylesheet' href='../css/jquery.jgrowl.css' media='screen' type='text/css'> 
+<script type='text/javascript' src='../js/jquery.timer-min.js'></script> 
+<link rel='stylesheet' href='var/gallery.css' media='screen' type='text/css'> 
+<script type='text/javascript' src='var/galerie/jquery.prettyPhoto.js'></script> 
+<meta name='description' content=''/> 
+<meta name='keywords' content=''/> 
+<style>.hovertip{
+    position:absolute;
+    padding:10px 13px;
+    z-index:2;
+    max-width:300px;
+    color:#303030;
+    background-color:#f5f5b5;
+    border:1px solid #DECA7E;
+    font-family:sans-serif;
+    font-size:12px;
+    line-height:18px;
+    text-align:left;
+    }</style> 
+<script type='text/javascript'>$j(document).ready(function(){$j('.tooltip').hovertip({'offset':[20,20]});get_notif();});
+
+if(!Array.indexOf){Array.prototype.indexOf = function(obj){for(var i=0; i<this.length; i++){if(this[i]==obj){return i;}}return -1;}}
+    hashuri = [] ;
+	 var tick_timer= 3000 ;
+ 
+	 function get_notif()
+        {
+		  
+		  //console.log(tick_timer);
+	     
+		  setTimeout(get_notif,tick_timer);
+        
+		   $j.ajax(
+            {
+                url: '/page/notif/show_events',
+                dataType: 'json',
+                data: "{}",
+                success: function(data)
+                    {
+                    $j.each(data,function(index,data){
+                        try
+                            {
+                            if( hashuri.indexOf(data.hash) == -1 )
+                                {
+                                hashuri.push(data.hash);
+                                $j.jGrowl(
+                                    data.str,
+                                    {
+                                        corners:'1px',
+                                        life: data.life,
+                                        header:data.title,
+                                        hash: data.hash,
+                                        sticky: data.sticky,
+                                        close: function(e,m,o)
+                                            {
+                                                $j.ajax({url:'/page/notif/delete_single_event/' + o.hash});
+                                            }
+                                    });
+                                }
+                            }
+                        catch(e){}
+                        })
+                    }
+            });
+        }
+	 </script> 
+ 
+                            
+  <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-19111721-1']);
+  _gaq.push(['_setDomainName', '.closer2oxford.ro']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+    
+                        </head>
+                        <body>
+                            <div id="global_wrap">
+                                <div id="header">
+                                    <a href='../index.html'><div id='logo'><img src='../images/layout/sigla.jpg'></div></a>
+                                    <a class='noExternal' href='http://www.facebook.com/pages/Closer2Oxford/162758797069605'><img src='../images/fb.png' style='height:30px;float:right;clear:right;margin:10px 5px 5px 5px;border:none;'/></a>
+                                    <a href='rss_feed'><img src='../images/feed-icon.png' style='height:30px;float:right;clear:right;margin:5px;border:none;'/></a>
+                                </div>
+                                <div id="meniu">
+                                    <div  id='register_login'>
+
+                                        
+  <a href='#' class='todo' id='login'>Login </a> &nbsp;<a href='register.html' class='todo' id='register'>Register</a>
+    <div id='login_box'>
+		  <form action='https://dev.closer2oxford.ro/page/ro/login_user/logon' method='post' id='user_login_form'>
+					 <div>Email: <input type='text' name='email'/> </div><br />
+					 <div>Pass: <input type='password' name='passwd'/></div><br />
+					 <a href='#' class='password_forgot'>forgot password?</a>
+					 <input type='hidden' value='/page/dezbatere_bucuresti_primavara' name='returnto' class='submiter'/><br />
+					 <input type='submit' value='login' name='btn' class='submiter'/><br />
+		  </form>
+		  
+		  <form action='https://dev.closer2oxford.ro/page/ro/login_user/reset_user_pw' method='post' id='user_reset_form'>
+					 <div>Email: <input type='text' name='email'/> </div><br />
+					 <a href='#' class='password_forgot'>login?</a>
+					 <input type='hidden' value='/page/dezbatere_bucuresti_primavara' name='returnto' class='submiter'/><br />
+					 <input type='submit' value='reset' name='btn' class='submiter'/><br />
+		  </form>
+		  
+    </div>
+    
+                                    </div>
+                                    <div id='menu1' style='margin:auto;'> <ul id='meniu_prinicpal'><li><a href='contacte/index.html'> Contact </a></li>
+<li><a href='clubdebate/index.html'> Cluburile </a></li>
+<li><a href='oamenii/index.html'> Oamenii </a></li>
+<li><a href='proiectul/index.html'> Proiectul </a></li>
+<li><a href='home/index.html'> Acasa </a></li>
+</ul></div><!--end menu-->
+                                </div>
+                                <div id="main"> 
+                                    <!--<div id='stiri-padding'>
+        <div id='stiri_back'>
+                {stiri} 
+    
+               
+        </div>-->
+        
+</div>
+<div  id="content-padding">
+        <div id='sidebar_menu'>
+                <span class='tr'></span>
+                <span class='tl'></span>
+                <span class='br'></span>
+                <span class='bl'></span>
+                <span id="filler"></span>
+                    
+                <ul></ul>
+                
+                <div class='clear'></div>
+        </div>
+        <div id="content">
+                <span class='tr'></span>
+                <span class='tl'></span>
+                <span class='br'></span>
+                <span class='bl'></span>
+                <span id="filler"></span>
+                <script type='text/javascript' src='../js/jquery.hovertip-1.0.min.js'></script> 
+<script type='text/javascript' src='../js/jquery.jgrowl_minimized.js'></script> 
+<link rel='stylesheet' href='../css/jquery.jgrowl.css' media='screen' type='text/css'> 
+<script type='text/javascript' src='../js/jquery.timer-min.js'></script> 
+<link rel='stylesheet' href='var/gallery.css' media='screen' type='text/css'> 
+<style>.hovertip{
+    position:absolute;
+    padding:10px 13px;
+    z-index:2;
+    max-width:300px;
+    color:#303030;
+    background-color:#f5f5b5;
+    border:1px solid #DECA7E;
+    font-family:sans-serif;
+    font-size:12px;
+    line-height:18px;
+    text-align:left;
+    }</style> 
+<script type='text/javascript'>$j(document).ready(function(){$j('.tooltip').hovertip({'offset':[20,20]});get_notif();});
+
+if(!Array.indexOf){Array.prototype.indexOf = function(obj){for(var i=0; i<this.length; i++){if(this[i]==obj){return i;}}return -1;}}
+    hashuri = [] ;
+	 var tick_timer= 3000 ;
+ 
+	 function get_notif()
+        {
+		  
+		  //console.log(tick_timer);
+	     
+		  setTimeout(get_notif,tick_timer);
+        
+		   $j.ajax(
+            {
+                url: '/page/notif/show_events',
+                dataType: 'json',
+                data: "{}",
+                success: function(data)
+                    {
+                    $j.each(data,function(index,data){
+                        try
+                            {
+                            if( hashuri.indexOf(data.hash) == -1 )
+                                {
+                                hashuri.push(data.hash);
+                                $j.jGrowl(
+                                    data.str,
+                                    {
+                                        corners:'1px',
+                                        life: data.life,
+                                        header:data.title,
+                                        hash: data.hash,
+                                        sticky: data.sticky,
+                                        close: function(e,m,o)
+                                            {
+                                                $j.ajax({url:'/page/notif/delete_single_event/' + o.hash});
+                                            }
+                                    });
+                                }
+                            }
+                        catch(e){}
+                        })
+                    }
+            });
+        }
+	 </script> 
+
+<script type='text/javascript' src='../js/jquery.hovertip-1.0.min.js'></script> 
+<script type='text/javascript' src='../js/jquery.jgrowl_minimized.js'></script> 
+<link rel='stylesheet' href='../css/jquery.jgrowl.css' media='screen' type='text/css'> 
+<script type='text/javascript' src='../js/jquery.timer-min.js'></script> 
+<link rel='stylesheet' href='var/gallery.css' media='screen' type='text/css'> 
+<script type='text/javascript' src='var/galerie/jquery.prettyPhoto.js'></script> 
+<style>.hovertip{
+    position:absolute;
+    padding:10px 13px;
+    z-index:2;
+    max-width:300px;
+    color:#303030;
+    background-color:#f5f5b5;
+    border:1px solid #DECA7E;
+    font-family:sans-serif;
+    font-size:12px;
+    line-height:18px;
+    text-align:left;
+    }</style> 
+<script type='text/javascript'>$j(document).ready(function(){$j('.tooltip').hovertip({'offset':[20,20]});get_notif();});
+
+if(!Array.indexOf){Array.prototype.indexOf = function(obj){for(var i=0; i<this.length; i++){if(this[i]==obj){return i;}}return -1;}}
+    hashuri = [] ;
+	 var tick_timer= 3000 ;
+ 
+	 function get_notif()
+        {
+		  
+		  //console.log(tick_timer);
+	     
+		  setTimeout(get_notif,tick_timer);
+        
+		   $j.ajax(
+            {
+                url: '/page/notif/show_events',
+                dataType: 'json',
+                data: "{}",
+                success: function(data)
+                    {
+                    $j.each(data,function(index,data){
+                        try
+                            {
+                            if( hashuri.indexOf(data.hash) == -1 )
+                                {
+                                hashuri.push(data.hash);
+                                $j.jGrowl(
+                                    data.str,
+                                    {
+                                        corners:'1px',
+                                        life: data.life,
+                                        header:data.title,
+                                        hash: data.hash,
+                                        sticky: data.sticky,
+                                        close: function(e,m,o)
+                                            {
+                                                $j.ajax({url:'/page/notif/delete_single_event/' + o.hash});
+                                            }
+                                    });
+                                }
+                            }
+                        catch(e){}
+                        })
+                    }
+            });
+        }
+	 </script> 
+
+<style type="text/css">
+.poze
+{
+    float:right;
+    width:110px;
+}
+.poze a img
+{    border:none;
+}
+.main_content
+{
+    float:left;
+    width:560px;
+}
+</style>
+
+ <div class = 'poze'>
+            <a class='thumb' href='../uploads/2011/10/3/buc_inc.n36s8a.png' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../uploads/2011/10/3/thumb_buc_inc.n36s8a.png' alt='' />
+                <span class='desc'></span>
+            </a>
+        
+
+            <a class='thumb' href='http://www.youtube.com/watch?v=gkruvIek7e8' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../../img.youtube.com/vi/gkruvIek7e8/1.jpg' alt='' />
+                <span class='desc'>Discurs Ionuț Tatu - Student (A1)</span>
+            </a>
+        
+
+            <a class='thumb' href='http://www.youtube.com/watch?v=Hwixj4U3Ft0' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../../img.youtube.com/vi/Hwixj4U3Ft0/1.jpg' alt='' />
+                <span class='desc'>Discurs Alexandra Drugan - studentă (N1)</span>
+            </a>
+        
+
+            <a class='thumb' href='http://www.youtube.com/watch?v=z0g4m8gwcyQ' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../../img.youtube.com/vi/z0g4m8gwcyQ/1.jpg' alt='' />
+                <span class='desc'>Discurs Daniel Barbu - Invitat (A2)</span>
+            </a>
+        
+
+            <a class='thumb' href='http://www.youtube.com/watch?v=d7eOsPH9lvk' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../../img.youtube.com/vi/d7eOsPH9lvk/1.jpg' alt='' />
+                <span class='desc'>Discurs Corneliu Liviu Popescu - invitat (N2)</span>
+            </a>
+        
+
+            <a class='thumb' href='http://www.youtube.com/watch?v=vV0HuMceT0I' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../../img.youtube.com/vi/vV0HuMceT0I/1.jpg' alt='' />
+                <span class='desc'>Interventie 1</span>
+            </a>
+        
+
+            <a class='thumb' href='http://www.youtube.com/watch?v=zu0l9or2aRg' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../../img.youtube.com/vi/zu0l9or2aRg/1.jpg' alt='' />
+                <span class='desc'>Interventie 2</span>
+            </a>
+        
+
+            <a class='thumb' href='http://www.youtube.com/watch?v=uyF576dNNT4' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../../img.youtube.com/vi/uyF576dNNT4/1.jpg' alt='' />
+                <span class='desc'>Interventie 3</span>
+            </a>
+        
+
+            <a class='thumb' href='http://www.youtube.com/watch?v=MAakuXhhuFc' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../../img.youtube.com/vi/MAakuXhhuFc/1.jpg' alt='' />
+                <span class='desc'>Interventie 4</span>
+            </a>
+        
+
+            <a class='thumb' href='http://www.youtube.com/watch?v=CHSAbSLTpPc' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../../img.youtube.com/vi/CHSAbSLTpPc/1.jpg' alt='' />
+                <span class='desc'>Interventie 5</span>
+            </a>
+        
+
+            <a class='thumb' href='http://www.youtube.com/watch?v=boW6rIiCAPc' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../../img.youtube.com/vi/boW6rIiCAPc/1.jpg' alt='' />
+                <span class='desc'>Interventie 6</span>
+            </a>
+        
+
+            <a class='thumb' href='http://www.youtube.com/watch?v=K6jXz3GbREM' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../../img.youtube.com/vi/K6jXz3GbREM/1.jpg' alt='' />
+                <span class='desc'>Interventie 7</span>
+            </a>
+        
+
+            <a class='thumb' href='http://www.youtube.com/watch?v=7UKn7D_QPWA' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../../img.youtube.com/vi/7UKn7D_QPWA/1.jpg' alt='' />
+                <span class='desc'>Interventie 8</span>
+            </a>
+        
+
+            <a class='thumb' href='http://www.youtube.com/watch?v=KIMk7ts082Y' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../../img.youtube.com/vi/KIMk7ts082Y/1.jpg' alt='' />
+                <span class='desc'>Concluzie voturi</span>
+            </a>
+        
+
+            <a class='thumb' href='../uploads/2011/04/29/dezbatere_bucuresti_1.2mv8so.jpg' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../uploads/2011/04/29/thumb_dezbatere_bucuresti_1.2mv8so.jpg' alt='' />
+                <span class='desc'></span>
+            </a>
+        
+
+            <a class='thumb' href='../uploads/2011/04/29/dezbatere_bucuresti_2.yh4grl.jpg' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../uploads/2011/04/29/thumb_dezbatere_bucuresti_2.yh4grl.jpg' alt='' />
+                <span class='desc'></span>
+            </a>
+        
+
+            <a class='thumb' href='../uploads/2011/04/29/dezbatere_bucuresti_3.5f2mv8.jpg' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../uploads/2011/04/29/thumb_dezbatere_bucuresti_3.5f2mv8.jpg' alt='' />
+                <span class='desc'></span>
+            </a>
+        
+
+            <a class='thumb' href='../uploads/2011/04/29/dezbatere_bucuresti_4.5f2mv8.jpg' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../uploads/2011/04/29/thumb_dezbatere_bucuresti_4.5f2mv8.jpg' alt='' />
+                <span class='desc'></span>
+            </a>
+        
+
+            <a class='thumb' href='../uploads/2011/04/29/dezbatere_bucuresti_5.wx3b7e.jpg' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../uploads/2011/04/29/thumb_dezbatere_bucuresti_5.wx3b7e.jpg' alt='' />
+                <span class='desc'></span>
+            </a>
+        
+
+            <a class='thumb' href='../uploads/2011/04/29/dezbatere_bucuresti_6.3b7e5f.jpg' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../uploads/2011/04/29/thumb_dezbatere_bucuresti_6.3b7e5f.jpg' alt='' />
+                <span class='desc'></span>
+            </a>
+        
+
+            <a class='thumb' href='../uploads/2011/10/3/buc_final.n36s8a.png' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../uploads/2011/10/3/thumb_buc_final.n36s8a.png' alt='' />
+                <span class='desc'></span>
+            </a>
+        
+
+
+    <script>
+    $j(document).ready(function(){
+      		$j("a[rel^='prettyPhoto']").prettyPhoto({theme:'facebook'});
+        });
+    
+    </script>
+    </div>
+
+<div class='main_content'>
+<p><em>Dezbatere publică- București, sediul Centrului pentru Jurnalism Independent, 14 aprilie 2011</em></p>
+<p><em>Echipa afirmatoarea: <strong>Ionuț Tatu</strong>,</em> <em>studeant &icirc;n anul III la Administraţie Publică (Universitatea Dimitrie Cantemir) și <strong>Daniel Barbu</strong></em> <em>profesor la Facultatea de Ştiinte Politice, Universitatea Bucureşti</em></p>
+<p><em>Echipa negatoare: <strong>Alexandra Drugan</strong>, studentă la Facultatea de Drept, Universitatea București și <strong>Corneliu Liviu-Popescu</strong>, profesor la Facultatea de Drept</em></p>
+<p><em>Moderator<strong>: Liana Ganea</strong>, </em><span style="color: #000000;"><em>coordonator programe Active Watch</em></span></p>
+<p><br /> <br /></p>
+<p><strong>Liana Ganea: </strong>Vom &icirc;ncepe dezbaterea. Am să &icirc;ncep prin a prezenta echipele. L&acirc;ngă mine se află Alexandra Drugan, studentă &icirc;n anul III la Facultatea de Drept, Universitatea Bucureşti. Coechipierul Alexandrei este Corneliu Liviu Popescu, profesor la Facultatea de Drept, fost agent guvernamental pentru Curtea Europeană a Drepturilor Omului. &Icirc;n dreapta mea se află echipa formată din studentul Ionuţ Tatu, student &icirc;n anul III la Administraţie Publică(Universitatea Dimitrie Cantemir) şi Daniel Barbu, politolog, eseist, jurnalist şi profesor la Facultatea de Ştiinte Politice a Universităţii din Bucureşti.</p>
+<p>&nbsp;</p>
+<p><strong>AFIRMATOR 1</strong></p>
+<p>&nbsp;</p>
+<p><strong>Ionuţ Tatu: </strong> Buna ziua! Ne aflăm aici pentru a discuta dacă dreptul la informare ar trebui să devină mai important dec&acirc;t dreptul la viaţă privată a demnitarului. Pledez pentru cazul afirmator şi de aceea voi prezenta situaţia actuală a ţării noastre. &Icirc;ntr-o perioadă &icirc;n care preşedintele ţării deţine anumite relaţii cu anumite persoane infame, sau candidaţi la preşedenţie decid că este necesar să se &icirc;nt&acirc;lnească cu alte persoane influente &icirc;naintea alegerilor, consider că cetăţeanul are dreptul de a cunoaşte mai bine viaţa demnitarilor. Aş dori să aduc &icirc;n faţa dumneavoastra legea 544/2001, care priveşte informarea cetăţenilor asupra problemelor publice. &Icirc;n articolul 2, punctul b şi c, descoperim că cetăţeanul are dreptul să ceară informaţii privind autorităţile publice şi, de asemenea, orice informaţie personală legată de o persoana fizică identificată sau identificabilă.</p>
+<p>&nbsp;</p>
+<p>Am să &icirc;ncep argumentarea prin a spune că ne adresăm această &icirc;ntrebare &icirc;n două perioade. Prima perioadă este cea de dinainte de alegeri, deoarece atunci poporul iese la vot pentru a alege un demnitar. Votul este direct, liber exprimat şi secret, pe l&acirc;ngă universal şi egal. &Icirc;nsă cetăţeanul are dreptul la aceste trei funcţii. Consider că &icirc;n clipa &icirc;n care politicianul &icirc;şi prezintă &ldquo;faţa&rdquo; &icirc;n cadrul campaniei electorale, cetăţeanul de fapt votează reflexia difuză a acesteia &icirc;n mentalul, colectiv şi nu adevărata sa faţă. Astfel, consider că dreptul cetăţeanului de a vota este viciat, este constr&acirc;ns de prezentarea difuză a politicianului respectiv, cetățeanul fiind privat de libera exprimare.  Aş dori să completez şi cu o analogie, &icirc;n care statul ar fi o firmă privată, iar cetăţenii sunt acţionarii acesteia. Cetăţenii doresc să aleagă o persoană care să se ocupe de administrarea acestei firme. &Icirc;n clipa aceea, cetăţenii cer un CV detaliat despre activitatea acestuia şi despre personalitatea potenţialului ales, pentru a cunoaşte următorul fapt - că el va lupta pentru interesele firmei, şi nu doar pentru propriul interes.</p>
+<p>&nbsp;</p>
+<p>Al doilea argument survine &icirc;n urma faptului că dreptul la informare este deseori invocat &icirc;n timpul mandatului demnitarilor, atunci c&acirc;nd anumite acte, spre exemplu cele de corupţie, delapidare etc. ies la iveală. Conform legii audiovizualului, media are dreptul de a furniza informaţii de interes public. E adevărat că mass-media, &icirc;n contextul actual, a egalat interesul public cu interesul persoanelor care se luptă şi care se ceartă &icirc;n tabloide. Interesul pecuniar a depăşit interesul general, şi dore﻿sc să subliniez acest lucru, deoarece nu putem avea &icirc;ncredere &icirc;n mass-media, pentru că ea va folosi aceste informaţii cu scopul de a defăima persoane politice. Doresc să menţionez următoarea soluţie: Politicianul, pentru a putea fi un politician adevărat, trebuie să &icirc;şi prezinte adevărata faţă &icirc;n faţa cetăţenilor, astfel &icirc;nc&acirc;t aceştia să aleagă omul cu adevărat. Datoria politicianului este de a convinge cetățenii să &icirc;l aleagă.</p>
+<p>Vă mulţumesc!</p>
+<p>&nbsp;</p>
+<p><span style="font-size: small;"><strong>Chestionare &icirc;ncrucișată 1:</strong></span></p>
+<p>&nbsp;</p>
+<p><strong>Corneliu Liviu-Popescu:</strong> Distinse coleg, aţi comparat administrarea treburilor publice ale cetăţii cu gestionarea unei societăţi comerciale, &icirc;n raportul dintre acţionar şi administrator. Vi s-ar părea firesc ca la un interviu de angajare &icirc;ntr-o companie privată, acţionarii să &icirc;ntrebe potenţialul viitor administrator care &icirc;i sunt orientările sexuale sau orientările religioase? Ori aceasta ar fi o discriminare?</p>
+<p>&nbsp;</p>
+<p><strong>Ionuţ Tatu:</strong> Sigur că o astfel de &icirc;ntrebare indică o discriminare, dar presupun că &icirc;ncercaţi să spuneţi că cetăţenii nu vor alege o persoană cu anumite orientări sexuale sau cu o anumită religie. Consider că dacă acest candidat se consideră capabil de a conduce un stat, iar interesul lui nu este unul personal, ci unul pentru societate, atunci el ar trebui să fie pus &icirc;n acea funcţie. Orice fel de discriminare arată faptul că societatea este imorală, iar noi dorim să fim o societate morală şi etică, iar discriminarea nu &icirc;şi are locul &icirc;n acest plan.</p>
+<p>&nbsp;</p>
+<p><strong>Alexandra Drugan:</strong> De ce ar trebui să cunoaştem informaţii numai despre politicieni, țin&acirc;nd cont că sunt şi alţi oamenii aflaţi &icirc;n funcţii care presupun anumite responsabilităţi faţă de ceilalţi?</p>
+<p>&nbsp;</p>
+<p><strong>Ionuţ Tatu: </strong>Desigur, &icirc;nsă responsabilitatea politicienilor este mult mai importantă dec&acirc;t responsabilitatea unei firme sau a unui &icirc;nvăţător, a unui student sau a unui lucrător comercial. El se ocupă de interesul public şi general.</p>
+<p>&nbsp;</p>
+<p><strong>Alexandra Drugan: </strong>M-am bazat pe analogia pe care ai făcut-o.</p>
+<p>&nbsp;</p>
+<p><strong>Ionuţ Tatu: </strong>Ştiu. Am spus că nu se compară, &icirc;nsă politicianul este o persoană publică şi de aceea trebuie să fie deschis &icirc;n faţa alegătorului.</p>
+<p>&nbsp;</p>
+<p><strong>Alexandra Drugan: </strong>Informaţiile abundente despre viaţa privată a unui politician ar presupune &icirc;n mod necesar o responsabilizare a acestuia? Nu ar deveni mai viclean oare?</p>
+<p>&nbsp;</p>
+<p><strong>Ionuţ Tatu:</strong> Mass-media ar trebui să prezinte aceste informaţii fără a fi părtinitoare. De aceea politicianul ar trebui să fie acela care se prezintă şi care &icirc;şi va anunţa direcţiile şi interesele. Acesta ar fi un politician demn.</p>
+<p>&nbsp;</p>
+<p><strong>Alexandra Drugan: </strong>Cu at&icirc;t mai mult ar putea să fie mai viclean.</p>
+<p>&nbsp;</p>
+<p><strong>Ionuţ Tatu: </strong>Da, dar putem fi siguri că cineva va observa acest lucru şi &icirc;l va putea contracara şi atunci politicianul respectiv va c&acirc;ştiga &icirc;ncrederea poporului. Pentru cinci ani de zile, ei nu pot fi atinşi de opinia publică, dar după acea perioadă altcineva ar putea apărea &icirc;n locul lor.</p>
+<p>&nbsp;</p>
+<p><strong>NEGATOR 1</strong></p>
+<p>&nbsp;</p>
+<p><strong>Alexandra Drugan:</strong> Astăzi voi prezenta discursul negator şi pentru aceasta aş dori să &icirc;ncep cu o clarificare a drepturilor care sunt puse &icirc;n contradicţie, contradicţie pe care aş dori să o semnalez ca fiind una aparentă. Dreptul la informare al cetăţenilor trebuie să fie su﻿sţinut de acele informaţii care sunt strict legate de interesul public. Ce &icirc;nseamnă interesul public? Nu este suficient ca publicul să &ldquo;ceară&rdquo; o informație pentru ca acel tip de informaţie să fie catalogat drept informaţie de interes public. Faptul că există o dorinţă foarte mare de cunoaștere a vieții de familie sau a vieții sexuale a demnitarului nu &icirc;nseamnă că graniţele dintre viaţa publică şi viaţa privată trebuie schimbate &icirc;n detrimentul celei din urmă. Cu privire la dreptul la viaţă privată, acesta are două dimensiuni. Una ţine de viaţa privată personală şi aici putem include viaţa de familie, libertatea sexuală, preferinţe, modul &icirc;n care alege demnitarul să &icirc;şi petreacă timpul liber. A doua este viaţa privată socială. Aici trebuie să includem şi sfera profesională, tocmai sfera care ne interesează pe noi &icirc;n ceea ce priveşte viaţa demnitarului, modul &icirc;n care interferează alegerile lui private cu funcţia pe care o exercită. Ţin foarte mult la această clarificare pentru că &icirc;n discursul oponentului meu nu mi s-a părut că există o strictă demarcaţie &icirc;ntre ceea ce ţine de viaţa privată şi  ceea ce ţine de faptele lui, care uneori sunt prejudiciabile pentru ceilalţi. Mă g&acirc;ndesc acum la infracţiunile pe care le-a numit, care lezează clar anumite valori şi care vor fi sancţionate conform unui sistem dat, pe care nu trebuie să &icirc;l discutăm &icirc;n dezbaterea de astăzi.</p>
+<p>&nbsp;</p>
+<p>Orice om, fără &icirc;ndoială, are dreptul la viaţă privată. Chiar şi oamenii care sunt cunoscuţi marelui public trebuie să beneficieze de speranţa legitimă că sfera lor personală va fi protejată.  Altfel, dacă am expune chestiuni care ţin de comportamentul &icirc;n familie, comportamentul cu prietenii, hobbyuri, alegeri care ţin strict de persoana lor şi care  ar trebui să ne fie indiferente pentru că nu au legătură cu activitatea profesională, s-ar crea un fel de inflaţie &icirc;n presă şi spaţiul din mass-media ar fi ocupat cu chestiuni care ne-ar distrage atenţia. Astfel, nu am putea să luăm acea decizie conştientă despre care vorbea colegul meu, cu privire la cel care va guverna statul şi cel care ne va reprezenta interesele.</p>
+<p>&nbsp;</p>
+<p>&Icirc;ncă un argument pe care aş vrea să &icirc;l pun &icirc;n discuţie este legat de răul ireparabil care s-ar crea vis-a-vis de persoana demnitarului, prin dezvăluirea anumitor informaţii care, cu at&acirc;t mai mult c&acirc;nd sunt false, ar răm&acirc;ne &icirc;n conştiinţa publică, indiferent dacă ştirile false ar fi ulterior dezminţite. Săm&acirc;nţa de &icirc;ndoială răm&acirc;ne, pentru că oamenii nu uită uşor şi nu au o &icirc;ncredere at&acirc;t de mare &icirc;n informaţiile mediate, pe care nu le pot culege cu propriile simţuri. Consecinţa şi mai gravă a acestui lucru este lipsa de &icirc;ncredere &icirc;n instituţiile statului, care poate duce la absenteismul electoral şi la lipsa de interes pentru viaţa politică.</p>
+<p>&nbsp;</p>
+<p>Acestea au fost argumentele mele, pentru care dreptul demnitarilor la viaţă privată nu ar trebui să fie pus &icirc;n al doilea plan faţă de dreptul cetăţenilor la informare. Interesele personale trebuie să fie &icirc;mbinate cu interesul general &icirc;ntr-o societate democratică.</p>
+<p>&nbsp;</p>
+<p><span style="font-size: small;"><strong>Chestionare &icirc;ncrucișată 2:</strong></span></p>
+<p>&nbsp;</p>
+<p><strong>Daniel Barbu: </strong>Ați spus că trăim &icirc;ntr-o societate democratica, &icirc;ntr-o societate pluralista, relativista, &icirc;n care toate valorile sunt supuse dezbaterii.  Cine mai defineşte &icirc;ntr-o asemenea societate ce este public, ce este privat, at&acirc;ta vreme c&acirc;t fiecare dintre poziţii se poate argumenta raţional. Unde mai e graniţa at&acirc;ta timp c&acirc;t ea nu mai este evidentă? Cine mai defineşte atunci interesul general, dacă intră &icirc;n contradicţie cu interese ale unor grupuri sau ale unor indivizi. A doua &icirc;ntrebare: aţi spus că viaţa privată are, la r&acirc;ndul ei, un versant social şi unul foarte personal, dar vă atrag atenția că trăim, mai ales &icirc;n ultimii 30 de ani, &icirc;ntr-un regim intens de personalizare a politicii, &icirc;n care politicienii nu mai sunt recomandaţi publicului, aşa cum s-a &icirc;nt&acirc;mplat &icirc;n ultimii 200 de ani, fie de statutul lor social, fie de apartenenţa la un partid binecunoscut, configurat clar &icirc;n doctrină şi ideologie. Politica fiind personalizată, persoana se prezintă &icirc;n faţa alegătorilor şi nu este indiferent pentru alegător dacă acesta este fidel sau nu &icirc;n viaţa de familie, pentru că asta ar putea ţinti chestiuni de societate, cum ar fi dreptul la avort, şi ar putea indica celor care sunt pro-choice ca persoana respectivă, prin modul de viaţă, este mai degrabă pro-life. Este un simplu exemplu. Cu ce mijloace intelectuale fixaţi graniţa dintre viaţa privată socială şi cea personală?</p>
+<p>&nbsp;</p>
+<p><strong>Alexandra Drugan:</strong> &Icirc;n ceea ce priveşte interesul general - legiuitorul este acela care stabileşte limitele care pot fi puse unui drept al omului. Aceste limite nu se stabilesc &icirc;n mod arbitrar, pentru că posibilităţile de a relaţiona cu ceilalţi, chestiune care ţine &icirc;n mod special de dreptul la viaţă privată socială, ar fi cu mult diminuate. Legat de cea de-a doua &icirc;ntrebare, aţi pornit de la cele două dimensiuni ale dreptului la viaţă privată, personală şi socială, după care aţi invocat practicile curente din domeniul politic, tehnicile de manipulare.</p>
+<p>&nbsp;</p>
+<p><strong>Daniel Barbu:</strong> Am spus pur şi simplu că biserica la care te duci sau orientarea ta sexuală, care ar putea fi considerate date private, dacă eşti un om politic, pot fi extrem de relevante &icirc;n ochii publicului pentru politicile publice pe care urmează să le promovezi de &icirc;ndată ce vei avea posibilitatea să o faci. Atunci unde este graniţa? De ce nu ar avea dreptul publicul să ştie la ce biserică te duci? Sau dacă eşti monogam, bigam, heterosexual, pedofil etc.</p>
+<p>&nbsp;</p>
+<p><strong>Alexandra Drugan: </strong>Dar legătura de cauzalitate dintre opţiunile personale şi opţiunile pe care le politicianul le promovează &icirc;n programul politic pe care şi-l asumă pentru a fi ales este at&acirc;t de strictă şi de evidentă?</p>
+<p>&nbsp;</p>
+<p><span style="font-size: small;"><strong>AFIRMATOR 2</strong></span></p>
+<p>&nbsp;</p>
+<p><strong>Daniel Barbu:</strong> Argumentele mele au fost deja formulate &icirc;n &icirc;ntrebările pe care le-am adresat părţii adverse şi nu vreau să vă ascund pentru că detest ipocrizia, o consider o formă de violenţă. Personal cred că viaţa privată trebuie apărată, deci vorbesc acum ca un avocat al diavolului.</p>
+<p>&nbsp;</p>
+<p>Probabil că acum 30 de ani graniţele ar fi fost aproape spontan clare- nu pentru noi &icirc;n această societate, pentru că acum 30 de ani aveam alt tip de cultură publică- dar pentru orice tip de societate democratică. Acum, aceste graniţe nu mai există. Nimic nu este mai eminent public dec&acirc;t piaţa privată a vedetelor. E suficient să ne uităm la televiziunile noastre pentru a vedea că orice eveniment politic, orice cutremur, orice dezastru nuclear păleşte &icirc;n faţa divorţului dintre cineva şi altcineva. Fără &icirc;ndoială că politica este personalizată, politicienii au &icirc;nvăţat de 30-40 de ani, de fapt au &icirc;nvăţat de la John Kennedy, să fie vedete media. &Icirc;n această calitate, ei au renunţat la viaţa privată. Viaţa privată face parte din profilul lor politic. Ea seduce, rareori &icirc;ndepărtează. Un exemplu foarte elocvent este că &icirc;n urmă cu şapte ani, venerabilul Gheorghios Papandreu a c&acirc;ştigat alegerile &icirc;n fruntea Partidului Socialist Elen, la v&icirc;rsta de 80 de ani, partidul de opoziţie făc&acirc;nd campanie pe considerentul că venerabilul politician tocmai &icirc;şi lăsase nevasta pentru a se muta cu o t&acirc;nără stewardesă de 30 de ani, ceea ce &icirc;n ochii publicului elen a fost o dovadă de virilitate. Toată campania dusă &icirc;mpotriva lui Papandreu pe această temă de viaţă privată s-a &icirc;ntors &icirc;mpotriva celor care o plănuiseră, şi &icirc;n ochii mai mediteraneeni ai grecilor, asta a fost o garanţie că Papandreu ar fi un prim-ministru extrem de energic, chiar dacă avea 80 de ani. Iată cum viaţa privată e utilizată de politicieni, nu trebuie să o citim doar &icirc;n cheie defensivă, să ne imaginăm un paparazzi investind foarte mulţi bani şi energie, reuşind să desluşească taine fie de ordin financiar, fie de ordin sexual din viaţa politicienilor, ci adesea politicienii sunt cei care scurg aceste informaţii despre ei pentru că nu mai au nimic altceva să spună. Nu mai există niciun fel de politici care să fie definite &icirc;n cheie ideologică, doctrinară, simplu spus &icirc;ntr-un registru al valorilor, şi care să fie convingătoare indiferent de slaba performanţă sau precaritatea umană a celui sau celor care le formulează. Nu mai există politică &icirc;n afara persoanelor care fac politică. Vedem foarte bine cu ochiul liber asta &icirc;n Rom&acirc;nia. Este suficient să ne uităm la o emisiune de televiziune &icirc;n care ni se arată politicieni de top, preşedintele, primul-ministru, şeful opoziţiei, care &icirc;n curs de un an şi-au schimbat opinia cu privire la acelaşi subiect de şapte sau opt ori. Asta nu &icirc;i &icirc;mpiedică să guverneze &icirc;n continuare, să c&acirc;ştige &icirc;n continuare voturi. Rom&acirc;nia nu este deloc un caz excepţional. Francezii ştiau foarte bine atunci c&acirc;nd l-au votat pe Sarkozy ca nu numai că acesta are o viaţă personală extrem de vibrantă, dar că este prietenul celor mai mari industriaşi francezi, şi că oamenii cu care se sfătuieşte cu privire la alegerile politice pe care le face nu sunt politicienii, ci cei trei sau patru şefi ai industriei franceze cu care pleacă periodic, c&acirc;te o săptăm&acirc;nă, &icirc;n Marea Mediterană şi &icirc;şi face agenda pe următoarele şase luni.  Francezii ştiau asta c&acirc;nd l-au votat. Nu au fost deranjaţi nici de viaţa erotică vibrantă, nici de faptul că Sarkozy nu este dec&acirc;t purtătorul de cuv&acirc;nt al celei mai restr&acirc;nse camere de comerţ şi industrie din Franţa.</p>
+<p>&nbsp;</p>
+<p><span style="font-size: small;"><strong>NEGATOR 2</strong></span></p>
+<p><strong>Corneliu Liviu-Popescu: </strong>Doamnelor, domnilor, esenţa unei societăţi democratice răm&acirc;ne viaţa privată. Dreptul fiecărui om de a<strong> </strong>fi lăsat &icirc;n pace, dreptul fiecărui om la fericire. Credeţi sau nu, oamenii politici sunt şi ei oameni. Ne-am pierdut viaţa privată din diverse raţiuni. Oamenii politici au pierdut-o &icirc;n numele interesului public, la aeroport, pentru securitate. Am devenit nişte mitocani. Mă duc cu o doamnă &icirc;n aeroport şi ce fac de faţă cu o doamnă? &Icirc;mi dau sacoul jos, &icirc;mi dau pantofii jos, &icirc;mi dau cureaua de la pantaloni jos, nu mai am nici un fel de viaţă privată, ca şi cum m-aş pregăti să o violez acolo, &icirc;n faţa agenţilor de securitate. Aceeaşi este situaţia oamenilor politici. Echipa afirmatoare e susţinătoare a unui punct de vedere care pentru mine este absurd, acela că avem dreptul să ştim orice despre oamenii politici, &icirc;n numele interesului public. Deci eu vreau să ştiu acum ce poziţii preferă &icirc;n dormitor primul-ministru, ce perversiuni sexuale are el cu soţia. Vreau să ştiu asta. &Icirc;n numele a ce? Dacă eu aflu asta e O.K. E dreptul meu să aflu. Haideţi să punem invers problema. Dacă e dreptul meu să aflu, &icirc;nseamnă că este dreptul primului-ministru să &icirc;mi aducă la cunoştinţă. Să o facă &icirc;n piaţa publică, voluntar. Nu l-am aresta pentru ultraj la bunele moravuri? Noi avem dreptul să aflăm, dar el nu are dreptul să vină să ne spună el singur ce face? Este absurd să cerem noi aceste informaţii. De ce vrem să le aflăm? Ca să ştim cum votăm? Să fim serioşi. De aceea fac audienţe posturile de televiziune &icirc;n care se prezintă divorţul dintre academicieni? Ştiţi la ce oameni de cultură mă refer. Vreau să ştiu despre omul politic totul, ce poziţii preferă, pentru că altfel nu poate să mă conducă bine?  N-ar fi mai bine să ştiu totul despre chirurgul care mă operează pe cord? La el nu mă interesează ce face &icirc;n dormitor. Mă interesează să fie un bun profesionist. La fel ar trebui să mă intereseze şi la omul politic, să mă intereseze ce face pe autostrăzi. Scuzaţi-mă că folosesc cuvinte obscene &icirc;ntr-o dezbatere publică. Ca să &icirc;nchei, vreau să dau cuv&acirc;ntul unor politicieni şi să vă arăt că dacă ei &icirc;nşişi &icirc;şi expun viaţa privată, asta nu satisface interesul public. Doi oameni politici şi-au expus opiniile unul despre celălalt &icirc;ntr-un mod extraordinar de academic şi asta nu a &icirc;mpiedicat naţiunea rom&acirc;nă, &icirc;n deplină cunoştinţă de cauză, să &icirc;i voteze şi să fie astăzi am&acirc;ndoi europarlamentari. Am vrut să demonstrez nu numai că putem afla orice despre un om politic pentru că spun alţii despre el, dar şi prin ceea ce afirmă el &icirc;nsuşi. Cu toate acestea naţiunea nu a fost influenţată la vot. Eu cred că un om cu scaun la cap nu ar fi votat astfel de personaje pentru Parlamentul European. Dar cum astfel de personaje sunt &icirc;n Parlamentul European, &icirc;nseamnă că nu există nici cel mai mic interes public pentru astfel de informaţii din viaţa privată. Atunci continui să cred că dacă altceva justifică ingerinţele din viaţa privată, acest altceva nu &icirc;mi dă dreptul să neg viaţa privată chiar şi a politicienilor.</p>
+<p><em><strong>Discuție cu audiența:</strong></em></p>
+<p>&nbsp;</p>
+<p><em><strong>Bogdan Drăghicescu:</strong> Pentru negatori: faptul că se află informaţii, fie din partea politicienilor, fie oferite de ziare, fie că sunt alţi politicieni care le spun despre ei, spuneţi că aceste informaţii nu ar influenţa opţiunea publicului. Asta &icirc;nseamnă că respectivele informaţii nu sunt valoroase, sau că publicul nu este suficient de educat pentru a lua aceste informaţii &icirc;n considerare şi poate, &icirc;n timp, ar &icirc;nvăţa să ia şi aceşti noi factori &icirc;n considerare &icirc;n alegerile pe care le fac? </em></p>
+<p>&nbsp;</p>
+<p><em><strong>Alexandra Drugan:</strong> Interesul public pe care tot &icirc;ncercăm să &icirc;l invocăm are şi el anumite coordonate. Aceste coordonate nu ţin neapărat de nivelul de educaţie al receptorului, de disponibilitatea celorlalţi de a afla ceva despre noi &icirc;nşine, ci acest interes public trebuie să fie circumscris funcţiei, pentru a putea lua o decizie &icirc;n cunoştinţă de cauză, pentru a fi cetăţeni activi şi conştienţi. Informaţiile care cauzează o inflaţie s-ar putea să te bulverseze şi să nu ştii pentru ce optezi de fapt. Sau putem lua &icirc;n considerare exemplul oferit de domnul profesor, unde informaţiile nu au avut niciun efect &icirc;n r&acirc;ndul publicului. Cam acestea sunt opţiunile. </em></p>
+<p>&nbsp;</p>
+<p><em><strong>Bogdan Drăghicescu: </strong>Aş dori să contrez. De exemplu &icirc;n Marea Britanie, un parlamentar a fost implicat &icirc;ntr-un scandal de luare de mită de 20.000 de lire. Transform&acirc;nd sumele &icirc;n lei rom&acirc;neşti constatăm că deşi este o sumă mare, am avut scandaluri mult mai semnificative la noi &icirc;n ţară. &Icirc;n Anglia un parlamentar a demisionat, consider&acirc;nd că i-a fost compromisă funcţia. Acest lucru nu se &icirc;nt&acirc;mpla la noi &icirc;n ţară. Opinia publică din Marea Britanie este mai educată din punct de vedere politic şi acest gen de scandaluri au o greutate mai mare &icirc;n alegerile pe care le face publicul. La noi de ce nu s-ar aplica aceleaşi mecanisme? </em></p>
+<p>&nbsp;</p>
+<p><em><strong>Corneliu-Liviu Popescu:</strong> &Icirc;mi pare rău că trebuie să vă spun, dar glisaţi planurile. Ceea ce apărăm noi este viaţa privată. Faptul că un servitor al statului este corupt nu ţine de viaţa privată. Noi spunem că pentru oamenii politici viaţa privată este mult mai redusă. Potrivit jurisprudenţei Curţii Europene a Drepturilor Omului, oamenii politici se expun &icirc;n mod conştient şi voluntar unei priviri mai atente din partea publicului şi a presei. Ceea ce subliniem noi este că deşi redusă, viaţa privată continuă să existe, şi că tot ceea ce justifică o ingerinţă &icirc;n viaţa privată a oamenilor politici este interesul public. Dacă se dovedeşte un interes public, este permisă o ingerinţă. Dacă &icirc;n spate stau alte motive dec&acirc;t interesul public, ingerinţa este nejustificată. &Icirc;ntr-o amestecare de planuri pot să spun că &bdquo;ce &icirc;mi e orientarea sexuală&rdquo;, &bdquo;ce &icirc;mi e pedofilia&rdquo;. Nu. Este o mare diferenţă. Dacă este pedofil, asta mă interesează şi la omul politic, mă interesează şi la omul simplu de pe stradă, pentru că e infracţiune şi trebuie să răspundă.  Dacă preferă sexul anal şi acest lucru &icirc;l preferă &icirc;mpreună cu partenerul şi o fac &icirc;n dormitor, &icirc;n dormitorul omului legea nu are ce să caute şi deci pe mine nu mă interesează chestiunea aceasta. Nu cred că este ceva de corupţie &icirc;n ceea ce am spus. Noi separăm foarte clar planurile. Se pot afla informaţii despre oamenii politici, dacă acest lucru serveşte unui interes public. Ce răm&acirc;ne strict &icirc;n viaţa privată, nu are nici o legătură cu interesul public şi, pe cale de consecinţă, apărăm cu tărie respectarea vieţii private a oamenilor politici, cum apărăm cu tărie respectarea vieţii private a oricui. </em></p>
+<p>&nbsp;</p>
+<p><em><strong>Liana Ganea:</strong> &Icirc;n calitate de moderator, am să ridic o &icirc;ntrebare către sală. Ce este interesul public? Putem să &icirc;l definim? </em></p>
+<p>&nbsp;</p>
+<p><em><strong>Participant la dezbatere: </strong>Aş dori să adresez o &icirc;ntrebare. Dacă este o noţiune care variază &icirc;n funcţie de tipicul unei societăţi sau este o noţiune obiectivă? </em></p>
+<p>&nbsp;</p>
+<p><em><strong>Corneliu Liviu Popescu: </strong>&Icirc;mi permit să vă sugerez. &Icirc;ntruc&acirc;t interesul public justifică ingerinţa &icirc;n dreptul nostru, deci serveşte la libertatea de exprimare, atunci ar trebui să adresaţi &icirc;ntrebarea celor care se servesc de interesul public pentru a ne călca &icirc;n picioare dreptul la viaţa privată. Echipa adversă este mai &icirc;n măsură să răspundă.</em></p>
+<p><em><strong>Daniel Barbu:</strong> Echipa adversă deja a sugerat un răspuns, care este unul formal. Interesul public este ceea ce legea defineşte ca atare. Fireşte, legile sunt adesea contradictorii. Politic vorbind, interesul public este definit de partidele politice. Partidele politice, &icirc;ntr-o viziune tradiţională, ar trebui să susţină viziuni despre societate sau mai sociologic vorbind, viziuni despre legătura  socială, care este calitatea legăturii &icirc;ntre oameni. Ar trebui să aducă răspunsuri la această &icirc;ntrebare care pare banală, stupidă poate, dar care este extrem de serioasă: Cum putem trăi &icirc;mpreună? Ne deosebesc at&acirc;tea lucruri. Ne aseamănă foarte puţine lucruri, chiar şi &icirc;n această sală. Cum putem, totuşi trăi &icirc;mpreună? Partidele tradiţionale, cele socialiste, cele creştin-democrate, cele liberale, veneau cu viziuni despre legătura socială, despre acel ceva care ne ţine &icirc;mpreună: cum &icirc;l definim, cum &icirc;l punem &icirc;n legi, care la r&acirc;ndul lor vor fi temeiul juridic al acţiunilor guvernamentale, al politicilor publice. Asemenea partide nu mai există nicăieri şi &icirc;mi măsor cuvintele. Sigur, sunt partide prin Suedia, prin Germania, care mai păstrează un fel de amintire a ceea ce au fost ele c&acirc;ndva. &Icirc;n mult alte părţi precum Franţa, Italia, Rom&acirc;nia, partidele nu mai reprezintă dec&acirc;t simple agregări de interese mai mult sau mai puţin conjuncturale. Atunci interesul public pur şi simplu nu mai poate fi definit sau, mai filosofic, el este definit &icirc;n &icirc;mprejurări cum este cea de faţă, care se reproduce &icirc;n numeroase instanţe, iar Parlamentul ar trebui să fie instanţa exemplară &icirc;n această privinţă. Interesul public se defineşte &icirc;n &icirc;nfruntarea dintre diferite viziuni mult mai numeroase, mai fragmentate, mai puţin articulate despre interesul public, care sunt de regulă purtate de politicieni, de reprezentanţi ai societăţii civile, de presă, şi &icirc;n această &icirc;nfruntare există o geometrie mereu variabilă, mereu mişcătoare. Interesul public nu mai este un basorelief antic, turnat &icirc;n bronz sau sculptat de m&acirc;inile de aur ale lui Phidias pentru a fi prins &icirc;n frontonul Parthenonului. Interesul public astăzi este ca o diagramă tibetană. Călugării tibetani &icirc;şi petrec o săptăm&acirc;nă, două, trei sau chiar o lună pentru a scrie o mantră cu nisipuri colorate şi, de &icirc;ndată ce au terminat, o şterg. După aceea vin alţi călugări, care scriu altă mantră, pe care o şterg ulterior. Deci nu mai avem &icirc;n privinţa interesului public niciun templu, care să dureze 3000 de ani. Avem doar scrieri pe nisip, mai mult sau mai puţin pline de consecinţe &icirc;n plan legislativ, &icirc;n plan politic. Nu avem &icirc;n societatea secolului XXI mai mult dec&icirc;t at&acirc;t. </em></p>
+<p>&nbsp;</p>
+<p><em><strong>Corneliu Liviu Popescu: </strong>&Icirc;ntruc&acirc;t unele opinii sunt foarte bine formate şi deci risc să pierd un vot pe care altfel nu aş putea să &icirc;l c&acirc;ştig niciodată, aş dori să &icirc;i pun o &icirc;ntrebare distinsului participant. &Icirc;nţeleg că &icirc;n numele interesului public vreţi să aflaţi foarte multe despre oamenii politici. Aş putea să vă &icirc;ntreb &icirc;n circumscripţia dumneavoastră electorală &icirc;n care locuiţi, cum &icirc;l cheamă pe deputatul şi cum &icirc;l cheamă pe senatorul care vă reprezintă &icirc;n Parlament? Doar numele lor puteţi să le precizaţi. </em></p>
+<p>&nbsp;</p>
+<p><em><strong>Bogdan Drăghicescu: </strong>Foarte interesantă &icirc;ntrebarea. Nu ştiu să vă spun sincer. </em></p>
+<p>&nbsp;</p>
+<p><em><strong>Corneliu Liviu Popescu: </strong>Şi atunci de ce vreţi să ştiţi viaţa intimă, c&acirc;nd nici măcar nu ştiţi numele alesului care vă reprezintă &icirc;n Parlament, pentru care aţi votat uninominal. Interesul public vă justifică această curiozitate?</em></p>
+<p>&nbsp;</p>
+<p><em><strong>Bogdan Draghicescu:</strong> Răspunsul meu este următorul. La noi &icirc;n ţară nu există o cultură at&acirc;t de importantă a comunicării cu cei aleşi şi nu există o cultură at&acirc;t de importantă a reprezentării oamenilor care au fost aleşi, deşi ar putea fi unelte importante să ştim dacă aleşii sunt oameni de familie sau dacă &icirc;şi &icirc;nşeală promisiunile faţă de familie, pentru că este foarte posibil să se comporte la fel atunci c&acirc;nd vor fi aleşi. </em></p>
+<p>&nbsp;</p>
+<p><em><strong>Corneliu Liviu Popescu: </strong>Ce t&acirc;năr sunteţi! </em></p>
+<p>&nbsp;</p>
+<p><em><strong>Bogdan Draghicescu:</strong> Dacă la noi &icirc;n ţară nu există această cultură a alegerii oamenilor pe baza conduitei lor, politicienii vor fi aleşi &icirc;n continuare, indiferent dacă au fost implicaţi sau nu &icirc;n scandaluri politice. Aproape nimănui nu &icirc;i pasă de istoria politică a unui parlamentar, atunci este clar că un astfel de mecanism nu va face diferenţă. Ar putea fi necesar să ştim mai multe detalii din viaţa personală a unui parlamentar, &icirc;nsă aceste lucruri nu vor face &icirc;n acest moment o diferenţă. Eu cred că este mai important ca societatea să evolueze p&acirc;nă la acel punct &icirc;n care acest lucru să facă o diferenţă. </em></p>
+<p>&nbsp;</p>
+<p><em><strong>Daniel Barbu: </strong>Şi eu tind, cu alte argumente, sa fiu de opinia dumneavoastră, &icirc;n sensul că este foarte dificil, at&acirc;ta vreme c&acirc;t singurul element de coerenţă &icirc;n lumea contemporană este persoana, individul. Pentru că societăţile noastre nu sunt dispuse să mai vadă alte regimuri de coerenţă, trebuie să ştim totul despre politicieni. An&acirc;m să vă dau un exemplu. Nu este vorba despre sexualitate aici, deşi după cum aţi sugerat sexualitatea este importantă, pentru ca una este ca un politician să fie catolic şi să &icirc;şi iubească copiii, şi altceva este să ştii despre potenţialul ales că este homosexual. Atunci poţi să prezumi ca alegător că el va fi foarte liberal &icirc;n privinţa anumitor legi de mare importanţă, dar am &icirc;n minte un alt lucru. Ştiu că m-a tulburat filosofic imaginea unui ministru, fiind vorba despre Videanu, era ministru pe vremea aceea, c&acirc;nd a fost oprit pe o stradă merg&acirc;nd cu 160km/h. Nu era autostradă, era o şesea obişnuită, unde viteza ar fi trebuit să fie de 90. E important să ştiu lucrul acesta, pentru că dacă un ministru &icirc;ncalcă cu intenţie Codul Rutier, ce-mi garantează că nu va călca cu intenţie Codul Fiscal. E şi el un cod adoptat de Parlament. Are acelaşi statut. Sunt aici jurişti care ne pot spune. Statutul codului este exact acelaşi. Este vorba despre o lege adoptată de Parlament, şi dacă cineva dispreţuieşte Codul Rutier, şi am această dovadă, &icirc;nseamnă că eu pot să am puternice suspiciuni că acel ministru nu va avea niciun fel de respect pentru orice alt cod. </em></p>
+<p>&nbsp;</p>
+<p><em><strong>Corneliu-Liviu Popescu: </strong>Sunt perfect de acord, doar că asta nu-i viaţă privată.</em></p>
+<p>&nbsp;</p>
+<p><em><strong>Raluca Petrescu:</strong> eu am o &icirc;ntrebare uşor tehnică.</em></p>
+<p>&nbsp;</p>
+<p><em><strong>Liana Ganea:</strong> Vă rog să vă prezentaţi.</em></p>
+<p>&nbsp;</p>
+<p><em><strong>Raluca Petrescu: </strong>Raluca Petrescu, membru ARDOR de prin 2000 nu mai contează c&acirc;t, şi actualmente masterandă a Facultăţii de Filosofie pe etică aplicată. &Icirc;ntrebarea mea tehnică vizează un mecanism, mărul discordiei despre care vorbea Bogdan: şi anume dezbaterea publică. Eu sunt perfect de acord cu opinia formulată de domnul profesor astăzi - că există o zonă profund intimă &icirc;n viaţa fiecărui om, fie el medic, politician, comisar al Uniunii Europene sau mai ştiu ce &Icirc;nalt Prelat. Exist o zonă intimă. &Icirc;nsă, faptul că această zonă intimă nu este respectată şi faptul că nu putem vorbi, cel puţin &icirc;n spaţiul rom&acirc;nesc de o cultură politică, de existenţa unei educări a opiniei publice, nu este mai degrabă un rezultat al faptului că nu avem o dezbatere publică instituţională, o dezbatere publică profesională...că dezbaterea publică e ceva ce se face din condei: toată lumea se pricepe la dezbatere publică, am asistat la ultimele alegeri prezidenţiale la forme de dezbatere publică; nu ştiu &icirc;n ce măsură ca alegător am fost sau nu multuţmit de forma respectivă de dezbatere publică, dar oare, elementul central nu este &icirc;n tehnicizarea, &icirc;n instituţionalizarea unei forme perfectate c&acirc;t mai mult posibil, aşa cum este probabil &icirc;n societatea britanică, a dezbaterii publice? Eu mă g&acirc;ndesc &icirc;ntracolo. Cam asta e poziţia mea. Către acolo ar trebui să ne &icirc;ndreptăm atenţia...nu dacă o persoană &icirc;şi &icirc;ncheie căsnicia după X ani. Sunt opţiuni &icirc;n viaţa fiecăruia şi poate e nedrept să judecăm ieşit din context de ce un om &icirc;şi &icirc;nchide sau nu o căsnicie după x ani. &Icirc;ntr-adevăr, anumite elemente care ţin de orientarea sexuală, de religie, dacă este pro sau contra legiferarării avortului sunt importante &icirc;n ceea ce priveşte un om politic, dar nu mai mult ne interesează forma &icirc;n care se prezintă aceste informaţii, şi anume dezbaterea publică?</em></p>
+<p>&nbsp;</p>
+<p><em><strong>Liana Ganea:</strong> Şi asta facem noi acum o dezbatere publică privind viaţa privată versus dreptul la informare..</em></p>
+<p>&nbsp;</p>
+<p><em><strong>Raluca Petrescu: </strong>Perfect de acord. Dar de c&acirc;te ori vedem asemeni dezbateri publice? De exemplu, există o lege &icirc;n Rom&acirc;nia care obligă fiecare legiuitor să iniţieze o dezbatere publică pentru fiecare intenţie legislativă. După cunoaşterea mea, nu există asemnea dezbateri publice. Nu trebuie să ne orientăm privirea şi către zona respectivă?</em></p>
+<p>&nbsp;</p>
+<p><em><strong>Liana Ganea:</strong> Avem altă intervenţie aici - domnişoara &icirc;n roşu.</em></p>
+<p>&nbsp;</p>
+<p><em><strong>Flavia Ştefura: (</strong>Studentă &icirc;n anul IV la Facultatea de Drept, a Universităţii din Bucureşti). Aş fi vrut să-l &icirc;ntreb pe Bogdan: ce te face să crezi că dacă un politician şi-a abandonat familia, dar el este un excelent specialist &icirc;n domeniul &icirc;n care este pus să conducă ţara, de exemplu dacă este pus la Agricultură și este un excelent manager, ce te face să crezi că el nu-şi va reprezenta bine interesele, odată ce şi-a &icirc;nşelat nevasta? De ce faci analogia asta? De ce te aştepți ca dacă el şi-a &icirc;nşelat nevasta, să te &icirc;nşele şi pe tine? De ce e prezumţia asta? De unde vine?</em></p>
+<p>&nbsp;</p>
+<p><em><strong>Bogdan Drăghicescu:</strong> Flavia, eu văd lucrurile &icirc;n felul următor: există specialişti, există profesionişti &icirc;n domeniul lor de activitate şi mi-ar plăcea să cred că aceştia ne conduc. De cele mai multe ori nu este cazul. Dar presupun&acirc;nd că aceştia totuşi ne conduc, plecăm de la această prezumţie de nevinovăţie, prezumţie de profesionalism. Chiar dacă ne-ar conduce nişte profesionişti, este destul de greu de crezut că un om reuşeşte să-şi separe perfect viaţa personală, nu spun viaţa privată, ci de viaţa personală, nu vorbim despre ce face el efectiv cu familia lui şi aşa mai departe. Este destul de greu ca acela să-şi separe viaţa personală de viaţa profesională. Va exista acolo la graniţă o &icirc;mbinare. Dacă de o parte se află lucruri pe care &icirc;n general lumea le-a considerat de &icirc;ncredere, dar pe de o parte se află un om care &icirc;şi &icirc;nşeală familia, &icirc;şi &icirc;nşeală nevasta sau face lucruri care nu sunt cinstite, atunci putem avea nesiguranţe c&acirc;nd vrem să-i dăm &icirc;ncrederea pentru a manageria banii noştri, pentru a manageria economia noastră, pentru a manageria legile şi aşa mai departe. Putem avea ne&icirc;ncredere. Şi atunci dacă eu am de ales &icirc;ntre un om faţă de care am o oarecare ne&icirc;ncredere şi un om faţă de care nu am acea ne&icirc;ncredere, atunci decizia mea ar putea să &icirc;ncline &icirc;n direcţia aceea, dacă toate celelalte criterii de competenţă, de şcoală şi aşa mai departe sunt egale. &Icirc;n punctul ăsta faci o diferenţă. N-am văzut &icirc;n această dezbatere, poate clarificăm &icirc;n continuare care sunt exact acele elemente ale vieţii personale care contează. Pentru că, după cum spunea şi domnul negator, poziţiile preferate s-ar putea să nu fie de interes. Pe de altă parte, orientările religioase ar putea fi relevante, av&acirc;nd &icirc;n vedere că Rom&acirc;nia, de exemplu, este o ţară puternic ortodoxă. </em></p>
+<p>&nbsp;</p>
+<p><em><strong>Flavia Ştefura: </strong>Stai puţin...Religia, de c&acirc;nd este legată de conducerea Statului? Religia şi Statul...statul nostru este laic.</em></p>
+<p>&nbsp;</p>
+<p><em><strong>Bogdan Drăghicescu:</strong> Da, dar sunt decizii care ţin cont de chestia asta. Să ne g&acirc;ndim la Catedrala M&acirc;ntuirii Neamului. S-ar putea ca un politician catolic să nu considere at&acirc;t de importantă o catedarală a m&acirc;ntuirii neamului ortodoxă. Mai multe informaţii ar putea să dea o idee despre ce urmează...</em></p>
+<p>&nbsp;</p>
+<p><em><strong>Corneliu Liviu Popescu: </strong>Adică să punem oamenii &icirc;n categorii să &icirc;nţeleg. Am avut doi miniştri de externe care au făcut chestia asta. Unul care voia să cumpere &icirc;n deşert teren, să facă acolo un lagăr unde să ducă romii să-i supună la muncile cele mai grele de exterminare, e profesor la Universitatea din Bucureşti. Şi altul care a spus, şi este acum &icirc;n funcţie, că romii sunt predestinaţi genetic să fie infractori. Păi dacă judecăm oamenii după categorii, &icirc;nseamnă că &icirc;n clipa &icirc;n care vedem un rom pe stradă, scoatem pistolul şi &icirc;l &icirc;mpuşcăm şi spunem că eram &icirc;n legitimă apărare, pentru că probabilistic, mi-au spus doi miniştri de externe ai Rom&acirc;niei, astea sunt şansele. Scuzaţi-mă, dar asta deja depăşeşte viaţa privată şi intră &icirc;n zone pe care istoria le-a cunoscut, şi nu sunt chiar zone luminoase &icirc;n istorie. </em></p>
+<p><em><strong>Mihaela Gherghe: </strong>(Studentă &icirc;n anul I la Facultatea de Drept din cadrul Universităţii Bucureşti). &Icirc;ntrebarea mea era pentru susţinătorii poziţiei afirmatoare, şi anume: dacă prin ingerinţele acestea &icirc;n viaţa privată nu există riscul să oferi nişte false criterii? Nu mă refer la cazul &icirc;n care orice criteriu de competenţă, de profesionalism sunt la egalitate, ci atunci c&acirc;nd &icirc;n detrimentul unui profesionalism sau al unor studii superioare alegem o personă pe criteriul faptului că una este homosexuală şi alta heterosexuală.</em></p>
+<p>&nbsp;</p>
+<p><em><strong>Ionuţ Tatu:</strong> Eu personal cred că nu ar trebui să facem aceste mici categorisiri, gen homosexual, fiindcă orientarea sexuală nu are nici o legătură probabil cu caracterul unei persoane şi relaţiile acesteia cu alte persoane. &Icirc;nsă &icirc;n multe alte zone, o echipă nu este formată numai din competenţe, specializări şi aşa mai departe. Contează foarte mult caracterul şi persoana respectivă. Şi de aceea, c&acirc;nd politicianul &icirc;şi prezintă cu adevărat caracterul, el va intra &icirc;ntr-o echipă, care este formată din Preşedinte, Guvern, miniştri, parlamentari.Va trebui să intre &icirc;n acea echipă şi să arate că este un adevărat luptător pentru anumite idei şi principii. El &icirc;ntr-adevăr poate să fie specialist, specialişti sunt mulţi. &Icirc;nsă persoane cu caracter sunt puţine. Şi trebuie să le găsim, şi acelea să fie promovate &icirc;ntr-un fel sau altul.</em></p>
+<p>&nbsp;</p>
+<p><em><strong>Mihaela Gherghe:</strong> &Icirc;ntrebarea mea mergea tocmai către direcţia asta. Dacă prin excesul ăsta de informaţie putem &icirc;ntr-adevăr identifica caracterul sau doar facem categorisiri. Dacă știm că este homosexual, avem o direcţie &icirc;n a-i justifica caracterul? Sau poziţiile pe care le preferă, pot fi ele considerate un criteriu relevant? Pentru că poziţia pe care o susţineai era că trebuie să ştim practic absolut tot. Aici incluz&acirc;nd şi orientarea sexuală.</em></p>
+<p>&nbsp;</p>
+<p><em><strong>Ionuţ Tatu: </strong>Desigur, nu puteam &icirc;ntr-un timp at&acirc;t de scurt să enumăr toate cerinţele, toate particularităţile fiecărei persoane, &icirc;nsă consider că trebuie să apelăm la caracterul persoanei. După cum am zis, contează direcţia acestuia şi principiile acestuia. </em></p>
+<p>&nbsp;</p>
+<p><em><strong>Participant din sală:</strong> Şi care ar fi noţiunile relevante ale caracterului? Aţi afirmat o noţiune care nu ar fi, şi anume viaţa sexuală. Care alte noţiuni nu ar fi relevante? Şi care ar fi? Care ar fi separaţia? </em></p>
+<p>&nbsp;</p>
+<p><em><strong>Daniel Barbu: </strong>Eu cred că lucrăm cu cuvinte prea grele. Cineva făcea apel la dezbateri. Nu trăim &icirc;ntr-o cultură a dezbaterii niciodată, e un fenomen de 21 de ani. Nu suntem nemţi. Ei au Streitkultur de pe vremea Reformei, oamenii au obiceiul să se &icirc;nfrunte, să-şi &icirc;nfrunte opiniile, să şi le confrunte. Noi nu trăim &icirc;ntr-o asemnea cultură şi, cel puţin &icirc;n ceea ce mă priveşte, nici nu voi trăi &icirc;n timpul vieţii mele. Folosim deci cuvinte prea grele dacă le luăm &icirc;n serios. &ldquo;Idee&rdquo;, aceasta vine ca şi multe alte cuvinte moderne de la rădăcina &bdquo;ecrino&rdquo;, a trece prin sita, cum trec femeile prin sită mălaiul. De la asta vine, ăsta este verbul. Ce trece prin sită c&acirc;nd aflăm ceva despre un politician? C&acirc;nd preşedintele actual a fost văzut &icirc;n campanie lovind un copil, şi au fost martori care au confirmat, primul-ministru &icirc;n funcţie. Cine l-a judecat pe Traian Băsescu? Cine a trecut prin sita propriei conştiinţe, a propriului caracter? Nimeni. Cine l-a trecut pe Tăriceanu prin sită? Pentru că dacă Tăriceanu ar fi avut caracter, &icirc;n 2004, chit că se prefigura poziţia lui de prim-ministru, trebuia să apară la televizor şi să spună: candidatul pe care eu &icirc;l susţin, deşi mai sunt 3 zile p&acirc;nă la alegeri, e un bătăuş de copii. Eu, Călin Popescu Tăriceanu, nu pot susţine un asemenea candidat. Un automobil &icirc;ntreg de liberali şi PD-işti, un autocar nu automobil, a fost de faţă la acest eveniment. Nici unul nu l-a denunţat. Deci ce trece prin sită? Spuneţi &ldquo;informaţii&rdquo; şi, mă rog, noi am afirmat dreptul la informare. Dacă iar luăm cuv&acirc;ntul prea &icirc;n serios, el este foarte aristotelic. Asta &icirc;nseamnă că ceea ce noi primim sau aflăm informează propria noastră inteligenţă. Ne informează alegerile, le pune &icirc;ntr-o anumită formă, aşa cum punem gipsul &icirc;ntr-un mulaj. Ori noi nu avem de-a face &icirc;n prezent, inclusiv &icirc;n viaţa politică, nicăieri &icirc;n lume, cu informaţii. Cu lucruri menite să ne modeleze &icirc;n profunzime, aşa aristotelic: materie, formă, ţineţi minte .... Noi avem de-a face cu televizorul: două planuri. Nimic n-are profunzime, de aia mai corect e să spunem &bdquo;ştiri despre&rdquo;. Sunt news acum, peste un sfert de oră sunt alte news. Nimic nu ne mai informează. Ne completăm imaginea despre ceva. Avem un subiect de conversaţie, inventăm teme noi, pixelul albastru, nu?! Şi apar oameni foarte serioşi, de altfel, care ne explică cum e cu pixelul albastru, apel&acirc;nd la regulile fizicii, cu braţul care se mişcă...&icirc;n fine ..sunt imagini! Ne distrăm. Politica face parte din showbusiness, p&acirc;nă la urmă. Şi peste tot, g&acirc;ndiţi-vă cu ce şi-a informat (ca să nu dăm exemple rom&acirc;neşti) Obama alegătorii, pe care i-a dezamăgit, nici nu e clar dacă va mai candida? &bdquo;Yes We Can!&rdquo; niciodată n-a spus ce putem face. Da, putem face ceva. Ce? Să ajungem la Casa Albă şi om vedea. &bdquo;Yes We Can!&rdquo;, ţineţi minte? &bdquo;Yes We Can!&rdquo; şi apăreau vedete hoolywoodiene, c&acirc;ntăreţi, spuneau &bdquo;Yes We Can!&rdquo; şi toată America era &icirc;n lacrimi &bdquo;Yes We Can!&rdquo; Şi ce putem? E showbusiness. S-a dus la Casa Albă, primul lucru - a trimis trupe &icirc;n Afghanistan. Al doilea lucru - a sabotat proiectul democrat de asigurări generale publice de sănătate. Nu? Ca să facă pe plac ca şi Sarkozy marilor companii de asigurări care conduc America. Putea să facă asta şi George Bush. Orice republican făcea la fel de bine tot ce a făcut Obama. E vorba doar de spectacol. Alegerile sunt mai t&acirc;mpite ca la noi, cu talent şi vedete hollywoodiene, mai bine puse &icirc;n scenă, sunt pur şi simplu spectacole ale cetăţeniei democratice, dar nu dau substanţă, nu dau criterii cetăţeniei democratice, nu informează cetăţenia democratică şi sunt ştirile zilei. Nu?! Mai mult vreau să vă spun: la penultimele alegeri din Marea Britanie asta a fost fabulos, c&acirc;nd a c&acirc;ştigat ultima dată Tony Blair. Știţi, după un an şi-a lăsat mandatul &icirc;n favoarea lui Gordon Brown. &Icirc;n noaptea respectivă a fost ultimul episod din Big Brother. A avut o audienţă numărată &icirc;n milioane de telespectatori mai mare dec&acirc;t participarea la vot. Asta ne spune ceva despre vot, inclusiv &icirc;n ţări pe care avem tendiţa să le admirăm, Marea Britanie, unde camere de luat vederi sunt &icirc;n fiecare colţ, și vor intra &icirc;n dormitor, domnule profesor, &icirc;n fiecare dormitor din Marea Britanie, vă promit, &icirc;n timpul vieţii voastre.  (R&acirc;sete) Nu? Ştiţi că acum recidiviştii &icirc;n Marea Britanie sunt cipaţi. Te uiţiepe ecran, eşti poliţist şi te uiţi unde e fiecare recidivist. </em></p>
+<p>&nbsp;</p>
+<p><em><strong>Corneliu Liviu Popescu: </strong>Noi ne chinuim &icirc;ncă cu vacile. </em></p>
+<p>&nbsp;</p>
+<p><em>(R&acirc;sete)</em></p>
+<p>&nbsp;</p>
+<p><em><strong>Daniel Barbu: </strong>Sau cu c&acirc;inii de pe stradă. Şi &icirc;n fiecare colţ, p&acirc;nă şi &icirc;n sate prăpădite, &icirc;n colţuri de staule sunt camere publice de luat vederi (CC TV). E Big Brother. </em></p>
+<p>&nbsp;</p>
+<p><em><strong>Corneliu Liviu Popescu:</strong> Spre deosebire de dumneavoastră, noi nu vrem să trăim &icirc;ntr-o astfel de lume.</em></p>
+<p>&nbsp;</p>
+<p><em>(R&acirc;sete)</em></p>
+<p>&nbsp;</p>
+<p><em><strong>Daniel Barbu: </strong>Mă scuzaţi.</em></p>
+<p>&nbsp;</p>
+<p><em><strong>Corneliu Liviu Popescu: </strong>Eu am nevoie de voturi acum. </em></p>
+<p>&nbsp;</p>
+<p><em><strong>Liana Ganea:</strong> Am două &icirc;nscrieri la cuv&acirc;nt.</em></p>
+<p>&nbsp;</p>
+<p><em><strong>Bogdan Duca (doctorand ştiinţe politice): </strong>Aş dori să propun o distincţie necesară aici. Distincţia &icirc;ntre două tipuri de demnitari. Noi totuşi vorbim de două tipuri de demnitari politici: demnitarii aleşi şi demnitarii numiţi. Ori confuzia dintre aceste două tipuri de demnitari este, cred eu, foarte importantă şi poate spune multe chiar despre subiectul acestei dezbateri. &Icirc;n ce sens? Demnitarii aleşi sunt aleşi nu pe criterii profesionale. Acest lucru nu se &icirc;nt&acirc;mplă aproape niciodată. Nu ne alegem parlamentarii, nu ne alegem consilierii, nu ne alegem Preşedintele pe baza CV-ului său, pe baza experienţei sale profesionale, c&acirc;t pe baza reprezentativităţii sale. Iar criteriul alegerii este unul al reprezentativităţii. Cu c&acirc;t obţine mai multe voturi cu at&acirc;t este mai reprezentativ şi &icirc;ndreptăţit să ocupe un fotoliu de ales al naţiunii rom&acirc;ne, de reprezentant al Rom&acirc;niei, al &icirc;ntregii Rom&acirc;nii, un lucru iarăşi explicat &icirc;n cazul parlamentarilor sau &icirc;n cazul Preşedintelui, lucru pe care &icirc;l au &icirc;n comun. Aceste persoane alese, sunt alese pentru că &icirc;n ele se regăsesc &icirc;ntr-o formă sau alta alegătorii lor, şi implicit marea majoritate a alegătorilor din circumscripţia respectivă sau de pe &icirc;ntregul teritoriu al Rom&acirc;niei. Ca urmare, sunt foarte importante pentru acest electorat informaţiile ce ţin cumva de sfera privată. Ce ţin de felul de a fi a persoanei respective. Pentru că persoana respectivă a fost aleasă pe acest criteriu: al reprezentativităţii. El este expresia, este vocea felului de a fi al alegătorilor săi &icirc;n instituţia pe care o reprezintă. A doua categorie de demnitari sunt tehnocraţi. Tehnocraţi numiţi pe criterii politice. Bunul agronom dat ca exemplu de Flavia. Este numit ministru să spunem, conduce Ministerul Agriculturii. Criteriul pentru care a fost numit de partidul său pe criterii politice este acela că este un bun administrator şi un bun specialist &icirc;n domeniu său, sau se presupune că aşa ar fi. Ca urmare, impactul vieţii sale private asupra activităţilor sale publice este egal cu zero. Şi normal, nici măcar o dezvăluire, de orice natură ar fi ea, nu ar trebui să-i afecteze poziţia publică &icirc;n care acesta de găseşte. &Icirc;nsă repet, acelaşi lucru nu este valabil pentru politicienii aleşi. Un politician ales este, repet, expresia dorinţelor, speranţelor electoratului său. Dorinţe şi speranţe care sunt subiective. Care se pot pierde &icirc;ntr-o lozincă chiar de genul &bdquo;Yes We Can!&rdquo;.</em></p>
+<p><br /> <br /></p>
+<p><em><strong>Corneliu Liviu Popescu: </strong>Regret, dar nu pot să &icirc;mpărtăşesc punctul dumneavoastră de vedere, pentru că ar &icirc;nsemna să pun &icirc;n balanţă cel mai umil consilier local, şi vă rog să mă credeţi că nu cunosc nici măcar un singur nume din consiliul sectorului 3 &icirc;n care domiciliez. Habar nu am cum &icirc;i cheamă. Dar spuneţi că e ales, deci trebuie să ştiu despre el tot. Şi trebuie să fie şi oglinda mea. Deputatul din circumscripţia mea, care este exact oglinda mea, este domnul Silviu Prigoană. Dar pe de altă parte, unul numit e un tehnocrat pe competenţe profesionale. Păi atunci primul tehnocrat al ţării e primul-ministru, că el nu e ales. E greu să cred că mă interesează despre un consilier local din comună şi nu mă interesează nimic despre primul-ministru, pornind de la ideea că el este un tehnocrat, un bun administrator şi pe el nu-l interesează nimic altceva. Deci funcţiile politice nu sunt tehnocrate, indiferent de modul de numire. &Icirc;n măsura &icirc;n care membrul Guvernului este o funcţie politică, nu-i cere nimeni să dea un concurs, nu interesează pe nimeni competenţele profesionale, poate să aibă două clase, el poate deveni prim-ministru. </em></p>
+<p>&nbsp;</p>
+<p><em><strong>Bogdan Duca: </strong>Cel puţin formal, acest concurs se dă. Fiecare ministru este audiat de o comisie parlamentară, iar Guvernul &icirc;ntreg este trecut prin votul unui Parlament. Există o dinamică.</em></p>
+<p>&nbsp;</p>
+<p><em><strong>Corneliu Liviu Popescu: </strong>&Icirc;mi pare rău, vă contrazic. Atunci aţi putea spune exact acelaşi lucru si dincolo - că fiecare candidat la alegeri dă un concurs &icirc;n faţa electoratului. E supus &icirc;ntrebărilor şi aşa mai departe, toate &icirc;n campania electorală. Votul din Parlament la investitura Guvernului n-are nimic de a face cu dimensiunea competenţelor profesionale, ci cu susţinerea politică. Deci oamenii politici nu trebuie să fie tehnocraţi. Nici nu sunt tehnocraţi, nici nu pot să fie tehnocraţi. </em></p>
+<p>&nbsp;</p>
+<p><em><strong>Liana Ganea:</strong> Mulţumesc!</em></p>
+<p>&nbsp;</p>
+<p><em><strong>Răzvan Neacşu (Facultatea de Drept): </strong>Eu nu ştiu cine e consilierul local din sectorul &icirc;n care locuiesc. Dar dacă acel consilier ar avea un divorţ la ora 5, &icirc;n care şi-ar &icirc;mpărţi bunurile cu nevasta, mă g&acirc;ndesc că aş şti altădată cine este, cu ce se ocupă şi eventual să &icirc;l trag de m&acirc;nă. Aici voiam să atrag atenţia asupra unui argument al echipei negatoare. Echipa negatoare a demonstrat cumva şi prin probe (hard evidence, nu?) că acest sistem, că starea de fapt nu funcţionează din punct de vedere al scrutinului votului liber, direct şi secret exprimat. A demonstrat că dacă acest drept la informare al cetăţeanului este satisfăcut &icirc;n detrimentul dreptului la viaţă publică al demnitarului, cumva totuşi nu e bine, nu funcţionează sistemul ăsta. Eu mă &icirc;ntreb: dacă starea de fapt este deficitară, de ce să mergem la mai puţin, de ce alegătorului să i se ia o unealtă &icirc;n a participa la acest sistem de conducere a cetăţii? De ce să nu mergem mai departe, şi să căutăm mai mult &icirc;n viaţa privată a demnitarului? Poate o să fie ceva mai bine. Poate o să crească cumva &bdquo;coeficientul&rdquo; de alegere şi puterea de informare, deci cumva &ldquo;awerness-ul&rdquo; ăsta social să crească şi să putem face o alegere mai bună, mai eficientă, care să ne conducă la o conducere a cetăţii mai bună. Asta nu văd - de ce, dacă situţia de fapt nu este suficientă, de ce să mai tăiem din prerogativele cetăţeanului ? De ce să mergem spre mai puţin? </em></p>
+<p>&nbsp;</p>
+<p><em><strong>Corneliu Liviu Popescu:</strong> Să vă răspund extrem de simplu. Credeţi că nu-i suficient ce citim, vrem să aflăm şi mai multe. Dacă vă faceţi timp să mergeţi la o grădină zoologică, &icirc;n spatele cuştilor de sticlă se vede tot. Dacă observaţi un grup de maimuţe, veţi vedea că acel grup de maimuţe n-are nici un fel de intimitate, n-are nici un fel de viaţă privată, noi ne uităm la ele, ele se uită &icirc;ntre ele la ele, şi n-au nici o problemă să facă sex, să se masturbeze şi aşa mai departe. Dacă vreţi să aflaţi totul, ne vom transforma &icirc;n maimuţe. </em></p>
+<p>&nbsp;</p>
+<p><em><strong>Daniel Barbu: </strong>Vreau să vă răspund şi eu, nu ca membru al echipei mele, dar cred că e un lucru important. Acest drept la informaţii, sigur sună foarte frumos şi seducător, această iscodire &icirc;n viaţa privată, viaţa personală, &icirc;ntr-o sferă mai largă a politicienilor are un scop. Şi cred că a fost o consecinţă, e un &bdquo;intended consequence&rdquo;, o consecinţă care a fost prevăzută, a fost urmărită, nu e o consecinţă marginală, pe care nimeni n-a g&acirc;ndit-o, şi anume a duce politica &icirc;n deriziune. Pentru că e valabil, şi psihologia elementară ne spune acest lucru, e valabil şi &icirc;n viaţa privată, şi &icirc;n viaţa publică - cu c&acirc;t ştii mai multe despre cineva, cu at&acirc;t &icirc;l deteşti mai mult. Şi &icirc;n relaţia de cuplu, c&acirc;t timp există un mister, aşa, un diafan, ceva nespus, ceva nearătat, totul e foarte frumos. C&acirc;nd &icirc;ncepi să ştii tot, toate mirosurile, toate gusturile, parcă ai vrea ceva nou, parcă altceva. Aşa e şi cu politicienii. Niciodată &icirc;n istoria omenirii cetăţenii (şi vorbesc de democraţii) nu au ştiut at&acirc;t de multe lucruri despre cei care &icirc;i conduc. Niciodată. E un fenomen care ţine de sf&acirc;rşitul secolului XX, &icirc;nceputul secolului XXI. Noi suntem martorii privilegiaţi ai unuia dintre macrofenomenele istorice fără precedent. Niciodată politicienii n-au fost at&acirc;t de transparenţi. Ei bine, niciodată politicienii, pretutindeni &icirc;n democraţii, n-au fost at&acirc;t de detestaţi. Tocmai pentru că ştim prea multe despre ei. Şi vedeţi, &icirc;nţelepţii au văzut asta. Hamilton, nu mai ştiu &icirc;n care Federalist, &icirc;n  16 cred, spune: e bine să fie o distanţă c&acirc;t mai mare &icirc;ntre aleşi şi alegători. Aleşii să se ducă acolo la Washington şi să delibereze &icirc;ntre ei, potrivit cu &icirc;nţelepciunea cu care &icirc;i credităm. O să-i judecăm după aceea, c&acirc;nd vin la re&icirc;nnoirea mandatului. Dar p&acirc;nă atunci ei stau departe de noi. Şi vedeţi, şi &icirc;nchei, c&acirc;nd naţiunile pe instrumente sociologice sunt invitate să-şi identifice politicienii cei mai iminenţi din toate timpurile, &icirc;n mod spontan şi &icirc;n majorităţi covărşitoare, naţiunile produc politicieni care nu seamănă. Cum spunea cineva, că politicianul trebuie să semene, să te recunoşti &icirc;n el. Nu, dimpotrivă, politicienii care sunt identificaţi ca marii bărbaţi ai naţiunii, sunt bărbaţii care, din nefericire de regulă, dar aşa se &icirc;nt&acirc;mplă, sunt cei mai puţin asemănători cu naţiunile lor. Britanicii  l-au identificat ca cel mai mare britanic din toate timpurile, &icirc;nainte chiar de marea regină Elisabeta, pe Winston Churcill, un aristocrat; cineva care făcea parte din 0,1% din populaţie; născut &icirc;ntr-un palat, care c&acirc;nd era ministru liberal &icirc;n 1908 a vrut să tragă &icirc;n cetăţeni şi a fost oprit de primul lui ministru. Şi a spus &bdquo;dar de ce mă opreşti? O mică baie de s&acirc;nge nu strică niciodată&rdquo;. Nu!? Adică afirmă asta cu un dispreţ sistematic pentru concentăţenii lui. Și concetăţenii lui, tocmai pentru că era at&acirc;t de neasemănător cu ei, l-au considerat cel mai mare britanic, nu politician, ci cel mai mare englez al tuturor timpurilor. Francezii l-au considerat pe Napoleon cel mai mare francez al tuturor timpurilor, cineva care nu era nici măcar francez. Rom&acirc;nii l-au considerat pe Carol I ca cel mai mare rom&acirc;n al tuturor timpurilor, dacă ţineţi minte, acum vreo 3 ani a fost, deși nici el nu era rom&acirc;n. Deci vedeţi că societăţile, &icirc;n mod spontan, atunci c&acirc;nd sunt interogate cu instrumente sociologice, caută neasemănarea atunci c&acirc;nd vor să spună cine e politicianul ideal. Carol I: că era punctual, că nu era rom&acirc;n, că nici nu vorbea bine rom&acirc;neşte, că venea cu ordine - de aceea ne place. Tocmai pentru că nu e ca noi. Britanicii la fel. Ori, revin la prima chestiune pentru a &icirc;ncheia. Această transparenţă, pusă politically correct, ca drept la informaţie şi aşa mai departe, are ca și consecintă prevăzută şi previzibilă, erodarea funcţiei politice &icirc;n societăţile noastre şi emergenţa a ceea ce deja se numeşte post-democraţie, ceea ce vedem noi acum. Societatea noastră nu mai e condusă de politicieni, (nu sunt deloc partizanul teoriei conspiraţiei), e condusă de Isărescu, de Jeffrey Franks, de c&acirc;ţiva oameni care &icirc;i cheamă pe Băsescu şi pe Boc şi le spun asta: asta e fişa de parcurs pentru următoarele 6 luni; aşa faceţi la salarii, aşa la TVA, Vă vorbeam de Sarkozy, care &icirc;şi petrece la fiecare 3 luni, &icirc;n fiecare trimestru, o săptăm&acirc;nă pe mare, cu Lagarde, şi aceştia &icirc;i spun, &bdquo;Cher Nicola, uite ce trebuie să faci tu: 1,2,3...&rdquo;. Şi Cher Nicola se duce şi spune Guvernului ce trebuie să facă. Deci nu politicienii mai iau decizii astăzi. La fel, sunt exemple, pot să vă dau o sumedenie, şi pentru doamna Merkel şi pentru Obama şi aşa mai departe, dar trebuie să termin. Altcineva ia deciziile. Ori noi ieşim din societate, nu noi rom&acirc;nii, că noi am trăit &icirc;n comunism din păcate, dar societăţile democratice ies dintr-un regim &icirc;n care marile decizii strategice erau luate de către oamenii politici. Sigur, prin consultare, cu sindicate, cu patronate, dar oamenii politici erau cei care decideau. Nu mai decid oamenii politici astăzi &icirc;n&nbsp;democraţii. Şi dreptul la informare e elementul de imagine care le-a erodat prestigiul şi funcţia.&nbsp;</em></p>
+<!-- 		@page { margin: 0.79in } 		P { margin-bottom: 0.08in } -->
+<p lang="ro-RO">&nbsp;</p>
+<p><span lang="ro-RO"><em><strong>Raluca Petrescu: </strong></em></span><span lang="ro-RO"><em>Sunt două puncte pe care vreau să le ating. Unul are legătură cu o discuţie de acum c&acirc;teva minute, apropo de camerele de luat vederi de prin toate colţurile. E o dezbatere din primii ani de dezbatere pe care i-am făcut eu &icirc;n timpul liceului, şi viza exact tema aceasta. Şi-mi aduc aminte că argumentul care a stat &icirc;ntre cele două echipe, care efectiv punea meciul &icirc;n balanţă, a fost formulat ceva de genul: &ldquo;acum să nu ne imaginăm o societate &icirc;n care oamenii vor avea un fel de st&acirc;lp &icirc;n spatele lor cu o cameră de vederi aţintită asupra lor la fiecare pas&rdquo;. Atunci argumentul a ţinut foarte bine, echipa care l-a promovat a c&acirc;ştigat dezbaterea &icirc;n mod detaşat. &Icirc;ntrebarea este dacă nu cumva suntem dispuşi să g&acirc;ndim astfel de societăţi &icirc;n care vrem mai mult, cum zicea Răzvan mai devreme, vrem mai mult fără să ne g&acirc;ndim la efectul de bumerang. Şi ăsta e răspunsul pe care l-aş da eu la &icirc;ntrebarea pe care o adresa Răzvan celor două echipe, reprezentanţilor celor două echipe. De ce nu ar trebui să dăm mai mult ca să &icirc;ndreptăm actuala stare de fapt? Tocmai din cauza efectului de bumerang. &Icirc;n momentul &icirc;n care actuala stare de fapt e precară, cel puţin aşa o definea Răzvan, iar eu adaug din substanţa care ajută la precaritatea ei, eu nu fac dec&acirc;t, aşa cum se spunea mai devrem &icirc;n discurs dar simt nevoia să punctez prin prisma efectului de bumerang, nu fac dec&acirc;t să disip informaţia. Să mut interesul public din domeniul ideologic &icirc;n domeniul de acasă să spunem, &icirc;n domeniul domestic. Şi din punctul ăsta de vedere al efectului de bumerang cred că ar trebui să fim foarte grijulii cu &bdquo;uşa interzisă&rdquo;, expresie din cartea domnului Liiceanu, să fim foarte atenţi cu iluziile şi deziluziile pe care ni le proiectăm &icirc;n exteriorul nostru. E o graniţă foarte subţire &icirc;ntre ceea ce credm noi că avem nevoie &icirc;n societate şi de fapt ceea ce avem nevoie &icirc;n societate. Şi evident poziţia mea este că doar prin dezbatere publică putem ajunge la a echilibra, la a nivela oarecum graniţa asta şi oarecum la a ne dirija către o altă direcţie, &icirc;n care să decidă cei care asupra cărora se răsfr&acirc;ng efectele, nu anumiţi oameni politici sau anumiţi oameni de afaceri. Acestea erau cele două precizări. </em></span></p>
+<p lang="ro-RO">&nbsp;</p>
+<p><span lang="ro-RO"><em><strong>Liana Ganea: </strong></em></span><span lang="ro-RO"><em>Aş vrea să dau c&acirc;teva exemple şi să vă rog să comentăm şi să ne apropiem de finalul discuţiei &icirc;n 10 minute. Apropo de definiţia interesului public, care este extrem de importantă &icirc;n această discuţie, pentru că de fapt aşa stabilim cam care sunt graniţele p&acirc;nă la care putem intra &icirc;n viaţa privată a unui demnitar şi care este dreptul la informare, merită menționat că avem definiţii diferite. Jurnaliştii vă vor da nişte definiţii foarte largi, normal, din punctul lor de vedere interesul public &icirc;nseamnă foarte multe lucruri; am citit chiar şi o decizie a unui judecător britanic care spunea că interesul public nu este nici măcar ce spune Guvernul sau judecătorul ce este interesul public, ci interesul public este ce spune societatea că e interes public. Codurile etice ale jurnaliştilor conţin astfel de definiţii, şi ele sunt foarte largi. Legislaţia rom&acirc;nească are şi ea nişte definiţii şi vreau să vi le citesc, pentru că ele sunt un pic mai limitative şi obligă practic jurnalistul să limiteze intruziunea &icirc;n viaţa privată a unui demnitar. Avem &icirc;n Codul audiovizualului o definiţie, care ne spune ce este interesul public. &bdquo;Sunt considerate a fi de interes public justificat orice probleme, fapte sau evenimente care influenţează societatea sau o comunitate, &icirc;n special cu privire la:  prevenirea sau probarea săv&acirc;rşirii unei fapte de incidenţă penală, protejarea sănătăţii sau siguranţei publice, semnalarea unor afirmaţii &icirc;nşelătoare sau a unor cazuri de incompetenţă care afectează publicul&rdquo;. O altă definiţie apare &icirc;n viitorul Cod Penal (legislaţia audiovizuală nu are consecinţe penale dar avem şi &icirc;n viitorul Cod Penal un articol referitor la violarea vieţii private şi unul referitor la violarea secretului corespondenţei, deci un alt aspect al vieţii private) se spune aşa: &bdquo;Atingerea adusă vieţii private fără drept, prin fotografierea, captarea sau &icirc;nregistrarea de imagini, ascultarea prin mijloace tehnice sau &icirc;nregistrarea audio a unei persoane aflate &icirc;ntr-o locuinţă, &icirc;ncăpere ori dependinţă  ţin&acirc;nd de aceasta sau a unei convorbiri private se pedepseşte cu &icirc;nchisoarea de la o lună la 6 luni sau cu amendă&rdquo;. La fel se pedepseşte şi publicarea, divulgarea acestor informaţii. &Icirc;nsă acest articol conţine nişte excepţii şi două dintre ele sună aşa: &bdquo;Nu este infracţiune dacă făptuitorul surprinde săv&acirc;rşirea unei infracţiuni sau contribuie la dovedirea săv&acirc;rşirii unei infracţiuni, sau dacă surprinde fapte de interes public care au semnificaţie pentru viaţa comunităţii şi a căror divulgare prezintă avantaje publice mai mari dec&acirc;t prejudiciul produs persoanei vătămate.Şi &icirc;n contextul acesta, eu vă &icirc;ntreb, de exemplu, privitor la preşedintele unei ţări, care consumă nişte cantităţi mai mari de alcool, undeva &icirc;ntr-un spaţiu care ar putea să fie considerat la limită spaţiul privat, pentru că atenţie, tot timpul o să avem o discuţie despre ce este spaţiu privat şi ce nu este spaţiu privat. De exemplu vă &icirc;ntreb un restaurant este sau nu spaţiu privat? Sau să zicem un separeu al unui restaurant este sau nu spaţiu privat? Deci, dacă un preşedinte bea &icirc;ntr-un separeu al unui restaurant, şi un jurnalist scrie despre cantităţile mari de alcool pe care le consumă preşedintele &icirc;n fiecare seară acolo, e sau nu de interes public? Şi &icirc;mi ce scuze că am lăsat-o pe colega noastră din spate să aştepte at&acirc;t de mult şi o invit să intervină.</em></span></p>
+<p lang="ro-RO">&nbsp;</p>
+<p><span lang="ro-RO"><em><strong>Ana Dumitrache (Ştiinţe Politice):</strong></em></span><span lang="ro-RO"><em> Eu sunt nemulţumită că nu am văzut aici un criteriu &icirc;ntre ceea ce este viaţă publică şi ce este viaţă privată. Echipa negatoare şi-a construit &icirc;ntregul caz pe problema sexualităţii. Aici este clar pentru toată lumea că ţine de sfera intimă, nu doar de sfera privată. Dar nu este suficient acest caz. Şi &icirc;n primul r&acirc;nd pentru că nu există o corelaţie &icirc;ntre opţiunile sexuale şi comportamentul politic. Pot să existe o groază de alte corelaţii &icirc;ntre opiniile, concepţiile despre lume şi viaţă şi comportamentul politic al cuiva. De exemplu, ce g&acirc;ndeşte, viziunea lui generală - ele fac parte din sfera privată? Eu cred că fac parte din sfera privată. Nu este ceva public. Dar asta influenţează foarte mult comportamenul public. </em></span></p>
+<p lang="ro-RO">&nbsp;</p>
+<p><span lang="ro-RO"><em><strong>Liana Ganea: </strong></em></span><span lang="ro-RO"><em>Adică o afirmaţie de tipul &bdquo;ţigancă &icirc;mpuţită&rdquo;, care a fost făcută &icirc;ntr-un spaţiu privat, e sau nu o afirmaţie care ar trebui să iasă &icirc;n spaţiu public?</em></span></p>
+<p lang="ro-RO">&nbsp;</p>
+<p><span lang="ro-RO"><em><strong>Ana Dumitrache: </strong></em></span><span lang="ro-RO"><em>Mă g&acirc;ndesc la lucruri mai abstracte. Dacă este pentru comunitate, dacă este pentru persoană, pentru individ, pentru libertatea absolută a individului sau limitată, despre importanţa Statului.</em></span></p>
+<p lang="ro-RO">&nbsp;</p>
+<p><span lang="ro-RO"><em><strong>Corneliu Liviu Popescu: </strong></em></span><span lang="ro-RO"><em>Metodologic vorbind, nu era rolul echipei negatoare să facă astfel de delimitări. C&acirc;tă vreme echipa afirmatoare susţinea că &icirc;n toate circumstanţele, libertatea de exprimare, pardon, dreptul la informaţie, această dimensiune a libertăţii de exprimare, prevalează asupra vieţii private, pentru noi, logic vorbind, era suficient să găsim un exemplu &icirc;n care să demonstrăm că nu este aşa. Nu era rolul nostru să delimităm această sferă. Dacă doriţi &icirc;nsă să delimităm această sferă, eu vă propun un criteriu de delimitare. Şi anume - luaţi omul obişnuit. Ceea ce pot să aflu despre omul obişnuit, clar nu &icirc;nseamnă viaţă privată, şi deci pot să aflu şi despre omul politic. Şi anume, dacă despre omul obişnuit aflu că este pedofil, aceasta nu este o chestiune de viaţă privată. Pentru că pedofilia este o infracţiune, acest lucru este reprimat penal, şi pe cale de consecinţă nu intră sub protecţia vieţii private. Dacă &icirc;n buna tradiţie a rom&acirc;nului, se duce omul acasă, beat cui şi &icirc;şi bate nevasta, nu este o chestiune de viaţă privată. Violenţa &icirc;n familie este o infracţiune care se urmăreşte din oficiu. Nu este nevoie de pl&acirc;ngere prealabilă. Deci nu e o chestiune de viaţă privată. Dacă o persoană este sub influenţa băuturilor alcoolice &icirc;n timp ce desfăşoară o activitate reglementată, un conducător auto, un medic c&acirc;nd operează, sau mai ştiu eu ce, nu este o chestiune de viaţă privată. Iar un şef de Stat este tot timpul &icirc;n exercitarea mandatului, pentru că oric&acirc;nd poate să apară un element neprevăzut care să &icirc;l facă să ia o decizie pe loc. Deci toate aceste aspecte, din punctul nostru de vedere, nefiind viaţă privată, nu sunt protejate. &Icirc;n schimb, ceea ce răm&acirc;ne ca nucleu dur al vieţii private, al oricărei persoane, inclusiv al politicienilor, noi considerăm că trebuie apărat. Deci noi spunem că viaţa privată a oamenilor politici e mult mai redusă, dar că ea continuă să existe.Deci, &icirc;n anumite limite, această viaţă privată, acel nucelu dur esenţial prevalează faţă de dreptul la informaţie. Aceasta este teza pe care noi o susţinem de la &icirc;nceputul acestei dezbateri.</em></span></p>
+<p><span lang="ro-RO"><em><strong>Participantă la dezbatere: </strong></em></span><span lang="ro-RO"><em>Dacă mi se poate permite o &icirc;ntrebare. Anti-xenofobia, &icirc;n general, a unui om politic este inclusă &icirc;n viaţa privată sau &icirc;n viaţa publică?</em></span></p>
+<p><span lang="ro-RO"><em><strong>Corneliu Liviu Popescu: </strong></em></span><span lang="ro-RO"><em>Xenofobia sau anti-xenofobia?</em></span></p>
+<p><span lang="ro-RO"><em><strong>Participantă la dezbatere: </strong></em></span><span lang="ro-RO"><em>Xenofobia, dar şi anti-xenofobia e exact acelaşi lucru.</em></span></p>
+<p><span lang="ro-RO"><em><strong>Corneliu Liviu Popescu:</strong></em></span><span lang="ro-RO"><em> Exemplul care s-a dat este ilustrativ. Dacă şeful Statului g&acirc;ndeşte &icirc;n termeni etnici - &bdquo;ţigancă &icirc;mpuţită&rdquo; este o g&acirc;ndire &icirc;n termeni etnici - eu am dreptul să ştiu. Pentru că eu nu suport să fiu condus de o persoană care pune etichete etnice. Care asociază o etnie cu un atribut descalificant. Deci e dreptul meu să ştiu. Că a făcut acea afirmaţie &icirc;ntr-o sferă privată, nu &icirc;nseamnă că eu nu am dreptul să ştiu. &Icirc;nseamnă &icirc;nsă altceva: că el nu poate fi sancţionat pentru acea afirmaţie. Deci sunt două planuri total diferite. Dreptul meu de a ştii că el are o g&acirc;ndire rasistă e una, şi presa dacă a aflat această informaţie a avut tot dreptul să o divulge, pentru că nu este apărată de viaţa privată. &Icirc;n schimb, o sancţiune pentru un discurs rasist nu poate fi aplicată pentru că discriminarea presupune un element de publicitate atunci c&acirc;nd ea este făcută prin exprimare. Şi c&acirc;tă vreme exprimarea a rămas &icirc;ntr-un cadru pur privat, nu pot să aplic o sancţiune. Deci sunt două planuri, după părerea mea, diferite.</em></span></p>
+<p><span lang="ro-RO"><em><strong>Liana Ganea: </strong></em></span><span lang="ro-RO"><em>Alte comentarii, &icirc;ntrebări, intervenţii? Mai avem două minute. Votăm, Monica?</em></span></p>
+<p><span lang="ro-RO"><em><strong>Monica Mocanu: </strong></em></span><span lang="ro-RO"><em>apăsați 1 dacă dreptul cetăţenilor la informare este mai important dec&acirc;t dreptul demnitarilor la viaţă privată şi 2 dacă nu sunteţi de acord cu această formulare. Puteţi vota!</em></span></p>
+<p><span lang="ro-RO"><em><strong>Liana Ganea:</strong></em></span><span lang="ro-RO"><em> Deci 1 pentru dreptul la informare, 2 pentru dreptul la viaţă privată. Se votează.</em></span></p>
+<p><span lang="ro-RO"><em><strong>Corneliu Liviu Popescu: </strong></em></span><span lang="ro-RO"><em>Votează şi rom&acirc;nii din străinătate?</em></span></p>
+<p lang="ro-RO"><em>(R&acirc;sete)</em></p>
+<p><span lang="ro-RO"><em><strong>Daniel Barbu:</strong></em></span><span lang="ro-RO"><em> Prin corespondenţă.. Şi toţi la Consulatul de la Paris.</em></span></p>
+<p lang="ro-RO"><em>(R&acirc;sete)</em></p>
+<p><span lang="ro-RO"><em><strong>Monica Mocanu: </strong></em></span><span lang="ro-RO"><em>Bun. Votul de start a fost 54 pentru afirmatori si 46 pentru contracararea acestei opinii. &Icirc;n a doua variantă, 54 a scăzut la 34</em></span></p>
+<p><span lang="ro-RO"><em><strong>Daniel Barbu: </strong></em></span><span lang="ro-RO"><em>Deci a triumfat viaţa privată!?</em></span></p>
+<p lang="ro-RO"><em>(Aplauze)</em></p>
+<p><span lang="ro-RO"><em><strong>Corneliu Liviu Popescu: </strong></em></span><span lang="ro-RO"><em>Ca urmare a trădării domnului profesor Barbu, care a trecut de partea noastră şi ne-a ajutat. Motiv pentru care iubesc trădarea.</em></span></p>
+<p lang="ro-RO"><em>(R&acirc;sete)</em>&nbsp;</p>
+<p><span lang="ro-RO"><em><strong>Monica Mocanu:</strong></em></span><span lang="ro-RO"><em> Mulţumim. Şi vă aşteptăm pe siteul www.closer2oxford.ro pentru transcrierea acestei dezbateri, dar şi a celor din Timişoara, Cluj şi Iaşi, pe acelaşi subiect, şi cu voturi la fel, corespondente, la &icirc;nceputul şi la finalul dezbaterii. Mulţumim.</em></span></p>
+<p><em><br /></em></p>
+</div>
+                <div class='clear'></div>
+        </div><!-- end main content -->
+         <div class='clear'></div>
+</div>
+<div id="pix"></div>
+
+
+                                </div><!--end main -->
+                                <div id='parteneri'>
+                                    <span class='tr'></span><span class='tl'></span><span class='br'></span><span class='bl'></span><span id="filler"></span>
+                                    <div class='parteneri' id='sustinatori'>
+                                        <span class='floating_text' id='un_proiect'>Un proiect</span>
+                                        <a href='http://www.ardor.org.ro/'><div class='image' id='ardor'>Ardor</div></a>
+                                        <span class='floating_text' id='finantatori'>Finanțatori</span>
+                                        <a href='http://www.opensocietyfoundations.org/'><div class='image' id='open_society'>Open Society Foundation </div></a>
+                                        <a href='http://www.studentiq.ro//'><div class='image' id='memoplus'>MemoPlus</div></a>
+                                        <!-- <a href='http://www.ratiufamilyfoundation.com/'><div class='image' id='FundatiaRatiu'>Ardor</div></a>
+                                        <a href='http://www.eef.md/'><div class='image' id='eef'>East Europe Foundation</div></a>
+                                        <a href='http://www.mts.gov.md/'><div class='image' id='mdminister'>Ministerul Tineretului si Sportului al Republicii Moldova</div></a> -->
+
+                                        <span class='floating_text' id='parteneri_text'>Parteneri</span>
+
+                                        <a href='http://www.policycenter.eu/'><div class='image' id='PolicyCenter'>Policy Center</div></a>
+                                        <a href='http://www.britishcouncil.org/'><div class='image' id='BritishCouncil'>British Council</div></a>
+                                        <a href='http://www.europuls.ro/'><div class='image' id='europuls'>Europuls</div></a>
+                                        <a href='http://www.cere.ro/'><div class='image' id='cere'>Ce-Re</div></a>
+                                        <a href='http://www.primeromania.ro/'><div class='image' id='prime'>Prime Romania</div></a>
+                                        <a href='http://www.cji.ro/'><div class='image' id='cji'>Centrul pentru jurnalism independent</div></a>
+                                        <a href='http://www.aiesectm.ro/'><div class='image' id='aisec'>Aisec</div></a>
+                                        <!-- ===================================================================================================== -->
+                                        <a href='http://www.cogitus.ro/'><div class='image' id='cogitus'>Cogitus</div></a>
+                                        <a href='http://www.adevarul.ro/international/foreign_policy/'><div class='image' id='foreignPolicy'>Foreign Policy</div></a>
+                                        <a href='http://www.elsa.ro/'><div class='image' id='elsa'>Elsa</div></a>
+                                        <a href='http://www.vipromania.ro/'><div class='image' id='vipromania'>Voluntari pentru idei si proiecte</div></a>
+                                        <a href='http://www.ongtrust.ro/'><div class='image' id='ongtrust'>Trust</div></a>
+
+                                        <!-- ===================================================================================================== -->
+                                        <a href='http://www.leap.ro/'><div class='image' id='leap'>Leap</div></a>
+                                        <a href='http://www.younginitiative.org/'><div class='image' id='younginitiative'>Asociatia young initiative</div></a>
+                                        <a href='http://www.asjc.ro/'><div class='image' id='asjc'>Asjc</div></a>
+                                        <a href='http://osut.ro/'><div class='image' id='osut'>Osut</div></a>
+                                        <div class='clear'></div>
+                                    </div>
+                                    <div class='parteneri' id='parteneri_institutionali'>
+                                        <span class='floating_text' id='sponsori_text'>Sus&#539;in&#x0103;tori</span>
+                                        <a href='http://www.cartier.md/'><div class='image' id='cartier_logo'>Editura Cartier</div></a>
+                                        <a href='http://www.pll.md/ro/'><div class='image' id='biblio_logo'>Biblioteca publica de drept</div></a>
+                                        <span class='floating_text' id='institutii_text'>Parteneri institu&#539;ionali</span> 
+                                        <ul id='institutii'>
+                                            <!-- <span class='floating_text' id='institutii_text'>Parteneri institu&#539;ionali:</span> -->
+                                            <li><a href='http://www.politice.ro/'>Facultatea de &#536;tiin&#539;e Politice SNSPA </a></li>
+                                            <li><a href='http://www.comunicare.ro/'>Facultatea de Comunicare &#537;i Rela&#539;ii Publice SNSPA</a></li>
+                                            <li><a href='http://www.fspub.ro/'>Facultatea de &#536;tiin&#539;e Politice Universitatea Bucure&#537;ti</a></li>
+                                            <li><a href='http://www.filosofie.unibuc.ro/'>Facultatea de Filosofie Universitatea Bucure&#537;ti</a></li>
+                                            <li><a href='http://litere.unibuc.ro/'>Facultatea de Litere din Universitatea Bucure&#x015f;ti</a></li>
+                                            <li><a href='http://www.unibuc.ro/ro/fac_fsas_ro'>Facultatea de Sociologie Universitatea Bucure&#537;ti</a></li>
+                                            <li><a href='http://laws.uaic.ro/'>Facultatea de Drept Universitatea Alexandru Ioan Cuza Ia&#537;i</a></li>
+                                            <li><a href='http://www.uaic.ro/uaic/bin/view/Academic/Filosofie'>Facultatea de Filosofie si &#536;tiin&#539;e Social Politice Universitatea AIC Ia&#537;i</a></li>
+                                            <li><a href='http://www.upa.ro/'>Facultatea de Drept si Facultatea de &#x015e;tiin&#x0163;e Politice si Administrative Universitatea Petre Andrei Ia&#x015f;i</a></li> 
+
+                                            <li><a href='http://www.ubbcluj.ro/'>Universitatea Babe&#537;-Bolyai Cluj Napoca</a></li>
+                                            <li><a href='http://www.uvt.ro/'>Universitatea de Vest Timi&#537;oara</a></li>
+                                            <li><a href='http://www.upt.ro/'>Universitatea Politehnica Timi&#537;oara</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class='parteneri' id='parteneri_media'>
+                                        <span class='floating_text' id='media_text'>Parteneri media</span>
+                                        <a href='http://www.hotnews.ro/'><div class='image' id='hotnews'>HotNews</div></a>
+                                        <!-- <a href='http://www.lumebuna.ro/'><div class='image' id='lumebuna'>Lume Buna</div></a> -->
+                                        <a href='http://www.romaniapozitiva.ro/'><div class='image' id='romaniapozitiva'>Romania Pozitiva</div></a>
+                                        <a href='http://totb.ro/'><div class='image' id='thinkoutsidethebox'>Think Outside The Box</div></a>
+                                        <a href='http://www.facebook.com/carevasazica.vip'><div class='image' id='carevasazica'>Carevasazica</div></a>
+                                        <a href='http://www.studentie.ro/'><div class='image' id='studentiero'>Studentie.ro</div></a>
+                                        <a href='http://startub.unibuc.ro/'><div class='image' id='startub'>startub.unibuc.ro</div></a>
+                                        <!-- <a href='http://www.tvr.ro/tvr_cluj.php'><div class='image' id='tvrcluj'>Tvr Cluj</div></a> -->
+                                        <!-- <a href='http://www.radiotransilvania.ro'><div class='image' id='radiotransilvania'>Radio Transilvania</div></a> -->
+                                        <a href='http://iasifun.ziaruldeiasi.ro/'><div class='image' id='iasifun'>Iasi fun</div></a>
+                                        <a href='http://www.ziaruldeiasi.ro/'><div class='image' id='ziaruldeiasi'>Ziarul de Iasi</div></a>
+                                        <a href='http://www.kissfm.ro/timisoara'><div class='image' id='kissfm'>KissFm</div></a>
+
+                                        <div class='clear'></div> 
+                                    </div>
+                                    <div class='clear'></div>
+
+                                </div>	
+                            </div>	<!-- end wrap -->
+                            <div id='footer_mare'>
+                                <div id='footer'>
+                                    <div id='links' class='footer'>
+                                        <div id='menu1' style='margin:auto;'> <ul id='meniu_prinicpal'><li><a href='contacte/index.html'> Contact </a></li>
+<li><a href='clubdebate/index.html'> Cluburile </a></li>
+<li><a href='oamenii/index.html'> Oamenii </a></li>
+<li><a href='proiectul/index.html'> Proiectul </a></li>
+<li><a href='home/index.html'> Acasa </a></li>
+</ul></div><!--end menu-->
+                                    </div><!--
+                                    <div id='contact' class='footer'>
+                                            <h4>Contact</h4>
+                                            <p>office@closer2oxford.ro</p>
+                                            <p>bogdan.draghicescu@closer2oxford.ro<br>
+                                            <span class='detalii'> (asistenta tehnica web - orice probleme legate de site)</span></p>
+                                    </div>
+                                    -->
+                                    <div id='newsletter' class='footer'>
+                                        <script src="../../connect.facebook.net/en_US/all.js#xfbml=1"></script><fb:like href="http://www.facebook.com/pages/Closer2Oxford/162758797069605" width="250" colorscheme="dark"></fb:like>
+                                        <!--<h4>Newsletter</h4>
+                                        <form action='/page/newsletter'>
+                                                <input type='text' name='email'>
+                                                <input type='submit' id='submit' value='>'>
+                                                        
+                                        </form>-->
+                                    </div>
+                                    <div id='credits'>
+                                        Copyright(c) 2021 ARDOR |  Toate drepturile rezervate | Toate logo-urile si sloganurile de pe site sunt proprietate intelectuala inregistrata si nu pot fi reproduse fara acordul explicit al detinatorilor. <br>
+                                            <br /><br />
+                                            <b>Disclaimer</b><br /><i>
+
+                                                Programul educational Closer to Oxford este un program non-profit si nu are o legatura cu universitatea cu acelasi nume, referirea la Oxford avand doar o semnificatie simbolica.
+                                            </i>
+                                    </div>
+
+                                </div>		
+                            </div>		
+
+                            <div id="finantatde">Acest proiect este finantat cu sustinere din partea Comisiei Europene. Aceast publicatie [comunicare] reflecta doar
+                                vederile autorului, iar Comisia nu poate fi facuta  responsabila pentru utilizarea informatiei pe care o contine.</div>
+
+
+                        </body>
+                        </html>

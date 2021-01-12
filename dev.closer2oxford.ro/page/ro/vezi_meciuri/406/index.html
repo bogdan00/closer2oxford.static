@@ -1,0 +1,579 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml-strict.dtd">
+<HTML xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+    <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+            <link rel="icon" type="image/png"  href="../../../../../closer2oxford.ro/favicon.html">
+                <link rel="stylesheet" href="../../../var/layout.css" type="text/css">
+                    <title>Closer to Oxford - e timpul pentru argumente!</title>
+                    <link rel="alternate" type="application/rss+xml"  href="../../../rss_feed" title="Stiri Closer2Oxford">
+                        <!-- <link rel="image_src" property="og:image"  href="/images/layout/closer2oxford_fb_white.png" /> -->
+                        <link rel="image_src" property="og:image"   type="image/jpeg"  href="../../../../uploads/2015/06/9/facebook_icon.html" />
+                        <link rel="image_src" type="image/jpeg"  href="../../../../uploads/2015/06/9/icon-facebook.gif" /> 
+						<meta name="description" content="Closer2Oxford pune în valoare oameni şi argumentele lor, în dezbateri online şi publice alături de tineri şi invitați avizaţi"/>
+                        <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9" />
+<script type='text/javascript' src='../../../../js/jquery-1.4.4.min.js'></script>
+<script>var $j = jQuery.noConflict();</script>
+<script type='text/javascript' src='../../../../js/tinymce/tiny_mce.js'></script>
+<script type='text/javascript' src='../../../../js/jquery.form.js'></script>
+<script type='text/javascript' src='../../../../js/fbLoginRegister.js'></script>
+<script type='text/javascript' src='../../../var/javascript.js'></script>
+<script type='text/javascript' src='../../../../js/jquery.hovertip-1.0.min.js'></script> 
+<script type='text/javascript' src='../../../../js/jquery.jgrowl_minimized.js'></script> 
+<link rel='stylesheet' href='../../../../css/jquery.jgrowl.css' media='screen' type='text/css'> 
+<script type='text/javascript' src='../../../../js/jquery.timer-min.js'></script> 
+<style>.hovertip{
+    position:absolute;
+    padding:10px 13px;
+    z-index:2;
+    max-width:300px;
+    color:#303030;
+    background-color:#f5f5b5;
+    border:1px solid #DECA7E;
+    font-family:sans-serif;
+    font-size:12px;
+    line-height:18px;
+    text-align:left;
+    }
+           .normal_text ol,.normal_text ol *{text-align:left !important}
+           .normal_text *{font-weight:normal !important;font-size:12px !important;font-face:tahoma !important}</style> 
+<script type='text/javascript'>$j(document).ready(function(){$j('.tooltip').hovertip({'offset':[20,20]});get_notif();});
+
+if(!Array.indexOf){Array.prototype.indexOf = function(obj){for(var i=0; i<this.length; i++){if(this[i]==obj){return i;}}return -1;}}
+    hashuri = [] ;
+	 var tick_timer= 3000 ;
+ 
+	 function get_notif()
+        {
+		  
+		  //console.log(tick_timer);
+	     
+		  setTimeout(get_notif,tick_timer);
+        
+		   $j.ajax(
+            {
+                url: '/page/notif/show_events',
+                dataType: 'json',
+                data: "{}",
+                success: function(data)
+                    {
+                    $j.each(data,function(index,data){
+                        try
+                            {
+                            if( hashuri.indexOf(data.hash) == -1 )
+                                {
+                                hashuri.push(data.hash);
+                                $j.jGrowl(
+                                    data.str,
+                                    {
+                                        corners:'1px',
+                                        life: data.life,
+                                        header:data.title,
+                                        hash: data.hash,
+                                        sticky: data.sticky,
+                                        close: function(e,m,o)
+                                            {
+                                                $j.ajax({url:'/page/notif/delete_single_event/' + o.hash});
+                                            }
+                                    });
+                                }
+                            }
+                        catch(e){}
+                        })
+                    }
+            });
+        }
+	 </script> 
+ 
+                            
+  <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-19111721-1']);
+  _gaq.push(['_setDomainName', '.closer2oxford.ro']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+    
+                        </head>
+                        <body>
+                            <div id="global_wrap">
+                                <div id="header">
+                                    <a href='../../../../index.html'><div id='logo'><img src='../../../../images/layout/sigla.jpg'></div></a>
+                                    <a class='noExternal' href='http://www.facebook.com/pages/Closer2Oxford/162758797069605'><img src='../../../../images/fb.png' style='height:30px;float:right;clear:right;margin:10px 5px 5px 5px;border:none;'/></a>
+                                    <a href='../../../rss_feed'><img src='../../../../images/feed-icon.png' style='height:30px;float:right;clear:right;margin:5px;border:none;'/></a>
+                                </div>
+                                <div id="meniu">
+                                    <div  id='register_login'>
+
+                                        
+  <a href='#' class='todo' id='login'>Login </a> &nbsp;<a href='../../../register.html' class='todo' id='register'>Register</a>
+    <div id='login_box'>
+		  <form action='https://dev.closer2oxford.ro/page/ro/login_user/logon' method='post' id='user_login_form'>
+					 <div>Email: <input type='text' name='email'/> </div><br />
+					 <div>Pass: <input type='password' name='passwd'/></div><br />
+					 <a href='#' class='password_forgot'>forgot password?</a>
+					 <input type='hidden' value='/page/ro/vezi_meciuri/406/' name='returnto' class='submiter'/><br />
+					 <input type='submit' value='login' name='btn' class='submiter'/><br />
+		  </form>
+		  
+		  <form action='https://dev.closer2oxford.ro/page/ro/login_user/reset_user_pw' method='post' id='user_reset_form'>
+					 <div>Email: <input type='text' name='email'/> </div><br />
+					 <a href='#' class='password_forgot'>login?</a>
+					 <input type='hidden' value='/page/ro/vezi_meciuri/406/' name='returnto' class='submiter'/><br />
+					 <input type='submit' value='reset' name='btn' class='submiter'/><br />
+		  </form>
+		  
+    </div>
+    
+                                    </div>
+                                    <div id='menu1' style='margin:auto;'> <ul id='meniu_prinicpal'><li><a href='../../../contacte/index.html'> Contact </a></li>
+<li><a href='../../../clubdebate/index.html'> Cluburile </a></li>
+<li><a href='../../../oamenii/index.html'> Oamenii </a></li>
+<li><a href='../../../proiectul/index.html'> Proiectul </a></li>
+<li><a href='../../../home/index.html'> Acasa </a></li>
+</ul></div><!--end menu-->
+                                </div>
+                                <div id="main"> 
+                                    <!--<div id='stiri-padding'>
+        <div id='stiri_back'>
+                {stiri} 
+    
+               
+        </div>-->
+        
+</div>
+<div  id="content-padding">
+        <div id='sidebar_menu'>
+                <span class='tr'></span>
+                <span class='tl'></span>
+                <span class='br'></span>
+                <span class='bl'></span>
+                <span id="filler"></span>
+                    
+                <ul></ul>
+                
+                <div class='clear'></div>
+        </div>
+        <div id="content">
+                <span class='tr'></span>
+                <span class='tl'></span>
+                <span class='br'></span>
+                <span class='bl'></span>
+                <span id="filler"></span>
+                  <script>
+        $j(document).ready(function(){
+        $j('.discurs_toggler').toggle(
+                function(){
+                $j(this).attr('src', '../../../../images/little_stuff/16-em-down.png');   
+                $j(this).parent().next('.discurs').hide('fast');
+                },
+                function(){
+                $j(this).attr('src', '../../../../images/little_stuff/16-em-up.png');
+                $j(this).parent().next('.discurs').show('fast');
+                });
+            });
+        </script><style>.nowrap{white-space: nowrap;}
+		.noJustify{text-align:left;}
+		</style><h2 class='noJustify'><span class='nowrap'>'Andreea si Bogdan 3a4'</span> <span class='notif'>(afirmatori)</span> vs <span class='nowrap'>'Alex si David '</span> <span class='notif'>(negatori)</span></h2><h3>A1 (Bogdan Hadarag) <img src='../../../../images/little_stuff/16-em-up.png' class='discurs_toggler'></h3>
+            <div class='discurs normal_text'><p>&Icirc;ntr-o lume a &bdquo;ciocnirii civilizaţiilor&rdquo;, &icirc;n care Globalizarea este jocul la care, statul participant, nu trebuie doar să se supună unui set de &bdquo;reguli&rdquo; universale stabilite prin convenţie, dar şi să &icirc;şi reconfigureze propriul sistem valoric intern, dacă vrea să fie acceptat şi să răm&acirc;nă &icirc;n acest joc. Este cayul lumii laice din emosfera vestica si cea religioasa, din emisfera estica. Ele sunt puse in situatia in care trebuie sa convietuiasca pasnic si prin respect, &nbsp;iar acest proces de adaptare nu este unul spontan ci complicat, care cere &icirc;nţelegere reciprocă.</p>
+<p>Susţinem moţiunea &bdquo;<strong>dreptul la libera exprimare ar trebui să nu includă şi dreptul de a ofensa religiile&rdquo;, </strong>deoarece considerăm că libertatea de exprimare trebuie să reprezinte o cărămidă adăugată la edificiul valoric după care statele lumii şi oamenii care le populează se ghidează, &icirc;n virtutea unei convieţuiri armonioase.</p>
+<p>Prin caracterul ei de valoare [1], <strong>libertatea de exprimare</strong> urmăreşte să scoată &icirc;n evidenţă problemele din jur şi să incite la rezolvare, schimbul de idei, a Creativităţii, iar nu incitarea la conflicte care să transforme lumea &icirc;n care trăim &icirc;ntr-un loc periculos. [2]</p>
+<p><strong>Ofensa</strong> &icirc;nseamnă defăimare, folosirea cuvintelor injurioase, a imaginilor obscene, explicite care aduc prejudicii morale sau materiale.</p>
+<p><strong>Religie</strong> &icirc;nseamnă &bdquo;Ansamblu de idei, sentimente și acțiuni, &icirc;mpărtășite de un grup, care oferă membrilor săi un obiect de venerare, un cod de comportament&rdquo;[3][4][5]</p>
+<p>Ca printr-o lege a firii, orice civilizaţie, aflată &icirc;ntr-o criză de identitate, trece prin momente de transformări care au drept scop redefinirea identităţii. Aceasta identitate se poate referi la sistem de valori, spaţiu geografic, cultură (tradiţii, limba, patrimoniu intelectual), sistem politic, social, economic, etc. Cazuri de schimbare gasim in evenmente istorice ca Renascentismul, Iluminismul, Revoluţia Industrială, Revoluţia Franceză, Independenţa Indiei faţă de Imperiul Britanic, Solidaritatea poloneză, Primăvara Arabilor, etc.</p>
+<p>Este dificil să clădești o lume ghidată de valori care să asigure dezvoltarea continuă a civilizației, fără antagonismele create de diferențele mari dintre ele, evit&acirc;nd &icirc;n același timp potențiale situații antagonice &icirc;n care o valoare intră &icirc;n conflict cu o alta valoare.</p>
+<p>De aceea, <strong>primul motiv</strong> pentru care credem că dreptul la libera exprimare nu trebuie să includă şi dreptul de a ofensa religiile, este acela că <strong>un drept nu trebuie să vină &icirc;n conflict cu o valoare sau un alt drept.</strong> Nimeni nu poate interzice nimănui să &icirc;şi exprime opinia cu privire la o religie sau orice altceva, dar nimănui nu &icirc;i este &icirc;ngăduit să se exprime &icirc;ntr-o manieră care ar putea prejudicia imaginea doar pentru că are libertatea de a se exprima[<a href="http://legislatie.resurse-pentru-democratie.org/drepturile-omului.php#08">6</a>]. Exercitarea libertăţii de exprimare trebuie să aibe un scop pozitiv, de care să se poată folosi toată lumea. Atacul religiei, postand imaginilor defăimătoare, obscene, sau criticarea pur şi simplu de dragul criticării[<a href="http://www.brusselsjournal.com/node/698">7</a>][<a href="http://www.sidneyrezende.com/noticia/247375+charlie+hebdo+e+premiado+nos+eua">8</a>] &icirc;i lezează pe cei care se identifică cu respectiva religie şi ar putea să ia acest fapt drept ofensă. Una este să critici un fapt, şi alta este să ai o g&acirc;ndire critică faţă de acelaşi fapt. Primul lucru poate fi ofensator, &icirc;n timp ce al doilea este constructiv [<a href="http://www.contributors.ro/cultura/gandirea-critica-și-selecția-valorilor/">9</a>].</p>
+<p>Al doilea motiv pentru care considerăm că o religie nu trebuie ofensată este că <strong>religia reprezintă o bogată sursă de valori. </strong>Pacea, iubirea &icirc;ntre semeni, respectul pentru cei bătr&acirc;ni, pentru aproape, pentru mediul &icirc;n care trăim, sunt valori de bun simţ şi deloc patetice pe care societatea le-a cultivat şi continuă să le cultive[<a href="https://ro.wikipedia.org/wiki/Islam">10</a>][<a href="https://ro.wikipedia.org/wiki/Coran#Conceptele_coranice">1</a>1]. E drept ca trecutul este presărat de exemple de teroare provocate de bisericile propovăduitoare de iubire, pace și iertare iar Creștinismul este cel mai bogat &icirc;n așa ceva[<a href="http://www.crestinortodox.ro/biblia/">12</a>] dar asta s-a &icirc;nt&acirc;mplat &icirc;n condiţia &icirc;n care monopolul puterii era deţinut de o instituţie bisericească. Astăzi, conflictele care iau naştere &bdquo;&icirc;n numele&rdquo; lui Dumnezeu/Allah/Buda, etc. Organizate de grupări extremiste, mai mult sau mai puţin religioase, care nu au &icirc;nţeles &icirc;nvăţătura religioasă[<a href="http://www.gandul.info/international/papa-francisc-crede-ca-forme-deviante-ale-religiei-se-afla-la-originea-masacrului-de-la-paris-13761004">13</a>].</p>
+<p>&Icirc;n fine, cel de-al treilea argument este acela că <strong>libertatea de a ofensa religiile duce la crearea prejudecăţilor şi anxietăţii fata cei care sunt credincioşii religiei respective. </strong>Oamenii nu mai sunt curioşi faţă de ce este religia cu pricina, &icirc;n ce constă ea, care sunt &icirc;nvăţăturile ei, iar acest lucru se &icirc;nt&acirc;mpla deoarece, mass-media, &icirc;n exercitarea dreptului de liberă exprimare, supra mediatizează cazurile negative ale unei grup izolat de delicvenţi şi ajung să generalizeze cazul lor la &icirc;nsăşi chintesenţa religiei. &Icirc;n mintea oamenilor, islam=teroare. &Icirc;n felul acesta, musulmanii devin potenţiali terorişti iar non-musulmanii, potenţiale victime. Acest argument &icirc;n vom dezvolta &icirc;n a doua pledoarie.</p>
+<p>Limita dreptului de liberă exprimare trebuie să fie o limită autoimpusa de un principiu intrinsec, al bunului simţ, care să ia &icirc;n considerare consecinţele pe care le poate avea exercitarea ei. Religia nu este rea ci modul &icirc;n care este abordată este deficitară. Acestea sunt motivele pentru care credem că dreptul la libera exprimare nu trebuie să includă şi dreptul de a ofensa religiile.</p><!-- marcator referinte --><p>[1] http://www.archeus.ro/lingvistica/CautareDex?query=VALOARE</p>
+<p>[2] http://legislatie.resurse-pentru-democratie.org/legea/principiile-de-la-johannesburg.php</p>
+<p>[3] http://dexonline.ro/definitie/religie</p>
+<p>[4] https://ro.wikipedia.org/wiki/Islam</p>
+<p>[5]Durkheim Emile, <em>Forme elementare de viata religioasa</em>, Editura POLIROM, 1995</p>
+<p>[6] http://legislatie.resurse-pentru-democratie.org/drepturile-omului.php#08</p>
+<p>[7] http://www.brusselsjournal.com/node/698</p>
+<p>[8] http://www.sidneyrezende.com/noticia/247375+charlie+hebdo+e+premiado+nos+e</p>
+<p>[9] http://www.contributors.ro/cultura/gandirea-critica-%C8%99i-selec%C8%9Bia-valorilor/</p>
+<p>[10] https://ro.wikipedia.org/wiki/Islam</p>
+<p>[11] https://ro.wikipedia.org/wiki/Coran#Conceptele_coranice</p>
+<p>[12] http://www.crestinortodox.ro/biblia/</p>
+<p>[13] http://www.gandul.info/international/papa-francisc-crede-ca-forme-deviante-ale-religiei-se-afla-la-originea-masacrului-de-la-paris-13761004</p>
+</div><hr><h3>N1 (Alex Mocan) <img src='../../../../images/little_stuff/16-em-up.png' class='discurs_toggler'></h3>
+            <div class='discurs normal_text'>
+<p>Echipa negatoare sustine <strong>ideea ca libertatea de exprimare primeaza asupra oricarei</strong> <strong>conceptii</strong>,fie ea de tip religios.</p>
+<p>Tin sa precizez ca nu suntem de acord cu primele doua &nbsp;definitii oferite.In primul rand,libertatea de exprimare reprezinta dreptul garantat de catre&nbsp; Constitutie<strong><sup>[1]</sup></strong> si de&nbsp; Uniunea Europeana<strong><sup>[2] </sup></strong>al fiecarui individ de a isi exprima liber gandurile,atata timp cat acestea nu incita la violenta,si nu o "valoare" cu caracter rigid.In al doilea rand, a ofensa se refera la a jigni o persoana<strong><sup>[3]</sup></strong>,lucru de sesizat si&nbsp; asupra caruia voi dezvolta in decursul argumentarii.</p>
+<p><strong>Contraargumentare</strong></p>
+<p><strong>Primul argument</strong> oferit este ca un drept nu trebuie sa vina in conflict cu un alt drept.Aici intervine o confuzie:atat statul roman cat si Uniunea Europeana garanteaza libertatea religioasa,dar nu exista dreptul ca toata lumea sa fie de acord cu noi.Atunci am ajunge in situatia de a mandata preferinte.</p>
+<p>In legatura cu <strong>cel de-al doilea argument</strong> se face o asemuire gresita a unor valori umane si intrinseci cu spectrul religios.Ni se spune ca idei ca pacea sau iubirea aproapelui sunt unele exclusiv religioase,legate de crestinism,dar acest lucru este infirmat de scrieri antice cum ar fi Analele lui Confucius,in care apare prima versiune inregistrata a &ldquo;regulii de aur&rdquo;<strong><sup>[4]</sup></strong> ,&rdquo;Poarta-te cu altul cum ai vrea ca el sa se poarte cu tine&rdquo;,cu sute de ani inainte de crestinism.Totodata,este spus ca grupari extremiste provoaca teroare si scandaluri sociale,fapt ce este din nou respins de istorie: de exemplu, antisemitismul a fost considerat o dogma a catolicismului pana in 1965<strong><sup>[5]</sup></strong><sup> </sup>si Biserica Catolica a fost unul dintre principalii suporteri ai regimului lui Adolf Hitler,lucru pentru care Vaticanul isi cere scuze abia in 1998.Astfel,nu se poate presupune un monopol al religiei asupra vreunei valori morale.</p>
+<p><strong>Argumentul numarul trei</strong> realizeaza o relatie cauza-efect intre orice tip de critica si creerea prejudecatilor fata de aderantii unei religii.Este adus in discutie un scenariu in care musulmanii sunt vazuti ca potentiali teroristi.Acest lucru provine din obiceiul extremistilor islamici de a raspunde cu violenta impotriva oricarei forme de critica,putand chiar si sa ucida.Satirizarea acestui fapt nu constituie un atac impotriva credinciosilor,ci o analiza a unui lucru daunator din acest grup,si este o problema serioasa cu care religia musulmana trebuie sa se confrunte.Astfel,problema formarii de prejudecati inter-religioase este una ce trebuie rezolvata de religia respectiva,si nu de cenzura universala.</p>
+
+<p><strong>Argumentele impotriva motiunii</strong></p>
+<p><strong>&nbsp;</strong></p>
+<ul>
+<li><strong>Un pas mai aproape de teocratie</strong></li>
+</ul>
+<p>Luarea dreptului de exprimare in directia religiilor ar duce la un sistem de guvernare cu caracter totalitar,in care simplul dezacord cu spectrul religios ar constitui o infractiune ce ar putea fi pedepsita cu inchisoarea,cum este cazul unui adolescent din Singapore anul acesta <strong><sup>[6]</sup></strong> sau,mai rau,chiar cu moartea,cum se intampla in 13 tari pe glob,in care simpla declarare a ateismului &nbsp;este considerata blasfemie si e pedepsita cu moartea<strong><sup>[7</sup></strong><sup>]</sup>.<strong>&nbsp;</strong></p>
+<ul>
+<li><strong>Apararea impotriva &ldquo;bullying-ului&rdquo; religios</strong></li>
+</ul>
+<p>Sub steagul creearii unei lumi mai bune se urmareste impunerea fortata a anumitor idei religioase cum ar fi ideea de blasfemie ce poate duce la pedepse severe,pentru creearea unei lumi care sa nu chestioneze doctrinele sau liderii religiosi.Acest lucru este evident de-a lungul anilor,cu numeroase asasinari in numele religiilor a celor ce incalca regulile acestora,chiar daca nu sunt afiliati religiilor.Persecutia scriitorului Salman Rushdie<strong><sup>[8]</sup></strong><strong> </strong>&nbsp;pentru o reprezentare a profetului Mohamed ce nu a fost pe placul musulmanilor si incercarile de asasinare a acestuia,uciderea regizorului Theo Van Gogh<sup>[9]</sup> pentru criticarea violentei impotriva femeilor in tarile islamice sau<sup>&nbsp; </sup>sau uciderea recenta a 12 membri ai redactiei &nbsp;Charlie Hebdo<sup>[10]</sup> pentru o caricatura&nbsp; reprezinta doar cateva exemple dintr-o lunga traditie de violenta mascata sub ideea de convietuire. <strong>&nbsp;</strong></p>
+
+<ul>
+<li><strong>Ideile nu au drepturi</strong></li>
+</ul>
+<p>O distinctie pe care echipa afirmatoare nu o face este aceea ca ideile,spre deosebire de oameni,nu au drepturi si pot fi gresite,indiferent cu cata ardoare sunt sustinute sau cati aderanti au.O idee care in loc sa raspunda argumentelor potrivnice incearca sa reduca la tacere criticii prin luarea dreptului acestora la exprimare este o idee ce nu merita sustinuta.Un exemplu perfect este comunismul,care ii inlatura social&nbsp; sau fizic pe cei ce indrazneau sa critice regimul<sup>[11]</sup>.Limitarea dreptului de exprimare in asa fel incat un grup este scutit de critica ar insemna un regres social imens cu repercursiuni imediate.</p>
+<ul>
+<li><strong>O&nbsp; masura nedemocratica</strong></li>
+</ul>
+<p>Libertatea de exprimare primeaza asupra protectiei sentimentelor membrilor unei religii,conform majoritatii (63%) publicului chestionat asupra subiectului in luna februarie a anului curent<sup>[12]</sup>.Astfel,aceasta masura ar servi doar interesele unui grup cu o agenda politica si nu publicului larg.</p>
+<p>Libertatea de exprimare poate fi doar absoluta,iar incercarea de a trasa limite de orice fel constituie o incalcare flagranta a libertatii de gandire a fiecarui cetatean,lucru care ar trebui sa ne inspaimante pe toti.&nbsp;</p>
+<!-- marcator referinte --><p><sup>&nbsp;</sup></p>
+<p><sup>[1] </sup>26.06.2015, Articolul 30 - Libertatea de exprimare, www.ConstitutiaRomaniei.ro, <a href="http://www.constitutiaromaniei.ro/art-30-libertatea-de-exprimare/">http://www.constitutiaromaniei.ro/art-30-libertatea-de-exprimare/</a></p>
+<p><sup>[2] </sup>26.06.2015, Freedom of Opinion and Expression, <a href="http://eeas.europa.eu/human_rights/fe/index_en.htm">http://eeas.europa.eu/human_rights/fe/index_en.htm</a></p>
+<p><sup>[3]</sup>26.06.2015, www.Dex.ro, <a href="http://www.dex.ro/ofensa/38362">http://www.dex.ro/ofensa/38362</a></p>
+<p><sup>[4] </sup>26.06.2015, The Golden Rule, <a href="http://www.iep.utm.edu/goldrule">http://www.iep.utm.edu/goldrule</a></p>
+<p><sup>[5]</sup> 26.06.2015, Nostra Aetate, www.vatican.va, <a href="http://www.vatican.va/archive/hist_councils/ii_vatican_council/documents/vat-ii_decl_19651028_nostra-aetate_en.html">http://www.vatican.va/archive/hist_councils/ii_vatican_council/documents/vat-ii_decl_19651028_nostra-aetate_en.html</a></p>
+<p><sup>[6] </sup>27.06.2015, Teen Atheist Facing Three Years in Prison for &ldquo;Wounding Religious Feelings&rdquo; Online,</p>
+<p><a href="http://www.patheos.com/blogs/friendlyatheist/2015/06/20/teen-atheist-facing-three-years-in-prison-for-wounding-religious-feelings-online/">http://www.patheos.com/blogs/friendlyatheist/2015/06/20/teen-atheist-facing-three-years-in-prison-for-wounding-religious-feelings-online/</a> <strong>&nbsp;</strong></p>
+<p><strong><sup>&nbsp;</sup></strong><sup>[7]</sup> 27.06.2015, There Are 13 Countries Where Atheism Is Punishable by Death, &nbsp; &nbsp; &nbsp; &nbsp;</p>
+<p><strong>&nbsp;</strong></p>
+<p><a href="http://www.thewire.com/global/2013/12/13-countries-where-atheism-punishable-death/355961/">http://www.thewire.com/global/2013/12/13-countries-where-atheism-punishable-death/355961/</a> <strong>&nbsp;</strong></p>
+<p><strong><sup>&nbsp;</sup></strong><sup>[8]</sup> 27.06.2015, Looking back at Salman Rushdie&rsquo;s The Satanic Verses,14.09.2012, <a href="http://www.theguardian.com/books/2012/sep/14/looking-at-salman-rushdies-satanic-verses">http://www.theguardian.com/books/2012/sep/14/looking-at-salman-rushdies-satanic-verses</a></p>
+<p><strong>&nbsp;</strong></p>
+<p><sup>[9] </sup>27.06.2015, The murder that shattered Holland&rsquo;s liberal dream, 7.11.2005, <a href="http://www.theguardian.com/world/2004/nov/07/terrorism.religion">http://www.theguardian.com/world/2004/nov/07/terrorism.religion</a><strong></strong></p>
+<p><sup>[10]</sup> 27.06.2015,Complete coverage:Terror in Paris, <a href="http://edition.cnn.com/specials/world/shooting-at-charlie-hebdo">http://edition.cnn.com/specials/world/shooting-at-charlie-hebdo</a><strong></strong></p>
+<p><sup>[11] </sup>27.06.2015, INTERVIU. Vasile Boerean, &bdquo;torționarul bun&rdquo; de la Gherla. Cum l-a ajutat pe Nicolae Steinhardt să iasă teafăr din &icirc;nchisoarea comunistă<strong></strong></p>
+<p><a href="http://www.digi24.ro/Stiri/Digi24/Special/Reportaj/INTERVIU+Vasile+Boerean+tortionarul+bun+de+la+Gherla+Cum+l-a+aju">http://www.digi24.ro/Stiri/Digi24/Special/Reportaj/INTERVIU+Vasile+Boerean+tortionarul+bun+de+la+Gherla+Cum+l-a+aju</a><strong></strong></p>
+<p><strong>&nbsp;</strong></p>
+<p><sup>[12] &nbsp;</sup>27.06.2015,Free speech more important than protecting religious beliefs, 11.01.2015, <a href="https://today.yougov.com/news/2015/01/11/free-speech-more-important/">https://today.yougov.com/news/2015/01/11/free-speech-more-important/</a><strong></strong></p>
+</div><hr><h3>A2 (Andreea Buta) <img src='../../../../images/little_stuff/16-em-up.png' class='discurs_toggler'></h3>
+            <div class='discurs normal_text'><p> Negatorii susţin că suntem liberi să NU ŢINEM CONT de consecinţele comportării noastre din simplu motiv că &bdquo;libertatea trebuie să primeze asupra oricărei concepţii&rdquo;. Nu contează dacă prin asta &icirc;ncalcăm demnitatea cuiva, dacă producem pagube, dacă nu duce la dezvoltare. Noi susţinem că libertatea de exprimare nu trebuie suprimata ci faptul de a ofensa.<br />&nbsp; &nbsp; &nbsp; &nbsp; Se aduc <strong>diferenţe de nuanţa definiţiilor</strong>, care nu sunt relevante pentru valoarea cazului. Ambele echipe susţinem că libera exprimare este asigurată de foruri politice, dacă nu &bdquo;incită la violenţă&rdquo; iar ofensă reprezintă jignirea adusă unei persoane sau a defăima, a prejudicia moral/fizic, definiţii cu care ambele echipe suntem de acord. Considerăm, deci, că negatorii sunt de acord cu definițiile noastre.<br />&nbsp; &nbsp; &nbsp; &nbsp; &Icirc;n primul argument am susţinut <strong>drepturile şi valorile nu trebuie să fie antagonice</strong> deoarece produce confuzie şi dezordine. Fiecare are libertatea să &icirc;şi exprime liber opinia faţă de orice, dacă nu aduce prejudicii morale sau fizice, nu jigneşte. Negatorii nu ne contrazic &icirc;n acest argument deoarece ştim că există libertatea de religie (oricum ar &icirc;nţelege-o ei) şi ştim că nu putem forţa lumea să fie de acord cu noi. Este absurd şi imposibil.</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; <strong>Religia reprezintă o bogată sursă de valori </strong>dar nu este o sursă exclusivă!! Negatorii ne atribuie afirmaţii care nu ne aparţin. Religia nu este sursa exclusivă de &icirc;nvăţătură morală şi nici nu are monopol asupra moralei. Filosofia, literatura sunt alte surse de &icirc;nvăţătură morală. Noi am afirmat că religia nu trebuie ofensată deoarece constituie o sursă de &icirc;nvăţături de bun simţ. Atacurile din New York-2001, Spania-2004, Londra-2005, Irak, Egipt, etc. Arată că există grupuri teroriste care luptă, sau nu, &icirc;n numele religiei.</p>
+<p><strong> &nbsp; Libertatea de a ofensa religiile duce la crearea prejudecăţilor şi anxietăţii fțăa cei care sunt credincioşii religiei respective</strong> &icirc;n sensul că oamenii atribuie musulmanilor, de pildă, trăsături negative precum extremismul, rasismul [1]. Se formează o diferenţă Est-Vest privind drepturile musulmanilor, nefavorabila celor din urmă &icirc;n ţările occidentale şi s-a inventat chiar şi conceptul de &bdquo;islamofobie&rdquo; [2]. După mediatizarea unor atacuri teroriste &bdquo;&icirc;n numele lui Allah&rdquo;, se instalează o frică &icirc;n masă şi o generalizare pripită ca ţările musulmane sunt violente, stimul&acirc;nd populaţia să fie şi ea violenta [3]. Plus, se face confuzie &icirc;ntre islam şi islamism care sunt total diferite [4][5][6]. Nu religia produce violență, extremism și teroare ci oamenii, care se &icirc;nt&acirc;mplă să fi &icirc;nțeles greșit propria religie[7]. Rezolvarea prejudecăților revine nouă, tuturor.</p>
+<p> Pledoaria negatoare, conţine &icirc;n argumentul lor prim o pantă alunecoasă, că, dacă limităm libertatea de exprimare &icirc;n detrimentul religiilor, atunci Biserică va c&acirc;ştiga teren politic şi va ajunge să &icirc;şi impună puterea şi teroarea asupra oamenilor. Fireşte că este exagerat. Nu mai suntem &icirc;n Antichitate sau Evul Mediu. Biserica, cel puţin cea creştină, şi-a pierdut din puterea sa şi a rămas, actualmente, o instituţie cu influenţa morală. Discursul transmite o teamă iluzorie că religia va recuceri Păm&acirc;ntul. &Icirc;n unele state musulmane, nu religia este problema ci religia politizată, deci politică!</p>
+<p> &Icirc;n <strong>argumentul lor secund</strong>, negatorii fac o confuzie &icirc;ntre &bdquo;a ofensa o religie&rdquo; şi a &bdquo;critica violentă &icirc;mpotriva femeilor&rdquo; cu care nici noi nu suntem de acord. &Icirc;n plus ceea ce a postat Salman Rushie nu a fost acceptat de gruparea extremistă care i-au intentat asasinatul, nu de toţi musulmanii. Invităm negatorii să evite sofisme care alimentează prejudecăţi. Nu se poate spune că dacă nişte musulmani nu au fost de acord cu părerile lui, atunci NICIUN musulman nu a fost de acord, aşa cum se lăsă de &icirc;nţeles.[8]</p>
+<p> Nu ştim dacă am &icirc;nţeles cel de-<strong>al treilea argument al cazului negator</strong>. Oamenii sunt imperfecţi şi susceptibili de a face greşeli, de aceea, şi ideilor lor pot fi greşite. &Icirc;ntr-un totul de acord. Asta nu ne scuteşte de a &icirc;ncerca să fim mereu mai buni iar ofensarea religiilor de dragul libertăţii de exprimare nu este nicio idee bună pentru că incita la violenţă. Sesizam o tentativă de panta alunecoasă, dar răm&acirc;ne tentativa deoarece nu &icirc;nţelegem ce &icirc;nseamnă &bdquo;regres social imens cu repercusiuni imediate&rdquo;. Limitarea libertăţii de exprimare &icirc;n virtutea demnităţii personale/publice este un progres general, de pildă. Dorim o dezvoltare, totuşi.</p>
+<p> Negatorii spun, <strong>&icirc;n ultimul argument</strong>, ca un drept care interferează cu alte drepturi este democratic, iar un drept care ţine cont de alte drepturi este nedemocratic. Asta &icirc;nţelegem: că dacă mă exprim liber, &bdquo;după cum &icirc;mi tuna&rdquo;, faţă de un o religie, fără să mă &icirc;mi pese de ce simte semenul meu, este mai democratic dec&acirc;t dacă m-aş g&acirc;ndi şi la repercusiunile afirmaţiilor mele asupra lui. De ce libertatea de exprimare trebuie să primeze protecţiei sentimentelor oamenilor care cred &icirc;ntr-o religie? Ca să lezeze? De asta este făcut acest drept?</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;Politizarea religiei este problema, nu religia, deoarece cea dint&acirc;i produce violența. Nu ofensa adusă religiei rezolvă problemele ci abordarea critică a modului &icirc;n care este &icirc;nțeleasă și folosită religia</p><!-- marcator referinte --><p>[1]http://www.mediafax.ro/externe/o-mie-de-musulmani-au-manifestat-la-capitoliul-din-washington-4935907</p>
+<p>[2]http://www.gallup.com/poll/157082/islamophobia-understanding-anti-muslim-sentiment-west.aspx</p>
+<p>[3]http://www.agerpres.ro/externe/2015/01/12/secretarul-general-al-onu-musulmanii-nu-trebuie-persecutati-dupa-atacurile-teroriste-de-la-paris-11-03-16</p>
+<p>[4]http://www.digi24.ro/Emisiuni/Digi24/Pasaport+Diplomatic/Secvente+emisiune/Diferenta+dintre+Islam+si+islamism</p>
+<p>[5]https://ro.wikipedia.org/wiki/Islam</p>
+<p>[6]http://www.romanialibera.ro/special/documentare/top-10-idei-gresite-despre-islam-184062</p>
+<p>[7]http://www.gandul.info/international/papa-francisc-crede-ca-forme-deviante-ale-religiei-se-afla-la-originea-masacrului-de-la-paris-13761004</p>
+<p>[8]https://www.youtube.com/watch?v=PzusSqcotDw</p></div><hr><h3>N2 (David Toth) <img src='../../../../images/little_stuff/16-em-up.png' class='discurs_toggler'></h3>
+            <div class='discurs normal_text'><p>Contrar celor afirmate de cel de-al doilea reprezentant al echipei afirmatoare,echipa noastra este de parere ca dreptul universal la libera exprimare in lipsa incitarii la violenta este&nbsp; unul ce trebuie aparat cu vehementa in fata oricarei religii cu dogme care ii sunt contrare.</p>
+<p>Mentinem ideea ca o corectitudine a termenilor este cruciala in solutionarea acestei probleme, idee&nbsp; care nu pare sa fie impartasita de echipa afirmatoare.Astfel,libera exprimare nu este &bdquo;asigurata de foruri politice&rdquo;,ci este un drept natural si inalienabil al fiecarui individ<sup>[1]</sup>,iar ofensa se refera doar la persoane,si nu la idei.</p>
+<p>Echipa afirmatoare a realizat o contraargumentare a replicilor noastre,prin care vom trece succint.In privinta <strong>argumentului intai</strong>,acestia nu fac diferenta intre dreptul de a avea o religie si dreptul de a iti impune religia asupra celor din jurul tau.Aceasta distinctie este fundamentala,caci in lipsa sa ideile au aceleasi drepturi ca si persoanele fizice.In vederea <strong>argumentului doi</strong>,colegul meu a demonstrat cum religia nu are dreptul sa se pretinda a fi o sursa de valori.Cat despre <strong>argumentul al treilea</strong>, se aduc in discutie concepte ca &bdquo;islamofobia&rdquo; sau &bdquo;rasismul&rdquo;,cand de fapt Islamul <strong>nu este o rasa</strong>.</p>
+<p>Continui&nbsp; cu raspunsuri la replicile aduse la argumentele negatorului intai.</p>
+<p><strong>Argumentului intai </strong>i se aduce o distorsionare.Se spune ca exageram,cand de fapt avem numeroase exemple curente de conflicte intre dogme religioase si lucruri factuale sau drepturi umane.Pentru demonstrare,pana si astazi Biserica Catolica se opune relatiilor intre persoane de acelasi sex,creeand daune reale pentru persoane,si nu pentru idei sau sentimentele acestora,cum ar fi dreptul lor de a se casatori.Mai rau,in cazul Islamului,Quranul cere uciderea celor ce nu impartasesc credinta<sup>[2]</sup>.Oare lichidarea competitiei nu este un principiu al totalitarismului?</p>
+<p><strong>Argumentul doi </strong>este atacat prin ideea ca extremistii sunt cei ce comit atrocitati,o idee combatuta deja&nbsp; de colegul meu.Totusi,voi dezvolta asupra chestiunii: potrivit statisticilor<sup>[4]</sup>,majoritatea musulmanilor din tarile predominant musulmane considera ca parasirea religiei islamice este o crima ce trebuie pedepsita cu moartea,incluzand astfel &nbsp;88% dintre musulmanii egipteni,79% dintre cei afgani, sau 75% dintre cei pakistanezi.In plus,conform aceleasi surse,40% dintre musulmanii de pe teritoriu pakistanez si 39% dintre musulmanii din Afghanistan ca atacurile cu bombe impotriva civililor pentru a apara Islamul sunt justificate,iar&nbsp; aproximativ jumatate din comunitatea musulmana din tari ca Lebanon,Jordan si teritoriul palestinian considera ca o femeie ce a avut relatii sexuale inainte de casatorie sau a comis adulter merita sa fie ucisa de catre familia sa pentru a le rascumpara onoarea.Toatea acestea sunt exemple ale deceniului curent de actiuni intreprinse de milioane de oameni aderanti la Islam,si toate arata importanta actiunii luate impotriva acestor conceptii,libertatea de exprimare fiind una dintre principalele moduri de contracarare a acestei probleme. Avand in vedere cazul lui Salman Rushdie,reprezentati de seama ai religiilor au declarat ca persecutia impotriva sa este meritata,si ca autorul merita moartea pentru ofensarea sentimentelor credinciosilor,cum ar fi Cardinalul O&rsquo;Connor<sup>[3]</sup>.</p>
+<p>In privinta <strong>argumentului trei</strong>,confuzia a fost demonstrata si mai devreme in discursul doi al afirmatorilor,prin faptul ca nu au inteles ideea simpla ca indivizii au drepturi,si ca nu ai dreptul de a ii jigni,pe cand ideile nu,ele putand fi supuse unei analize care le va considera ori valide,ori gresite.Acest lucru nu ne impiedica sa fim buni cu cei din jurul nostru,dar,dupa principiul &bdquo;ce-i prea mult strica&rdquo;,nu putem fi atat de buni ca societate incat sa asiguram dreptul fiecaruia de a avea dreptate.Asta ar insemna ca am asigura ca fiecare individ sa aiba propria sa versiune a adevarului.</p>
+<p>Replica in fata <strong>argumentului patru</strong> este in principiu aceeasi de pe parcursul intregii dezbateri din partea afirmatorilor:de ce nu putem sa respectam dreptul persoanelor religioase sa nu fie chestionate in privinta actiunilor lor?De ce cautam sa le ranim sentimentele?Raspunsul este simplu,si a mai fost spus de cateva ori:o facem pentru ca nu avem dreptul de a avea dreptate.Pentru a ilustra acest fapt,dau ca exemplu faptul ca majoritatea credinciosilor crestini si musulmani refuza sa accepte teoria evolutiei.Daca cineva critica acest refuz,desigur ca ar deranja credinciosii.Totusi,asta nu schimba realitatea,si nici faptul ca dogmele religioase stau in calea progresului social din aceasta perspectiva.</p>
+
+<p>Echipa afirmatoare propune&nbsp; o lume in care ai dreptul sa spui absolut tot ce iti doresti,atata timp cat restul lumii este de acord cu tine,ca apoi sa spuna ca un asemenea scenariu ar fi unul benefic&nbsp; pentru toti cei implicati.Aceasta&nbsp; ar reprezinta o utopie in care progresul&nbsp; este complet inexistent,dar&nbsp; cel putin nimeni nu are sentimentele ranite.Cine nu ar vrea sa traiasca intr-o asemenea lume?!</p>
+
+
+<!-- marcator referinte --><p><sup>[1]</sup>The universal declaration of rights,1.07.2015,</p>
+<p>&nbsp;<a href="http://www.un.org/en/documents/udhr/">http://www.un.org/en/documents/udhr/</a></p>
+<p><sup>[2]</sup>&nbsp;Center of Muslim-Jewish Engagement,1.07.2015,</p>
+<p>&nbsp;<a href="http://www.usc.edu/org/cmje/religious-texts/quran/verses/004-qmt.php#004.089">http://www.usc.edu/org/cmje/religious-texts/quran/verses/004-qmt.php#004.089</a></p>
+<p><sup>[3]</sup>Khomeini&nbsp; Spurns Rushdie Regrets And Reiterates Threat Of Death,1.07.2015,</p>
+<p><a href="http://www.nytimes.com/1989/02/20/world/khomeini-spurns-rushdie-regrets-and-reiterates-threat-of-death.html">http://www.nytimes.com/1989/02/20/world/khomeini-spurns-rushdie-regrets-and-reiterates-threat-of-death.html</a></p>
+<p>[4]The World&rsquo;s Muslims:Religion,Politics and Society,30.04.2013,recuperat pe 1.07.2015,<a href="http://www.pewforum.org/2013/04/30/the-worlds-muslims-religion-politics-society-preface/">http://www.pewforum.org/2013/04/30/the-worlds-muslims-religion-politics-society-preface/</a></p>
+</div><hr><hr><h2>Decizii:</h2> <script>
+        $j(document).ready(function(){
+			$j('.decizie_toggler').toggle( 
+				function(){
+					$j(this).attr('src', '../../../../images/little_stuff/16-em-down.png');   
+					$j(this).parent().next('.decizie').hide('fast'); 
+                },
+                function(){
+					$j(this).attr('src', '../../../../images/little_stuff/16-em-up.png');
+					$j(this).parent().next('.decizie').show('fast'); 
+                } 
+			);
+		});</script><div class='decizie'><h3>Radu Ocrain
+                <img src='../../../../images/little_stuff/16-em-up.png' class='decizie_toggler'></h3><div class='normal_text'><p><span id="docs-internal-guid-c8746e15-b26a-cea0-e429-72e7dfc8075f"> </p>
+<p><span id="docs-internal-guid-19341f51-b26c-55e8-de4d-c77f14afbad3"> </p>
+<p dir="ltr"> &nbsp;&nbsp;&nbsp;In primul rand, trebuie mentionat ca dezbaterile academice presupun alinierea exprimarilor la un anumit nivel. Sunt de parere ca ambele echipe au adoptat in acest meci un stil foarte "oral", care nu se transcrie ideal intr-o dezbatere scrisa. De asemenea, au fost foarte multe neintelegeri referitoare la religii, mai ales islamul. Nu e in regula sa inaintati argumente precum "Quranul cere uciderea oamenilor", deoarece ele denota o documentare extrem de superficiala.</p>
+<p dir="ltr">&nbsp; &nbsp;Pe de alta parte, am apreciat faptul ca echipele s-au preocupat sa incadreze corect dezbaterea, aducand definitii pentru a clarifica termenii importanti din discutie. Definitiile au variat insa, producand prima arie de conflict a dezbaterii, pe definitia ofensei. Pentru ca in dezbateri definitiile trebuie sa fie neutre, sa nu confere un avantaj unei echipe, am considerat ca definitia negatorilor a fost mai echitabila si a fost corect aparata de echipa negatoare. Acest fapt, insa, nu a cantarit mult in decizia finala.</p>
+<p dir="ltr">&nbsp; &nbsp;A existat in dezbatere o arie de conflict referitoare la statutul religiei ca sursa de valori, care nu avea relevanta pentru dezbaterea noastra si nu contribuit la luarea deciziei.</p>
+<p dir="ltr">&nbsp; &nbsp;Punctele relevante pentru stabilirea deciziei sunt urmatoarele:</p>
+<p dir="ltr">1. Egalitatea in drepturi. Negatorii au demonstrat ca interzicerea dreptului la ofensa ar echivala efectiv cu conferirea unui drept suplimentar persoanelor religioase, acela de a "avea dreptate", deoarece ceea ce este ofensator e subiectiv si poate duce efectiv la cenzura.</p>
+<p dir="ltr">2. Efectele in lumea reala. Negatorii au demonstrat ca sporirea puterii bisericilor poate avea efecte negative palpabile, fiind aduse exemple din lumea reala. Afirmatorii au considerat ca efectele negative mentionate de negatori sunt o consecinta a extremismului, incercand sa separe aceasta factiune de conceptul religios. Au adus ca exemplu guvernele din tarile islamice, incercand sa izoleze subeictul la nivelul politicii. Negatorii, insa, au argumentat mai convingator ca exista o legatura intrinseca intre extremisti si religia in numele careia actioneaza, spunand, totodata, ca acestia vor actiona oricum, fara sa tina cont de limitarea libertatii de expresie. Astfel, putem concluziona ca aprobarea motiunii nu ar aduce impactul pozitiv scontat.</p>
+
+<p dir="ltr"> &nbsp;&nbsp;&nbsp;In final, decizia a mers catre negatori, care, in ciuda unor exprimari nefericite, au adoptat o pozitie mai moderata si au fost mai aproape de esenta dezbaterii.</p>
+
+<p dir="ltr">Punctaje: A1. Continut: 13 Strategie: 7 Stil: 3 Total: 23</p>
+<p dir="ltr">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;N1. Continut: 12 &nbsp;Strategie: 9 Stil: 4 Total: 25</p>
+<p dir="ltr"> A2. Continut: 11 Strategie: 7 Stil: 3 Total: 21</p>
+<p dir="ltr"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;N2. Continut: 12 &nbsp;Strategie: 9 Stil: 3 Total: 24</p>
+<p><br /><br /></p>
+
+<p dir="ltr">&nbsp;</p></div>A1 -> 23 puncte<br>N1 -> 25 puncte<br>A2 -> 21 puncte<br>N2 -> 24 puncte<br>Castiga echipa: <h3 style='display:inline;color:red;'>Alex si David  (negatori)</h3></div><hr><div class='decizie'><h3>Teo Oprea
+                <img src='../../../../images/little_stuff/16-em-up.png' class='decizie_toggler'></h3><div class='normal_text'><p><span id="docs-internal-guid-51aee0e6-b26d-fb37-437e-b4fcd9bed95f"> </p>
+<p dir="ltr">Dezbaterea mi s-a parut foarte complicata si neclara in general, in principal pentru ca participantii la dezbatere au lansat foarte multe idei fara sa le explice foarte bine, in termeni concreti si cu evaluarea si concluzionare necesara asupra fenomenelor religioase, sociale si politice mentionate. Sfatul meu pentru imbunatatirea unei astfel de dezbateri este clarificarea inca de la inceput a motivelor principale pentru care o echipa sau cealalta sustine sau se opune motiunii. De asemenea, recomand folosirea unor enunturi concrete, cu mai putine exprimari generale, cu privire la ceea ce sustineti (spre exemplu, in loc de a spune &laquo;&nbsp;ideile nu au drepturi&nbsp;&raquo;, punct care a generat reala confuzie, si pe buna dreptate, pentru afirmatori, ati putea spune &laquo;&nbsp; jignirea nu se adreseaza adeptilor, ci dogmelor religioase, or acestea nu pot fi protejate pentru ca sunt relative/subiective&raquo;). Astfel de formulari ar servi ambelor echipe, iar echipa care lanseaza ideea se poate concentra mai mult pe argumentarea ideii respective pe parcursul dezbaterii, in loc sa iroseasca 150 de cuvinte explicand-o de doua ori, nici a doua oara prea precis.</p>
+<p dir="ltr">Am urmarit aceasta dezbatere atat din perspectiva argumentelor lansate in dezbatere si a modului in care acestea au evoluat in dezbatere, dar si din perspectiva modului in care fiecare dintre echipe a reusit sa invoce si sa apere motive pertinente pentru care ar trebui limitat/permis dreptul de a ofensa religii.</p>
+<p dir="ltr">Definitia libertatii de exprimare nu mi s-a parut problematica, insa consider ca ar fi fost necesar ca ambele echipe sa reflecte mai mult si sa clarifice notiunea de &lsquo;ofensa&rsquo;, avand in vedere tendinta echipei negatoare, cel putin in cadrul primului discurs, de a aborda mai degraba limitarea libertatii de exprimare in general sau chiar in totalitate, mai degraba decat cenzurarea dreptului de a ofensa religii. Ar fi fost de asemenea util sa se stabileasca ce ar insemna un &laquo;&nbsp;drept&nbsp;&raquo; de a ofensa, si daca reprezinta cumva un derivat/o componenta a altui drept, eventual chiar a dreptului la libera exprimare, deoarece nu exista momentan o acceptiune generala asupra continutului libertatii de exprimare. </p>
+<p dir="ltr">Insa pentru ca nu am avut o astfel de abordare in dezbatere, ne limitam la ceea ce ambele echipe au acceptat, anume ca deocamdata singura limita a libertatii de exprimare este incitarea la violenta. Aici ar fi fost util ca echipa afirmatoare sa discute in ce masura ofensa in exprimare nu cumva depaseste aceasta limita, incitand direct la ura sau violenta, insa nici aceasta discutie nu a avut loc.</p>
+<p dir="ltr">Incercand sa identific motivele principale pentru care echipele sustin/se opun motiunii, observ urmatoarele&nbsp;:</p>
+<p dir="ltr">Echipa afirmatoare a avut doua argumente importante care sa justifice necesitatea limitarii libertatii de exprimare&nbsp;: necesitatea protejarii altor drepturi si pericolul ca discursul ofensator sa creeze prejudecati. Am apreciat ca discutiile cu privire la moralitatea religiei nu sustin direct motiunea, intrucat echipa afirmatoare nu a relevat de ce daca religia ofera un set de valori morale, ea ar trebui protejata pe de-a-ntregul de discursurile ofensatoare, dar voi aborda unele dintre consecintele acestei teme de discutii in celelalte arii de &nbsp;discutie.</p>
+<p dir="ltr">Echipa negatoare contureaza cateva motive pentru care nu ar trebui limitata libertatea de exprimare: aceasta cenzura duce la intarirea puterii unor precepte religioase condamnabile (arg. 1 si 2 negator) si ideea ca ceea ce se ofenseaza nu sunt adeptii unei religii, ci se critica/ofenseaza ideea religioasa in sine, ceea ce intra in limitele dorite ale libertatii de exprimare (argument clarificat mai degraba la nivelul discursului N2).</p>
+<p dir="ltr">Celelalte discutii din dezbatere au privit fie cazuri punctuale, dar neconcluzive in raport de motiune (cine e vinovat de atentate teroriste, cine sustine terorismul - populatia musulmana sau doar unele grupari extremiste, de ce a fost atacat Rushdie, daca biserica isi permite sa se identifice cu o sursa de valori sau daca ar trebui sa-i recunoastem o astfel de valoare) in principal pentru ca echipele nu au explicat la ce servesc aceste idei/discutii si cum contribuie la sustinerea/infirmarea motiunii.</p>
+<p dir="ltr">Asadar, cu ideile cele mai importante identificate, facem o analiza a modului in care a decurs dezbaterea.</p>
+<p dir="ltr">Primul argument relevant al echipei afirmatoare, cel privind necesitatea protejarii drepturilor altor persoane, care privesc, din cate inteleg, libertatea constiintei religioase, a fost un argument care si-a pierdut din forta pe parcursul dezbaterii, in principal pentru ca echipa afirmatoare a presupus ca e de la sine inteles ca exista o astfel de limita si, in loc sa explice importanta protejarii acestui drept, si care este acesta, s-a concentrat, la nivel A2, in combaterea unor idei ale echipei negatoare nu neaparat relevante, fiind ofuscati de faptul ca negatorii propun o libertate absoluta. Ar fi fost util sa explice de ce e nevoie neaparat de a proteja alte drepturi sau valori si cum sunt ele exact lezate. Modul in care A2 reia acest argument nu mai are legatura cu motiunea, ci se reitereaza faptul ca drepturile nu trebuie sa antagonizeze cu alte valori, pentru ca se creeaza dezordine (&nbsp;?). In lipsa acestei continuari necesare pe care ar fi trebuit sa o faca A2 in apararea si explicarea acestui argument, echipa negatoare arata in ultimul discurs ca ofensa priveste mai degraba dogmele si preceptele morale ale unor religii, dogme care sunt condamnabile si pe care le impartaseste o mare parte dintre adeptii acelei religii. Astfel, principalul motiv pentru care se doreste pastrarea dreptului de a ofensa in continutul libertatii de exprimare este acela ca este necesara combaterea acestor idei antidemocratice si antiumaniste caracteristice unor religii. Aceasta devine principala arma impotriva acestora, argument care, in lipsa altor completari din partea echipei afirmatoare, ni se pare pertinent.</p>
+<p dir="ltr">Al doilea motiv important pe care il lanseaza echipa afirmatoare in dezbatere este acela ca permiterea exprimarilor ofensatoare creeaza prejudecati cu privire la o intreaga categorie de adepti, si nu numai cu privire la grupurile restranse care actioneaza in intelegerea gresita a propriei religii, argument care este reluat, aproape in aceeasi forma si fara completari la nivel de A2. N1 ne spune ca aceasta imagine negativa este in fond alimentata de comportamentul adeptilor respectivi si nu de mediatizarea excesiva. Pe de alta parte, mi se pare ca acest argument nu prea serveste motiunii intrucat explicatia afirmatorilor, cum ca portretizarea din mass-media starneste teama fata de adeptii unei religii, nu pare sa aiba legatura directa cu discursul ofensator, intrucat nu mi se arata in cel fel aceasta portretizare si discursurile de presa au fost jignitoare (de exemplu, daca mi s-ar fi spus ca dupa atacurile teroriste au aparut articole care portretizau toti musulmanii ca fiind insetati de sange). Chiar si asa, negatorii invoca faptul ca trebuie sa vorbim despre greselile si erorile care determina oamenii sa comita astfel de acte, iar aici era necesara o discutie despre cat si cum trebuie sa vorbim despre asta, caci motiunea se refera la ofensa, or o astfel de discutie nu a avut loc. Acest argument al afirmatorilor nu mi se pare astfel convingator in sustinerea motiunii.</p>
+<p dir="ltr">Nu in ultimul rand, negatorii mai aduc un argument, cumva in legatura cu acest ultim argument al afirmatorilor, cum ca cenzura duce la intarirea puterii ideilor condamnabile promovate de alte religii - negatorii ofera exemple in acest sens de idei antiumaniste atat in primul discurs, cat si in al doilea. Acest argument nu a fost combatut in mod expres de catre echipa afirmatoare, care se rezuma la a sustine ca e o eroare de logica sa presupui ca se va ajunge la un regim totalitar sau desecularizat (aici, exprimarea absolutista si extrema a negatorilor la nivel N1 este intr-adevar nefericita, dar recomand oricarui debater sa considere orice argument in forma sa cea mai acceptabila si apoi de a-l combate, astfel ei devin si mai convingatori. Aici, ideea de baza era ca exista riscul ca prin tacere sa validam valori, comportamente, idei care contravin preceptelor democratice, drepturilor fundamentale etc.) Chiar daca aceasta idee nu a fost puternic dezvoltata de N1, vorbitorul N2 reuseste sa pledeze destul de clar si convingator asupra faptului ca tacerea valideaza un comportament condamnabil, si ca uneori este necesar sa exprimam critic si poate si ofensator (din perspectiva celui care crede, de exemplu, ca o persoana care renunta la islam trebuia sa moara) ca nu suntem de acord cu aceste idei.</p>
+<p dir="ltr">Avand in vedere aceste considerente, apreciez ca prin ideile lansate&nbsp;: ca nu exista in fond o lezare a libertatii religioase atunci cand exprimam o opinie ofensatoare (si pentru ca afirmatorii nu au definit ofensa si pentru ca nu au putut sa precizeze cum anume libertatea de exprimare lezeaza alte valori sau drepturi) si ca tacerea poate valida idei si valori nedemocratice, echipa negatoare a fost mai convingatoare in a respinge motiunea si castiga aceasta dezbatere.</p>
+<p dir="ltr">Punctaj&nbsp;:</p>
+
+<table>
+<colgroup><col width="118"></col><col width="130"></col><col width="130"></col><col width="114"></col><col width="103"></col></colgroup> 
+<tbody>
+<tr>
+<td>
+<p dir="ltr">Jucator</p>
+</td>
+<td>
+<p dir="ltr">Continut&lt;15</p>
+</td>
+<td>
+<p dir="ltr">Strategie&lt;10</p>
+</td>
+<td>
+<p dir="ltr">Stil&lt;5</p>
+</td>
+<td>
+<p dir="ltr">TOTAL</p>
+</td>
+</tr>
+<tr>
+<td>
+<p dir="ltr">A1</p>
+</td>
+<td>
+<p dir="ltr">10</p>
+</td>
+<td>
+<p dir="ltr">7</p>
+</td>
+<td>
+<p dir="ltr">4</p>
+</td>
+<td>
+<p dir="ltr">21</p>
+</td>
+</tr>
+<tr>
+<td>
+<p dir="ltr">N1</p>
+</td>
+<td>
+<p dir="ltr">10</p>
+</td>
+<td>
+<p dir="ltr">8</p>
+</td>
+<td>
+<p dir="ltr">4</p>
+</td>
+<td>
+<p dir="ltr">22</p>
+</td>
+</tr>
+<tr>
+<td>
+<p dir="ltr">A2</p>
+</td>
+<td>
+<p dir="ltr">9</p>
+</td>
+<td>
+<p dir="ltr">7</p>
+</td>
+<td>
+<p dir="ltr">4</p>
+</td>
+<td>
+<p dir="ltr">20</p>
+</td>
+</tr>
+<tr>
+<td>
+<p dir="ltr">N2</p>
+</td>
+<td>
+<p dir="ltr">11</p>
+</td>
+<td>
+<p dir="ltr">9</p>
+</td>
+<td>
+<p dir="ltr">4</p>
+</td>
+<td>
+<p dir="ltr">24</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p><span id="docs-internal-guid-51aee0e6-b26d-fb37-437e-b4fcd9bed95f"> <br /></p>
+</div>A1 -> 21 puncte<br>N1 -> 22 puncte<br>A2 -> 20 puncte<br>N2 -> 24 puncte<br>Castiga echipa: <h3 style='display:inline;color:red;'>Alex si David  (negatori)</h3></div><hr><div class='decizie'><h3>Ioana Covei
+                <img src='../../../../images/little_stuff/16-em-up.png' class='decizie_toggler'></h3><div class='normal_text'><p><span id="docs-internal-guid-4413c244-8d07-e5c0-104d-3e00b0a87c04"> </p>
+<p dir="ltr">Felicitari, a fost un meci strans, cu discursuri bune si va incurajez sa participati si in rundele urmatoare ale Closer to Oxford. Urmeaza feedback constructiv pentru fiecare discurs, apoi decizia.</p>
+<p dir="ltr">A1. Demersul de a ne introduce in tema e unul bun, dar in aceasta motiune, deja &nbsp;abstracta, e nevoie de concretete si precizie in exprimare; &nbsp;discutii despre ciocnirea civilizatiilor si redefinirea sistemelor valorice nu au clarificat problema si, in orice caz, au ocupat prea mult spatiu, care ar fi putut fi folosit pentru o argumentare mai nuantata. De exemplu, primul argument ar avea nevoie de mai multa analiza - din pacate, drepturile se ciocnesc tot timpul, iar delimitarile se pot trasa in multiple feluri; a face apel la legislatia existenta nu e un argument in sine si nici o dovada ca o opinie poate fi exprimata numai atunci cand e utila social. Totodata, faptul ca religia are un impact pozitiv asupra societatii nu e un argument impotriva criticarii unor aspecte ale acesteia (chiar dur sau &nbsp;ireverentios), in afara de cazul in care ofensa are o sansa reala sa ii diminueze influenta (discutabil). In ceea ce priveste al treilea argument, pare ca problema identificata e mai mult stereotipizarea, discriminarea, care nu e corelata clar cu ofensa. Pe viitor, as vrea putin mai multa atentie la exprimare - e un discurs scris, deci standardele sunt destul de mari.</p>
+<p dir="ltr">N1. Raspunsul la primul argument e destul de bun la nivel retoric - nu exista dreptul de a nu fi contrazis; totusi, avand in vedere ca echipa afirmatoare insista ca ofensa este inutil jignitoare, contra-argumentarea ar fi trebuit dezvoltata, in directia ca distinctia dintre ofensa si critica legitima nu e deloc clara. </p>
+<p dir="ltr">E important sa aveti tot timpul in minte relevanta argumentelor pentru motiune - discutia despre cat de pozitiv/negativ e impactul religiei, cel putin in forma de aici, &nbsp;e sterila. Evident, exemple se pot gasi de ambele parti si nu exista analiza suplimentara care sa imi spuna de ce faptul ca religia e buna/rea justifica sau nu ofensa. Nu recomand in general abordari de tipul slippery-slope/panta alunecoasa - e greu de crezut ca de la o minima reglementare a discursului cu privire la religii am ajunge la teocratie. In ceea ce priveste argumentul &ldquo;bullying-ului&rdquo; religios, nu mi se spune de ce ofensa ar constitui o forma legitima de raspuns si ce fel de beneficii ar putea sa aduca la nivel social. E interesanta ideea ca sistemele de credinte, spre deosebire de oameni, nu au drepturi, iar paralela cu regimuri totalitare e promitatoare. In legatura cu ultimul argument - chiar in democratii, statul poate lua masuri nepopulare, daca le considera juste. </p>
+<p dir="ltr">A2 In discutia despre mecanismul (bine explicat) prin care sunt discriminati musulmanii se vorbeste foarte mult despre mediatizarea atacurilor teroriste (si despre generalizarile pripite care urmeaza), nu se face clar corelatia cu ofensa. Sunt de acord ca in unele cazuri se pot intersecta/suprapune, dar pare mai mult un argument despre cum discriminarea e rea decat un argument despre exprimarea ofensatoare. Bine identificata panta alunecoasa a negatorilor. In contrargumentare spuneti ca ofensa nu e buna pentru ca incita la violenta. In lipsa unei explicatii bine dezvoltate, e putin credibil ca un individ care se exprima ofensator poate genera violenta impotriva aceluiasi grup. In plus, dupa cum chiar echipa afirmatoare recunoaste, incitarea fatisa la violenta e deja reglementata de stat.</p>
+<p dir="ltr">N2 Admitand ca religiile ar aduce un impact negativ asupra societatii (este dat exemplul minoritatilor sexuale), vreau sa stiu de ce ofensa este automat legitima. Afirmatorii ar putea spune ca prin ofensa se ingreuneaza sau chiar stopeaza complet dialogul care sa conduca la reformarea sistemica. Reconstructia argumentului doi e problematica ca ton - devine nu o discutie despre motiune, ci o incriminare a comunitatii musulmane, ceea ce nu ajuta pozitia negatorilor in contextul motiunii si violeaza niste standarde de corectitudine politica. In incheiere se intelege mai clar pozitia negatorilor, prin exemplul legat de teoria evolutiei - permitand religiilor sa defineasca dreptul la ofensa, multe critici legitime ar putea fi oprite. Vorbitorii doi pot deja sa prioritizeze punctele din discutie, mi s-ar fi parut mai important sa incepeti cu acest punct decat cu contra-argumentare/resustinere in ordinea prezentarii argumentelor.</p>
+
+<p dir="ltr">Decizie: A fost un meci strans, partial si deoarece argumentarea a fost in unele momente neclara (drept dovada, cele doua echipe nu isi intelegeau una alteia pozitia si declara acest lucru in mai multe discursuri). In al doilea rand, din partea ambelor echipe apar salturi in logica - de exemplu, pentru ambele echipe devine o miza daca religia are un impact bun asupra societatii sau nu, in contextul in care asta nu influenteaza neaparat modul in care restul lumii ar trebui sa se raporteze la ea. Echipele nu discuta suficient de extensiv si explicit despre diferenta dintre ofensa si critica legitima, care ar fi fost un punct relevant strategic pentru ambele. Desi unele dintre directiile de argumentare ale afirmatorilor au potential (ideea ca se alimenteaza tensiuni sociale, de exemplu), pana la sfarsitul dezbaterii, in aria de conflict legata de ciocnire a drepturilor, aceasta nu reuseste sa demonstreze de ce un sistem de credinte ar trebui sa fie protejat in fata oricarei forme de exprimare, iar ideea negatorilor ca religia, asemanator unor sisteme de valori politice, nu ar trebui sa aiba imunitate, cantareste mai greu, iar acestia castiga.</p>
+
+<p dir="ltr">Observatii legate de dovezi, pentru ambele echipe: nu mai folositi surse discutabile precum wikipedia si nu faceti apel la legislatie curenta. In motiuni de acest tip nu discutam legalitatea, discutam legitimitatea unor anumite pozitii. De asemenea, semnalizati precis pagina/paragraful din dovada la care va referiti, daca e vorba de carti sau documente foarte lungi.<br /><br /></p>
+<p><span id="docs-internal-guid-4413c244-8d09-99b5-31e1-ee7b4c289202">
+<p dir="ltr">A1 Continut 11 Strategie 7 Stil 4 Punctaj - 22</p>
+<p dir="ltr">N1 Continut &nbsp;12 &nbsp;Strategie 8 Stil &nbsp;4 &nbsp;Punctaj - 24</p>
+<p dir="ltr">A2 &nbsp;Continut &nbsp;11 Strategie 8 &nbsp;Stil 4 Punctaj - 23</p>
+N2 Continut &nbsp;13 Strategie 8 Stil 4 Punctaj - 25</p>
+<p dir="ltr">&nbsp;</p>
+<div><br /></div>
+
+</div>A1 -> 22 puncte<br>N1 -> 24 puncte<br>A2 -> 23 puncte<br>N2 -> 25 puncte<br>Castiga echipa: <h3 style='display:inline;color:red;'>Alex si David  (negatori)</h3></div><hr><h3 class='important'>Vrem parerea ta! Pentru asta, trebuie sa te loghezi.</h3><h3>Clasament meci</h3><p>Medii punctaje</p>A1 -> 22.00 puncte<br>N1 -> 23.67 puncte<br>A2 -> 21.33 puncte<br>N2 -> 24.33 puncte<br>Castiga echipa: <h3 style='display:inline;color:red;'>Alex si David  (negatori)</h3>
+                <div class='clear'></div>
+        </div><!-- end main content -->
+         <div class='clear'></div>
+</div>
+<div id="pix"></div>
+
+
+                                </div><!--end main -->
+                                <div id='parteneri'>
+                                    <span class='tr'></span><span class='tl'></span><span class='br'></span><span class='bl'></span><span id="filler"></span>
+                                    <div class='parteneri' id='sustinatori'>
+                                        <span class='floating_text' id='un_proiect'>Un proiect</span>
+                                        <a href='http://www.ardor.org.ro/'><div class='image' id='ardor'>Ardor</div></a>
+                                        <span class='floating_text' id='finantatori'>Finanțatori</span>
+                                        <a href='http://www.opensocietyfoundations.org/'><div class='image' id='open_society'>Open Society Foundation </div></a>
+                                        <a href='http://www.studentiq.ro//'><div class='image' id='memoplus'>MemoPlus</div></a>
+                                        <!-- <a href='http://www.ratiufamilyfoundation.com/'><div class='image' id='FundatiaRatiu'>Ardor</div></a>
+                                        <a href='http://www.eef.md/'><div class='image' id='eef'>East Europe Foundation</div></a>
+                                        <a href='http://www.mts.gov.md/'><div class='image' id='mdminister'>Ministerul Tineretului si Sportului al Republicii Moldova</div></a> -->
+
+                                        <span class='floating_text' id='parteneri_text'>Parteneri</span>
+
+                                        <a href='http://www.policycenter.eu/'><div class='image' id='PolicyCenter'>Policy Center</div></a>
+                                        <a href='http://www.britishcouncil.org/'><div class='image' id='BritishCouncil'>British Council</div></a>
+                                        <a href='http://www.europuls.ro/'><div class='image' id='europuls'>Europuls</div></a>
+                                        <a href='http://www.cere.ro/'><div class='image' id='cere'>Ce-Re</div></a>
+                                        <a href='http://www.primeromania.ro/'><div class='image' id='prime'>Prime Romania</div></a>
+                                        <a href='http://www.cji.ro/'><div class='image' id='cji'>Centrul pentru jurnalism independent</div></a>
+                                        <a href='http://www.aiesectm.ro/'><div class='image' id='aisec'>Aisec</div></a>
+                                        <!-- ===================================================================================================== -->
+                                        <a href='http://www.cogitus.ro/'><div class='image' id='cogitus'>Cogitus</div></a>
+                                        <a href='http://www.adevarul.ro/international/foreign_policy/'><div class='image' id='foreignPolicy'>Foreign Policy</div></a>
+                                        <a href='http://www.elsa.ro/'><div class='image' id='elsa'>Elsa</div></a>
+                                        <a href='http://www.vipromania.ro/'><div class='image' id='vipromania'>Voluntari pentru idei si proiecte</div></a>
+                                        <a href='http://www.ongtrust.ro/'><div class='image' id='ongtrust'>Trust</div></a>
+
+                                        <!-- ===================================================================================================== -->
+                                        <a href='http://www.leap.ro/'><div class='image' id='leap'>Leap</div></a>
+                                        <a href='http://www.younginitiative.org/'><div class='image' id='younginitiative'>Asociatia young initiative</div></a>
+                                        <a href='http://www.asjc.ro/'><div class='image' id='asjc'>Asjc</div></a>
+                                        <a href='http://osut.ro/'><div class='image' id='osut'>Osut</div></a>
+                                        <div class='clear'></div>
+                                    </div>
+                                    <div class='parteneri' id='parteneri_institutionali'>
+                                        <span class='floating_text' id='sponsori_text'>Sus&#539;in&#x0103;tori</span>
+                                        <a href='http://www.cartier.md/'><div class='image' id='cartier_logo'>Editura Cartier</div></a>
+                                        <a href='http://www.pll.md/ro/'><div class='image' id='biblio_logo'>Biblioteca publica de drept</div></a>
+                                        <span class='floating_text' id='institutii_text'>Parteneri institu&#539;ionali</span> 
+                                        <ul id='institutii'>
+                                            <!-- <span class='floating_text' id='institutii_text'>Parteneri institu&#539;ionali:</span> -->
+                                            <li><a href='http://www.politice.ro/'>Facultatea de &#536;tiin&#539;e Politice SNSPA </a></li>
+                                            <li><a href='http://www.comunicare.ro/'>Facultatea de Comunicare &#537;i Rela&#539;ii Publice SNSPA</a></li>
+                                            <li><a href='http://www.fspub.ro/'>Facultatea de &#536;tiin&#539;e Politice Universitatea Bucure&#537;ti</a></li>
+                                            <li><a href='http://www.filosofie.unibuc.ro/'>Facultatea de Filosofie Universitatea Bucure&#537;ti</a></li>
+                                            <li><a href='http://litere.unibuc.ro/'>Facultatea de Litere din Universitatea Bucure&#x015f;ti</a></li>
+                                            <li><a href='http://www.unibuc.ro/ro/fac_fsas_ro'>Facultatea de Sociologie Universitatea Bucure&#537;ti</a></li>
+                                            <li><a href='http://laws.uaic.ro/'>Facultatea de Drept Universitatea Alexandru Ioan Cuza Ia&#537;i</a></li>
+                                            <li><a href='http://www.uaic.ro/uaic/bin/view/Academic/Filosofie'>Facultatea de Filosofie si &#536;tiin&#539;e Social Politice Universitatea AIC Ia&#537;i</a></li>
+                                            <li><a href='http://www.upa.ro/'>Facultatea de Drept si Facultatea de &#x015e;tiin&#x0163;e Politice si Administrative Universitatea Petre Andrei Ia&#x015f;i</a></li> 
+
+                                            <li><a href='http://www.ubbcluj.ro/'>Universitatea Babe&#537;-Bolyai Cluj Napoca</a></li>
+                                            <li><a href='http://www.uvt.ro/'>Universitatea de Vest Timi&#537;oara</a></li>
+                                            <li><a href='http://www.upt.ro/'>Universitatea Politehnica Timi&#537;oara</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class='parteneri' id='parteneri_media'>
+                                        <span class='floating_text' id='media_text'>Parteneri media</span>
+                                        <a href='http://www.hotnews.ro/'><div class='image' id='hotnews'>HotNews</div></a>
+                                        <!-- <a href='http://www.lumebuna.ro/'><div class='image' id='lumebuna'>Lume Buna</div></a> -->
+                                        <a href='http://www.romaniapozitiva.ro/'><div class='image' id='romaniapozitiva'>Romania Pozitiva</div></a>
+                                        <a href='http://totb.ro/'><div class='image' id='thinkoutsidethebox'>Think Outside The Box</div></a>
+                                        <a href='http://www.facebook.com/carevasazica.vip'><div class='image' id='carevasazica'>Carevasazica</div></a>
+                                        <a href='http://www.studentie.ro/'><div class='image' id='studentiero'>Studentie.ro</div></a>
+                                        <a href='http://startub.unibuc.ro/'><div class='image' id='startub'>startub.unibuc.ro</div></a>
+                                        <!-- <a href='http://www.tvr.ro/tvr_cluj.php'><div class='image' id='tvrcluj'>Tvr Cluj</div></a> -->
+                                        <!-- <a href='http://www.radiotransilvania.ro'><div class='image' id='radiotransilvania'>Radio Transilvania</div></a> -->
+                                        <a href='http://iasifun.ziaruldeiasi.ro/'><div class='image' id='iasifun'>Iasi fun</div></a>
+                                        <a href='http://www.ziaruldeiasi.ro/'><div class='image' id='ziaruldeiasi'>Ziarul de Iasi</div></a>
+                                        <a href='http://www.kissfm.ro/timisoara'><div class='image' id='kissfm'>KissFm</div></a>
+
+                                        <div class='clear'></div> 
+                                    </div>
+                                    <div class='clear'></div>
+
+                                </div>	
+                            </div>	<!-- end wrap -->
+                            <div id='footer_mare'>
+                                <div id='footer'>
+                                    <div id='links' class='footer'>
+                                        <div id='menu1' style='margin:auto;'> <ul id='meniu_prinicpal'><li><a href='../../../contacte/index.html'> Contact </a></li>
+<li><a href='../../../clubdebate/index.html'> Cluburile </a></li>
+<li><a href='../../../oamenii/index.html'> Oamenii </a></li>
+<li><a href='../../../proiectul/index.html'> Proiectul </a></li>
+<li><a href='../../../home/index.html'> Acasa </a></li>
+</ul></div><!--end menu-->
+                                    </div><!--
+                                    <div id='contact' class='footer'>
+                                            <h4>Contact</h4>
+                                            <p>office@closer2oxford.ro</p>
+                                            <p>bogdan.draghicescu@closer2oxford.ro<br>
+                                            <span class='detalii'> (asistenta tehnica web - orice probleme legate de site)</span></p>
+                                    </div>
+                                    -->
+                                    <div id='newsletter' class='footer'>
+                                        <script src="../../../../../connect.facebook.net/en_US/all.js#xfbml=1"></script><fb:like href="http://www.facebook.com/pages/Closer2Oxford/162758797069605" width="250" colorscheme="dark"></fb:like>
+                                        <!--<h4>Newsletter</h4>
+                                        <form action='/page/newsletter'>
+                                                <input type='text' name='email'>
+                                                <input type='submit' id='submit' value='>'>
+                                                        
+                                        </form>-->
+                                    </div>
+                                    <div id='credits'>
+                                        Copyright(c) 2021 ARDOR |  Toate drepturile rezervate | Toate logo-urile si sloganurile de pe site sunt proprietate intelectuala inregistrata si nu pot fi reproduse fara acordul explicit al detinatorilor. <br>
+                                            <br /><br />
+                                            <b>Disclaimer</b><br /><i>
+
+                                                Programul educational Closer to Oxford este un program non-profit si nu are o legatura cu universitatea cu acelasi nume, referirea la Oxford avand doar o semnificatie simbolica.
+                                            </i>
+                                    </div>
+
+                                </div>		
+                            </div>		
+
+                            <div id="finantatde">Acest proiect este finantat cu sustinere din partea Comisiei Europene. Aceast publicatie [comunicare] reflecta doar
+                                vederile autorului, iar Comisia nu poate fi facuta  responsabila pentru utilizarea informatiei pe care o contine.</div>
+
+
+                        </body>
+                        </html>

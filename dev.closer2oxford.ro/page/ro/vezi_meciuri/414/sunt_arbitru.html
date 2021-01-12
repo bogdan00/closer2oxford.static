@@ -1,0 +1,598 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml-strict.dtd">
+<HTML xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+    <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+            <link rel="icon" type="image/png"  href="../../../../../closer2oxford.ro/favicon.html">
+                <link rel="stylesheet" href="../../../var/layout.css" type="text/css">
+                    <title>Closer to Oxford - e timpul pentru argumente!</title>
+                    <link rel="alternate" type="application/rss+xml"  href="../../../rss_feed" title="Stiri Closer2Oxford">
+                        <!-- <link rel="image_src" property="og:image"  href="/images/layout/closer2oxford_fb_white.png" /> -->
+                        <link rel="image_src" property="og:image"   type="image/jpeg"  href="../../../../uploads/2015/06/9/facebook_icon.html" />
+                        <link rel="image_src" type="image/jpeg"  href="../../../../uploads/2015/06/9/icon-facebook.gif" /> 
+						<meta name="description" content="Closer2Oxford pune în valoare oameni şi argumentele lor, în dezbateri online şi publice alături de tineri şi invitați avizaţi"/>
+                        <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9" />
+<script type='text/javascript' src='../../../../js/jquery-1.4.4.min.js'></script>
+<script>var $j = jQuery.noConflict();</script>
+<script type='text/javascript' src='../../../../js/tinymce/tiny_mce.js'></script>
+<script type='text/javascript' src='../../../../js/jquery.form.js'></script>
+<script type='text/javascript' src='../../../../js/fbLoginRegister.js'></script>
+<script type='text/javascript' src='../../../var/javascript.js'></script>
+<script type='text/javascript' src='../../../../js/jquery.hovertip-1.0.min.js'></script> 
+<script type='text/javascript' src='../../../../js/jquery.jgrowl_minimized.js'></script> 
+<link rel='stylesheet' href='../../../../css/jquery.jgrowl.css' media='screen' type='text/css'> 
+<script type='text/javascript' src='../../../../js/jquery.timer-min.js'></script> 
+<style>.hovertip{
+    position:absolute;
+    padding:10px 13px;
+    z-index:2;
+    max-width:300px;
+    color:#303030;
+    background-color:#f5f5b5;
+    border:1px solid #DECA7E;
+    font-family:sans-serif;
+    font-size:12px;
+    line-height:18px;
+    text-align:left;
+    }
+           .normal_text ol,.normal_text ol *{text-align:left !important}
+           .normal_text *{font-weight:normal !important;font-size:12px !important;font-face:tahoma !important}</style> 
+<script type='text/javascript'>$j(document).ready(function(){$j('.tooltip').hovertip({'offset':[20,20]});get_notif();});
+
+if(!Array.indexOf){Array.prototype.indexOf = function(obj){for(var i=0; i<this.length; i++){if(this[i]==obj){return i;}}return -1;}}
+    hashuri = [] ;
+	 var tick_timer= 3000 ;
+ 
+	 function get_notif()
+        {
+		  
+		  //console.log(tick_timer);
+	     
+		  setTimeout(get_notif,tick_timer);
+        
+		   $j.ajax(
+            {
+                url: '/page/notif/show_events',
+                dataType: 'json',
+                data: "{}",
+                success: function(data)
+                    {
+                    $j.each(data,function(index,data){
+                        try
+                            {
+                            if( hashuri.indexOf(data.hash) == -1 )
+                                {
+                                hashuri.push(data.hash);
+                                $j.jGrowl(
+                                    data.str,
+                                    {
+                                        corners:'1px',
+                                        life: data.life,
+                                        header:data.title,
+                                        hash: data.hash,
+                                        sticky: data.sticky,
+                                        close: function(e,m,o)
+                                            {
+                                                $j.ajax({url:'/page/notif/delete_single_event/' + o.hash});
+                                            }
+                                    });
+                                }
+                            }
+                        catch(e){}
+                        })
+                    }
+            });
+        }
+	 </script> 
+ 
+                            
+  <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-19111721-1']);
+  _gaq.push(['_setDomainName', '.closer2oxford.ro']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+    
+                        </head>
+                        <body>
+                            <div id="global_wrap">
+                                <div id="header">
+                                    <a href='../../../../index.html'><div id='logo'><img src='../../../../images/layout/sigla.jpg'></div></a>
+                                    <a class='noExternal' href='http://www.facebook.com/pages/Closer2Oxford/162758797069605'><img src='../../../../images/fb.png' style='height:30px;float:right;clear:right;margin:10px 5px 5px 5px;border:none;'/></a>
+                                    <a href='../../../rss_feed'><img src='../../../../images/feed-icon.png' style='height:30px;float:right;clear:right;margin:5px;border:none;'/></a>
+                                </div>
+                                <div id="meniu">
+                                    <div  id='register_login'>
+
+                                        
+  <a href='#' class='todo' id='login'>Login </a> &nbsp;<a href='../../../register.html' class='todo' id='register'>Register</a>
+    <div id='login_box'>
+		  <form action='https://dev.closer2oxford.ro/page/ro/login_user/logon' method='post' id='user_login_form'>
+					 <div>Email: <input type='text' name='email'/> </div><br />
+					 <div>Pass: <input type='password' name='passwd'/></div><br />
+					 <a href='#' class='password_forgot'>forgot password?</a>
+					 <input type='hidden' value='/page/ro/vezi_meciuri/414/sunt_arbitru' name='returnto' class='submiter'/><br />
+					 <input type='submit' value='login' name='btn' class='submiter'/><br />
+		  </form>
+		  
+		  <form action='https://dev.closer2oxford.ro/page/ro/login_user/reset_user_pw' method='post' id='user_reset_form'>
+					 <div>Email: <input type='text' name='email'/> </div><br />
+					 <a href='#' class='password_forgot'>login?</a>
+					 <input type='hidden' value='/page/ro/vezi_meciuri/414/sunt_arbitru' name='returnto' class='submiter'/><br />
+					 <input type='submit' value='reset' name='btn' class='submiter'/><br />
+		  </form>
+		  
+    </div>
+    
+                                    </div>
+                                    <div id='menu1' style='margin:auto;'> <ul id='meniu_prinicpal'><li><a href='../../../contacte/index.html'> Contact </a></li>
+<li><a href='../../../clubdebate/index.html'> Cluburile </a></li>
+<li><a href='../../../oamenii/index.html'> Oamenii </a></li>
+<li><a href='../../../proiectul/index.html'> Proiectul </a></li>
+<li><a href='../../../home/index.html'> Acasa </a></li>
+</ul></div><!--end menu-->
+                                </div>
+                                <div id="main"> 
+                                    <!--<div id='stiri-padding'>
+        <div id='stiri_back'>
+                {stiri} 
+    
+               
+        </div>-->
+        
+</div>
+<div  id="content-padding">
+        <div id='sidebar_menu'>
+                <span class='tr'></span>
+                <span class='tl'></span>
+                <span class='br'></span>
+                <span class='bl'></span>
+                <span id="filler"></span>
+                    
+                <ul></ul>
+                
+                <div class='clear'></div>
+        </div>
+        <div id="content">
+                <span class='tr'></span>
+                <span class='tl'></span>
+                <span class='br'></span>
+                <span class='bl'></span>
+                <span id="filler"></span>
+                  <script>
+        $j(document).ready(function(){
+        $j('.discurs_toggler').toggle(
+                function(){
+                $j(this).attr('src', '../../../../images/little_stuff/16-em-down.png');   
+                $j(this).parent().next('.discurs').hide('fast');
+                },
+                function(){
+                $j(this).attr('src', '../../../../images/little_stuff/16-em-up.png');
+                $j(this).parent().next('.discurs').show('fast');
+                });
+            });
+        </script><style>.nowrap{white-space: nowrap;}
+		.noJustify{text-align:left;}
+		</style><h2 class='noJustify'><span class='nowrap'>'Marius si Denisa'</span> <span class='notif'>(afirmatori)</span> vs <span class='nowrap'>'Maria si Săvuţă'</span> <span class='notif'>(negatori)</span></h2><h3>A1 (Denisa Vlasceanu) <img src='../../../../images/little_stuff/16-em-up.png' class='discurs_toggler'></h3>
+            <div class='discurs normal_text'><p>  &Icirc;n societatea contemporană, drepturile și libertățile individului constituie un centru de interes și de dezbatere pentru &icirc;ntreaga populație. &Icirc;n calitate de Afirmatori, considerăm că libertatea de exprimare nu trebuie să includă dreptul de a ofensa religia. Pentru a ne susține poziția vom aduce următoarele definiții și argumente:</p>
+<ul>
+<li><strong>Libertatea</strong>: posibilitatea de a acționa după propria voință      sau dorință.<a  href="#94ef1">[1]</a>&nbsp;      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;      &nbsp;</li>
+<li><strong>Dreptul</strong>: prerogativă legal recunoscută unei persoane de      a avea o anumită conduită.&nbsp;<a  href="#94ef2">[2]</a></li>
+</ul>
+<p>Pentru a evita confuzia, menționăm că dreptul și libertatea sunt două lucruri distincte. Libertatea este planul interior &icirc;n care existăm ca persoane cu identități diferite. Dreptul este unanim acceptat și universal valabil, presupun&acirc;nd o serie de obligații. Un drept nu este dec&acirc;t o limită a unei &icirc;ndatoriri, iar o libertate este doar limita responsabilă a fiecăruia.</p>
+<ul>
+<li><strong>Libertatea de exprimare</strong>: Orice persoană are dreptul la libera exprimare. Exercitarea acestor      libertăți ce comportă &icirc;ndatoriri și responsabilități poate fi supusă unor      formalități, condiții, sancțiuni prevăzute de lege.<a  href="#94ef3">[3]</a></li>
+<li><strong>Religia</strong>: sistem      de credințe și practici privind divinitatea care &icirc;i unește, &icirc;n aceeași      comunitate spirituală și morală, pe toți cei care aderă la aceasta.<a  href="#94ef4">[4]</a></li>
+<li><strong>A ofensa</strong>: a &icirc;njosi prin vorbe sau prin purtare nedemnă; a      jigni.<a  href="#94ef5">[5]</a></li>
+</ul>
+
+<p><em>1.Dreptul la libera exprimare &icirc;ncetează dacă ofensează libertatea religioasă a celuilalt. &nbsp;&nbsp;</em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Odată cu dob&acirc;ndirea unui drept și exercitarea acestuia, există și obligații ce incumbă lui. P&acirc;nă la urmă, democrația presupune și impunerea unor limite, absolut necesare pentru stabilirea unei ordini sociale. Astfel, orice drept &icirc;ncetează acolo unde prin exercitarea lui s-ar &icirc;ncălca dreptul altei persoane.</p>
+<p> &Icirc;n 2015 la&nbsp; Paris, mulți jurnaliști de la Charlie Hebdo au fost omor&acirc;ți &icirc;n urma publicării unor caricaturi ce satirizau simboluri religioase. Tocmai prin acest caracter umilitor la adresa unei confesiuni, s-a adus o jignire celor mai intime convingeri, fiindu-le &icirc;ncălcat dreptul la conștiința religioasă, regăsit și &icirc;n Declarația Universală a Drepturilor Omului (Art.18).<a  href="#94ef6">[6]</a>&nbsp;Mai mult, &icirc;n 2009, Consiliul pentru Drepturile Omului al Națiunilor Unite a adoptat Rezoluția privind defăimarea religioasă<a  href="#94ef7">[7]</a>, conform căreia, defăimarea religiei este o violare a drepturilor. Rezoluția &icirc;ncurajează dialogul interconfesional, aici intervenind și modalitatea &icirc;n care un individ &icirc;și exercită dreptul la libera exprimare. Orice om este liber să &icirc;şi exprime civilizat dezacordul şi chiar să contraargumenteze dar o opinie personală menită să lezeze in mod flagrant, este ofensatoare. O distincţie &icirc;ntre dreptul de a te exprima &icirc;mpotriva unor idei religioase şi lipsa de respect faţă de simbolurile unor confesiuni religioase este necesară, fapt ce ne duce la enunțarea celui de-al doilea argument.</p>
+<p><em>2.Libertatea de exprimare nu este mai presus de libertatea religiilor deoarece libertățile nu se pot clasifica.</em>&nbsp;&nbsp;</p>
+<p> Cum libertatea intră adesea &icirc;n conflict cu alte valori pe care societatea le consideră importante la momentul respectiv, acest lucru poate rezulta &icirc;ntr-o limitare a libertății. Trebuie să &icirc;nceteze libertatea mea de a mă exprima acolo unde &icirc;ncepe libertatea de religie a altuia? O soluție implică recunoașterea celuilalt, ca persoană egală &icirc;n statut și-n drepturi. Adesea, lipsa de recunoaștere duce la diverse forme de discriminare. Faptul că o persoană nu &icirc;i recunoaște Dumnezeul alteia nu o &icirc;mpiedică pe aceasta să &icirc;și exercite libertatea de religie și de expresie, at&acirc;ta timp c&acirc;t nu &icirc;i obstrucționează accesul la diverse forme de viață religioasă, interzic&acirc;nd mersul la biserică sau rugăciunea, dar și at&acirc;ta timp c&acirc;t nu &icirc;i compromite demnitatea acesteia. Reamintim &icirc;n acest sens Constituția Rom&acirc;niei(Art.30).<a  href="#94ef8">[8]</a></p>
+<p><em>3.Libertatea de exprimare trebuie să includă autocenzura și integrarea multiculturală.</em></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Religia are o parte intimă,&nbsp;str&acirc;ns legată de personalitatea și credința fiecărui om. Orice ofensă se poate răsfr&acirc;nge tocmai asupra acelor convingeri intrinseci ale unei persoane, care, simțindu-se jignită, poate reacționa &icirc;ntr-o manieră asemănătoare. Deseori, aceste situații iau naștere din pricina diversității culturilor și a religiilor. &Icirc;n cazul Charlie Hebdo, tocmai această diversitate, dar mai ales lipsa toleranței și &icirc;nțelegerea greșită a libertății de exprimare (jignirea flagrantă a simbolurilor Islamului) a dus la deznodăm&acirc;ntul nefericit. Astfel, libertatea (de exprimare) exercitată greșit, fără nicio restricție, duce la asemenea incidente, chiar la haos.</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Deși &icirc;n zilele noastre jignirile aduse unei religii, numite &icirc;n termeni ecleziastici blasfemii, nu se mai pedepsesc cu moartea, religiile vestice cer o oarecare cenzură și chiar o pedeapsă pentru cei ce aduc asemenea ofense. &Icirc;n 2006, Senatul Statelor Unite ale Americii a adoptat un act ce incriminează ofensele, pentru a &icirc;mpiedica discriminarea pe bază de sex, rasă sau religie. Alte state, precum Marea Britanie, incriminează de asemenea, orice ofensă adusă religiei.</p>
+<p> &Icirc;n concluzie, dorim sa reafirmăm că libertatea de exprimare trebuie exercitată cu anumite limite, auto-impuse sau impuse prin legislație. Libertatea de expresie nu este mai presus de libertatea religiilor sau de orice altă libertate, &icirc;ntruc&acirc;t nu le putem prioritiza. Din acest motiv, libertatea de exprimare ar trebui să includă limite ale bunului simț care, fiind respectate, vor ajuta la menținerea coeziunii, toleranței, integrării sociale și culturale.</p><!-- marcator referinte --><div>
+<p><a  name="94ef1">[1]</a>&nbsp;DEX- Dicționarul explicativ al limbii rom&acirc;ne, 1998</p>
+</div>
+<div>
+<p><a  name="94ef2">[2]</a>&nbsp;Idem.</p>
+</div>
+<div>
+<p><a  name="94ef3">[3]</a>&nbsp;Declaraţia Universală a Drepturilor Omului, art.19&nbsp;</p>
+</div>
+<div>
+<p><a  name="94ef4">[4]</a>&nbsp;DEX- Dicționarul explicativ al limbii rom&acirc;ne, 1998</p>
+</div>
+<div>
+<p><a  name="94ef5">[5]</a>&nbsp;NODEX- Noul dicționar explicativ al limbii rom&acirc;ne, 2002</p>
+</div>
+<div>
+<p><a  name="94ef6">[6]</a>&nbsp;Declarația Universală a Drepturilor Omului, art.18</p>
+</div>
+<div>
+<p><a  name="94ef7">[7]</a>&nbsp;Rezoluția privind defăimarea religiilor, ONU, 2009</p>
+</div>
+<div>
+<p><a  name="94ef8">[8]</a>&nbsp;Constituția Rom&acirc;niei, art. 30, alin. 6 și 7</p>
+<p><a  name="94ef8">[9]</a>&nbsp;Autor necunoscut, 2 iunie 2007, Diferența dintre libertate și drept, articol disponibil la:&nbsp;http://www.juridice.ro/28803/diferenta-dintre-libertate-si-drept.html</p>
+<p><a  name="94ef8">[10]</a>&nbsp;Necula Marius, 2008, Dreptul la defăimare, articol disponibil la: http://semneletimpului.ro/necategorisite/dreptul-la-defaimare.html</p>
+<p><a  name="94ef8">[11]</a>&nbsp;David Nash, Blasphemy in the Christian World. A History, Oxford University Press, 2007</p>
+<p><a  name="94ef8">[12]</a>&nbsp;Autor necunoscut, 25 martie 2011, Free Speech:Defusing the defamation issue, The Economist, articol disponibil la:&nbsp;http://www.economist.com/blogs/newsbook/2011/03/free_speech</p>
+</div>
+</div><hr><h3>N1 (Săvuţă Maria) <img src='../../../../images/little_stuff/16-em-up.png' class='discurs_toggler'></h3>
+            <div class='discurs normal_text'><p>Dreptul la liberă exprimare nu poate fi supus niciunui fel de cenzură.</p>
+<p>&Icirc;n primul argument al echipei afirmatoare aceasta a adus &icirc;n discuţie faptul că &bdquo;Dreptul la libera exprimare &icirc;ncetează dacă ofensează libertatea religioasă a celuilalt&rdquo;.</p>
+<p>Libertate religioasă &icirc;nseamnă dreptul de a practica o religie, libera exprimare nu ofensează dreptul la libertitate religioasă. Libertatatea de exprimare nu aduce nicio ofensă directă persoanelor care practică anumite religii. Nu este necesară cenzura anumitor persoane doar pentru a proteja eventualele interese ale altola. &Icirc;ntr-o societate democratică, unul din principiile de bază este dreptul la liberă exprimare.</p>
+<p>Echipa afirmatoare a invocat de asemenea evenimentul nefericit de la Paris, &icirc;n care au fost ucişi mai mulţi jurnalişti. &Icirc;nsă acesta este un caz carticular si pe cale de consecinta nu trebuie generalizat, iar pe de altă parte, fata de cele expuse anterior, nu intelegem relevanta acestui exemplu. Nu credem ca o presupusa ofensa adusa religiei poate da nastere unor acte violente. Mai mult decat atat, exista dreptul la replica care se circumscrie dreptului la libera exprimare.</p>
+<p>In plus, caricaturile, satira sunt o formă de liberă exprimare acceptată, prin faptul că ele nu atacă persoane sau principii, ci au rolul de a atrage atenţia &icirc;ntr-un alt mod asupra unor aspecte cotidiene ale societatii.</p>
+<p>Totodată s-a subliniat faptul că libertatea de exprimare trebuie să includă autocenzura și integrarea multiculturală.</p>
+<p>S-ar mai putea numi &icirc;nsă libertate de exprimare dacă ar fi supusă cenzurii?</p>
+<p>Conflicte au existat &icirc;ntotdeauna pe teme religioase, etnice, iar cenzurarea libertăţii de exprimare nu este o soluţie care să &icirc;mpiedice aceste incidente.</p>
+<p>Să ne g&acirc;ndim care ar fi rezultatul dacă fiecare persoană care nu este de acord cu opinia alteia şi cu felul acesteia de a o exprima, ar protesta şi ar cere cenzurarea acesteia.</p>
+<p>Libertatea de exprimare a fost instituita cu scopul de a facilita buna funcţionare a unei societăţi democratice.</p>
+<p>Pe de alta parte, consideram ca dreptul la libera exprimare ar trebui sa includa dreptul de a ofensa religii:</p>
+<ol>
+<li>Democratizarea şi laicizarea societăţii sunt cele care asigură progresul.</li>
+</ol>
+<p>Trebuie să ţinem cont de faptul că societatea a ajuns la acel nivel al dezvoltării &icirc;n care primează anumite drepturi şi valori.</p>
+<p>Această societate a fost &icirc;nsă construită pe anumite principii (iluministe am putea preciza) ce ţin de un proces de democratizare şi laicizare a societăţii, iar libertatea de exprimare a jucat un rol esenţial &icirc;n această privinţă. Astfel, art. 11 din Carta Drepturilor Fundamentale a Uniunii Europene<a  href="#f0d41">[1]</a> prevede că: &bdquo;<em>Oricine are dreptul la libertatea de expresie. Acest drept include libertatea de a avea opinii şi de a primi şi a transmite informaţii şi idei fără interferenţa autorităţilor publice şi indiferent de graniţe. Libertatea şi pluralismul media trebuie respectat</em>.&rdquo;</p>
+<p>2. &nbsp;De aceea, libertatea de exprimare nu trebuie supusă autocenzurii.</p>
+<p>Libertatea de exprimare are ca principală caracteristică faptul că ea nu trebuie supusă niciunui fel de cenzura de către nicio autoritate, după cum spune şi Carta Drepturilor Fundamentale. Prin cenzurarea acesteia din cauza faptului că ar ofensa anumite religii (ceea ce nu se &icirc;nt&acirc;mplă &icirc;n mod direct) s-ar &icirc;ncalca ratiunea acestui drept, prin urmare dreptul la liberă exprimare &icirc;n sine, ar fi limitat. Astfel, s-ar ajunge &icirc;n situaţia &icirc;n care un drept (de liberă practicare a religiei) devine mai important dec&acirc;t altul (dreptul la liberă exprimare), ceea ce, după cum a spus şi echipa afirmatoare nu este posibil. &Icirc;n cazul libertăţii de exprimare &icirc;nsă, nu este &icirc;ncălcat dreptul de practicare a unei religii, &icirc;ntruc&acirc;t practicanţii religiei respective pot alege să ignore anumite mesaje pe care la consideră ofensatoare. &Icirc;n plus, să nu uităm situaţia regimurilor totalitare (sau a celor extremiste religioase din prezent) &icirc;n care libertatea de exprimare este cenzurată.</p>
+<p>3. A te simţi ofensat este un fapt subiectiv.</p>
+<p>Pornind de la definiţia verbului a ofensa intelegem că acesta se refera la un aspect subiectiv, ce ţine de propria persoană. Nu tot ceea ce poate fi considerat ofensator de către alte persoane ar trebui cenzurat şi interzis, &icirc;ntruc&acirc;t acest lucru nu se aplică &icirc;ntr-o societate democratică.</p>
+<p>Mai mult decat atat, trebuie aratat faptul ca nu se produce un dezechilibru prin neimpunearea unei restrictii in ceea ce priveste libera exprimare in general, cu referire la religie in special, in acest sens, Codul civil<a  href="#f0d42">[2]</a> creand un cadru legal in vedera exercitarii si protejarii drepturilor cetatenilor prin art. 70 coroborat cu art. 75, respectiv art. 255.</p>
+<p>Astfel, considerăm că societatea a atins un nivel al dezvoltării &icirc;n care drepturile precum libertatea de exprimare trebuie să fie considerate valori fundamentale, ce nu trebuie constr&acirc;nse.</p>
+<div><br /> 
+<hr size="1" />
+<div>
+
+</div>
+</div><!-- marcator referinte --><div>
+<div>
+<p><a  name="f0d41">[1]</a>&nbsp;<strong>Carta drepturilor fundamentale a Uniunii Europene</strong>&nbsp;a fost proclamată de către&nbsp;<a title="Comisia Europeană" href="https://ro.wikipedia.org/wiki/Comisia_Europeană">Comisia Europeană</a>,<a title="Parlamentul European" href="https://ro.wikipedia.org/wiki/Parlamentul_European">Parlamentul European</a>&nbsp;și&nbsp;<a title="Consiliul Uniunii Europene" href="https://ro.wikipedia.org/wiki/Consiliul_Uniunii_Europene">Consiliul Uniunii Europene</a>&nbsp;la data de 7 decembrie 2000, &icirc;n cadrul&nbsp;<a title="Consiliul European" href="https://ro.wikipedia.org/wiki/Consiliul_European">Consiliului European</a>de la&nbsp;<a title="Nisa" href="https://ro.wikipedia.org/wiki/Nisa">Nisa</a></p>
+</div>
+<div>
+<p><a  name="f0d42">[2]</a>&nbsp;Legea nr. 287/2009 a fost publicată &icirc;n Monitorul Oficial al Rom&acirc;niei, Partea I, nr. 511 din 24 iulie 2009, a fost modificată prin Legea nr. 71/2011 şi rectificată &icirc;n Monitorul Oficial al Rom&acirc;niei, Partea I, nr. 427 din 17 iunie 2011 şi &icirc;n Monitorul Oficial al Rom&acirc;niei, Partea I, nr. 489 din 8 iulie 2011.</p>
+</div>
+</div>
+</div><hr><h3>A2 (Marius Brabete) <img src='../../../../images/little_stuff/16-em-up.png' class='discurs_toggler'></h3>
+            <div class='discurs normal_text'><p>Așa cum am expus &icirc;n primul discurs, trebuie avută &icirc;n vedere at&acirc;t o delimitare și o &icirc;nțelegere a conceptelor de libertate și drept, c&acirc;t și ce presupune exercitarea acestora.</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Precum a precizat echipa negatoare, simpla exercitare a libertății de exprimare nu afectează libertatea religioasă, acestea fiind la fel de importante. Ofensele &icirc;n sine, duse la extrem &icirc;n spiritul libertății de exprimare sunt cele care afectează nu numai persoanele, c&acirc;t și anumite categorii de persoane, care aparțin aceleași religii. Contrar echipei negatoare, noi nu susținem apărarea unor interese, ci doar apărarea și respectarea drepturilor fundamentale ale omului. Punerea semnului de egalitate &icirc;ntre interese și libertăți/ drepturi constituie o eroare ce alterează semnificația și importanța acestor termeni.</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Referitor la argumentul echipei negatoare conform căruia cazul jurnaliștilor francezi este irelevant, reamintim faptul că acesta a st&acirc;rnit un val de controverse și dezbateri &icirc;n cadrul opiniei publice din toată lumea. Acest lucru s-a datorat &icirc;ndeosebi actelor de violență, rezultate din neglijența asumării obligațiilor exercitării liberei exprimări și din cauza ineficienței mecanismelor legale existente &icirc;n Franța, ce incriminează instigarea la ură și discriminarea religioasă; cumulativ, aceste &icirc;mprejurări pot duce la crearea unui precedent periculos, dacă nu sunt luate măsuri.</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Deși caricaturile și satira sunt forme de exprimare acceptate și utilizate din ce &icirc;n ce mai des de media, acestea au adesea un conținut umilitor/ofensator și exced de multe ori rolul de a atrage atenția asupra unor probleme cotidiene. Suntem de părere ca există și alte moduri mai eficiente de a pune &icirc;n discuție aceste aspecte citadine (e.g. dezbaterile, studiile de caz, articolele, campaniile, etc).</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &Icirc;n ceea ce privește primul argument, &nbsp;o societate modernă se bazează &icirc;ntr-adevăr pe principii de democrație și libertate, ce trebuie respectate și nu impuse, la fel cum nu trebuie să se impună nici ingrădirea religioasă sau de expresie. Cele două libertăți (nu drepturi) se pot exercita &icirc;n funcție de subiectivitatea fiecărui individ at&acirc;ta timp c&acirc;t acestea sunt pe picior de egalitate. Echipa noastră nu este de acord cu afirmația expusă de negatori conform careia &ldquo;<strong><em>&nbsp;primează anumite drepturi şi valori&rdquo;&nbsp;</em></strong>deoarece gradul de dezvoltare al unei societăți este influențat și de promovarea egalității și a toleranței. Mai mult, dacă ne referim la exprimarea liberă din punct de vedere legislativ atunci, statul are dreptul să acționeze după caz pentru restr&acirc;ngere unor libertăți (art. 53 Constituția Rom&acirc;niei), <a  href="#50151">[1]</a>pentru protejarea și susținerea TUTUROR drepturile cetățenilor (Constituția Rom&acirc;niei, art. 1). &nbsp;De asemenea, accentul se pune pe&nbsp;<em>respectare</em>&nbsp;și nu neapărat pe impunere căci dacă s-ar respecta libertatea religioasă (aducerea de ofense fiind o violare a acestui drept) impunerea nu și-ar mai avea rostul.</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; C&acirc;t despre cel de-al doilea argument expus de negatori, simțim nevoia să aducem o clarificare asupra diferențierii termenilor de cenzură, pe de-o parte și autocenzură, pe de alta. Astfel, cenzura presupune acțiunea unei autorități publice și este interzisă at&acirc;t de Carta Drepturilor Fundamentale <a  href="#50152">[2]</a>(art. 11), c&acirc;t și de Constituția Rom&acirc;niei (art. 30, alin.2). Prin poziția adoptată &icirc;n conținutul primului nostru discurs, nu am susținut cenzura, ci autocenzura, care presupune o serie de criterii intrinseci, bazate pe moralitate și conștiință, care emană din fiecare dintre noi. După cum echipa negatoare a pus problema ignorării ofenselor de către destinatarii acestora, &icirc;n speță, practicanții unei religii, putem afirma faptul că acest principiu se poate aplica și celor care lansează anumite ofense. Acest lucru ar duce la diminuarea conflictelor elimin&acirc;nd cauza existenței acestora. &nbsp;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; De asemenea, susținem ideea că, pentru a garanta respectarea drepturilor și libertăților, statele pot și chiar au adoptat legi care incriminează instigarea la ură sau ofensa unui cult religios. Chiar și Statele Unite ale Americii, considerate a avea cea mai puternică legislație constituțională &icirc;n raport cu libertatea de expresie, admit că există niște limite ale libertății. &nbsp;&nbsp;&nbsp;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pentru cel de-al treilea argument al negatorilor reamintim că definiția verbului a ofensa expusă de noi nu precizează clar aspectul subiectiv ci evidențiază injosirea verbală sau comportamentală a celui care ofensează. Daca negatorii consideră că cel care primeste ofensa dă dovadă de un subiectivism &nbsp;exagerat atunci si cel care ofensează se consideră &icirc;n aceeasi masură subiectiv.</p>
+
+<p><em>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &Icirc;n toate argumentele anterioare am susținut mai multe idei: &nbsp;limitele libertății noastre sunt trasate acolo unde &icirc;ncepe libertatea celuilalt; marea provocare a tuturor societăților e definirea zonei de libertăți &icirc;n raport cu zona de restricții. Limitarea unei&nbsp;<strong>libertăți&nbsp;</strong>nu este imperativă ci sugestivă și este in acord cu responsabilitățile care vin odată cu aceasta. Deși considerăm libertatea de exprimare importantă, aceasta trebuie exercitată ca orice libertate, cu anumite limite ,pentru a nu cădea &icirc;n capcana utopiei libertății de exprimare. Acele constr&acirc;ngeri (toleranța, autocenzura, bunul-simț) nu afectează statutul libertății de expresie, ca valoare fundamentală, ba mai mult o pune in relație cu alte valori de bază ale societății.</em></p>
+<div><br /> 
+<hr size="1" />
+<div>
+
+</div>
+</div>
+<!-- marcator referinte --><div>
+<p><a  name="50151">[1]</a>&nbsp;Constituția Rom&acirc;niei</p>
+</div>
+<div>
+<p><a  name="50152">[2]</a>&nbsp;Carta Drepturilor Fundamentale a Uniunii Europene</p>
+</div>
+</div><hr><h3>N2 (Maria) <img src='../../../../images/little_stuff/16-em-up.png' class='discurs_toggler'></h3>
+            <div class='discurs normal_text'><p>Opinia noastră este &icirc;n sensul că dreptul la liberă exprimare ar tebui să includă dreptul de a ofensă religii.</p>
+<p>Libertatea de exprimare este dreptul fundamental al omului de a spune ce g&acirc;ndește. Este un drept natural, ce ține de esența ființei umane, la fel ca dreptul la viață, la demnitate, fiind probabil și cel mai important drept pentru funcționarea unei societăți libere și democratice.</p>
+<p>Astfel, Dreptul internațional consideră libertatea de exprimare ca fiind regula, de aceea, limitările constituie excepția și sunt permise doar pentru a proteja interesul public, acesta referindu-se și la interesele legitime ale cetăţenilor, mai exact:</p>
+<ul>
+<li>drepturile sau reputația altora</li>
+<li>securitatea națională</li>
+<li>ordinea publică</li>
+<li>sănătatea publică</li>
+<li>morala publică.</li>
+</ul>
+<p>Recunoaşterea acestui drept, pe de o parte, şi exercitarea lui pe de altă parte, nu sunt de natură a st&acirc;rni atitudini violente. De exemplu, jurnaliştii si nu numai, ca si exponenţi ai acestui drept, sunt cenzuraţi &icirc;n &icirc;ndeplinirea profesiei lor de reguli specifice astfel &icirc;nc&acirc;t să fie asigurată ordinea de drept.</p>
+<p>Pe de altă parte, a vorbi despre cenzură &icirc;n chestiunea disputată, este un aspect ce se naşte &icirc;n mod normal &icirc;ntr-un stat de drept, care prin definite este garantul <a title="Libertate" href="https://ro.wikipedia.org/wiki/Libertate">libertăților</a> și drepturilor individuale, totodată, asigur&acirc;nd securitatea internă și externă a cetățenilor prin instituții democratice.</p>
+<p>&Icirc;n sens invers, a lasă acest fapt la aprecierea cetăţenilor, av&acirc;nd &icirc;n vedere diversitatea noastră individuală, echivalează cu a facilita crearea unui Turn Babel.</p>
+<p>Aşa fiind, şi, neprivind libertatea de exprimare &icirc;n mod individual sau altfel spus, fără a o scoate din contextul statal &icirc;n care această este exercitată, considerăm că s-a creat daja cadrul optim &icirc;n vederea valorificării acesteia, şi limitări precum neofensarea religiilor ar fi &icirc;nceputul unei de-democratizări.</p>
+<p>Pe cale de consecinţă, odată recunoscută libertatea de exprimare, este de la sine &icirc;nţeles că sunt liber să aleg şi modul &icirc;n care mă exprim, fie că o fac verbal sau printr-un desen, at&acirc;ta vreme c&acirc;t acea modalitate nu este interzisă de lege, pentru că astfel cum am precizat mai sus, libertatea de exprimare este doar un element al bunei guvernări a societăţii.</p>
+<p>Mai mult decat atat, libertatea de exprimare nu este importantă numai ca drept &icirc;n sine, ci și prin faptul că este esențială pentru respectarea altor drepturi fundamentale (acces la informații, libertatea politică, libertatea religioasă, drepturile minorităților naționale, sexuale etc).</p>
+<p>Astfel, trebuie avut &icirc;n vedere numărul de religii existente la acest moment &icirc;n lume, pe de o parte, iar pe de altă parte, modul &icirc;n care fiecare religie este exteriorizată de către practicanţii ei.</p>
+<p>&Icirc;n plus, pe baza aceloraşi considerente, putem &icirc;nţelege că, chiar &ldquo;religiile&rdquo; &icirc;ntre ele se pot ofensă prin diferenţele dintre acestea. Care este Soluţia &icirc;n această situaţie?</p>
+<p>De aceea, Curtea Europeană a Drepturilor Omului apreciază că libertatea de exprimare include &bdquo;nu numai informațiile și ideile primite favorabil sau cu indiferență de opinia publică ori considerate inofensive, dar și pe acelea care ofensează, șochează sau deranjează. Acestea sunt cerințele pluralismului, toleranței și spiritului deschis, fără de care nu există societate democratică&rdquo;.</p>
+<p>&Icirc;n concluzie, considerăm că libertatea de exprimare, garanta a unei societăţi democratice, este pe deplin reglemenetata &icirc;n vederea valorificării acesteia, iar o eventuală interdicţie de a ofensă religia reprezintă o &icirc;ncălcare semnificativă a acestui drept, si implicit a democraţiei.</p><!-- marcator referinte --><p>http://dexonline.ro/</p>
+<p>Constitutia Romaniei</p>
+<p>Carta Drepturilor Fundamentale a Uniunii Europene</p></div><hr><hr><h2>Decizia:</h2> <script>
+        $j(document).ready(function(){
+			$j('.decizie_toggler').toggle( 
+				function(){
+					$j(this).attr('src', '../../../../images/little_stuff/16-em-down.png');   
+					$j(this).parent().next('.decizie').hide('fast'); 
+                },
+                function(){
+					$j(this).attr('src', '../../../../images/little_stuff/16-em-up.png');
+					$j(this).parent().next('.decizie').show('fast'); 
+                } 
+			);
+		});</script><div class='decizie'><h3>Teo Oprea
+                <img src='../../../../images/little_stuff/16-em-up.png' class='decizie_toggler'></h3><div class='normal_text'><p><span id="docs-internal-guid-4bddcd36-8d3b-aee6-e6ba-e164d87071d8"> </p>
+<p dir="ltr">Voi incepe cu cateva sfaturi si observatii pentru fiecare participant la aceasta dezbatere:</p>
+<p dir="ltr">A1- Inteleg de ce si cum vrei sa faci distinctia intre libertate si drept, insa incercand sa explici aceste diferente este suficient sa utilizezi o singura fraza in loc sa folosesti exprimari ambigue, abstracte, precum&nbsp;: &rdquo;Un drept nu este dec&acirc;t o limită a unei &icirc;ndatoriri, iar o libertate este doar limita responsabilă a fiecăruia.&rdquo; [nu mi-e clar cum poate un drept sa fie o limita a unei indatoriri? Cred ca am inteles mai bine de la A2 ca limitele unui drept sunt conturate de obligatia corelativa de a respecta drepturile celorlalti in exercitarea propriilor noastre drepturi]. </p>
+<p dir="ltr">Argumentul 2 este surprins in esenta lui doar in titlu si slab sustinut de explicatie, care pare sa se refere la chestiuni similare celor cuprinse in argumentul 1, privitor la respectul drepturilor celorlalti &ndash; as fi fost asadar interesata sa aflu de ce nu exista, din perspectiva voastra, o posibilitate de ierarhizare sau cantarire a libertatilor fundamentale.</p>
+<p dir="ltr">Incercati sa pastrati aceleasi notiuni/termeni pe parcursul dezbaterii&nbsp;: libertatea de constiinta religioasa a fost inlocuit ulterior cu libertatea religiilor (&nbsp;?) si cu libertatea ideilor religioase. Dupa mine, acestea sunt libertati cu continut oarecum diferit, si ati dat ocazia echipei negatoare sa va atace spunand ca libertatea de exprimare nu impiedica sau afecteaza o parte dintre aceste continuturi (spre exemplu, libertatea de a crede si practica o credinta).</p>
+<p dir="ltr">N1 &ndash; Te sfatuiesc sa nu lansezi afirmatii radicale de genul &nbsp;&rdquo;Nu credem ca o presupusa ofensa adusa religiei poate da nastere unor acte violente.&rdquo; cu referire la un eveniment care ilustreaza tocmai o astfel de situatie, in care ofensa adusa unei religii a generat acte violente. &nbsp;O astfel de pozitie este extrem de dificil de aparat si pune echipa negatoare in postura de a demonstra ca libertatea de exprimare nu are nicio consecinta negativa, cand totusi discutia privitoare la posibilele consecinte ale necenzurarii discursului ofensator nu reprezenta neaparat un aspect important in dezbatere. Un afirmator abil ar fi profitat de aceasta ocazie ca sa arate cat de nerezonabil si nerealist pare discursul negator. A fost mult mai rezonabil sa afirmi ulterior ca &laquo;&nbsp;cenzurarea libertatii de exprimare nu este o solutie care sa impiedice aceste incidente&nbsp;&raquo;, dar as fi dorit si o explicatie mai profunda a acestei afirmatii, pertinente de altfel.</p>
+<p dir="ltr">Incercati sa pregatiti inca de la N1 un teren de argumentare coerent, care sa fie mentinut pe tot parcursul dezbaterii. Spre exemplu, prima afirmatie este &bdquo;Dreptul la liberă exprimare nu poate fi supus niciunui fel de cenzură.&rdquo;, insa ulterior in discursul N2 se admite faptul ca dreptul la libera exprimare poate fi limitat in baza prevederilor Constitutionale pentru protectia drepturilor sau reputatiei altora, securitate nationala etc.</p>
+<p dir="ltr">Daca doresti sa faci o distinctie intre cenzura si autocenzura, te rog precizeaza de la inceput care este pozitia voastra in raport cu cenzura, si separat cu privire la autocenzura - a proceda asa clarifica de la inceput motivele principale pentru care va opuneti motiunii.</p>
+<p dir="ltr">A2 &ndash; Discursul este fluid, identifica aspectele luate in dezbatere, dar nu aduce un raspuns foarte consistent cu privire la problemele si argumentele semnalate de negatori. Daca sustineti ca ofensele afecteaza categoriile de persoane cu apartenenta religioasa, ca cenzura este necesara pentru respectul drepturilor celorlalti, ar fi util sa expuneti, mai ales in ultimul discurs, dincolo de aceste afirmatii, ce inseamna a-ti asuma responsabilitatea liberei exprimari, mai concret - de ce e necesar ca fiecare persoana sa se autocenzureze in discursurile ofensatoare. Nu s-a abordat deloc in dezbatere care este natura, amploarea, consecintele manifestarilor ofensatoare, si cred ca ar fi fost necesar pentru a clarifica importanta cenzurii.</p>
+<p dir="ltr">Nu va lasati pacaliti de negatori in a discuta mai mult ideile propuse de ei, si mai putin asupra motiunii. Afirmatorii vin cu propunerea in aceasta dezbatere si trebuie sa arate necesitatea, justetea si ratiunea propunerii de a limita dreptul la libera exprimare.</p>
+<p dir="ltr">N2 - Aceleasi afirmatii absolute ca si la N1&nbsp;: &rdquo;&nbsp;Recunoaşterea acestui drept, pe de o parte, şi exercitarea lui pe de altă parte, nu sunt de natură a st&acirc;rni atitudini violente.&rdquo; Vezi observatiile de mai sus.</p>
+<p dir="ltr">Daca sustineti ca libertatea de exprimare este vitala pentru o societate democratica si care, drept urmare, nu trebuie cenzurata, cum explici exceptiile prevazute de Constitutie? De ce nu s-ar incadra si ofensa adusa unei religii la protectia drepturilor altora sau la ordine publica? Aceste discutii trebuie clarificate in ultimul discurs, pentru a intelege de ce afirmatiile ofensatoare trebuie sa fie mentinute si permise.</p>
+<p dir="ltr">Nu mentionati informatii fara sa explicati si la ce va servesc. Spre exemplu, mentionezi faptul ca libertatea de exprimare este un drept care permite respectarea si exercitarea altor drepturi, iar apoi, cu o conjuctie &bdquo;astfel&rdquo;, imi spui: &bdquo;Astfel, trebuie avut &icirc;n vedere numărul de religii existente la acest moment &icirc;n lume, pe de o parte, iar pe de altă parte, modul &icirc;n care fiecare religie este exteriorizată de către practicanţii ei.&rdquo; Nu este evidenta nici legatura cu cele afirmate mai sus, nici continutul acestei afirmatii, si nici importanta ei. Orice element introdus in dezbatere trebuie sa fie relevant, explicat (care e numarul de religii, cum se exteriorizeaza practicantii acestora? Care e rezultatul? Forme foarte diverse de exprimare, de valori, eventual conflicte de ideologie chiar in interiorul aceleiasi religii etc.) si legata de sustinerile voastre principale cu privire la motiune. Nu este rezonabil sa lasi arbitrul sa presupuna ce doresti sa exprimi si nici nu e in avantajul vostru daca arbitrul intelege gresit. Arbitrul poate sa gandeasca mai departe de ceea ce scrieti si poate sa faca legaturi intre argumente si implicatii, dar nu poate sa se substituie echipelor in precizarea motivelor pentru care sustin/sunt impotriva motiunii si in privinta modului in care vad raporturile de valori.</p>
+
+<p dir="ltr">Cu privire la dezbaterea in ansamblu:</p>
+<p dir="ltr">Aceasta dezbatere s-a marginit, din pacate, de foarte multe ori, si din partea ambelor echipe, la simple afirmatii spuse cu tarie, dar neexplicate in profunzime. </p>
+<p dir="ltr">Am apreciat faptul ca ambele echipe s-au orientat spre o dezbatere cu privire la valori si la modul in care alegem sa protejam/limitam anumite drepturi si libertati, fara a intra in discutii cu privire la modul in care s-ar putea realiza o astfel de cenzura si eficienta unei astfel de masuri. Am observat ca echipa afirmatoare propune, desi n-a fost foarte clar pana la A2, mai degraba luarea in considerare a necesitatii autocenzuri,i ca o forma de asumare a responsabilitatii si obligatiilor aferente dreptului la libera exprimare, pe cand echipa negatoare a sustinut, in genere, ca limitarea sau cenzurarea, de orice fel, a libertatii de exprimare este de natura sa restranga excesiv un drept cu o valoare importanta in societatea democratica, de dragul unor motive inexistente/neintemeiate.</p>
+<p dir="ltr">Abordez pe rand si logic o serie de probleme pe care le-ati abordat si voi in dezbatere&nbsp;:</p>
+<ol>
+<li dir="ltr">
+<p dir="ltr">Ce este libertatea de exprimare si poate fi si ea limitata&nbsp;?</p>
+</li>
+</ol>
+<p dir="ltr">Afirmatorii spun ca este un drept care atrage si niste responsabilitati, pe care statul il poate restrange pentru protectia drepturilor altora.</p>
+<p dir="ltr">Negatorii ajung si ei in final la concesia ca acest drept este limitabil, dar nu pentru ofensa adusa unor religii.</p>
+<ol>
+<li dir="ltr">
+<p dir="ltr">De ce ar trebui sa limitam libertatea de exprimare in privinta discursului ofensator&nbsp;?</p>
+</li>
+</ol>
+<p dir="ltr">Aceasta era cea mai importanta intrebare din intreaga dezbatere. </p>
+<p dir="ltr">Afirmatorii sustin ca libertatea de exprimare este de natura sa afecteze drepturile religioase ale altor persoane&nbsp;: cea mai concreta explicatie este furnizata de A1 care sustine ca prin jignirea celor mai intime convingeri ale unor persoane, prin defaimarea religiei sale, se incalca dreptul la constiinta religioasa. Pe de alta parte, nu se explica foarte bine ce inseamna dreptul la constiinta religioasa si cum sunt afectate aceste persoane, dar se indica un exemplu care confirma ca discursul ofensator duce la tensiuni sociale.</p>
+<p dir="ltr">Negatorii sustin, destul de logic, ca expunerea unor pareri care pot fi considerate ofensatoare nu este de natura sa impiedice efectiv manifestarea fizica si de constiinta a unor credinte religioase sau sa limiteze in vreun fel dreptul conferit de lege. &nbsp;Acesta mi s-a parut un argument foarte pertinent, insa din pacate negatorii nu isi construiect principala motivatie in jurul acestui argument, iar N2 nici nu mai reia aceasta idee. Pentru ca nu au reusit sa dea impact acestei idei, care i-ar fi obligat pe afirmatori sa explice in ce masura este afectata libertatea de constiinta de ofensele aduse religiei, nu consider ca negatorii au folosit in mod eficient aceasta idee pe parcursul dezbaterii si, drept consecinta, aceasta nu a capatat greutatea unui argument convingator pentru respingerea motiunii</p>
+<p dir="ltr">Mai mult, negatorii precizeaza ca adeptii unei religii pot sa ignore aceste remarci ofensatoare, cumva ca argument impotriva exemplelor oferite de afirmatori (Charlie Hebdo). Consider acest argument privitor la ignorarea ofenselor ca fiind destul de slab, avand in vedere ca nu mereu comportamentul indicat si corect este si aplicabil si, in definitiv, realitatea este ca aceste tensiuni exista si se manifesta chiar si violent, indiferent de cum ar fi bine sa fie. Pe de alta parte, acest argument nu a fost unul de relevanta foarte mare in dezbatere, deoarece nici una dintre parti nu s-a bazat pe nevoia prevenirii tensiunii sociale ca fiind principalul motiv de limitare a libertatii de exprimare.</p>
+<p dir="ltr">Asadar, discutia se concentreaza de-a lungul dezbaterii asupra motivelor constitutionale si democratice de restrangere a libertatii de exprimare, ceea ce mi s-a parut dezavantajos pentru ambele echipe, pentru ca niciuna dintre ele nu aduce argumente consistente in aceasta privinta.</p>
+<p dir="ltr">Va sfatuiesc pe toti sa nu va limitati doar la a exprima opinii personale, limitandu-va la a spune&nbsp;: noi credem/nu consideram/ nu suntem de acord cu etc. fara sa oferiti si o explicatie rationala consistenta a ceea ce considerati, pentru ca altfel ramanem la un schimb de opinii afirmate puternic, dar neexplicate convingator, si pune arbitrul in postura de a alege intre doua opinii nesustinute. Afirmatorii au avut tendinta sa presupuna ca e de la sine inteles ca manifestarile ofensatoare afecteaza alte drepturi, iar negatorii au avut tendinta de a presupune de la sine inteles ca ar fi foarte foarte grav ca libertatea de exprimare sa fie cenzurata si ca e normal sa pot spune tot ce gandesc, chiar daca e ofensator.</p>
+<p dir="ltr">Mentionarea jurisprudentei CEDO in ultimul discurs negator, intr-un context in care afirmatorii nu mai puteau raspunde si in care oricum aceasta jurisprudenta nu a fost analizata, ci doar citata ca sursa de autoritate, este un &laquo;&nbsp;low-blow&nbsp;&raquo;/o lovitura sub sentura. Am apreciat argumentul, dar pentru a analiza aceasta dezbatere trebuie sa ma bazez pe argumentele voastre (fie ca le preluati pe cele CEDO sau aveti propriile motive) pentru limitarea sau nu a libertatii de exprimare.</p>
+<p dir="ltr"> In acest context dificil pentru arbitru, m-am orientat in luarea deciziei in functie de calitatea strategiei de argumentare, facand abstractie de faptul ca argumentele erau nesubstantiale. Afirmatorii arata ca dreptul de a opina este insotit de responsabilitati si ca este normal sa ne asteptam si sa cerem ca in baza acestei responsabilitati persoana sa se autocenzureze din respect pentru drepturile celorlalti, inclusiv acela de constiinta religioasa. (aici continuarea nespusa e ca jignirea unei religii impiedica libertatea constiintei, pentru ca ma asalteaza pentru ca am ales si cred intr-o anumit sistem de idei religioase, de care cineva isi bate joc). Principalul argument al negatorilor, in schimb, cel sustinut mai pe larg si cu cea mai multa tarie, e ca libertatea de exprimare este apanajul democratiei si ca orice limitare a acestui drept este un abuz periculos. Afirmatiile negatorilor se completeaza cu cele radicale privind faptul ca discursurile ofensatoare nu pot starni atitudini violente si ca aceste afirmatii ar trebui ignorate. Strategia aceasta mi se pare periculoasa&nbsp;: de ce mai protejez libertatea de exprimare, daca ceea ce valoreaza pentru negatori sunt efectele libertatii de exprimare care asigura mentinerea statului democratic si de drept, dar, cand vorbesc despre ofensa adusa religiei, deodata efectele nu mai exista sau trebuie ignorate? Daca negatorii vor sa sustina ca libertatea de exprimare trebuie mentinuta indiferent de efecte, atunci trebuia sa acceptati aceste consecinte, si sa-mi aratati ca cenzura ar duce la consecinte mult mai grave. N1 face o analogie cu sistemele totalitare, ceea ce mi se pare exagerat, avand in vedere ca A1 sustine inca de la inceput ca poti sa vorbesti despre religie, dar sa te abtii sa o jignesti (in public, evident).</p>
+<p dir="ltr">Strategia afirmatoare este de a sustine ca libertatea de exprimare poate fi limitata, fapt admis si de negatori, iar motivul limitarii este acela ca manifestarea ofensatoare are tendinta sa restranga alte drepturi ale adeptilor credintelor religioase, si forma de limitare pe care o propun e autocenzura, pentru prevenirea aparitiei si dezvoltariii de tensiuni sociale si lezari ale unor drepturi de valoare egala, intre care trebuie gasit un echilibru. </p>
+<p dir="ltr">Strategia negatoare sustine ca nu exista efecte negative ale libertatii de exprimare, nici in restrangerea drepturilor celorlalti, nici in crearea de tensiuni sociale, &nbsp;ca libertatea de exprimare trebuie mentinuta nestirbita pentru ca este una dintre cele mai importante valori democratice (desi N1 pare sa sustina ca nu exista o ierarhie intre drepturi, fara de care am risca &laquo;&nbsp;de-democratizarea&nbsp;&raquo;), desi se admite ca exista totusi cazuri de limitare constitutionala care nu sunt anti-democratice.</p>
+<p dir="ltr">Strategia negatoare mi se pare clar dezechilibrata, absolutista si care ar fi avut nevoie de o pozitie mai rationala, mai argumentata si documentata. In comparatie cu abordarea negatorilor, strategia afirmatorilor e relativ viabila/convingatoare. Asadar, preferand strategia afirmatorilor, le dau castig de cauza acestora.</p>
+<p dir="ltr">Spor la urmatoarele dezbateri si multumesc pentru dezbatere.</p>
+
+<p dir="ltr">Punctaj&nbsp;:</p>
+
+<table>
+<colgroup><col width="118"></col><col width="130"></col><col width="130"></col><col width="114"></col><col width="103"></col></colgroup> 
+<tbody>
+<tr>
+<td>
+<p dir="ltr">Debater</p>
+</td>
+<td>
+<p dir="ltr">Continut&lt;15</p>
+</td>
+<td>
+<p dir="ltr">Strategie&lt;10</p>
+</td>
+<td>
+<p dir="ltr">Stil&lt;5</p>
+</td>
+<td>
+<p dir="ltr">TOTAL</p>
+</td>
+</tr>
+<tr>
+<td>
+<p dir="ltr">A1</p>
+</td>
+<td>
+<p dir="ltr">9</p>
+</td>
+<td>
+<p dir="ltr">8</p>
+</td>
+<td>
+<p dir="ltr">3</p>
+</td>
+<td>
+<p dir="ltr">20</p>
+</td>
+</tr>
+<tr>
+<td>
+<p dir="ltr">N1</p>
+</td>
+<td>
+<p dir="ltr">9</p>
+</td>
+<td>
+<p dir="ltr">7</p>
+</td>
+<td>
+<p dir="ltr">3</p>
+</td>
+<td>
+<p dir="ltr">19</p>
+</td>
+</tr>
+<tr>
+<td>
+<p dir="ltr">A2</p>
+</td>
+<td>
+<p dir="ltr">9</p>
+</td>
+<td>
+<p dir="ltr">8</p>
+</td>
+<td>
+<p dir="ltr">4</p>
+</td>
+<td>
+<p dir="ltr">21</p>
+</td>
+</tr>
+<tr>
+<td>
+<p dir="ltr">N2</p>
+</td>
+<td>
+<p dir="ltr">9</p>
+</td>
+<td>
+<p dir="ltr">7</p>
+</td>
+<td>
+<p dir="ltr">3</p>
+</td>
+<td>
+<p dir="ltr">19</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p><span id="docs-internal-guid-4bddcd36-8d3b-aee6-e6ba-e164d87071d8"> <br /></p>
+</div>A1 -> 20 puncte<br>N1 -> 19 puncte<br>A2 -> 21 puncte<br>N2 -> 19 puncte<br>Castiga echipa: <h3 style='display:inline;color:red;'>Marius si Denisa (afirmatori)</h3></div><hr><h3 class='important'>Vrem parerea ta! Pentru asta, trebuie sa te loghezi.</h3>
+                <div class='clear'></div>
+        </div><!-- end main content -->
+         <div class='clear'></div>
+</div>
+<div id="pix"></div>
+
+
+                                </div><!--end main -->
+                                <div id='parteneri'>
+                                    <span class='tr'></span><span class='tl'></span><span class='br'></span><span class='bl'></span><span id="filler"></span>
+                                    <div class='parteneri' id='sustinatori'>
+                                        <span class='floating_text' id='un_proiect'>Un proiect</span>
+                                        <a href='http://www.ardor.org.ro/'><div class='image' id='ardor'>Ardor</div></a>
+                                        <span class='floating_text' id='finantatori'>Finanțatori</span>
+                                        <a href='http://www.opensocietyfoundations.org/'><div class='image' id='open_society'>Open Society Foundation </div></a>
+                                        <a href='http://www.studentiq.ro//'><div class='image' id='memoplus'>MemoPlus</div></a>
+                                        <!-- <a href='http://www.ratiufamilyfoundation.com/'><div class='image' id='FundatiaRatiu'>Ardor</div></a>
+                                        <a href='http://www.eef.md/'><div class='image' id='eef'>East Europe Foundation</div></a>
+                                        <a href='http://www.mts.gov.md/'><div class='image' id='mdminister'>Ministerul Tineretului si Sportului al Republicii Moldova</div></a> -->
+
+                                        <span class='floating_text' id='parteneri_text'>Parteneri</span>
+
+                                        <a href='http://www.policycenter.eu/'><div class='image' id='PolicyCenter'>Policy Center</div></a>
+                                        <a href='http://www.britishcouncil.org/'><div class='image' id='BritishCouncil'>British Council</div></a>
+                                        <a href='http://www.europuls.ro/'><div class='image' id='europuls'>Europuls</div></a>
+                                        <a href='http://www.cere.ro/'><div class='image' id='cere'>Ce-Re</div></a>
+                                        <a href='http://www.primeromania.ro/'><div class='image' id='prime'>Prime Romania</div></a>
+                                        <a href='http://www.cji.ro/'><div class='image' id='cji'>Centrul pentru jurnalism independent</div></a>
+                                        <a href='http://www.aiesectm.ro/'><div class='image' id='aisec'>Aisec</div></a>
+                                        <!-- ===================================================================================================== -->
+                                        <a href='http://www.cogitus.ro/'><div class='image' id='cogitus'>Cogitus</div></a>
+                                        <a href='http://www.adevarul.ro/international/foreign_policy/'><div class='image' id='foreignPolicy'>Foreign Policy</div></a>
+                                        <a href='http://www.elsa.ro/'><div class='image' id='elsa'>Elsa</div></a>
+                                        <a href='http://www.vipromania.ro/'><div class='image' id='vipromania'>Voluntari pentru idei si proiecte</div></a>
+                                        <a href='http://www.ongtrust.ro/'><div class='image' id='ongtrust'>Trust</div></a>
+
+                                        <!-- ===================================================================================================== -->
+                                        <a href='http://www.leap.ro/'><div class='image' id='leap'>Leap</div></a>
+                                        <a href='http://www.younginitiative.org/'><div class='image' id='younginitiative'>Asociatia young initiative</div></a>
+                                        <a href='http://www.asjc.ro/'><div class='image' id='asjc'>Asjc</div></a>
+                                        <a href='http://osut.ro/'><div class='image' id='osut'>Osut</div></a>
+                                        <div class='clear'></div>
+                                    </div>
+                                    <div class='parteneri' id='parteneri_institutionali'>
+                                        <span class='floating_text' id='sponsori_text'>Sus&#539;in&#x0103;tori</span>
+                                        <a href='http://www.cartier.md/'><div class='image' id='cartier_logo'>Editura Cartier</div></a>
+                                        <a href='http://www.pll.md/ro/'><div class='image' id='biblio_logo'>Biblioteca publica de drept</div></a>
+                                        <span class='floating_text' id='institutii_text'>Parteneri institu&#539;ionali</span> 
+                                        <ul id='institutii'>
+                                            <!-- <span class='floating_text' id='institutii_text'>Parteneri institu&#539;ionali:</span> -->
+                                            <li><a href='http://www.politice.ro/'>Facultatea de &#536;tiin&#539;e Politice SNSPA </a></li>
+                                            <li><a href='http://www.comunicare.ro/'>Facultatea de Comunicare &#537;i Rela&#539;ii Publice SNSPA</a></li>
+                                            <li><a href='http://www.fspub.ro/'>Facultatea de &#536;tiin&#539;e Politice Universitatea Bucure&#537;ti</a></li>
+                                            <li><a href='http://www.filosofie.unibuc.ro/'>Facultatea de Filosofie Universitatea Bucure&#537;ti</a></li>
+                                            <li><a href='http://litere.unibuc.ro/'>Facultatea de Litere din Universitatea Bucure&#x015f;ti</a></li>
+                                            <li><a href='http://www.unibuc.ro/ro/fac_fsas_ro'>Facultatea de Sociologie Universitatea Bucure&#537;ti</a></li>
+                                            <li><a href='http://laws.uaic.ro/'>Facultatea de Drept Universitatea Alexandru Ioan Cuza Ia&#537;i</a></li>
+                                            <li><a href='http://www.uaic.ro/uaic/bin/view/Academic/Filosofie'>Facultatea de Filosofie si &#536;tiin&#539;e Social Politice Universitatea AIC Ia&#537;i</a></li>
+                                            <li><a href='http://www.upa.ro/'>Facultatea de Drept si Facultatea de &#x015e;tiin&#x0163;e Politice si Administrative Universitatea Petre Andrei Ia&#x015f;i</a></li> 
+
+                                            <li><a href='http://www.ubbcluj.ro/'>Universitatea Babe&#537;-Bolyai Cluj Napoca</a></li>
+                                            <li><a href='http://www.uvt.ro/'>Universitatea de Vest Timi&#537;oara</a></li>
+                                            <li><a href='http://www.upt.ro/'>Universitatea Politehnica Timi&#537;oara</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class='parteneri' id='parteneri_media'>
+                                        <span class='floating_text' id='media_text'>Parteneri media</span>
+                                        <a href='http://www.hotnews.ro/'><div class='image' id='hotnews'>HotNews</div></a>
+                                        <!-- <a href='http://www.lumebuna.ro/'><div class='image' id='lumebuna'>Lume Buna</div></a> -->
+                                        <a href='http://www.romaniapozitiva.ro/'><div class='image' id='romaniapozitiva'>Romania Pozitiva</div></a>
+                                        <a href='http://totb.ro/'><div class='image' id='thinkoutsidethebox'>Think Outside The Box</div></a>
+                                        <a href='http://www.facebook.com/carevasazica.vip'><div class='image' id='carevasazica'>Carevasazica</div></a>
+                                        <a href='http://www.studentie.ro/'><div class='image' id='studentiero'>Studentie.ro</div></a>
+                                        <a href='http://startub.unibuc.ro/'><div class='image' id='startub'>startub.unibuc.ro</div></a>
+                                        <!-- <a href='http://www.tvr.ro/tvr_cluj.php'><div class='image' id='tvrcluj'>Tvr Cluj</div></a> -->
+                                        <!-- <a href='http://www.radiotransilvania.ro'><div class='image' id='radiotransilvania'>Radio Transilvania</div></a> -->
+                                        <a href='http://iasifun.ziaruldeiasi.ro/'><div class='image' id='iasifun'>Iasi fun</div></a>
+                                        <a href='http://www.ziaruldeiasi.ro/'><div class='image' id='ziaruldeiasi'>Ziarul de Iasi</div></a>
+                                        <a href='http://www.kissfm.ro/timisoara'><div class='image' id='kissfm'>KissFm</div></a>
+
+                                        <div class='clear'></div> 
+                                    </div>
+                                    <div class='clear'></div>
+
+                                </div>	
+                            </div>	<!-- end wrap -->
+                            <div id='footer_mare'>
+                                <div id='footer'>
+                                    <div id='links' class='footer'>
+                                        <div id='menu1' style='margin:auto;'> <ul id='meniu_prinicpal'><li><a href='../../../contacte/index.html'> Contact </a></li>
+<li><a href='../../../clubdebate/index.html'> Cluburile </a></li>
+<li><a href='../../../oamenii/index.html'> Oamenii </a></li>
+<li><a href='../../../proiectul/index.html'> Proiectul </a></li>
+<li><a href='../../../home/index.html'> Acasa </a></li>
+</ul></div><!--end menu-->
+                                    </div><!--
+                                    <div id='contact' class='footer'>
+                                            <h4>Contact</h4>
+                                            <p>office@closer2oxford.ro</p>
+                                            <p>bogdan.draghicescu@closer2oxford.ro<br>
+                                            <span class='detalii'> (asistenta tehnica web - orice probleme legate de site)</span></p>
+                                    </div>
+                                    -->
+                                    <div id='newsletter' class='footer'>
+                                        <script src="../../../../../connect.facebook.net/en_US/all.js#xfbml=1"></script><fb:like href="http://www.facebook.com/pages/Closer2Oxford/162758797069605" width="250" colorscheme="dark"></fb:like>
+                                        <!--<h4>Newsletter</h4>
+                                        <form action='/page/newsletter'>
+                                                <input type='text' name='email'>
+                                                <input type='submit' id='submit' value='>'>
+                                                        
+                                        </form>-->
+                                    </div>
+                                    <div id='credits'>
+                                        Copyright(c) 2021 ARDOR |  Toate drepturile rezervate | Toate logo-urile si sloganurile de pe site sunt proprietate intelectuala inregistrata si nu pot fi reproduse fara acordul explicit al detinatorilor. <br>
+                                            <br /><br />
+                                            <b>Disclaimer</b><br /><i>
+
+                                                Programul educational Closer to Oxford este un program non-profit si nu are o legatura cu universitatea cu acelasi nume, referirea la Oxford avand doar o semnificatie simbolica.
+                                            </i>
+                                    </div>
+
+                                </div>		
+                            </div>		
+
+                            <div id="finantatde">Acest proiect este finantat cu sustinere din partea Comisiei Europene. Aceast publicatie [comunicare] reflecta doar
+                                vederile autorului, iar Comisia nu poate fi facuta  responsabila pentru utilizarea informatiei pe care o contine.</div>
+
+
+                        </body>
+                        </html>

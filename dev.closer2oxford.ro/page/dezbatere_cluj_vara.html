@@ -1,0 +1,643 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml-strict.dtd">
+<HTML xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+    <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+            <link rel="icon" type="image/png"  href="../../closer2oxford.ro/favicon.html">
+                <link rel="stylesheet" href="var/layout.css" type="text/css">
+                    <title>Closer to Oxford - e timpul pentru argumente!</title>
+                    <link rel="alternate" type="application/rss+xml"  href="rss_feed" title="Stiri Closer2Oxford">
+                        <!-- <link rel="image_src" property="og:image"  href="/images/layout/closer2oxford_fb_white.png" /> -->
+                        <link rel="image_src" property="og:image"   type="image/jpeg"  href="../uploads/2015/06/9/facebook_icon.html" />
+                        <link rel="image_src" type="image/jpeg"  href="../uploads/2015/06/9/icon-facebook.gif" /> 
+						<meta name="description" content="Closer2Oxford pune în valoare oameni şi argumentele lor, în dezbateri online şi publice alături de tineri şi invitați avizaţi"/>
+                        <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9" />
+<script type='text/javascript' src='../js/jquery-1.4.4.min.js'></script>
+<script>var $j = jQuery.noConflict();</script>
+<script type='text/javascript' src='../js/tinymce/tiny_mce.js'></script>
+<script type='text/javascript' src='../js/jquery.form.js'></script>
+<script type='text/javascript' src='../js/fbLoginRegister.js'></script>
+<script type='text/javascript' src='var/javascript.js'></script>
+<script type='text/javascript' src='../js/jquery.hovertip-1.0.min.js'></script> 
+<script type='text/javascript' src='../js/jquery.jgrowl_minimized.js'></script> 
+<link rel='stylesheet' href='../css/jquery.jgrowl.css' media='screen' type='text/css'> 
+<script type='text/javascript' src='../js/jquery.timer-min.js'></script> 
+<link rel='stylesheet' href='var/gallery.css' media='screen' type='text/css'> 
+<script type='text/javascript' src='var/galerie/jquery.prettyPhoto.js'></script> 
+<meta name='description' content=''/> 
+<meta name='keywords' content=''/> 
+<style>.hovertip{
+    position:absolute;
+    padding:10px 13px;
+    z-index:2;
+    max-width:300px;
+    color:#303030;
+    background-color:#f5f5b5;
+    border:1px solid #DECA7E;
+    font-family:sans-serif;
+    font-size:12px;
+    line-height:18px;
+    text-align:left;
+    }</style> 
+<script type='text/javascript'>$j(document).ready(function(){$j('.tooltip').hovertip({'offset':[20,20]});get_notif();});
+
+if(!Array.indexOf){Array.prototype.indexOf = function(obj){for(var i=0; i<this.length; i++){if(this[i]==obj){return i;}}return -1;}}
+    hashuri = [] ;
+	 var tick_timer= 3000 ;
+ 
+	 function get_notif()
+        {
+		  
+		  //console.log(tick_timer);
+	     
+		  setTimeout(get_notif,tick_timer);
+        
+		   $j.ajax(
+            {
+                url: '/page/notif/show_events',
+                dataType: 'json',
+                data: "{}",
+                success: function(data)
+                    {
+                    $j.each(data,function(index,data){
+                        try
+                            {
+                            if( hashuri.indexOf(data.hash) == -1 )
+                                {
+                                hashuri.push(data.hash);
+                                $j.jGrowl(
+                                    data.str,
+                                    {
+                                        corners:'1px',
+                                        life: data.life,
+                                        header:data.title,
+                                        hash: data.hash,
+                                        sticky: data.sticky,
+                                        close: function(e,m,o)
+                                            {
+                                                $j.ajax({url:'/page/notif/delete_single_event/' + o.hash});
+                                            }
+                                    });
+                                }
+                            }
+                        catch(e){}
+                        })
+                    }
+            });
+        }
+	 </script> 
+ 
+                            
+  <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-19111721-1']);
+  _gaq.push(['_setDomainName', '.closer2oxford.ro']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+    
+                        </head>
+                        <body>
+                            <div id="global_wrap">
+                                <div id="header">
+                                    <a href='../index.html'><div id='logo'><img src='../images/layout/sigla.jpg'></div></a>
+                                    <a class='noExternal' href='http://www.facebook.com/pages/Closer2Oxford/162758797069605'><img src='../images/fb.png' style='height:30px;float:right;clear:right;margin:10px 5px 5px 5px;border:none;'/></a>
+                                    <a href='rss_feed'><img src='../images/feed-icon.png' style='height:30px;float:right;clear:right;margin:5px;border:none;'/></a>
+                                </div>
+                                <div id="meniu">
+                                    <div  id='register_login'>
+
+                                        
+  <a href='#' class='todo' id='login'>Login </a> &nbsp;<a href='register.html' class='todo' id='register'>Register</a>
+    <div id='login_box'>
+		  <form action='https://dev.closer2oxford.ro/page/ro/login_user/logon' method='post' id='user_login_form'>
+					 <div>Email: <input type='text' name='email'/> </div><br />
+					 <div>Pass: <input type='password' name='passwd'/></div><br />
+					 <a href='#' class='password_forgot'>forgot password?</a>
+					 <input type='hidden' value='/page/dezbatere_cluj_vara' name='returnto' class='submiter'/><br />
+					 <input type='submit' value='login' name='btn' class='submiter'/><br />
+		  </form>
+		  
+		  <form action='https://dev.closer2oxford.ro/page/ro/login_user/reset_user_pw' method='post' id='user_reset_form'>
+					 <div>Email: <input type='text' name='email'/> </div><br />
+					 <a href='#' class='password_forgot'>login?</a>
+					 <input type='hidden' value='/page/dezbatere_cluj_vara' name='returnto' class='submiter'/><br />
+					 <input type='submit' value='reset' name='btn' class='submiter'/><br />
+		  </form>
+		  
+    </div>
+    
+                                    </div>
+                                    <div id='menu1' style='margin:auto;'> <ul id='meniu_prinicpal'><li><a href='contacte/index.html'> Contact </a></li>
+<li><a href='clubdebate/index.html'> Cluburile </a></li>
+<li><a href='oamenii/index.html'> Oamenii </a></li>
+<li><a href='proiectul/index.html'> Proiectul </a></li>
+<li><a href='home/index.html'> Acasa </a></li>
+</ul></div><!--end menu-->
+                                </div>
+                                <div id="main"> 
+                                    <!--<div id='stiri-padding'>
+        <div id='stiri_back'>
+                {stiri} 
+    
+               
+        </div>-->
+        
+</div>
+<div  id="content-padding">
+        <div id='sidebar_menu'>
+                <span class='tr'></span>
+                <span class='tl'></span>
+                <span class='br'></span>
+                <span class='bl'></span>
+                <span id="filler"></span>
+                    
+                <ul></ul>
+                
+                <div class='clear'></div>
+        </div>
+        <div id="content">
+                <span class='tr'></span>
+                <span class='tl'></span>
+                <span class='br'></span>
+                <span class='bl'></span>
+                <span id="filler"></span>
+                <script type='text/javascript' src='../js/jquery.hovertip-1.0.min.js'></script> 
+<script type='text/javascript' src='../js/jquery.jgrowl_minimized.js'></script> 
+<link rel='stylesheet' href='../css/jquery.jgrowl.css' media='screen' type='text/css'> 
+<script type='text/javascript' src='../js/jquery.timer-min.js'></script> 
+<link rel='stylesheet' href='var/gallery.css' media='screen' type='text/css'> 
+<style>.hovertip{
+    position:absolute;
+    padding:10px 13px;
+    z-index:2;
+    max-width:300px;
+    color:#303030;
+    background-color:#f5f5b5;
+    border:1px solid #DECA7E;
+    font-family:sans-serif;
+    font-size:12px;
+    line-height:18px;
+    text-align:left;
+    }</style> 
+<script type='text/javascript'>$j(document).ready(function(){$j('.tooltip').hovertip({'offset':[20,20]});get_notif();});
+
+if(!Array.indexOf){Array.prototype.indexOf = function(obj){for(var i=0; i<this.length; i++){if(this[i]==obj){return i;}}return -1;}}
+    hashuri = [] ;
+	 var tick_timer= 3000 ;
+ 
+	 function get_notif()
+        {
+		  
+		  //console.log(tick_timer);
+	     
+		  setTimeout(get_notif,tick_timer);
+        
+		   $j.ajax(
+            {
+                url: '/page/notif/show_events',
+                dataType: 'json',
+                data: "{}",
+                success: function(data)
+                    {
+                    $j.each(data,function(index,data){
+                        try
+                            {
+                            if( hashuri.indexOf(data.hash) == -1 )
+                                {
+                                hashuri.push(data.hash);
+                                $j.jGrowl(
+                                    data.str,
+                                    {
+                                        corners:'1px',
+                                        life: data.life,
+                                        header:data.title,
+                                        hash: data.hash,
+                                        sticky: data.sticky,
+                                        close: function(e,m,o)
+                                            {
+                                                $j.ajax({url:'/page/notif/delete_single_event/' + o.hash});
+                                            }
+                                    });
+                                }
+                            }
+                        catch(e){}
+                        })
+                    }
+            });
+        }
+	 </script> 
+
+<script type='text/javascript' src='../js/jquery.hovertip-1.0.min.js'></script> 
+<script type='text/javascript' src='../js/jquery.jgrowl_minimized.js'></script> 
+<link rel='stylesheet' href='../css/jquery.jgrowl.css' media='screen' type='text/css'> 
+<script type='text/javascript' src='../js/jquery.timer-min.js'></script> 
+<link rel='stylesheet' href='var/gallery.css' media='screen' type='text/css'> 
+<script type='text/javascript' src='var/galerie/jquery.prettyPhoto.js'></script> 
+<style>.hovertip{
+    position:absolute;
+    padding:10px 13px;
+    z-index:2;
+    max-width:300px;
+    color:#303030;
+    background-color:#f5f5b5;
+    border:1px solid #DECA7E;
+    font-family:sans-serif;
+    font-size:12px;
+    line-height:18px;
+    text-align:left;
+    }</style> 
+<script type='text/javascript'>$j(document).ready(function(){$j('.tooltip').hovertip({'offset':[20,20]});get_notif();});
+
+if(!Array.indexOf){Array.prototype.indexOf = function(obj){for(var i=0; i<this.length; i++){if(this[i]==obj){return i;}}return -1;}}
+    hashuri = [] ;
+	 var tick_timer= 3000 ;
+ 
+	 function get_notif()
+        {
+		  
+		  //console.log(tick_timer);
+	     
+		  setTimeout(get_notif,tick_timer);
+        
+		   $j.ajax(
+            {
+                url: '/page/notif/show_events',
+                dataType: 'json',
+                data: "{}",
+                success: function(data)
+                    {
+                    $j.each(data,function(index,data){
+                        try
+                            {
+                            if( hashuri.indexOf(data.hash) == -1 )
+                                {
+                                hashuri.push(data.hash);
+                                $j.jGrowl(
+                                    data.str,
+                                    {
+                                        corners:'1px',
+                                        life: data.life,
+                                        header:data.title,
+                                        hash: data.hash,
+                                        sticky: data.sticky,
+                                        close: function(e,m,o)
+                                            {
+                                                $j.ajax({url:'/page/notif/delete_single_event/' + o.hash});
+                                            }
+                                    });
+                                }
+                            }
+                        catch(e){}
+                        })
+                    }
+            });
+        }
+	 </script> 
+
+<style type="text/css">
+.poze
+{
+    float:right;
+    width:110px;
+}
+.poze a img
+{    border:none;
+}
+.main_content
+{
+    float:left;
+    width:560px;
+}
+</style>
+
+ <div class = 'poze'>
+            <a class='thumb' href='../uploads/2011/09/23/inceput_cluj.am60ik.png' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../uploads/2011/09/23/thumb_inceput_cluj.am60ik.png' alt='' />
+                <span class='desc'></span>
+            </a>
+        
+
+            <a class='thumb' href='http://www.youtube.com/watch?v=rmr6Upxwd0w' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../../img.youtube.com/vi/rmr6Upxwd0w/1.jpg' alt='' />
+                <span class='desc'>Introducere Mădălina Mocan</span>
+            </a>
+        
+
+            <a class='thumb' href='http://www.youtube.com/watch?v=svPXgFM94kA' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../../img.youtube.com/vi/svPXgFM94kA/1.jpg' alt='' />
+                <span class='desc'>Discurs A1 - Ioana Stupariu</span>
+            </a>
+        
+
+            <a class='thumb' href='http://www.youtube.com/watch?v=ZuQUnY_NIlk' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../../img.youtube.com/vi/ZuQUnY_NIlk/1.jpg' alt='' />
+                <span class='desc'>Cross 1</span>
+            </a>
+        
+
+            <a class='thumb' href='http://www.youtube.com/watch?v=R7nm0R-1Myg' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../../img.youtube.com/vi/R7nm0R-1Myg/1.jpg' alt='' />
+                <span class='desc'>Discurs N1 - Călin Mureşanu</span>
+            </a>
+        
+
+            <a class='thumb' href='http://www.youtube.com/watch?v=Y-4Q_X5f8G4' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../../img.youtube.com/vi/Y-4Q_X5f8G4/1.jpg' alt='' />
+                <span class='desc'>Cross 2</span>
+            </a>
+        
+
+            <a class='thumb' href='http://www.youtube.com/watch?v=sVkI91u_Qo8' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../../img.youtube.com/vi/sVkI91u_Qo8/1.jpg' alt='' />
+                <span class='desc'>Discurs A2 - Alexandru Laszlo</span>
+            </a>
+        
+
+            <a class='thumb' href='http://www.youtube.com/watch?v=ipDzG9pSxTc' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../../img.youtube.com/vi/ipDzG9pSxTc/1.jpg' alt='' />
+                <span class='desc'>Discurs N2 - Ioan Chirilă</span>
+            </a>
+        
+
+            <a class='thumb' href='http://www.youtube.com/watch?v=Ca0jAAQBGVs' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../../img.youtube.com/vi/Ca0jAAQBGVs/1.jpg' alt='' />
+                <span class='desc'>Discutie Sala</span>
+            </a>
+        
+
+            <a class='thumb' href='http://www.youtube.com/watch?v=2B-fy1r73wg' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../../img.youtube.com/vi/2B-fy1r73wg/1.jpg' alt='' />
+                <span class='desc'>Concluzie</span>
+            </a>
+        
+
+            <a class='thumb' href='../uploads/2011/09/23/final_cluj.m60ikt.png' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../uploads/2011/09/23/thumb_final_cluj.m60ikt.png' alt='' />
+                <span class='desc'></span>
+            </a>
+        
+
+
+    <script>
+    $j(document).ready(function(){
+      		$j("a[rel^='prettyPhoto']").prettyPhoto({theme:'facebook'});
+        });
+    
+    </script>
+    </div>
+
+<div class='main_content'>
+<p><strong>Dezbatere Cluj:</strong></p>
+<p><strong>E timpul să afirmăm că predarea religiei &icirc;n şcoli pune &icirc;n pericol laicitatea statului roman?</strong></p>
+<p><strong>Echipa Afirmatoare:</strong> prof. Laszlo Alexandru profesor si critic literar &amp; Ioana Stupariu, studenta Facultatea de Drept Cluj</p>
+<p><strong>Echipa Negatoare:</strong> prof. Ioan Chirila, decan Facultatea de Teologie Cluj &amp; Calin Muresanu, student Facultatea de Drept.</p>
+<p><strong>Modereaza</strong> Madalina Mocan (Fundatia Familiei Ratiu).</p>
+<p>Joi 9 iunie, Facultatea de Stiinte Economice si Gestiunea Afacerilor), sala 114 etaj 1</p>
+<p><strong><br /> <br /> <strong>&nbsp;</strong></strong></p>
+<p><strong>Mădălina Mocan:</strong>&nbsp;&nbsp;&nbsp;</p>
+<p>Mă bucur să am onoarea să prezint o dezbatere din cadrul programului Closer to Oxford, &icirc;nainte &icirc;nsă de a prezenta dezbaterea, vreau să mă prezint pe mine: sunt Mădălina Mocan, lucrez pentru Fundaţia Raţiu pentru Democraţie şi sunt, cum ar spune unii dintre noi aici de faţa, un prieten al <em>debate</em>-ului.&nbsp; &Icirc;n această după-amiază avem doua echipe care vor dezbate moţiunea <strong>&ldquo;E timpul să afirmăm că predarea religiei &icirc;n şcoli pune &icirc;n pericol laicitatea statului rom&acirc;n&rdquo;</strong>, iar in echipa afirmatoare sunt Laszlo Alexandru, profesor şi critic literar şi domnişoara Ioana Stupariu, studentă la Facultatea de Drept. Pentru negatori sunt domnul profesor universitar Ioan Chirilă şi domnul Călin Mureşanu, student la Facultatea de Drept. &Icirc;nainte de a ne lansa &icirc;n dezbaterea propriu zisă, colegul meu Raul o să vă explice ce e cu chestiile astea ciudate aici pe masa. Este vorba de un sistem de vot &icirc;n ceea ce priveşte moţiunea şi credinţele şi principiile voastre. P&acirc;nă să ajungem la credinţe, două cuvinte despre programul Closer to Oxford&nbsp;de la Anca Pascu.</p>
+<p><strong>Anca Pascu:</strong><strong>&nbsp;</strong></p>
+<p>Sunt Anca Pascu, sunt şi eu o prietena a <em>debate</em>-ului. Programul Closer 2 Oxford s-a desfaşurat &icirc;n acest an universitar &icirc;n toate centrele universitare Cluj, Timişoara, Iaşi şi Bucureşti şi au fost practic 3 runde, această fiind ultima dintre ele. &Icirc;n fiecare rundă am avut 3 etape. Prima etapă a fost dezbaterea online &icirc;ntre toţi studenţii care s-au inscris la proiect, după ce s-a votat moţiunea. Am ajuns la această moţiune &icirc;n urma unui vot. Apoi, primii 16 cei mai buni la campionatul online au participat la un seminar de lectură critica şi argumentare, iar de acolo primii 2 selectaţi au avut onoarea de a participa la dezbaterile publice alături de personalităţi. Astăzi, avem 2 domni profesori care au acceptat şi le mulţumim mult că au venit să dezbată alături de 2 studenţi. Cam at&acirc;t despre program, sper să vă placă dezbaterea şi să participaţi &icirc;n viitor la programe similare pe care le vom derula &icirc;n universitaţi. [se explica sistemul de vot si timpii alocati fiecarui discurs]</p>
+<p>&nbsp;</p>
+<p><strong>Ioana Stupariu, discurs Afirmator 1</strong></p>
+<p>Este o onoare pentru mine să deschid această dezbatere alături de doua personalităţi distinse ale culturii clujene şi rom&acirc;neşti. Inainte de a &icirc;ncepe astăzi practic argumentarea pe care echipa afirmatoare o aduce astăzi &icirc;n faţa dvs. &icirc;n susţinerea moţiunii, vreau să facem o precizare &icirc;n legătură cu poziţia pe care o adoptă echipa noastră astăzi. Noi nu suntem &icirc;mpotriva religiei, noi spunem că religia este importantă, noi susţinem că religia transmite un set de valori morale populaţiei rom&acirc;neşti pe care trebuie să le transmită &icirc;n continuare şi noi susţinem &icirc;n această dezbatere prin prisma argumentelor ce le vom aduce &icirc;n continuare că aceste valori morale trebuie să se transmită &icirc;n continuare, &icirc;nsă nu &icirc;n cadrul şcolii. Prin argumentele pe care le voi prezenta, vă voi arăta de ce statul&nbsp; trebuie să răm&acirc;nă &icirc;n afara ariei religioase şi trebuie ca Biserica să fie cea care să fie 100% independentă &icirc;n modul &icirc;n care transmite conceptele religioase şi &icirc;n modul &icirc;n care p&acirc;nă la urmă influenţeaza afinitatea persoanelor faţa de religie şi faţa de moralitate.</p>
+<p>Haideţi să vedem care este premisa de la care pornesc cele doua echipe astăzi. Premisa este simplă. Statul rom&acirc;n este un stat laic, &icirc;nsă ce inseamnă că statul rom&acirc;n este un stat laic? Statul laic este un stat care nu se foloseşte de percepţiile religioase&nbsp; &icirc;n momentul &icirc;n care guvernează, &icirc;n momentul &icirc;n care ia măsuri pentru populaţie şi &icirc;n al doilea r&acirc;nd un stat care nu se implică &icirc;n propagarea religiei de nici un fel sau &icirc;n propagarea unui anumit tip de religie. Practic, este un stat care este neutru din punct de vedere religios. Şi de ce este importantă această neutralitate? Din doua motive. &Icirc;n primul r&acirc;nd, pentru că există o diferenţa foarte clară &icirc;ntre instrumentele politice, economice, sociale pe care le foloseşte statul - care se bazeaza pe raţiune şi instrumentele religioase, care se bazeaza, p&acirc;nă la urmă, pe afectivitate. Şi este important să se păstreze această diferenţiere, căci p&acirc;nă la urmă este important ca religia care se transmite oamenilor să fie o religie pura, să fie o religie neafectată de posibilele influenţe din sfera economicului, din sfera politicului. Este important ca religia care se transmite, aceste valori morale să se transmită prin intermediul adevăratului lor mesaj, adică mesajul care ajunge la populaţie să chiar fie cel care se doreşte a fi transmis.&nbsp;</p>
+<p>Haideţi să vedem, este implicarea statului o condiţie ca religia să ajungă la populaţie, ca religia să se transmită şi ca oamenii să aibă această bază morală &icirc;n acţiunile lor? Noi spunem că nu, noi spunem că există şi alţi actori sociali, care, p&acirc;nă la urmă, ajută la propagarea acestor valori morale şi noi spunem că trebuie să lăsam religia &icirc;n grija familiei, care este o celulă a societaţii, şi mai ales &icirc;n grijă Bisericii, care, p&acirc;nă la urmă, trebuie să fie independentă &icirc;n alegerea măsurilor prin intermediul cărora ajunge la populaţie, prin intermediul măsurilor prin intermediul cărora va creea contextul prin care oamenii devin religioşi, să creadă.</p>
+<p>Găsim &icirc;n momentul de faţa &icirc;n Rom&acirc;nia doua efecte negative ale faptului că se predă religia &icirc;n şcoli &icirc;n regim obligatoriu, religie creştina, cel mai probabil ortodoxa. &Icirc;n primul r&acirc;nd, asistăm la o discriminare pe bază religioasă, pentru că sunt persoane, mai precis copii, care de la 7 ani - c&acirc;nd sunt &icirc;n clasa &icirc;nt&acirc;ia - p&acirc;nă la 19 ani, p&acirc;nă &icirc;n clasa a 12-a, nu ştiu exact ce anume vor să aleagă, ce confesiune, nu sunt foarte convinşi. Noi spunem că fiecare dintre noi c&acirc;nd am fost &icirc;n liceu şi am facut religie am avut colegi care erau de alte confesiuni, care tot timpul erau marginalizati &icirc;n timpul orelor de religie, şi din cauza asta se creea această imagine negativă a celuilalt grup de copii si p&acirc;nă la urmă marginalizau acel copil fiindcă era diferit. Din cauza faptului că statul nu asigură o egalitate de tratament pentru toate persoanele indiferent de religie şi confesiune, din această cauza, persoanele acestea erau, p&acirc;nă la urmă, marginalizate şi se creea această concepţie că este gresit să fii diferit de noi şi este rău să fii diferit de noi, este normal să fii izolat de ceilalţi.</p>
+<p>Acum vedem că este gresit să se &icirc;ntample acest lucru şi vedem că doar dacă scoatem religia din şcoli şi o lăsam &icirc;n grijă Bisericii, prin instituirea de seminarii teologice bazate pe diferite confesiuni sau pur şi simplu &icirc;n grija Bisericii Musulmane şi aşa mai departe, &icirc;n funcţie de cei care doresc să adopte o anumită religie şi doresc să creadă &icirc;n anumite lucruri să &icirc;i lăsam să creadă, dar nu &icirc;n cadrul şcolii. Pentru că şcoala trebuie să pună un alt tip de bază, şcoala trebuie să ofere aceleaşi lucruri pentru toata lumea şi este inadmisibil ca şcoala actuală să discrimineze pe bază religiei şi să instituie acest tip de tratament preferenţial. &Icirc;n plus, cei care au anumite credinţe si cred &icirc;n Dumnezeu, sau cred &icirc;n alte spirite, cei religioşi, ca să vorbim de ei, pe ei nu &icirc;i influenţează deloc că fac religie la şcoala, ei oricum vor merge la Biserica, ei oricum vor crede &icirc;n Dumnezeu &icirc;n continuare şi se vor comporta &icirc;n conformitate cu religia, iar ceilalţi care sunt nereligioşi&nbsp; nu va face altceva dec&acirc;t să &icirc;i enerveze şi mai mult faptul că sunt obligaţi să facă o materie pe care nu o doresc şi să li se predea nişte valori &icirc;n care nu cred, sau dimpotrivă pot fi marginalizati şi izolati fiindcă statul rom&acirc;n nu transmite mesajul că ar fi de acord cu credinţa lor. Şi din acest motiv dorim să nu lăsam religia &icirc;n m&acirc;na statului şi să lăsam religia &icirc;n m&acirc;na Bisericii, fiindcă ei &icirc;i aparţine. Va mulţumesc !</p>
+<p><strong>Chestionare &icirc;ncrucișată 1:</strong></p>
+<p><strong>Ioan Chirilă:</strong><strong>&nbsp;</strong>&Icirc;n baza căror considerente afirmaţi că statul rom&acirc;n e laic?</p>
+<p><strong>Ioana Stupariu</strong>: Este premisa de la care pornim&hellip;</p>
+<p><strong>Ioan Chirilă</strong>: Deci, c&acirc;nd doresc să vorbesc despre ceva sau să argumentez ceva, &icirc;mi daţi, un articol din Constituţie, o lege care să afirme lucrul acesta.</p>
+<p><strong>Laszlo Alexandru</strong>: Vă raspund eu, dacă &icirc;mi permiteti. Consitutia Rom&acirc;niei, articolul 29, paragraful 5 şi citez &ldquo;Cultele religioase sunt autonome faţă de stat şi se bucură de sprijinul acestuia, inclusiv prin &icirc;nlesnirea asistenţei religioase &icirc;n armată, &icirc;n spitale, &icirc;n penitenciare, &icirc;n azile şi &icirc;n orfelinate.&rdquo; şi nu zice de şcoli.</p>
+<p><strong>Ioan Chirilă:</strong><strong>&nbsp;</strong>Deci, nu e adevărat. C&acirc;nd dorim să dam un răspuns trebuie să răspundem exact la numele propriu invocat &icirc;n premisă, şi anume să existe un articol, exact ca şi &icirc;n Constituţia Franceza &ldquo;este stat laic.&rdquo; Acolo, articolul pe care &icirc;l invocaţi, eu mă pot duce la articolul 37 &icirc;n care tot Constituţia Romaniei asigură drepturi de funcţionare a religiei, a sistemului de manifestare religioasă, şi să zic uite &ldquo;&Icirc;n baza acestui articol, statul este creştin&rdquo;, dar neexistand conceptual, nu este un argument suficient.</p>
+<p><strong>Călin Mureşanu:</strong>&nbsp;Ce se &icirc;ntamplă dacă familia şi Biserica, ca şi unităţi de bază ale societăţii, au responsabilitatea să transmită aceste valori, dar ele nu reuşesc d&icirc;ntr-un motiv sau altul să le transmită. Care ar trebui să fie atunci reacţia statului?</p>
+<p><strong>Ioana Stupariu:</strong>&nbsp;Statul ar trebui să nu se implice &icirc;n continuare&nbsp; &icirc;n aceste probleme, pentru că, din nou, aşa cum am explicat şi noi, dacă Biserica nu reuşeşte să &icirc;şi atingă scopul pentru care a fost creata inseamnă că nu are rol &icirc;n societate. Dacă oamenii nu mai doresc să creadă sau nu mai cred &icirc;n anumite valori, inseamnă că nu mai exista sens pentru acele valori.</p>
+<p><strong>Alexandru Laszlo:</strong><strong>&nbsp;</strong>Le voi raspunde şi eu dacă &icirc;mi permiteţi. Dacă service-urile auto nu mai ştiu să repare maşinile, va veni statul să le repare? Se va implica pentru a remedia funcţionarea service-urilor auto?</p>
+<p><strong>Ioan Chirilă:</strong>&nbsp;Am o &icirc;ntrebare din curiozitate. Distinsă colegă, ce &icirc;ntelegeţi prin religie pură? E expresia folosită de dumneavoastră.</p>
+<p><strong>Ioana Stupariu:</strong>&nbsp;Din păcate, &icirc;n momentul de faţa, de multe ori modul &icirc;n care se transmite religia&hellip;</p>
+<p><strong>Ioan Chirilă:</strong>&nbsp;Religia e exact opusul păcatelor&hellip;</p>
+<p><strong>Ioana Stupariu:</strong>&nbsp;Nu nu, nu avea nici o legătură, ci doar vroiam să spun că din păcate religia este politizată, pentru că este asociată cu diferite organisme din cadrul statului, aceasta era singura mea idee.</p>
+<p><strong>Ioan Chirilă:</strong>&nbsp;Confuzia e alta, şi vreau să o sesizezi. Este ultima secundă pe care o folosesc. Este vorba despre confundarea a doua concepte care sunt distincte, religie şi ideologie.</p>
+<p>&nbsp;</p>
+<p><strong>Călin Mureşanu, Negator 2</strong><strong>&nbsp;</strong>&nbsp;</p>
+<p>Primul lucru pe care vreau eu să vi-l zic din capul locului e că nu se poate afirma la nivel absolut că religia, la modul cum e predată &icirc;n şcoli, poate să &icirc;ndoctrineze pe cineva sau poate să impună cuiva o anumită religie sau alta.&nbsp;De ce? Din 3 motive. &Icirc;n primul r&acirc;nd, pentru a &icirc;ndoctrina pe cineva ai nevoie de o expunere mai &icirc;ndelungată, şi c&acirc;t de c&acirc;t repetată, ori religia se face 1 ora pe saptăm&acirc;nă la şcoala, &icirc;ntr-un cadru foarte informal, &icirc;n momentul de faţa prea puţini elevi dau o importanţă care ar trebui să o dea orelor de religie, şi o consideră o materie diferită faţa de restul materiilor, nu o tratează ca o materie obligatorie. &Icirc;n al doilea r&acirc;nd, pentru că de cele mai multe ori, şi asta a ignorat echipa &ldquo;guvernului&rdquo; c&acirc;nd a incercat să ne convinga că statul impune anumite religii (&icirc;n speţa religia creştină), părinţii pot să aleagă ce religie să facă elevii &icirc;n şcoli, iar &icirc;n condiţiile &icirc;n care nu e disponibilă acea religie,&nbsp; &icirc;n condiţiile &icirc;n care elevul e de o anumită religie şi nu este un profesor de acea religie undeva &icirc;n zona localităţii, părinţii pot să aleagă să NU &icirc;şi trimita elevul la ora de religie şi pot să facă o scutire de la ora de religie. Statul nu impune nimănui o anumită religie, ci părinţii aleg. Dacă cineva impune, aceia sunt părinţii şi nu statul. Şi &icirc;n al treilea r&acirc;nd, aşa cum oarecum reiese şi din al doilea meu punct, conteaza mult mai mult mediul familial, dacă e să vorbim totusi o &icirc;ndoctrinare, şi observăm că de cele mai multe ori fanatismul acesta religios se transmite mai bine din tată &icirc;n fiu. Dintr-o familie de religiosi fanatici iese un religios fanatic, şi rareori, de prea puţine ori, cineva care este dintr-o familie de fanatici religioşi nu ajunge un religios şi invers, cineva dintr-o familie de atei ajunge un religios.</p>
+<p>Să vedem totuşi care sunt funcţiile predării religiei &icirc;n şcoli şi de ce e important să avem religia &icirc;n momentul de faţa predată &icirc;n şcoli. Voi vorbi despre 2 lucruri, &icirc;n primul r&acirc;nd voi vorbi despre valorile pe care le transmite religia şi voi vorbi despre cum religia că materie &icirc;n şcoli trebuie să facă asta, pentru că colega mea, chiar din inceputul discursului spunea că religia conţine &icirc;n sine nişte valori pe care nu le neagă şi care sunt importante. In al doilea r&acirc;nd voi explica cum religia este o parte integrantă a culturii rom&acirc;neşti şi cum este important să apărăm religia că parte integrantă a culturii rom&acirc;neşti, mai ales &icirc;n contextul globarizării forţate care are loc &icirc;n secolul XXI.</p>
+<p>&Icirc;n primul r&acirc;nd, la nivel de valori fundamentale ale societăţii, as putea spune valorile pe care se bazeaza societatea sunt de sorginte religioasă, cum ar fi respectul faţa de aproape, sau respectul faţa de autoritate. Sunt valori care reies at&acirc;t din texte biblice c&acirc;t şi din texte care aparţin altor confesiuni sau altor religii, chiar valori mai pragmatice cum ar fi importanţă muncii &icirc;n societate, sunt texte care au şi ele o bază biblică. Colega mea nu neagă importanţă acestor valori, dar spune că acestea ar trebui transmise doar de către Biserica sau doar de către familie, &icirc;nsă să observăm că &icirc;n secolul XXI, datorita influenţei societatii şi datorita influenţei mass-mediei (care prezintă acel caracter de care vorbeam la &icirc;nceputul&nbsp; discuţiei care are un efect &icirc;n continuu şi repetat asupra populaţiei de la care nu se poate abţine cineva), nimeni nu poate să nu fie influenţat de societate sau de mass-media, dec&acirc;t să &icirc;i reducă intr-o anumită măsura influenţa. Ori &icirc;n contextul acesta, acele valori sunt periclitate şi aceste valori suferă un atac din partea societăţii, atunci e important să le protejam dintr-un alt mediu.</p>
+<p>Oricum, din cauza societăţii oamenii &icirc;ncep să dea o importanţă din ce &icirc;n ce mai mică Bisericii, şi oamenii merg din ce &icirc;n ce mai rar la Biserică. E important ca acele valori să vină dintr-o altă sursă, şi singura sursă unde vedem că pot fi transmise aceste valori mai bine ca oriunde este &icirc;n şcoală pentru că acolo se formează individual, pentru că acolo primeşte educaţia individul de care are nevoie &icirc;n societate şi deci e important ca aceste valori să i le transmitem chiar prin şcoală. &Icirc;n al doilea r&acirc;nd, vă spuneam despre cum religia este valoare integrată a culturii rom&acirc;neşti. Religia este o parte at&acirc;t istoric a culturii romaneşti c&acirc;t şi a tradiţiilor rom&acirc;neşti, cele mai multe sărbători pe care le sărbătorim sunt de sorginte religioasă, religia &icirc;n sine este o parte foarte importantă, şi mai ales religia ortodoxă este o parte foarte importantă a culturii rom&acirc;neşti. Ori, &icirc;n momentul de faţa din cauza globalizării, din cauza procesului de integrare europeană, din cauza faptului că din ce &icirc;n ce mai multi cetăţeni părăsesc graniţele şi din ce &icirc;n ce mai multi cetăţeni străini vin &icirc;n ţara noastră, aceste valori sunt atacate şi dacă nu le apărăm riscăm să le pierdem.</p>
+<p>Dacă ne uităm de exemplu la Cehia, un stat care nu şi-a apărat de exemplu aceste valori, care are la momentul de faţa are peste 60% din populaţie atei, in Cehia singurele valori care se mai păstrează sunt c&acirc;teva clădiri vechi din centrul Pragai şi cultura lor de &ldquo;buni băutori de bere&rdquo;. Ei şi-au pierdut valorile tradiţionale care &icirc;i defineau &icirc;n trecut. Trebuie să observăm că statele care le apără &icirc;n mod tardiv, cum ar fi Marea Britanie, care chiar nu neapărat valori religioase prin legislatie, ci alte valori, dar le-au apărat prin forţa statului şi le-au păstrat. Şi tocmai de aceea credem că statul trebuie să &icirc;şi păstreze influenţa şi trebuie să păstreze religia &icirc;n şcoli pentru a nu pierde aceste doua aspecte. Vă mulţumesc!</p>
+<p><strong>Chestionare incrucișată 2:</strong></p>
+<p>&nbsp;</p>
+<p><strong>Alexandru Laszlo:</strong><strong>&nbsp;</strong>Să vă &icirc;ntreb şi eu ceva. &Icirc;n opinia dvs, religia este echivalentă cu tradiţiile naţionale? Deci dacă Cehia şi-a pierdut tradiţiile religioase nu mai are nici tradiţii naţionale, spre deosebire de Germania care şi-a păstrat valorile religioase?</p>
+<p><strong>Călin Mureşanu:</strong>&nbsp;Nu sunt identice, &icirc;nsă mai ales &icirc;n Europa, care a fost tradiţional o zona creştină, ele de-a lungul timpului au c&acirc;stigat importanţă &icirc;n cultura tradiţională. Si chiar dacă nu ţine de esenţa culturii să aibă şi o parte religioasă, coincidenţial acest lucru se &icirc;ntamplă &icirc;n majoritatea statelor din Europa.</p>
+<p><strong>Alexandru Laszlo</strong>: Deci sunteţi de acord că valorile religioase nu se suprapun peste valorile naţionale.</p>
+<p><strong>Călin Mureşanu:</strong>&nbsp;Nu se suprapun ca esenţă.</p>
+<p><strong>Alexandru Laszlo:</strong>&nbsp;A doua chestiune. Aţi afirmat că religia nu &icirc;ndoctrinează pentru că se realizează o expunere mai scurta, doar o ora pe saptăm&acirc;nă. Este doar o oră, &icirc;nsă dintr-a 5-a p&acirc;nă intr-a 12-a, deci dacă calculăm aşa, sunt c&acirc;ti ani de şcoală, timp de 2 semestre, nu vă spun c&acirc;te ore sunt &icirc;ntr-un an scolar,deci argumentul dvs. mi se pare nerelevant. Vi se pare relevant acest argument al dvs. dacă se face o oră timp de 7 ani de zile?</p>
+<p><strong>Ioan Chirilă:</strong>&nbsp;&Icirc;n momentul &icirc;n care folosesti cuvantul &bdquo;&icirc;ndoctrinare&rdquo; trebuie să te uiţi la definitia propriu zisă a lui. O acţiune de &icirc;ndoctrinare este o acţiune foarte bine ţintită, care urmăreşte şi are un scop bine precizat, &icirc;n cazul noastru dacă e să privim lucrurile aşa, să realizeze şi să infuzeze, să se transmită o identitate religioasă cu o anumită tipologie de manifestare. Maniera &icirc;n care educaţia religioasă a intrat &icirc;n trunchiul comun ca disciplina este o maniera informală şi nu corespunde prin modul de desfăşurare acestui concept de &icirc;ndoctrinare. De aceea m-aş feri să folosesc acest nume. &Icirc;n ceea ce priveşte &icirc;ntrebarea dvs, sunt 140 de ore.</p>
+<p><strong>Alexandru Laszlo:</strong>&nbsp;Spuneaţi că religia ne ajută să respectăm valorile societaţii, tot asta face şi şcoala. Nu cumva ora de religie uzurpă atribuţiile &icirc;nvaţam&acirc;ntului public?</p>
+<p><strong>Ioan Chirilă:</strong>&nbsp;Nu, ci complementeaza elementele propriu-zise de fixare a formei integrate a structurii axiologice a actului de electie umana.</p>
+<p>&nbsp;</p>
+<p><strong>Alexandru Laszlo &ndash; afirmator 2 </strong>Suntem &icirc;n faţa unei probleme complexe, care nu a fost descoperită de ieri de alaltaieri, ci &icirc;nca din Evul Mediu, c&acirc;nd credinţă avea o mare pregnanţă &icirc;n societate, ba mai mult erai obligat să fii religios, altminteri erai dat la o parte şi marginalizat din orice ocupatie economică. Ei bine, &icirc;nca de atunci, cel mai mare poet religios al culturii europene, este vorba de Dante, care şi-a construit capodopera &bdquo;Purgatoriul, Paradisul&rdquo;, are şi o opera politologica, se cheama &bdquo;Monarhia&rdquo;, unde spune următorul lucru: Papa are grijă de sufletele noastre şi &icirc;mpăratul de trupurile noastre şi cele 2 nu trebuie să se suprapună, deci trebuie să fie intr-o relaţie de iubire, ca Soarele şi Luna, c&acirc;nd apare Soarele să dispară Luna, şi invers. Deci ele sunt complementare, dacă se suprapun, apar conflicte şi de acolo marile razboaie care au existat &icirc;n Evul Mediu. A fost tentativa lui Dante &icirc;ncă de atunci de a departaja aceste puteri.</p>
+<p>Problema exista şi &icirc;n ziua de astăzi, apucasem deja să răspund. &Icirc;n Constituţia Rom&acirc;niei &icirc;n articolul 29 se spune &bdquo; Cultele religioase sunt autonome faţa de stat şi se bucură de sprijinul acestuia&rdquo;. Deci, dacă se spune că sunt autonome şi sunt sprijinite, inseamnă că nu sunt statul, statul este una, cultele sunt alta, cred că formularea este foarte limpede. Tot acolo, &icirc;nsă &icirc;n paragrajul 6 al Constituţiei &icirc;n articolul 29, părinţii sau tutorii au dreptul de a asigura potrivit propriilor convingeri educaţia copiilor minori. Iată că statul vine, ora de religie există, şi copii nu sunt &icirc;ntrebaţi dacă vor să facă religie sau nu, ei au dreptul să se retragă de acolo dacă nu doresc. De pilda, &icirc;n Italia li se da un formular la &icirc;nceputul anului scolar şi ei bifează dacă vor sau nu vor, şi &icirc;n funcţie de aceasta merg la şcoală sau nu.</p>
+<p>La noi, se include religia &icirc;n orar, şi dacă cineva doreşte să se retragă are dreptul să o facă, dar se prezumă că el ar vrea. Pe urmă, problema aceasta a succedat deja dezbateri ample &icirc;n societatea civilă. Stiţi de cazul profesorului Emil Moise, care a depus o contestaţie la Consiliul Naţional pentru Combaterea Discriminarii cer&acirc;nd retragerea icoanelor din şcoli, şi a avut o decizie din partea CNCD-ului, iar &icirc;n 18 iunie 2007, Curtea de Apel Bucuresti a dat o decizie &icirc;n acest sens, privind scoaterea simbolurilor religioase din instituţiile publice. Iată că, instituţiile statului &icirc;nteleg să ia poziţie chiar &icirc;n mod oficial prin documente &icirc;n această problema spinoasă, care a fost rezolvată teoretic de Dante &icirc;n Evul Mediu şi continuă să ne dea batăi de cap sub ochii noştrii şi pe plan internaţional. Constituţia Europeana s-a blocat &icirc;n momentul &icirc;n care au venit Italia şi Polonia şi au insistat să se includă valorile religioase ca valori de bază ale continentului european, şi aproape toate celelalte state componente ale Uniunii Europene au contestat această variantă şi ca atare nu s-a putut ajunge la un consens, pentru că 2 sau 3 state au dorit să introducă cu pumnul sau cu autoritate această tema &icirc;n Constituţia Europeană. &Icirc;n acest moment este blocată discuţia privind Constituţia Europeană.</p>
+<p>Dar revenind punctual şi arăt&acirc;nd ce ne deranjeaza pe noi, a introduce religia la copii o considerăm o formă de manipulare. De ce nu se introduce religia la facultate, &icirc;nainte de orele despre Revolutia Franceză de la 1789, să se inceapa cu Tatăl Nostru. De ce? Pentru că studeţii au o anumită maturitate şi o formaţie stiinţifică. Se adreseaza religia acelor copii de 6 ani sau de 12 ani, 16 ani care nu au maturitatea de a se proteja &icirc;n faţa unui discurs manipulator. &Icirc;n al doilea r&acirc;nd, se creează o nedreptate comparativ cu celalalte confesiuni care nu sunt reprezentate, şi nu am văzut şi nu cunosc profesori de confesiune greco-catolică sau de confesiune musulmană care să meargă &icirc;n şcolile rom&acirc;neşti şi să iţi predea lecţiile, fiindcă sunt peste 80% elevi ortodoxi. Şi &icirc;n al treilea r&acirc;nd e o nedreptate chiar financiara, pentru că statul colecteaza taxe de la toţi plătitorii, dar le oferă&nbsp; lecţii de religie şi preponderent profesori de religie ortodoxa, inclusiv celor care nu au această confesiune. Ei au dreptul să se retragă, asta ar mai lipsi să fie obligaţi să &icirc;ncuie uşa, dar nu li se oferă&nbsp; o optiune preliminară, să bifeze, vrei sau nu vrei? Miz&acirc;ndu-se pe consimţăm&acirc;ntul lor şi pe atitudinea lor politicoasă. Ca atare, aceste argumente ţin&acirc;nd de discursuri de natură istorică, de natură politologică şi de natură etică, ne indreaptă să punem sub semnul &icirc;ntrebării eficienţa orelor de religie la şcoala. Vă mulţumesc!</p>
+<p>&nbsp;</p>
+<p><strong>Ioan Chirila: Discurs negator 2</strong></p>
+<p>Vreau să fac o precizare. Intervenția mea va avea o notă de subiectivitate foarte ridicată. Nota de subiectivitate este determinată de faptul că eu sunt preot. Și atunci trebuie să &icirc;mi declin &icirc;n fața dumneavoastră această calitate, această este principala mea slujire, după aceea sunt profesor universitar in invățăm&acirc;ntul teologic. Voi incerca să exprim fară nicio patimă care este părerea proprie la această temă. Dacă am ințeles bine, este vorba de o interogație care ni se pune &icirc;n față, să primească din partea noastră un răspuns, dacă predarea religiei, vedeți că e un concept generic, &ldquo;religiei&rdquo;, deci nu numele confesiunii, dacă predarea religiei diminuează sau anulează caracterul laic al statului.</p>
+<p>&Icirc;n momentul &icirc;n care abordez conceptul acesta de &ldquo;laic&rdquo;, &icirc;ntr-adevar este nevoie cum zice distinsul meu coleg, să ne ducem &icirc;n Evul Mediu, să cobor&acirc;m &icirc;n Evul Mediu şi să vedem că &icirc;n momentul &icirc;n care a explodat clericalismul, statul a reacţionat şi a generat o nouă structură , un nou cadru de manifestare a responsabilităţilor specifice statului. Nu aceasta &icirc;nsă mă interesează pe mine. Dacă vreţi, mergeti &icirc;n tezaurul limbii grecesti şi vedeţi de unde vine conceptul de &ldquo;laic&rdquo; şi vedeţi ce inseamnă. El a fost elaborat şi este utilizat ca o contrapondere a grupului religios, dar nu ca şi o structură antagonică, ci ca o structură de sine a acestei unităti. &Icirc;n momentul &icirc;n care vorbesc despre educaţia religioasă, vorbesc despre un element care complementarizează o structură&nbsp; educatională, o structură&nbsp; de formare, care de data aceasta nu se mai adreseaza doar trupului, ci vizează şi cealaltă parte a structurii umane, spiritul, sufletul. Şi atunci, nu cred că este cazul să vă dau eu acum citate din mari oameni de cultură ca să vedeţi că e foarte important să educi, să formezi, să contribui &icirc;n chip real la realizarea conştiinţei de sine a persoanei integrale, nu pe bucăti.</p>
+<p>Şi atunci, din acest punct de vedere, am analizat puţin toata problematica aceasta şi chiar am facut nişte evaluări cantitative şi pot să vă spun că din toata curricula, indiferent la care clasă m-aş referi, de multe ori nu reprezintă mai mult de, probabil, 10% cuantumul de noţiuni, cuantumul de termeni pe care le oferă religia şi care nu sunt teme structurate autonom, ci sunt teme corelative cu multe dintre disciplinele şcolare. Aşa se face că dacă mă intorc puţin &icirc;n istorie, o să văd că pentru formarea conştiinţei acelui monarh s-au scris invaţăturile lui Neagoe Basarab, că Machiavelli a scris &ldquo;Principele&rdquo;, că au scris toţi ceilalţi, iar elementele fondatoare a acestor scrieri parcă sunt din Sf&acirc;nta Scriptură. Şi atunci &icirc;n momentul &icirc;n care vorbesc de educaţia religioasă, nu vorbesc nicidecum de un element care ar putea, intr-o curricula de cincisprezece discipline să anuleze prin efemeritatea sa caracterul at&acirc;t de generos de laic al statului nostru.</p>
+<p>&Icirc;n ceea ce priveşte finantarea şi toate celelalte, vă rog să vă uitati, statul francez, vă dau doar exemplul acesta, statul francez este un stat laic. Nu se predă religia &icirc;n şcoli, dar statul francez, cu toata laicitatea sa excesivă, plăteste, susţine &icirc;nvăţam&acirc;ntul teologic. Deci iată care este situaţia, şi &icirc;nchei, prin a vă cita, dacă dumneavoastră aţi dat, distinse coleg, un articol din Constituţie, vă citesc şi eu un articol din Constituţie, 32, alineatul 7: &ldquo;&Icirc;n şcolile de stat, &icirc;nvăţam&acirc;ntul religios este organizat şi garantat prin lege&rdquo;, aşa cum se &icirc;ntamplă &icirc;n majoritatea statelor europene. &Icirc;nvăţam&acirc;ntul are un caracter confesional &icirc;n Austria, Grecia, Italia,&nbsp; Polonia, Spania, Germania, iar un specific general &icirc;n Olanda, Suedia, Norvegia, sau Danemarca.</p>
+<p>&nbsp;</p>
+<p><strong>Raul Sălăgean:</strong>&nbsp;Am să vă spun intre timp care au fost rezultatele din primul vot, au fost 16 voturi &icirc;n total, 8 de-o parte, 8 de cealaltă, iar &icirc;n ceea ce urmează vom vedea rezultele &icirc;n urma celui de-al doilea vot. Putem observa că sunt mai multe voturi datorită faptului că a mai venit o persoana &icirc;n sala, şi din c&acirc;te &icirc;nteleg o persoană care &icirc;nainte credea că predarea religiei &icirc;n şcoli pune &icirc;n pericol laicitatea statului rom&acirc;n şi-a schimbat parerea.</p>
+<p><strong>Mădălina Mocan</strong>: Marele avantaj din perspectiva mea al unui meci de debate, este că &icirc;ntr-un timp foarte scurt, mai puţin de o ora, avem ocazia să auzim o serie de argumente structurate, de-o parte şi de alta şi nu ştiu cine e omul care şi-a schimbat părerea, as vrea şi eu să &icirc;l cunosc. Insă nu e at&acirc;t de relevant dacă opiniile noastre se schimba, ci capacitatea de a ne susţine propriile poziţii &icirc;n spatiul public. &Icirc;n seara aceasta dvs. aţi fost răsfăţaţi, &icirc;n sensul &icirc;n care aţi auzit o serie de argumente de ambele părti, care sper eu că v-au st&acirc;rnit interesul. Eu sunt foarte tentată să &icirc;ntreb despre povestea cu &icirc;ndoctrinarea, &icirc;nsă o să mă abtin şi o să vă &icirc;ncurajez pe dvs. să le adresaţi &icirc;ntrebări celor doua echipe.</p>
+<p><strong>Intervetie:</strong>&nbsp;Poate tema nu a fost foarte bine aleasă, fiindcă să pui o propoziţie de genul o&rdquo; oră de religie ameninţă laicitatea&rdquo; cred că e exagerat. Puţină lume raţională poate să vină şi să zică că chiar o oră de religie ne transformă &icirc;ntr-un stat religios. Poate trebuia mai bine &ldquo;Ar trebui statul să finanţeze orele de religie &icirc;n şcoli?&rdquo;, unde cred că nu aşa ar fi arătat voturile, ci total altfel. Fiindcă asta e cu adevărat o problema: noi din impozite de ce să plătim ca nişte persoane să meargă să le predea religie unor copii. Acceptăm că se ameninta laicitatea, de ce? Care e motivatia?</p>
+<p><strong>Ioan Chirilă:</strong>&nbsp;Organizatorii spuneau că titlul acesta era fixat de la inceputul proiectului, fiind votat.</p>
+<p><strong>Mădălina Mocan:</strong>&nbsp;Dincolo de partea cu cine c&acirc;nd a votat motiunea, relevanta intrebarii dvs. răm&acirc;ne, &ldquo;Ar trebui statul să finanţeze...&rdquo;?</p>
+<p><strong>Intervenţie:</strong>&nbsp;Eu fiind de natura economist, evident că totul judec din această prismă. Noi acolo, unul dintre lucrurile pe care le discutăm de aşa numitele &ldquo;ineficienţe&rdquo; ale pieţei, şi c&acirc;nd statul ar trebui să intervină pentru a corecta aceste ineficienţe. Eu incercam să mă gandesc care este ineficienta aici. &Icirc;n Germania de exemplu, o persoană trebuie să se inregistreze ca aparţinand unui cult, şi &icirc;n momentul acela statul ia lunar din venitul lui un impozit, &ldquo;impozit de Biserica&rdquo;, care se vireaza direct confesiunii pentru care s-a inregistrat, motiv pentru care &icirc;n Germania la ora la actuala aproape jumătate din populaţie nu aparţine nici unei confesiuni. Aici la noi &icirc;n Rom&acirc;nia,&nbsp; mi se ia din impozit, nu mă intreabă nimeni ce confesiune am, şi se imparte pe principiul că dacă la ultimul recensam&acirc;nt o &icirc;ntrebat şi confesiunea şi a reieşit că 85% suntem ortodoxi, 85% din banii ăstia &icirc;i dam la religia asta.</p>
+<p><strong>Ioan Chirilă:</strong>&nbsp;Confundaţi. Cum adică să dam 85% din impozit Bisericii?</p>
+<p><br /> <strong>Intervenţie:</strong>&nbsp;Nu din impozit, ci din bugetul alocat religiei.</p>
+<p><strong>Ioan Chirilă:</strong>&nbsp;Religia nu are buget. Haideţi să nu confundam cărtile, eu inteleg că Dante a scris 3 cărţi, &icirc;nsă e mai bine să păstram lucrurile &icirc;n alta ordine. Este vorba de următorul aspect, şi o să o iau tehnic. &Icirc;n momentul &icirc;n care &icirc;n 1990 a inceput procesul de elaborare a educaţiei religioase ca disciplină &icirc;n curricula şcolară, toate chestiunile acestea au trecut prin mai multe faze. De pildă, &icirc;mi amintesc, era Mihai Sora Ministru al Invăţăm&acirc;ntului, şi principalul aspect care a fost adus ca şi suport &icirc;n momentul respectiv a fost următorul. Să plecam de la situaţia curriculară din perioada interbelică, care a fost fondată de legea din 1848, şi să vedem dacă mai este cazul &icirc;n momentul de faţa să revenim la acea structură. Votul general, binenţeles şi după o oarecare manifestare, au agreat cu toţii introducerea religiei cu un asterix, cu opţiunea &ldquo;Se respectă opţiunea, se respectă confesiunea&rdquo;.</p>
+<p>&Icirc;n cazul acesta, distinsul coleg Alexandru n-a văzut greco-catolici. Sunt doi aici, &icirc;n sală, să spuna ei. Şi dacă vreţi, vă dau un alt exemplu că să vă arat cum se face religia, şi nu vă pot da exemplu dec&acirc;t de la Cluj. Avem renumitul liceu &ldquo;Nicolae Bălcescu&rdquo;, din zona centrală, unde colega greco-catolică nu avea catedră cu normă completă, şi căreia i s-a permis să predea la clasele care au declinat dorinţa de a participa la ortodoxi. Tocmai ca să &icirc;şi completeze orele, ca să poata să funcţioneze &icirc;n sistemul de profesori titulari. Deci nu exista chiar atatia nori negri.&nbsp; &Icirc;nt&acirc;mplarea a făcut ca &icirc;n viata mea să trăiesc l&acirc;nga un om care nu a fost marginalizat sau discriminat că a facut religie ortodoxa, iar pe acel om l-a chemat Nicolae Steinhert. Şi am şi alte exemple de genul acesta şi nu se pune problema aceasta a marginalizarii.</p>
+<p>Mă &icirc;ntorc la finanţare. &Icirc;n momentul &icirc;n care s-a acceptat ca această disciplină să intre &icirc;n programa de &icirc;nvăţam&acirc;nt, motivul finanţării este explicat, este justificat. Nu se face finanţare pe criterii confesionale, ci pe criteriul disciplinei, pe cel al activităţii didactice prestate. Că e negativă că e pozitivă, e dreptul dvs. să judecaţi. &Icirc;n ceea ce priveşte importanţă unei discipline de factură educaţiei religioase, din punctul meu de vedere, care repet e subiectiv, nu am cum să mă despart de această subiectivitate, e foarte important, pentru că &icirc;n momentul &icirc;n care vorbesc de educaţia religioasă vorbesc de o abordare a unei dimensiuni care iese din imanenta at&acirc;t de acerbă a cotidianului, care &icirc;i oferă&nbsp; posibilitatea persoanei să interfereze măcar ideatic cu zona transcenderii cu o altă formă de &icirc;ntelegere a axiologicului şi a libertăţii. Dacă ar fi să privesc dinauntru, da, &icirc;nca nu se realizează cum ar trebui să se realizeze această educaţie.</p>
+<p>&nbsp;</p>
+<p><strong>Intervenţie:</strong>&nbsp;Bun, dar eu &icirc;ntreb următorul lucru. De ce trebuie să se facă această educaţie religioasă &icirc;ntr-o şcoala publică finanţata de stat şi să nu &icirc;şi asume fiecare confesiune responsabilitatea să facă o şcoală de duminică, unde vin copii şi &icirc;nvată. Eu am fost la şcoala germană din Satu Mare, nu sunt de confesiune romao-catolică, totuşi fiindcă colegii mei mergeau, am fost la o şcoala de duminică, &icirc;nainte să fie religia obligatorie &icirc;n şcoala. M-am dus fiindcă am vrut eu. ŞI acolo, preotul &icirc;şi facea timp şi ti se facea educaţie religioasă. Nici un ban de la stat.</p>
+<p>&nbsp;</p>
+<p><strong>Ioan Chirilă:</strong>&nbsp;Din nou, aveţi informatia de pe Transilvania Media probabil. Problema stă &icirc;n felul următor.&nbsp; Sunday School s-a introdus şi &icirc;n structurile Bisericii Ortodoxe, eu chiar ortodox fiind predau la greco-catolici, au programul şi ei. Nu este tipul acesta de Sunday school, ci e un program de catehizare. Acelaşi lucru e dacă mergeti la Biserica Reformată cu care eu am colaborare, există. S-a incercat să se realizeze acest pas, &icirc;nsă acest pas nu este un pas de noutate. Vreau să vă spun că fostul rector al Institutului Teologic din Cluj, a fost introdus la Aiud şi nu l-a mai scos nimeni de acolo, tocmai fiindcă a &icirc;ncercat să facă o programa pentru şcoala de duminică cu predarea religiei.</p>
+<p><strong>Intervenţie</strong>: Păi dacă există, care e rostul să se mai predea şi &icirc;n şcoala publică? Eu văd o singură explicaţie, că dacă este pe nevoi şi omul trebuie să aleagă, vin prea puţini.</p>
+<p><strong>Ioan Chirilă</strong>: Dumneata ca economist da, eu ca teolog pot să &icirc;i văd rostul, te intorc puţin la trunchiul comun al ideii grecesti şi vezi dacă era constituanta religioasă &icirc;n Pandeea greceasca. Şi atunci, puneţi &icirc;ntrebarea &ldquo;De ce?&rdquo;.</p>
+<p><strong>Laszlo Alexandru</strong>: O să incerc să vă dau şi eu un răspuns, nu printr-o ipoteză, ci relat&acirc;ndu-mă la un fapt concret. Ne-am int&acirc;lnit cei doi coechipieri acum două zile, tocmai că să ne coordonăm, şi am spus nişte lucruri domnişoarei studente, pe care poate să mi le confirme. Atunci c&acirc;nd am primit invitaţia să vin la acest debate, fiind profesor la liceu, am una dintre eleve care este aicea şi poate să confirme. Cred că la clasa voastră, &icirc;nsă nu sunt sigur, am facut următorul sondaj.&nbsp; Primul lucru care mă intereseaza pe mine este unde mă duc, care este poziţia mea acolo şi &icirc;n funcţie de asta să &icirc;mi stabilesc strategia. Şi atunci, nu aveam altă cale la &icirc;ndemana dec&acirc;t elevii mei, care fac religie la şcoala, i-am invitat să vina la debate le-am spus despre ce vă fi dezbaterea. Le-am prezentat detaliile, mă interesează părerea voastră, haideţi să votăm: &ldquo;Vreţi să se scoată religia de la clasa voastră sau vreţi să se păstreze? &ldquo;. Eu eram destul de convins că voi avea o majoritate zdrobitoare care fiind copii de 14-15 ani, o oră libera, merg la suc, deci aveam argumente de genul acesta. C&acirc;nd s-a votat, a fost 80-85% să se păstreze religia, şi c&acirc;nd am văzut asta, că ei au votat 80%, atuncea m-a luat cu durere de cap. Păi dacă ei au votat aşa, şi sunt consumatorii, inseamnă că asta va fi &icirc;n mare şi opinia public. C&acirc;nd m-am &icirc;ntalnit cu domnişoara i-am spus, poate să confirme, noi suntem la 20%. Dacă urcăm la 40% va fi extraordinar, deci să nu vă aşteptaţi, sau să nu fiţi dezamagită dacă nu vom avea peste 50%, fiindcă asta este opinia publică. Eu am sondat-o printre elevii mei, care poate ar fi avut tendinţa să ţina cu mine, să mă flateze sau aşa mai departe.</p>
+<p>Am mai avut o discutie legat de asta, cum să explic, eu sunt o fire rationala şi &icirc;ncerc să găsesc nişte explicaţii. Sunt doua registre diferite de abordare. Noi am incercat să venim cu argumente, cu sfere de activitate din istorie, din legislatie, din economie, finanţe, domnul care a adresat &icirc;ntrebările, pe acelaşi nivel le-a adresat. Pe de altă parte, acest discurs de natura critică şi raţională se confrută cu un discurs de natură sentimentală, tradiţional, de a fi respectus la adresa autoritaţii, şi care este cov&acirc;rşitor la noi. C&acirc;nd domnişoara a venit şi a facut o mica repetiţie, cam cum va fi, mi-a facut o listă cu argumente ce le vom prezenta. I-am zis că toate sunt foarte bune, dar toate sunt din această sfera a raţionalului, incercaţi să gasiţi nişte argumente &icirc;n plan afectiv, fiindcă publicul va fi preponderant aşa.&nbsp; Vă inteleg că sunteţi studentă la Drept, poate să confirme că aşa am zis, dacă veţi fi avocată şi veţi vorbi cu judecătorul, acolo totul este cuantificat raţional, &ldquo;Domnul judecător, &icirc;n Codul Penal articolul 7, paragraful cutare, acolo zice că, deci trebuie să faceti aşa&rdquo;, dar &icirc;ntr-un debate &icirc;n Rom&acirc;nia sau &icirc;n Orient sau &icirc;n Sud-Estul Europei, unde publicul este diversificat, şi asta am văzut-o la elevii mei, majoritatea judecătii se face cu respectul autoritaţii, pe bază afectivă, pe bază a ceea ce se stie din familie, să fie bine, morala publică, şi aşa mai departe. Deci eu nu mă aşteptam să castigăm această dezbatere, şi vă poate confima, şi votarea este &icirc;n direcţia &icirc;n care mă asteptam să meargă. M-a surprins votarea de 8 la 8, primul vot m-a lăsat cu gura căscata, pentru că eu aveam 20% target-ul de la care porneam de la proprii mei elevi. Deci aicea cred că sunt doua sfere care nu comunică, sau doua perceptii diferite.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><strong>Intervenţie:</strong>&nbsp;As avea o &icirc;ntrebare pentru domnul profesor Ioan Chirilă. Faptul că un stat membru al Uniunii Europene, Uniune care promoveaza diversitatea, continuă să facă discriminare &icirc;n şcoli, sunt elev şi fac religie ortodoxa, prin faptul că se preda religia unei anumite confesiuni şi nu religia universală care să te &icirc;nveţe despre mai mult confesiuni, şi chiar dacă ai dreptul să renunti la acea religie, nu vi se pare o discriminare faptul că, &icirc;n contextul &icirc;n care o notă ne&icirc;nsemnată de la o materie oarecare, religia &icirc;n această situaţie, contează foarte mult la premiile de sf&acirc;rsit de an. Nu vi se pare discriminare?</p>
+<p><strong>Ioan Chirilă:</strong>&nbsp;&Icirc;n momentul &icirc;n care se opteaza pentru o disciplină, disciplina aceea chiar dacă p&acirc;nă acolo a fost optional devine obligatorie şi cunostinţele şi tot ce vrea să fie transmis prin acea disciplină trebuie cuantificat prin notă, e firesc să intre la medie. &Icirc;nsă, după a mea stiinta, cel care optează să nu facă religie are o alta opţiune, trebuie să facă totusi o alta disciplină. Nu? Nu aş vedea asta ca o formă de discriminare, &icirc;nsă aici de pildă voi nuanţa prin a spune că eu am fost partizanul ne-notarii religiei, deci a răm&acirc;ne &icirc;n ceea ce priveşte religia &icirc;n zona unui calificativ. Am fost &icirc;n comisiile care s-au ocupat de elaborarea proiectului cu educaţia religioasă, dar nu am fost de acord cu notarea această. Nu cred &icirc;nsă că pot at&acirc;t de usor să o introduce aşa de usor această manifestare &icirc;n zona unei discriminări.<strong>&nbsp;</strong></p>
+<p><strong>Intervenţie:</strong><strong>&nbsp;</strong>&nbsp;Cunosc situatii &icirc;n care media de la religie a facut diferenţa dintre locul 1 şi 2.</p>
+<p><strong>Ioan Chirilă:</strong><strong>&nbsp;</strong>Pe urmă, vreau să vă spun &icirc;nca un lucru, să stii că &icirc;n structura efectivă a educatiei religioase există şi, nu pot să spun procentul, exista şi o grupa de subiecte care iţi oferă&nbsp; informaţii despre alte religii şi nu din perspectiva de prezentare negativă. E acea tematică, noi o numim istoria religiilor, este o componentă tematică a educaţiei religioase şi ea există. Există de pildă &icirc;n şcolile, mi se pare că ceea ce erau liceele pedagogice, unde există istoria religiilor efectiv ca şi disciplină. Nu se urmăreşte incartiruirea efectivă &icirc;ntr-o structură doctrinară, deci nu se urmăreste aşa ceva. Dacă vrei, putem să luăm manualele şi să vedem că nu se transmit, nu se transmit dogme pure ci este o naraţiune pe o tematică religioasă care poate să genereze &icirc;n cel care asumă invăţătura religioasă o formulare de tip dogmatic, dar nu e premisa de la care pleaca actul educaţional. Atunci ar fi, &icirc;ntr-adevar, &icirc;ndoctrinare.</p>
+<p><strong>Raul Sălăgean:</strong>&nbsp;Pe de alta parte, am şi eu o idee legată de ceea ce ziceai. Nu cred că, exemplul acesta al religiei este singurul exemplu prin care un copil poate sau nu să fie dezavantajat &icirc;n momentul &icirc;n care vorbim de premii sau ştiu eu ce de alte, &icirc;n primul r&acirc;nd, evident, lăs&acirc;nd la o parte faptul că sunt extrem de subiective notele si asa. Mergand mai departe există şi exemplul educaţiei fizice, acolo putem să &icirc;nvinuim mai tare statul că nu face nimic &icirc;n sensul asta pentru că nu este vorba de o opţiune neapărat a persoanei respective, dacă este scutită de la educaţia fizică poate este pentru că nu poate fizic să participe la orele respective şi tot aşa, vorbim de o medie mare care lipseste şi care &icirc;l dezavantajează oarecum pe elevul respectiv, &icirc;nsă mai mult dec&acirc;t, să zicem faptul că, &ldquo;ghinion, asta este&rdquo;, nu ştiu dacă este de datoria statului să furnizeze nota aceasta.</p>
+<p>&nbsp;</p>
+<p><strong>Călin Mureşanu:</strong><strong>&nbsp;</strong>&nbsp;Dacă &icirc;mi permiţi să mai adaug ceva ca răspuns la inceputul intrebării tale la care ziceai că forţeaza elevul să studieze o anumită religie, eu p&acirc;nă &icirc;n clasa a opta nu am facut religie la şcoala, ci făceam şi eu religie la Şcoala Duminicală, eu fiind neoprotestant şi aduceam de la şcoala duminicală de unde faceam religie, aduceam o adeverinţa şi aveam notă de la Şcoala Duminicala dată. N-am fost obligat să fac religie ortodoxă pentru notele din catalog, bine, &icirc;n liceu am facut religie ortodoxa că vroiam să stau cu colegii şi aşa mai departe, dar p&acirc;nă &icirc;n clasa a noua nu am facut religie ortodoxa ci doar la Şcoala Duminicala am facut religie.</p>
+<p><strong>Intervenţie:</strong>&nbsp;Vreau totuşi să spun un lucru că eu am adresat o &icirc;ntrebare: De ce cadrul şcolilor publice, pe cine avantajeaza faţa de a preda&nbsp; in scolile duminicale? Şi totusi nu mi-aţi răspuns.</p>
+<p><strong>Ioan Chirilă:</strong>&nbsp;Eu v-am răspuns de ce &icirc;n cadrul...</p>
+<p><strong>Intervenţie:</strong><strong>&nbsp;</strong>Nu, mi-aţi vorbit despre educaţia religioasă.</p>
+<p><strong>Ioan Chirilă:</strong><strong>&nbsp;</strong>&nbsp;O clipă. Am zis că momentul &icirc;n care ministerul a acceptat introducerea &icirc;n trunchiul comun a religiei se justifica şi de ce plăteşte. De ce s-a optat pentru această formulă &icirc;n şcolile de stat? S-a incercat, deci aţi avut &icirc;n răspunsul meu anterior, s-a incercat să se plece de la o structură care a existat. Acela a fost principalul argument: "religia &icirc;n curicula sau trunchiul educaţiei din perioada interbelică era o disciplină". Acestea au fost motivele. &Icirc;n ceea ce priveşte raportul intre educaţia religioasă care să face &icirc;n şcoala şi educaţia religioasă care se face &icirc;n "Sunday School"-ul respectiv, v-am spus că există o diferenţa, nu se pot pune pe acelaşi plan pentru că v-am precizat exat titlul, dar trebuie să intelegeţi şi această terminologie. La "Sunday School" de fapt este o catehizare, acolo este de fapt vorba despre un alt tip de formare dec&acirc;t tipul de transmitere a informaţiei religioase care se realiează &icirc;n cadrul orelor de religie sau educaţie religioasă care există &icirc;n scolile de stat şi care vizeaza, nu &icirc;n sens prioritar dob&acirc;ndirea unui cuantum de informaţii religioase, c&acirc;t să contribuie prin ceea ce transmit la formarea personalităţii al caracterului moral al persoanei.</p>
+<p><strong>Intervenţie:</strong>&nbsp;Dar de ce nu se poate face asta tot &icirc;n Şcoala Duminicală?</p>
+<p><strong>Ioan Chirila:</strong><strong>&nbsp;</strong>Dar &icirc;n Şcoala Duminicală, de pildă nu există celelalte 12 discipline care sunt &icirc;nainte de a treisprezecea, care e religie.</p>
+<p><strong>Mădălina Mocan:</strong>&nbsp;Astea sunt o gramada de dileme tehnice, c&acirc;nd ar trebui cel mai bine să se predea ceva. Mai este un comentariu mai &icirc;n spate.</p>
+<p><strong>Intervenţie:</strong><strong>&nbsp;</strong>&nbsp;Da, vroiam să spun că, exact că şi &icirc;n cazul oricărei materii, fie că vorbim de religie sau de altceva, cadrul academic iţi oferă un tip de educaţie şi anume, formală şi cealalta iţi oferă&nbsp; educaţia non-formală. Ele nu sunt mutual exclusive, pot să faci religie şi la şcoala şi la "Sunday School". Ideea era, din punctul unui economist de vedere, dacă se merită să şi plătim din bugetul statului nişte oameni care să predea asta &icirc;n şcoli, dar asta este altă discutie. Nu se poate face la şcoala ce se face la "Sunday School" şi nici invers din punctul meu de vedere. De aia este diferenţă dintre cele doua tipuri de educaţie.</p>
+<p><strong>Raul Sălăgean:</strong><strong>&nbsp;</strong>&nbsp;Mai mult dec&acirc;t at&acirc;t, cred că v-a oferit un răspuns şi domnul Alexandru Lazlo care v-a explicat oarecum latura afectivă, de care trebuie să ţinem cont şi anume faptul că dacă intrebăm oamenii propriu-zis, ei vor să aibă orele de religie, asta insemn&acirc;nd ce este justificat intr-o oarecare măsura.</p>
+<p><strong>Ioan Chirilă:</strong>&nbsp;Revin &icirc;n problema legislaţiei &icirc;n care guvernează actul educaţional, viaţa şcolii. Şi vreau să vă spun următorul lucru, exact cum dumneavoastră, ca facultate de stiinte economice daţi o diplomă, creaţi o zona de competenţe care sunt corespondente unor profesii din lista respectivă de profesii, la fel facultatile de teologie, prin specializările lor, dau un cuantum de competenţe, dau o diplomă care corespunde tot unei profesii care există &icirc;n lista profesiilor şi &icirc;n bază actelor respective, prin faptul că există disciplină &icirc;n structură curiculara, acel cadru care este abilitat poate să opteze pentru acest loc de muncă. &Icirc;n momentul &icirc;n care structura legislativă se va schimba, probabil o să vină să elucideze nebuloasele financiare care &icirc;nca guverneaza &icirc;n Rom&acirc;nia şi care, din punctul meu de vedere, nu au absolut nimic cu crahul economic &icirc;n care ne scăldăm.</p>
+<p><strong>Mădălina Mocan:</strong>&nbsp;Mai este aici un comentariu. Numai puţin.</p>
+<p><strong>Intervenţie:</strong>&nbsp;Doar o afirmaţie vreau să fac.</p>
+<p><strong>Mădălina Mocan:</strong>&nbsp;Scurt şi după aceea un comentariu aici.</p>
+<p><strong>Intervenţie:</strong>&nbsp;Şi după aia &icirc;nchei. Ce spuneţi dumneavoastră există un comportament, deci o explicatie economică pentru ce spuneţi. De fapt inseamnă că eu vreau să &icirc;mi creez o piată pentru ce produc şi atunci &icirc;i fortez pe ăştia să cumpere. Cam aşa sună.&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p><strong>Alexandru Laszlo:</strong><strong>&nbsp;</strong>&Icirc;ncerc să vă dau o explicaţie dacă &icirc;mi permiteţi, pentru că există un anumit mic sentiment de frustrare sau de nemulţumire la adresa unora legat de cum merg lucrurile cu opţiunea pentru religie. Se desprinde din dezbaterea noastră că pe plan european există doua tipuri de abordare. O data este acea a statului laic, francez, unde nu se predă religie deloc. Eu sunt profesor de italiană la un liceu bilingv de italiana unde am un coleg, profesor de italiană care a venit din Italia, el a predat 20 de ani acolo şi ca să &icirc;mi formez comparativ ca informaţie orizontul, l-am intebat care este situaţia la ei. Ei au avut o dezbatere foarte interesanta, inclusiv &icirc;n justiţie, pe chestia cu crucifixul. Deci, a dat un musulman &icirc;n judecata şcoala pentru că au expus crucifixul &icirc;n clasa şi asta o deranja pe fiica sa, care era musulmană. S-a ajuns p&acirc;nă la Curtea Europeana a Drepturilor Omului cu această problemă. Deci şi la ei problema este foarte sensibilă, dar l-am intrebat cum se rezolvă, deci se predă religie &icirc;n şcoala? Zice da. Şi cum se face, cine participa şi cine nu? Zice, la &icirc;nscrierea &icirc;n şcoala li se da un forumlar de completat cu numele, prenumele, adresa, domiciliu, etc. şi are şi o rubrică, vrei religie? sau care anume religie? sau nu. Şi se face opţiunea &icirc;n prealabil şi e o chestiune foarte normală. La noi, nu există această optiune prealabilă şi pot să o confirme elevii aici de faţa, se intră cu orarul pe religie şi dacă sunt rezerve de constiinţă, cum se spune, deci penticostali sau aşa ceva, ei au dreptul să se recuze, să se retragă, dar se presupune că religia este pentru toată lumea. O spunea şi distinsul coleg adineauri că d&acirc;nsul este de confesiune penticostală, nu? Ei, şi a fost o vreme la penticostali, după care a mers cu ortodocsii că era normal să fie cu toţi ceilalţi. Deci pe această idee, că &ldquo;domnule să stea lumea laolaltă&rdquo; şi reflexul acesta de a sta impreună cu colegii.</p>
+<p>Deci noi cred că &icirc;n Rom&acirc;nia mergem mai departe dec&acirc;t un stat prin excelenţă religios cum este Italia, care s-a construit &icirc;n jurul Vaticanului şi a autorităţii Papale şi care dă mai mare libertate de optiune elevilor săi prin această interogare prealabilă dec&acirc;t noi, care &icirc;i punem &icirc;n faţa faptului &icirc;mplinit. Aici este o mică frustrare, o resimt eu, poate nu totdeauna conştientizată, o a doua frustrare, a mea personala, care, ca orice cetătean, locuiesc la bloc &icirc;n Mănăstur, la vreo 3 blocuri distanţă de Biserica asta care se construieşte acuma, &icirc;ncă nu s-a terminat de caţiva ani de zile. Vreau să vă spun că &icirc;n fiecare duminică şi &icirc;n toate sărbătorile religioase sunt expuse nu ştiu c&acirc;te difuzoare şi dimineaţa mă trezesc cu c&acirc;ntecele religioase parcă sunt cu muezinul, acolo, &icirc;n filmele alea cu arabii. Aud toata predica, eu am termopane, trebuie să stau cu ele &icirc;nchise ca să nu mă &icirc;ndoctrineze sau &icirc;mi dau drumul la muzică. Eu nu zic, poate că &icirc;mi place, că e un bun retor preotul respectiv, uneori mai trag cu urechea, e convingător, dar poate că nu totdeauna mă interesează. Şi &icirc;nca o chestiune interesantă, &icirc;ntr-o duminică m-am nimerit pe la Sighişoara cu nişte lucruri şi am ajuns &icirc;n zona&nbsp; bisericii, şi acolo erau difuzoare afară. Am trecut prin centrul Clujului, şi acolo erau difuzoarele afară şi atuncea am inteles că este un ordin de sus. Că nu s-a trezit nişte biserici din diverse puncte geografice să scoată difuzoarele, să facă această catehizare, usor forţată, a tuturor locuitorilor din zonă, chiar la al treilea bloc distanţă.</p>
+<p>Deci, aici apare o frustare, adică domnule &icirc;n casă vii peste mine, la şcoală trebuie să mă retrag că să nu, haideti să o lăsam mai la latitudinea cetăţeanului raţional şi care &icirc;şi alege el calea &icirc;n viaţă, care poate fi, &icirc;şi poate găsi valorile morale pe o cale, cum să spun, statal-laică, există valori etice intr-o abordare laica, nu numai religioasă şi poate că unii pe acelea vor să le cultive. Să &icirc;i lăsam şi pe aceea, să nu mergem peste ei. Deci repet, &icirc;n acest moment noi cred că suntem mai &icirc;n faţa şi dec&acirc;t Italia, care este un stat solid religios, cu mari dezbateri pe problema religiei. Aici eu cred că e o frustare şi nu este intotdeauna constientizată de către populaţie şi atunci mai sunt rabufniri, mai sunt tensiuni, dar e bine că le discutăm aici că să le aducem la suprafaţă.</p>
+<p><strong>Mădălina Mocan:</strong><strong>&nbsp;</strong>&nbsp;Cred că pentru sursele frustrării s-ar putea face o serie intreagă de alte dezbateri, dacă mai sunt alte intervenţii, alte &icirc;ntrebări, ultima, ultima şansă. Să le adresaţi &icirc;n această rundă de dezbateri, dacă nu, dacă membrii celor doua echipe vor să mai spuna ceva &icirc;nainte să &icirc;nchidem această dezbatere.</p>
+<p><strong>Ioan Chirilă:</strong><strong>&nbsp;</strong>&nbsp;Doar c&acirc;teva cuvinte &icirc;n legătură cu cele doua concepte. Raţiune, rational pe de-o parte şi religie, afectivitate pe de cealalta parte. Să stiţi că religia nu este doar un act care dă afectivitate, nu se adreseaza doar planului sentimental, acţiunea de manifestare propriu-zisă a credinţei este un act raţional, de asemenea acţiunea de mărturisire a credinţei este un act raţional şi responsabil. Că se pune accentul pe manipularea afectivă, asta e altceva, &icirc;nsă vă rog să &icirc;ntelegeţi că indiferent şi nu mă refer, din nou, la o credinţă sau la alta cu titlul de confesiuni, ci am folosit conceptul generic, indiferent de credinţă, credinţa nu este doar un act afectiv, ci şi dacă vreţi vă dau un citat din un personaj de prin secolul IV: "Există o interacţie efectivă &icirc;ntre raţiune şi credinţă şi interactia se numeşte, dacă vreţi, desăv&acirc;rşire, luminare, creştere, dezvoltare extraordinara a factorului raţional."</p>
+<p><strong>Mădălina Mocan:</strong><strong>&nbsp;</strong>&nbsp;Mulţumim. Călin? Mai vrei să spui ceva ?</p>
+<p><strong>Călin Mureşanu:</strong><strong>&nbsp;</strong>&nbsp;Eu chiar asta vroiam să spun, că din punctul meu de vedere nu e o distinctie sau nu ar trebui să facă atribuirea religiei afectivului şi invers, dar mi-a luat-o domnul Chirilă &icirc;nainte, adică eu, venind dintr-o familie neoprotestanta, am avut partea mea de &icirc;ndoctrinare, mai ales p&acirc;nă &icirc;n adolescenta, am avut parte &icirc;n care am negat &icirc;ndoctrinarea iniţiala, dar acuma, recent, am inceput din nou să mă duc la Biserica, dar mai mult din raţiuni, mai mult din alegeri raţionale dec&acirc;t să zic eu afective, că-mi era dor de Biserica sau că mi-era dor de oamenii de acolo, dar nu mai lungesc acuma pe subiectul asta.</p>
+<p><strong>Alexandru Laszlo:</strong>&nbsp;Da, am facut un debate &icirc;n care am fost doua echipe, dar cred că e mult mai important faptul că &icirc;ncheiem pe un acord desăv&acirc;rşit, deci vreau să confirm şi să susţin cele spuse de domnul profesor Chirilă, de n-ar fi dec&acirc;t să vă reamintesc că unul dintre cei mai importanţi filozofi medievali, Sf&acirc;ntul Toma din Aquino a pus la baza credintei, raţiunea şi cercetarea, căutarea lui Dumnezeu pe cale raţională dintr-un raţionament &icirc;ntr-altul p&acirc;nă la cauza primară şi pe linia Sf&acirc;ntuluI Toma a venit Dante, care este pasiunea mea şi pe care, subiect şi autor, am publicat o carte şi mai pregătesc altele doua. Dante a dovedit &icirc;n capodopera sa &icirc;n ce mod fascinant credinţa poate fi pusa &icirc;n acord, pe acelasi plan, cu raţiunea. Deci, aici sunt perfect de acord, unde, poate, mica precizare care era de facut, se referea la strategii de comunicare &icirc;n public unde am zis că partea afectiva este preponderentă &icirc;n asemenea situaţii, dar &icirc;n ceea ce priveşte religia, sunt perfect de acord că raţiunea şi sentimentul trebuie să meargă impreuna pentru a descoperi adevăratele valori religioase.</p>
+<p><strong>Madalina Mocan:</strong> Mulţumesc foarte mult. Dante s-a trezit &icirc;n mijlocul unei păduri, nu ? Noi răm&acirc;nem &icirc;n mijlocul unei dezbateri, vă mulţumesc &icirc;nca o data.</p>
+<p>&nbsp;</p>
+<p><strong><br /></strong></p>
+</div>
+                <div class='clear'></div>
+        </div><!-- end main content -->
+         <div class='clear'></div>
+</div>
+<div id="pix"></div>
+
+
+                                </div><!--end main -->
+                                <div id='parteneri'>
+                                    <span class='tr'></span><span class='tl'></span><span class='br'></span><span class='bl'></span><span id="filler"></span>
+                                    <div class='parteneri' id='sustinatori'>
+                                        <span class='floating_text' id='un_proiect'>Un proiect</span>
+                                        <a href='http://www.ardor.org.ro/'><div class='image' id='ardor'>Ardor</div></a>
+                                        <span class='floating_text' id='finantatori'>Finanțatori</span>
+                                        <a href='http://www.opensocietyfoundations.org/'><div class='image' id='open_society'>Open Society Foundation </div></a>
+                                        <a href='http://www.studentiq.ro//'><div class='image' id='memoplus'>MemoPlus</div></a>
+                                        <!-- <a href='http://www.ratiufamilyfoundation.com/'><div class='image' id='FundatiaRatiu'>Ardor</div></a>
+                                        <a href='http://www.eef.md/'><div class='image' id='eef'>East Europe Foundation</div></a>
+                                        <a href='http://www.mts.gov.md/'><div class='image' id='mdminister'>Ministerul Tineretului si Sportului al Republicii Moldova</div></a> -->
+
+                                        <span class='floating_text' id='parteneri_text'>Parteneri</span>
+
+                                        <a href='http://www.policycenter.eu/'><div class='image' id='PolicyCenter'>Policy Center</div></a>
+                                        <a href='http://www.britishcouncil.org/'><div class='image' id='BritishCouncil'>British Council</div></a>
+                                        <a href='http://www.europuls.ro/'><div class='image' id='europuls'>Europuls</div></a>
+                                        <a href='http://www.cere.ro/'><div class='image' id='cere'>Ce-Re</div></a>
+                                        <a href='http://www.primeromania.ro/'><div class='image' id='prime'>Prime Romania</div></a>
+                                        <a href='http://www.cji.ro/'><div class='image' id='cji'>Centrul pentru jurnalism independent</div></a>
+                                        <a href='http://www.aiesectm.ro/'><div class='image' id='aisec'>Aisec</div></a>
+                                        <!-- ===================================================================================================== -->
+                                        <a href='http://www.cogitus.ro/'><div class='image' id='cogitus'>Cogitus</div></a>
+                                        <a href='http://www.adevarul.ro/international/foreign_policy/'><div class='image' id='foreignPolicy'>Foreign Policy</div></a>
+                                        <a href='http://www.elsa.ro/'><div class='image' id='elsa'>Elsa</div></a>
+                                        <a href='http://www.vipromania.ro/'><div class='image' id='vipromania'>Voluntari pentru idei si proiecte</div></a>
+                                        <a href='http://www.ongtrust.ro/'><div class='image' id='ongtrust'>Trust</div></a>
+
+                                        <!-- ===================================================================================================== -->
+                                        <a href='http://www.leap.ro/'><div class='image' id='leap'>Leap</div></a>
+                                        <a href='http://www.younginitiative.org/'><div class='image' id='younginitiative'>Asociatia young initiative</div></a>
+                                        <a href='http://www.asjc.ro/'><div class='image' id='asjc'>Asjc</div></a>
+                                        <a href='http://osut.ro/'><div class='image' id='osut'>Osut</div></a>
+                                        <div class='clear'></div>
+                                    </div>
+                                    <div class='parteneri' id='parteneri_institutionali'>
+                                        <span class='floating_text' id='sponsori_text'>Sus&#539;in&#x0103;tori</span>
+                                        <a href='http://www.cartier.md/'><div class='image' id='cartier_logo'>Editura Cartier</div></a>
+                                        <a href='http://www.pll.md/ro/'><div class='image' id='biblio_logo'>Biblioteca publica de drept</div></a>
+                                        <span class='floating_text' id='institutii_text'>Parteneri institu&#539;ionali</span> 
+                                        <ul id='institutii'>
+                                            <!-- <span class='floating_text' id='institutii_text'>Parteneri institu&#539;ionali:</span> -->
+                                            <li><a href='http://www.politice.ro/'>Facultatea de &#536;tiin&#539;e Politice SNSPA </a></li>
+                                            <li><a href='http://www.comunicare.ro/'>Facultatea de Comunicare &#537;i Rela&#539;ii Publice SNSPA</a></li>
+                                            <li><a href='http://www.fspub.ro/'>Facultatea de &#536;tiin&#539;e Politice Universitatea Bucure&#537;ti</a></li>
+                                            <li><a href='http://www.filosofie.unibuc.ro/'>Facultatea de Filosofie Universitatea Bucure&#537;ti</a></li>
+                                            <li><a href='http://litere.unibuc.ro/'>Facultatea de Litere din Universitatea Bucure&#x015f;ti</a></li>
+                                            <li><a href='http://www.unibuc.ro/ro/fac_fsas_ro'>Facultatea de Sociologie Universitatea Bucure&#537;ti</a></li>
+                                            <li><a href='http://laws.uaic.ro/'>Facultatea de Drept Universitatea Alexandru Ioan Cuza Ia&#537;i</a></li>
+                                            <li><a href='http://www.uaic.ro/uaic/bin/view/Academic/Filosofie'>Facultatea de Filosofie si &#536;tiin&#539;e Social Politice Universitatea AIC Ia&#537;i</a></li>
+                                            <li><a href='http://www.upa.ro/'>Facultatea de Drept si Facultatea de &#x015e;tiin&#x0163;e Politice si Administrative Universitatea Petre Andrei Ia&#x015f;i</a></li> 
+
+                                            <li><a href='http://www.ubbcluj.ro/'>Universitatea Babe&#537;-Bolyai Cluj Napoca</a></li>
+                                            <li><a href='http://www.uvt.ro/'>Universitatea de Vest Timi&#537;oara</a></li>
+                                            <li><a href='http://www.upt.ro/'>Universitatea Politehnica Timi&#537;oara</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class='parteneri' id='parteneri_media'>
+                                        <span class='floating_text' id='media_text'>Parteneri media</span>
+                                        <a href='http://www.hotnews.ro/'><div class='image' id='hotnews'>HotNews</div></a>
+                                        <!-- <a href='http://www.lumebuna.ro/'><div class='image' id='lumebuna'>Lume Buna</div></a> -->
+                                        <a href='http://www.romaniapozitiva.ro/'><div class='image' id='romaniapozitiva'>Romania Pozitiva</div></a>
+                                        <a href='http://totb.ro/'><div class='image' id='thinkoutsidethebox'>Think Outside The Box</div></a>
+                                        <a href='http://www.facebook.com/carevasazica.vip'><div class='image' id='carevasazica'>Carevasazica</div></a>
+                                        <a href='http://www.studentie.ro/'><div class='image' id='studentiero'>Studentie.ro</div></a>
+                                        <a href='http://startub.unibuc.ro/'><div class='image' id='startub'>startub.unibuc.ro</div></a>
+                                        <!-- <a href='http://www.tvr.ro/tvr_cluj.php'><div class='image' id='tvrcluj'>Tvr Cluj</div></a> -->
+                                        <!-- <a href='http://www.radiotransilvania.ro'><div class='image' id='radiotransilvania'>Radio Transilvania</div></a> -->
+                                        <a href='http://iasifun.ziaruldeiasi.ro/'><div class='image' id='iasifun'>Iasi fun</div></a>
+                                        <a href='http://www.ziaruldeiasi.ro/'><div class='image' id='ziaruldeiasi'>Ziarul de Iasi</div></a>
+                                        <a href='http://www.kissfm.ro/timisoara'><div class='image' id='kissfm'>KissFm</div></a>
+
+                                        <div class='clear'></div> 
+                                    </div>
+                                    <div class='clear'></div>
+
+                                </div>	
+                            </div>	<!-- end wrap -->
+                            <div id='footer_mare'>
+                                <div id='footer'>
+                                    <div id='links' class='footer'>
+                                        <div id='menu1' style='margin:auto;'> <ul id='meniu_prinicpal'><li><a href='contacte/index.html'> Contact </a></li>
+<li><a href='clubdebate/index.html'> Cluburile </a></li>
+<li><a href='oamenii/index.html'> Oamenii </a></li>
+<li><a href='proiectul/index.html'> Proiectul </a></li>
+<li><a href='home/index.html'> Acasa </a></li>
+</ul></div><!--end menu-->
+                                    </div><!--
+                                    <div id='contact' class='footer'>
+                                            <h4>Contact</h4>
+                                            <p>office@closer2oxford.ro</p>
+                                            <p>bogdan.draghicescu@closer2oxford.ro<br>
+                                            <span class='detalii'> (asistenta tehnica web - orice probleme legate de site)</span></p>
+                                    </div>
+                                    -->
+                                    <div id='newsletter' class='footer'>
+                                        <script src="../../connect.facebook.net/en_US/all.js#xfbml=1"></script><fb:like href="http://www.facebook.com/pages/Closer2Oxford/162758797069605" width="250" colorscheme="dark"></fb:like>
+                                        <!--<h4>Newsletter</h4>
+                                        <form action='/page/newsletter'>
+                                                <input type='text' name='email'>
+                                                <input type='submit' id='submit' value='>'>
+                                                        
+                                        </form>-->
+                                    </div>
+                                    <div id='credits'>
+                                        Copyright(c) 2021 ARDOR |  Toate drepturile rezervate | Toate logo-urile si sloganurile de pe site sunt proprietate intelectuala inregistrata si nu pot fi reproduse fara acordul explicit al detinatorilor. <br>
+                                            <br /><br />
+                                            <b>Disclaimer</b><br /><i>
+
+                                                Programul educational Closer to Oxford este un program non-profit si nu are o legatura cu universitatea cu acelasi nume, referirea la Oxford avand doar o semnificatie simbolica.
+                                            </i>
+                                    </div>
+
+                                </div>		
+                            </div>		
+
+                            <div id="finantatde">Acest proiect este finantat cu sustinere din partea Comisiei Europene. Aceast publicatie [comunicare] reflecta doar
+                                vederile autorului, iar Comisia nu poate fi facuta  responsabila pentru utilizarea informatiei pe care o contine.</div>
+
+
+                        </body>
+                        </html>

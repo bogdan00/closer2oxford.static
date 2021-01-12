@@ -1,0 +1,555 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml-strict.dtd">
+<HTML xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+    <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+            <link rel="icon" type="image/png"  href="../../../../../closer2oxford.ro/favicon.html">
+                <link rel="stylesheet" href="../../../var/layout.css" type="text/css">
+                    <title>Closer to Oxford - e timpul pentru argumente!</title>
+                    <link rel="alternate" type="application/rss+xml"  href="../../../rss_feed" title="Stiri Closer2Oxford">
+                        <!-- <link rel="image_src" property="og:image"  href="/images/layout/closer2oxford_fb_white.png" /> -->
+                        <link rel="image_src" property="og:image"   type="image/jpeg"  href="../../../../uploads/2015/06/9/facebook_icon.html" />
+                        <link rel="image_src" type="image/jpeg"  href="../../../../uploads/2015/06/9/icon-facebook.gif" /> 
+						<meta name="description" content="Closer2Oxford pune în valoare oameni şi argumentele lor, în dezbateri online şi publice alături de tineri şi invitați avizaţi"/>
+                        <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9" />
+<script type='text/javascript' src='../../../../js/jquery-1.4.4.min.js'></script>
+<script>var $j = jQuery.noConflict();</script>
+<script type='text/javascript' src='../../../../js/tinymce/tiny_mce.js'></script>
+<script type='text/javascript' src='../../../../js/jquery.form.js'></script>
+<script type='text/javascript' src='../../../../js/fbLoginRegister.js'></script>
+<script type='text/javascript' src='../../../var/javascript.js'></script>
+<script type='text/javascript' src='../../../../js/jquery.hovertip-1.0.min.js'></script> 
+<script type='text/javascript' src='../../../../js/jquery.jgrowl_minimized.js'></script> 
+<link rel='stylesheet' href='../../../../css/jquery.jgrowl.css' media='screen' type='text/css'> 
+<script type='text/javascript' src='../../../../js/jquery.timer-min.js'></script> 
+<style>.hovertip{
+    position:absolute;
+    padding:10px 13px;
+    z-index:2;
+    max-width:300px;
+    color:#303030;
+    background-color:#f5f5b5;
+    border:1px solid #DECA7E;
+    font-family:sans-serif;
+    font-size:12px;
+    line-height:18px;
+    text-align:left;
+    }
+           .normal_text ol,.normal_text ol *{text-align:left !important}
+           .normal_text *{font-weight:normal !important;font-size:12px !important;font-face:tahoma !important}</style> 
+<script type='text/javascript'>$j(document).ready(function(){$j('.tooltip').hovertip({'offset':[20,20]});get_notif();});
+
+if(!Array.indexOf){Array.prototype.indexOf = function(obj){for(var i=0; i<this.length; i++){if(this[i]==obj){return i;}}return -1;}}
+    hashuri = [] ;
+	 var tick_timer= 3000 ;
+ 
+	 function get_notif()
+        {
+		  
+		  //console.log(tick_timer);
+	     
+		  setTimeout(get_notif,tick_timer);
+        
+		   $j.ajax(
+            {
+                url: '/page/notif/show_events',
+                dataType: 'json',
+                data: "{}",
+                success: function(data)
+                    {
+                    $j.each(data,function(index,data){
+                        try
+                            {
+                            if( hashuri.indexOf(data.hash) == -1 )
+                                {
+                                hashuri.push(data.hash);
+                                $j.jGrowl(
+                                    data.str,
+                                    {
+                                        corners:'1px',
+                                        life: data.life,
+                                        header:data.title,
+                                        hash: data.hash,
+                                        sticky: data.sticky,
+                                        close: function(e,m,o)
+                                            {
+                                                $j.ajax({url:'/page/notif/delete_single_event/' + o.hash});
+                                            }
+                                    });
+                                }
+                            }
+                        catch(e){}
+                        })
+                    }
+            });
+        }
+	 </script> 
+ 
+                            
+  <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-19111721-1']);
+  _gaq.push(['_setDomainName', '.closer2oxford.ro']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+    
+                        </head>
+                        <body>
+                            <div id="global_wrap">
+                                <div id="header">
+                                    <a href='../../../../index.html'><div id='logo'><img src='../../../../images/layout/sigla.jpg'></div></a>
+                                    <a class='noExternal' href='http://www.facebook.com/pages/Closer2Oxford/162758797069605'><img src='../../../../images/fb.png' style='height:30px;float:right;clear:right;margin:10px 5px 5px 5px;border:none;'/></a>
+                                    <a href='../../../rss_feed'><img src='../../../../images/feed-icon.png' style='height:30px;float:right;clear:right;margin:5px;border:none;'/></a>
+                                </div>
+                                <div id="meniu">
+                                    <div  id='register_login'>
+
+                                        
+  <a href='#' class='todo' id='login'>Login </a> &nbsp;<a href='../../../register.html' class='todo' id='register'>Register</a>
+    <div id='login_box'>
+		  <form action='https://dev.closer2oxford.ro/page/ro/login_user/logon' method='post' id='user_login_form'>
+					 <div>Email: <input type='text' name='email'/> </div><br />
+					 <div>Pass: <input type='password' name='passwd'/></div><br />
+					 <a href='#' class='password_forgot'>forgot password?</a>
+					 <input type='hidden' value='/page/ro/vezi_meciuri/159/' name='returnto' class='submiter'/><br />
+					 <input type='submit' value='login' name='btn' class='submiter'/><br />
+		  </form>
+		  
+		  <form action='https://dev.closer2oxford.ro/page/ro/login_user/reset_user_pw' method='post' id='user_reset_form'>
+					 <div>Email: <input type='text' name='email'/> </div><br />
+					 <a href='#' class='password_forgot'>login?</a>
+					 <input type='hidden' value='/page/ro/vezi_meciuri/159/' name='returnto' class='submiter'/><br />
+					 <input type='submit' value='reset' name='btn' class='submiter'/><br />
+		  </form>
+		  
+    </div>
+    
+                                    </div>
+                                    <div id='menu1' style='margin:auto;'> <ul id='meniu_prinicpal'><li><a href='../../../contacte/index.html'> Contact </a></li>
+<li><a href='../../../clubdebate/index.html'> Cluburile </a></li>
+<li><a href='../../../oamenii/index.html'> Oamenii </a></li>
+<li><a href='../../../proiectul/index.html'> Proiectul </a></li>
+<li><a href='../../../home/index.html'> Acasa </a></li>
+</ul></div><!--end menu-->
+                                </div>
+                                <div id="main"> 
+                                    <!--<div id='stiri-padding'>
+        <div id='stiri_back'>
+                {stiri} 
+    
+               
+        </div>-->
+        
+</div>
+<div  id="content-padding">
+        <div id='sidebar_menu'>
+                <span class='tr'></span>
+                <span class='tl'></span>
+                <span class='br'></span>
+                <span class='bl'></span>
+                <span id="filler"></span>
+                    
+                <ul></ul>
+                
+                <div class='clear'></div>
+        </div>
+        <div id="content">
+                <span class='tr'></span>
+                <span class='tl'></span>
+                <span class='br'></span>
+                <span class='bl'></span>
+                <span id="filler"></span>
+                  <script>
+        $j(document).ready(function(){
+        $j('.discurs_toggler').toggle(
+                function(){
+                $j(this).attr('src', '../../../../images/little_stuff/16-em-down.png');   
+                $j(this).parent().next('.discurs').hide('fast');
+                },
+                function(){
+                $j(this).attr('src', '../../../../images/little_stuff/16-em-up.png');
+                $j(this).parent().next('.discurs').show('fast');
+                });
+            });
+        </script><style>.nowrap{white-space: nowrap;}
+		.noJustify{text-align:left;}
+		</style><h2 class='noJustify'><span class='nowrap'>'Noemi si Patricia'</span> <span class='notif'>(afirmatori)</span> vs <span class='nowrap'>'Andreea si Andreea'</span> <span class='notif'>(negatori)</span></h2><h3>A1 (Noemi Suru) <img src='../../../../images/little_stuff/16-em-up.png' class='discurs_toggler'></h3>
+            <div class='discurs normal_text'><p style="text-align: center;"><strong><em>E timpul să afirmăm că nesupunerea civica este legitimă &icirc;ntr-o democraţie?</em></strong></p>
+
+<p> Pentru a clarifica situatia, alegem sa definim termenii inca de la inceput:</p>
+<p><em>Nesupunerea civica</em> este o &icirc;ncalcare publica, nonviolenta si constienta a legii cu scopul de a schimba anumite legi sau politici nedrepte ale guvernului.</p>
+<p><em>Democratia</em> este definita ca o forma de organizare si conducere politica a societatii prin consultarea cetatenilor, tinand cont de vointa acestora. Este guvernarea de catre popor, fiind exercitata direct de el sau de catre reprezentantii alesi.</p>
+
+<p> Conceptul de nesupunere civica a fost inventat de Hanry David Throreau in 1848, pentru a descrie refuzul sau de a plati o taxa impusa de guvernul american, menita sa ajute finantarea razboiului contra Mexicului si aplicarea Legii Sclavilor Fugari. &nbsp;Aceasta se cunoaste sub numele de Partida de Ceai din Boston, in cadrul careia, colonistii, si-au aratat nemultumirea aruncand din vapor, incarcaturile de ceai, in apa.&nbsp;Rezistenţa condusa de Mohandas Gandhi in India impotriva fortelor britanice, miscarea pentru drepturi civile a populatiei afro-americane din sudul SUA condusa de Martin Luther King Jr. si Roy Wilkins si rezistenta impotriva apartheid-ului &icirc;n Africa de Sud, sunt alte exemple care prezintă evenimente care au dovedit eficienţa nesupunerii civice ca mecanism generator de reforme sociale.</p>
+
+<p><em><strong> Argumentul 1.&nbsp; Dreptul de a te opune</strong></em></p>
+
+<p> Pornind chiar de la definitia democratiei, in acest tip de organizare politica, guvernarea este facuta de catre popor. Nesupunerea civica nu e nimic altceva decat exercitarea dreptului fundamental de a te opune unei masuri sau legi, fiind o actiune nonvioleta. Prin acest fel, poate poporul sa guverneze si sa corecteze posibilele erori care apar. Doar astfel se poate observa cat se serioasa e problema si cat de mult este dorita schimbarea, in functie de numarul celora care au un cuvant de zis. Diferenta dintre o revolta si nesupunerea civica este ca, in cazul celei de-a doua, impactul nu este daunator, dar este mai mare decat cel al unui comentariu public. Putem spune astfel ca impactul este destul de mare incat sa atraga atentia, dar nu reprezinta un pericol pentru societate. &nbsp;In concluzie, nesupunerea civica este legitima pentru ca este metoda prin care poporul poate intradevar sa aiba puterea pe care democratia o ofera.</p>
+
+<p><em><strong> Argumentul 2. Atragerea atentiei</strong></em></p>
+
+<p> In al doilea rand, nesupunerea civica este legitima, mai ales intr-o democratie, pentru ca astfel atragi atentia asupra comiterii unei injustitii si dai un semnal conducerii ca populatia nu este multumita. Exista 2 cazuri:</p>
+<p> 1. daca este semnalata o problema care nu determina o masa mare a populatiei sa cearaschimbarea, inseamna ca problema este de fapt inexistenta sau ca nu are un impact negativ asupra marii majoritati. In acest caz, statul nu va face o schimbare iar cu timpul, apele se vor linisti.</p>
+<p> 2. daca este semnalata o problema, in cazul careia majoritatea populatiei vrea schimbarea, statul va stii care sunt cerintele poporului si le va indeplini. Este necesar insa ca cineva sa vina cu initiativa.</p>
+
+<p> Un exemplu clasic de nesupunere civica in cazul careia s-a atras atentia populatiei este Partida de ceai de la Boston. In urma acestui eveniment s-au adunat reprezentantii celor 13 state la Philadelphia, unde au discutat problemele existente. La a doua intrunire, s-a redactat &bdquo;Declaratia de Independenta&rdquo;, document ce sta la baza Constitutiei Statelor Unite ale Americii, recunoscut ca un model de democratie. Prin acest exemplu, vedem clar cum democratia a luat nastere in urma unei nesupuneri civice. Cum atunci ar putea sa nu fie legitima intr-un asemenea sistem?</p>
+
+<p><em><strong> Argumentul 3. Formarea sociala</strong></em></p>
+
+<p> O nesupunere civica nu face altceva decat sa constientizeze populatia ca poate intradevar sa actioneze impotriva anumitor deciziilor sau a unor idei preconcepute. In acest caz avem exemplul lui Nelson Mandela, care a format&nbsp;<em>Comisia pentru adevar și reconciliere</em>, pentru a investiga &icirc;ncălcările drepturilor omului sub apertheid și a avut numeroase inițiative menite să &icirc;mbunătățească standardul de viața al populației de culoare din Africa de Sud. Astfel populatia din Africa a inteles ca este egala cu tot restul populatiei. Nesupunerea civica, prin problemele pe care le ridica poate deschide mintea oamenilor, sa ii determine sa gandeasca spre binele unei mase mari de populatie si sa ii faca sa realizeze ca ei chiar au un cuvant de zis .</p>
+
+<p> In concluzie, pentru ca nesupunerea civica este o modalitate prin care iti poti exercita dreptul de a te opune, prin care atragi atentia masei oamenilor intr-un mod neincisiv si cu ajutorul careia contribui la formarea sociala a populatei, putem afirma ca este legitima intr-o democratie.</p>
+
+</div><hr><h3>N1 (Andreea Bitiusca) <img src='../../../../images/little_stuff/16-em-up.png' class='discurs_toggler'></h3>
+            <div class='discurs normal_text'><p><em><strong>E timpul să afirmăm că nesupunerea civica </strong></em></p>
+<p><em><strong>este legitimă &icirc;ntr-o democraţie?</strong></em></p>
+
+
+<p>Asa cum este normal sistemul de drept nu poate multumi pe toata lumea in acelasi timp. Problema pusa in aceasta dezbatere este care ar trebui sa fie reactia populatiei nemultumite fata de normele nedrepte si este nesupunerea civica metoda ideala de a arata nemultumirea?</p>
+
+<p>In primul rand trebuie subliniat faptul ca nesupunerea civica nu este doar un protest, o opozitie la lege, ci consta in incalcarea ei. In fapt persoana fie face ceva interzis de lege (arde foarte multe carti in public) fie nu face ceva la care era obligat prin lege (plata taxelor). Desi in aparenta aceste actiuni par a fi inofensive, legiuitorul le-a declarat ilegale deoarece pot avea efecte daunatoare pentru restul populatiei: arderea cartilor, fiind facuta in public, poate determina vatamari ale persoanelor, distrugeri, posibilitatea propagarii focului; neplata taxelor are un efect de domino care, practicat la scara larga, ar dauna tuturor institutiilor statului- inclusiv sanatatii, educatiei- domenii cheie pentru bunastarea populatiei. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+
+<p>In al doilea rand trebuie precizat ca democratia este sistemul care ofera cele mai multe oportunitati de afirmare si exprimare a nemultumirilor populatiei.</p>
+
+<p>Referitor la cazul afirmator:</p>
+
+<p>Argumentul 1. Dreptul de a te opune</p>
+
+<p>Dupa cum am mentionat anterior exista numeroase modalitati prin care o persoana poate sa se opuna unei legi nedrepte. In mod direct, in democratie, se poate opune prin petitii, proteste, exercitarea dreptului de a contesta o lege in instanta, prin implicarea in politica. Dar exista si modalitati indirecte prin care persoana se poate opune: prin vot, prin mass media etc. Desi nesupunerea civica poate fi inteleasa in cadrul unui sistem totalitar, in democratie exista numeroase alternative care nu implica nerespectarea legilor si toate efectele ce pot decurge din aceasta, iar de cele mai multe ori aceste alternative sunt si mai eficiente. Efectele negative ale nesupunerii civice constau in plan ideologic in erodarea sistemului de drept- cum ar arata o democratie in care oamenii pot alege ce legi sa respecte si ce legi sa nu respecte- iar in plan material nerespectarea legii are, cel mai frecvent, ca urmare incalcarea drepturilor altor persoane: cand arzi cartile in public s-ar putea sa se declanseze panica, iar persoane sa fie ranite ori politistii care intervin ar putea fi vatamati; cand nu platesti taxe spitalele ar avea de suferit, profesorii ori chiar pensionarii.</p>
+
+<p>Argumentul 2: Atragerea atentiei</p>
+
+<p>Aceleasi metode de care am pomenit anterior au ca efect si atragerea atentiei. Mai mult, legitimitatea celorlalte metode este reala- drepturile celorlalti nu au de suferit, se creeaza cadrul unei dezbateri publice in care sa se evidentieze atat partile pozitive cat si cele negative, iar sistemul de drept devine credibil si ca urmare a unui acord al populatiei. Nesupunerea civica trimite si un mesaj negativ celorlalti: legile pot fi incalcate si legile pot fi dispretuite, sistemul poate fi vazut astfel ca fiind optional.</p>
+
+<p>Argumentul 3: Formarea sociala</p>
+
+<p>Formarea sociala in democratii nu se realizeaza prin incalcarea legilor. Respectul pentru legi si formarea lor in urma unui consens este cel care determina existenta si longevitatea unei adevarate democratii. Incalcarea legilor si discreditarea sistemului apartine anarhiei, in timp ce dezbaterile si protestele non-violente asigura climatul unei guvernari a poporului. Exemplul cu Nelson Mandela este perfect valabil, dar nu cand vorbim despre democratii: apartheidul nu permite populatiei sa se opuna sau sa atraga atentia, orice actiune a lor nu avea ecou in constiinta conducatorilor, in timp ce in democratie fiecare individ isi poate aduce aportul si spune pasul.</p>
+<p>De asemenea trebuie atrasa atentia asupra posibilitatii promovarii unor cauze nedrepte: neo-nazistii considera ca separatia raselor este dreapta, cei care chinuie animalele ar putea considera ca este dreptul lor sa dispuna in orice fel de proprietatea lor. Nesupunerea civica le-ar da dreptul acestora sa-si continue activitatile, spre nemultumirea generala a restului populatiei.</p>
+
+<p>In concluzie, deorece in democratii exista numeroase alte metode eficiente de a te opune si a aduce la cunostinta publica probleme si neconcordantele din lege, iar nesupunerea civica conduce de multe ori la violente si incalcari ale drepturilor persoanelor, consider ca am demonstrate ca nesupunerea civica nu este legitima.</p>
+
+</div><hr><h3>A2 (Patricia Boit) <img src='../../../../images/little_stuff/16-em-up.png' class='discurs_toggler'></h3>
+            <div class='discurs normal_text'><p><em>E timpul să afirmăm că nesupunerea civica este legitimă &icirc;ntr-o democraţie?</em></p>
+<p><em>&nbsp;</em></p>
+<p><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </em><em>Pentru a sublinia pozitia echipei afirmatoare, voi readuce in discutie definitia conceptului de nesupunere civica. </em></p>
+<p><em>&nbsp;</em></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Nesupunerea civică este modalitatea specifică a protestului at&acirc;t &icirc;n statele de drept c&acirc;t și &icirc;n cele care nu au o democrație dezvoltată. Nu are o definiție universal acceptată. Reprezintă, mai ales, aceea acțiune &icirc;nfăptuită cu intenție, publică și fără violență dar nelegală, care are ca scop nu schimbarea &icirc;ntregii legislații sau or&acirc;nduiri de drept ale unei țări, ci a diferitelor norme juridice, respectiv, schimbarea politicii guvernului, &icirc;n baza unei viziuni a moralității și a dreptății considerată superioare.</p>
+
+<p>Argumentul 1-Dreptul de a te opune</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Trebuie inteles deci, din definitie, ca nu orice protest trece drept nesupunere civica. Cum am spus si mai sus nesupunerea civica NU este violenta asadar nu exista acest risc de vatamare. Avem deci dreptul de a a ne arata nemultumirile si aceasta nesupunere civica ne ofera posibiliatatea pasnica de a o face.</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Bineinteles ca daca dorim sa fim absurzi nu am mai iesi nici din casa datorita riscului de ploaie torentiala, dar nu este cazul. Cum spuneam nesupunerea civica nu e violenta si doreste doar sa sublinieze lipsurile sistemului. Sa nu exageram totusi cum ar vrea echipa nagatoare. Desi aceasta nesupunere poate presupune neplatirea impozitelor nu inseamna ca peste noapte toata populatia nu va mai plati taxe si statul va falimenta. Daca exista totusi o majoritate care refuza, inseamna ca este o problema si in acest caz nesupunerea civica atragea atentia asupra unei probleme. Ceea ce ne duce la al doilea argument:</p>
+
+<p>Argumentul 2 &ndash; Atragerea atentiei</p>
+
+<p>Voi vorbi in cadrul resustinerii acestui argument despre metodele alternative despre care vorbeste opozitia : petitii, proteste, implicarea in politica, etc. Toate aceste alternative necesita o gramada de timp, timp in care masurile statului in cauza ar putea dauna grav populatiei. Cum s-a spus si de catre opozitie: &ldquo;sistemul de drept nu poate multumi pe toata lumea in acelasi timp.&rdquo; Foarte adevarat, dar trebuie sa incerce sa multumeasca MAJORITATEA. In plus toate aceste proteste, de multe ori, nu sunt bagate in seama, tocmai pentru ca nu exista o urmare clara...Pe scurt sunt doar niste oameni care se plang si pe care nimeni de la conducerea statului nu-i asculta. Un astfel de exemplu este protestul profesorilor din Romania, care s-au impotrivit&nbsp; Legii Educatiei in anul 2010. Rezultatul? Desi o multitudine de oameni in cunostinta de cauza s-au opus masurii, legea tot a fost promulgata. Intelegem deci ca statul nu tine seama de dorintele poporului. Ce e de facut? Trebuie luata atitudine! Si totul se poate rezolva prin aceasta nesupunere civica.</p>
+
+<p>Argumentul 3 &ndash; Formarea sociala</p>
+
+<p>Vorbim despre o societate care trebuie directionata. Daca e se ne luam dupa opozitie, atunci si protestele ar da un exemplu negativ, pentru ca ar transmite ideea ca putem sa fim nemultumiti si sa incercam sa indreptam lucrurile(ceea ce defapt nu e deloc rau). E nevoie de asemenea manifestatii pasnice&nbsp; pentru a sublinia ideile unei majoritati si pentru a fi siguri ca atragem atentia statului.</p>
+<p>Legat de promovarea unor cauze nedrepte: pana la urma urmei toti au dreptul la propria opinie si la libera exprimare. Nesupunerea civica a acestor grupari(neo-nazistit, chinuitori de animale etc) ar fi de asemenea pasnica si deci nu ar avea cu ce sa deranjeze restul populatiei. Nesupunerea civica NU le-ar da dreptul sa-si continue activitatile. Le-ar da oportunitatea de a-si prezenta punctul de vedere intr-un mod pasnic, deloc violent! De ex. neo-nazistii n-ar putea omori pe cineva si scapa nepedepsiti pentru ca nu asta e scopul protestului. Ar putea sa-si prezinte punctul de vedere si sa-l sustina in asa fel incat sa nu afecteze restul populatiei. Oameni ar invata ca au drepturi pe care statul trebuie sa le respecte si ca statul ii reprezinta pe ei. Statul trebuie sa ia masuri in conformitate cu dorinta majoritatii.</p>
+
+<p>In concluzie, speram ca v-am demonstrat ca nesupunerea civica este net superioara oricarei metode deja existenta de atentionare a statului si ca aceasta ajuta la dezvoltarea individului si la perfectionarea legilor unui stat. Iar, cum am mai spus diferenta dintre o revolta si nesupunerea civica este ca, in cazul celei de-a doua, impactul nu este daunator, dar este mai mare decat cel al unui comentariu public. Putem spune astfel ca impactul este destul de mare incat sa atraga atentia, dar nu reprezinta un pericol pentru societate.</p>
+
+<p>Este cu adevarat <em>&nbsp;timpul să afirmăm că nesupunerea civica este legitimă &icirc;ntr-o democraţie careia nu ii este frica de decizile pe care le ia si care doreste sa reprezinte intr-adevar poporul.</em></p>
+</div><hr><h3>N2 (Andreea Bitiusca) <img src='../../../../images/little_stuff/16-em-up.png' class='discurs_toggler'></h3>
+            <div class='discurs normal_text'><p>Pozitia echipei negatoare nu este ca nesupunerea civica nu are avantaje, mai ales in cadrul unui sistem autoritar, ci noi afirmam ca, in cadrul unei democratii, nesupunerea civica are mai multe dezavantaje, iar toate efectele pozitive aduse de aceasta pot fi indeplinite pe alte cai, legitime.</p>
+
+<p>Pana acum echipa afirmatoare ne-a criticat modul in care analizam efectele nesupunerii civice, dar fara a ne arata clar cateva exemple de nesupunere civica. La ce va referiti dumneavoastra cand spuneti ca nesupunerea civica este nonviolenta si nu duce la limitarea dreptului altor persoane? Daca blochezi un drum ca sa schimbi o lege nu inseamna ca cei care circula in masini pe drumul respectiv vor fi blocati, limitandu-se astfel dreptul lor la libera circulatie? Sau daca ramane blocata si o ambulanta se limiteaza si dreptul la sanatate al unor persoane. Daca arzi carti in public nu exista riscul ca oamenii sa fie raniti, ca incendiul sa se propage sau ca politistii care trebuie sa intervina sa fie vatamati? Ce acte de nesupunere civica, prin care se incalca legi, nu afecteaza dreptul celorlalte persoane direct sau indirect?</p>
+
+
+<p>Argumentul 1. Dreptul de a te opune</p>
+
+<p>Ma gandeam la exemplul unui protest ilegal- sa luam exemplul Greciei. Conditiile desfasurarii protestului sunt expres stabilite de lege pentru a garanta siguranta participantilor: in spatii care sa asigure o evacuare eficienta a zonei si fara violenta. In cazul incalcarii legii, in Grecia, au fost victimizate zeci de persoane care au fost calcate in picioare din cauza unei proaste organizari- in momentul iscarii incendiilor oamenii s-au panicat si multi au ramas blocati din cauza desfasurarii protestului intr-un spatiu necorespunzator.</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; In toate exemplele noastre am aratat cum nesupunerea civica- desi nonviolenta- va duce, cel mai probabil, la acte de violenta si la raniri de persoane. Asta ca sa nu mai intram in detalii privind &ldquo;mentalitatea grupurilor&rdquo; in care raspunderea personala este scazuta din cauza ca toti contribuie la actiuni si atunci cand ceva rau se intampla &ldquo;celalalt e responsabil, el e autorul&rdquo;.</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Fiindca exista posibilitatea de a aduce atingeri libertatii oamenilor din jur si datorita faptului ca exista numeroase alte modalitati eficiente de a te opune (modalitati care pot fi rapide sau pot dura mult, dar eficienta lor nu a fost contestata, iar eficienta nesupunerii civice nu a fost dovedita), consideram ca nesupunerea civica nu este justificata.</p>
+
+
+<p>Argumentul 2. Atragerea atentiei</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; In privinta profesorilor: acestia s-au opus legii educatiei in anumite puncte, iar legea ar fi fost amendata daca ar fi fost urmata procedura normala democratiei de dezbatere parlamentara. Un exemplu singular nu dovedeste ineficienta metodelor alternative si nu confirma eficienta nesupunerii civice. In primul rand profesorii au apelat si la actiuni de nesupunere civica: au stat in greva neplatita, ilegala, iar acest lucru nu a rezolvat problema lor. Doar atunci cand s-au adresat instantelor judecatoresti pentru drepturile lor nerespectate li s-a dat dreptate si au avut castig de cauza impotriva Guvernului. In al doilea rand, in general pasurile populatiei sunt ascultate cand este posibil. Un exemplu in acest sens este noul cod civil care, desi trebuia adoptat intr-o maniera hei-rup-ista, prin legea de punere in aplicare a fost modificat pentru a aduce la indeplinire multe dintre cererile populatiei. De asemenea actiunile privind Rosia Montana inca mai pun bete in roate celor de la Gold, care nu se pot apuca de exploatarea sitului din cauza petitiilor, opozitiilor si cererilor in instanta a unor oameni interesati.</p>
+
+<p>Argumentul 3. Formarea sociala</p>
+<p>A nu fi de acord cu o strategie si a o nega in public nu este acelasi lucru si nu are acelasi efect-cel putin din punctual de vedere al educarii sociale- cu cel al incalcarii efective a legii. Nesupunerea civica arata dispret in primul rand fata de sistemul democratic care este in functiune si in al doilea rand fata de oamenii din jur. De cele mai multe ori exista garantii pentru a corecta legea, garantii special implementate pentru a scadea numarul persoanelor care se vad nevoite sa incalce normele care ii discrimineaza sau le provoaca prejudicii. Primul lucru care dispare intr-o anarhie este respectul fata de valorile sociale convenite de populatie, iar pana la epuizarea cailor legale de contestare a legilor, acestea raman exponent al consensului democratic.</p>
+<p>In legatura cu exemplele de promovare a valorilor nedrepte- desi poate duse un pic la limita- ele raman in picioare: neo-nazistiis-ar putea manifesta pentru discriminarea negrilor- pe o cale pasnica, bineinteles, care nu ar duce niciodata la violente sau incalcari de drepturi ale celorlalte persoane; chinuitorii de animale si-ar promova cauza chinuind animale, si atat timp cat ei chiar cred in ideea lor, atunci nesupunerea lor civica ar fi legitima. Ei bine, nu! Legile sunt imperative deoarece, de cele mai multe ori, a le incalca are efecte negative- fizice sau la nivel de libertate a celuilalt; iar intr-o democratie exista suficiente remedii pentru a corecta legile nedrepte.</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; In concluzie consideram ca echipa afirmatoare nu si-a indeplinit sarcina de a arata eficacitatea nesupunerii civice, iar noi am demonstrat eficienta alternativelor si efectele negative ale implementarii nesupunerii civice, evidentiind astfel nelegitimitatea acestei forme de protest in cadrul unei democratii.</p>
+</div><hr><hr><h2>Decizia:</h2> <script>
+        $j(document).ready(function(){
+			$j('.decizie_toggler').toggle( 
+				function(){
+					$j(this).attr('src', '../../../../images/little_stuff/16-em-down.png');   
+					$j(this).parent().next('.decizie').hide('fast'); 
+                },
+                function(){
+					$j(this).attr('src', '../../../../images/little_stuff/16-em-up.png');
+					$j(this).parent().next('.decizie').show('fast'); 
+                } 
+			);
+		});</script><div class='decizie'><h3>George Maxim
+                <img src='../../../../images/little_stuff/16-em-up.png' class='decizie_toggler'></h3><div class='normal_text'><p>Partea 1 &ndash; Comentarii generale si individuale</p>
+<p>Per total o runda ok, dar care sufera la capitolul dovezi si exemple de ambele parti.</p>
+<p>Afirmatorul 1:</p>
+<ul>
+<li>Partida de ceai de la Boston a fost un incident soldat cu violente (echipajul vaporului care continea ceaiul in cauza a fost vatamat), actiunea in sine a fost considerata de revolta si nu nesupunere civica iar non-violenta implica si a nu aduce atingere dreptului la proprietate (ceea ce clar nu a fost cazul aici)</li>
+<li>Exemplul Africii de Sud nu este viabil deoarece sistemul politic nu poate fi considerat democratic conform propiei definitii (vointa majoritatii era intentionat ignorata de alesi)</li>
+<li>In argumentul 1 atentie la concluzia: &ldquo;nesupunerea civica este legitima pentru ca este metoda prin care poporul poate intradevar sa aiba puterea pe care democratia o ofera&rdquo; &ndash; aceasta implica ca sistemul electoral este inexistent/inutil/puternic fraudat ceea ce din nou contravine premisei ca operam intr-o democratie viabila. Doar in aceste cazuri <strong>dovedite </strong>se poate discuta despre optiunea nesupunerii civice</li>
+<li>In exemplul din argumentul 2 se comite o eroare de logica cauzala (Post Hoc Ergo Propter Hoc) deoarece problema majora de la care au pornit actiunile de protest a fost cea a taxarii cetatenilor din SUA fara ca acestia sa aibe dreptul de a fi reprezentati in forurile de decizie (in speta Parlamentul Britanic); Partida de ceai a fost un incident care a avut ecou public dar nu are legatura cauzala directa cu Declaratia de Independenta etc. (prin analogie, faptul ca Franz Ferdinand a fost asasinat in Serbia nu reprezinta cauza majora a inceperii Primului Razboi Mondial ci doar un pretext legat de un eveniment izolat)</li>
+<li>Din nou o problema majora la exemplul din argumentul 3: &ldquo;Astfel populatia din Africa a inteles ca este egala cu tot restul populatiei&rdquo; &ndash; populatia de culoare a Africii de Sud a inteles de la inceput ca ar trebui sa fie egala cu restul cetatenilor si de acea a pornit actiunile de protest</li>
+</ul>
+<p>Negatorul 1:</p>
+<ul>
+<li>La contrargumentarea argumentului 1 as adauga la lista de optiuni greva japoneza ca forma de protest non-violent care atentioneaza pe cei din conducere asupra nemultumirilor angajatilor</li>
+<li>O contrargumentare mai eficienta la argumentul 2 ar fi fost evidentierea faptului ca nesupunerea civica este de obicei aplicata in cazurile in care legislatia in vigoare aduce atingere unor drepturi fundamentale ale omului (Sf Augustin: o lege nedreapta, nu mai e lege deloc)</li>
+</ul>
+<p>Afirmatorul 2:</p>
+<ul>
+<li>Un stat care nu asculta problemele cetatenilor exprimate prin proteste organizate conform legilor este putin probabil sa reactioneze in cazul unei nesupuneri civice majore; iar cetatenii intr-o democratie pot sanctiona prin vot conducatorii care au ignorat problemele puse in discutie de populatie</li>
+<li>&ldquo;Statul trebuie sa ia masuri in conformitate cu dorinta majoritatii&rdquo; &ndash; incorect din 2 motive: a) statul nu trebuie sa incalce drepturile fundamentale ale oricarei minoritati in numele majoritatii b) statul trebuie sa actioneze in interesul cetatenilor nu conform dorintelor lor (ar fi usor de argumentat ca majortitatea cetatenilor <strong>si-ar dori sa nu plateasca impozite </strong>dar acest lucru nu ar fi in interesul lor)</li>
+</ul>
+<p>Negatorul 2:</p>
+<ul>
+<li>Depunctare cu 1 punct pt depasirea cu peste 100 de cuvinte a limitei de discurs</li>
+<li>Exemplul Rosia Montana este discutat superficial si nu poate fi considerat concludent</li>
+<li>Eroare de logica: nesupunerea civica nu arata dispret fata de lege ci vrea sa demonstreze ca insasi legea in cauza este in contradictie cu principii democratice de baza </li>
+<li>Neo-nazis ca si alte grpuri extremiste polticice, sociale, religioase protesteaza peste tot in lume pasnic, conform legii (exemplu: grupul extremist religios care protesteaza in SUA la inmormantarile soldatilor americani gay); protestele lor sunt permise ca si garantie a dreptului la libera exprimare deoarece se incadreaza <strong>in limite legiilor aplicabile.</strong> Corectitudinea cauzelor sustinute in cadrul protestului fac obiectul unei alte dezbateri</li>
+</ul>
+<p>Partea 2 &ndash; Verdict si punctaje</p>
+<p>Cateva remarci generale:</p>
+<ul>
+<li>Atentie la dovezile aduse; trebuie sa fie concludente si prezentate corespunzator (nu exista nicio referinta pentru exemplele aduse)</li>
+<li>Atentie la definitii si implicatiile acestora</li>
+<li>Nu confundati mesajul unui protest cu forma protestului in sine ( exemplu: un protest violent care sustine ajutor gratuit pentru populatia Africii aflata in foamete)</li>
+</ul>
+<p>Avand in vedere ca alternativele prezentate de negatori nesupunerii civice raman viabile si insuficient contra-argumentate cat si faptul ca dovezile afirmatorilor nu sunt valide si se contrazic cu definitiile proprii aduse , <strong>verdictul merge catre echipa negatoare</strong></p>
+
+<table border="1" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td width="128" valign="top">
+<p>Vorbitor</p>
+</td>
+<td width="128" valign="top">
+<p>Continut</p>
+</td>
+<td width="128" valign="top">
+<p>Strategie</p>
+</td>
+<td width="128" valign="top">
+<p>Stil</p>
+</td>
+<td width="128" valign="top">
+<p>Total</p>
+</td>
+</tr>
+<tr>
+<td width="128" valign="top">
+<p>A1</p>
+</td>
+<td width="128" valign="top">
+<p>9</p>
+</td>
+<td width="128" valign="top">
+<p>8</p>
+</td>
+<td width="128" valign="top">
+<p>5</p>
+</td>
+<td width="128" valign="top">
+<p>22</p>
+</td>
+</tr>
+<tr>
+<td width="128" valign="top">
+<p>N1</p>
+</td>
+<td width="128" valign="top">
+<p>12</p>
+</td>
+<td width="128" valign="top">
+<p>8</p>
+</td>
+<td width="128" valign="top">
+<p>4</p>
+</td>
+<td width="128" valign="top">
+<p>24</p>
+</td>
+</tr>
+<tr>
+<td width="128" valign="top">
+<p>A2</p>
+</td>
+<td width="128" valign="top">
+<p>9</p>
+</td>
+<td width="128" valign="top">
+<p>7</p>
+</td>
+<td width="128" valign="top">
+<p>5</p>
+</td>
+<td width="128" valign="top">
+<p>21</p>
+</td>
+</tr>
+<tr>
+<td width="128" valign="top">
+<p>N2</p>
+</td>
+<td width="128" valign="top">
+<p>12</p>
+</td>
+<td width="128" valign="top">
+<p>7</p>
+</td>
+<td width="128" valign="top">
+<p>4</p>
+</td>
+<td width="128" valign="top">
+<p>23</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+
+</div>A1 -> 22 puncte<br>N1 -> 24 puncte<br>A2 -> 21 puncte<br>N2 -> 23 puncte<br>Castiga echipa: <h3 style='display:inline;color:red;'>Andreea si Andreea (negatori)</h3></div><hr><h3 class='important'>Vrem parerea ta! Pentru asta, trebuie sa te loghezi.</h3>
+                <div class='clear'></div>
+        </div><!-- end main content -->
+         <div class='clear'></div>
+</div>
+<div id="pix"></div>
+
+
+                                </div><!--end main -->
+                                <div id='parteneri'>
+                                    <span class='tr'></span><span class='tl'></span><span class='br'></span><span class='bl'></span><span id="filler"></span>
+                                    <div class='parteneri' id='sustinatori'>
+                                        <span class='floating_text' id='un_proiect'>Un proiect</span>
+                                        <a href='http://www.ardor.org.ro/'><div class='image' id='ardor'>Ardor</div></a>
+                                        <span class='floating_text' id='finantatori'>Finanțatori</span>
+                                        <a href='http://www.opensocietyfoundations.org/'><div class='image' id='open_society'>Open Society Foundation </div></a>
+                                        <a href='http://www.studentiq.ro//'><div class='image' id='memoplus'>MemoPlus</div></a>
+                                        <!-- <a href='http://www.ratiufamilyfoundation.com/'><div class='image' id='FundatiaRatiu'>Ardor</div></a>
+                                        <a href='http://www.eef.md/'><div class='image' id='eef'>East Europe Foundation</div></a>
+                                        <a href='http://www.mts.gov.md/'><div class='image' id='mdminister'>Ministerul Tineretului si Sportului al Republicii Moldova</div></a> -->
+
+                                        <span class='floating_text' id='parteneri_text'>Parteneri</span>
+
+                                        <a href='http://www.policycenter.eu/'><div class='image' id='PolicyCenter'>Policy Center</div></a>
+                                        <a href='http://www.britishcouncil.org/'><div class='image' id='BritishCouncil'>British Council</div></a>
+                                        <a href='http://www.europuls.ro/'><div class='image' id='europuls'>Europuls</div></a>
+                                        <a href='http://www.cere.ro/'><div class='image' id='cere'>Ce-Re</div></a>
+                                        <a href='http://www.primeromania.ro/'><div class='image' id='prime'>Prime Romania</div></a>
+                                        <a href='http://www.cji.ro/'><div class='image' id='cji'>Centrul pentru jurnalism independent</div></a>
+                                        <a href='http://www.aiesectm.ro/'><div class='image' id='aisec'>Aisec</div></a>
+                                        <!-- ===================================================================================================== -->
+                                        <a href='http://www.cogitus.ro/'><div class='image' id='cogitus'>Cogitus</div></a>
+                                        <a href='http://www.adevarul.ro/international/foreign_policy/'><div class='image' id='foreignPolicy'>Foreign Policy</div></a>
+                                        <a href='http://www.elsa.ro/'><div class='image' id='elsa'>Elsa</div></a>
+                                        <a href='http://www.vipromania.ro/'><div class='image' id='vipromania'>Voluntari pentru idei si proiecte</div></a>
+                                        <a href='http://www.ongtrust.ro/'><div class='image' id='ongtrust'>Trust</div></a>
+
+                                        <!-- ===================================================================================================== -->
+                                        <a href='http://www.leap.ro/'><div class='image' id='leap'>Leap</div></a>
+                                        <a href='http://www.younginitiative.org/'><div class='image' id='younginitiative'>Asociatia young initiative</div></a>
+                                        <a href='http://www.asjc.ro/'><div class='image' id='asjc'>Asjc</div></a>
+                                        <a href='http://osut.ro/'><div class='image' id='osut'>Osut</div></a>
+                                        <div class='clear'></div>
+                                    </div>
+                                    <div class='parteneri' id='parteneri_institutionali'>
+                                        <span class='floating_text' id='sponsori_text'>Sus&#539;in&#x0103;tori</span>
+                                        <a href='http://www.cartier.md/'><div class='image' id='cartier_logo'>Editura Cartier</div></a>
+                                        <a href='http://www.pll.md/ro/'><div class='image' id='biblio_logo'>Biblioteca publica de drept</div></a>
+                                        <span class='floating_text' id='institutii_text'>Parteneri institu&#539;ionali</span> 
+                                        <ul id='institutii'>
+                                            <!-- <span class='floating_text' id='institutii_text'>Parteneri institu&#539;ionali:</span> -->
+                                            <li><a href='http://www.politice.ro/'>Facultatea de &#536;tiin&#539;e Politice SNSPA </a></li>
+                                            <li><a href='http://www.comunicare.ro/'>Facultatea de Comunicare &#537;i Rela&#539;ii Publice SNSPA</a></li>
+                                            <li><a href='http://www.fspub.ro/'>Facultatea de &#536;tiin&#539;e Politice Universitatea Bucure&#537;ti</a></li>
+                                            <li><a href='http://www.filosofie.unibuc.ro/'>Facultatea de Filosofie Universitatea Bucure&#537;ti</a></li>
+                                            <li><a href='http://litere.unibuc.ro/'>Facultatea de Litere din Universitatea Bucure&#x015f;ti</a></li>
+                                            <li><a href='http://www.unibuc.ro/ro/fac_fsas_ro'>Facultatea de Sociologie Universitatea Bucure&#537;ti</a></li>
+                                            <li><a href='http://laws.uaic.ro/'>Facultatea de Drept Universitatea Alexandru Ioan Cuza Ia&#537;i</a></li>
+                                            <li><a href='http://www.uaic.ro/uaic/bin/view/Academic/Filosofie'>Facultatea de Filosofie si &#536;tiin&#539;e Social Politice Universitatea AIC Ia&#537;i</a></li>
+                                            <li><a href='http://www.upa.ro/'>Facultatea de Drept si Facultatea de &#x015e;tiin&#x0163;e Politice si Administrative Universitatea Petre Andrei Ia&#x015f;i</a></li> 
+
+                                            <li><a href='http://www.ubbcluj.ro/'>Universitatea Babe&#537;-Bolyai Cluj Napoca</a></li>
+                                            <li><a href='http://www.uvt.ro/'>Universitatea de Vest Timi&#537;oara</a></li>
+                                            <li><a href='http://www.upt.ro/'>Universitatea Politehnica Timi&#537;oara</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class='parteneri' id='parteneri_media'>
+                                        <span class='floating_text' id='media_text'>Parteneri media</span>
+                                        <a href='http://www.hotnews.ro/'><div class='image' id='hotnews'>HotNews</div></a>
+                                        <!-- <a href='http://www.lumebuna.ro/'><div class='image' id='lumebuna'>Lume Buna</div></a> -->
+                                        <a href='http://www.romaniapozitiva.ro/'><div class='image' id='romaniapozitiva'>Romania Pozitiva</div></a>
+                                        <a href='http://totb.ro/'><div class='image' id='thinkoutsidethebox'>Think Outside The Box</div></a>
+                                        <a href='http://www.facebook.com/carevasazica.vip'><div class='image' id='carevasazica'>Carevasazica</div></a>
+                                        <a href='http://www.studentie.ro/'><div class='image' id='studentiero'>Studentie.ro</div></a>
+                                        <a href='http://startub.unibuc.ro/'><div class='image' id='startub'>startub.unibuc.ro</div></a>
+                                        <!-- <a href='http://www.tvr.ro/tvr_cluj.php'><div class='image' id='tvrcluj'>Tvr Cluj</div></a> -->
+                                        <!-- <a href='http://www.radiotransilvania.ro'><div class='image' id='radiotransilvania'>Radio Transilvania</div></a> -->
+                                        <a href='http://iasifun.ziaruldeiasi.ro/'><div class='image' id='iasifun'>Iasi fun</div></a>
+                                        <a href='http://www.ziaruldeiasi.ro/'><div class='image' id='ziaruldeiasi'>Ziarul de Iasi</div></a>
+                                        <a href='http://www.kissfm.ro/timisoara'><div class='image' id='kissfm'>KissFm</div></a>
+
+                                        <div class='clear'></div> 
+                                    </div>
+                                    <div class='clear'></div>
+
+                                </div>	
+                            </div>	<!-- end wrap -->
+                            <div id='footer_mare'>
+                                <div id='footer'>
+                                    <div id='links' class='footer'>
+                                        <div id='menu1' style='margin:auto;'> <ul id='meniu_prinicpal'><li><a href='../../../contacte/index.html'> Contact </a></li>
+<li><a href='../../../clubdebate/index.html'> Cluburile </a></li>
+<li><a href='../../../oamenii/index.html'> Oamenii </a></li>
+<li><a href='../../../proiectul/index.html'> Proiectul </a></li>
+<li><a href='../../../home/index.html'> Acasa </a></li>
+</ul></div><!--end menu-->
+                                    </div><!--
+                                    <div id='contact' class='footer'>
+                                            <h4>Contact</h4>
+                                            <p>office@closer2oxford.ro</p>
+                                            <p>bogdan.draghicescu@closer2oxford.ro<br>
+                                            <span class='detalii'> (asistenta tehnica web - orice probleme legate de site)</span></p>
+                                    </div>
+                                    -->
+                                    <div id='newsletter' class='footer'>
+                                        <script src="../../../../../connect.facebook.net/en_US/all.js#xfbml=1"></script><fb:like href="http://www.facebook.com/pages/Closer2Oxford/162758797069605" width="250" colorscheme="dark"></fb:like>
+                                        <!--<h4>Newsletter</h4>
+                                        <form action='/page/newsletter'>
+                                                <input type='text' name='email'>
+                                                <input type='submit' id='submit' value='>'>
+                                                        
+                                        </form>-->
+                                    </div>
+                                    <div id='credits'>
+                                        Copyright(c) 2021 ARDOR |  Toate drepturile rezervate | Toate logo-urile si sloganurile de pe site sunt proprietate intelectuala inregistrata si nu pot fi reproduse fara acordul explicit al detinatorilor. <br>
+                                            <br /><br />
+                                            <b>Disclaimer</b><br /><i>
+
+                                                Programul educational Closer to Oxford este un program non-profit si nu are o legatura cu universitatea cu acelasi nume, referirea la Oxford avand doar o semnificatie simbolica.
+                                            </i>
+                                    </div>
+
+                                </div>		
+                            </div>		
+
+                            <div id="finantatde">Acest proiect este finantat cu sustinere din partea Comisiei Europene. Aceast publicatie [comunicare] reflecta doar
+                                vederile autorului, iar Comisia nu poate fi facuta  responsabila pentru utilizarea informatiei pe care o contine.</div>
+
+
+                        </body>
+                        </html>

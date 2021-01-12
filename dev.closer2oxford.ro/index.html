@@ -1,0 +1,923 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml-strict.dtd">
+<HTML xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+    <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+            <link rel="icon" type="image/png"  href="../closer2oxford.ro/favicon.html">
+                <link rel="stylesheet" href="page/var/layout.css" type="text/css">
+                    <title>E timpul pentru argumente!</title>
+                    <link rel="alternate" type="application/rss+xml"  href="page/rss_feed" title="Stiri Closer2Oxford">
+                        <!-- <link rel="image_src" property="og:image"  href="/images/layout/closer2oxford_fb_white.png" /> -->
+                        <link rel="image_src" property="og:image"   type="image/jpeg"  href="uploads/2015/06/9/facebook_icon.html" />
+                        <link rel="image_src" type="image/jpeg"  href="uploads/2015/06/9/icon-facebook.gif" /> 
+						<meta name="description" content="Closer2Oxford pune în valoare oameni şi argumentele lor, în dezbateri online şi publice alături de tineri şi invitați avizaţi"/>
+                        <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9" />
+<script type='text/javascript' src='js/jquery-1.4.4.min.js'></script>
+<script>var $j = jQuery.noConflict();</script>
+<script type='text/javascript' src='js/tinymce/tiny_mce.js'></script>
+<script type='text/javascript' src='js/jquery.form.js'></script>
+<script type='text/javascript' src='js/fbLoginRegister.js'></script>
+<script type='text/javascript' src='page/var/javascript.js'></script>
+<script type='text/javascript' src='js/jquery.hovertip-1.0.min.js'></script> 
+<script type='text/javascript' src='js/jquery.jgrowl_minimized.js'></script> 
+<link rel='stylesheet' href='css/jquery.jgrowl.css' media='screen' type='text/css'> 
+<script type='text/javascript' src='js/jquery.timer-min.js'></script> 
+<link rel='stylesheet' href='page/var/gallery.css' media='screen' type='text/css'> 
+<link rel='stylesheet' href='page/var/jquery.bxslider.css' media='screen' type='text/css'> 
+<script type='text/javascript' src='page/var/galerie/jquery.prettyPhoto.js'></script> 
+<script type='text/javascript' src='page/var/jquery.bxslider.min.js'></script> 
+<style>.hovertip{
+    position:absolute;
+    padding:10px 13px;
+    z-index:2;
+    max-width:300px;
+    color:#303030;
+    background-color:#f5f5b5;
+    border:1px solid #DECA7E;
+    font-family:sans-serif;
+    font-size:12px;
+    line-height:18px;
+    text-align:left;
+    }</style> 
+<script type='text/javascript'>$j(document).ready(function(){$j('.tooltip').hovertip({'offset':[20,20]});get_notif();});
+
+if(!Array.indexOf){Array.prototype.indexOf = function(obj){for(var i=0; i<this.length; i++){if(this[i]==obj){return i;}}return -1;}}
+    hashuri = [] ;
+	 var tick_timer= 3000 ;
+ 
+	 function get_notif()
+        {
+		  
+		  //console.log(tick_timer);
+	     
+		  setTimeout(get_notif,tick_timer);
+        
+		   $j.ajax(
+            {
+                url: '/page/notif/show_events',
+                dataType: 'json',
+                data: "{}",
+                success: function(data)
+                    {
+                    $j.each(data,function(index,data){
+                        try
+                            {
+                            if( hashuri.indexOf(data.hash) == -1 )
+                                {
+                                hashuri.push(data.hash);
+                                $j.jGrowl(
+                                    data.str,
+                                    {
+                                        corners:'1px',
+                                        life: data.life,
+                                        header:data.title,
+                                        hash: data.hash,
+                                        sticky: data.sticky,
+                                        close: function(e,m,o)
+                                            {
+                                                $j.ajax({url:'/page/notif/delete_single_event/' + o.hash});
+                                            }
+                                    });
+                                }
+                            }
+                        catch(e){}
+                        })
+                    }
+            });
+        }
+	 </script> 
+ 
+                            
+  <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-19111721-1']);
+  _gaq.push(['_setDomainName', '.closer2oxford.ro']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+    
+                        </head>
+                        <body>
+                            <div id="global_wrap">
+                                <div id="header">
+                                    <a href='index.html'><div id='logo'><img src='images/layout/sigla.jpg'></div></a>
+                                    <a class='noExternal' href='http://www.facebook.com/pages/Closer2Oxford/162758797069605'><img src='images/fb.png' style='height:30px;float:right;clear:right;margin:10px 5px 5px 5px;border:none;'/></a>
+                                    <a href='page/rss_feed'><img src='images/feed-icon.png' style='height:30px;float:right;clear:right;margin:5px;border:none;'/></a>
+                                </div>
+                                <div id="meniu">
+                                    <div  id='register_login'>
+
+                                        
+  <a href='#' class='todo' id='login'>Login </a> &nbsp;<a href='page/register.html' class='todo' id='register'>Register</a>
+    <div id='login_box'>
+		  <form action='https://dev.closer2oxford.ro/page/ro/login_user/logon' method='post' id='user_login_form'>
+					 <div>Email: <input type='text' name='email'/> </div><br />
+					 <div>Pass: <input type='password' name='passwd'/></div><br />
+					 <a href='#' class='password_forgot'>forgot password?</a>
+					 <input type='hidden' value='/' name='returnto' class='submiter'/><br />
+					 <input type='submit' value='login' name='btn' class='submiter'/><br />
+		  </form>
+		  
+		  <form action='https://dev.closer2oxford.ro/page/ro/login_user/reset_user_pw' method='post' id='user_reset_form'>
+					 <div>Email: <input type='text' name='email'/> </div><br />
+					 <a href='#' class='password_forgot'>login?</a>
+					 <input type='hidden' value='/' name='returnto' class='submiter'/><br />
+					 <input type='submit' value='reset' name='btn' class='submiter'/><br />
+		  </form>
+		  
+    </div>
+    
+                                    </div>
+                                    <div id='menu1' style='margin:auto;'> <ul id='meniu_prinicpal'><li><a href='page/contacte/index.html'> Contact </a></li>
+<li><a href='page/clubdebate/index.html'> Cluburile </a></li>
+<li><a href='page/oamenii/index.html'> Oamenii </a></li>
+<li><a href='page/proiectul/index.html'> Proiectul </a></li>
+<li><a href='page/home/index.html'> Acasa </a></li>
+</ul></div><!--end menu-->
+                                </div>
+                                <div id="main"> 
+                                     
+<script type='text/javascript' src='js/jquery.hovertip-1.0.min.js'></script> 
+<script type='text/javascript' src='js/jquery.jgrowl_minimized.js'></script> 
+<link rel='stylesheet' href='css/jquery.jgrowl.css' media='screen' type='text/css'> 
+<script type='text/javascript' src='js/jquery.timer-min.js'></script> 
+<link rel='stylesheet' href='page/var/gallery.css' media='screen' type='text/css'> 
+<style>.hovertip{
+    position:absolute;
+    padding:10px 13px;
+    z-index:2;
+    max-width:300px;
+    color:#303030;
+    background-color:#f5f5b5;
+    border:1px solid #DECA7E;
+    font-family:sans-serif;
+    font-size:12px;
+    line-height:18px;
+    text-align:left;
+    }</style> 
+<script type='text/javascript'>$j(document).ready(function(){$j('.tooltip').hovertip({'offset':[20,20]});get_notif();});
+
+if(!Array.indexOf){Array.prototype.indexOf = function(obj){for(var i=0; i<this.length; i++){if(this[i]==obj){return i;}}return -1;}}
+    hashuri = [] ;
+	 var tick_timer= 3000 ;
+ 
+	 function get_notif()
+        {
+		  
+		  //console.log(tick_timer);
+	     
+		  setTimeout(get_notif,tick_timer);
+        
+		   $j.ajax(
+            {
+                url: '/page/notif/show_events',
+                dataType: 'json',
+                data: "{}",
+                success: function(data)
+                    {
+                    $j.each(data,function(index,data){
+                        try
+                            {
+                            if( hashuri.indexOf(data.hash) == -1 )
+                                {
+                                hashuri.push(data.hash);
+                                $j.jGrowl(
+                                    data.str,
+                                    {
+                                        corners:'1px',
+                                        life: data.life,
+                                        header:data.title,
+                                        hash: data.hash,
+                                        sticky: data.sticky,
+                                        close: function(e,m,o)
+                                            {
+                                                $j.ajax({url:'/page/notif/delete_single_event/' + o.hash});
+                                            }
+                                    });
+                                }
+                            }
+                        catch(e){}
+                        })
+                    }
+            });
+        }
+	 </script> 
+
+<script type='text/javascript' src='js/jquery.hovertip-1.0.min.js'></script> 
+<script type='text/javascript' src='js/jquery.jgrowl_minimized.js'></script> 
+<link rel='stylesheet' href='css/jquery.jgrowl.css' media='screen' type='text/css'> 
+<script type='text/javascript' src='js/jquery.timer-min.js'></script> 
+<link rel='stylesheet' href='page/var/gallery.css' media='screen' type='text/css'> 
+<link rel='stylesheet' href='page/var/jquery.bxslider.css' media='screen' type='text/css'> 
+<style>.hovertip{
+    position:absolute;
+    padding:10px 13px;
+    z-index:2;
+    max-width:300px;
+    color:#303030;
+    background-color:#f5f5b5;
+    border:1px solid #DECA7E;
+    font-family:sans-serif;
+    font-size:12px;
+    line-height:18px;
+    text-align:left;
+    }</style> 
+<script type='text/javascript'>$j(document).ready(function(){$j('.tooltip').hovertip({'offset':[20,20]});get_notif();});
+
+if(!Array.indexOf){Array.prototype.indexOf = function(obj){for(var i=0; i<this.length; i++){if(this[i]==obj){return i;}}return -1;}}
+    hashuri = [] ;
+	 var tick_timer= 3000 ;
+ 
+	 function get_notif()
+        {
+		  
+		  //console.log(tick_timer);
+	     
+		  setTimeout(get_notif,tick_timer);
+        
+		   $j.ajax(
+            {
+                url: '/page/notif/show_events',
+                dataType: 'json',
+                data: "{}",
+                success: function(data)
+                    {
+                    $j.each(data,function(index,data){
+                        try
+                            {
+                            if( hashuri.indexOf(data.hash) == -1 )
+                                {
+                                hashuri.push(data.hash);
+                                $j.jGrowl(
+                                    data.str,
+                                    {
+                                        corners:'1px',
+                                        life: data.life,
+                                        header:data.title,
+                                        hash: data.hash,
+                                        sticky: data.sticky,
+                                        close: function(e,m,o)
+                                            {
+                                                $j.ajax({url:'/page/notif/delete_single_event/' + o.hash});
+                                            }
+                                    });
+                                }
+                            }
+                        catch(e){}
+                        })
+                    }
+            });
+        }
+	 </script> 
+
+<script type='text/javascript' src='js/jquery.hovertip-1.0.min.js'></script> 
+<script type='text/javascript' src='js/jquery.jgrowl_minimized.js'></script> 
+<link rel='stylesheet' href='css/jquery.jgrowl.css' media='screen' type='text/css'> 
+<script type='text/javascript' src='js/jquery.timer-min.js'></script> 
+<link rel='stylesheet' href='page/var/gallery.css' media='screen' type='text/css'> 
+<link rel='stylesheet' href='page/var/jquery.bxslider.css' media='screen' type='text/css'> 
+<script type='text/javascript' src='page/var/galerie/jquery.prettyPhoto.js'></script> 
+<style>.hovertip{
+    position:absolute;
+    padding:10px 13px;
+    z-index:2;
+    max-width:300px;
+    color:#303030;
+    background-color:#f5f5b5;
+    border:1px solid #DECA7E;
+    font-family:sans-serif;
+    font-size:12px;
+    line-height:18px;
+    text-align:left;
+    }</style> 
+<script type='text/javascript'>$j(document).ready(function(){$j('.tooltip').hovertip({'offset':[20,20]});get_notif();});
+
+if(!Array.indexOf){Array.prototype.indexOf = function(obj){for(var i=0; i<this.length; i++){if(this[i]==obj){return i;}}return -1;}}
+    hashuri = [] ;
+	 var tick_timer= 3000 ;
+ 
+	 function get_notif()
+        {
+		  
+		  //console.log(tick_timer);
+	     
+		  setTimeout(get_notif,tick_timer);
+        
+		   $j.ajax(
+            {
+                url: '/page/notif/show_events',
+                dataType: 'json',
+                data: "{}",
+                success: function(data)
+                    {
+                    $j.each(data,function(index,data){
+                        try
+                            {
+                            if( hashuri.indexOf(data.hash) == -1 )
+                                {
+                                hashuri.push(data.hash);
+                                $j.jGrowl(
+                                    data.str,
+                                    {
+                                        corners:'1px',
+                                        life: data.life,
+                                        header:data.title,
+                                        hash: data.hash,
+                                        sticky: data.sticky,
+                                        close: function(e,m,o)
+                                            {
+                                                $j.ajax({url:'/page/notif/delete_single_event/' + o.hash});
+                                            }
+                                    });
+                                }
+                            }
+                        catch(e){}
+                        })
+                    }
+            });
+        }
+	 </script> 
+
+<script type='text/javascript' src='js/jquery.hovertip-1.0.min.js'></script> 
+<script type='text/javascript' src='js/jquery.jgrowl_minimized.js'></script> 
+<link rel='stylesheet' href='css/jquery.jgrowl.css' media='screen' type='text/css'> 
+<script type='text/javascript' src='js/jquery.timer-min.js'></script> 
+<link rel='stylesheet' href='page/var/gallery.css' media='screen' type='text/css'> 
+<link rel='stylesheet' href='page/var/jquery.bxslider.css' media='screen' type='text/css'> 
+<script type='text/javascript' src='page/var/galerie/jquery.prettyPhoto.js'></script> 
+<script type='text/javascript' src='page/var/jquery.bxslider.min.js'></script> 
+<style>.hovertip{
+    position:absolute;
+    padding:10px 13px;
+    z-index:2;
+    max-width:300px;
+    color:#303030;
+    background-color:#f5f5b5;
+    border:1px solid #DECA7E;
+    font-family:sans-serif;
+    font-size:12px;
+    line-height:18px;
+    text-align:left;
+    }</style> 
+<script type='text/javascript'>$j(document).ready(function(){$j('.tooltip').hovertip({'offset':[20,20]});get_notif();});
+
+if(!Array.indexOf){Array.prototype.indexOf = function(obj){for(var i=0; i<this.length; i++){if(this[i]==obj){return i;}}return -1;}}
+    hashuri = [] ;
+	 var tick_timer= 3000 ;
+ 
+	 function get_notif()
+        {
+		  
+		  //console.log(tick_timer);
+	     
+		  setTimeout(get_notif,tick_timer);
+        
+		   $j.ajax(
+            {
+                url: '/page/notif/show_events',
+                dataType: 'json',
+                data: "{}",
+                success: function(data)
+                    {
+                    $j.each(data,function(index,data){
+                        try
+                            {
+                            if( hashuri.indexOf(data.hash) == -1 )
+                                {
+                                hashuri.push(data.hash);
+                                $j.jGrowl(
+                                    data.str,
+                                    {
+                                        corners:'1px',
+                                        life: data.life,
+                                        header:data.title,
+                                        hash: data.hash,
+                                        sticky: data.sticky,
+                                        close: function(e,m,o)
+                                            {
+                                                $j.ajax({url:'/page/notif/delete_single_event/' + o.hash});
+                                            }
+                                    });
+                                }
+                            }
+                        catch(e){}
+                        })
+                    }
+            });
+        }
+	 </script> 
+
+ 
+<ul class="bxslider">
+
+    <li>
+	<a  href="page/clasamente.html"><img src="images/slide/dezbatere-ofensa-runda.png" alt=""/></a> 
+	</li> 
+    <li>
+	<a  href="#"><img src="uploads/2015/05/22/dezbatere-website-oxford_(1).6ftib2.png" alt=""/></a>
+	</li>
+    <!--<li>
+	<a  href="/page/ro/dezbatere_parada_Buc"><img src="https://dev.closer2oxford.ro/images//cover/BANNER_c2o_LGBT_Buc.png" alt=""/></a>
+	</li> -->
+     <li><a href="en.html"><img src="images/cover/BANNER_c2o_12_DEBATE_ONLINE_results.png" alt=""/></a></li>
+</ul> 
+
+
+</div>  
+<script>
+    $j(document).ready(function() {
+        $j(".nolink").click(function() {
+            return false;
+        });
+        $j('.bxslider').bxSlider({
+            autoControls: true,
+            adaptiveHeight: true,
+            onSlideAfter: function($slideElement, oldIndex, newIndex) {
+                console.log($slideElement, oldIndex, newIndex);
+                // your code here to init imagemap
+            }
+        });
+
+        //$j(".frontPageImg").prettyPhoto({theme:'facebook'}); 
+    });
+</script> 
+<a href='page/prez_structura_caz.html' class='frontPageImg noExternal'>
+    <img id="i_c" src='images/layout/ralu/struct.jpg'/>
+</a>
+<a href='page/prez_strategie_caz.html' class='frontPageImg noExternal'>
+    <img id="i_c" src='images/layout/ralu/strateg.jpg' alt='În curând'/>
+</a>
+<a href='page/prez_argumentarea.html' class='frontPageImg noExternal'>
+    <img id="i_c" src='images/layout/ralu/argument.jpg' alt='În curând'/>
+</a>
+<a href='page/prez_stil_caz.html' class='frontPageImg noExternal'>
+    <img id="i_c" src='images/layout/ralu/stil.jpg' alt='În curând'/>
+
+</a>
+<div class='clear'></div>
+<!-- {_voturi} -->
+
+<div class='clear'></div>
+<div id='stiri-padding'>
+    
+    
+
+    <div id='stiri_back'>
+        <span class="tl"></span><span class="tr"></span><div class='news news-even'><span class='news-date'>2015-08-21 18:13:10</span><a href='page/ro/interviu_2015.html'><span class='news-title'>"Nici una din partile implicate nu ar trebui sa se ofenseze usor intr-o dezbatere". Interviu</span></a><span class='news-content'>7 participanti la competitia Closer2Oxford au raspuns unui interviu despre debate-ul disputat si despre dezbateri in general.
+&nbsp;
+
+
+Cum ati afl <a href='page/ro/interviu_2015.html'>[..]</a></span></div><div class='news news-odd'><span class='news-date'>2015-06-13 17:00:22</span><a href='page/ro/runda_13_incepe.html'><span class='news-title'>A început runda a 13-a Closer2Oxford!</span></a><span class='news-content'>
+&nbsp;
+Dacă eşti student, masterand sau elev &icirc;n clasa a XI-a sau a XII-a, cu maxim un an experienţă de debate, te invităm să participi  <a href='page/ro/runda_13_incepe.html'>[..]</a></span></div><div class='news news-even'><span class='news-date'>2014-06-10 14:51:28</span><a href='page/ro/dezbatere_parada_Buc.html'><span class='news-title'>Dezbatere PRO/CONTRA Marsul Diversitatii</span></a><span class='news-content'>&nbsp;
+ Comunicat de presă
+București, 10 iunie
+Miercuri, 11 iunie, are loc dezbaterea publică despre necesitatea paradelor Gay Pride, tema care  <a href='page/ro/dezbatere_parada_Buc.html'>[..]</a></span></div><div class='news news-odd'><span class='news-date'>2014-05-07 08:50:59</span><a href='page/ro/stire_dezbatere_timisoara_runda_11.html'><span class='news-title'>Dezbatere la Timisoara despre paradele Gay Pride</span></a><span class='news-content'>Joi 3 aprilie 2014 la Libraria Cartea de Nisip din Timisoara avut loc loc dezbaterea din cadrul rundei a 11-a a seriei Closer2Oxford, pe motiunea "E t <a href='page/ro/stire_dezbatere_timisoara_runda_11.html'>[..]</a></span></div><div class='news news-even'><span class='news-date'>2014-04-05 13:44:18</span><a href='page/ro/runda11_dezbateri.html'><span class='news-title'>Dezbaterile publice din runda a 11-a continua la Iasi, Cluj si Bucuresti</span></a><span class='news-content'>Subiectul "E timpul sa afirmam ca parada gay pride e inca necesara?" va fi abordat in dezbateri publice la Iasi, Cluj si Bucuresti in aprilie-mai 2014 <a href='page/ro/runda11_dezbateri.html'>[..]</a></span></div><div class='news last_element'><span><a href='page/toate_stirile.html'>Toate stirile</a></span></div><span class="bl"></span><span class="br"></span> 
+        <!--{_show_register}-->
+    </div>
+    <!-- Begin MailChimp Signup Form -->
+	  <div id='newsletter_subcriber_div'><span class='tr'></span><span class='tl'></span><span class='br'></span><span class='bl'></span>
+ 
+<div id='mc_embed_signup'>
+<form action='https://closer2oxford.us4.list-manage.com/subscribe/post?u=51a1b54a6f51bf2cebdaff02c&amp;id=b6f951b895' method='post' id='mc-embedded-subscribe-form' name='mc-embedded-subscribe-form' class='validate' target='_blank'>
+	<h2 style='margin:0px 0px 10px; '>Newsletter</h2>
+
+<div class='mc-field-group'>
+	<label for='mce-EMAIL'>Email  <span class='asterisk'>*</span>
+</label>
+	<input type='email' value='' name='EMAIL' class='required email' id='mce-EMAIL'>
+</div>
+	<div id='mce-responses' class='clear'>
+		<div class='response' id='mce-error-response' style='display:none'></div>
+		<div class='response' id='mce-success-response' style='display:none'></div>
+	</div>	<div class='clear'><input type='submit' value='Inscrie-te' name='subscribe' id='mc-embedded-subscribe' class='button'></div>
+</form>
+</div>
+</div>
+
+<!--End mc_embed_signup-->
+    <div data-badge-id="3164518" data-orientation="right" data-hover="false" class="pb-badge-widget"></div>
+    <script type="text/javascript" src="../c443513.r13.cf2.rackcdn.com/static/widgets/w.html"></script>
+</div> 
+
+
+
+<div class='more_info_prima_pag' style="text-align: justify;">
+	<p><h2>Clasamentul rundei a 13-a de dezbateri pe tema:</h2>
+	<br/>
+	Ar trebui ca libertatea de exprimare să nu includă dreptul de a ofensa religii
+</p>
+
+    <link rel='stylesheet' href='css/table_style.css' type='text/css'>
+    <script type='text/javascript' src='js/table_sorter.js'></script>
+    <script type='text/javascript' src='js/jquery.MetaData.js'></script>
+			<style>
+           tr{margin:10px 0;}
+           td{ text-align:left;border:none;}
+           td ul{list-style:none;margin:0px;padding:0px;font-size:10px; }
+           .short{width:20px;text-align:center;}
+           #content form{margin:0px;padding:0px;}
+           #content li span {display:block;color:#f00;}
+		   .sad td{background-color:#FFDDDD !important}
+		   th.header{background-color:#000 !important;color:#fff !important}
+		   table.tablesorter{background-color:transparent !important}
+		   table.tablesorter tbody td {padding: 1px 5px;line-height: 12px;}
+		   table.tablesorter tbody td a{text-decoration:none;}
+    </style>
+<table id="General" class="tablesorter shower" style="display: table;"><thead><tr><th class="{sorter: 'digit'} header">loc</th><th class="header">Nume echipa</th><th class="header">Membri</th><th class="{sorter: 'digit'} header">Punctaj</th><th class="header">Parte</th><th class="header">Decizii</th><th class="header">Arbitru</th></tr></thead><thead></thead><tbody><tr class="even"><td>1</td><td><a href="page/ro/vezi_meciuri/406/sunt_arbitru.html">Alex si David  <span class="notif">(vezi meciul  406)</span></a></td><td>Alex Mocan<br> David Toth </td><td>48.00</td><td>negatori</td><td title="decizii favorabile: 3 din 3 decizii posibile">3</td><td>Radu Ocrain<br> Teo Oprea<br> Ioana Covei</td></tr><tr class="odd"><td>2</td><td><a href="page/ro/vezi_meciuri/408/sunt_arbitru.html">RoSe <span class="notif">(vezi meciul  408)</span></a></td><td>Sergiu<br> Robert Grecu</td><td>46.67</td><td>negatori</td><td title="decizii favorabile: 2 din 3 decizii posibile">2</td><td>Liviu Gajora<br> Radu Ocrain<br> Teo Oprea</td></tr><tr class="even"><td>3</td><td><a href="page/ro/vezi_meciuri/412/sunt_arbitru.html">Voluntari Negatori <span class="notif">(vezi meciul  412)</span></a></td><td>Voluntar Negator</td><td>50.00</td><td>negatori</td><td title="decizii favorabile: 1 din 1 decizii posibile">1</td><td>George Maxim</td></tr><tr class="odd"><td>4</td><td><a href="page/ro/vezi_meciuri/416/sunt_arbitru.html">Voluntari Negatori <span class="notif">(vezi meciul  416)</span></a></td><td>Voluntar Negator</td><td>50.00</td><td>negatori</td><td title="decizii favorabile: 1 din 1 decizii posibile">1</td><td>Radu Ocrain</td></tr><tr class="sad even"><td>5</td><td><a href="page/ro/vezi_meciuri/411/sunt_arbitru.html">Voluntari Afirmatori <span class="notif">(vezi meciul  411)</span></a></td><td>Voluntar Afirmator</td><td>50.00</td><td>afirmatori</td><td title="decizii favorabile: 1 din 1 decizii posibile">1</td><td>Radu Ocrain</td></tr><tr class="odd"><td>6</td><td><a href="page/ro/vezi_meciuri/415/sunt_arbitru.html">DSDC Ovi si Adi <span class="notif">(vezi meciul  415)</span></a></td><td>Ovidiu Damian<br> Adi Crisan</td><td>47.00</td><td>afirmatori</td><td title="decizii favorabile: 1 din 1 decizii posibile">1</td><td>Draghicescu Victor</td></tr><tr class="even"><td>7</td><td><a href="page/ro/vezi_meciuri/409/sunt_arbitru.html">Voluntari Afirmatori <span class="notif">(vezi meciul  409)</span></a></td><td>Afirmator1 Voluntar<br> Afirmator2 Voluntar</td><td>46.00</td><td>afirmatori</td><td title="decizii favorabile: 1 din 1 decizii posibile">1</td><td>Ioan Nascu</td></tr><tr class="sad odd"><td>8</td><td><a href="page/ro/vezi_meciuri/413/sunt_arbitru.html">Voluntari Afirmatori <span class="notif">(vezi meciul  413)</span></a></td><td>Voluntar Afirmator</td><td>45.00</td><td>afirmatori</td><td title="decizii favorabile: 1 din 1 decizii posibile">1</td><td>Ioana Georgescu</td></tr><tr class="even"><td>9</td><td><a href="page/ro/vezi_meciuri/407/sunt_arbitru.html">Voluntari Negatori <span class="notif">(vezi meciul  407)</span></a></td><td>Voluntar Negator</td><td>45.00</td><td>negatori</td><td title="decizii favorabile: 1 din 1 decizii posibile">1</td><td>Cristina Rosu</td></tr><tr class="lost odd"><td>10</td><td><a href="page/ro/vezi_meciuri/408/sunt_arbitru.html">Ana si Mihai  <span class="notif">(vezi meciul  408)</span></a></td><td>Mihai Visan<br> Ana Silvia Serban</td><td>44.67</td><td>afirmatori</td><td title="decizii favorabile: 1 din 3 decizii posibile">1</td><td>Liviu Gajora<br> Radu Ocrain<br> Teo Oprea</td></tr><tr class="even"><td>11</td><td><a href="page/ro/vezi_meciuri/414/sunt_arbitru.html">Marius si Denisa <span class="notif">(vezi meciul  414)</span></a></td><td>Marius Brabete<br> Denisa Vlasceanu</td><td>41.00</td><td>afirmatori</td><td title="decizii favorabile: 1 din 1 decizii posibile">1</td><td>Teo Oprea</td></tr><tr class="sad odd"><td>12</td><td><a href="page/ro/vezi_meciuri/410/sunt_arbitru.html">Alex si Stefan <span class="notif">(vezi meciul  410)</span></a></td><td>Alex Burghelia<br> Peltea Ștefan</td><td>40.00</td><td>afirmatori</td><td title="decizii favorabile: 1 din 1 decizii posibile">1</td><td>Cristina Rosu</td></tr><tr class="lost even"><td>13</td><td><a href="page/ro/vezi_meciuri/415/sunt_arbitru.html">D.S.D.C. Thea si Elisa <span class="notif">(vezi meciul  415)</span></a></td><td>Piltu Elisa<br> Alexandra Puiu</td><td>46.00</td><td>negatori</td><td title="decizii favorabile: 0 din 1 decizii posibile">0</td><td>Draghicescu Victor</td></tr><tr class="lost odd"><td>14</td><td><a href="page/ro/vezi_meciuri/409/sunt_arbitru.html">Carmen si Ioana <span class="notif">(vezi meciul  409)</span></a></td><td>Carmen Irimia<br> Ioana Lungu</td><td>45.00</td><td>negatori</td><td title="decizii favorabile: 0 din 1 decizii posibile">0</td><td>Ioan Nascu</td></tr><tr class="lost even"><td>15</td><td><a href="page/ro/vezi_meciuri/412/sunt_arbitru.html">Florentina si Ligia <span class="notif">(vezi meciul  412)</span></a></td><td>Ligia Balcanu<br> Florentina Pohrib</td><td>44.00</td><td>afirmatori</td><td title="decizii favorabile: 0 din 1 decizii posibile">0</td><td>George Maxim</td></tr><tr class="lost odd"><td>16</td><td><a href="page/ro/vezi_meciuri/416/sunt_arbitru.html">Ionut si Raluca <span class="notif">(vezi meciul  416)</span></a></td><td>Ionut Rotaru<br> Raluca Colceri</td><td>44.00</td><td>afirmatori</td><td title="decizii favorabile: 0 din 1 decizii posibile">0</td><td>Radu Ocrain</td></tr><tr class="lost even"><td>17</td><td><a href="page/ro/vezi_meciuri/406/sunt_arbitru.html">Andreea si Bogdan 3a4 <span class="notif">(vezi meciul  406)</span></a></td><td>Bogdan Hadarag<br> Andreea Buta</td><td>43.33</td><td>afirmatori</td><td title="decizii favorabile: 0 din 3 decizii posibile">0</td><td>Radu Ocrain<br> Teo Oprea<br> Ioana Covei</td></tr><tr class="lost odd"><td>18</td><td><a href="page/ro/vezi_meciuri/407/sunt_arbitru.html">T&amp;A <span class="notif">(vezi meciul  407)</span></a></td><td>Pana Niculae-Tudor <br> Andrada Olteanu</td><td>43.00</td><td>afirmatori</td><td title="decizii favorabile: 0 din 1 decizii posibile">0</td><td>Cristina Rosu</td></tr><tr class="lost even"><td>19</td><td><a href="page/ro/vezi_meciuri/414/sunt_arbitru.html">Maria si Săvuţă <span class="notif">(vezi meciul  414)</span></a></td><td>Maria<br> Săvuţă Maria</td><td>38.00</td><td>negatori</td><td title="decizii favorabile: 0 din 1 decizii posibile">0</td><td>Teo Oprea</td></tr><tr class="sad odd"><td>20</td><td><a href="page/ro/vezi_meciuri/411/sunt_arbitru.html">Anca si Anca <span class="notif">(vezi meciul  411)</span></a></td><td>Anca Vlad</td><td>24.00</td><td>negatori</td><td title="decizii favorabile: 0 din 1 decizii posibile">0</td><td>Radu Ocrain</td></tr><tr class="sad even"><td>21</td><td><a href="page/ro/vezi_meciuri/413/sunt_arbitru.html">Double T <span class="notif">(vezi meciul  413)</span></a></td><td>Theodor Ivascu<br> Teodora Nina Turcu</td><td>23.00</td><td>negatori</td><td title="decizii favorabile: 0 din 1 decizii posibile">0</td><td>Ioana Georgescu</td></tr><tr class="sad odd"><td>22</td><td><a href="page/ro/vezi_meciuri/410/sunt_arbitru.html">Frumosul si Bestia <span class="notif">(vezi meciul  410)</span></a></td><td>Alex Campian<br> Diana Galos</td><td>23.00</td><td>negatori</td><td title="decizii favorabile: 0 din 1 decizii posibile">0</td><td>Cristina Rosu</td></tr></tbody></table>
+
+
+<table class="tablesorter"><tbody><tr class="even"><td>Meci castigat</td></tr><tr class="lost"><td>Meci pierdut</td></tr><tr class="sad"><td>Meci abandonat</td></tr></tbody></table>
+<i><p><b>Nota:</b><br/>
+În urma arbitrajelor, meciurile 406 şi 408 au obţinut punctaje egale. Pentru a desemna câştigătorii rundei, am apelat la doi arbitri suplimentari care au arbitrat aceste meciuri (motiv pentru care, in clasament, cele două meciuri au câte 3 arbitri asignaţi).
+</p>
+<p>
+Meciurile au fost asignate in mod aleator arbitrilor, iar participarea anonimă - numele participanţilor şi al arbitrilor au devenit vizibile la finalul jurizării.
+</p>
+<p>Meciurile cu echipe in componenta carora sunt voluntari sunt in afara competitiei cu premii</p>
+</i>
+
+
+<br/>
+<br/>
+	<p><strong>&Icirc;nregistrează-te &icirc;n Closer2Oxford!  (8 iunie)</strong></p>
+	<p>Closer2Oxford pune &icirc;n valoare oameni şi argumentele lor, &icirc;n dezbateri online şi publice alături de tineri şi invitați avizaţi. De ce să participi? Pentru că se &icirc;nt&acirc;mplă lucruri &icirc;n lume pe care merită să le &icirc;nţelegem mai bine &icirc;mpreună. Pentru că deseori, o discuţie (&icirc;n contradictoriu) cu oameni valoroşi contează mai mult dec&acirc;t o carte citită de unul singur. Pentru ca &icirc;n grupul tău de colegi sunteţi viitorii miniştri, profesori, politicieni şi ne dorim cu toţii sa fiţi buni. &Icirc;n plus, poate fi fun!</p>
+	
+	
+	<p>Libertatea de expresie este fundamentală &icirc;n lumea democratică. Au căzut guverne şi au fost schimbate legi pentru că cetăţeni, jurnalişti sau activişti au fost critici şi curajoşi &icirc;n a garanta acestei libertăţi locul care i se cuvine, risc&acirc;nd de multe ori mai mult dec&acirc;t o simplă amendă.&nbsp;</p>
+
+	<p>Se poate spune că ofensa adusă religiilor este parte a acestei libertăţi sau, mai degrabă, că linia se trage aici, datorită caracterului special pe care &icirc;l are credinţa &icirc;n viaţa unei persoane? Atentatul de la Paris ori scandalul caricaturilor din Danemarca sunt exemple de momente &icirc;n care diferenţele de &icirc;nţelegere a libertăţilor &icirc;n această chestiune au dus la situaţii tragice.&nbsp;</p>
+	<p><strong>Moţiunea acestei runde este "Ar trebui ca libertatea de exprimare să nu includă dreptul de a ofensa religii".&nbsp;<br /></strong><br />Intră &icirc;n dezbaterea online!</p>
+	<ol>
+	<li>Primul pas este să te &icirc;<a href="http://closer2oxford.ro/page/register">nregistrezi &icirc;n rundă</a> (<b>până pe 21 iunie 2015</b>)</li>
+	<li>Fă-ţi echipă alături de un coleg/o colegă, dupa ce s-a &icirc;nregistrat şi el/ea pe site</li>
+	</ol>
+	<p>Dacă nu ai un/o coechipier(ă), &icirc;ţi găsim noi.&nbsp;&nbsp;</p>
+	<ol start="3">
+	<li>Pentru că este un subiect de dezbatere publică mai amplu şi sensibil dec&acirc;t un exerciţiu de argumentare şi persuasiune, vei putea alege poziţia echipei tale, select&acirc;nd rolul de Afirmator sau Negator.</li>
+	
+	<li>
+		Vei participa la dezbatere conform următorului calendar:<br/>
+<br/>
+		Luni & marti (22, 23 iunie) - pregatirea pe motiune<br/> 
+		Miercuri & joi (24, 25) - Postarea discursului de Afirmator 1<br/>
+		Vineri & Sâmbata (26, 27) - Postarea discursului de Negator 1<br/>
+		Duminica & Luni (28, 29) - Postarea discursului de Afirmator 2<br/>
+		Marti & Miercuri (30, 1) - Postarea discursului de Negator 2<br/>
+<br/>
+		2-11 iulie - Arbitri ARDOR cu experienţă oferă feedback şi stabilesc câştigătorii rundelor.
+	</li>
+	</ol>
+	
+	
+	<p><strong>Ce te așteaptă dacă participi (dar) şi dacă vei c&acirc;ştiga meciul?</strong></p>
+	<p>Cei mai buni doi participanţi la dezbatere vor fi premiaţi cu două tablete Kindle.</p>
+	<p>Urmatorii trei debateri din clasament vor primi c&acirc;te un exemplar din&nbsp;<em><a href="http://noulval.ro/" target="_blank">Rom&acirc;nia noului val</a></em>&nbsp;- volumul reuneşte 77 de tineri antreprenori, creativi, inventatori, regizori, voluntari, activişti, tineri diplomaţi, analişti, consultanţi, manageri, g&acirc;nditori şi jurnaliști ce oferă o colecție de viziuni originale asupra viitorului Rom&acirc;niei, &icirc;n contextul revoluţiilor culturale globale provocate de tehnologie şi democratizarea cunoaşterii.</p>
+	
+</div>
+	
+<div class='more_info_prima_pag' style="text-align: justify;">
+	<p><strong>Participanţi eligibili:</strong></p>
+	<p>Sunt invitaţi să se <a href="http://closer2oxford.ro/page/register" target="_blank">&icirc;nscrie</a> &icirc;n rundă studenţii &icirc;ncepatori &icirc;n dezbateri (maxim un an de club/experienţa episodică de debate) şi&nbsp;elevii din clasele a 11-a şi a 12-a&nbsp;(daca au maxim un an vechime &icirc;n activitatea de club de debate).</p>
+	
+	<p>Orice persoană din comunitatea online, &icirc;nsă, poate vota una dintre moţiunile de mai sus, pentru a desemna tema cea mai interesantă care va fi supusă dezbaterii.</p> 
+</div>
+	
+<div class='more_info_prima_pag' style="text-align: justify;">
+	<p><strong>Despre runda curentă:</strong></p>
+	
+	<p>Runda a 13-a Closer2Oxford se desfăşoară &icirc;n parteneriat cu <a href="https://www.facebook.com/UNYDRo?fref=ts" target="_blank">Programul de Delegat de Tineret al Rom&acirc;niei la Naţiunile Unite</a>, adresat tinerilor care &icirc;şi doresc să &icirc;şi reprezinte generaţia &icirc;n singurul for global de decizie - Organizaţia Naţiunilor Unite. Moţiunile propuse spre vot sunt tangenţiale agendei ONU, viz&acirc;nd subiecte de relevanţă internaţională despre drepturile şi responsabilităţile cetăţenilor secolului XXI şi rolul statelor.</p>
+	<p>Closer2Oxford este o iniţiativă a <a href="http://ardor.org.ro/main.php?lang=ro" target="_blank">Asociaţiei Rom&acirc;ne de Dezbateri, Oratorie şi Retorică</a>.</p> 
+	
+</div>
+	
+	
+
+<div  class="za_older_runde">
+    <span class='tr'></span><span class='tl'></span><span class='br'></span><span class='bl'></span> 
+    <h2>Runde încheiate</h2>
+</div>
+
+<!-- ------------------------------------------------------------------------------ -->		
+
+<div class="za_motiunea">
+    <!--<span class='bl'></span>--><span class='tr'></span><span class='tl'></span><span class='br'></span>
+    <h2>Runda XI:  E timpul sa afirmam ca Parada Gay Pride e inca necesara?<br/></h2>
+    <div class='moreinfo' style='top:0px;'> <a href='page/clasamente/11.html'>Vezi meciurile <img src='images/layout/right_arrow_yellow.png'></a></div>  
+    <div class='clear-left'> </div>
+</div>
+<div class='more_info_prima_pag'>
+    <ul id="lista_locatii"> <!-- c&#259;zut -->
+        <li>București <a href='page/dezbatere_bucuresti_runda_11.html'>vezi dezbaterea</a> </li>
+        <li>Timi&#x0219;oara <a href='page/dezbatere_timisoara_runda_11.html'>vezi dezbaterea</a> </li>
+    </ul>
+</div>
+<!-- ------------------------------------------------------------------------------ -->		
+
+<div class="za_motiunea">
+    <!--<span class='bl'></span>--><span class='tr'></span><span class='tl'></span><span class='br'></span>
+    <h2>Runda X:  E timpul ca statul s&#x0103; nu mai subven&#x021b;ioneze specializ&#x0103;rile care nu au c&#x0103;utare pe pia&#x021b;a muncii<br/></h2>
+    <div class='moreinfo' style='top:0px;'> <a href='page/clasamente/10.html'>Vezi meciurile <img src='images/layout/right_arrow_yellow.png'></a></div>  
+    <div class='clear-left'> </div>
+</div>
+<div class='more_info_prima_pag'>
+    <ul id="lista_locatii"> <!-- c&#259;zut -->
+        <li>La București moţiunea a căzut cu 57% contra, cu votul initial 64% contra <a href='page/dezbatere_bucuresti_runda_10.html'>vezi dezbaterea </a> </li>
+        <li>La Cluj moţiunea a căzut cu 63% contra, cu votul initial 63% pro <a href='page/dezbatere_cluj_runda_10.html'>vezi dezbaterea </a> </li>
+        <li>La Iasi moţiunea a căzut cu 62% contra, cu votul initial 50%-50% <a href='page/dezbatere_iasi_runda_10.html'>vezi dezbaterea </a> </li>
+        <li>La Timi&#x0219;oara moţiunea a căzut cu 72,7% contra, cu votul initial 61,5% pro <a href='page/dezbatere_timisoara_runda_10.html'>vezi dezbaterea </a> </li>
+    </ul>
+</div>
+
+<!-- ------------------------------------------------------------------------------ -->
+
+
+<div class="za_motiunea">
+    <!--<span class='bl'></span>--><span class='tr'></span><span class='tl'></span><span class='br'></span>
+    <h2>Runda IX: E timpul ca amenzile s&#x0103; fie propor&#x021b;ionale cu veniturile<br/></h2>
+    <div class='moreinfo' style='top:0px;'> <a href='page/clasamente/9.html'>Vezi meciurile <img src='images/layout/right_arrow_yellow.png'></a></div>  
+    <div class='clear-left'> </div>
+</div>
+<div class='more_info_prima_pag'>
+    <ul id="lista_locatii"> <!-- c&#259;zut -->
+        <li>La București moţiunea a căzut cu 79% contra, cu votul de start 56% pro <a href='page/dezbatere_bucuresti_vara_2013.html'>vezi dezbaterea </a> </li>
+        <li>La Cluj moţiunea a căzut cu 66% contra, cu votul de start 57% pro <a href='page/dezbatere_cluj_vara_2013.html'>vezi dezbaterea </a> </li>
+        <li>La Iași moţiunea a căzut cu 60% contra, cu votul de start 62% pro <a href='page/dezbatere_iasi_vara_2013.html'>vezi dezbaterea </a> </li>
+        <li>La Sibiu moţiunea a căzut cu 66% contra, cu votul de start 83% pro <a href='page/dezbatere_sibiu_vara_2013.html'>vezi dezbaterea </a> </li>
+        <li>La Timișoara moţiunea a trecut cu 71% pro, cu votul de start 78% pro <a href='page/dezbatere_timisoara_vara_2013.html'>vezi dezbaterea </a> </li>
+
+    </ul>
+</div>
+
+<div class="za_motiunea">
+    <!--<span class='bl'></span>--><span class='tr'></span><span class='tl'></span><span class='br'></span>
+    <h2>Runda VIII: E timpul s&#x0103; sanc&#x0163;ion&#x0103;m prin lege pasivitatea individului care e martor la &icirc;nc&#x0103;lc&#x0103;ri ale legii.<br/></h2>
+    <div class='moreinfo' style='top:0px;'> <a href='page/clasamente/8.html'>Vezi meciurile <img src='images/layout/right_arrow_yellow.png'></a></div>  
+    <div class='clear-left'> </div>
+</div>
+<div class='more_info_prima_pag'>
+    <ul id="lista_locatii"> <!-- c&#259;zut -->
+        <li>La Chişinău moţiunea a căzut cu 79% contra, cu votul de start 52% contra <a href='page/dezbateripublice.html'>vezi dezbaterea </a> </li>
+        <li>La Bălţi moţiunea a căzut cu 62% contra, cu votul de start 53% contra <a href='page/dezbateripublice.html'>vezi dezbaterea </a></li>
+    </ul>
+</div>
+
+<div class="za_motiunea">
+    <!--<span class='bl'></span>--><span class='tr'></span><span class='tl'></span><span class='br'></span>
+    <h2>Runda VII: E timpul s&#x0103; interzicem publicitatea care se adreseaz&#x0103; copiilor</h2>
+    <div class='moreinfo' style='top:0px;'> <a href='page/clasamente/7.html'>Vezi meciurile <img src='images/layout/right_arrow_yellow.png'></a></div>  
+    <div class='clear-left'> </div>
+</div>
+<div class='more_info_prima_pag'>
+    <ul id="lista_locatii"> <!-- c&#259;zut -->
+        <li>Rund&#x0103; exclusiv online</li>
+    </ul>
+</div>
+
+
+<div class="za_motiunea">
+    <span class='tr'></span><span class='tl'></span><span class='br'></span>
+    <h2>Runda VI : E timpul s&#x0103; afirm&#x0103;m c&#x0103; democra&#x021b;ia nu e un r&#x0103;spuns <br/> pentru toate 
+        &#x021b;&#x0103;rile</h2>
+    <div class='moreinfo' style='top:0px;'> <a href='page/clasamente/6.html'>Vezi meciurile <img src='images/layout/right_arrow_yellow.png'></a></div>  
+    <div class='clear-left'> </div>
+</div>
+<div class='more_info_prima_pag'>
+    <ul id="lista_locatii"> <!-- c&#259;zut -->
+        <li>Rund&#x0103; exclusiv online</li>
+    </ul>
+</div>
+<div class="za_motiunea">
+    <span class='tr'></span><span class='tl'></span><span class='br'></span>
+    <h2>Runda V : E timpul sa decriminalizăm pirateria pe internet?</h2>
+    <div class='moreinfo' style='top:0px;'> <a href='page/clasamente/5.html'>Vezi meciurile <img src='images/layout/right_arrow_yellow.png'></a></div> 
+    <div class='clear-left'> </div>
+</div>
+<div class='more_info_prima_pag'>
+    <ul id="lista_locatii"> <!-- c&#259;zut -->
+        <li>la Bucure&#351;ti, mo&#355;iunea a  trecut cu 53% da, cu votul de start de 56% da   
+            <a href='page/dezbatere_bucuresti_runda_5.html'>vezi dezbaterea </a></li>
+
+        <li>la Cluj mo&#355;iunea a trecut cu 93 da, cu votul de start de 92% da  
+            <a href='page/dezbatere_cluj_runda_5.html'>vezi dezbaterea</a></li>
+
+        <li>la Ia&#351;i mo&#355;iunea a trecut cu 71% da, cu votul de start de 64.5% da  
+            <a href='page/dezbatere_iasi_runda_5.html'>vezi dezbaterea</a></li>
+
+        <li>la Timi&#351;oara mo&#355;iunea a trecut cu 83% da, cu votul de start de 40% da  
+            <a href='page/dezbatere_timisoara_runda_5.html'>vezi dezbaterea</a></li>
+
+    </ul>
+</div>	
+
+<div class="za_motiunea">
+    <span class='tr'></span><span class='tl'></span><span class='br'></span><!-- <span class='bl'></span>  -->
+    <h2>Runda IV: E timpul să afirmăm că<br> nesupunerea civica este legitimă într-o democraţie? </h2>
+    <div class='moreinfo'> <a href='page/clasamente/4.html'>Vezi meciurile <img src='images/layout/right_arrow_yellow.png'></a></div> 
+    <div class='clear-left'> </div>
+</div>
+<div class='more_info_prima_pag'>
+    <ul id="lista_locatii"> <!-- c&#259;zut -->
+        <li>la Bucure&#351;ti, mo&#355;iunea a  trecut cu 78% da, cu votul de start de 83% da   <a href='page/dezbatere_bucuresti_runda_4.html'>vezi dezbaterea </a></li>
+        <li>la Cluj mo&#355;iunea a ob&#355;inut 50%-50%, cu votul de start de 82% da  <a href='page/dezbatere_cluj_runda_4.html'>vezi dezbaterea</a></li>
+        <li>la Ia&#351;i mo&#355;iunea a c&#259;zut cu 51% nu, cu votul de start de 56% da  <a href='page/dezbatere_iasi_runda_4.html'>vezi dezbaterea</a></li>
+        <li>la Timi&#351;oara mo&#355;iunea a trecut cu 60% da, cu votul de start de 63% da  <a href='page/dezbatere_timisoara_runda_4.html'>vezi dezbaterea</a></li>
+    </ul>
+</div>
+
+<div  class="za_motiunea">
+    <span class='tr'></span><span class='tl'></span><span class='br'></span><!--<span class='bl'></span> -->
+    <h2>Runda III: E timpul sa afirmăm că predarea religiei in &#351;coli pune in pericol laicitatea statului rom&acirc;n? </h2>
+    <div class='moreinfo'> <a href='page/clasamente/3.html'>Vezi meciurile <img src='images/layout/right_arrow_yellow.png'></a></div>
+    <div class='clear-left'> </div>
+</div>
+<div class='more_info_prima_pag'>
+    <span class='br'></span><span class='bl'></span>
+    <ul id="lista_locatii"> <!-- c&#259;zut -->
+        <li>la  Bucure&#351;ti, mo&#355;iunea a  trecut cu 75% da, cu votul de start de 65% da   <a href='page/dezbatere_bucuresti_vara.html'>vezi dezbaterea </a></li>
+        <li>la Cluj mo&#355;iunea a c&#259;zut cu 44% da, cu votul de start de 50% da  <a href='page/dezbatere_cluj_vara.html'>vezi dezbaterea</a></li>
+        <li>la Ia&#351;i mo&#355;iunea a trecut cu 61% da, cu votul de start de 40% da  <a href='page/dezbatere_iasi_vara.html'>vezi dezbaterea</a></li>
+        <li>la Timi&#351;oara mo&#355;iunea a c&#259;zut cu 76% nu, cu votul de start de 65% nu  <a href='page/dezbatere_timisoara_vara.html'>vezi dezbaterea</a></li>
+    </ul>
+
+</div>
+
+<div  class="za_motiunea">
+    <span class='tr'></span><span class='tl'></span><span class='br'></span><!-- <span class='bl'></span> -->
+    <h2>Runda II: E timpul ca dreptul cet&#x0103;&#x0163;enilor la informare s&#x0103; fie mai important <br> dec&acirc;t dreptul demnitarilor la via&#x0163;a privat&#x0103;? </h2>
+    <div class='moreinfo'> <a href='page/clasamente/2.html'>Vezi meciurile <img src='images/layout/right_arrow_yellow.png'></a></div>
+    <div class='clear-left'> </div>
+</div>
+<div class='more_info_prima_pag'>
+    <!-- <span class='tr'></span><span class='tl'></span> --><span class='br'></span><span class='bl'></span>
+    <ul id="lista_locatii">
+        <li>la  Bucure&#351;ti, mo&#355;iunea a c&#259;zut cu 66% nu, cu votul de start de 54% da   <a href='page/dezbatere_bucuresti_primavara.html'>vezi dezbaterea </a></li>
+        <li>la Cluj mo&#355;iunea a avut 50% da si 50% nu, cu votul de start de 73% da  <a href='page/dezbatere_cluj_primavara.html'>vezi dezbaterea</a></li>
+        <li>la Ia&#351;i mo&#355;iunea a trecut cu 61% da, cu votul de start de 57% da  <a href='page/dezbatere_iasi_primavara.html'>vezi dezbaterea</a></li>
+        <li>la Timi&#351;oara mo&#355;iunea a trecut cu 77% da , cu votul de start de 60% da  <a href='page/dezbatere_timisoara_primavara.html'>vezi dezbaterea</a></li>
+    </ul>
+
+</div>
+
+<div  class="za_motiunea">
+    <span class='tr'></span><span class='tl'></span><span class='br'></span><!-- <span class='bl'></span> -->
+    <h2>Runda I: E timpul ca posturile private de televiziune s&#259; aib&#259; responsabilit&#259;&#355;i educa&#355;ionale fa&#355;&#259; de public?</h2>
+    <div class='moreinfo'> <a href='page/clasamente/1.html'>Vezi meciurile <img src='images/layout/right_arrow_yellow.png'></a></div>
+    <div class='clear-left'> </div>
+</div>
+<div class='more_info_prima_pag'>
+    <span class='br'></span><span class='bl'></span>
+    <ul id="lista_locatii">
+        <li>la  Bucure&#351;ti,  mo&#355;iunea a trecut cu 59% da<!-- / 41% nu-->, cu votul de start de 69% da<!--/31%--> <a href='page/dezbatere_bucuresti_toamna.html'>vezi dezbaterea </a></li>
+        <li>la Cluj mo&#355;iunea a trecut cu 84% da<!--/ 16% nu-->, cu votul de start de 77% da<!--/23% --><a href='page/dezbatere_cluj_toamna.html'>vezi dezbaterea</a></li>
+        <li>la Ia&#351;i mo&#355;iunea a trecut cu 57% da<!-- / 43% nu-->, cu votul de start de  84% da <!--/16% --><a href='page/dezbatere_iasi_toamna.html'>vezi dezbaterea</a></li>
+        <li>la Timi&#351;oara mo&#355;iunea a c&#259;zut cu<!-- 14% da /--> 86% nu, cu votul de start de 75% da<!--/25% --><a href='page/dezbatere_timisoara_toamna.html'>vezi dezbaterea</a></li>
+    </ul>
+
+</div>
+<script type='text/javascript'>
+    $j(document).ready(function() {
+        do_nav_box("#nav_box_container", {urls: [
+                "/images/slide/219961_214811851864299_8005656_o.jpg",
+                "images/slide/220065_214811791864305_2028534_o.jpg",
+                "images/slide/399982_352493364762813_291123006_n.jpg",
+                "images/slide/nesupunere_civica_bucuresti.jpg",
+                "images/slide/nesupunere_civica_cluj.jpg",
+                "images/slide/nesupunere_civila_iasi.jpg",
+                "images/slide/piraterie_timisoara.jpg"
+            ]})
+    })
+</script>
+
+
+
+                                </div><!--end main -->
+                                <div id='parteneri'>
+                                    <span class='tr'></span><span class='tl'></span><span class='br'></span><span class='bl'></span><span id="filler"></span>
+                                    <div class='parteneri' id='sustinatori'>
+                                        <span class='floating_text' id='un_proiect'>Un proiect</span>
+                                        <a href='http://www.ardor.org.ro/'><div class='image' id='ardor'>Ardor</div></a>
+                                        <span class='floating_text' id='finantatori'>Finanțatori</span>
+                                        <a href='http://www.opensocietyfoundations.org/'><div class='image' id='open_society'>Open Society Foundation </div></a>
+                                        <a href='http://www.studentiq.ro//'><div class='image' id='memoplus'>MemoPlus</div></a>
+                                        <!-- <a href='http://www.ratiufamilyfoundation.com/'><div class='image' id='FundatiaRatiu'>Ardor</div></a>
+                                        <a href='http://www.eef.md/'><div class='image' id='eef'>East Europe Foundation</div></a>
+                                        <a href='http://www.mts.gov.md/'><div class='image' id='mdminister'>Ministerul Tineretului si Sportului al Republicii Moldova</div></a> -->
+
+                                        <span class='floating_text' id='parteneri_text'>Parteneri</span>
+
+                                        <a href='http://www.policycenter.eu/'><div class='image' id='PolicyCenter'>Policy Center</div></a>
+                                        <a href='http://www.britishcouncil.org/'><div class='image' id='BritishCouncil'>British Council</div></a>
+                                        <a href='http://www.europuls.ro/'><div class='image' id='europuls'>Europuls</div></a>
+                                        <a href='http://www.cere.ro/'><div class='image' id='cere'>Ce-Re</div></a>
+                                        <a href='http://www.primeromania.ro/'><div class='image' id='prime'>Prime Romania</div></a>
+                                        <a href='http://www.cji.ro/'><div class='image' id='cji'>Centrul pentru jurnalism independent</div></a>
+                                        <a href='http://www.aiesectm.ro/'><div class='image' id='aisec'>Aisec</div></a>
+                                        <!-- ===================================================================================================== -->
+                                        <a href='http://www.cogitus.ro/'><div class='image' id='cogitus'>Cogitus</div></a>
+                                        <a href='http://www.adevarul.ro/international/foreign_policy/'><div class='image' id='foreignPolicy'>Foreign Policy</div></a>
+                                        <a href='http://www.elsa.ro/'><div class='image' id='elsa'>Elsa</div></a>
+                                        <a href='http://www.vipromania.ro/'><div class='image' id='vipromania'>Voluntari pentru idei si proiecte</div></a>
+                                        <a href='http://www.ongtrust.ro/'><div class='image' id='ongtrust'>Trust</div></a>
+
+                                        <!-- ===================================================================================================== -->
+                                        <a href='http://www.leap.ro/'><div class='image' id='leap'>Leap</div></a>
+                                        <a href='http://www.younginitiative.org/'><div class='image' id='younginitiative'>Asociatia young initiative</div></a>
+                                        <a href='http://www.asjc.ro/'><div class='image' id='asjc'>Asjc</div></a>
+                                        <a href='http://osut.ro/'><div class='image' id='osut'>Osut</div></a>
+                                        <div class='clear'></div>
+                                    </div>
+                                    <div class='parteneri' id='parteneri_institutionali'>
+                                        <span class='floating_text' id='sponsori_text'>Sus&#539;in&#x0103;tori</span>
+                                        <a href='http://www.cartier.md/'><div class='image' id='cartier_logo'>Editura Cartier</div></a>
+                                        <a href='http://www.pll.md/ro/'><div class='image' id='biblio_logo'>Biblioteca publica de drept</div></a>
+                                        <span class='floating_text' id='institutii_text'>Parteneri institu&#539;ionali</span> 
+                                        <ul id='institutii'>
+                                            <!-- <span class='floating_text' id='institutii_text'>Parteneri institu&#539;ionali:</span> -->
+                                            <li><a href='http://www.politice.ro/'>Facultatea de &#536;tiin&#539;e Politice SNSPA </a></li>
+                                            <li><a href='http://www.comunicare.ro/'>Facultatea de Comunicare &#537;i Rela&#539;ii Publice SNSPA</a></li>
+                                            <li><a href='http://www.fspub.ro/'>Facultatea de &#536;tiin&#539;e Politice Universitatea Bucure&#537;ti</a></li>
+                                            <li><a href='http://www.filosofie.unibuc.ro/'>Facultatea de Filosofie Universitatea Bucure&#537;ti</a></li>
+                                            <li><a href='http://litere.unibuc.ro/'>Facultatea de Litere din Universitatea Bucure&#x015f;ti</a></li>
+                                            <li><a href='http://www.unibuc.ro/ro/fac_fsas_ro'>Facultatea de Sociologie Universitatea Bucure&#537;ti</a></li>
+                                            <li><a href='http://laws.uaic.ro/'>Facultatea de Drept Universitatea Alexandru Ioan Cuza Ia&#537;i</a></li>
+                                            <li><a href='http://www.uaic.ro/uaic/bin/view/Academic/Filosofie'>Facultatea de Filosofie si &#536;tiin&#539;e Social Politice Universitatea AIC Ia&#537;i</a></li>
+                                            <li><a href='http://www.upa.ro/'>Facultatea de Drept si Facultatea de &#x015e;tiin&#x0163;e Politice si Administrative Universitatea Petre Andrei Ia&#x015f;i</a></li> 
+
+                                            <li><a href='http://www.ubbcluj.ro/'>Universitatea Babe&#537;-Bolyai Cluj Napoca</a></li>
+                                            <li><a href='http://www.uvt.ro/'>Universitatea de Vest Timi&#537;oara</a></li>
+                                            <li><a href='http://www.upt.ro/'>Universitatea Politehnica Timi&#537;oara</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class='parteneri' id='parteneri_media'>
+                                        <span class='floating_text' id='media_text'>Parteneri media</span>
+                                        <a href='http://www.hotnews.ro/'><div class='image' id='hotnews'>HotNews</div></a>
+                                        <!-- <a href='http://www.lumebuna.ro/'><div class='image' id='lumebuna'>Lume Buna</div></a> -->
+                                        <a href='http://www.romaniapozitiva.ro/'><div class='image' id='romaniapozitiva'>Romania Pozitiva</div></a>
+                                        <a href='http://totb.ro/'><div class='image' id='thinkoutsidethebox'>Think Outside The Box</div></a>
+                                        <a href='http://www.facebook.com/carevasazica.vip'><div class='image' id='carevasazica'>Carevasazica</div></a>
+                                        <a href='http://www.studentie.ro/'><div class='image' id='studentiero'>Studentie.ro</div></a>
+                                        <a href='http://startub.unibuc.ro/'><div class='image' id='startub'>startub.unibuc.ro</div></a>
+                                        <!-- <a href='http://www.tvr.ro/tvr_cluj.php'><div class='image' id='tvrcluj'>Tvr Cluj</div></a> -->
+                                        <!-- <a href='http://www.radiotransilvania.ro'><div class='image' id='radiotransilvania'>Radio Transilvania</div></a> -->
+                                        <a href='http://iasifun.ziaruldeiasi.ro/'><div class='image' id='iasifun'>Iasi fun</div></a>
+                                        <a href='http://www.ziaruldeiasi.ro/'><div class='image' id='ziaruldeiasi'>Ziarul de Iasi</div></a>
+                                        <a href='http://www.kissfm.ro/timisoara'><div class='image' id='kissfm'>KissFm</div></a>
+
+                                        <div class='clear'></div> 
+                                    </div>
+                                    <div class='clear'></div>
+
+                                </div>	
+                            </div>	<!-- end wrap -->
+                            <div id='footer_mare'>
+                                <div id='footer'>
+                                    <div id='links' class='footer'>
+                                        <div id='menu1' style='margin:auto;'> <ul id='meniu_prinicpal'><li><a href='page/contacte/index.html'> Contact </a></li>
+<li><a href='page/clubdebate/index.html'> Cluburile </a></li>
+<li><a href='page/oamenii/index.html'> Oamenii </a></li>
+<li><a href='page/proiectul/index.html'> Proiectul </a></li>
+<li><a href='page/home/index.html'> Acasa </a></li>
+</ul></div><!--end menu-->
+                                    </div><!--
+                                    <div id='contact' class='footer'>
+                                            <h4>Contact</h4>
+                                            <p>office@closer2oxford.ro</p>
+                                            <p>bogdan.draghicescu@closer2oxford.ro<br>
+                                            <span class='detalii'> (asistenta tehnica web - orice probleme legate de site)</span></p>
+                                    </div>
+                                    -->
+                                    <div id='newsletter' class='footer'>
+                                        <script src="../connect.facebook.net/en_US/all.js#xfbml=1"></script><fb:like href="http://www.facebook.com/pages/Closer2Oxford/162758797069605" width="250" colorscheme="dark"></fb:like>
+                                        <!--<h4>Newsletter</h4>
+                                        <form action='/page/newsletter'>
+                                                <input type='text' name='email'>
+                                                <input type='submit' id='submit' value='>'>
+                                                        
+                                        </form>-->
+                                    </div>
+                                    <div id='credits'>
+                                        Copyright(c) 2021 ARDOR |  Toate drepturile rezervate | Toate logo-urile si sloganurile de pe site sunt proprietate intelectuala inregistrata si nu pot fi reproduse fara acordul explicit al detinatorilor. <br>
+                                            <br /><br />
+                                            <b>Disclaimer</b><br /><i>
+
+                                                Programul educational Closer to Oxford este un program non-profit si nu are o legatura cu universitatea cu acelasi nume, referirea la Oxford avand doar o semnificatie simbolica.
+                                            </i>
+                                    </div>
+
+                                </div>		
+                            </div>		
+
+                            <div id="finantatde">Acest proiect este finantat cu sustinere din partea Comisiei Europene. Aceast publicatie [comunicare] reflecta doar
+                                vederile autorului, iar Comisia nu poate fi facuta  responsabila pentru utilizarea informatiei pe care o contine.</div>
+
+
+                        </body>
+                        </html>

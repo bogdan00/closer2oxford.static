@@ -1,0 +1,650 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml-strict.dtd">
+<HTML xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+    <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+            <link rel="icon" type="image/png"  href="../../closer2oxford.ro/favicon.html">
+                <link rel="stylesheet" href="var/layout.css" type="text/css">
+                    <title>Closer to Oxford - e timpul pentru argumente!</title>
+                    <link rel="alternate" type="application/rss+xml"  href="rss_feed" title="Stiri Closer2Oxford">
+                        <!-- <link rel="image_src" property="og:image"  href="/images/layout/closer2oxford_fb_white.png" /> -->
+                        <link rel="image_src" property="og:image"   type="image/jpeg"  href="../uploads/2015/06/9/facebook_icon.html" />
+                        <link rel="image_src" type="image/jpeg"  href="../uploads/2015/06/9/icon-facebook.gif" /> 
+						<meta name="description" content="Closer2Oxford pune în valoare oameni şi argumentele lor, în dezbateri online şi publice alături de tineri şi invitați avizaţi"/>
+                        <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9" />
+<script type='text/javascript' src='../js/jquery-1.4.4.min.js'></script>
+<script>var $j = jQuery.noConflict();</script>
+<script type='text/javascript' src='../js/tinymce/tiny_mce.js'></script>
+<script type='text/javascript' src='../js/jquery.form.js'></script>
+<script type='text/javascript' src='../js/fbLoginRegister.js'></script>
+<script type='text/javascript' src='var/javascript.js'></script>
+<script type='text/javascript' src='../js/jquery.hovertip-1.0.min.js'></script> 
+<script type='text/javascript' src='../js/jquery.jgrowl_minimized.js'></script> 
+<link rel='stylesheet' href='../css/jquery.jgrowl.css' media='screen' type='text/css'> 
+<script type='text/javascript' src='../js/jquery.timer-min.js'></script> 
+<link rel='stylesheet' href='var/gallery.css' media='screen' type='text/css'> 
+<script type='text/javascript' src='var/galerie/jquery.prettyPhoto.js'></script> 
+<meta name='description' content=''/> 
+<meta name='keywords' content=''/> 
+<style>.hovertip{
+    position:absolute;
+    padding:10px 13px;
+    z-index:2;
+    max-width:300px;
+    color:#303030;
+    background-color:#f5f5b5;
+    border:1px solid #DECA7E;
+    font-family:sans-serif;
+    font-size:12px;
+    line-height:18px;
+    text-align:left;
+    }</style> 
+<script type='text/javascript'>$j(document).ready(function(){$j('.tooltip').hovertip({'offset':[20,20]});get_notif();});
+
+if(!Array.indexOf){Array.prototype.indexOf = function(obj){for(var i=0; i<this.length; i++){if(this[i]==obj){return i;}}return -1;}}
+    hashuri = [] ;
+	 var tick_timer= 3000 ;
+ 
+	 function get_notif()
+        {
+		  
+		  //console.log(tick_timer);
+	     
+		  setTimeout(get_notif,tick_timer);
+        
+		   $j.ajax(
+            {
+                url: '/page/notif/show_events',
+                dataType: 'json',
+                data: "{}",
+                success: function(data)
+                    {
+                    $j.each(data,function(index,data){
+                        try
+                            {
+                            if( hashuri.indexOf(data.hash) == -1 )
+                                {
+                                hashuri.push(data.hash);
+                                $j.jGrowl(
+                                    data.str,
+                                    {
+                                        corners:'1px',
+                                        life: data.life,
+                                        header:data.title,
+                                        hash: data.hash,
+                                        sticky: data.sticky,
+                                        close: function(e,m,o)
+                                            {
+                                                $j.ajax({url:'/page/notif/delete_single_event/' + o.hash});
+                                            }
+                                    });
+                                }
+                            }
+                        catch(e){}
+                        })
+                    }
+            });
+        }
+	 </script> 
+ 
+                            
+  <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-19111721-1']);
+  _gaq.push(['_setDomainName', '.closer2oxford.ro']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+    
+                        </head>
+                        <body>
+                            <div id="global_wrap">
+                                <div id="header">
+                                    <a href='../index.html'><div id='logo'><img src='../images/layout/sigla.jpg'></div></a>
+                                    <a class='noExternal' href='http://www.facebook.com/pages/Closer2Oxford/162758797069605'><img src='../images/fb.png' style='height:30px;float:right;clear:right;margin:10px 5px 5px 5px;border:none;'/></a>
+                                    <a href='rss_feed'><img src='../images/feed-icon.png' style='height:30px;float:right;clear:right;margin:5px;border:none;'/></a>
+                                </div>
+                                <div id="meniu">
+                                    <div  id='register_login'>
+
+                                        
+  <a href='#' class='todo' id='login'>Login </a> &nbsp;<a href='register.html' class='todo' id='register'>Register</a>
+    <div id='login_box'>
+		  <form action='https://dev.closer2oxford.ro/page/ro/login_user/logon' method='post' id='user_login_form'>
+					 <div>Email: <input type='text' name='email'/> </div><br />
+					 <div>Pass: <input type='password' name='passwd'/></div><br />
+					 <a href='#' class='password_forgot'>forgot password?</a>
+					 <input type='hidden' value='/page/dezbatere_cluj_runda_5' name='returnto' class='submiter'/><br />
+					 <input type='submit' value='login' name='btn' class='submiter'/><br />
+		  </form>
+		  
+		  <form action='https://dev.closer2oxford.ro/page/ro/login_user/reset_user_pw' method='post' id='user_reset_form'>
+					 <div>Email: <input type='text' name='email'/> </div><br />
+					 <a href='#' class='password_forgot'>login?</a>
+					 <input type='hidden' value='/page/dezbatere_cluj_runda_5' name='returnto' class='submiter'/><br />
+					 <input type='submit' value='reset' name='btn' class='submiter'/><br />
+		  </form>
+		  
+    </div>
+    
+                                    </div>
+                                    <div id='menu1' style='margin:auto;'> <ul id='meniu_prinicpal'><li><a href='contacte/index.html'> Contact </a></li>
+<li><a href='clubdebate/index.html'> Cluburile </a></li>
+<li><a href='oamenii/index.html'> Oamenii </a></li>
+<li><a href='proiectul/index.html'> Proiectul </a></li>
+<li><a href='home/index.html'> Acasa </a></li>
+</ul></div><!--end menu-->
+                                </div>
+                                <div id="main"> 
+                                    <!--<div id='stiri-padding'>
+        <div id='stiri_back'>
+                {stiri} 
+    
+               
+        </div>-->
+        
+</div>
+<div  id="content-padding">
+        <div id='sidebar_menu'>
+                <span class='tr'></span>
+                <span class='tl'></span>
+                <span class='br'></span>
+                <span class='bl'></span>
+                <span id="filler"></span>
+                    
+                <ul></ul>
+                
+                <div class='clear'></div>
+        </div>
+        <div id="content">
+                <span class='tr'></span>
+                <span class='tl'></span>
+                <span class='br'></span>
+                <span class='bl'></span>
+                <span id="filler"></span>
+                <script type='text/javascript' src='../js/jquery.hovertip-1.0.min.js'></script> 
+<script type='text/javascript' src='../js/jquery.jgrowl_minimized.js'></script> 
+<link rel='stylesheet' href='../css/jquery.jgrowl.css' media='screen' type='text/css'> 
+<script type='text/javascript' src='../js/jquery.timer-min.js'></script> 
+<link rel='stylesheet' href='var/gallery.css' media='screen' type='text/css'> 
+<style>.hovertip{
+    position:absolute;
+    padding:10px 13px;
+    z-index:2;
+    max-width:300px;
+    color:#303030;
+    background-color:#f5f5b5;
+    border:1px solid #DECA7E;
+    font-family:sans-serif;
+    font-size:12px;
+    line-height:18px;
+    text-align:left;
+    }</style> 
+<script type='text/javascript'>$j(document).ready(function(){$j('.tooltip').hovertip({'offset':[20,20]});get_notif();});
+
+if(!Array.indexOf){Array.prototype.indexOf = function(obj){for(var i=0; i<this.length; i++){if(this[i]==obj){return i;}}return -1;}}
+    hashuri = [] ;
+	 var tick_timer= 3000 ;
+ 
+	 function get_notif()
+        {
+		  
+		  //console.log(tick_timer);
+	     
+		  setTimeout(get_notif,tick_timer);
+        
+		   $j.ajax(
+            {
+                url: '/page/notif/show_events',
+                dataType: 'json',
+                data: "{}",
+                success: function(data)
+                    {
+                    $j.each(data,function(index,data){
+                        try
+                            {
+                            if( hashuri.indexOf(data.hash) == -1 )
+                                {
+                                hashuri.push(data.hash);
+                                $j.jGrowl(
+                                    data.str,
+                                    {
+                                        corners:'1px',
+                                        life: data.life,
+                                        header:data.title,
+                                        hash: data.hash,
+                                        sticky: data.sticky,
+                                        close: function(e,m,o)
+                                            {
+                                                $j.ajax({url:'/page/notif/delete_single_event/' + o.hash});
+                                            }
+                                    });
+                                }
+                            }
+                        catch(e){}
+                        })
+                    }
+            });
+        }
+	 </script> 
+
+<script type='text/javascript' src='../js/jquery.hovertip-1.0.min.js'></script> 
+<script type='text/javascript' src='../js/jquery.jgrowl_minimized.js'></script> 
+<link rel='stylesheet' href='../css/jquery.jgrowl.css' media='screen' type='text/css'> 
+<script type='text/javascript' src='../js/jquery.timer-min.js'></script> 
+<link rel='stylesheet' href='var/gallery.css' media='screen' type='text/css'> 
+<script type='text/javascript' src='var/galerie/jquery.prettyPhoto.js'></script> 
+<style>.hovertip{
+    position:absolute;
+    padding:10px 13px;
+    z-index:2;
+    max-width:300px;
+    color:#303030;
+    background-color:#f5f5b5;
+    border:1px solid #DECA7E;
+    font-family:sans-serif;
+    font-size:12px;
+    line-height:18px;
+    text-align:left;
+    }</style> 
+<script type='text/javascript'>$j(document).ready(function(){$j('.tooltip').hovertip({'offset':[20,20]});get_notif();});
+
+if(!Array.indexOf){Array.prototype.indexOf = function(obj){for(var i=0; i<this.length; i++){if(this[i]==obj){return i;}}return -1;}}
+    hashuri = [] ;
+	 var tick_timer= 3000 ;
+ 
+	 function get_notif()
+        {
+		  
+		  //console.log(tick_timer);
+	     
+		  setTimeout(get_notif,tick_timer);
+        
+		   $j.ajax(
+            {
+                url: '/page/notif/show_events',
+                dataType: 'json',
+                data: "{}",
+                success: function(data)
+                    {
+                    $j.each(data,function(index,data){
+                        try
+                            {
+                            if( hashuri.indexOf(data.hash) == -1 )
+                                {
+                                hashuri.push(data.hash);
+                                $j.jGrowl(
+                                    data.str,
+                                    {
+                                        corners:'1px',
+                                        life: data.life,
+                                        header:data.title,
+                                        hash: data.hash,
+                                        sticky: data.sticky,
+                                        close: function(e,m,o)
+                                            {
+                                                $j.ajax({url:'/page/notif/delete_single_event/' + o.hash});
+                                            }
+                                    });
+                                }
+                            }
+                        catch(e){}
+                        })
+                    }
+            });
+        }
+	 </script> 
+
+<style type="text/css">
+.poze
+{
+    float:right;
+    width:110px;
+}
+.poze a img
+{    border:none;
+}
+.main_content
+{
+    float:left;
+    width:560px;
+}
+</style>
+
+ <div class = 'poze'>
+            <a class='thumb' href='http://www.youtube.com/watch?v=vFOj2ptmAH8&amp;feature=youtu.be' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../../img.youtube.com/vi/vFOj2ptmAH8/1.jpg' alt='' />
+                <span class='desc'>Introducere</span>
+            </a>
+        
+
+            <a class='thumb' href='http://www.youtube.com/watch?v=dFCG-DGK4uQ&amp;feature=youtu.be' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../../img.youtube.com/vi/dFCG-DGK4uQ/1.jpg' alt='' />
+                <span class='desc'>Discurs A1</span>
+            </a>
+        
+
+            <a class='thumb' href='http://www.youtube.com/watch?v=tchOUCND20o&amp;feature=youtu.be' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../../img.youtube.com/vi/tchOUCND20o/1.jpg' alt='' />
+                <span class='desc'>Intrebari N spre A1</span>
+            </a>
+        
+
+            <a class='thumb' href='http://www.youtube.com/watch?v=ZGiOxwmM8d8&amp;feature=youtu.be' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../../img.youtube.com/vi/ZGiOxwmM8d8/1.jpg' alt='' />
+                <span class='desc'>Discurs Negator 1</span>
+            </a>
+        
+
+            <a class='thumb' href='http://www.youtube.com/watch?v=aC9OWe2p-ks&amp;feature=youtu.be' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../../img.youtube.com/vi/aC9OWe2p-ks/1.jpg' alt='' />
+                <span class='desc'>Intrebari A spre N1</span>
+            </a>
+        
+
+            <a class='thumb' href='http://www.youtube.com/watch?v=3Zqe7pkmt-k&amp;feature=youtu.be' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../../img.youtube.com/vi/3Zqe7pkmt-k/1.jpg' alt='' />
+                <span class='desc'>Discurs Afirmator 2</span>
+            </a>
+        
+
+            <a class='thumb' href='http://www.youtube.com/watch?v=XuNKniLbdEs&amp;feature=youtu.be' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../../img.youtube.com/vi/XuNKniLbdEs/1.jpg' alt='' />
+                <span class='desc'>Intrebari N spre A2</span>
+            </a>
+        
+
+            <a class='thumb' href='http://www.youtube.com/watch?v=TamZ5CHUOVo&amp;feature=youtu.be' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../../img.youtube.com/vi/TamZ5CHUOVo/1.jpg' alt='' />
+                <span class='desc'>Discurs Negator 2</span>
+            </a>
+        
+
+            <a class='thumb' href='http://www.youtube.com/watch?v=hr10_f-htm0&amp;feature=youtu.be' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../../img.youtube.com/vi/hr10_f-htm0/1.jpg' alt='' />
+                <span class='desc'>Intrebari A spre N2</span>
+            </a>
+        
+
+
+    <script>
+    $j(document).ready(function(){
+      		$j("a[rel^='prettyPhoto']").prettyPhoto({theme:'facebook'});
+        });
+    
+    </script>
+    </div>
+
+<div class='main_content'>
+<p><strong>Dezbatere publica Cluj</strong></p>
+<p><strong>&nbsp;</strong><strong>10 mai 2012, Facultatea de Stiinte Politice si Administrative, sala 101</strong></p>
+<p><em>&nbsp;</em><em>"<strong>E timpul sa decriminalizam pirateria pe Internet?"</strong></em></p>
+<p>&nbsp;Echipa afirmatoare:&nbsp; <strong>Raul Salagean </strong>(ARDOR)<strong> </strong>si <strong>Mircea Farcau</strong> (student Facultatea de Drept)</p>
+<p>&nbsp;Echipa negatoare:&nbsp; <strong>Sanziana Jurau</strong> (FSPAC) si <strong>Diana Mosincat</strong> (studenta FSPAC)</p>
+<p>&nbsp;</p>
+<p>Introducere, Raul Salagean &ndash; ARDOR</p>
+<p>&nbsp;Ceea ce urmeaza sa vedeti este practic o dezbatere intre cele 2 echipe pe aceasta tema. Echipa guvernului va sustine ca e timpul sa decriminalizam pirateria online si va face acest lucru prin 2 discursuri de partea guvernului, iar de partea opozitiei, tot asa, vor fi 2 discursuri prin care opozitia va incerca sa ne demonstreze faptul ca nu e cazul sa decriminalizam pirateria online. Aceste discursuri se vor desfasura alternativ, practic va vorbi primul vorbitor din partea guvernului, dupa care va vorbi primul vorbitor din partea opozitiei. Vedeti, cele 2 echipe sunt numite <em>&ldquo;</em>guvern&rdquo; si &ldquo;opozitie&rdquo; in functie de pozitia pe care o ocupa in acest debate. Dezbaterile sunt de fapt inspirate dupa modelul parlamentar. Atunci, dupa cum va ziceam: primul vorbitor de la opozitie, al doilea vorbitor al guvernului si al doilea vorbitor al opozitiei, va incheia aceasta dezbatere. Discursurile vor avea o durata de 5 minute, iar eu voi tine timpul. Asadar declar deschisa aceasta dezbatere si dau cuvantul primului vorbitor al echipei guvernului, Mircea Farcau.</p>
+<p>&nbsp;</p>
+<p><strong>Mircea Farcau </strong>discurs Afirmator 1</p>
+<p>&nbsp;</p>
+<p>Va multumesc pentru aplauze, de obicei nu primesc.Haideti sa incep cu putina istorie. Nu stiu exact dar stiu ca prin 1450, in urma cenzurarii si suprimarii comertului liber din zona Atlanticului a aparut ceea ce se cheama &ldquo;piraterie&rdquo;. Pe scurt, au avut aproximativ 562 de ani ca sa se gestioneze, sa se perfectioneze si sa apara o practica judiciara corespunzatoare. Referitor la subiectul nostru, cu siguranta putem spune in ziua de astazi ca stim ce inseamna &ldquo;piraterie&rdquo;, dar nu stim de fapt pentru ca nu exista o definitie a pirateriei, nu exista nici in actele care se mandresc ca ar fi anti &ndash; piraterie, nici companiile care au campanii publicitare si campanii anti-piraterie nu stiu ce este exact pirateria. Acum, putem toti banui ce inseamna, insa din pacate, ceea ce banuim noi ca inseamna pirateria este poate 5 % din ceea ce inseamna cu adevarat, adica pe scurt, ceea ce credem cu totii ca ar fi sau ceea ce ar vrea sa se creada ca este: <em>incalcarea drepturilor de autor</em>.</p>
+<p><strong>&nbsp;</strong>Ce presupune incalcarea drepturilor de autor? Este o chestie atat de ciudata incat inevitabil din faptul ca nu exista o definitie putem recurge la abuzuri si nu doar atat, faptul ca nu avem definitie, se poate interpreta. Si atunci haideti sa ne gandim la o chestiune: cum putem noi sa zicem ca suntem anti-piraterie si s-o sanctionam, s-o penalizam, s-o incriminam legal dar in nicio lege sa nu existe o definitie a acesteia? Mai mult de atat, in zilele noastre este o tedinta sa se exagereze cu pirateria astfel incat apar acte precum&nbsp; ACTA, SOPA, PIPA, toate astea din 4 litere si apar peste noapte, abuziv cu niste articole anti&ndash;constitutionale, in final, pentru a se ajunge la un&nbsp; &ldquo;dezechilibru economic&rdquo;. Companii precum Microsoft pompeaza bani in&nbsp; campanii anti-piraterie zicand ca un Windows care costa 13 milioane, doar ca-I faci un back-up ca sa nu se strice, te baga in puscarie sau iti dau o amenda. Deci din frica n-au voie sa faca nimic, mai dau inca 13 milioane.&nbsp;</p>
+<p>Sa revenim la cazul Youtube. Pe youtube sunt atatea piese, inclusiv fetite ce citesc o carte si pe fundal se aude la televizor ceva si deja este piraterie. Nu putem sa ne gandim decat ca sunt mult prea multe chestii abuzive, inclusiv imprumutul unei carti (am luat cu imprumut o carte de la cineva deja e piraterie). Vineri seara ies cu baietii la un film la mine acasa, ei vin la mine si ne uitam la un film, putem muzica pe fundal - deja e piraterie. N-ai voie sa distribui produse pe care le-ai cumparat. Trebuie sa ne gandim daca artistii care apar pe Youtube nu sunt de-a dreptul incantati ca le apar piesele pe Youtube; casele de discuri cu siguranta nu, pentru ca ei pompeaza bani ca sa le opreasca, dar artistii primesc foarte putini bani din vanzarea de CD-uri. Ei trebuie sa fie promovati de catre industria muzicala pentru ca ei fac de fapt bani din concerte. Si acuma daca stam sa ne gandim cine pe cine fura, adica noi de la cine furam? Tari precum Canada, Spania, Olanda, Rusia au lasat sa se distribuie legal copii de muzica pentru ca si-au dat seama ca este un proces care nu trebuie si nu are de ce sa fie oprit. Este benefic, ajuta economia, ajuta oamenii care se pare ca ar trebui sa sufere din chestia asta care de fapt nu sufera si isi doresc sa fie promovati ilegal. Nu trebuie sa criminalizam ceva care trebuie sa fie decriminalizat. Nu trebuie sa ingradim drepturile unor artisti, fie ca este muzician, fie ca este actor, fie ca este un&nbsp; studio care doreste sa promoveze calitate,&nbsp; trebuie sa ne gandim daca vrem calitate, daca vrem&nbsp; informatie buna, daca vrem o economie stabila si sa nu uitam ca legea la ora actuala este considerata arma anti-piraterie. Dar sa nu uitam ca si cea mai perfecta arma are un defect si o hiba extraordinara.</p>
+<p>&nbsp;</p>
+<p><strong>Cross examination 1</strong></p>
+<p><strong>&nbsp;</strong></p>
+<p><strong>Sanziana Jurau</strong> : Spuneati ca se creeaza un dezechilibru economic? Puteti sa dezvoltati ideea de dezechilibru economic care se creeaza si unde este?</p>
+<p>&nbsp;</p>
+<p><strong>Mircea Farcau</strong>: Avand in vedere ca artistii care ar trebui sa isi vanda Cd-urile nu mai au parte la aceeasi cantitate de ascultatori, avand in vedere ca acei ascultatori la ora actuala vor fi daca se tine legea si daca va evolua astfel, nu vor mai avea acces sa le asculta muzica gratuit respectiv sa faca contact cu ei live la concerte.&nbsp; Propriu-zis eu daca duc mai departe legea care este acuma, nu vor mai merge oameni la concerte.</p>
+<p>&nbsp;</p>
+<p><strong>Sanziana Jurau:</strong> De ce?</p>
+<p>&nbsp;</p>
+<p><strong>Mircea Farcau:</strong> Pentru ca Youtube-ul momentan este o sursa care face legatura intre ascultator si polul de informatii. Si Youtube-ul va fi inchis in felul acesta.</p>
+<p>&nbsp;</p>
+<p><strong>Sanziana Jurau:&nbsp; </strong>Si omul care doreste sa acceseze informatia nu poate sa mearga la magazin si sa cumpere un CD?</p>
+<p>&nbsp;</p>
+<p><strong>Mircea Farcau: </strong>Tu mergi sa mergi sa cumperi un CD de la un artist de care nu ai auzit?</p>
+<p>&nbsp;</p>
+<p><strong>Sanziana Jurau: </strong>Placebo, Doors, se pot promova prin intermediul&nbsp; postului&nbsp; de radio.</p>
+<p>&nbsp;</p>
+<p><strong>Mircea Farcau: </strong>Hai sa iti pun alta intrebare va trebui sa le cumpar si ca sa le cumpar, atata timp cat nu am acces la informatie libera ca sa am suficient timp pentru a-mi placea, nu il voi cumpara.</p>
+<p>&nbsp;</p>
+<p><strong>Sanziana Jurau: </strong>Artistul nu poate sa-si puna la dispozitie muzica lui pe internet?</p>
+<p><strong>&nbsp;</strong></p>
+<p><strong>Mircea Farcau: </strong>La ora actuala?</p>
+<p><strong>&nbsp;</strong></p>
+<p><strong>Sanziana Jurau</strong>: Oricand<strong>. </strong>Atata timp cat are acord de la casa de discuri.</p>
+<p><strong>&nbsp;</strong></p>
+<p><strong>Diana Mosincat: </strong>Ziceai la un moment dat ca daca cumperi o carte si daca o dai unui prieten esti numit pirat?</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><strong>Mircea Farcau:</strong> Da.</p>
+<p>&nbsp;</p>
+<p><strong>Diana Mosincat</strong>: Pai cartea e bunul tau propriu, faci ce vrei cu el, la fel cu un Cd pe care il cumperi.</p>
+<p>&nbsp;</p>
+<p><strong>Mircea Farcau:</strong> Dar sa nu uitam ca dreptul de autor pe care il are omul, adica autoruL, nu ai voie sa faci acte de dispozitie cu drepturile de autor.</p>
+<p>&nbsp;</p>
+<p><strong>Sanziana Jurau: </strong>De ce ai face acte de dispozitie cu un drept care nu-ti apartine? Dreptul de autor apartine autorului, dreptul de dispozitie asupra cartii tale iti apartine tie.</p>
+<p>&nbsp;</p>
+<p><strong>Mircea Farcau:</strong> Da dar este vorba despre bunuri.</p>
+<p>&nbsp;</p>
+<p><strong>Sinziana Jurau: </strong>Da , exemplul tau.</p>
+<p>&nbsp;</p>
+<p><strong>Mircea Farcau: </strong>Vorbesc de extrema cealalta, ACTA. In mod normal nu ai voie sa faci lucruri de genul asta.</p>
+<p>&nbsp;</p>
+<p><strong>Sinziana Jurau: </strong>Nu ai voie sa realizezi copii, ceea ce inseamna un act de dispozitie asupra operei autorului nu un act de dispozitie asupra bunului propriu.</p>
+<p>&nbsp;</p>
+<p><strong>Moderator:</strong> Gata, a fost ultima intrebare. Poti sa raspunzi</p>
+<p>&nbsp;</p>
+<p><strong>Mircea Farcau:</strong> Nu ai voie sa realizezi copii daca e imprumutat. ACTA este atata de extrema incat nu am voie sa fac copii si nu am voie sa imprumut orice informatie care este sub un drept de autor. Astfel omul care primeste cartea sa dispuna de informatiile care&hellip;</p>
+<p><strong>&nbsp;</strong><strong>&nbsp;</strong></p>
+<p><strong>Sinziana Jurau </strong>(N1):</p>
+<p>&nbsp;</p>
+<p>Primul vorbitor&nbsp; ne spunea ca nu stie ce sunt piratii. Va spun eu: sunt hoti pe mare. Este simplu. Ce fac piratii? Fura. Asta fac.&nbsp; Nu este&nbsp; foarte complicat sa ne gandim. Cei care piratau pe mare, erau &nbsp;ei proprietari bunurilor? Nu. Creasera ei bunurile respective? Nu. Este un lucru cat se poate de simplu. Ni se spune ca dreptul de autor este un lucru extrem de complicat care nu poate fi definit. Ei bine este un drept cum nu se poate mai&nbsp; simplu. Cele 3 linii pe care le-ati desenat cand erati copii si pe care le-ati facut tremurate: unii le-ati facut roz galben si albastru, altii le-ati facut rosu galben si alb. Dumnezeu stie cum le-ati facut.&nbsp; Nuanta pe care ati ales sa o aplicati si modul in care ati ales sa creati v-au transformat pe voi in autori. Ce inseamna acest lucru? Inseamna ca in calitatea voastra de autor asa cum este reglementata la ora actuala, aveti o serie de drepturi fundamentale.</p>
+<p>Care sunt acele drepturi fundamentale? Printre ele se&nbsp; numara dreptul de a decide in ce mod veti aduce opera la cunostinta publicului. Ce inseamna asta? Asta inseamna ca, daca eu sunt un regizor, care doresc ca acest film sa fie difuzat doar pe muzica de Chopin de la ora 12 la 2 noaptea eu voi alege sa difuzez acest film, sa-l fac cunoscut spectatorilor, doar in acest mod. Asta inseamna ca in momentul in care decriminalizam pirateria, intr-un mod foarte populist si lasam acesta opera accesibila oricui, pot sa am un cantaret prost, pot sa am o alta experienta decat cea nocturna respectiv vedere destul de proasta pe timp de zi. Ce inseamna asta? Inseamna ca modific opera astfel cum ea a fost creata de catre autor si impietez asupra dreptului&nbsp; lui de a-si&nbsp; promova opera respectiva. De esenta dreptului de autor dincolo de experienta</p>
+<p>&nbsp;</p>
+<p>pe care autorul decide sa o ofere publicului si de care autorul decide sa dispuna se leaga in mod direct si acest drept de dispozitie. Respectiv, pot sa decid ca opera mea sa fie modificata in 5 exemplare, sa fie un unicat rar atat de pretuit incat sa se vanda la 20 sau 70 de milioane sau pot sa decid ca opera mea sa se vanda in&nbsp; milioane de copii.&nbsp; Pot sa decid daca opera mea va fi un singur tablou sau va fi alcatuita din 7 milioane de ceasuri care reproduc tabloul meu. Acest drept de dispozitie al meu in calitate de autor nu este un drept care apartine unui pirat, care&nbsp; apartine unui copiator. Copiatorul nu a facut nimic decat sa imi vizioneze opera, eventual&nbsp; sa mi-o modifice. Daca opera copiatorului, calitatea lui de realizator de opera derivata, afecteaza sau nu opera mea este un lucru pe care eu trebuie sa il decid, nu altcineva in locul meu.</p>
+<p>Ni s-a spus de asemenea faptul ca SOPA, PIPA sunt anticonstitutionale si ca de fapt foarte multe tari au ales sa permita distributia legala a copiilor. Sunt cuvintele echipei adverse. Ce inseamna asta? Inseamna ca au legiferat drepturile de autor un lucru perfect normal care protejeaza pe de o parte autorul, cu toate drepturile sale morale de a se opune modificarii operelor si drepturilor patrimoniale de a-si face cunoscuta opera sa, nu de a beneficia de pe urma ei si pe de cealata parte, protejeaza cetatenii de experientele oarecum modificate; cred ca nimic nu este mai enervant decat sa vezi un film extrem de pixelat cu vocea actorului preferat care seamana cu vocea unui robot pentru ca de fapt te uiti la o copie de pe internet care nu are nicio legatura cu realitatea sau un film care a fost creat pentru o experinta in 3D sau in 7D . Tu il vezi in 2D pentru ca&nbsp; nu se stie, pentru ca esti la randul tau un mic hot care decizi ca este cazul sa experimentezi intr-ul mod diferit, &nbsp;lucru care nu ar trebui sa se intample, decizie care nu iti apartine, care apartine producatorului si autorului. Nu se impieteaza asupra dreptului la informare si motivul este acela ca in calitatea ta de consumator poti sa accezi la ce informatie doresti platind pretul pentru respectiva informatie. Informatia nu este gratuita. Cu totii cumparam ziare, ne uitam la Tv si pentru asta platim o taxa. Acestea fiind spuse, va rog sa continuam intr-un mod prietenesc in care suntem acum cu legile actuale care protejeaza pe de o parte autorii si&nbsp; pe de o parte cetatenii.Va multumesc!</p>
+<p>&nbsp;</p>
+<p><strong>Cross examination 2</strong></p>
+<p><strong>Raul Salagean:</strong> O prima intrebare care este legata de aceasta problema a micilor hoti, practic suntem cu totii mici hoti. In ce categorie ar incadra echipa opozitiei situatia in care cineva vizioneaza un film downloadat ilegal dupa legile actuale de pe internet? Este si acesta un mic hot?</p>
+<p><strong>Diana Mosincat</strong>: Da.</p>
+<p><strong>Raul Salagean: </strong>Ok, daca ne puteti detalia de ce anume.</p>
+<p><strong>Sinziana Jurau</strong>: Daca filmul nu a fost pus la dispozitia publicului in mod gratuit, deci filmul nu a fost destinat spre a fi vizionat in mod gratuit.</p>
+<p><strong>Raul Salagean</strong>: De altfel inteleg prin asta practic majoritatea filmelor. Adica toate filmele sunt pana la urma protejate impotriva acestei piraterii, dar vedeti, practic ideea adusa de echipa guvernului pe masa&nbsp; este faptul ca exista o linie extrem de fina intre a pirata in sensul in care il intelegem acum si anume &rdquo;a frauda&rdquo; , a fi impotriva drepturilor de autor si posibilitatea de a aduce chiar un plus autorilor acelui film in momentul in care piratezi dupa legile actuale.</p>
+<p><strong>Sinziana Jurau</strong>: Cum anume sa aduci acest plus?</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><strong>Raul Salagean:</strong> Practic, stim cu totii ca nu ar exista o popularitate atat de mare a filmelor fara ca opamenii sa-l fi putut vedea inainte. Daca ne gandim de cate ori am mers la cinema, sa zicem, de cele mai multe ori am auzit ceva despre filmul respectiv de la altii care l-au downloadat de pe net. Asta&nbsp; nu inseamna ca ceilalti au platit ca sa vada acel film.</p>
+<p><strong>Sinzian Jurau:</strong> E o intrebare?</p>
+<p><strong>Raul Salagean: </strong>E o intrebare, deci pentru a reveni. Practic putem observa aceasta linie fina intre partile negative pe care le aduce vizinarea de catre un individ acasa, a unui film scos de pe internet si partile pozitive aduse. Si atunci suntem hoti in continuare?</p>
+<p><strong>Sinziana Jurau: </strong>Sistemul de promovare al filmelor si a muzici este un sistem de promovare specific care nu implica distributia unor copii ilegale spre a fi vizionate anterior. Acesta este motivul pentru care se organizeaza sa spunem &ldquo; matinee&rdquo; ale jurnalistilor in care jurnalistii vizualizeaza filmele respective cu 2, 3 , 5&nbsp; saptamani inainte, o luna , 5 luni. Aceste filme sunt promovate in presa, pe site-uri de specialitate Vedeti bucatile principale ale filmelor prin intermediul trailerelor.</p>
+<p><strong>Raul Salagean: </strong>Insa considerati ca este o egalitate intre cele doua? Adica, practic daca sa zicem ca de maine am putea stopa definitiv&nbsp; fenomenul pirateriei, asa cum vrea acum echipa opozitiei, pana la urma ar fi acelasi lucru ca si acum, ar avea aceeasi popularitate, muzica si filmele pe care le distribuie autorii in modul in care decid ei de cuviinta, fata de situatia actuala in care nu se intampla asa.</p>
+<p><strong>Sinziana Jurau:</strong> Raspunsul meu este &ldquo;Da&rdquo;. Dar un al doilea raspuns este urmatorul. Nu trebuie sa promovam un furt, nu trebuie a promovam o ilegalitate, doar pentru ca nu avem sau nu suntem suficient de inventivi incat sa ne gasim alte modele sau alte modalitati de a promova.</p>
+<p><strong>Raul Salagean:</strong> Ok.</p>
+<p><strong>Raul Salagean (Afirmator 2)</strong></p>
+<p>Echipa guvernului v-a adus astazi 2 idei mari si vi le-a pus pe masa. O prima idee este faptul ca este foarte dificil sa oferim o definitie clara a fenomenului piraterie. De ce asta ar conta in dezbaterea de astazi? Pentru ca pana la urma ceea ce sustine echipa opozitiei si anume pastrarea legislatiei actuale in forma in care este, are o serie de probleme identificate de echipa guvernului. La ce ne referim cand spunem ca exista aceste neintelegeri cauzate de lipsa unei definitii clare? Practic, cu totii cand auzim de piraterie, ne gandim la o distribuire intentionata de materiale pe internet. Este foarte dificil (asa cum evidentiam in sesiunea de intrebari) &nbsp;sa ne dam seama daca faptul ca cineva vizioneaza un film acasa downloadat de pe internet este un lucru bun sau rau. Tocmai de asta, pana la urma este foarte greu si sa construim un cadru legat foarte bine definit. Ce anume se incadreaza in aceasta piraterie? Distribuirea aceasta intentionata la care ne gandim cu totii si pe care ne-o asumam cu totii, intra si faptul ca o fetita (cum zicea Mircea) isi posteaza un filmulet in care ea apare cantand si in fundal ruleaza ceva la televizor. Mai mult decat atat sa ne gandim altfel, daca eu imprumut o carte electronica, ca sa ramanem in sfera &ldquo;on-line&rdquo;, daca imprumut o carte in format electronic unui prieten, este aceasta o incalcare a dreptului de autor? Este foarte greu sa determinam. Poate in unele cazuri este, poate in altele nu este si dimpotriva ii aduce acetuia un plus. Pana la urma este foarte greu sa mentinem partea aceasta de legislatie asa cum este la ora actuala pentru ca daca e sa aruncam o privire la ceea ce se intampla acum in lume, tocmai discutiile pe tema ACTA, PIPA, SOPA and so on, sunt cauzate de aceasta imposibilitate a oricarui legiuitor de a reglementa aceasta sfera. Atunci fiind atat de greu de definit, de acolo se ajunge ca intimitatea noastra si drepturile noastre fundamentale sa fie incalcate de aceste acte. De asta s-au organizat o serie de demonstratii.</p>
+<p>Mergand mai departe la cel de-al doilea punct adus de echipa guvernului si anume la avantajul economic. Trebuie sa recunoastem ca fara aceasta piraterie, fara vizionarea de filme acasa, fara a asculta muzica artistilor dowloadand-o de pe internet, practic lumea lor nu ar mai fi aceeasi daca de maine s-ar intampla sa se elimine de tot pirateria. Trebuie sa fim constienti ca acele trailere ale filmelor nu sunt acelasi lucru ca si cand un prieten de-al nostru a vazut acel film si ni l-a recomandat. Daca va ganditi ca aceasta situatie este specifica in mod special Romaniei, sa stiti ca nu este asa. Pirateria exista peste tot in lume si nu este cauzata de lipsa banilor. Nu pentru ca omul nu vrea sa plateasca pentru un film il downloadeaza de pe intenet, ci pur si simplu pentru ca asa i se pare normal. Iar daca este sa analizam un pic ultimele studii, exista studii care arata ca cei care cumpara din librarii de exemplu filme si Cd-uri originale cu muzica, sunt de fapt oameni&nbsp; care au practicat intr-o forma sau alta pirateria online. Deci acei oameni au downloadat de mai multe ori anumita muzica (multa) downloadata ilegal de pe internet si in cele din urma s-au decis sa isi cumpere anumite lucruri pe care si le doreau. Deci cred ca e de la sine inteles faptul ca sunt foarte putini acei oameni care prefera sa mearga la magazin si sa cumpere tot ce si-au dorit sa vizioneze&nbsp; vreodata. Este si incorect, daca e sa ne gandim, e si dreptul omului ca el sa poate sa vada un film sau o melodie inainte de a-l cumpara, pana la urma de asta exista reclame pentru orice produs pe care-l dorim sa-l cumparam si atunci este foarte important ca pirateria sa ramana in continuare valabila, ca acest fenomen sa continue. Si atunci avand in vedere legislatia, ar fi foarte greu sa o punem la punct si sa realizam o legislatie care sa nu vina impotriva drepturilor noastre si sa reglementeze in mod corect pirateria online si fiindca exista aceste avantaje economice pana la urma credem noi ca echipa ca pirateria online ar trebui decriminalizata si sa renuntam la orice incercare de a o reglementa.</p>
+<p><strong>Cross examination 3:</strong></p>
+<p><strong>Sanziana Jurau</strong>: Spuneati ca este dreptul omului de a viziona inainte de a cumpara. Unde se intampla aceasta vizionare?</p>
+<p><strong>Raul Salagean</strong>: Ca si spatiu?</p>
+<p><strong>Sinziana Jurau</strong>: Nu. Ce &nbsp;anume vizioneaza? Vizioneaza un film downloadat ilegal de pe internet?</p>
+<p><strong>Raul Salagean</strong>: Da.</p>
+<p><strong>Diana Mosincat</strong>: Si apoi se uita la original?</p>
+<p><strong>Sinizan Jurau</strong>: Si apoi merge la magazin si cumpara copia legala?</p>
+<p><strong>Raul Salagean</strong>: Nu, nu la asta ma refeream. Va voi ilustra asta pe albumuri ca e mult mai usor. Va dau exemplul meu propriu. Primul meu album cumparat a fost Californication : Red Hot Chilli Peppers. Fara sa fi auzit muzica RHCP inainte, nu as fi cumparat acel album.</p>
+<p><strong>Sinizan Jurau: </strong>Si unde ati auzit muzica RHCP?</p>
+<p><strong>Raul Salagean:</strong> Muzica RHCP am auzit-o la un prieten.</p>
+<p><strong>Sinziana Jurau: </strong>Care cum aparuse?</p>
+<p><strong>Raul Salajean: </strong>Care downloadase de pe internet muzica respectiva. Ceea ce e important si din nou observam un caz ciudat: ma duc la un prieten si acest prieten este un pirat pentru ca am auzit si eu intamplator muzica la el acasa.</p>
+<p><strong>Sinziana Jurau: </strong>Nu, el este un pirat pentru ca a downloadat in loc sa cumpere.</p>
+<p><strong>Raul Salgean</strong>: Ok, sa presupunem ca prietenul respectiv ar fi cumparat albumul. Daca el mi-l distribuie mie fara ca eu sa platesc pentru acel, album, auzindu-l intamplator sunt pirat si eu, e pirat si el, suntem cu totii niste mici hoti.(ca sa citez echipa opozitiei).</p>
+<p><strong>Sinziana Jurau</strong>: Daca vi-l distribuie sub forma unei copii, raspunsul este &ldquo;da&rdquo;. Ceea ce echipa voastra pare sa omita este ceea ce se numeste utilizarea copiei in interes personal. In momentul in care cumparam un CD in calitate de cumparator si nu downloadam in calitate de pirat, dobandesc dreptul de a dispune intr-un mod limitat de aceasta copie in interes personal. Drept urmare pot sa acord dreptul prietenilor mei sa auda si ei CD-ul, dar nu pot sa-l copiez. Si aceasta varianta mi se pare ca ati omis-o. Copia din interes personal.</p>
+<p><strong>Raul Salagean</strong>: Dar aceasta copie in interes personal mi se pare ca se incadreaza la nivel filozofic in aceeasi oala cu pirateria. De ce? Daca e sa extindem ideea de piraterie pana la urma si eu, daca impartasesc cu toti prietenii mei prin intermediul internetului le trimit niste copii ale albumului RHCH sunt pirat pana la urma.</p>
+<p><strong>Sinziana Jurau : </strong>D,a deoarece ati dispus de dreptul de autor al RHCH.<strong>&nbsp;</strong></p>
+<p><strong>Raul Salagean : </strong>Da, dar in momentul in care ascult pur si simplu acasa la cineva&hellip;</p>
+<p><strong>Sinziana Jurau:</strong> Si daca ascultati intr-o discoteca impreuna cu 20.000 oameni tot nu sunteti pirati. Deoarece discoteca a achizitionat dreptul de a promova respectiva muzica si plateste un timbru muzical.</p>
+<p><strong>Raul Salagean: </strong>Inteleg, dar nu este asta oare un deficient al pirateriei? Pentru ca pana la urma cei 20000 de oameni&nbsp; care au ascultat muzica cu siguranta ca artistul nu a incasat bani de la toti acei oameni. Nici discotecii nu i-a cerut&hellip;</p>
+<p><strong>Sinziana Jurau:</strong>&hellip;,si el este platit catre o casa comuna pentru drepturile de autor. Artistul a incasat.</p>
+<p><strong>Raul Salagean: </strong>Da, dar observati problema in a cuantifica paguba pe care o produce faptul ca au 20 de mil sau cati or fi fost in acea discoteca. Nu vi se pare ca este o problema in a cuantifica efectele pe care le are pirateria?</p>
+<p><strong>Sinziana Jurau: </strong>Absolut nu.</p>
+<p><strong>Diana Mosincat </strong>(discurs negator 2)</p>
+<p>Am sa incep cu definitia drepturilor de autor, care reprezinta ansamblul prerogativelor de care se bucura autorii cu referire la operele create. Privarea acestora de drepturile lor prin piratarea proprietatii private reprezinta un furt, o infractiune care in Romania se pedepseste de la 1 la 4 ani de inchisoare sau cu diverse amenzi. Am mai spus ca pirateria de fapt este un furt. Pe langa asta, pirateria are un efect in economia tarii. Scade bugetul tarii pentru ca, datorita faptului ca oamenii pirateaza filme sau melodii, acestia nu le cumpara, acestea nu sunt vandute; asadar va scadea bugetul tarii, din acest punct fiind vizibil. Produsele, CD-urile cu muzica si filmele se vand normal ca orice produs luat din magazin cu taxa adaugata. Acest TVA merge la stat, automat va scadea din bugetul statului. Sa ne gandim ca nu mai cumparam Cd-uri. Ei, bine, cum va arata peste 40 sau 50 de ani cinematografia si muzica in lume pana la urma? Spunea al doilea vorbitor al guvernului ca pirateria ii ajuta pe artisti, acestia afirmandu-se si facundu-se cunoscuti. Da, bine, se fac cunoscuti, dar ei trebuie sa si manance, sa se imbrace, dar au si ei nevoie de un salariu. Prin faptul ca toate melodiile sunt puse pe internet, iar cine va vrea le va pirata, va scadea automat numarul celor care vor merge la concerte si celor care vor cumpara CD-uri. Acestia, de fapt au dreptul sa posteze cateva melodii pentru a-si face publicitate pentru a atrage lume mai apoi la concerte si aducand ceva nou. Daca totul va fi postat online si cine va vrea le va putea vedea de acasa, &nbsp;nimeni sau foarte putini vor mai vrea sa se prezinte la acele concerte. Pana la urma de ce cumparam un CD cu muzica daca stim ca e ilegal sa piratam? &nbsp;Nu neaparat pentru ca nu avem bani, sa fim seriosi, avem bani pentru o bere, un suc sau oriunde altundeva dar nu avem bani sa ne cumparam un CD pentru a ne relaxa acasa si a asculta muzica preferata. De fapt nu cumparam&nbsp; acest CD din comoditate, din lenea de a te deplasa pana la magazinul cu produse originale si a-ti lua produsul acasa sa-l asculti in pace. Pana la urma se pune problema daca actiunea de a pirata este o problema de etica. Tine totul de moralitate si de faptul ca este un furt. Daca vom viziona acasa filmultele si tot ceea ce avem de asculat sau de vazut la filme, acestia nu vor mai avea fani.</p>
+<p><strong>Cross examination 4</strong></p>
+<p><strong>Mircea Farcau: </strong>De ce nu vor mai avea fani? Datorita faptului ca ii vede toata lumea?</p>
+<p><strong>Diana Mosincat:</strong> Nu vor mai avea fani prezenti la concerte. Cariera lor va fi pe marginea prapastiei. Ei nu pot sa faca, numai sa filmeze sa apara doar in concerte.</p>
+<p><strong>Mircea Farcau: </strong>Pana la urma este vorba de concert, si din cauza asta nu putem compara pirateria online cu concertele live.</p>
+<p><strong>Diana Mosincat: </strong>Da, dar tu piratand si ascultand acea muzica acasa, nu te mai atrage nimic sa mergi la acest concert..e mult mai comod</p>
+<p><strong>Mircea Farcau: </strong>Momentan, sa luam statele de exemplu, nu Romania....dar in State oamenii merg la concerte. Desi noi cumparam Cd-urile si ascultam muzica acasa, noi mergem la concert;</p>
+<p><strong>Diana Mosincat: </strong>Da, dar eu stiu ca lumea muzicii, anual, pierde 12 miliarde de dolari prin faptul ca se pirateaza.<strong></strong></p>
+<p><strong>Raul Salagean: </strong>Ceea ce fac marile case de discuri<strong> </strong>pana la urma<strong> </strong>este sa cuantifice banii pe care ii pierd din caza faptului ca sunt downloadate copii ilegale, dar este imposibil de calculat care este beneficiul in termen de publicitate faptul ca oamenii asculta acasa. Sa fim seriosi, in Romania cata lume ar fi ascultat Metallica, daca aceasta era doar contra cost? Adica la nivelul de cultura pe care il avem, adica pana la urma este intr-adevar asa cum spuneti adica daca oamenii care downloadeaza de pe internet nu vor mai merge la concerte sau din contra, daca au downloadat&nbsp; au vazut ceva frumos isi doresc sa mearga sa vada si live?</p>
+<p><strong>Diana Mosincat:</strong> Si atunci sa punem altfel problema. La fel e cu filmele. Ai spus ca nu te deplasezi la cinematograf ca sa-l vezi. E e&nbsp; mai comod sa-l piratezi si sa-l vezi acasa</p>
+<p><strong>Sinziana Jurau: </strong>Pot sa raspund eu? Sunt 2 surse diferite de venit. O prima&nbsp; sursa este cea care provine din vanzarea unei copii, unui CD. O a doua sursa este cea care provine din vazarea unui bilet. Cele doua surse de venit sunt separate. In momentul in care dumneavostra spuneti : suprimam prima sursa de venit. 15 milioane de copii nu le mai vindem. Nu veti putea spune ca datorita faptului ca nu mai vindem 15 mil. copii si le dam gratuit este motivul. Deci interdependenta intre cele 2, legatura de cauzalitate nu a fost niciodata demonstrata si nu puteti sa o demonstrati.</p>
+<p>&nbsp;<strong>Raul Salagean: </strong>Da, suntem de acord cu faptul ca nu exista o legatura clara intre&nbsp; cele 2&nbsp; dar mai mult decat atat noi nu am suprimat niciodata integral partea de Cd-uri pentru ca noi ce ziceam este ca daca noi downoadam un CD si apoi il recomandam unui prieten cresc sansele ca acel prieten sa mearga sa-l cumpere. Poate nu este neaparat cazul Romaniei unde sa zicem ca avem probleme mai mari legate de piraterie.</p>
+<p><strong>Sinziana Jurau: </strong>Cand are deja copie de ce va&nbsp; mai cumpara?<strong></strong></p>
+<p><strong>Raul Salagean: </strong>Nu in sensul cine ii da cuiva. Noi cand vorbim ca pirateria online poate sa promoveze un anumit artist nu ne referim la faptul ca daca eu primesc piesele gata format in format MP3 de la cineva neaparat, voi merge sa cumpar albumul respectiv, piesa respectiva. Noi spunem ca daca odata am primit o piesa anume s-ar putea ca urmatorul album sa-l cumpar al artistului respectiv pentru ca voi fi nerabdator sa aud in premiera noul albul al acestui artist. Sau mai mult, daca am asculta la cineva o piesa de-a artistului respectiv, poate voi dori sa o si cumpar.</p>
+<p><strong>Diana Mosincat: </strong>De ce ai vrea sa dai banii din buzunar daca tu poti sa-l ai gratis?</p>
+<p><strong>Sinziana Jurau: </strong>Esenta dreptului de autor este faptul ca artistul este cel care decide daca copia repsetiva este promovata in mod gratuit sau este vanduta. Dumneavoastra in calitate de consumator nu puteti lua o decizie asupra unui produs pe care nu l-ati creat.</p>
+<p><strong>Raul Salgean:</strong> Sunt de acord cu aceasta chestie din punct de vedere legal.</p>
+<p><strong>Sinziana Jurau:</strong> Rational!</p>
+<p><strong>Raul Salagean: </strong>Rational, vedem faptul ca in legislatie este exact asa cum spuneti. Ei doresc sa distribuie contra cost respectiva productie si doar contra cost ei vor incasa banii respectivi. Dar ceea ce nu mai spun si de ce le convine sa ramana pirateria in floare este faptul ca nu pot sa cuantifice ce s-ar intampla daca de maine nu am avea piraterie. Daca de maine nu am mai avea piraterie (ceea ce se indoieste echipa guvenului ca se va intampla), veniturile artistilor vor fi la fel de mari. Si ceea ce spune echipa guvernului este ca in egala masura din cauza pirateriei vor avea de castigat atat artistii, mai mult decat pierd, cat si consumatorii si toata lumea.</p>
+<p>&nbsp;</p>
+</div>
+                <div class='clear'></div>
+        </div><!-- end main content -->
+         <div class='clear'></div>
+</div>
+<div id="pix"></div>
+
+
+                                </div><!--end main -->
+                                <div id='parteneri'>
+                                    <span class='tr'></span><span class='tl'></span><span class='br'></span><span class='bl'></span><span id="filler"></span>
+                                    <div class='parteneri' id='sustinatori'>
+                                        <span class='floating_text' id='un_proiect'>Un proiect</span>
+                                        <a href='http://www.ardor.org.ro/'><div class='image' id='ardor'>Ardor</div></a>
+                                        <span class='floating_text' id='finantatori'>Finanțatori</span>
+                                        <a href='http://www.opensocietyfoundations.org/'><div class='image' id='open_society'>Open Society Foundation </div></a>
+                                        <a href='http://www.studentiq.ro//'><div class='image' id='memoplus'>MemoPlus</div></a>
+                                        <!-- <a href='http://www.ratiufamilyfoundation.com/'><div class='image' id='FundatiaRatiu'>Ardor</div></a>
+                                        <a href='http://www.eef.md/'><div class='image' id='eef'>East Europe Foundation</div></a>
+                                        <a href='http://www.mts.gov.md/'><div class='image' id='mdminister'>Ministerul Tineretului si Sportului al Republicii Moldova</div></a> -->
+
+                                        <span class='floating_text' id='parteneri_text'>Parteneri</span>
+
+                                        <a href='http://www.policycenter.eu/'><div class='image' id='PolicyCenter'>Policy Center</div></a>
+                                        <a href='http://www.britishcouncil.org/'><div class='image' id='BritishCouncil'>British Council</div></a>
+                                        <a href='http://www.europuls.ro/'><div class='image' id='europuls'>Europuls</div></a>
+                                        <a href='http://www.cere.ro/'><div class='image' id='cere'>Ce-Re</div></a>
+                                        <a href='http://www.primeromania.ro/'><div class='image' id='prime'>Prime Romania</div></a>
+                                        <a href='http://www.cji.ro/'><div class='image' id='cji'>Centrul pentru jurnalism independent</div></a>
+                                        <a href='http://www.aiesectm.ro/'><div class='image' id='aisec'>Aisec</div></a>
+                                        <!-- ===================================================================================================== -->
+                                        <a href='http://www.cogitus.ro/'><div class='image' id='cogitus'>Cogitus</div></a>
+                                        <a href='http://www.adevarul.ro/international/foreign_policy/'><div class='image' id='foreignPolicy'>Foreign Policy</div></a>
+                                        <a href='http://www.elsa.ro/'><div class='image' id='elsa'>Elsa</div></a>
+                                        <a href='http://www.vipromania.ro/'><div class='image' id='vipromania'>Voluntari pentru idei si proiecte</div></a>
+                                        <a href='http://www.ongtrust.ro/'><div class='image' id='ongtrust'>Trust</div></a>
+
+                                        <!-- ===================================================================================================== -->
+                                        <a href='http://www.leap.ro/'><div class='image' id='leap'>Leap</div></a>
+                                        <a href='http://www.younginitiative.org/'><div class='image' id='younginitiative'>Asociatia young initiative</div></a>
+                                        <a href='http://www.asjc.ro/'><div class='image' id='asjc'>Asjc</div></a>
+                                        <a href='http://osut.ro/'><div class='image' id='osut'>Osut</div></a>
+                                        <div class='clear'></div>
+                                    </div>
+                                    <div class='parteneri' id='parteneri_institutionali'>
+                                        <span class='floating_text' id='sponsori_text'>Sus&#539;in&#x0103;tori</span>
+                                        <a href='http://www.cartier.md/'><div class='image' id='cartier_logo'>Editura Cartier</div></a>
+                                        <a href='http://www.pll.md/ro/'><div class='image' id='biblio_logo'>Biblioteca publica de drept</div></a>
+                                        <span class='floating_text' id='institutii_text'>Parteneri institu&#539;ionali</span> 
+                                        <ul id='institutii'>
+                                            <!-- <span class='floating_text' id='institutii_text'>Parteneri institu&#539;ionali:</span> -->
+                                            <li><a href='http://www.politice.ro/'>Facultatea de &#536;tiin&#539;e Politice SNSPA </a></li>
+                                            <li><a href='http://www.comunicare.ro/'>Facultatea de Comunicare &#537;i Rela&#539;ii Publice SNSPA</a></li>
+                                            <li><a href='http://www.fspub.ro/'>Facultatea de &#536;tiin&#539;e Politice Universitatea Bucure&#537;ti</a></li>
+                                            <li><a href='http://www.filosofie.unibuc.ro/'>Facultatea de Filosofie Universitatea Bucure&#537;ti</a></li>
+                                            <li><a href='http://litere.unibuc.ro/'>Facultatea de Litere din Universitatea Bucure&#x015f;ti</a></li>
+                                            <li><a href='http://www.unibuc.ro/ro/fac_fsas_ro'>Facultatea de Sociologie Universitatea Bucure&#537;ti</a></li>
+                                            <li><a href='http://laws.uaic.ro/'>Facultatea de Drept Universitatea Alexandru Ioan Cuza Ia&#537;i</a></li>
+                                            <li><a href='http://www.uaic.ro/uaic/bin/view/Academic/Filosofie'>Facultatea de Filosofie si &#536;tiin&#539;e Social Politice Universitatea AIC Ia&#537;i</a></li>
+                                            <li><a href='http://www.upa.ro/'>Facultatea de Drept si Facultatea de &#x015e;tiin&#x0163;e Politice si Administrative Universitatea Petre Andrei Ia&#x015f;i</a></li> 
+
+                                            <li><a href='http://www.ubbcluj.ro/'>Universitatea Babe&#537;-Bolyai Cluj Napoca</a></li>
+                                            <li><a href='http://www.uvt.ro/'>Universitatea de Vest Timi&#537;oara</a></li>
+                                            <li><a href='http://www.upt.ro/'>Universitatea Politehnica Timi&#537;oara</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class='parteneri' id='parteneri_media'>
+                                        <span class='floating_text' id='media_text'>Parteneri media</span>
+                                        <a href='http://www.hotnews.ro/'><div class='image' id='hotnews'>HotNews</div></a>
+                                        <!-- <a href='http://www.lumebuna.ro/'><div class='image' id='lumebuna'>Lume Buna</div></a> -->
+                                        <a href='http://www.romaniapozitiva.ro/'><div class='image' id='romaniapozitiva'>Romania Pozitiva</div></a>
+                                        <a href='http://totb.ro/'><div class='image' id='thinkoutsidethebox'>Think Outside The Box</div></a>
+                                        <a href='http://www.facebook.com/carevasazica.vip'><div class='image' id='carevasazica'>Carevasazica</div></a>
+                                        <a href='http://www.studentie.ro/'><div class='image' id='studentiero'>Studentie.ro</div></a>
+                                        <a href='http://startub.unibuc.ro/'><div class='image' id='startub'>startub.unibuc.ro</div></a>
+                                        <!-- <a href='http://www.tvr.ro/tvr_cluj.php'><div class='image' id='tvrcluj'>Tvr Cluj</div></a> -->
+                                        <!-- <a href='http://www.radiotransilvania.ro'><div class='image' id='radiotransilvania'>Radio Transilvania</div></a> -->
+                                        <a href='http://iasifun.ziaruldeiasi.ro/'><div class='image' id='iasifun'>Iasi fun</div></a>
+                                        <a href='http://www.ziaruldeiasi.ro/'><div class='image' id='ziaruldeiasi'>Ziarul de Iasi</div></a>
+                                        <a href='http://www.kissfm.ro/timisoara'><div class='image' id='kissfm'>KissFm</div></a>
+
+                                        <div class='clear'></div> 
+                                    </div>
+                                    <div class='clear'></div>
+
+                                </div>	
+                            </div>	<!-- end wrap -->
+                            <div id='footer_mare'>
+                                <div id='footer'>
+                                    <div id='links' class='footer'>
+                                        <div id='menu1' style='margin:auto;'> <ul id='meniu_prinicpal'><li><a href='contacte/index.html'> Contact </a></li>
+<li><a href='clubdebate/index.html'> Cluburile </a></li>
+<li><a href='oamenii/index.html'> Oamenii </a></li>
+<li><a href='proiectul/index.html'> Proiectul </a></li>
+<li><a href='home/index.html'> Acasa </a></li>
+</ul></div><!--end menu-->
+                                    </div><!--
+                                    <div id='contact' class='footer'>
+                                            <h4>Contact</h4>
+                                            <p>office@closer2oxford.ro</p>
+                                            <p>bogdan.draghicescu@closer2oxford.ro<br>
+                                            <span class='detalii'> (asistenta tehnica web - orice probleme legate de site)</span></p>
+                                    </div>
+                                    -->
+                                    <div id='newsletter' class='footer'>
+                                        <script src="../../connect.facebook.net/en_US/all.js#xfbml=1"></script><fb:like href="http://www.facebook.com/pages/Closer2Oxford/162758797069605" width="250" colorscheme="dark"></fb:like>
+                                        <!--<h4>Newsletter</h4>
+                                        <form action='/page/newsletter'>
+                                                <input type='text' name='email'>
+                                                <input type='submit' id='submit' value='>'>
+                                                        
+                                        </form>-->
+                                    </div>
+                                    <div id='credits'>
+                                        Copyright(c) 2021 ARDOR |  Toate drepturile rezervate | Toate logo-urile si sloganurile de pe site sunt proprietate intelectuala inregistrata si nu pot fi reproduse fara acordul explicit al detinatorilor. <br>
+                                            <br /><br />
+                                            <b>Disclaimer</b><br /><i>
+
+                                                Programul educational Closer to Oxford este un program non-profit si nu are o legatura cu universitatea cu acelasi nume, referirea la Oxford avand doar o semnificatie simbolica.
+                                            </i>
+                                    </div>
+
+                                </div>		
+                            </div>		
+
+                            <div id="finantatde">Acest proiect este finantat cu sustinere din partea Comisiei Europene. Aceast publicatie [comunicare] reflecta doar
+                                vederile autorului, iar Comisia nu poate fi facuta  responsabila pentru utilizarea informatiei pe care o contine.</div>
+
+
+                        </body>
+                        </html>

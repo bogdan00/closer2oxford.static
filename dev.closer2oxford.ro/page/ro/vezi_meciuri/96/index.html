@@ -1,0 +1,509 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml-strict.dtd">
+<HTML xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+    <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+            <link rel="icon" type="image/png"  href="../../../../../closer2oxford.ro/favicon.html">
+                <link rel="stylesheet" href="../../../var/layout.css" type="text/css">
+                    <title>Closer to Oxford - e timpul pentru argumente!</title>
+                    <link rel="alternate" type="application/rss+xml"  href="../../../rss_feed" title="Stiri Closer2Oxford">
+                        <!-- <link rel="image_src" property="og:image"  href="/images/layout/closer2oxford_fb_white.png" /> -->
+                        <link rel="image_src" property="og:image"   type="image/jpeg"  href="../../../../uploads/2015/06/9/facebook_icon.html" />
+                        <link rel="image_src" type="image/jpeg"  href="../../../../uploads/2015/06/9/icon-facebook.gif" /> 
+						<meta name="description" content="Closer2Oxford pune în valoare oameni şi argumentele lor, în dezbateri online şi publice alături de tineri şi invitați avizaţi"/>
+                        <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9" />
+<script type='text/javascript' src='../../../../js/jquery-1.4.4.min.js'></script>
+<script>var $j = jQuery.noConflict();</script>
+<script type='text/javascript' src='../../../../js/tinymce/tiny_mce.js'></script>
+<script type='text/javascript' src='../../../../js/jquery.form.js'></script>
+<script type='text/javascript' src='../../../../js/fbLoginRegister.js'></script>
+<script type='text/javascript' src='../../../var/javascript.js'></script>
+<script type='text/javascript' src='../../../../js/jquery.hovertip-1.0.min.js'></script> 
+<script type='text/javascript' src='../../../../js/jquery.jgrowl_minimized.js'></script> 
+<link rel='stylesheet' href='../../../../css/jquery.jgrowl.css' media='screen' type='text/css'> 
+<script type='text/javascript' src='../../../../js/jquery.timer-min.js'></script> 
+<style>.hovertip{
+    position:absolute;
+    padding:10px 13px;
+    z-index:2;
+    max-width:300px;
+    color:#303030;
+    background-color:#f5f5b5;
+    border:1px solid #DECA7E;
+    font-family:sans-serif;
+    font-size:12px;
+    line-height:18px;
+    text-align:left;
+    }
+           .normal_text ol,.normal_text ol *{text-align:left !important}
+           .normal_text *{font-weight:normal !important;font-size:12px !important;font-face:tahoma !important}</style> 
+<script type='text/javascript'>$j(document).ready(function(){$j('.tooltip').hovertip({'offset':[20,20]});get_notif();});
+
+if(!Array.indexOf){Array.prototype.indexOf = function(obj){for(var i=0; i<this.length; i++){if(this[i]==obj){return i;}}return -1;}}
+    hashuri = [] ;
+	 var tick_timer= 3000 ;
+ 
+	 function get_notif()
+        {
+		  
+		  //console.log(tick_timer);
+	     
+		  setTimeout(get_notif,tick_timer);
+        
+		   $j.ajax(
+            {
+                url: '/page/notif/show_events',
+                dataType: 'json',
+                data: "{}",
+                success: function(data)
+                    {
+                    $j.each(data,function(index,data){
+                        try
+                            {
+                            if( hashuri.indexOf(data.hash) == -1 )
+                                {
+                                hashuri.push(data.hash);
+                                $j.jGrowl(
+                                    data.str,
+                                    {
+                                        corners:'1px',
+                                        life: data.life,
+                                        header:data.title,
+                                        hash: data.hash,
+                                        sticky: data.sticky,
+                                        close: function(e,m,o)
+                                            {
+                                                $j.ajax({url:'/page/notif/delete_single_event/' + o.hash});
+                                            }
+                                    });
+                                }
+                            }
+                        catch(e){}
+                        })
+                    }
+            });
+        }
+	 </script> 
+ 
+                            
+  <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-19111721-1']);
+  _gaq.push(['_setDomainName', '.closer2oxford.ro']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+    
+                        </head>
+                        <body>
+                            <div id="global_wrap">
+                                <div id="header">
+                                    <a href='../../../../index.html'><div id='logo'><img src='../../../../images/layout/sigla.jpg'></div></a>
+                                    <a class='noExternal' href='http://www.facebook.com/pages/Closer2Oxford/162758797069605'><img src='../../../../images/fb.png' style='height:30px;float:right;clear:right;margin:10px 5px 5px 5px;border:none;'/></a>
+                                    <a href='../../../rss_feed'><img src='../../../../images/feed-icon.png' style='height:30px;float:right;clear:right;margin:5px;border:none;'/></a>
+                                </div>
+                                <div id="meniu">
+                                    <div  id='register_login'>
+
+                                        
+  <a href='#' class='todo' id='login'>Login </a> &nbsp;<a href='../../../register.html' class='todo' id='register'>Register</a>
+    <div id='login_box'>
+		  <form action='https://dev.closer2oxford.ro/page/ro/login_user/logon' method='post' id='user_login_form'>
+					 <div>Email: <input type='text' name='email'/> </div><br />
+					 <div>Pass: <input type='password' name='passwd'/></div><br />
+					 <a href='#' class='password_forgot'>forgot password?</a>
+					 <input type='hidden' value='/page/ro/vezi_meciuri/96/' name='returnto' class='submiter'/><br />
+					 <input type='submit' value='login' name='btn' class='submiter'/><br />
+		  </form>
+		  
+		  <form action='https://dev.closer2oxford.ro/page/ro/login_user/reset_user_pw' method='post' id='user_reset_form'>
+					 <div>Email: <input type='text' name='email'/> </div><br />
+					 <a href='#' class='password_forgot'>login?</a>
+					 <input type='hidden' value='/page/ro/vezi_meciuri/96/' name='returnto' class='submiter'/><br />
+					 <input type='submit' value='reset' name='btn' class='submiter'/><br />
+		  </form>
+		  
+    </div>
+    
+                                    </div>
+                                    <div id='menu1' style='margin:auto;'> <ul id='meniu_prinicpal'><li><a href='../../../contacte/index.html'> Contact </a></li>
+<li><a href='../../../clubdebate/index.html'> Cluburile </a></li>
+<li><a href='../../../oamenii/index.html'> Oamenii </a></li>
+<li><a href='../../../proiectul/index.html'> Proiectul </a></li>
+<li><a href='../../../home/index.html'> Acasa </a></li>
+</ul></div><!--end menu-->
+                                </div>
+                                <div id="main"> 
+                                    <!--<div id='stiri-padding'>
+        <div id='stiri_back'>
+                {stiri} 
+    
+               
+        </div>-->
+        
+</div>
+<div  id="content-padding">
+        <div id='sidebar_menu'>
+                <span class='tr'></span>
+                <span class='tl'></span>
+                <span class='br'></span>
+                <span class='bl'></span>
+                <span id="filler"></span>
+                    
+                <ul></ul>
+                
+                <div class='clear'></div>
+        </div>
+        <div id="content">
+                <span class='tr'></span>
+                <span class='tl'></span>
+                <span class='br'></span>
+                <span class='bl'></span>
+                <span id="filler"></span>
+                  <script>
+        $j(document).ready(function(){
+        $j('.discurs_toggler').toggle(
+                function(){
+                $j(this).attr('src', '../../../../images/little_stuff/16-em-down.png');   
+                $j(this).parent().next('.discurs').hide('fast');
+                },
+                function(){
+                $j(this).attr('src', '../../../../images/little_stuff/16-em-up.png');
+                $j(this).parent().next('.discurs').show('fast');
+                });
+            });
+        </script><style>.nowrap{white-space: nowrap;}
+		.noJustify{text-align:left;}
+		</style><h2 class='noJustify'><span class='nowrap'>'Bogdan si Teo'</span> <span class='notif'>(afirmatori)</span> vs <span class='nowrap'>' Cristina si Alexandra'</span> <span class='notif'>(negatori)</span></h2><h3>A1 () <img src='../../../../images/little_stuff/16-em-up.png' class='discurs_toggler'></h3>
+            <div class='discurs normal_text'><!-- 		@page { margin: 0.79in } 		P { margin-bottom: 0.08in } 		A:link { color: #0000ff } -->
+<p><span style="font-family: Tahoma, sans-serif;"><em><strong>E timpul ca dreptul cetăţenilor la informare să fie mai important dec&acirc;t dreptul demnitarilor la viaţa privată?</strong></em></p>
+
+<p>Dorim o suma de calitati de la demnitari (membri ai parlamentului sau guvernului, magistrati sau  inalti functionari publici): eficienta, profesionalism, o imagine curata si schimbarile dorite.  Dreptul cetatenilor la informare este mai important decat dreptul demnitarilor la viata privata pentru ca acestia din urma decid in numele populatiei, prin urmare cetatenii trebuie sa detina garantii in vederea unei reprezentari corecte si adecvate. Daca elemente ale vietii private pot constitui astfel de garantii sau intervin in procesul de guvernare, atunci aceste elemente devin de interes general si trebuie dezvaluite.</p>
+<p>Cand vorbim despre dezvaluirea unor elemente din viata privata, relevante sunt doar acele informatii din viata privata care ar putea afecta exercitarea functie publice, precum conditia medicala, cea materiala si caracterul persoanei.  Vom demonstra ca lipsa acestor informatii poate dauna societatii si ca publicitatea informatiei este necesara pentru ocuparea unei functii publice, la care persoanele vizate consimt cand aleg sa candideze.</p>
+<p>.</p>
+<p><strong>Argumentul 1. Anumite elemente ale vietii private influenteaza exercitarea functiei publice.</strong></p>
+<p>Pentru inceput, afirmam ca cetatenii aleg politicienii prin vot direct si trebuie sa dispuna de toate instrumentele pentru a evalua competenta unei persoane in a exercita functia publica, mai ales cand exista putine posibilitati de a reveni asupra deciziei.</p>
+
+<ol>
+<li>
+<p>Conditia medicala a 	unui candidat conteaza la fel de mult ca pregatirea lui 	profesionala. Despre Roosevelt se stia inca inainte de al treilea 	mandat ca este foarte bolnav si nu va rezista [1], iar lui 	Eisenhower doctorii ii dadeau 50% sanse sa supravietuiasca unui nou 	mandat [2]. Paul Tsongas, rivalul lui Bill Clinton, a ascuns presei 	existenta unui cancer si nu a lasat loc unui candidat mai puternic 	in locul sau [3]. Robert Dole ar fi suferit operatii si hemoragii 	cerebrale in timpul mandatului daca ar fi castigat alegerile.[4] 	Thomas Eagleton a trebuit sa se retraga cand s-a aflat ca sufera de 	depresie.[5]</p>
+</li>
+</ol>
+<p>Este important sa stim dinainte daca demnitarii au probleme medicale care ar putea dauna sau chiar impiedica exercitarea eficienta a atributiilor pentru perioade indelungate. Pentru a inlatura din timp orice impedimente viitoare, cetatenii trebuie sa ia o decizie informata.</p>
+
+<ol>
+<li>
+<p>Este important ca 	demnitarii sa faca publice informatii cu privire la afacerile lor si 	a familiei pe tot parcursul candidaturii si mandatului, pentru ca 	cetatenii si institutiile abilitate sa poata urmari si sanctiona 	cazurile de conflict de interese. Sunt cunoscute situatii precum ale 	lui Silviu Prigoana, Dan Voiculescu[6], o serie de prefecti sau  	primari care au reusit sa obtina contracte si finantari de la stat 	fara sa existe licitatii publice[7], fara sa sufere consecintele 	desi au fost descoperiti[8]. Publicarea informatiilor inca din 	timpul candidaturii si renuntarea la activitatile comerciale inainte 	de investirea in functie ar inlatura mare parte din coruptia si 	administrarea defectuoasa actuala.</p>
+</li>
+</ol>
+
+<ol>
+<li>
+<p>Este important ca 	populatia sa cunoasca demnitarii, chiar daca le iarta greselile. 	Jacob Zuma, presedintele Africii de Sud, a candidat fiind in mod 	deschis poligam, fusese acuzat de viol, avusese cateva escapade, 	desi milita pentru reducerea partenerilor sexuali pentru a proteja 	contra HIV. A fost ales pentru puncte sale tari si populatia are 	incredere in el datorita deciziilor populiste.[9]</p>
+</li>
+</ol>
+
+<p>Argumentul 2. <strong>Candidatul la o functie publica consimte sa indeplineasca cerintele acestei functii</strong></p>
+<p>Persoanele care candideaza pentru functiile publice opteaza liber pentru acest lucru, astfel incat orice limitare a drepturilor lor se face cu consimtamantul acestora. Regimul aparte al demnitarilor presupune deja limitari de drepturi: de a detine o alta functie privata sau publica [10], de a lua decizii in privinta rudelor[11], obligativitatea de a depune declaratii de avere[12]. Este characteristic astfel functiei publice sa impuna limitari de drepturi pentru asigurarea transparentei si corectitudinii. </p>
+<p>In plus, pentru functionarii publici si magistrati, corectitudinea morala si rigoarea din viata privata sunt imperative, intrucat ei reprezinta statul in relatiile cu cetatenii, orice discreditare a persoanei afectand si perceptia asupra statului; in acest sens, functionarii corupti maresc neincrederea populatiei in institutiile publice.[13]</p>
+<p><strong>Argumentul 3.: Dezvaluirea acestor informatii inlatura parte din abuzurile presei</strong></p>
+<p>Pentru ca aceste informatii trebuie furnizate de demnitarii insisi, speculatiile si zvonurile din presa vor fi inlaturate, lasand loc unor informatii certificate. De asemenea, interesul populatiei s-ar abate mai degraba spre considerente de o reala valoare in procesul electoral, dubland informatia deja cunoscuta despre competenta si orientare politica.</p>
+<p>Asadar, pentru ca demnitarii sunt alesi de cetateni, pentru ca exercita puterea statului, pentru ca aleg singuri sa se supuna unui regim restrictiv si mai ales pentru ca aspecte ale vietii private pot afecta exercitarea functiei publice, dreptul cetatenilor de a sti e mai important decat dreptul demnitarilor la viata privata.</p>
+
+<p>Surse:</p>
+<ol>
+<li>
+<p>The Health of the 	President and Presidential Candidates- The Public&rsquo;s Right to Know 	George J. Annas, J.D., M.P.H., the New England Journal of Medicine,  	October 1995</p>
+</li>
+</ol>
+<p><span style="color: #4f81bd;"> <span style="color: #0000ff;"><a href="http://www.nejm.org/doi/full/10.1056/NEJM199510053331420"><span style="color: #4f81bd;">http://www.nejm.org/doi/full/10.1056/NEJM199510053331420</a></p>
+<ol>
+<li>
+<p>The Health of the 	President and Presidential Candidates- The Public&rsquo;s Right to Know 	George J. Annas, J.D., M.P.H., the New England Journal of Medicine,  	October 1995</p>
+</li>
+</ol>
+<p><span style="color: #0000ff;"><a href="http://www.nejm.org/doi/full/10.1056/NEJM199510053331420"><span style="color: #4f81bd;">http://www.nejm.org/doi/full/10.1056/NEJM199510053331420</a></p>
+<ol>
+<li>
+<p>The Health of the 	President and Presidential Candidates- The Public&rsquo;s Right to Know 	George J. Annas, J.D., M.P.H., the New England Journal of Medicine,  	October 1995</p>
+</li>
+</ol>
+<p><span style="color: #0000ff;"><a href="http://www.nejm.org/doi/full/10.1056/NEJM199510053331420"><span style="color: #4f81bd;">http://www.nejm.org/doi/full/10.1056/NEJM199510053331420</a></p>
+<ol>
+<li>
+<p>A President&rsquo;s age 	should concert Americans, Herbert Abrams, Center for International 	Security and Cooperation</p>
+</li>
+</ol>
+<p><span style="color: #0000ff;"><a href="http://cisac.stanford.edu/news/abrams_presidency_too_demanding_to_not_have_upper_age_limit_for_candidates_20080324/">http://cisac.stanford.edu/news/abrams_presidency_too_demanding_to_not_have_upper_age_limit_for_candidates_20080324/</a></p>
+<ol>
+<li>
+<p>The Health of the 	President and Presidential Candidates- The Public&rsquo;s Right to Know 	George J. Annas, J.D., M.P.H., the New England Journal of Medicine,  	October 1995</p>
+</li>
+</ol>
+<p><span style="color: #0000ff;"><a href="http://www.nejm.org/doi/full/10.1056/NEJM199510053331420">http://www.nejm.org/doi/full/10.1056/NEJM199510053331420</a></p>
+<ol>
+<li>
+<p>&ldquo;Cati bani iei 	daca faci afaceri cu statul&rdquo;, Vremea Noua, decembrie 2010 	<span style="color: #0000ff;"><a href="http://www.vrn.ro/cati-bani-iei-daca-faci-afaceri-cu-statul">http://www.vrn.ro/cati-bani-iei-daca-faci-afaceri-cu-statul</a></p>
+</li>
+<li>
+<p>A. HARTA 	politicienilor locali şi afacerile lor cu statul, Gandul, Gabriela 	Stefan, ianuarie 2011<span style="color: #666666;"><span style="font-family: Arial, sans-serif;"><span style="font-size: x-small;">, <span style="color: #0000ff;"><a href="http://www.gandul.info/news/harta-politicienilor-locali-si-afacerile-lor-cu-statul-prefect-aduc-bani-iau-bani-plus-mesajul-unui-politician-cu-afaceri-spuneti-guvernului-sa-imi-dea-banii-7881864">http://www.gandul.info/news/harta-politicienilor-locali-si-afacerile-lor-cu-statul-prefect-aduc-bani-iau-bani-plus-mesajul-unui-politician-cu-afaceri-spuneti-guvernului-sa-imi-dea-banii-7881864</a></p>
+</li>
+</ol>
+<p>B. Copiii politicienilor invartesc afaceri de milioane de euro EVZ, septembrie 2007 <span style="color: #0000ff;"><a href="http://www.evz.ro/detalii/stiri/copiii-politicienilor-invartesc-afaceri-de-milioane-de-euro-778345.html">http://www.evz.ro/detalii/stiri/copiii-politicienilor-invartesc-afaceri-de-milioane-de-euro-778345.html</a></p>
+<ol>
+<li>
+<p>President&rsquo;s sex 	life makes headlines in South Africa, China Daily, februarie 2010 	<span style="color: #0000ff;"><a href="http://www.chinadaily.com.cn/world/2010-02/02/content_9415982.htm">http://www.chinadaily.com.cn/world/2010-02/02/content_9415982.htm</a></p>
+</li>
+<li>
+<p>&ldquo;Prigoana ramane 	cu Puterea si afacerile. Si-a dat demisia din partid, dar va active 	in grupul deputatilor PDL&rdquo;, Antena 3, mai 2010 	<span style="color: #0000ff;"><a href="http://www.antena3.ro/politica/prigoana-ramane-cu-puterea-si-afacerile-si-a-dat-demisia-din-partid-dar-va-activa-in-grupul-deputatilor-pdl-100493.html">http://www.antena3.ro/politica/prigoana-ramane-cu-puterea-si-afacerile-si-a-dat-demisia-din-partid-dar-va-activa-in-grupul-deputatilor-pdl-100493.html</a></p>
+</li>
+<li>
+<p>Art. 81-93 si 	urmatoarele ale Legii nr. 161/2003 privind unele masuri pentru 	asigurarea transparentei in exercitarea demnitatilor publice, a 	functiilor publice si in mediul de afaceri, prevenirea si 	sanctionarea coruptiei,</p>
+</li>
+</ol>
+<p><span style="color: #0000ff;"><a href="../../../../../www.cdep.ro/proiecte/2003/200/20/0/leg_pl220_03.pdf">http://www.cdep.ro/proiecte/2003/200/20/0/leg_pl220_03.pdf</a></p>
+<ol>
+<li>
+<p>Art. 68-79 ale Legii 	nr. 161/2003 privind unele masuri pentru asigurarea transparentei in 	exercitarea demnitatilor publice, a functiilor publice si in mediul 	de afaceri, prevenirea si sanctionarea coruptiei 	<span style="color: #0000ff;"><a href="../../../../../www.cdep.ro/proiecte/2003/200/20/0/leg_pl220_03.pdf">http://www.cdep.ro/proiecte/2003/200/20/0/leg_pl220_03.pdf</a></p>
+</li>
+<li>
+<p>Art. 2 al Legii nr. 	115/1996 privind declararea si controlul 	averii demnitarilor, magistratilor,<br />functionarilor 	publici si a unor persoane cu functii de conducere, modificata, <span style="color: #0000ff;"><a href="http://legislatie.resurse-pentru-democratie.org/115_1996.php">http://legislatie.resurse-pentru-democratie.org/115_1996.php</a></p>
+</li>
+<li>
+<p><span style="color: #0000ff;">Nu 	mai credem in stat <span style="color: #0000ff;"><a href="http://www.qmagazine.ro/articole/7721/nu-mai-credem-in-stat.html">http://www.qmagazine.ro/articole/7721/nu-mai-credem-in-stat.html</a></p>
+</li>
+</ol>
+<p><span style="color: #0000ff;">B<span style="color: #0000ff;">. <span style="color: #0000ff;">Presedentia, Parlamentul, Guvernul si partidele pe ultimele locuri la increderea populatiei <span style="color: #0000ff;"><a href="http://www.romanialibera.ro/actualitate/politica/presedintia-parlamentul-guvernul-si-partidele-pe-ultimele-locuri-in-increderea-populatiei-201302.html">http://www.romanialibera.ro/actualitate/politica/presedintia-parlamentul-guvernul-si-partidele-pe-ultimele-locuri-in-increderea-populatiei-201302.html</a></p>
+
+
+</div><hr><h3>N1 (Alexandra Farcas) <img src='../../../../images/little_stuff/16-em-up.png' class='discurs_toggler'></h3>
+            <div class='discurs normal_text'><p>E timpul ca dreptul cetăţenilor la informare să fie mai important dec&acirc;t dreptul demnitarilor la viaţa privată?Dreptul la viata privata reprezinta unul dintre drepturi le fundamentale ale omului, asa cum au fost ele consfintite prin conventii internationale, in special prin Declaratia Universala a Drepturilor &nbsp;Omului adoptata de ONU la Paris in 1948&nbsp;Consideram ca &nbsp;informatiile pe care cetatenii trebuie sa le detina despre demnitari sunt foarte importante, de aceea acestea trebuie sa fie relevante pentru functia pentru care candideaza dar cunoasterea &nbsp;detaliilor legate de viata privata a demnitarilor nu garanteaza o &laquo; reprezentarea corecta si adecvata&laquo; a cetatenilor de catre acestia.Ideea centrala negatoare este ca, desi aspectele din viata privata pot &nbsp;sa aiba &nbsp; influenta asupra demnitarilor nu se poate stabili o corelatie &nbsp;directa intre competentele profesionale pe care un om le are si viata &nbsp;personala a acestuia.&nbsp;Depinde foarte mult de &nbsp;capacitatea &nbsp;individului de a se detasa de viata personala in momentul exercitarii oricarei functii pe care o are, iar in cazul demnitarilor aceasta este o cerinta esentiala , data fiind importanta functiei pe care acestia o detin.<br />1. Contraargument &nbsp;legat de conditia medicala a demnitarilor.Avand in vedere ca, asa cum au sustinut in discursul afirmator, demnitarii isi aleg aceasta functie &nbsp;de buna voie cunoscund restrctiile care exista, inseamna ca acestia considera ca detin capacitatile necesare pentru a exercita o asemenea functie.&nbsp;Confidentialitatea dateleor mediale trebuie pastrata din moment ce candidatul considera ca acest aspect al vietii private nu il impiedica sa-si indeplineasca obligatiile. . Decizia de a face publica starea de sanatate este strict a persoanei &nbsp;in cauza. &nbsp;Atata timp cat transfera puterea &nbsp;unui candidat &nbsp;sa ia decizii pentru ei, ii acorda implicit si votul de incredere legat de decizia pe care o ia in legatura cu declararea sau nu a starii &nbsp;sale medicale.<br />&nbsp;In ceea ce priveste exemplele date nu sunt relevante pentru ca :&bull; Paul Tsongas &nbsp;a ascuns faptul ca are cancer, deci motivele pentru care nu a fost ales au fost strict profesionale, asadar nu stim in ce masura daca informatia ar fi fost cunoscuta ar fi schimbat rezultataul&bull; Afirmatia legata de Robert &nbsp;Dole este o simpla supozitite , acest aspect fiind scos in evidenta prin folosirea verbelor la conditional-optativ &laquo;ar fi suferit &laquo; daca &laquo;ar fi castigat &laquo; &nbsp; bazata pe presupuneri si &nbsp;&laquo; &nbsp;concluzii post electorale &raquo;.<br />2. Contraargument legat de cunoasterea demnitarilor.Afirmatorii &nbsp;sustin ca demnitarii pot fi &laquo; iertati&laquo; &nbsp;daca acestia isi dezvaluie aspecte ale vietii private, dand exemplul presedintelui &nbsp;Africii de Sud. Deci, acesta a fost ales pentru competentele sale si pentru capacitatea de a-si atrage noi sustinatori prin deciziile populiste, faptele dezvaluite fiind practic ignorate, devenind astfel irelevante,asadar &nbsp;simplele calomnii care nu &nbsp;influenteaza in nici un fel deciziile alegatorilor nu se pot numi informatii importante legate de viata privata.3. In acest paragarf afirmatorii explica drepturile limitate ale demnitarilor si enumera calitatile pe care inalt funnctionarii trebuie sa le aiba dar nu argumenteaza cu nimic necesitatea informatiilor din viata personala a demnitarilor si nici faptul ca informarea cetatenilor in aceasta privinta este mai importanta.<br />4. Contraargument cu privire la abuzurile preseiInformatiile pe care un demnitar le ofera despre el insusi nu devin in mod automat certificate,acestea pot fi eronate, distorsionate,etc.avand in vedere interesele care apar atunci cand este vorba despre o astfel de functie, iar &nbsp;speculatiile si zvonurile din presa nu se opresc &nbsp;deoarece nu exista un adevar absolut pe care una dintre parti sa il detina. Ramane la latitudinea oamenilor sa filtreze informatiile si sa ia decizii. Un exemplu care contrazice &nbsp;faptul ca presa face abuzuri si demnitarii spun lucruri &laquo;certificate &raquo; &nbsp;este cazul &laquo;Watergate &laquo; &nbsp;.<br /><br />Dreptul la viata privata a demnitarilor este mai important &nbsp;decat dreptul &nbsp;la informare a cetatenilor, in primul rand pentru ca este un drept fundamental pentru toti oamenii, indiferent de functia pe care o detin, perioada in care traim este diferita de Grecia antica unde &laquo; implicarea cetateneasca in politica era o datorie morala [&hellip;] in timp ce dreptul la viata privata nu era recunoscut&laquo;. &nbsp;In al doilea rand, pentru ca aceste aspecte nu caracterizeaza &nbsp;persoana din punct de vedere profesional, nu sunt criterii &nbsp;definitorii care ghideaza deciziile cetatenilor si nu sunt corelate direct cu abilitatile si competentele pe care o persoana le poate avea intr-o astfel de functie.</p>
+
+<p>(1) &nbsp;http://www.informatiiprofesionale.ro/juridic/respectarea-vietii-private/</p>
+<p>(2) &nbsp;http://www.lovendal.net/wp52/scandalul-watergate-si-cel-mai-mare-presedinte-mincinos-din-istoria-sua-richard-nixon/</p></div><hr><h3>A2 (Bogdan Morosanu) <img src='../../../../images/little_stuff/16-em-up.png' class='discurs_toggler'></h3>
+            <div class='discurs normal_text'><div>
+<p>"Dreptul la viata privata" este un drept al fiecarui om? Probabil, insa irelevant. Ceea ce trebuia sa demonstreze opozitia in acest meci de dezbateri era nu ca Dreptul la viata privata exista, ci ca el nu poate fi incalcat in aceste circumstante. Practic, trebuiau sa demonstreze ca el conteaza. Putem vedea cu usurinta ca orice drept, chiar si dreptul la viata (ex. pedapsa cu moartea si avorturile) poate fi incalcat. Putem vedea de asemenea cu usurinta ca nu ne este arata de loc de ce acest drept este important in sine, si de ce nu ar trebui incalcat iar in conditiile in care nu exista drepturi absolute, pentru a castiga acest meci mai trebuie doar sa raspundem la urmatoare intrebare:</p>
+<p>Influenteaza viata personala pe cea profesionala?</p>
+<p>Raspunsul este da. Si haideti sa trecem fiecare caz prezentat de guvern prin aceasta intrebare.</p>
+<p>1)Cazul problemelor de sanatate: Un exemplu foarte concret al acestei probleme este cel al lui F.D.Roosevelt care suferea de probleme grave de sanatate, dupa cum a fost precizat mai sus iar acest fapt a avut implicatii grave atunci cand respectivul presedinte al Americii a calatorit in 1945 la Yalta, conferitna ce a incheiat al doilea razboi mondial. Fiindca bolile lui nu erau facut publice, nu a fost trimis impreuna cu el decat un singur alt reprezentant al guvernului S.U.A., unul care nu era specializat in politica externa. Rezultatul a fost ca, din cauza sanatatii, Roosevelt si-a petrecut mai mult de jumatate din timpul conferintei dormind iar americanii au fost practic inexistenti in aceasta conferinta. Dintre cei trei mari lideri Roosevelt, Churchill si Stalin, doar ultimii doi si-au facut glasul auzit la aceasta conferinta iar influenta ultimului a dus la instaurarea guvernelor comuniste din estul europei. Acesta nu este neaparat pentru a demonstra ca prezenta unui presedinte mai activ decat Roosevelt ar fi dus la o lume fara comunism in afara URSS-ului[1] dar cu siguranta putem presupune ca lipsa de reprezentare a Americii in acea conferinta a fost de nedorit pentru poporul respectiv si a influentat in mod clar nu doar un singur demnitar ci o intreaga tara. Sanatatea poate influenta viata profesionala atunci cand activitatea profesionala poate fi intrerupta subit din cauza ei, iar oamenii nu sunt constienti de acest fapt.</p>
+<p>2)Legat de argumentul cu iertarea demnitarilor, desi exista exemple mult mai proeminente pentru a ne arata acest rationament (dl. Obama este reportat ca fiind un fost consumator de marijuana[2] dar totusi se bucura de o sustinere de 46% din populatia Americii[3]) consideram aceasta idee ca find relativ irelevanta, exista fapte care ar putea fi iertate si fapte care ar putea sa nu fie iertate. Dar, simplul fapt ca&nbsp;&nbsp;o persoana vrea sa ascunda ceva ne indica faptul ca acel ceva nu este bun. De ce vrea sa ascunda? Pentru ca ii e frica de consecinte. Daca nu ar fi ceva rau, nu ar exista conseciinte. Deci acel ceva denota ceva rau si relevant despre persoana, ceva ce trebuie stiut. Putem da ca exemplu conflicte de interese ce apar la licitatii, etc.</p>
+<p>3)Exemplele de mai sus si ceea ce va urma sunt toate raspuns la intrebarea ridicata in acest paragraf. Si anume Care sunt dezavantajele si impactul clar care favorizeaza aprobarea motiunii?</p>
+<div>
+<p>4)Nu trebuie neaparat ca demnitarii sa fie crezuti pe cuvant, ei pot fi verificati sau mai bine, se poate cere direct de la doctor fisa medicala, etc. Contraargumentarea aceasta nu ne spune ca scopul nostru este unul prost, ci ca metoda dedusa de negatori este una rea. Putem oricand sa alegem alternative.</p>
+<p>In concluzie, fiindca drepturile nu sunt absolute si fiindca exista efecte clare ale vietii private (boli cu efecte subite, sau grave, profitarea de puterea investita de stat in demnitar pentru a favoriza o ruda sau chiar propria persoana, etc) care influenteaza in mod negativ viata profesionala, propunem afirmarea motiunii.</p>
+
+</div>
+<p>[1]Pearl Harbour, Yalta, Europa-Hamilton Fish, editura venus, 1991</p>
+<p>[2]&nbsp;<a href="../../../../_http_/www.mapinc.org/newsnorml/v03/n1786/a06.html/_.html" target="\&quot;_blank\&quot;">http://www.mapinc.org/newsnorml/v03/n1786/a06.html</a></p>
+<p>[3]&nbsp;<a href="../../../../_http_/www.gallup.com/poll/113980/gallup-daily-obama-job-approval.aspx/_.html" target="\&quot;_blank\&quot;">http://www.gallup.com/poll/113980/gallup-daily-obama-job-approval.aspx</a></p>
+</div>
+</div><hr><h3>N2 (Cristina Ungureanu) <img src='../../../../images/little_stuff/16-em-up.png' class='discurs_toggler'></h3>
+            <div class='discurs normal_text'><p>Dreptul la viata privata al unui om nu este ceva "probabil", ci dimpotriva, exista cu siguranta,&nbsp; este important , iar din moment ce reprezinta un drept fundamental&nbsp; nu poate fi considerat irelevant, indiferent de dezbaterea in care este discutat.</p>
+<p>Consideram ca nu trebuie sa aducem argument e ca sa aratam ca un drept (in cazul de fata, dreptul la viata privata al demnitarilor) conteaza, ci faptul ca este mai important decat dreptul la informare al cetatenilor. Argumentarea noastra se bazeaza pe demonstrarea importantei dreptului la viata privata a demnitarilor in raport cu dreptul oamenilor la informare si nu ca un&nbsp; drept de sine statator.</p>
+<p>1.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Momentul in care acestia l-au ales ca presedinte pe Roosevelt este anul 1933 si a condus pana in 1945 adica timp de 4 mandate, desi cel de-al 4-lea nu complet.&nbsp; Este evidenta increderea acordata acestui presedinte de catre americani.Faptul ca, la conferinta din 1945 Roosevelt a fost prezent doar alaturi de o alta persoana nespecializata in politica externa nu tine de resortul marelui public.&nbsp; Partidul avea la cunostinta starea de sanatate foarte grava a acestuia, inclusiv in momentul in care l-au propus pentru al 4-lea mandat, dar si-au asumat riscul.<a  href="#34f91">[1]</a> Deci, ei sunt cei care trebuiau sa se asigure ca America va fi bine reprezentata in cadrul acelei conferinte.</p>
+
+<p>2.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Argumentul conform caruia demnitarii pot fi iertati de catre populatie a fost adus de catre echipa afirmatoare in primul lor discurs,iar in cel de-al doilea discurs afirma ca ideea este &ldquo;relativ irelevanta&rdquo;. Conform acestora, in momentul in care o persoana nu face publica o informatie este pentru ca ascunde ceva rau, si doar ceva&nbsp; rau poate avea consecinte. Definitia consecintei este : Rezultat al unui fapt,al unei actiuni, al unui principiu <a  href="#34f92">[2]</a>, deci consecintele exista, indiferent daca actiunea este pozitiva sau negativa. Avand in vedere cat de &ldquo;vanate &rdquo;sunt informatiile personale ale demnitarilor, acestia pot alege sa le tina departe de opinia publica pentru simplul motiv de a nu fi deformate si interpretate gresit, si nu pentru ca ar fi &ldquo;ceva rau&rdquo;.</p>
+
+<p>3.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Toate informatiile privind starea pacientului, rezultatele investigatiilor,diagnosticul, tratamentul , prognosticul, tratamentul&nbsp; datele personale sunt confidential chiar si dupa decesul persoanei(Art.21, legea nr. 46 a&nbsp; Drepturilor pacientului). Informatiile cu caracter confidential&nbsp;&nbsp; pot fi furnizate numai in cazul in care pacientul isi da consimtamantul explicit.(Art. 22, legea nr . 46 a Drepturilor pacientului)<a  href="#34f93">[3]</a>.&nbsp; Deci, nimeni nu poate fi controlat, respectiv verificat legat de starea de sanatate fara consimtamantul propriu, nici macar demnitarii.</p>
+
+<p>Cosideram ca,motiunea trebuie respinsa, deci dreptul la viata privata al demnitarilor sa fie mai important decat cel lainformare al cetatenilor deoarece:</p>
+<ul>
+<li>Scade riscul interpretarii informatiilor cu caracter personal care poate duce la o intelegere gresita din partea populatiei in demnitari , deci la neincredere nefondata;</li>
+<li>Nu poate fi incalcat dreptul la confidentialitatea&nbsp; informatiilor cu caracter medical din moment ce starea de sanatate ii permite sa isi exercite functia.</li>
+</ul>
+<div><br /> 
+<hr size="1" />
+<div>
+<p><a  name="34f91">[1]</a> http://en.wikipedia.org/wiki/Franklin_D._Roosevelt#cite_note-112</p>
+</div>
+<div>
+<p><a  name="34f92">[2]</a> http://www.webdex.ro/online/dictionar/consecin%C5%A3%C4%83</p>
+</div>
+<div>
+<p><a  name="34f93">[3]</a> http://www.imlcluj.ro/legislatie/Legislatie-confidentialitate.pdf</p>
+</div>
+</div></div><hr><hr><h2>Decizia:</h2> <script>
+        $j(document).ready(function(){
+			$j('.decizie_toggler').toggle( 
+				function(){
+					$j(this).attr('src', '../../../../images/little_stuff/16-em-down.png');   
+					$j(this).parent().next('.decizie').hide('fast'); 
+                },
+                function(){
+					$j(this).attr('src', '../../../../images/little_stuff/16-em-up.png');
+					$j(this).parent().next('.decizie').show('fast'); 
+                } 
+			);
+		});</script><div class='decizie'><h3>Radu Jakab
+                <img src='../../../../images/little_stuff/16-em-up.png' class='decizie_toggler'></h3><div class='normal_text'><p>Un meci nu foarte spectaculos sau disputat, insa care aduce totusi in discutie temele majore ale motiunii.</p>
+
+<p>Discursul afirmatorului 1 este foarte bine structurat si aduce doua argumente puternice in sustinerea motiunii, in timp ce al treilea pare sa aiba mai mult rol de provizie de siguranta. Stilul este de calitate ridicata, de la expunerea argumentelor la separarea discursului in introducere, continut si concluzionare.</p>
+
+<p>Contra-argumentele aduse de primul negator nu sunt cele mai fericite. De exemplu exista motive bune pentru care am dori sa cunoastem conditii grave de sanatate ale candidatilor mai degraba decat sa &lsquo;mergem pe incredere&rsquo;. Faptul ca alte drepturi &lsquo;fundamentale&rsquo; pot fi incalcate nu este irelevant, ci demonstreaza ca faptul ca e fundamental sau nu, nu este un argument in sine care sa ne opreasca din a-l pune in balanta cu alt drept.</p>
+<p>Faptul ca un candidat poate minti in aceste dezvaluiri nu poate fi un dezavantaj, avand in vedere ca el ar putea minti si in prezent, din proprie initiativa. In acest sens de idei am putea sustine ca nici o masura nu mai poate fi implementata din cauza minciunilor, coruptiei, incompetentei etc.</p>
+
+<p>Afirmatorul doi vine cu cateva exemple menite sa adreseze punctele cazului lor care au fost atacate. Reargumentarea se face mai degraba la nivel de clarificare a argumentelor initiale decat prin aducerea a noi idei care sa sustina argumentele.</p>
+<p>In acest discurs mi s-a parut nu doar eronat dar poate si voit exagerat silogismul cum ca daca acesti politicieni nu vor sa-si dezvaluie viata privata inseamna ca au ceva de ascuns si fiind dorit ascuns inseamna ca e ceva rau si deci trebuie cunoscut. Rationamentul mi se pare... suprasimplificat daca nu naiv. Daca ar fi valid, motiunea ar fi efectiv dedusa logic.</p>
+
+<p>Al doilea negator face un discurs mai degraba constructiv decat conclusiv, prin faptul ca prezinta noi contra-argumente, lasand loc prea putin evaluarii meciului per ansamblu. Se lanseaza idei dubioase si antidemocratice de geunl &ldquo;partidul si nu alegatorul e in masura sa ia decizii in privinta relevantei sanatatii candidatului&rdquo;. O confuzie facuta in acest discurs e aceea ca un lucru fiind sustinut de lege el ar fi automat un bine absolut si nu mai poate fi pus in discutie.</p>
+
+<p>La sfarsitul meciului, consider ca cei care au avut o pozitie (mai) coerenta si argumente mai bine sustinute <strong>au fost afirmatorii</strong>, acestia castigand runda.</p>
+
+<p><strong>A1 &ndash; 25</strong></p>
+<p>Continut &ndash; 13</p>
+<p>Strategie &ndash; 8</p>
+<p>Stil &ndash; 4</p>
+
+<p><strong>N1 &ndash; 20</strong></p>
+<p>Continut &ndash; 11</p>
+<p>Strategie &ndash; 7</p>
+<p>Stil &ndash; 2</p>
+
+<p><strong>A2 &ndash; 24</strong></p>
+<p>Continut &ndash; 12</p>
+<p>Strategie &ndash; 9</p>
+<p>Stil &ndash; 3</p>
+
+<p><strong>N2 &ndash; 20</strong></p>
+<p>Continut &ndash; 11</p>
+<p>Strategie &ndash; 7</p>
+<p>Stil &ndash; 2</p>
+
+</div>A1 -> 25 puncte<br>N1 -> 20 puncte<br>A2 -> 24 puncte<br>N2 -> 20 puncte<br>Castiga echipa: <h3 style='display:inline;color:red;'>Bogdan si Teo (afirmatori)</h3></div><hr><h3 class='important'>Vrem parerea ta! Pentru asta, trebuie sa te loghezi.</h3>
+                <div class='clear'></div>
+        </div><!-- end main content -->
+         <div class='clear'></div>
+</div>
+<div id="pix"></div>
+
+
+                                </div><!--end main -->
+                                <div id='parteneri'>
+                                    <span class='tr'></span><span class='tl'></span><span class='br'></span><span class='bl'></span><span id="filler"></span>
+                                    <div class='parteneri' id='sustinatori'>
+                                        <span class='floating_text' id='un_proiect'>Un proiect</span>
+                                        <a href='http://www.ardor.org.ro/'><div class='image' id='ardor'>Ardor</div></a>
+                                        <span class='floating_text' id='finantatori'>Finanțatori</span>
+                                        <a href='http://www.opensocietyfoundations.org/'><div class='image' id='open_society'>Open Society Foundation </div></a>
+                                        <a href='http://www.studentiq.ro//'><div class='image' id='memoplus'>MemoPlus</div></a>
+                                        <!-- <a href='http://www.ratiufamilyfoundation.com/'><div class='image' id='FundatiaRatiu'>Ardor</div></a>
+                                        <a href='http://www.eef.md/'><div class='image' id='eef'>East Europe Foundation</div></a>
+                                        <a href='http://www.mts.gov.md/'><div class='image' id='mdminister'>Ministerul Tineretului si Sportului al Republicii Moldova</div></a> -->
+
+                                        <span class='floating_text' id='parteneri_text'>Parteneri</span>
+
+                                        <a href='http://www.policycenter.eu/'><div class='image' id='PolicyCenter'>Policy Center</div></a>
+                                        <a href='http://www.britishcouncil.org/'><div class='image' id='BritishCouncil'>British Council</div></a>
+                                        <a href='http://www.europuls.ro/'><div class='image' id='europuls'>Europuls</div></a>
+                                        <a href='http://www.cere.ro/'><div class='image' id='cere'>Ce-Re</div></a>
+                                        <a href='http://www.primeromania.ro/'><div class='image' id='prime'>Prime Romania</div></a>
+                                        <a href='http://www.cji.ro/'><div class='image' id='cji'>Centrul pentru jurnalism independent</div></a>
+                                        <a href='http://www.aiesectm.ro/'><div class='image' id='aisec'>Aisec</div></a>
+                                        <!-- ===================================================================================================== -->
+                                        <a href='http://www.cogitus.ro/'><div class='image' id='cogitus'>Cogitus</div></a>
+                                        <a href='http://www.adevarul.ro/international/foreign_policy/'><div class='image' id='foreignPolicy'>Foreign Policy</div></a>
+                                        <a href='http://www.elsa.ro/'><div class='image' id='elsa'>Elsa</div></a>
+                                        <a href='http://www.vipromania.ro/'><div class='image' id='vipromania'>Voluntari pentru idei si proiecte</div></a>
+                                        <a href='http://www.ongtrust.ro/'><div class='image' id='ongtrust'>Trust</div></a>
+
+                                        <!-- ===================================================================================================== -->
+                                        <a href='http://www.leap.ro/'><div class='image' id='leap'>Leap</div></a>
+                                        <a href='http://www.younginitiative.org/'><div class='image' id='younginitiative'>Asociatia young initiative</div></a>
+                                        <a href='http://www.asjc.ro/'><div class='image' id='asjc'>Asjc</div></a>
+                                        <a href='http://osut.ro/'><div class='image' id='osut'>Osut</div></a>
+                                        <div class='clear'></div>
+                                    </div>
+                                    <div class='parteneri' id='parteneri_institutionali'>
+                                        <span class='floating_text' id='sponsori_text'>Sus&#539;in&#x0103;tori</span>
+                                        <a href='http://www.cartier.md/'><div class='image' id='cartier_logo'>Editura Cartier</div></a>
+                                        <a href='http://www.pll.md/ro/'><div class='image' id='biblio_logo'>Biblioteca publica de drept</div></a>
+                                        <span class='floating_text' id='institutii_text'>Parteneri institu&#539;ionali</span> 
+                                        <ul id='institutii'>
+                                            <!-- <span class='floating_text' id='institutii_text'>Parteneri institu&#539;ionali:</span> -->
+                                            <li><a href='http://www.politice.ro/'>Facultatea de &#536;tiin&#539;e Politice SNSPA </a></li>
+                                            <li><a href='http://www.comunicare.ro/'>Facultatea de Comunicare &#537;i Rela&#539;ii Publice SNSPA</a></li>
+                                            <li><a href='http://www.fspub.ro/'>Facultatea de &#536;tiin&#539;e Politice Universitatea Bucure&#537;ti</a></li>
+                                            <li><a href='http://www.filosofie.unibuc.ro/'>Facultatea de Filosofie Universitatea Bucure&#537;ti</a></li>
+                                            <li><a href='http://litere.unibuc.ro/'>Facultatea de Litere din Universitatea Bucure&#x015f;ti</a></li>
+                                            <li><a href='http://www.unibuc.ro/ro/fac_fsas_ro'>Facultatea de Sociologie Universitatea Bucure&#537;ti</a></li>
+                                            <li><a href='http://laws.uaic.ro/'>Facultatea de Drept Universitatea Alexandru Ioan Cuza Ia&#537;i</a></li>
+                                            <li><a href='http://www.uaic.ro/uaic/bin/view/Academic/Filosofie'>Facultatea de Filosofie si &#536;tiin&#539;e Social Politice Universitatea AIC Ia&#537;i</a></li>
+                                            <li><a href='http://www.upa.ro/'>Facultatea de Drept si Facultatea de &#x015e;tiin&#x0163;e Politice si Administrative Universitatea Petre Andrei Ia&#x015f;i</a></li> 
+
+                                            <li><a href='http://www.ubbcluj.ro/'>Universitatea Babe&#537;-Bolyai Cluj Napoca</a></li>
+                                            <li><a href='http://www.uvt.ro/'>Universitatea de Vest Timi&#537;oara</a></li>
+                                            <li><a href='http://www.upt.ro/'>Universitatea Politehnica Timi&#537;oara</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class='parteneri' id='parteneri_media'>
+                                        <span class='floating_text' id='media_text'>Parteneri media</span>
+                                        <a href='http://www.hotnews.ro/'><div class='image' id='hotnews'>HotNews</div></a>
+                                        <!-- <a href='http://www.lumebuna.ro/'><div class='image' id='lumebuna'>Lume Buna</div></a> -->
+                                        <a href='http://www.romaniapozitiva.ro/'><div class='image' id='romaniapozitiva'>Romania Pozitiva</div></a>
+                                        <a href='http://totb.ro/'><div class='image' id='thinkoutsidethebox'>Think Outside The Box</div></a>
+                                        <a href='http://www.facebook.com/carevasazica.vip'><div class='image' id='carevasazica'>Carevasazica</div></a>
+                                        <a href='http://www.studentie.ro/'><div class='image' id='studentiero'>Studentie.ro</div></a>
+                                        <a href='http://startub.unibuc.ro/'><div class='image' id='startub'>startub.unibuc.ro</div></a>
+                                        <!-- <a href='http://www.tvr.ro/tvr_cluj.php'><div class='image' id='tvrcluj'>Tvr Cluj</div></a> -->
+                                        <!-- <a href='http://www.radiotransilvania.ro'><div class='image' id='radiotransilvania'>Radio Transilvania</div></a> -->
+                                        <a href='http://iasifun.ziaruldeiasi.ro/'><div class='image' id='iasifun'>Iasi fun</div></a>
+                                        <a href='http://www.ziaruldeiasi.ro/'><div class='image' id='ziaruldeiasi'>Ziarul de Iasi</div></a>
+                                        <a href='http://www.kissfm.ro/timisoara'><div class='image' id='kissfm'>KissFm</div></a>
+
+                                        <div class='clear'></div> 
+                                    </div>
+                                    <div class='clear'></div>
+
+                                </div>	
+                            </div>	<!-- end wrap -->
+                            <div id='footer_mare'>
+                                <div id='footer'>
+                                    <div id='links' class='footer'>
+                                        <div id='menu1' style='margin:auto;'> <ul id='meniu_prinicpal'><li><a href='../../../contacte/index.html'> Contact </a></li>
+<li><a href='../../../clubdebate/index.html'> Cluburile </a></li>
+<li><a href='../../../oamenii/index.html'> Oamenii </a></li>
+<li><a href='../../../proiectul/index.html'> Proiectul </a></li>
+<li><a href='../../../home/index.html'> Acasa </a></li>
+</ul></div><!--end menu-->
+                                    </div><!--
+                                    <div id='contact' class='footer'>
+                                            <h4>Contact</h4>
+                                            <p>office@closer2oxford.ro</p>
+                                            <p>bogdan.draghicescu@closer2oxford.ro<br>
+                                            <span class='detalii'> (asistenta tehnica web - orice probleme legate de site)</span></p>
+                                    </div>
+                                    -->
+                                    <div id='newsletter' class='footer'>
+                                        <script src="../../../../../connect.facebook.net/en_US/all.js#xfbml=1"></script><fb:like href="http://www.facebook.com/pages/Closer2Oxford/162758797069605" width="250" colorscheme="dark"></fb:like>
+                                        <!--<h4>Newsletter</h4>
+                                        <form action='/page/newsletter'>
+                                                <input type='text' name='email'>
+                                                <input type='submit' id='submit' value='>'>
+                                                        
+                                        </form>-->
+                                    </div>
+                                    <div id='credits'>
+                                        Copyright(c) 2021 ARDOR |  Toate drepturile rezervate | Toate logo-urile si sloganurile de pe site sunt proprietate intelectuala inregistrata si nu pot fi reproduse fara acordul explicit al detinatorilor. <br>
+                                            <br /><br />
+                                            <b>Disclaimer</b><br /><i>
+
+                                                Programul educational Closer to Oxford este un program non-profit si nu are o legatura cu universitatea cu acelasi nume, referirea la Oxford avand doar o semnificatie simbolica.
+                                            </i>
+                                    </div>
+
+                                </div>		
+                            </div>		
+
+                            <div id="finantatde">Acest proiect este finantat cu sustinere din partea Comisiei Europene. Aceast publicatie [comunicare] reflecta doar
+                                vederile autorului, iar Comisia nu poate fi facuta  responsabila pentru utilizarea informatiei pe care o contine.</div>
+
+
+                        </body>
+                        </html>

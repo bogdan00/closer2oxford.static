@@ -1,0 +1,589 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml-strict.dtd">
+<HTML xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+    <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+            <link rel="icon" type="image/png"  href="../../closer2oxford.ro/favicon.html">
+                <link rel="stylesheet" href="var/layout.css" type="text/css">
+                    <title>Closer to Oxford - e timpul pentru argumente!</title>
+                    <link rel="alternate" type="application/rss+xml"  href="rss_feed" title="Stiri Closer2Oxford">
+                        <!-- <link rel="image_src" property="og:image"  href="/images/layout/closer2oxford_fb_white.png" /> -->
+                        <link rel="image_src" property="og:image"   type="image/jpeg"  href="../uploads/2015/06/9/facebook_icon.html" />
+                        <link rel="image_src" type="image/jpeg"  href="../uploads/2015/06/9/icon-facebook.gif" /> 
+						<meta name="description" content="Closer2Oxford pune în valoare oameni şi argumentele lor, în dezbateri online şi publice alături de tineri şi invitați avizaţi"/>
+                        <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9" />
+<script type='text/javascript' src='../js/jquery-1.4.4.min.js'></script>
+<script>var $j = jQuery.noConflict();</script>
+<script type='text/javascript' src='../js/tinymce/tiny_mce.js'></script>
+<script type='text/javascript' src='../js/jquery.form.js'></script>
+<script type='text/javascript' src='../js/fbLoginRegister.js'></script>
+<script type='text/javascript' src='var/javascript.js'></script>
+<script type='text/javascript' src='../js/jquery.hovertip-1.0.min.js'></script> 
+<script type='text/javascript' src='../js/jquery.jgrowl_minimized.js'></script> 
+<link rel='stylesheet' href='../css/jquery.jgrowl.css' media='screen' type='text/css'> 
+<script type='text/javascript' src='../js/jquery.timer-min.js'></script> 
+<link rel='stylesheet' href='var/gallery.css' media='screen' type='text/css'> 
+<script type='text/javascript' src='var/galerie/jquery.prettyPhoto.js'></script> 
+<meta name='description' content=''/> 
+<meta name='keywords' content=''/> 
+<style>.hovertip{
+    position:absolute;
+    padding:10px 13px;
+    z-index:2;
+    max-width:300px;
+    color:#303030;
+    background-color:#f5f5b5;
+    border:1px solid #DECA7E;
+    font-family:sans-serif;
+    font-size:12px;
+    line-height:18px;
+    text-align:left;
+    }</style> 
+<script type='text/javascript'>$j(document).ready(function(){$j('.tooltip').hovertip({'offset':[20,20]});get_notif();});
+
+if(!Array.indexOf){Array.prototype.indexOf = function(obj){for(var i=0; i<this.length; i++){if(this[i]==obj){return i;}}return -1;}}
+    hashuri = [] ;
+	 var tick_timer= 3000 ;
+ 
+	 function get_notif()
+        {
+		  
+		  //console.log(tick_timer);
+	     
+		  setTimeout(get_notif,tick_timer);
+        
+		   $j.ajax(
+            {
+                url: '/page/notif/show_events',
+                dataType: 'json',
+                data: "{}",
+                success: function(data)
+                    {
+                    $j.each(data,function(index,data){
+                        try
+                            {
+                            if( hashuri.indexOf(data.hash) == -1 )
+                                {
+                                hashuri.push(data.hash);
+                                $j.jGrowl(
+                                    data.str,
+                                    {
+                                        corners:'1px',
+                                        life: data.life,
+                                        header:data.title,
+                                        hash: data.hash,
+                                        sticky: data.sticky,
+                                        close: function(e,m,o)
+                                            {
+                                                $j.ajax({url:'/page/notif/delete_single_event/' + o.hash});
+                                            }
+                                    });
+                                }
+                            }
+                        catch(e){}
+                        })
+                    }
+            });
+        }
+	 </script> 
+ 
+                            
+  <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-19111721-1']);
+  _gaq.push(['_setDomainName', '.closer2oxford.ro']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+    
+                        </head>
+                        <body>
+                            <div id="global_wrap">
+                                <div id="header">
+                                    <a href='../index.html'><div id='logo'><img src='../images/layout/sigla.jpg'></div></a>
+                                    <a class='noExternal' href='http://www.facebook.com/pages/Closer2Oxford/162758797069605'><img src='../images/fb.png' style='height:30px;float:right;clear:right;margin:10px 5px 5px 5px;border:none;'/></a>
+                                    <a href='rss_feed'><img src='../images/feed-icon.png' style='height:30px;float:right;clear:right;margin:5px;border:none;'/></a>
+                                </div>
+                                <div id="meniu">
+                                    <div  id='register_login'>
+
+                                        
+  <a href='#' class='todo' id='login'>Login </a> &nbsp;<a href='register.html' class='todo' id='register'>Register</a>
+    <div id='login_box'>
+		  <form action='https://dev.closer2oxford.ro/page/ro/login_user/logon' method='post' id='user_login_form'>
+					 <div>Email: <input type='text' name='email'/> </div><br />
+					 <div>Pass: <input type='password' name='passwd'/></div><br />
+					 <a href='#' class='password_forgot'>forgot password?</a>
+					 <input type='hidden' value='/page/dezbatere_cluj_primavara' name='returnto' class='submiter'/><br />
+					 <input type='submit' value='login' name='btn' class='submiter'/><br />
+		  </form>
+		  
+		  <form action='https://dev.closer2oxford.ro/page/ro/login_user/reset_user_pw' method='post' id='user_reset_form'>
+					 <div>Email: <input type='text' name='email'/> </div><br />
+					 <a href='#' class='password_forgot'>login?</a>
+					 <input type='hidden' value='/page/dezbatere_cluj_primavara' name='returnto' class='submiter'/><br />
+					 <input type='submit' value='reset' name='btn' class='submiter'/><br />
+		  </form>
+		  
+    </div>
+    
+                                    </div>
+                                    <div id='menu1' style='margin:auto;'> <ul id='meniu_prinicpal'><li><a href='contacte/index.html'> Contact </a></li>
+<li><a href='clubdebate/index.html'> Cluburile </a></li>
+<li><a href='oamenii/index.html'> Oamenii </a></li>
+<li><a href='proiectul/index.html'> Proiectul </a></li>
+<li><a href='home/index.html'> Acasa </a></li>
+</ul></div><!--end menu-->
+                                </div>
+                                <div id="main"> 
+                                    <!--<div id='stiri-padding'>
+        <div id='stiri_back'>
+                {stiri} 
+    
+               
+        </div>-->
+        
+</div>
+<div  id="content-padding">
+        <div id='sidebar_menu'>
+                <span class='tr'></span>
+                <span class='tl'></span>
+                <span class='br'></span>
+                <span class='bl'></span>
+                <span id="filler"></span>
+                    
+                <ul></ul>
+                
+                <div class='clear'></div>
+        </div>
+        <div id="content">
+                <span class='tr'></span>
+                <span class='tl'></span>
+                <span class='br'></span>
+                <span class='bl'></span>
+                <span id="filler"></span>
+                <script type='text/javascript' src='../js/jquery.hovertip-1.0.min.js'></script> 
+<script type='text/javascript' src='../js/jquery.jgrowl_minimized.js'></script> 
+<link rel='stylesheet' href='../css/jquery.jgrowl.css' media='screen' type='text/css'> 
+<script type='text/javascript' src='../js/jquery.timer-min.js'></script> 
+<link rel='stylesheet' href='var/gallery.css' media='screen' type='text/css'> 
+<style>.hovertip{
+    position:absolute;
+    padding:10px 13px;
+    z-index:2;
+    max-width:300px;
+    color:#303030;
+    background-color:#f5f5b5;
+    border:1px solid #DECA7E;
+    font-family:sans-serif;
+    font-size:12px;
+    line-height:18px;
+    text-align:left;
+    }</style> 
+<script type='text/javascript'>$j(document).ready(function(){$j('.tooltip').hovertip({'offset':[20,20]});get_notif();});
+
+if(!Array.indexOf){Array.prototype.indexOf = function(obj){for(var i=0; i<this.length; i++){if(this[i]==obj){return i;}}return -1;}}
+    hashuri = [] ;
+	 var tick_timer= 3000 ;
+ 
+	 function get_notif()
+        {
+		  
+		  //console.log(tick_timer);
+	     
+		  setTimeout(get_notif,tick_timer);
+        
+		   $j.ajax(
+            {
+                url: '/page/notif/show_events',
+                dataType: 'json',
+                data: "{}",
+                success: function(data)
+                    {
+                    $j.each(data,function(index,data){
+                        try
+                            {
+                            if( hashuri.indexOf(data.hash) == -1 )
+                                {
+                                hashuri.push(data.hash);
+                                $j.jGrowl(
+                                    data.str,
+                                    {
+                                        corners:'1px',
+                                        life: data.life,
+                                        header:data.title,
+                                        hash: data.hash,
+                                        sticky: data.sticky,
+                                        close: function(e,m,o)
+                                            {
+                                                $j.ajax({url:'/page/notif/delete_single_event/' + o.hash});
+                                            }
+                                    });
+                                }
+                            }
+                        catch(e){}
+                        })
+                    }
+            });
+        }
+	 </script> 
+
+<script type='text/javascript' src='../js/jquery.hovertip-1.0.min.js'></script> 
+<script type='text/javascript' src='../js/jquery.jgrowl_minimized.js'></script> 
+<link rel='stylesheet' href='../css/jquery.jgrowl.css' media='screen' type='text/css'> 
+<script type='text/javascript' src='../js/jquery.timer-min.js'></script> 
+<link rel='stylesheet' href='var/gallery.css' media='screen' type='text/css'> 
+<script type='text/javascript' src='var/galerie/jquery.prettyPhoto.js'></script> 
+<style>.hovertip{
+    position:absolute;
+    padding:10px 13px;
+    z-index:2;
+    max-width:300px;
+    color:#303030;
+    background-color:#f5f5b5;
+    border:1px solid #DECA7E;
+    font-family:sans-serif;
+    font-size:12px;
+    line-height:18px;
+    text-align:left;
+    }</style> 
+<script type='text/javascript'>$j(document).ready(function(){$j('.tooltip').hovertip({'offset':[20,20]});get_notif();});
+
+if(!Array.indexOf){Array.prototype.indexOf = function(obj){for(var i=0; i<this.length; i++){if(this[i]==obj){return i;}}return -1;}}
+    hashuri = [] ;
+	 var tick_timer= 3000 ;
+ 
+	 function get_notif()
+        {
+		  
+		  //console.log(tick_timer);
+	     
+		  setTimeout(get_notif,tick_timer);
+        
+		   $j.ajax(
+            {
+                url: '/page/notif/show_events',
+                dataType: 'json',
+                data: "{}",
+                success: function(data)
+                    {
+                    $j.each(data,function(index,data){
+                        try
+                            {
+                            if( hashuri.indexOf(data.hash) == -1 )
+                                {
+                                hashuri.push(data.hash);
+                                $j.jGrowl(
+                                    data.str,
+                                    {
+                                        corners:'1px',
+                                        life: data.life,
+                                        header:data.title,
+                                        hash: data.hash,
+                                        sticky: data.sticky,
+                                        close: function(e,m,o)
+                                            {
+                                                $j.ajax({url:'/page/notif/delete_single_event/' + o.hash});
+                                            }
+                                    });
+                                }
+                            }
+                        catch(e){}
+                        })
+                    }
+            });
+        }
+	 </script> 
+
+<style type="text/css">
+.poze
+{
+    float:right;
+    width:110px;
+}
+.poze a img
+{    border:none;
+}
+.main_content
+{
+    float:left;
+    width:560px;
+}
+</style>
+
+ <div class = 'poze'>
+            <a class='thumb' href='../uploads/2011/10/3/cluj_inc.xkl5go.png' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../uploads/2011/10/3/thumb_cluj_inc.xkl5go.png' alt='' />
+                <span class='desc'></span>
+            </a>
+        
+
+            <a class='thumb' href='http://www.youtube.com/watch?v=LurXE38G6z0' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../../img.youtube.com/vi/LurXE38G6z0/1.jpg' alt='' />
+                <span class='desc'>Deschidere</span>
+            </a>
+        
+
+            <a class='thumb' href='http://www.youtube.com/watch?v=7IRGMr6iGAY' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../../img.youtube.com/vi/7IRGMr6iGAY/1.jpg' alt='' />
+                <span class='desc'>Discurs Nicolae Şera - invitat (A1)</span>
+            </a>
+        
+
+            <a class='thumb' href='http://www.youtube.com/watch?v=OKh1cli8wXw' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../../img.youtube.com/vi/OKh1cli8wXw/1.jpg' alt='' />
+                <span class='desc'>Chestionare încrucișată 1</span>
+            </a>
+        
+
+            <a class='thumb' href='http://www.youtube.com/watch?v=VOYZ8d4T4js' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../../img.youtube.com/vi/VOYZ8d4T4js/1.jpg' alt='' />
+                <span class='desc'>Discurs Edwina Nariţa - studentă (N1)</span>
+            </a>
+        
+
+            <a class='thumb' href='http://www.youtube.com/watch?v=JYInQOqQG-k' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../../img.youtube.com/vi/JYInQOqQG-k/1.jpg' alt='' />
+                <span class='desc'>Chestionare încrucișată 2</span>
+            </a>
+        
+
+            <a class='thumb' href='http://www.youtube.com/watch?v=BHOBKD9u974' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../../img.youtube.com/vi/BHOBKD9u974/1.jpg' alt='' />
+                <span class='desc'>Discurs Mădălina Manea - studentă (A2)</span>
+            </a>
+        
+
+            <a class='thumb' href='http://www.youtube.com/watch?v=Alko99Duuy4' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../../img.youtube.com/vi/Alko99Duuy4/1.jpg' alt='' />
+                <span class='desc'>Discurs Ovidiu Pecican - invitat (N2)</span>
+            </a>
+        
+
+            <a class='thumb' href='../uploads/2011/04/29/dezbatere_cluj_5.zkn0ur.jpg' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../uploads/2011/04/29/thumb_dezbatere_cluj_5.zkn0ur.jpg' alt='' />
+                <span class='desc'></span>
+            </a>
+        
+
+            <a class='thumb' href='../uploads/2011/04/29/dezbatere_cluj_4.diwqei.jpg' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../uploads/2011/04/29/thumb_dezbatere_cluj_4.diwqei.jpg' alt='' />
+                <span class='desc'></span>
+            </a>
+        
+
+            <a class='thumb' href='../uploads/2011/04/29/dezbatere_cluj_3.g9yjvo.jpg' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../uploads/2011/04/29/thumb_dezbatere_cluj_3.g9yjvo.jpg' alt='' />
+                <span class='desc'></span>
+            </a>
+        
+
+            <a class='thumb' href='../uploads/2011/04/29/dezbatere_cluj_2.n0urhm.jpg' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../uploads/2011/04/29/thumb_dezbatere_cluj_2.n0urhm.jpg' alt='' />
+                <span class='desc'></span>
+            </a>
+        
+
+            <a class='thumb' href='../uploads/2011/04/29/dezbatere_cluj_1.34a8ft.jpg' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../uploads/2011/04/29/thumb_dezbatere_cluj_1.34a8ft.jpg' alt='' />
+                <span class='desc'></span>
+            </a>
+        
+
+            <a class='thumb' href='../uploads/2011/10/3/cluj_final.0drqu9.png' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../uploads/2011/10/3/thumb_cluj_final.0drqu9.png' alt='' />
+                <span class='desc'></span>
+            </a>
+        
+
+
+    <script>
+    $j(document).ready(function(){
+      		$j("a[rel^='prettyPhoto']").prettyPhoto({theme:'facebook'});
+        });
+    
+    </script>
+    </div>
+
+<div class='main_content'>
+<!-- 		@page { margin: 0.79in } 		P { margin-bottom: 0.08in } -->
+<p><span style="font-family: 'Times New Roman', serif;"><em><strong>Dezbatere publică, Cluj Napoca, 5 aprilie, Aula FSEGA</strong></em></span></p>
+<p><span style="font-family: 'Times New Roman', serif;"><span lang="fr-FR"><em><strong>Echipa Afirmatoare:</strong></em></span></span><span style="font-family: 'Times New Roman', serif;"><span lang="fr-FR"><em> Nicolae </em></span></span><span style="font-family: 'Times New Roman', serif;"><span lang="ro-RO"><em>Şera &ndash; lect. Dr. La centrul Lingua şi Mădălina Manea &ndash; studentă</em></span></span></p>
+<p><span style="font-family: 'Times New Roman', serif;"><span lang="ro-RO"><em><strong>Echipa Negatoare:</strong></em></span></span><span style="font-family: 'Times New Roman', serif;"><span lang="ro-RO"><em> Ovidiu Pecican &ndash; prof. Dr la Facultatea de Studii Europene şi Edwina Nariţa &ndash; studentă</em></span></span></p>
+<p><span style="font-family: 'Times New Roman', serif;"><span lang="ro-RO"><em><strong>Moderator</strong></em></span></span><span style="font-family: 'Times New Roman', serif;"><span lang="fr-FR"><em><strong>:</strong></em></span></span><span style="font-family: 'Times New Roman', serif;"><span lang="fr-FR"><em> </em></span></span><span style="font-family: 'Times New Roman', serif;"><span lang="ro-RO"><em>lect. Anca Pascu</em></span></span><span style="font-family: 'Times New Roman', serif;"><span lang="ro-RO"> </span></span></p>
+<p lang="fr-FR">&nbsp;</p>
+<p><span style="font-family: 'Times New Roman', serif;"><span lang="fr-FR"><strong>Discurs Afirmator 1</strong></span></span></p>
+<p><span style="font-family: 'Times New Roman', serif;"><span lang="fr-FR"><strong>Nicolae </strong></span></span><span style="font-family: 'Times New Roman', serif;"><span lang="ro-RO"><strong>Ş</strong></span></span><span style="font-family: 'Times New Roman', serif;"><span lang="fr-FR"><strong>era: </strong></span></span><span style="font-family: 'Times New Roman', serif;"><span lang="fr-FR">Doresc s</span></span><span style="font-family: 'Times New Roman', serif;"><span lang="ro-RO">ă prezint punctul nostru de vedere afirmativ &icirc;n legatură cu moțiunea. Aş dori să definesc ce &icirc;nţelegem noi, echipa afirmatoare prin demnitar. Din punctul nostru de vedere, demnitarul este un cetăţean al oricărei ţări, care a fost ales &icirc;ntr-o funcţie publică, de regulă politică, deci care lucrează &icirc;ntr-o instituţie a statului respectiv. Considerăm că cetăţenii au dreptul să fie informaţi despre viaţa, &icirc;n integralitatea ei, a demnitarilor, dintr-un simplu drept prevăzut &icirc;n actele normative ale oricărui stat și, nu &icirc;n ultimul r&acirc;nd, pentru că părerea corectă a cetăţenilor contează foarte mult &icirc;n procedura de vot (de aceea am şi definit demnitarul ca o persoană sau personalitate publică din domeniul politic). Avem o serie de argumente ca să ne susţinem ideea. </span></span></p>
+<p><span style="font-family: 'Times New Roman', serif;"><span lang="ro-RO">&Icirc;n primul r&acirc;nd, nu trebuie să uităm că demnitarul se află &icirc;n slujba cetăţenilor, el este ales de către cetăţenii ţării respective şi el are obligaţii si drepturi pe tot parcursul mandatului său. Aceste obligaţii incumbă, evident, şi ideea de asumare a caracterului public al funcţiei sale. &Icirc;n al doilea r&acirc;nd, suntem convinşi că viaţa publică şi viaţa privată a unui demnitar sunt foarte greu de delimitat. Ştim foarte bine că d&acirc;nşii lucrează &icirc;n birouri şi instituţii un anumit timp, dar ei răm&acirc;n demnitari, oameni politici, personalităţi şi după ce au părăsit acest birou, aceste instituţii, deci am putea spune că 24 de ore din 24, ei sunt demnitarii acestei ţări. De altfel, demnitarii, de cele mai multe ori, se chiar m&acirc;ndresc cu faptele lor pozitive din viaţa lor privată. Desigur că sunt puţin supăraţi dacă presa, mass-media &icirc;n general oferă publicului informaţii despre acţiunile lor din viaţa privată care incumbă libertăţilor cetăţenilor. V-aş da un exemplu: cheltuirea banilor din fonduri publice pentru scopuri personale, şi exemplele abundă &icirc;n acest sens. Să nu uităm că demnitarii, din punctul nostru de vedere, functionează ca nişte personalităţi, respectiv ca nişte modele pentru noi. Ei sunt modele atunci c&acirc;nd &icirc;i alegem, o dată la 4 ani sau la un ciclu electoral, dar ei răm&acirc;n aceste modele, prin prestaţia lor publică, dar şi privată, pe tot parcursul mandatului lor. Considerăm că informaţiile &icirc;n acest sens ar fi utile pentru noi, ca să răm&acirc;nă &icirc;n continuare modele pentru noi. Nu &icirc;n ultimul r&acirc;nd, un cetăţean care doreşte să devină demnitar, &icirc;şi asumă liber si nestingherit, ne&icirc;mpins de la spate, această funcţie. Vorbind &icirc;ntre oameni adulţi, această asumare induce şi ideea că o parte a vieţii lor, nu &icirc;n totalitate, desigur, este vizibilă pentru cetăţenii ţării respective. Şi ultimul nostru argument, nu neapărat cel mai puţin important, ar fi argumentul democraţiei, credem noi. &Icirc;n sensul că dacă noi, ca şi cetăţeni, am fi informaţi de viaţa publică şi viaţa privată a demnitarilor, am putea elimina sentimentul de ne&icirc;ncredere pe care &icirc;l putem avea &icirc;n anumiţi demnitari. Asta ar atrage după sine creşterea prezenţei la vot a cetăţenilor, adică o mai bună implicare civică a cetăţenilor, de care unii se tot pl&acirc;ng, şi pe bună dreptate, şi ar legitima mult mai bine aleşii, demnitarii unei ţări. Vă mulţumesc!</span></span></p>
+<p><span style="font-family: 'Times New Roman', serif;"><span lang="ro-RO"><strong>Anca Pascu:</strong></span></span><span style="font-family: 'Times New Roman', serif;"><span lang="ro-RO"> - Mulţumim echipei afirmatoare. Acum echipa negatoare are la dispoziţie 3 minute pentru a adresa &icirc;ntrebări echipei negatoare.</span></span></p>
+<p><span style="font-family: 'Times New Roman', serif;"><span lang="ro-RO"><strong>Chestionare &icirc;ncrucișată 1:</strong></span></span></p>
+<p><span style="font-family: 'Times New Roman', serif;"><span lang="ro-RO"><strong>Edwina Nariţa:</strong></span></span><span style="font-family: 'Times New Roman', serif;"><span lang="ro-RO"> - Una dintre primele &icirc;ntrebări pe care dorim să le adresăm echipei afirmatoare ar fi: Care aspecte ale vieţii private a demnitarilor aţi dori să fie făcute publice?</span></span></p>
+<p><span style="font-family: 'Times New Roman', serif;"><span lang="ro-RO"><strong>Mădălina Manea:</strong></span></span><span style="font-family: 'Times New Roman', serif;"><span lang="ro-RO"> - Elementele din viaţa privată pe care considerăm că cetăţenii ar fi &icirc;ndreptăţiţi să le cunoască sunt, &icirc;n primul r&acirc;nd, cele legate de sănătate şi, &icirc;n al doilea r&acirc;nd, legate de viaţa intimă, dar doar &icirc;n măsura &icirc;n care acest lucru interferează cu viaţa publică a demnitarului. </span></span></p>
+<p><span style="font-family: 'Times New Roman', serif;"><span lang="ro-RO"><strong>Nicolae Ş</strong></span></span><span style="font-family: 'Times New Roman', serif;"><span lang="fr-FR"><strong>era:</strong></span></span><span style="font-family: 'Times New Roman', serif;"><span lang="fr-FR"> </span></span><span style="font-family: 'Times New Roman', serif;"><span lang="ro-RO">As adăuga eu un alt aspect &ndash; nu pot să uit că lucrez la Facultatea de Ştiinţe Economice &ndash; şi demnitarii se laudă de cele mai multe ori prin aşa-numita declaraţie de avere, care este pusă pe site-urile lumii, si toată lumea poate să vadă aceste informaţii. Uită să justifice de unde provin aceşti bani, şi, pe perioada mandatului lor, această declaraţie de avere de cele mai puţine ori se schimbă şi avem mici reţineri. </span></span></p>
+<p><span style="font-family: 'Times New Roman', serif;"><span lang="ro-RO"><strong>Edwina Nariţa:</strong></span></span><span style="font-family: 'Times New Roman', serif;"><span lang="ro-RO"> - De asemenea,aş vrea să ştiu dacă vorbim despre demnitari care candidează, sau demnitari care sunt deja aleşi?</span></span></p>
+<p><span style="font-family: 'Times New Roman', serif;"><span lang="ro-RO"><strong>Nicolae Ş</strong></span></span><span style="font-family: 'Times New Roman', serif;"><span lang="fr-FR"><strong>era:</strong></span></span><span style="font-family: 'Times New Roman', serif;"><span lang="fr-FR"> </span></span><span style="font-family: 'Times New Roman', serif;"><span lang="fr-FR"><strong>-</strong></span></span><span style="font-family: 'Times New Roman', serif;"><span lang="fr-FR"> </span></span><span style="font-family: 'Times New Roman', serif;"><span lang="ro-RO">Din punctul nostru de vedere, demnitar este şi cel care candidează, este viitorul demnitar. Este demnitar si cel care &icirc;ndeplineşte o funcţie publică &icirc;n domeniul pe care l-am precizat, şi anume, politic.</span></span></p>
+<p><span style="font-family: 'Times New Roman', serif;"><span lang="ro-RO"><strong>Ovidiu Pecican:</strong></span></span><span style="font-family: 'Times New Roman', serif;"><span lang="ro-RO"> - Şi foştii?</span></span></p>
+<p><span style="font-family: 'Times New Roman', serif;"><span lang="ro-RO"><strong>Nicolae Şera:</strong></span></span><span style="font-family: 'Times New Roman', serif;"><span lang="ro-RO"> - Chiar si foştii...</span></span></p>
+<p><span style="font-family: 'Times New Roman', serif;"><span lang="ro-RO"><strong>Ovidiu Pecican:</strong></span></span><span style="font-family: 'Times New Roman', serif;"><span lang="ro-RO"> - Intrebarea mea era </span></span><span style="font-family: 'Times New Roman', serif;">&ldquo;</span><span style="font-family: 'Times New Roman', serif;"><span lang="ro-RO">Şi foştii demnitari?&rdquo;</span></span></p>
+<p><span style="font-family: 'Times New Roman', serif;"><span lang="ro-RO"><strong>Nicolae Şera:</strong></span></span><span style="font-family: 'Times New Roman', serif;"><span lang="ro-RO"> - Chiar şi foştii - ne g&acirc;ndim la foştii preşedinţi ai unei ţări, prim-miniştri, miniştri şi, de multe ori, chiar dacă atunci c&acirc;nd erau ei &icirc;n funcţie nu se puteau da informații publicului, după o perioadă de x ani, publicul află ce este de-ajuns.</span></span></p>
+<p><span style="font-family: 'Times New Roman', serif;"><span lang="ro-RO"><strong>Discurs Negator 1</strong></span></span></p>
+<p><span style="font-family: 'Times New Roman', serif;"><span lang="ro-RO"><strong>Edwina Nariţa:</strong></span></span><span style="font-family: 'Times New Roman', serif;"><span lang="ro-RO"> - Ca echipă negatoare, plecăm de la premisele stabilite &icirc;mpreună cu colegii noştri, că vorbim at&acirc;t despre demnitarii care candidează pentru o funcţie, c&acirc;t si despre cei care sunt deja aleşi. &Icirc;n primul r&acirc;nd, considerăm că pentru cetăţeni este foarte important, sau cel mai important ca demnitarii să &icirc;i reprezinte, şi &icirc;n cazul &icirc;n care această cerinţă nu este &icirc;ndeplinită, ei să fie traşi la răspundere. O să dorim a continua aici să vă demonstrăm cum de fapt, nici un aspect al vieţii private, fie că vorbim de sănătate, viaţă intimă sau condiţie materială, nu-i oferă cetăţeanului modalitatea de a-l trage la răspundere pe demnitar. &Icirc;n primul rand, să vorbim despre sănătate. Doar pentru că un om este bolnav, nu &icirc;nseamnă ca acel om nu este capabil să-şi &icirc;ndeplinească o funcţie, sau un loc de muncă sau anumite cerinţe ale acestuia. </span></span><span style="font-family: 'Times New Roman', serif;"><span lang="fr-FR">Putem oferi varii exemple &icirc;n acest sens. Cel mai bun exemplu este Roosevelt. A dus la final patru mandate, deşi suferea de numeroase boli. Asta nu &icirc;nseamnă că el este mai puţin capabil; ba chiar putem vorbi despre ceea ce el a făcut &icirc;n legatură cu Arabia Saudita, &icirc;n ciuda faptului că suferea de un handicap. Ba mai mult, faptul că facem publică o boală de care un candidat suferă, poate sa-i aducă acestuia nenumărate trăiri interioare şi psihologice, deoarece el se poate simţi inferior, desi nu e mai puţin capabil. Şi nu putem vorbi despre speranţa de viaţă, pentru că vedem &icirc;n foarte multe cazuri medici care se &icirc;nşeală. Considerăm un alt exemplu ca fiind Dwight Eisenhower. Deşi s-a preconizat că nu va trece cel de-al doilea mandat, acesta a dus la final 8 ani după &icirc;nchiderea acestuia. </span></span><span style="font-family: 'Times New Roman', serif;">Deci nici previziunile medicilor nu pot fi luate &icirc;ntotodeauna de bune. </span><span style="font-family: 'Times New Roman', serif;"><span lang="fr-FR">Referitor la viaţa intimă: considerăm că ceea ce face un om &icirc;n spatele uşilor &icirc;nchise atunci c&acirc;nd este vorba de viaţa lui personală, nu influenţează modalitatea de a g&acirc;ndi la locul de muncă. Putem numi enorm de mulţi oameni foarte capabili care poate au mai mult de o nevastă şi &icirc;n plus putem da exemple de ţări &icirc;n care aceasta este o practică adecvată prin lege. Ceea ce face omul este strict de viaţa familială. &Icirc;n ceea ce priveşte condiţia medicală: Fiecare om sau cetăţean al unui stat este supus unor anumite legi. El este controlat de instituţii abilitate. Asemenea instituţii ar trebui să &icirc;i controleze şi pe demnitarii publici. C&acirc;t timp aceste instituţii &icirc;şi fac treaba, ei ar trebui să fie traşi la raspundere exact ca orice alt cetăţean. &Icirc;n plus, după &icirc;ncheierea unui mandat, care durează doar o anumită perioadă de timp, acest om redevine un simplu cetăţean. Nu ar trebui să fie făcută publică viaţa privată pentru că este doar o slujbă. Slujba se &icirc;ncheie după cele 8 ore. At&acirc;ta timp c&acirc;t in cele 8 ore omul &icirc;şi face treaba foarte bine, nimănui nu &icirc;i pasă ce face la &icirc;ncheierea programului. Deci dacă voi consideraţi că există orice posibilitate &icirc;n care viaţa privată a unui om să &icirc;i influenţeze capacitatea acestuia la locul de muncă, atunci da, este dreptul să ştim tot ceea ce face. Dacă noi &icirc;i considerăm profesionişti cu adevărat, atunci nu.</span></span></p>
+<p><span style="font-family: 'Times New Roman', serif;"><span lang="fr-FR"><strong>Chestionare &icirc;ncrucișată 2&nbsp;:</strong></span></span></p>
+<p><span style="font-family: 'Times New Roman', serif;"><span lang="fr-FR"><strong>Nicolae </strong></span></span><span style="font-family: 'Times New Roman', serif;"><span lang="ro-RO"><strong>Şera</strong></span></span><span style="font-family: 'Times New Roman', serif;"><span lang="fr-FR"><strong>:</strong></span></span><span style="font-family: 'Times New Roman', serif;"><span lang="fr-FR"> - Aş dori să pun două &icirc;ntrebări&hellip; poate că vor fi chiar trei. Referitor la boală&nbsp;: Suntem de acord că o persoană care suferă de anumite boli poate să &icirc;ndeplinească funcţii publice, şi chiar foarte bine. Nu toate bolile afectează capacităţile raţionale ale omului. Dar, ştiind eu, cetăţean, că X demnitar, viitor demnitar suferă de o anumită boală, oare nu este un argument afectiv care să mă determine ca din milă să &icirc;l aleg? Este o &icirc;ntrebare&hellip;</span></span></p>
+<p><span style="font-family: 'Times New Roman', serif;"><span lang="fr-FR"><strong>Edwina Nari</strong></span></span><span style="font-family: 'Times New Roman', serif;"><span lang="ro-RO"><strong>ţa</strong></span></span><span style="font-family: 'Times New Roman', serif;"><span lang="fr-FR"><strong>:</strong></span></span><span style="font-family: 'Times New Roman', serif;"><span lang="fr-FR"> - Am oferit un exemplu &icirc;n care o boală, deşi era facută publică, nu a afectat decizia cetăţenilor de a-l realege &icirc;n funcţie pe un preşedinte. Echipa negatoare susţine faptul că demnitarii publici ar trebui să treacă printr-o serie de teste psihologice, deoarece considerăm că doar aceste aspecte ar putea influenţa capacitatea lor de decizie. Ba chiar mai mult, susţinem faptul că aceste teste ar trebui făcute şi de-a lungul mandatului, deoarece sunt supuşi la un stres permanent. Dar bolile corpului, care nu afectează capacitatea de a lua decizii a acestora nu ar trebui făcute publice.</span></span></p>
+<p><span style="font-family: 'Times New Roman', serif;"><span lang="fr-FR"><strong>Ovidiu Pecican:</strong></span></span><span style="font-family: 'Times New Roman', serif;"><span lang="fr-FR"> - Vreau să adaug, ca istoric, un fapt - anume că &icirc;n perioada celei mai mari prosperităţi a sa, Romania a fost condusă de Dimitrie Sturza, era &icirc;n timpul lui Carol 1, &icirc;nainte de Primul Război Mondial. S-a dovedit că acesta, &icirc;n ultimul său mandat, era complet sclerozat. Asta nu a &icirc;mpiedicat Romania să prospere &icirc;n acea perioadă. Iată un caz paradoxal care merită reţinut &icirc;n minte. Totuşi, acum merită amintit şi faptul că &icirc;n perioada marii crize economice , guvernul era condus de ţărăniştii lui Iuliu Maniu, un om nu doar integru, ci şi foarte lucid, şi asta nu a ajutat prea mult pentru redresarea Rom&acirc;niei din punct de vedere economic.</span></span></p>
+<p><span style="font-family: 'Times New Roman', serif;"><span lang="fr-FR"><strong>Nicolae </strong></span></span><span style="font-family: 'Times New Roman', serif;"><span lang="ro-RO"><strong>Ş</strong></span></span><span style="font-family: 'Times New Roman', serif;"><span lang="fr-FR"><strong>era:</strong></span></span><span style="font-family: 'Times New Roman', serif;"><span lang="fr-FR"> - Aş mai pune o &icirc;ntrebare. Partea adversă, ca să spun aşa, a invocat faptul că instituţiile statului ar trebui să-şi facă treaba de verificare din mai multe puncte de vedere, şi dacă d&acirc;nşii consideră propice, atunci să dea publicităţii aceste informaţii. Dacă d&acirc;nşii cred că asta ar afecta imaginea unei persoane publice, demnitare, &icirc;ntrebarea mea este dacă cunoaşteţi cazuri &icirc;n care demnitari au abuzat de funcţia pe care o au şi şi-au scos copiii de la arest, de exemplu. Şi cum au intervenit instituţiile statului in acest caz?</span></span></p>
+<p><span style="font-family: 'Times New Roman', serif;"><span lang="fr-FR"><strong>Edwina Nari</strong></span></span><span style="font-family: 'Times New Roman', serif;"><span lang="ro-RO"><strong>ţ</strong></span></span><span style="font-family: 'Times New Roman', serif;"><span lang="fr-FR"><strong>a:</strong></span></span><span style="font-family: 'Times New Roman', serif;"><span lang="fr-FR"> - Există numeroase cazuri &icirc;n care se face abuz de putere, sau abuz de funcţie, doar că vorbim despre demnitari, nu despre modul &icirc;n care instituţiile funcţionează. Faptul că o instituţie este sau nu este capabilă, nu este moţiunea pe care o discutăm astăzi aici. Dacă instituţiile ar funcţiona conform statutului şi legilor după care ele sunt guvernate, aceste cazuri nu s-ar &icirc;nt&acirc;mpla deoarece este democraţie şi ierarhia ar trebui să-şi spună cuv&acirc;ntul.</span></span></p>
+<p><span style="font-family: 'Times New Roman', serif;"><span lang="fr-FR"><strong>Discurs Afirmator 2</strong></span></span></p>
+<p><span style="font-family: 'Times New Roman', serif;"><span lang="ro-RO"><strong>Mădălina Manea</strong></span></span><span style="font-family: 'Times New Roman', serif;"><span lang="fr-FR"><strong>:</strong></span></span><span style="font-family: 'Times New Roman', serif;"><span lang="fr-FR"> - Eu şi domnul Şera suntem aici pentru a vă arăta cum este foarte important dreptul la informare al cetăţenilor, ba chiar mai mult, poate fi mai important dec&acirc;t dreptul la viaţă privată al demnitarilor. Să vedem &icirc;n ce context se petrec lucrurile acestea. Argumentele pe care le-am adus noi au fost următoarele: primul, faptul că demnitarul are o anumită responsabilitate faţă de cetăţeni. El este plătit ca să &icirc;şi &icirc;ndeplinească slujba şi ca orice angajat, să spunem, este dator cu explicaţii celui care &Icirc;l angajează. &Icirc;n acest caz avem cetăţenii. Şi pentru acest motiv el trebuie să răspundă pentru acţiunile sale. Următorul argument pe care l-am adus este că există o distincţie destul de neclară &icirc;ntre viaţa publică şi viaţa privată. Aceste lucruri se petrec fie din cauză că de multe ori persoanele din apropierea figurii publice respective sunt ele &icirc;nsele figuri publice, şi avem exemplul Carlei Bruni, fie pentru că demnitarii respectivi aleg să amestece viaţa publică cu viaţa privată. Şi un exemplu este Obama, care &icirc;şi plimbă familia peste tot şi care afişează această imagine de familie fericită. &Icirc;n momentul &icirc;n care un demnitar &icirc;şi aduce familia, sau orice element din viaţa privată, &icirc;n ochii publicului, considerăm că este necesar ca cetăţenii &icirc;nşişi să aibă dreptul să verifice dacă această imagine este reală sau nu. Apoi, care elemente mai exact din viata privată considerăm noi că sunt relevante&nbsp;? După cum am spus - sănătatea, viaţa intimă şi nu &icirc;n ultimul r&acirc;nd, declaraţia de avere, respectiv condiţia materială şi cum evoluează ea &icirc;n timpul mandatului. Boala nu &icirc;nseamnă că o persoană nu este capabilă, dimpotrivă! O boala fizică nu este un indiciu că abilitățile psihice ale unui demnitar sunt afectate. &Icirc;nsă, vă spuneam că cetăţenii ar trebui să aibă dreptul să cunoască acest lucru şi să decidă ei dacă chiar contează sau nu boala respectivă &icirc;n &icirc;ndeplinirea funcţiei. De ce? Pentru că sunt anumite indicaţii legate de acestea şi avem un exemplu &icirc;n reprezentarea ţării. Să vedem cum Boris Elţin, care a fost preşedinte al Rusiei &icirc;ntre &lsquo;91 şi&rsquo; 99, a fost acuzat &icirc;n nenumărate r&acirc;nduri de presa internaţională că ar apărea beat &icirc;n public. Ei bine, considerăm că cetăţenii ar fi trebuit să ştie că el suferea de fapt de o boală nervoasă, şi că acest lucru &icirc;i determina dezechilibrul, incoerența şi aşa mai departe. Vedem, deci, cum aici aspectul acesta al sănătăţii a afectat imaginea Rusiei &icirc;n străinătate. Ca să nu mai vorbim de faptul că există şi alte exemple &nbsp;de politicieni nominalizati pentru inalte functii (cum ar fi pozitia de vicepresedinte al Statelor Unite spre exemplu) &nbsp;care s-au retras pentru că a aflat că un ziar urma să publice date legate de starea sa de sănătate -el suferea de o depresie- și a fost nevoit mai apoi să recunoască el &icirc;nsuşi și să se retragă. Ce implicații are acest lucru? Sunt mai multe aspecte: primul, stresul pe care &icirc;l suportă acest viitor demnitar, tem&acirc;ndu-se că se va afla de boala lui. Apoi, apar tot felul de insinuări şi acuze nejustificate, cum a fost cazul cu dependența  de alcool a preşedintele respectiv, deși nu era adevarat. </span></span><span style="font-family: 'Times New Roman', serif;">O dată facută publică informația, &icirc;nsă, apare o ne&icirc;ncredere &icirc;n acest demnritar. Apoi am vorbit de faptul că demnitarii sunt un model, şi aici putem vorbi de două lucruri: unu -  fie ei afişeaz</span><span style="font-family: 'Times New Roman', serif;"><span lang="ro-RO">ă</span></span><span style="font-family: 'Times New Roman', serif;"> o imagine şi de fapt aceasta nu este adevarată, şi avem de-a face cu ipocrizia, iar cetăţenii au dreptul să ştie cum este cel pe care &icirc;l vor alege, sau l-au ales şi, &icirc;n al doilea r&acirc;nd - cetăţenii au un set de valori şi anumite criterii după care evaluează, şi ar trebui să se faca publice aspecte legate de viaţa demnitarilor pentru a şti dacă considerăm că sunt capabili sau nu să &icirc;ndeplinească o anumită poziţie. </span><span style="font-family: 'Times New Roman', serif;"><span lang="fr-FR">De asemenea, echipa negatoare ne-a spus că demnitarul, imediat ce işi termină slujba nu mai este demnitar, nu mai poate fi tras la răspundere. Noi vorbim de perioada c&acirc;t a fost &icirc;n timpul slujbei, chiar dacă acum a terminat-o.</span></span></p>
+<p><span style="font-family: 'Times New Roman', serif;"><span lang="fr-FR"><strong>Discurs Negator 2</strong></span></span></p>
+<p><span style="font-family: 'Times New Roman', serif;"><span lang="fr-FR"><strong>Ovidiu Pecican:</strong></span></span><span style="font-family: 'Times New Roman', serif;"><span lang="fr-FR"> - N-am idee ce efecte retorice sunt &icirc;ngăduite cu acest prilej. Orice? (Edwina Nari</span></span><span style="font-family: 'Times New Roman', serif;"><span lang="ro-RO">ţ</span></span><span style="font-family: 'Times New Roman', serif;"><span lang="fr-FR">a: Da) Atunci revin să gesticulez, să-ncerc să-mi smulg părul din cap. Bine! Ideea e urmatoarea: e fascinant discursul susţinătorilor presei, mai ales că şi eu mai scriu &icirc;n presă din c&acirc;nd &icirc;n c&acirc;nd şi aproape că m-au convins. Există totuşi c&acirc;teva mici probleme. Şi principala problemă pe care o văd eu este că demnitarii sunt oameni ca şi noi, ei se aleg dintre noi. Nu m-aş mira să o vad pe colega mea &icirc;n cur&acirc;nd un demnitar. Ar arăta foarte bine &icirc;n guvern, &icirc;n timp ce colega va ajunge probabil &icirc;n presă o foarte bună persoană, eu ştiu, PR. Acuma ce vreau să zic: fiind ca şi noi, au acelaşi drept ca şi noi, exact ca oricare dintre noi, la intimitate. De ce? Pentru că viaţa omului este alcătuită din viaţa publică si viaţa privată. Dacă iei o slujbă, chiar şi &icirc;n slujba unui partid, a unei administraţii, nu &icirc;nseamnă că renunţi la viaţa ta privată. Ai nevoie de puţină caldură, mai ales că te duci să slujeşti. A fi un slujbaş al statului, sau a fi un demnitar, &icirc;n oricare dintre &icirc;nţelesurile acestui cuv&acirc;nt &icirc;nseamnă de fapt, să te pui &icirc;n slujba comunităţii, a oamenilor. Prima răsplată nu e banul, nu e accesul la anumite privilegii, este, cum să vă spun eu, respectul. Respectul şi căldura cu care eşti &icirc;nt&acirc;mpinat. E absolut obligatoriu să &icirc;ţi dai seama de ceea ce faci, cel puţin &icirc;ntr-o democraţie funcţională. Dar există o limită p&acirc;nă la care poţi fi interogat asupra activităţilor tale inclusiv private, şi acea limită este dată foarte clar de interesul public. Avem de altfel şi o lege &icirc;n acest sens: legea informaţiilor de interes public. Acolo sunt destul de clar stipulate aceste limite p&acirc;nă la care putem merge. Sigur că putem fi fascinaţi de un preşedinte care &icirc;n Biroul Oval exersează ţigările de foi &icirc;n tot felul de scopuri bizare. Dar, dacă nu s-ar petrece aceste lucruri &icirc;n Biroul Oval, și dacă nu ar fi vorba despre o asemenea persoană, oare aţi socoti legitim să fiţi, cum  să vă spun eu, sub supraveghere permanentă? Mai nou, media &icirc;ncearcă să ne v&acirc;ndă inclusiv această formulă de supraveghere permanentă ca pe un show minunat. </span></span><span style="font-family: 'Times New Roman', serif;">Big Brother is watching you. S-a promovat chiar denumirea de Big Brother de la George Orwell care o foloseşte &icirc;ntr-un roman care descrie o teroare totalitară. Nu-i posibil aşa ceva! Demnitarii nu sunt scutiţi, nefiind marţieni, nefiind, eu ştiu, veniţi din Star Trek sau din altă parte, nu sunt scutiţi de drepturile omului. Drepturile lor trebuiesc respectate ca şi ale noastre, şi ei apără şi drepturile noastre. Dacă sunt abuzuri, trebuie sancţionate &ndash; pe linie de serviciu. Dacă demnitarii nu sunt sfinți, săracii, &icirc;nseamnă că nu sunt sfinţi. Dacă ar fi sfinţi, ar ajunge &icirc;n Rai, nu &icirc;n guvern, sau eu ştiu, &icirc;n oficii, &icirc;n funcţii publice. Să fie modele? E minunat. Sună foarte bine. Dar pe urmă iar mă &icirc;ntorc la Biblie şi zic conform cuv&acirc;ntului biblic &ldquo;să nu-ţi faci chip cioplit&rdquo;. </span><span style="font-family: 'Times New Roman', serif;"><span lang="fr-FR">Model, &icirc;n ce limite? Un model &icirc;n comportament? Un model de eficienţă aş dori eu şi de onestitate, dacă e posibil. E excelent că avem o presă liberă, că ea poate fi c&acirc;inele de pază al democraţiei, dar p&acirc;nă la marginea patului meu, p&acirc;nă la marginea patului meu de spital, p&acirc;nă la marginea patului meu dintr-o reşedinţă de vacanţă, p&acirc;nă&hellip; nu mă enervez! &Icirc;n fine! Cred că, pe de altă parte, ar trebui ca viaţa noastră publică &ndash; a noastră, a oamenilor &icirc;n general de pe planetă- sa fie scutită de caracterul prea invaziv al suspiciunii. E bine să fii suspicios, filozofia ne invaţă asta: pui mereu &icirc;ntrebări care te ajută să &icirc;naintezi &icirc;n cunoaştere, dar cu o limită, iarăşi. Iar acea limită este dată de iubirea faţă de oameni, de &icirc;ncrederea &icirc;n ei şi de tot ceea ce inseamnă valoare pozitivă. Nu-i putem controla &icirc;n felul ăla şi merg&acirc;nd din faţă spre &icirc;napoi, astfel &icirc;nc&acirc;t aş zice eu: e splendid că putem convieţui cu presa. Atenţie! Noi o chemăm, &icirc;ncercăm să mediatizăm, să dob&acirc;ndim un impact mai mare al gesturilor noastre chiar şi cele de mai mică relevanţă publică, dar care ne pot acredita ca personaje chiar interesante. Eu zic &ldquo;noi&rdquo; acum, vorbesc &icirc;n numele demnitarilor, nu al meu, desigur, dar există o limită. E senzaţional să ai reflectoarele la &icirc;ndem&acirc;nă, să fii filmat. &Icirc;nsă după asta aş merge şi eu acasă că vreau să măn&acirc;nc o pizza, nu vreau să r&acirc;dă toată populaţia ţării că am m&acirc;ncat pizza, deci o m&acirc;ncare italienească, internaţionalizată, &icirc;n loc de sarmale. Cred că mă veţi &icirc;nţelege &icirc;n acest sens. Poate nu e foarte important nici dacă sunt un demnitar care provine dintr-o familie săracă, rămasă săracă şi care măn&acirc;ncă p&acirc;ine cu untură acasă. Mulţumesc!</span></span></p>
+<p lang="fr-FR">&nbsp;</p>
+<p lang="fr-FR">&nbsp;</p>
+<p><span style="font-family: 'Times New Roman', serif;"><span lang="fr-FR"><em><strong>Anca Pascu:</strong></em></span></span><span style="font-family: 'Times New Roman', serif;"><span lang="fr-FR"><em> - Vreau să le mulţumesc celor patru pentru această dezbatere, zic eu interesantă şi palpitantă, &icirc;n acelaşi timp, cu un final interesant. Vreau, &icirc;nainte de a vota, să vă rog să le adresaţi &icirc;ntrebări. Voi da un microfon &icirc;n sală, şi unul va ram&acirc;ne aici.</em></span></span></p>
+<p><span style="font-family: 'Times New Roman', serif;"><span lang="fr-FR"><em><strong>Interven</strong></em></span></span><span style="font-family: 'Times New Roman', serif;"><span lang="ro-RO"><em><strong>ţie</strong></em></span></span><span style="font-family: 'Times New Roman', serif;"><span lang="fr-FR"><em><strong> (Elena Lomor</strong></em></span></span><span style="font-family: 'Times New Roman', serif;"><span lang="ro-RO"><em><strong>ă</strong></em></span></span><span style="font-family: 'Times New Roman', serif;"><span lang="fr-FR"><em><strong>):</strong></em></span></span><span style="font-family: 'Times New Roman', serif;"><span lang="fr-FR"><em> - Vreau să pun o &icirc;ntrebare echipei negatoare, şi anume: dumneavoastră consideraţi că era mai &icirc;n regulă dacă aventurile demnitarului Berlusconi ar fi rămas &icirc;n sfera privată şi nu ar fi fost făcute publice, dat fiind faptul că erau cu o minoră? </em></span></span></p>
+<p><span style="font-family: 'Times New Roman', serif;"><span lang="fr-FR"><em><strong>Edwina Nari</strong></em></span></span><span style="font-family: 'Times New Roman', serif;"><span lang="ro-RO"><em><strong>ţ</strong></em></span></span><span style="font-family: 'Times New Roman', serif;"><span lang="fr-FR"><em><strong>a:</strong></em></span></span><span style="font-family: 'Times New Roman', serif;"><span lang="fr-FR"><em> - Aventurile domnului Silvio Berlusconi erau ilegale, ţineau de viaţa privată. Faptul că intreţinea relaţii sexuale cu o minoră este o ilegalitate conform legilor. El trebuia pedepsit ca şi cetăţean, nu neapărat ca  demnitar. Orice om de pe planeta asta care intreţine relaţii sexuale cu o minoră ar trebui pedepsit, nu doar el pentru că era Silvio Berlusconi. (Ovidiu Pecican: &ldquo;Aviz tuturor amatorilor&rdquo;)</em></span></span></p>
+<p><span style="font-family: 'Times New Roman', serif;"><span lang="fr-FR"><em><strong>Anca Pascu:</strong></em></span></span><span style="font-family: 'Times New Roman', serif;"><span lang="fr-FR"><em> - Alte &icirc;ntrebări din sală, vă rugăm. Să nu fiţi timizi, vă rugăm.</em></span></span></p>
+<p><span style="font-family: 'Times New Roman', serif;"><span lang="fr-FR"><em><strong>Interventie:</strong></em></span></span><span style="font-family: 'Times New Roman', serif;"><span lang="fr-FR"><em> - Mulţumesc! Ambelor echipe vreau să le adresez o &icirc;ntrebare, pentru că au c&acirc;te un profesor &icirc;n componenţă. Aş vrea să vă &icirc;ntreb </em></span></span><span style="font-family: 'Times New Roman', serif;"><span lang="ro-RO"><em>dacă cumva consideraţi că meseria dumneavoastră de profesor este demnitate, unu, şi doi, dacă este publică, şi 3, dacă este şi demnitate şi publică... şi de demnitate publică.</em></span></span></p>
+<p><span style="font-family: 'Times New Roman', serif;"><span lang="ro-RO"><em><strong>Ovidiu Pecican:</strong></em></span></span><span style="font-family: 'Times New Roman', serif;"><span lang="ro-RO"><em> - Da, are o relevanţă publică această meserie şi este sub&icirc;ntinsă de o componentă care ţine de demnitate. Cred că de fapt nu doar la nivel academic, ci &icirc;ncă de la clasa &icirc;nt&acirc;i, omuleţul pe care &icirc;l tratăm este un om care are dreptul să i se respecte drepturile, să fie pus &icirc;n valoare. El participă la un act al ideii, un act educativ, aşa că este important să &icirc;i urmăreşti creşterea, nu descreşterea, ca a Imperiului Otoman. Aaşa &icirc;nc&acirc;t, da, are relevanţă publică, este sub&icirc;ntinsă de demnitate această meserie de dascăl, &icirc;n sens foarte larg, &icirc;n toate gradele şi nivelurile, de la mică educatoare, p&acirc;nă la marele academician care predă &icirc;ntr-o aulă &ndash; nu este cazul nostru, dar totuşi, nu e o demnitate publică  &icirc;n accepţiunea &icirc;n care s-a definit aici termenul de demnitar. Sigur că dacă un profesor, să zicem dintr-o aulă academică, ajunge premier fiind expert &icirc;n ştiinţe juridice sau &icirc;n politologie, lucrurile se &icirc;mpletesc. Se &icirc;mpletesc &icirc;ntr-o manieră interesantă. Ele devin chiar foarte relevante atunci c&acirc;nd profesorul respectiv taie salariile altor profesori, dar e de evitat acest exemplu cred.</em></span></span></p>
+<p><span style="font-family: 'Times New Roman', serif;"><span lang="ro-RO"><em><strong>Nicolae Şera:</strong></em></span></span><span style="font-family: 'Times New Roman', serif;"><span lang="ro-RO"><em> - &Icirc;n principiu, eu sunt foarte de acord cu ce a spus colegul negator, şi cred totuşi că dacă - deci mă refer exclusiv la persoana mea &ndash;dacă aş avea o boală psihică vizibilă, sau invizibilă, cred că nici nu ar trebui foarte tare să o afirm &icirc;n public, că publicul şi-ar da seama, şi m-ar elimina. E valabil pentru mai multe cadre. </em></span></span></p>
+<p><span style="font-family: 'Times New Roman', serif;"><span lang="ro-RO"><em><strong>Ovidiu Pecican:</strong></em></span></span><span style="font-family: 'Times New Roman', serif;"><span lang="ro-RO"><em> - Depinde şi de profilul bolii. Cu nevroza mai merge, cu psihozele nu prea. Nevroticii-s minuţioşi aşa.</em></span></span></p>
+<p><span style="font-family: 'Times New Roman', serif;"><span lang="ro-RO"><em><strong>Anca Pascu:</strong></em></span></span><span style="font-family: 'Times New Roman', serif;"><span lang="ro-RO"><em> - Vă mulțumim pentru &icirc;ntrebări și pentru răspunsuri.</em></span></span></p>
+</div>
+                <div class='clear'></div>
+        </div><!-- end main content -->
+         <div class='clear'></div>
+</div>
+<div id="pix"></div>
+
+
+                                </div><!--end main -->
+                                <div id='parteneri'>
+                                    <span class='tr'></span><span class='tl'></span><span class='br'></span><span class='bl'></span><span id="filler"></span>
+                                    <div class='parteneri' id='sustinatori'>
+                                        <span class='floating_text' id='un_proiect'>Un proiect</span>
+                                        <a href='http://www.ardor.org.ro/'><div class='image' id='ardor'>Ardor</div></a>
+                                        <span class='floating_text' id='finantatori'>Finanțatori</span>
+                                        <a href='http://www.opensocietyfoundations.org/'><div class='image' id='open_society'>Open Society Foundation </div></a>
+                                        <a href='http://www.studentiq.ro//'><div class='image' id='memoplus'>MemoPlus</div></a>
+                                        <!-- <a href='http://www.ratiufamilyfoundation.com/'><div class='image' id='FundatiaRatiu'>Ardor</div></a>
+                                        <a href='http://www.eef.md/'><div class='image' id='eef'>East Europe Foundation</div></a>
+                                        <a href='http://www.mts.gov.md/'><div class='image' id='mdminister'>Ministerul Tineretului si Sportului al Republicii Moldova</div></a> -->
+
+                                        <span class='floating_text' id='parteneri_text'>Parteneri</span>
+
+                                        <a href='http://www.policycenter.eu/'><div class='image' id='PolicyCenter'>Policy Center</div></a>
+                                        <a href='http://www.britishcouncil.org/'><div class='image' id='BritishCouncil'>British Council</div></a>
+                                        <a href='http://www.europuls.ro/'><div class='image' id='europuls'>Europuls</div></a>
+                                        <a href='http://www.cere.ro/'><div class='image' id='cere'>Ce-Re</div></a>
+                                        <a href='http://www.primeromania.ro/'><div class='image' id='prime'>Prime Romania</div></a>
+                                        <a href='http://www.cji.ro/'><div class='image' id='cji'>Centrul pentru jurnalism independent</div></a>
+                                        <a href='http://www.aiesectm.ro/'><div class='image' id='aisec'>Aisec</div></a>
+                                        <!-- ===================================================================================================== -->
+                                        <a href='http://www.cogitus.ro/'><div class='image' id='cogitus'>Cogitus</div></a>
+                                        <a href='http://www.adevarul.ro/international/foreign_policy/'><div class='image' id='foreignPolicy'>Foreign Policy</div></a>
+                                        <a href='http://www.elsa.ro/'><div class='image' id='elsa'>Elsa</div></a>
+                                        <a href='http://www.vipromania.ro/'><div class='image' id='vipromania'>Voluntari pentru idei si proiecte</div></a>
+                                        <a href='http://www.ongtrust.ro/'><div class='image' id='ongtrust'>Trust</div></a>
+
+                                        <!-- ===================================================================================================== -->
+                                        <a href='http://www.leap.ro/'><div class='image' id='leap'>Leap</div></a>
+                                        <a href='http://www.younginitiative.org/'><div class='image' id='younginitiative'>Asociatia young initiative</div></a>
+                                        <a href='http://www.asjc.ro/'><div class='image' id='asjc'>Asjc</div></a>
+                                        <a href='http://osut.ro/'><div class='image' id='osut'>Osut</div></a>
+                                        <div class='clear'></div>
+                                    </div>
+                                    <div class='parteneri' id='parteneri_institutionali'>
+                                        <span class='floating_text' id='sponsori_text'>Sus&#539;in&#x0103;tori</span>
+                                        <a href='http://www.cartier.md/'><div class='image' id='cartier_logo'>Editura Cartier</div></a>
+                                        <a href='http://www.pll.md/ro/'><div class='image' id='biblio_logo'>Biblioteca publica de drept</div></a>
+                                        <span class='floating_text' id='institutii_text'>Parteneri institu&#539;ionali</span> 
+                                        <ul id='institutii'>
+                                            <!-- <span class='floating_text' id='institutii_text'>Parteneri institu&#539;ionali:</span> -->
+                                            <li><a href='http://www.politice.ro/'>Facultatea de &#536;tiin&#539;e Politice SNSPA </a></li>
+                                            <li><a href='http://www.comunicare.ro/'>Facultatea de Comunicare &#537;i Rela&#539;ii Publice SNSPA</a></li>
+                                            <li><a href='http://www.fspub.ro/'>Facultatea de &#536;tiin&#539;e Politice Universitatea Bucure&#537;ti</a></li>
+                                            <li><a href='http://www.filosofie.unibuc.ro/'>Facultatea de Filosofie Universitatea Bucure&#537;ti</a></li>
+                                            <li><a href='http://litere.unibuc.ro/'>Facultatea de Litere din Universitatea Bucure&#x015f;ti</a></li>
+                                            <li><a href='http://www.unibuc.ro/ro/fac_fsas_ro'>Facultatea de Sociologie Universitatea Bucure&#537;ti</a></li>
+                                            <li><a href='http://laws.uaic.ro/'>Facultatea de Drept Universitatea Alexandru Ioan Cuza Ia&#537;i</a></li>
+                                            <li><a href='http://www.uaic.ro/uaic/bin/view/Academic/Filosofie'>Facultatea de Filosofie si &#536;tiin&#539;e Social Politice Universitatea AIC Ia&#537;i</a></li>
+                                            <li><a href='http://www.upa.ro/'>Facultatea de Drept si Facultatea de &#x015e;tiin&#x0163;e Politice si Administrative Universitatea Petre Andrei Ia&#x015f;i</a></li> 
+
+                                            <li><a href='http://www.ubbcluj.ro/'>Universitatea Babe&#537;-Bolyai Cluj Napoca</a></li>
+                                            <li><a href='http://www.uvt.ro/'>Universitatea de Vest Timi&#537;oara</a></li>
+                                            <li><a href='http://www.upt.ro/'>Universitatea Politehnica Timi&#537;oara</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class='parteneri' id='parteneri_media'>
+                                        <span class='floating_text' id='media_text'>Parteneri media</span>
+                                        <a href='http://www.hotnews.ro/'><div class='image' id='hotnews'>HotNews</div></a>
+                                        <!-- <a href='http://www.lumebuna.ro/'><div class='image' id='lumebuna'>Lume Buna</div></a> -->
+                                        <a href='http://www.romaniapozitiva.ro/'><div class='image' id='romaniapozitiva'>Romania Pozitiva</div></a>
+                                        <a href='http://totb.ro/'><div class='image' id='thinkoutsidethebox'>Think Outside The Box</div></a>
+                                        <a href='http://www.facebook.com/carevasazica.vip'><div class='image' id='carevasazica'>Carevasazica</div></a>
+                                        <a href='http://www.studentie.ro/'><div class='image' id='studentiero'>Studentie.ro</div></a>
+                                        <a href='http://startub.unibuc.ro/'><div class='image' id='startub'>startub.unibuc.ro</div></a>
+                                        <!-- <a href='http://www.tvr.ro/tvr_cluj.php'><div class='image' id='tvrcluj'>Tvr Cluj</div></a> -->
+                                        <!-- <a href='http://www.radiotransilvania.ro'><div class='image' id='radiotransilvania'>Radio Transilvania</div></a> -->
+                                        <a href='http://iasifun.ziaruldeiasi.ro/'><div class='image' id='iasifun'>Iasi fun</div></a>
+                                        <a href='http://www.ziaruldeiasi.ro/'><div class='image' id='ziaruldeiasi'>Ziarul de Iasi</div></a>
+                                        <a href='http://www.kissfm.ro/timisoara'><div class='image' id='kissfm'>KissFm</div></a>
+
+                                        <div class='clear'></div> 
+                                    </div>
+                                    <div class='clear'></div>
+
+                                </div>	
+                            </div>	<!-- end wrap -->
+                            <div id='footer_mare'>
+                                <div id='footer'>
+                                    <div id='links' class='footer'>
+                                        <div id='menu1' style='margin:auto;'> <ul id='meniu_prinicpal'><li><a href='contacte/index.html'> Contact </a></li>
+<li><a href='clubdebate/index.html'> Cluburile </a></li>
+<li><a href='oamenii/index.html'> Oamenii </a></li>
+<li><a href='proiectul/index.html'> Proiectul </a></li>
+<li><a href='home/index.html'> Acasa </a></li>
+</ul></div><!--end menu-->
+                                    </div><!--
+                                    <div id='contact' class='footer'>
+                                            <h4>Contact</h4>
+                                            <p>office@closer2oxford.ro</p>
+                                            <p>bogdan.draghicescu@closer2oxford.ro<br>
+                                            <span class='detalii'> (asistenta tehnica web - orice probleme legate de site)</span></p>
+                                    </div>
+                                    -->
+                                    <div id='newsletter' class='footer'>
+                                        <script src="../../connect.facebook.net/en_US/all.js#xfbml=1"></script><fb:like href="http://www.facebook.com/pages/Closer2Oxford/162758797069605" width="250" colorscheme="dark"></fb:like>
+                                        <!--<h4>Newsletter</h4>
+                                        <form action='/page/newsletter'>
+                                                <input type='text' name='email'>
+                                                <input type='submit' id='submit' value='>'>
+                                                        
+                                        </form>-->
+                                    </div>
+                                    <div id='credits'>
+                                        Copyright(c) 2021 ARDOR |  Toate drepturile rezervate | Toate logo-urile si sloganurile de pe site sunt proprietate intelectuala inregistrata si nu pot fi reproduse fara acordul explicit al detinatorilor. <br>
+                                            <br /><br />
+                                            <b>Disclaimer</b><br /><i>
+
+                                                Programul educational Closer to Oxford este un program non-profit si nu are o legatura cu universitatea cu acelasi nume, referirea la Oxford avand doar o semnificatie simbolica.
+                                            </i>
+                                    </div>
+
+                                </div>		
+                            </div>		
+
+                            <div id="finantatde">Acest proiect este finantat cu sustinere din partea Comisiei Europene. Aceast publicatie [comunicare] reflecta doar
+                                vederile autorului, iar Comisia nu poate fi facuta  responsabila pentru utilizarea informatiei pe care o contine.</div>
+
+
+                        </body>
+                        </html>

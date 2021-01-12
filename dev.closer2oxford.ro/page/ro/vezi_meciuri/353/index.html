@@ -1,0 +1,585 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml-strict.dtd">
+<HTML xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+    <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+            <link rel="icon" type="image/png"  href="../../../../../closer2oxford.ro/favicon.html">
+                <link rel="stylesheet" href="../../../var/layout.css" type="text/css">
+                    <title>Closer to Oxford - e timpul pentru argumente!</title>
+                    <link rel="alternate" type="application/rss+xml"  href="../../../rss_feed" title="Stiri Closer2Oxford">
+                        <!-- <link rel="image_src" property="og:image"  href="/images/layout/closer2oxford_fb_white.png" /> -->
+                        <link rel="image_src" property="og:image"   type="image/jpeg"  href="../../../../uploads/2015/06/9/facebook_icon.html" />
+                        <link rel="image_src" type="image/jpeg"  href="../../../../uploads/2015/06/9/icon-facebook.gif" /> 
+						<meta name="description" content="Closer2Oxford pune în valoare oameni şi argumentele lor, în dezbateri online şi publice alături de tineri şi invitați avizaţi"/>
+                        <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9" />
+<script type='text/javascript' src='../../../../js/jquery-1.4.4.min.js'></script>
+<script>var $j = jQuery.noConflict();</script>
+<script type='text/javascript' src='../../../../js/tinymce/tiny_mce.js'></script>
+<script type='text/javascript' src='../../../../js/jquery.form.js'></script>
+<script type='text/javascript' src='../../../../js/fbLoginRegister.js'></script>
+<script type='text/javascript' src='../../../var/javascript.js'></script>
+<script type='text/javascript' src='../../../../js/jquery.hovertip-1.0.min.js'></script> 
+<script type='text/javascript' src='../../../../js/jquery.jgrowl_minimized.js'></script> 
+<link rel='stylesheet' href='../../../../css/jquery.jgrowl.css' media='screen' type='text/css'> 
+<script type='text/javascript' src='../../../../js/jquery.timer-min.js'></script> 
+<style>.hovertip{
+    position:absolute;
+    padding:10px 13px;
+    z-index:2;
+    max-width:300px;
+    color:#303030;
+    background-color:#f5f5b5;
+    border:1px solid #DECA7E;
+    font-family:sans-serif;
+    font-size:12px;
+    line-height:18px;
+    text-align:left;
+    }
+           .normal_text ol,.normal_text ol *{text-align:left !important}
+           .normal_text *{font-weight:normal !important;font-size:12px !important;font-face:tahoma !important}</style> 
+<script type='text/javascript'>$j(document).ready(function(){$j('.tooltip').hovertip({'offset':[20,20]});get_notif();});
+
+if(!Array.indexOf){Array.prototype.indexOf = function(obj){for(var i=0; i<this.length; i++){if(this[i]==obj){return i;}}return -1;}}
+    hashuri = [] ;
+	 var tick_timer= 3000 ;
+ 
+	 function get_notif()
+        {
+		  
+		  //console.log(tick_timer);
+	     
+		  setTimeout(get_notif,tick_timer);
+        
+		   $j.ajax(
+            {
+                url: '/page/notif/show_events',
+                dataType: 'json',
+                data: "{}",
+                success: function(data)
+                    {
+                    $j.each(data,function(index,data){
+                        try
+                            {
+                            if( hashuri.indexOf(data.hash) == -1 )
+                                {
+                                hashuri.push(data.hash);
+                                $j.jGrowl(
+                                    data.str,
+                                    {
+                                        corners:'1px',
+                                        life: data.life,
+                                        header:data.title,
+                                        hash: data.hash,
+                                        sticky: data.sticky,
+                                        close: function(e,m,o)
+                                            {
+                                                $j.ajax({url:'/page/notif/delete_single_event/' + o.hash});
+                                            }
+                                    });
+                                }
+                            }
+                        catch(e){}
+                        })
+                    }
+            });
+        }
+	 </script> 
+ 
+                            
+  <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-19111721-1']);
+  _gaq.push(['_setDomainName', '.closer2oxford.ro']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+    
+                        </head>
+                        <body>
+                            <div id="global_wrap">
+                                <div id="header">
+                                    <a href='../../../../index.html'><div id='logo'><img src='../../../../images/layout/sigla.jpg'></div></a>
+                                    <a class='noExternal' href='http://www.facebook.com/pages/Closer2Oxford/162758797069605'><img src='../../../../images/fb.png' style='height:30px;float:right;clear:right;margin:10px 5px 5px 5px;border:none;'/></a>
+                                    <a href='../../../rss_feed'><img src='../../../../images/feed-icon.png' style='height:30px;float:right;clear:right;margin:5px;border:none;'/></a>
+                                </div>
+                                <div id="meniu">
+                                    <div  id='register_login'>
+
+                                        
+  <a href='#' class='todo' id='login'>Login </a> &nbsp;<a href='../../../register.html' class='todo' id='register'>Register</a>
+    <div id='login_box'>
+		  <form action='https://dev.closer2oxford.ro/page/ro/login_user/logon' method='post' id='user_login_form'>
+					 <div>Email: <input type='text' name='email'/> </div><br />
+					 <div>Pass: <input type='password' name='passwd'/></div><br />
+					 <a href='#' class='password_forgot'>forgot password?</a>
+					 <input type='hidden' value='/page/ro/vezi_meciuri/353/' name='returnto' class='submiter'/><br />
+					 <input type='submit' value='login' name='btn' class='submiter'/><br />
+		  </form>
+		  
+		  <form action='https://dev.closer2oxford.ro/page/ro/login_user/reset_user_pw' method='post' id='user_reset_form'>
+					 <div>Email: <input type='text' name='email'/> </div><br />
+					 <a href='#' class='password_forgot'>login?</a>
+					 <input type='hidden' value='/page/ro/vezi_meciuri/353/' name='returnto' class='submiter'/><br />
+					 <input type='submit' value='reset' name='btn' class='submiter'/><br />
+		  </form>
+		  
+    </div>
+    
+                                    </div>
+                                    <div id='menu1' style='margin:auto;'> <ul id='meniu_prinicpal'><li><a href='../../../contacte/index.html'> Contact </a></li>
+<li><a href='../../../clubdebate/index.html'> Cluburile </a></li>
+<li><a href='../../../oamenii/index.html'> Oamenii </a></li>
+<li><a href='../../../proiectul/index.html'> Proiectul </a></li>
+<li><a href='../../../home/index.html'> Acasa </a></li>
+</ul></div><!--end menu-->
+                                </div>
+                                <div id="main"> 
+                                    <!--<div id='stiri-padding'>
+        <div id='stiri_back'>
+                {stiri} 
+    
+               
+        </div>-->
+        
+</div>
+<div  id="content-padding">
+        <div id='sidebar_menu'>
+                <span class='tr'></span>
+                <span class='tl'></span>
+                <span class='br'></span>
+                <span class='bl'></span>
+                <span id="filler"></span>
+                    
+                <ul></ul>
+                
+                <div class='clear'></div>
+        </div>
+        <div id="content">
+                <span class='tr'></span>
+                <span class='tl'></span>
+                <span class='br'></span>
+                <span class='bl'></span>
+                <span id="filler"></span>
+                  <script>
+        $j(document).ready(function(){
+        $j('.discurs_toggler').toggle(
+                function(){
+                $j(this).attr('src', '../../../../images/little_stuff/16-em-down.png');   
+                $j(this).parent().next('.discurs').hide('fast');
+                },
+                function(){
+                $j(this).attr('src', '../../../../images/little_stuff/16-em-up.png');
+                $j(this).parent().next('.discurs').show('fast');
+                });
+            });
+        </script><style>.nowrap{white-space: nowrap;}
+		.noJustify{text-align:left;}
+		</style><h2 class='noJustify'><span class='nowrap'>'DS-AES Leonardo si Raluca'</span> <span class='notif'>(afirmatori)</span> vs <span class='nowrap'>'Adeline si Radu'</span> <span class='notif'>(negatori)</span></h2><h3>A1 (Leonardo Marincean) <img src='../../../../images/little_stuff/16-em-up.png' class='discurs_toggler'></h3>
+            <div class='discurs normal_text'><p>La momentul actual, vedem că, la nivel legislativ, comunitatea L.G.B.T nu și-a primit drepturile cu adevărat. Considerăm că aceste parade &bdquo;gay pride&rdquo; constituie modul cel mai eficient de a ajuta aceste comunități să &icirc;și primească drepturile esențiale &icirc;n societate.</p>
+<p>Astfel, deși societatea a evoluat și aceste drepturi au &icirc;nceput să fie acordate, nu credem că este acceptabil să ne oprim &icirc;nainte să obținem egalitate totală &icirc;n drepturi.</p>
+<p><strong>Paradele &bdquo;gay pride&rdquo; sporesc toleranța față de comunitatea L.G.B.T.&nbsp;</strong></p>
+<p>&Icirc;n primul r&acirc;nd vorbim despre &icirc;nt&acirc;rziere de recunoaștere, prin care ne referim la faptul că &icirc;n momentul &icirc;n care paradele &bdquo;gay pride&rdquo; se desfășoară, există o anumită &icirc;nt&acirc;rziere &icirc;n &icirc;nțelegerea sociala. Dacă ne uităm la &icirc;nceputurile lor, vedem că societatea a răspuns cu &icirc;nt&acirc;rziere deoarece la &icirc;nceput aceste parade erau dezaprobate de societate, manifestele &bdquo;gay pride&rdquo; fiind imorale. &Icirc;n timp, &icirc;nsă, societatea a &icirc;nceput să &icirc;nțeleagă că aceste parade sunt o formă de manifestare a unei minoritați nemulțumite cu condiția socială și legală de care dispune. Datorită acestui lucru, masele au &icirc;nceput să devină mai tolerante, mai &icirc;nțelegătoare față de comunitatea L.G.B.T. , prin simplul fapt că această comunitate era mai publică și mai bine văzută &icirc;n societate.</p>
+<p>Acest lucru implică al doilea concept, cel de &bdquo;&icirc;nt&acirc;rziere de răspuns&rdquo;. La momentul actual, vedem o creștere la nivelul statelor care acceptă căsătoria &icirc;ntre persoanele homosexuale [1] (Franța) sau chiar adopția (Marea Britanie). Acest lucru vine ca un răspuns &icirc;nt&acirc;rziat la paradele &bdquo;gay pride&rdquo;. Vedem că, &icirc;nt&acirc;i, societatea &icirc;nțelege că a fi homosexual nu este o problemă, și abia apoi statul răspunde la opinia societății despre aceasta comunitate. De exemplu, &icirc;n UK, statul a oferit posibilitatea votului printr-un referendum &icirc;n legătură cu asta, iar populația a votat &icirc;n majoritate pozitiv &icirc;n legătură cu legalizarea căsătoriei și adopției de către homosexuali.</p>
+<p>Cronologic &icirc;nt&acirc;i se desfășoară paradele &bdquo;gay pride&rdquo;, apoi societatea &icirc;ncepe să &icirc;nțeleagă stilul lor de viață și devine tolerantă, și abia apoi statul dă acestei comunități drepturile pe care nu le aveau. Nu putem să nu fim de acord că paradele &bdquo;gay pride&rdquo; aduc, cu adevărat, un beneficiu societății prin faptul că o transformă &icirc;ntr-o societate mai tolerantă și mai cooperantă, lăs&acirc;nd deoparte diferențele de orientare sexuală. De aceea, &icirc;n special &icirc;n statele care nu au adoptat &icirc;ncă măsuri legislative pentru acordarea acestor drepturi, este necesar să existe aceste parade pentru a spori toleranța din acest punct de vedere.</p>
+<p><strong>Paradele Gay Pride finanțează O.N.G. &ndash;urile L.G.B.T.</strong></p>
+<p>Trebuie să &icirc;nțelegem că asociațiile L.G.B.T. există și colaborează la nivel internațional. Astfel, fie că discutăm despre un stat gay-friendly precum Canada sau un stat opresiv asupra acestei minorități precum Uganda, există grupări care susțin, deschis sau nu, această mișcare și, pentru a funcționa, aceste grupări au nevoie de fonduri. Deasemenea există o mobilitate a resurselor financiare ale acestor grupări la nivel internațional. Organizațiile internaționale susțin financiar unele organizații naționale.</p>
+<p>Totuși, cum funcționează mai exact mecanismul finanțării?</p>
+<p>Aceste parade se desfășoară &icirc;ntotdeauna public și durează &icirc;n medie 3-4 zile incluz&acirc;nd defilări, vizionare de filme și alte manifestări artistice. Acest fapt este important din două motive: Unul este acela că &icirc;n timpul lor au loc și activități comerciale. Unele organizații c&acirc;t și unii antreprenori v&acirc;nd produse precum tricouri, artizanat, ș.a. , unele evenimente permit și adunarea de fonduri. Al doilea este acela că locul de desfășurare precum și evenimentul &icirc;n sine reprezintă o oportunitate extraordinară de a obține spațiu publicitar. Astfel unele companii sunt interesate de susținerea comunității L.G.B.T. , susținere care nu se manifestă doar &icirc;n plan politico-social ci și prin finanțări către organizații și către eveniment &icirc;n sine. &Icirc;nțelegem astfel cum paradele Gay Pride adună o mulțime de fonduri din surse diverse.&nbsp;</p>
+<p>mesajul transmis la aceste parade ajunge mult mai ușor la urechile simpatizanților mișcării L.G.B.T.</p>
+<p>Aceste fonduri sunt mult mai dificil de obținut &icirc;n orice alt context deoarece ocaziile de manifestare a mișcării L.G.B.T. sunt rare. Un O.N.G. care susține această mișcare nu prea poate desfășura alte activități care atrag atenția și publicului larg, heterosexual.</p>
+<p>Impactul final fiind acela că printr-o paradă Gay Pride &icirc;n Canada ajungem să trimitem fonduri la un O.N.G. &icirc;n Rusia care are mai puține surse de finanțare.</p>
+<p><strong>Trebuiesc reținute &icirc;n special următoarele idei:</strong></p>
+<p>S-ar putea să nu observăm imediat efectele acestor parade și după cum a dovedit primul argument este nevoie de timp pentru ca partea pozitivă să se manifeste asupra societății.</p>
+<p>Nu doar comunitatea L.G.B.T. beneficiază de pe urma lor ci &icirc;ntreaga societate aceasta devenind mai tolerantă și mai &icirc;nțelegătoare cu privire la minoritățile de orice fel.</p>
+<p>Paradele Gay Pride reprezintă cel mai important mecanism de finanțare a O.N.G. &ndash;urilor L.G.B.T.</p>
+<!-- marcator referinte --><ol>
+<li>http://en.wikipedia.org/wiki/LGBT_rights_by_country_or_territory</li>
+</ol></div><hr><h3>N1 (Radu Constantinescu) <img src='../../../../images/little_stuff/16-em-up.png' class='discurs_toggler'></h3>
+            <div class='discurs normal_text'><p><strong>1.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </strong><strong>Contraargument la afirmaţia: &bdquo;comunitatea L.G.B.T nu și-a primit drepturile cu adevărat&rdquo;</strong></p>
+<ol> </ol>
+<p>Faptul că la momentul actual, la nivel legislativ, comunităţile L.G.B.T. nu şi-au primit drepturile cu adevărat, este o afirmaţie sterilă. Pentru a putea valida un asemenea argument, &nbsp;rog echipa afirmatoare să fie concretă şi să ne spună obiectiv, pe puncte, ce drepturi mai trebuiau obţinute şi nu au fost &icirc;ncă legiferate. Discriminarea de orice fel este pedepsită prin lege, iar intenţia de a contraargumenta &nbsp;cu nerespectarea legii este din start o eroare pe care doresc să o evităm. Nerespectarea unei legi este deja o chestiune distinctă şi stă sub auspiciul unui alt sistem ideatic. Deocamdată discutăm doar despre ce trebuia legiferat ca DREPT al L.G.B.T. şi nu a fost acoperit de condamnarea discriminării.</p>
+<p><strong>2.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </strong><strong>Contraargument la afirmaţia: &bdquo;Paradele <em>gay pride </em>sporesc toleranţa faţă de comunitatea L.G.B.T.&rdquo;</strong></p>
+<p>&Icirc;n fiecare an paradele <em>gay pride</em> nasc un spectacol de un grotesc rar &icirc;nt&acirc;lnit, iar aici nu &icirc;ncerc să arunc vina doar pe comunitatea gay, ci pe interacţiunea dintre comunitatea gay şi societate. Ori, principiile democratice ne spun că libertatea se termină acolo unde blochezi libertatea altuia. Ce &icirc;nseamnă? &Icirc;nseamnă că manifestările publice sunt libere at&acirc;ta vreme c&acirc;t ele nu interferează cu sistemul de referinţe al societăţii &icirc;n care se desfăşoară. Vrem sau nu, opinia majorităţii trebuie respectată. Echipa afirmatoare oferă un exemplu excepţional, &icirc;nsă cu o interpretare viciată, sau poate mai bine spus părtinitoare. Vorbesc aici despre sistemul Britanic. Acolo opinia publică a fost &icirc;ntrebată. Ce a răspuns este problema ei şi este un răspuns care reflectă o istorie liberal-conservatoare de peste o sută de ani. Unul just din punctul meu de vedere. Problema este că &icirc;n Rom&acirc;nia nu a &icirc;ntrebat nimeni societatea dacă acceptă aceste parade. Ele au fost acceptate sub umbrela &nbsp;<em>&bdquo;discriminării pozitive&rdquo;</em>[1], la fel ca &icirc;n cazul Franţei, model pe care l-am urmat de la scrierea constituţiei şi p&acirc;nă la comportament, adică un model social, de st&acirc;nga, incompatibil cu instituţionalismul clasic Britanic. Iar cum proverbul &bdquo;<em>non idem est si duo dictum idem</em>&rdquo;[2] ne spune c&acirc;t de important este contextul, spunem că &icirc;n cazul Britaniei lucrurile sunt lămurite, majoritatea a decis iar asta trebuie respectat. &Icirc;n cazul Rom&acirc;niei si al Franţei, se observă din reacţiile publicului că societatea nu este pregătită, iar pentru a evita un eşec lamentabil, guvernul evită un referendum pe această temă. Iar c&acirc;nd populaţia majoritară este forţată prin lege să respecte un comportament sau o acţiune a unei minorităţi, ne aflăm cum am spus sub egida <em>&bdquo;discriminării pozitive&rdquo;, </em>iar aceasta nu face dec&acirc;t să &icirc;nlocuiască sintagma de &bdquo;<em>dictatură a majorităţii&rdquo;</em> cu sintagma de &bdquo;<em>dictatură a minorităţii</em>&rdquo;[3]. Ce se &icirc;nt&acirc;mplă prin această substituire? Efectele se observă, acceptarea faţă de grupurile L.G.B.T nu se modifică semnificativ. Ba mai mult, presiunile discriminării pozitive formează radicalisme şi nasc violenţe. &Icirc;n loc să sprijine o comunitate, psihologii au arătat că discriminarea pozitivă formează repulsii şi riscă să scadă chiar gradul de acceptare al unei comunităţi[4]. &Icirc;n fapt, paradele gay nu cresc gradul de toleranţă, ci doar nasc dispute inutile, adesea chiar acte de violenţă şi st&acirc;rnesc repulsia societăţii. Una este să umbli dezbrăcat prin casă şi alta este sa o faci pe stradă. Toleranţa nu vine dec&acirc;t treptat, iar pentru aceste trepte, ne lipsesc sutele de ani de liberalism britanic. Acest liberalism nu poate fi legiferat, el este o tradiţie, iar instituţionalismul britanic este la antipod de istituţionalismul francez (copiat de noi) tocmai prin această caracteristică, explicată &icirc;n detaliu de <strong>Hayek</strong> &icirc;n <em>Constituţia libertăţii</em><strong>[5]. </strong>Deci parafraz&acirc;nd proverbul latin, nu este acelaşi lucru c&acirc;nd &icirc;n două ţări diferite se acceptă aceleaşi acţiuni.</p>
+<p>Deci cronologic, &icirc;nt&acirc;i trebuie să obţii sprijinul si acceptarea populaţiei prin educare treptată, &icirc;n şcoli, şi apoi, pentru a evita total violenţele, se pot face parade <em>gay.</em></p>
+<p><em></em><strong>3.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </strong><strong>Contraargument la &nbsp;&bdquo;paradele Gay Pride finanţează O.N.G.- urile L.G.B.T&rdquo;</strong></p>
+<p>Mecanismul de finanţare este neimportant dacă nu se stabileşte importanţa acestor O.N.G.-uri. Deşi acest pas a fost sărit, presupunem ca sunt necesare, &icirc;nsă ne lovim de aceiaşi problemă ca &icirc;n argumentul anterior. Afirmaţia că O.N.G-urile din Rusia sunt finanţate de veniturile obţinute &icirc;n Canada, ne arată doar ca societatea din Rusia nu este pregătită să accepte paradele gay şi grupurile gay. Nu public. Discriminarea este şi acolo pedepsită, deci de drepturi &nbsp;egale se bucură. Iar pentru simplul circuit econmic, putem &icirc;nlocui parada gay cu un t&acirc;rg al agricultorilor, deci acesta nu este un argument valid prin simplul fapt că este uşor substituibil.</p>
+<p><strong>Concluzii</strong></p>
+<ul>
+<li>Minorităţile trebuie să se adapteze la societatea &icirc;n care trăiesc şi să beneficieze din plin de libera circulaţie din spaţiul UE.</li>
+<li>Majorităţile nu au obligaţia legală şi nici măcar morală de a se supune acţiunilor considerate sfidătoare ale minorităţilor.</li>
+<li>Sistemele nu trebuie copiate, ci implementate asemeni ţării de origine, iar acest fapt necesită lungi perioade de timp.</li>
+<li>Presiunile minorităţilor sexuale formează repulsie &icirc;n societate şi nu acceptare.</li>
+</ul><!-- marcator referinte --><p>[1]&nbsp;<strong>Gordon Hodson; John F. Dovidio; Victoria M. Esses</strong> - <em>Ingroup identification as a moderator of positive&ndash;negative asymmetry in social discrimination</em>;&nbsp;European Journal of Social Psychology Volume 33 issue 2 2003&nbsp;</p>
+<p>[2] Traducere: "Nu este acelaşi lucru c&acirc;nd doi oameni diferiţi spun acelaşi lucru"</p>
+<p>[3]&nbsp;http://www.quickiwiki.com/ro/Discriminare</p>
+<p>[4] a)&nbsp;<strong>Peter C. Holland</strong>,&nbsp;<em>The effects of intertrial and feature-target intervals on operant serial feature-positive discrimination learning;&nbsp;</em>Springer - Psychonomic Society, 1995,&nbsp;Volume:23,&nbsp;Issue:4,&nbsp;pg. (411-428)&nbsp;</p>
+<p>b)http://dial2013.dauphine.fr/fileadmin/mediatheque/dial2013/documents/Papers/81_France_Gille.pdf</p>
+<p>c) http://www.stuff.co.nz/stuff-nation/8158226/The-problem-with-positive-discrimination</p>
+<p>[5] <strong>Friedrich A. Hayek, </strong><em>Constituţia libertăţii, </em>p.77-105; Editura Institutul European, 1998</p></div><hr><h3>A2 (Raluca Vacaru) <img src='../../../../images/little_stuff/16-em-up.png' class='discurs_toggler'></h3>
+            <div class='discurs normal_text'><p>&Icirc;n discursul meu am să ating trei puncte majore. &Icirc;n primul r&acirc;nd am să vorbesc despre problemele existente la momentul actual, apoi am să analizez cum funcționează drepturile sociale, iar la sf&acirc;rșit voi explica exact cum se sporește toleranța la nivel social.</p>
+
+<p><strong>1. Problemele de la momentul actual</strong></p>
+<p>La &icirc;nceputul discursului negator s-a ridicat problema eglaității &icirc;n drepturi și am fost &icirc;ntrebați care sunt drepturile pe care comunitatea L.G.B.T. nu le-a primit. Vedem &icirc;n lume foarte puține țări &icirc;n care este legală căsătoria &icirc;ntre persoane homosexuale, sau dreptul lor la adopție. Spre exemplu, &icirc;n Rom&acirc;nia, Cehia, Italia și multe alte state, căsătoriile &icirc;ntre persoane homosexuale nu sunt legale. Mai mult dec&acirc;t at&acirc;t, vedem la nivel internațional state foarte agresive către persoanele L.G.B.T., precum Rusia (exemplul Sochi) [1] , Uganda, dar și multe state americane (precum Alabama [2], unde comportamentul homosexual este considerat o infracțiune).&nbsp;</p>
+<p>Oricum, trebuie să &icirc;nțelegem că egalitatea &icirc;n drepturi nu &icirc;nseamnă că oamenii homofobi sunt receptivi la ideile și legile de anti-discriminare, mai ales &icirc;n contextul &icirc;n care, pedepsele pentru discriminare nu sunt aplicate cu adevărat.</p>
+<p>Mai mult dec&acirc;t at&acirc;t, observăm o contradicție fundamentală &icirc;n cazul negator &icirc;n momentul &icirc;n care ni se spune &icirc;nt&acirc;i despre existența unei egalități prin lege, iar apoi, &icirc;n următorul punct, ni se vorbește despre cum este normal că nu exista egalitate prin lege deoarece majoritatea nu dorește să existe.</p>
+<p>La nivelul fondurilor, ceea ce spunem noi este că avem nevoie de parade gay din acest punct de vedere tocmai pentru ca, prin trimiterea de fonduri &icirc;ntre O.N.G.-uri la nivel internațional, să existe mai multe posibilități de a ajuta comunitățile din statele respective să lupte pentru egalitate &icirc;n drepturi și să fie auziți. Paradele &bdquo;gay pride&rdquo; sunt optime din acest punct de vedere pentru ca au elementul public care atrage investitori.</p>
+
+<p><strong>2. Drepturi și libertăți</strong></p>
+<p>&Icirc;n primul r&acirc;nd, nu &icirc;nțelegem cum exact funcționează mecanismul prin care libertatea de exprimare se extinde la tirania majorității. Simplul fapt că majoritatea nu este de acord cu o minoritate nu &icirc;nseamnă că are dreptul să limiteze libertatea de exprimare a minorității. Limitarea libertăților este justificată numai c&acirc;nd aduc un efect negativ pregnant, nu c&acirc;nd pur și simplu deranjează.</p>
+<p>Tocmai de aceea, ideea ca &bdquo;depinde de la țară la țară&rdquo; pe care o ridică echipa negatoare este problematică. Singurul mod de a ajuta cu adevărat o comunitate supusă inechității sociale este de a milita pentru drepturile lor. Tocmai pentru că anumite țări nu sunt pregătite, acestea trebuie să fie pregătite prin aceste parade. Astfel, spunem că paradele accelerează procesul de acomodare socială cu minoritatea pe care o reprezintă.</p>
+<p>Mai mult de at&acirc;t, nu considerăm existența paradelor &bdquo;gay pride&rdquo; o formă de discriminare pozitivă. Discriminarea pozitivă este actul de a da mai multe drepturi unei minorități dec&acirc;t majorității, &icirc;n timp ce paradele &bdquo;gay pride&rdquo; luptă nu pentru drepturi adiționale, ci pentru drepturi egale cu majoritatea.</p>
+<p>Astfel, cauzalitatea este cu adevărat invers față de ceea ce ne spune echipa negatoare: &icirc;nt&acirc;i avem nevoie de parade pentru a ajunge la acceptare socială.</p>
+
+<p><strong>3. Mecanismul toleranței</strong></p>
+<p>Considerăm că &icirc;ntrebarea fundamentală a dezbaterii este: Care e modul corect de a integra comunitatea L.G.B.T. &icirc;n societate?</p>
+<p>Este foarte clar &icirc;n istorie că toleranța este o valoare socială promovată din exterior, tocmai de căte minorități sociale. Astfel, vedem că, &icirc;nainte de &icirc;nceputul paradelor &bdquo;gay pride&rdquo;, a fi homosexual era văzut de societate ca un lucru inerent greșit tocmai pentru că ideea le era străină. &Icirc;n timp, totuși, &icirc;n momentul &icirc;n care paradele s-au multiplicat, societatea a &icirc;nceput să se obișnuiască cu prezența comunității L.G.B.T. și să o accepte. Exact acesta este mecanismul prin care se creează toleranță.</p>
+<p>Totuși, la momentul actual nu suntem &icirc;n poziția unei toleranțe optime, după cum am explicat și &icirc;n starea de fapt. De aceea este &icirc;ncă nevoie de astfel de parade, care accelerează procesul de acceptare socială a acestei minorități.</p>
+
+<p><strong>Concluzii</strong></p>
+<p>La momentul actual, comunitatații L.G.B.T. &icirc;i lipsesc anumite drepturi, iar cel mai bun mod de a le primi este de a crește toleranța prin paradele &bdquo;gay pride&rdquo;.</p>
+<p>Drepturile pe care această comunitate le cere sunt numai o expresie a lipsei echității sociale, iar simplul fapt că oamenii nu sunt pregătiți nu &icirc;nseamnă că se justifică să oprim marșul pentru egalitate.</p>
+<!-- marcator referinte --><p>[1] Shawn Gaylord,&nbsp;Friday 21 February 2014 10.30 GMT, "Sochi's secret: intolerance was in the air - and the LGBT fight won't stop now", The Guardian, recuperat de pe http://www.theguardian.com/commentisfree/2014/feb/21/sochi-gay-rights-confessions</p>
+<p>[2] Zack Ford,&nbsp;FEBRUARY 3, 2014 AT 3:36 PM, "9 States With Anti-Gay Laws That Aren't That Different From Russia's", ThinkProgress, recuperat de pe:&nbsp;http://thinkprogress.org/lgbt/2014/02/03/3241421/9-state-gay-propaganda-laws/#</p></div><hr><h3>N2 () <img src='../../../../images/little_stuff/16-em-up.png' class='discurs_toggler'></h3>
+            <div class='discurs normal_text'><p><strong>1.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </strong><strong>Contraargument &ndash;dreptul L.G.B.T. la căsătorie şi adopţie</strong></p>
+<p>Deşi &icirc;n primul discurs am oferit argumente clare cu referinţe ştiinţifice care trebuiau să fie luate &icirc;n considerare, echipa afirmatoare insistă asupra unor probleme false, deja dezbătute, şi anume &bdquo;incompletitudinea &icirc;n drepturi&rdquo;, amestec&acirc;nd dreputurile fundamentale, individuale, cu drepturile colective.</p>
+<p><strong>Drepul</strong>, aşa cum este el statuat &icirc;n Limba Rom&acirc;nă, reprezintă &bdquo;<em>putere, prerogativă legal recunoscută unei persoane de a avea o anumită conduită, de a se bucura de anumite privilegii, conform legii, &icirc;n mod legitim, firesc</em>&rdquo; iar acest drept se regăseşte &icirc;n &bdquo;<em>totalitatea regulilor și normelor juridice care reglementează relațiile sociale dintr-un stat.</em>&rdquo; [1] Ca urmare a acestui fapt, nu se poate vorbi de obţinerea unui drept dacă sistemul social nu permite acest lucru, mai ales că echipa afirmatoare vorbeşte despre drept ca despre o libertate. Dreptul este de natură socială, este reglementat, &icirc;n timp ce libertatea ţine de natura umană. Deci libertatea este deodată sau a priori fiinţei individuale, &icirc;n timp ce dreptul apare odată cu entitatea socială, iar asupra dreptului de manifestare colectiv (cum sunt paradele Gay Pride), tot societatea este singura care are legitimitate democratică să decidă.</p>
+<p>&Icirc;n primul discurs, cu referinţe solide, am explicat de ce dreptul trebuie să provină din acceptarea socială. El poate fi impus societăţii doar prin <em>discriminare pozitivă</em>, iar cum echipa afirmatoare susţine că nu consideră paradele Gay Pride o <em>discriminare pozitivă</em>, revenim la decizia socială deja cunoscută prin constituţie.</p>
+<p><em>Cotradicţia proclamată de echipa afirmatoare nu e contradicţie, este diferenţiere &icirc;ntre drepturi de exprimare şi manifestare individuală, libertăţi individuale si libertăţi colective. Lucruri total diferite, abordate diferit.</em></p>
+<p>&Icirc;n ce priveşte fondurile, echipa afirmatoare repetă argumentul fără a aduce susţinere suplimentară, iar noi repetăm că transferul fondurilor dintr-o ţară &icirc;n alta nu rezolvă problema acceptării de către societate. Acest fapt se poate observa &icirc;n SUA, unde chiar echipa afirmatoare susţine că a fi Gay, &icirc;n anumite state precum Alabama, este pedepsit de lege. Deci nu este vorba despre fonduri, ci de acceptarea socială &icirc;n anumite state, acceptare care se face democratic şi firesc.</p>
+<p><strong>2.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </strong><strong>Drepturi şi libertăţi</strong></p>
+<p>a)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <em>Libertatea de exprimare</em> NU se extinde la <em>tirania majorităţii</em> si nu reiese de nicăieri aceasta! Presiunea minorităţii pentru a fi modificate legi pe care majoritatea nu le doreşte modificate, duce la <em>tirania minorităţii</em> şi nicidecum la una a majorităţii. Aici ecipa afirmatoare a &icirc;ncurcat termeni şi definiri, iar noi nu am &icirc;nţeles la ce vrea să facă referire cu exactitate.</p>
+<p>b)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Problema de acceptare socială nu este un teritoriu pe care sa ne dăm cu părerea, ci este un fapt acceptat stiinţific (citare N1, Hayek). <em>C&acirc;nd libertăţile individuale intră &icirc;n conflict cu cele colective, libertatea colectivă este superioară</em> <em>şi se impune </em>[2].</p>
+<p>c)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Fraza utilizată de afirmatori: <em>&bdquo;</em><em>Tocmai pentru că anumite țări nu sunt pregătite, acestea trebuie să fie pregătite prin aceste parade</em>&rdquo; este un non-sens cu sau fără contraargumentarea noastră. Paradele &bdquo;Gay Pride&rdquo; nu pregatesc nimic, pentru că nu aduc nimic nou. Ele doar sfidează şi &icirc;ncalcă libertatea colectivă acceptată prin Constituţie &icirc;n definirea familiei.</p>
+<p><strong>3.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </strong><strong>Mecanismul toleranţei </strong></p>
+<p><em>Mecanismul</em> este un sistem complex de <em>ipoteze</em>, <em>acţiuni</em> prin a căror interacţiuni se obţin o serie <em>predefinită de rezultate repetitive</em>. Ori &icirc;n cazul de faţă, <em>mecanismul nu e mecanism</em>, deoarece el nu este nici complex, nu prezintă nici succesiune de fapte, nici de ipoteze şi nici nu duce la un rezultat repetitiv predefinit. &Icirc;n fapt echipa afirmatoare pune &nbsp;o &icirc;ntrebare retorică şi dă un răspuns fără argumente si ipoteze. <em>Nu putem considera o afirmaţie ca fiind un argument şi cu at&acirc;t mai puţin un mecanism</em>, mai ales că ea utilizează greşit noţiuni economice precum &bdquo;<em>multiplicare</em>&rdquo; şi &bdquo;<em>optim</em>&rdquo;. <em>Otimul</em> &icirc;ntr-un mecanism este calculabil, se obţine dintr-o relaţie bivalentă, dinamică, pe care echipa afirmatoare o face univalentă, statică şi necalculabilă. <em>Toleranţă optima faţă de ce, &icirc;n raport cu ce?!</em>&nbsp; <em>Cum stabilim valoarea optimă?!</em> &Icirc;ntrebări care nu aşteaptă răspuns, ci doar subliniază că mecanismul nu e mecanism iar argumentarea nu e argumentare, ci doar afirmaţie goală.</p>
+<p>&Icirc;n plus, ca eveniment recent, trebuie notat că din cauza repulsiei (explicate ştiinţific si adesea neglijate) pe care şi-o atrag minorităţile sexuale prin parade si alte presiuni, articolul din constituţie care spunea că: <em>&bdquo;Familia se intemeiază pe căsătoria liber consimtită intre soti...&rdquo;</em>[3] s-a transformat &icirc;n: &bdquo;<em>Familia se &icirc;ntemeiază pe căsătoria liber consimţită &icirc;ntre&nbsp;<em>un bărbat şi o femeie</em>&hellip;</em><em>&rdquo;</em>[4]. Iar cu această ocazie atragem din nou atenţa asupra unei alte grave erori facute de echipa afirmatoare &icirc;n A2, şi anume faptul că p&acirc;nă acum căsătoria civilă &icirc;ntre persoane de acelaşi sex nu ar fi fost acceptată &icirc;n Rom&acirc;nia. A fost acceptată, ba chiar s-au făcut &icirc;n direct, la televiziuni, astfel de căsătorii, &icirc;nsă nu va mai fi acceptată conform noului articol din noua constituţie.</p>
+<p><strong><em>Concluzie</em></strong></p>
+<p><strong><em>Paradele &bdquo;Gay Pride&rdquo; nu sunt necesare. Ele st&acirc;rnesc repulsie aşa cum psihologii au dovedit, iar cazurile constituţiei din Rom&acirc;nia, anterior nouă fiind şi cazul Croaţiei [5] dar şi a altor state, &icirc;ntăresc concluziile cercetătorilor.&nbsp; </em></strong></p>
+
+<p>REFERINŢE</p>
+<p>[1] http://dexonline.ro/definitie/drept</p>
+<p>[2] <strong>Friedrich A. Hayek,</strong>&nbsp;<em>Constituţia libertăţii,</em>&nbsp;p.5-72 ; Editura Institutul European, 1998</p>
+<p>[3] <strong>Constituţia Rom&acirc;niei </strong>articolul 8 alin.1, PUBLICATĂ IN: MONITORUL OFICIAL NR. 767 din 31 octombrie 2003</p>
+<p>[4] <strong>Constituţia Rom&acirc;niei </strong>articolul 8 alin. 1 aprobat de parlament &icirc;n iunie 2013, a cărei modificare a fost respinsă de două ori, va intra &icirc;n Noua Constituţie. Ea va fi trimisă spre validare la populaţie, prin referendum, la finalul acestui an.<strong>&nbsp;</strong></p>
+</div><hr><hr><h2>Decizii:</h2> <script>
+        $j(document).ready(function(){
+			$j('.decizie_toggler').toggle( 
+				function(){
+					$j(this).attr('src', '../../../../images/little_stuff/16-em-down.png');   
+					$j(this).parent().next('.decizie').hide('fast'); 
+                },
+                function(){
+					$j(this).attr('src', '../../../../images/little_stuff/16-em-up.png');
+					$j(this).parent().next('.decizie').show('fast'); 
+                } 
+			);
+		});</script><div class='decizie'><h3>Teo Oprea
+                <img src='../../../../images/little_stuff/16-em-up.png' class='decizie_toggler'></h3><div class='normal_text'><p>A1: Ai tendinta sa explici de mai multe ori acelasi lucru (spre exemplu: mecanismul raspunsului intarziat), insa pe de alta parte explicatia se limiteaza la un model teoretic, fara sa-mi dau seama de ce tocmai paradele au dus in acest caz la o obisnuire treptata a populatiei cu ideea orientarii sexuale diferite. Ar fi mai eficient sa-mi explici si ce se petrece la nivel de mentalitate, pentru ca argumentul sa fie si mai convingator. Spre exemplu, imi spui&nbsp;: &laquo;&nbsp;<em>Cronologic &icirc;nt&acirc;i se desfășoară paradele &bdquo;gay pride&rdquo;, apoi societatea &icirc;ncepe să &icirc;nțeleagă stilul lor de viață și devine tolerantă, și abia apoi statul dă acestei comunități drepturile pe care nu le aveau</em>.&nbsp;&raquo; De ce este asa&nbsp;? Cum ajung oamenii sa inteleaga stilul de viata al persoanelor LGBT&nbsp;? Poti chiar anticipa reactia negatorilor, care vor spune ca, dimpotriva, reactia va fi una de respingere, arata-mi de ce nu e asa. Poti folosi exemple istorice, analogii, explicatii psihologice, ce consideri adecvat.</p>
+<p>N1&nbsp;: Discurs foarte bun&nbsp;: structura si strategie eficiente si retorica subtila si de efect. Cred ca ar fi fost poate si mai eficient daca dezvoltai ideea &lsquo;opiniei majoritatii&rsquo; care se opune desfasurarii paradelor gay cu&nbsp;: 1. Date concrete ca exista o astfel de opozitie, si 2&nbsp;. semnificatia termenului &lsquo;necesitate&rsquo; in dezbaterea aceasta. Altfel, as fi fost tentata sa intreb, impreuna cu un eventual afirmator abil, daca nu cumva tocmai pentru ca exista o majoritate cu o mentalitate feroce sunt necesare aceste manifestari de vointa sub forma de parada, pentru a rupe un obicei de marginalizare a comunitatii gay&nbsp;. In argumentul 2, te multumesti sa arati ca deocamdata nu stim ce vor romanii, dar ca in orice caz, nu putem sa &lsquo;copiem&rsquo; sistemul britanic, explicatie pe care o consideri suficienta ca sa concluzionezi ca &laquo;&nbsp;&nbsp;&icirc;nt&acirc;i trebuie să obţii sprijinul si acceptarea populaţiei prin educare treptată, &icirc;n şcoli, şi apoi, pentru a evita total violenţele, se pot face parade&nbsp;<em>gay&nbsp;&raquo;</em><em>. </em>Personal, ma indoiesc ca toleranta cu privire la orientare sexuala poate fi invatata in scoli, dar oricum, eram curioasa sa aflu de ce sustineti varianta asta. Ca sa aveti spatiu suficient, limitati unele dintre explicatiile anterioare, si lasati loc si pentru concluzii.</p>
+<p>A2: Apreciez foarte mult faptul ca abordezi simplu si logic raspunsurile la discursul negatorului si ca nu scapi din vedere scopul motiunii supuse dezbaterii. De asemenea, este foarte bine ca mentionezi drepturile pentru care militeaza comunitatea LGBT, insa va sugerez sa aveti grija la modul in care va organizati argumentele din punct de vedere strategic. Atunci cand mentionezi o varietate atat de mare a reglementarilor fata de comunitatea LGBT, impresia creata unui cititor obiectiv si detasat de subiect este aceea ca la momentul actual nu exista o certificare clara a faptului ca toate societatile ar trebui sa confere aceste drepturi, ci mai degraba ca aceasta este o problema sensibila care trebuie tratata diferit in fiecare caz. De aceea, cred ca este preferabil sa-mi aratati eventual schimbari care au avut loc de-a lungul timpului in tari in care mentalitatea era initial impotriva persoanelor gay, iar ulterior a crescut gradul de toleranta. Si in contextul acestor exemple sa-mi aratati cum se schimba mentalitatea, aspect care este deficitar in cadrul ambelor echipe. Din discursul tau, imi dau seama ca voua ca afirmatori vi se pare firesc ca persoanele LGBT sa primeasca aceste drepturi, or negatorii tocmai asta sustineau, ca nu tuturor li se pare acest lucru normal si ca aici exista un subiectivism al ambelor parti care face relatia dificila.</p>
+<p>P.s. Afirmatia asta (&Icirc;n timp, totuși, &icirc;n momentul &icirc;n care paradele s-au multiplicat, societatea a &icirc;nceput să se obișnuiască cu prezența comunității L.G.B.T. și să o accepte) e un inceput foarte bun, dar insuficient, pentru ca voi tocmai asta trebuie sa explicati, cum ca paradele sunt necesare.</p>
+<p>N2&nbsp;: Te-as sfatui sa fii un pic mai linistit si mai putin coleric in raspuns, chiar daca esti, sa zicem, indignat, de lipsa de explicatii din partea afirmatorilor. Explicatia privitoare la &rsquo;mecanismul tolerantei&rsquo; e un pic cam abstracta si desprinsa de contextul discursului afirmatorului 2, ceea ce ii scade din efect si tradeaza nestapanire din partea ta. De asemenea, din punct de vedere strategic, ai unele scapari&nbsp;: la primul argument, imi spui ca exista o diferenta intre libertati individuale, pe care si le asuma fiecare individ, si drepturi colective, pe care le permite societate (distinctie cred artificiala), dar eviti sa discuti daca dreptul la casatorie si adoptie sunt libertati, pentru ca sunt individuale, sau sunt drepturi ce trebuie conferite unei minoritati, din bunavointa societatii, pentru ca in mod normal nu sunt niste drepturi naturale ale acestor persoane. Ai grija la modul in care explicatiile tale pot fi duse mai departe in context. Faptul ca unele privinte te marginesti sa faci distinctii, fara sa imi precizezi clar pozitia in raport de motiune (daca sunt necesare paradele) face ca distinctiile respective sa imi starneasca curiozitatea cu privire la modul in care gandesti, dar sa nu ma lamureasca pe deplin. De asemenea, trebuie sa tii cont ca parerea unui filosof nu este un &lsquo;fapt stiintific&rsquo; si oricum exista mai multe perspective si in filosofia libertatii sociale,asadar &nbsp;afirmatiile de genul asta deranjeaza si tradeaza ingustime, chiar daca a fost o scapare.</p>
+
+<p>Decizie&nbsp;:</p>
+<p>Vreau sa incep prin a felicita echipele pentru un meci foarte bun si care m-a bucurat foarte mult, meci care imi permite sa ofer un verdict exclusiv pe considerente de argumentare si strategie, lucru care este rar intalnit in meciurile scrise sau de incepatori.</p>
+<p>Afirmatorii ofera doua explicatii pentru care paradele sunt necesare&nbsp;: in primul rand, paradele sunt (daca nu chiar singurele)instrumente care contribuie la cresterea tolerantei fata de comunitatea LGBT, iar in al doilea rand, sustin ca aceste parade sunt un mijloc de finantare important pentru ONG-urile de profil. Consider insa ca al doilea argument nu a rezistat dezbaterii, atat pentru ca negatorii cer sa se evidentieze importanta acestei finantari, cat si pentru ca nici afirmatorii nu mai acorda suficienta importanta acestui argument in partea a doua a dezbaterii, creand impresia ca pana la urma acesta era un punct secundar. Ma conving mai degraba negatorii cand intreaba care e relevanta faptului ca se obtin fonduri la parade, iar afirmatorii raspund ca aceste fonduri permit ONG-urile din tari mai conservatoare sa militeze pentru drepturile LGBT, moment in care devine evident ca adevaratele discutii in acest meci au fost cele privind drepturile comunitatii LGBT si masura in care paradele duc la cresterea tolerantei.</p>
+<p>In ceea ce priveste drepturile comunitatii LGBT, afirmatorii mentioneaza faptul ca aceasta comunitate doreste sa obtina permisiunea de a incheia casatorii si adoptii, insa mentioneaza de asemenea si ca atitudinea statelor fata de aceste drepturi este foarte variata. Negatorii sustin insa ca fiecare societate are voie sa isi defineasca ceea ce intelege prin drepturi si care sunt limitele acestora si ca in unele state ceea ce doreste comunitatea LGBT nu poate fi acceptat de catre marea majoritate a populatiei, care nu considera aceste posibilitati ca fiind literalmente &lsquo;drepturi&rsquo; ale persoanelor gay. Afirmatorii nu reusesc sa raspunda acestei opinii decat sustinand ca aceasta majoritate oprima si ca paradele contribuie la recunoasterea si obtinerea drepturilor persoanelor gay, ceea ce ma face insa sa cred ca afirmatorii nu au inteles argumentul negator foarte bine, pornind de la premisa ca este firesc ca aceste lucruri sa fie considerate drepturi ale persoanelor gay, si ca, asa cum spune A2, singura problema care mai ramane de rezolvat este cum sa-i integram pe acestia (in alte cuvinte, cum sa facem societatea sa accepte un fapt implinit). Poate ca negatorii nu au dreptate, si pana la urma singurul mod de a testa care sunt drepturile unei minoritati este forta cu care acestea reusesc sa-si impuna drepturile si sa obtina o recunoastere (caz in care paradele sunt o arma importanta si ultra-necesara), dar aceste lucruri nu au fost lamurite in dezbatere si raman cu simple curiozitati in fata unei idei pertinente lansate de negatori. Avand in vedere faptul ca insisi afirmatorii recunosc ca exista o mare varietate de pozitii la nivel mondial, trag concluzia ca nu exista un raspuns predefinit la intrebarea&nbsp;: casatoria si adoptia sunt drepturi sau dorinte ale comunitatii LGBT&nbsp;? si consider ca afirmatorii nu au putut sustine aceasta parte a dezbaterii, pe cand negatorii imi arata &ndash; nu ca romanii nu isi doresc acest lucru- ci ca pana nu suntem siguri care este pozitia poporului, valorile acestuia, nu putem spune ca aceste prerogative spre care militeaza afirmatorii sunt automat drepturi (pentru ca drepturile sunt acordate prin lege, si deci sunt stabilite si definite in raport de mentalitatea si natura unui popor, construite in timp). De asemenea, negatorul 2 foloseste o strategie eficienta poate mutand accentul in dezbatere de pe dreptul la casatorie la dreptul la exprimare publica, drept colectiv. Ni se reaminteste ca dezbaterea se poarta asupra necesitatii paradelor, si nu asupra drepturilor pe care ar trebui sa le aiba sau nu aceasta colectivitate.</p>
+<p>Pana la urma, argumentul esential in cazul afirmator poarta asupra efectului pe care il au paradele de a duce la cresterea tolerantei. In acest punct, afirmatorii prezinta un mecanism teoretic, care indica faptul ca paradele genereaza un fel de obisnuinta in randul populatiei, fara insa sa arate cum anume efectuarea paradelor duce la schimbarea mentalitatii, ci presupun mai degraba ca acesta este un proces firesc. Negatorii sustin dimpotriva ca daca populatia manifesta d&eacute;j&agrave; sentimente negative fata de aceste grupuri, tendinta va fi aceea de a adanci resentimentele si intoleranta. In acest moment al dezbaterii, nu pot spune ca vreunul dintre vorbitori reuseste sa ofere explicatii credibile si solide, ambele ipoteze fiind posibile. Era nevoie ca in ultimele doua discursuri cineva sa ofere o explicatie concreta, factuala, a schimbarii mentalitatii in urma paradelor, insa afirmatorul nu face decat sa incerce slab sa isi intareasca explicatia, tot la nivel abstract, lucru pe care negatorul 2 il sesizeaza si mentioneaza clar ca mecanismul propus de afirmatori nu este demonstrat si nici foarte concret. Pentru ca este rolul afirmatorilor de a convinge arbitrul si publicul de plauzibilitatea propunerilor si ideilor sale, consider ca afirmatorii nu au reusit sa demonstreze ca paradele duc in timp la cresterea tolerantei.</p>
+<p>Combinand cele doua idei, reiese din dezbatere ca paradele ar fi necesare daca comunitatea LGBT ar milita pentru niste drepturi clar atribuibile, insa nu stim inca cine are puterea de a stabili care sunt drepturile acordate sau nu, caz in care am putea spune ca paradele ar fi necesare pentru obtinerea gradului de toleranta necesar pentru admiterea acestor drepturi, fapt pe care afirmatorii nu reusesc sa-l demonstreze.</p>
+<p>Consider ca in aceasta dezbatere meciul a fost asadar castigat de echipa negatoare.</p>
+
+<p>A1&nbsp;: 25&nbsp; continut:12 strategie&nbsp;:8 stil&nbsp;: 5</p>
+<p>N1&nbsp;: 27 continut:13 strategie&nbsp;:9 stil&nbsp;:5</p>
+<p>A2&nbsp;: 25 continut&nbsp;12: strategie&nbsp;9: stil&nbsp;:4</p>
+<p>N2&nbsp;: 26&nbsp;continut 13&nbsp;: strategie&nbsp;9: stil&nbsp;:4</p>
+</div>A1 -> 25 puncte<br>N1 -> 27 puncte<br>A2 -> 25 puncte<br>N2 -> 26 puncte<br>Castiga echipa: <h3 style='display:inline;color:red;'>Adeline si Radu (negatori)</h3></div><hr><div class='decizie'><h3>Horia Ciochina
+                <img src='../../../../images/little_stuff/16-em-up.png' class='decizie_toggler'></h3><div class='normal_text'><h3>A1</h3>
+<p>&nbsp;Discursul are o structura buna dar poate fi imbunatatit la nivelul analizei, a explicatiei din spatele argumentelor. Astfel la primul argument ar fi fost o idee buna sa fie explicat cum anume, datorita paradelor, s-a ajuns la o toleranta mai mare. Se poate intui ca datorita expunerii pe care o aduc paradele s-a ajuns ca oamenii sa nu mai considere o alta orientare sexuala ca fiind ceva de netolerat, dar expunerea e de scurta durata, si adesea urmata de manifestari ale celor ce sustin valorile conservatoare ale familiei. Conceptul de intarziere de raspuns, in lipsa unei descrieri a procesului, devine foarte usor o eroare de genul &bdquo;post hoc, ergo prompter hoc&rdquo;<a  href="#6f301">[1]</a>. Argumentul cu finantarea ONG-urilor este unul valid dar lipseste impactul asupra societatii. Ar fi fost utile niste numere care sa arate cat de importanta este finantarea din astfel de surse, spre final e o afirmatie ca acest tip de finantare reprezinta cea mai importanta sursa.</p>
+<h3>N2</h3>
+<p>Discursul incepe prin a arata ca afirmatorii n-au demonstrat ce drepturi nu au cei din comunitatea LGBT. Incercarea e buna dar e un atac usor de dat la o parte, ceea ce A2 face fara probleme prin a arata ca nu au dreptul la casatorie (exista si alte drepturi pe care nu le au)</p>
+<p>Contra-argumentarea la ideea ca paradele LGBT nu sporesc toleranta fata de membrii acestei comunitati ar putea fi imbunatatit. Din intreg paragraful, relevanta cea mai mare o are faptul ca in multe cazuri exista contra-manifestatii care uneori denatureaza in evenimente violente. Intreaga discutie despre discriminarea pozitiva e irelevanta. Paradele LGBT nu reprezinta o modalitate de discrimnare pozitiva, dovada este reprezentata tocmai de contra-manifestatiile aduse in discutie. Mai mult decat atat N1 incearca sa acrediteze ideea ca orice decide majoritatea, acest lucru este bun. Aceasta idee este una periculoasa dupa cum ne-o demonstreaza istoria: sclavie, holocaust etc.</p>
+<p>Ideea cu mecanismul de finantare este buna, A1 ar fi putut face o treaba mai buna aratand nevoia si efectul finantarii ONG-urilor.</p>
+<p>N1 ar trebui sa fie mai atent cu citarile. &nbsp;De exemplu, lucrarea lui Peter Holland prezinta rezultatele unui set de experimente destul de specifice la sobolani (!), iar lucrarea lui Hodson et al. arata ca, in cazul identificarii cu un grup, discriminarea are efecte pozitive asupra grupului cu care subiectii se identifica si nu negative asupra celor din afara grupului (am avut acces doar la rezumat si nu pot face mai multe comentarii asupra acestui articol).</p>
+<h3>A2</h3>
+<p>Discursul e bine structurat si raspunde ideilor aduse de catre echipa negatoare, dar din pacat nu extinde analiza intr-un mod consistent. Din nou nu se prezinta nici o statistica ce ar putea arata importanta sumelor ce sunt stranse prin aceste parade. In continuare mecanismul prin care paradele aduc mai multa toleranta nu e explicat ci doar enuntat. E greu de acceptat ca existenta unei parade anuale sau chiar bianuale poate fi considerata ca fiind un factor important in cresterea tolerantei, avand in vedere ca mass-media trece foarte repede de la un evenimenit la altul.</p>
+<h3>N2</h3>
+<p>Discursul e structurat dar ideile sunt amestecate. Teoria despre drepturi si libertati este interesanta dar nu sta in picioare. Intr-o societate democratica, cea in care se poarta dezbaterile, se presupune ca exista o echivalenta la nivel functional intre drepturi si libertati. In termenii explicati de N2, societatea democratica recunoaste libertatea (care e un atribut a priori fiintei individuale) si ii acorda drepturile echivalente. O societate care acorda aceste drepturi doar unei parti a societatii este o societate care discrimineaza. Tot in primul paragraf, N2 da impresia ca nu stapaneste bine conceptul de discriminare pozitiva cand afirma ca: &bdquo;[dreptul]poate fi impus societăţii doar prin&nbsp;<em>discriminare pozitivă&rdquo;</em><em>. </em>Ceea ce e evident fals, intrucat discrimnarea pozitiva e o modalitate de a compensa pentru efectele negative ale discriminarii din trecut si nu modalitatea prin care se egalizeaza drepturile.</p>
+<p>N2 se bazeaza pe o serie de citate care nu au neaparat relevanta in cadrul discutiei. De exemplu 2.b: drepturile pe care le cere comunitatea LGBT nu intra deloc in conflict cu drepturile comunitatii heterosexuale. Stilul de viata LGBT intra in conflict cu valorile unora din aceasta comunitate ceea ce este cu totul altceva.</p>
+<h3>Decizie</h3>
+
+<p>Ariile principale pe care se poarta discutia sunt:</p>
+<ol>
+<li>daca sau nu paradele LGBT creeaza mai multa toleranta</li>
+<li>daca sau nu exista o problema de discriminare cu comunitatea LGBT</li>
+<li>daca sau nu paradele LGBT ajuta la finantare ONG-urilor </li>
+<li>Desi stransa, decizia pe prima arie de discutie merge catre afirmatori. Ei acrediteaza ideea ca datorita existentei acestor parade oamenii ajung sa fie ceva mai toleranti, in timp ce negatorii nu arata ca acestea au un efect negativ sau ca nu au nici un efect (ar trebui sa arate fie ca toleranta scade sau ca exista alte modalitati prin care toleranta creste)</li>
+<li>Afirmatorii castiga aceasta arie de conflict pentru ca arata ca exista o serie de drepturi pe care cei din comunitatea LGBT nu le au, in timp ce negatorii incearca sa arata ca e normal si bine sa fie asa pentru ca majoritatea nu ii accepta</li>
+<li>Problema finantarii e indecisa, afirmatorii nu reusesc sa arate importanta ei iar negatorii se rezuma la a spune ca finantarea nu duce la acceptare sociala.</li>
+</ol>
+<p>Castiga deci echipa <strong>afirmatoare</strong></p>
+<table border="0" cellspacing="0" cellpadding="0" width="336">
+<tbody>
+<tr>
+<td width="78" valign="bottom">&nbsp;</td>
+<td width="65" valign="bottom">
+<p><strong>A1</strong></p>
+</td>
+<td width="65" valign="bottom">
+<p><strong>N1</strong></p>
+</td>
+<td width="65" valign="bottom">
+<p><strong>A2</strong></p>
+</td>
+<td width="65" valign="bottom">
+<p><strong>N2</strong></p>
+</td>
+</tr>
+<tr>
+<td width="78" valign="bottom">
+<p>Continut</p>
+</td>
+<td width="65" valign="bottom">
+<p>10</p>
+</td>
+<td width="65" valign="bottom">
+<p>9</p>
+</td>
+<td width="65" valign="bottom">
+<p>10</p>
+</td>
+<td width="65" valign="bottom">
+<p>9</p>
+</td>
+</tr>
+<tr>
+<td width="78" valign="bottom">
+<p>Strategie</p>
+</td>
+<td width="65" valign="bottom">
+<p>9</p>
+</td>
+<td width="65" valign="bottom">
+<p>7</p>
+</td>
+<td width="65" valign="bottom">
+<p>8</p>
+</td>
+<td width="65" valign="bottom">
+<p>7</p>
+</td>
+</tr>
+<tr>
+<td width="78" valign="bottom">
+<p>Stil</p>
+</td>
+<td width="65" valign="bottom">
+<p>5</p>
+</td>
+<td width="65" valign="bottom">
+<p>3</p>
+</td>
+<td width="65" valign="bottom">
+<p>5</p>
+</td>
+<td width="65" valign="bottom">
+<p>4</p>
+</td>
+</tr>
+<tr>
+<td width="78" valign="bottom">
+<p><strong>Total</strong></p>
+</td>
+<td width="65" valign="bottom">
+<p><strong>24</strong></p>
+</td>
+<td width="65" valign="bottom">
+<p><strong>19</strong></p>
+</td>
+<td width="65" valign="bottom">
+<p><strong>23</strong></p>
+</td>
+<td width="65" valign="bottom">
+<p><strong>20</strong></p>
+</td>
+</tr>
+</tbody>
+</table>
+
+<div><br /> 
+<hr size="1" />
+<div>
+<p><a  name="6f301">[1]</a> http://www.fallacyfiles.org/posthocf.html</p>
+</div>
+</div>
+</div>A1 -> 24 puncte<br>N1 -> 19 puncte<br>A2 -> 23 puncte<br>N2 -> 20 puncte<br>Castiga echipa: <h3 style='display:inline;color:red;'>DS-AES Leonardo si Raluca (afirmatori)</h3></div><hr><div class='decizie'><h3>Bianca Dragomir
+                <img src='../../../../images/little_stuff/16-em-up.png' class='decizie_toggler'></h3><div class='normal_text'><p>
+<div>A1</div>
+<div>- ai idei bune in pledoarie, dar deseori simt nevoia unor explicatii/ dovezi suplimentare (studii, statistici, dovezi samd). De pila, in primul argument spui ca faptul ca aceasta comunitate LGBT a devenit publica si mai cunoscuta in societate, "masele au devenit mai tolerante", "societatea a &icirc;nceput să &icirc;nteleagă că aceste parade sunt o formă de manifestare a unei minoritati nemullumite cu conditia socială si legală de care dispune". Ce te face sa crezi asta, ce "probe" ai referitoare la aceasta toleranta crescuta si nivel crescut de educatie?</div>
+<div>- interesant si argumentul al doilea, ca se fac pasi inclusiv in sens legislativ daca societatea da semne de toleranta sporita - dar aceasta cauzalitate: gay pride parades - toleranta crescuta - legalizarea casatoriei trebuie si ea explicata mai in detaliu/ dovedita. Tocmai pentru ca sunt numeroase state unde au existat aceste parade, insa efectele de care pomenesti nu au aparut &nbsp;- acolo de ce nu s-a aplicat acest pattern de care spui? E nevoie de mai multa analiza.</div>
+<div>- buna si ideea legata de finantare, posibila prin publicitatea prin intermediul paradei - iarasi ar fi ajutat niste exemple, sigur exista date publicate in acest sens</div>
+<div>- ai un discurs structurat si usor de urmarit, iar la final enumeri ideile principale - nu ar strica sa aduagi si titluri argumentelor, pentru o parcurgere si mai usoara si un impact mai mare (<a href="http://closer2oxford.ro/page/prez_structura_caz" target="_blank">http://closer2oxford.ro/page/prez_structura_caz</a>)</div>
+<div>N1</div>
+<div>- cateva observatii la nivel formal: e foarte bine ca faci o referinta clara la argumentul pe care urmeaza sa-l contra-argumentezi, face textul mai usor de urmarit. Pentru a face prcurgerea referintelor mai usoara, citeaza-le corect:&nbsp;<a href="http://closer2oxford.ro/page/prez_structura_caz" target="_blank">http://closer2oxford.ro/page/prez_structura_caz</a></div>
+<div>- sesizezi bine anumite asumptii/ premise implicite, pe care echipa afirmatoare era mai castigata daca le explicita si explica (de pilda, referitoare la unele drepturi pe care comunitatea LGBt le merita, dar nu le-a primit).</div>
+<div>- atentie, cand faci afirmatii "grele", e nevoie de sustinerea acestora pin dovezi. Oamenii (fie ei sustinatori sau nu ai cauzei LGBT) au experiente si impresii diferite despre parada gay pride, asa ca o astfel de afirmatie e in cel mai bun caz subiectiva, dar poate parea inclusiv agresiva: &Icirc;n "fiecare an paradele gay pride nasc un spectacol de un grotesc rar &icirc;nt&acirc;lnit" (in ce consta acest grotesc? Cine si cum il masoara? Probe?) &nbsp;sau "Una este să umbli dezbrăcat prin casă şi alta este sa o faci pe stradă."</div>
+<div>- e foarte bine ca mentionezi ca tarile (UK/Franta/Romania) au un brackground diferit, dar si in cadrul analizei tale simt nevoia unor lamuriri: a) referendumul din UK era pentru casatoria dintre persoane de acelasi sex, nu pentru Gay Pride, care e un eveniment mult mai putin "in avangarda" (din textul tau inteleg ca un referendum ar fi potrivit pt organizarea Gay Pride Parade, dar invocand cazul UK nu convingi de asta, pentru ca acolo referendumul avea alt scop, chiar daca viza tot comunitatea LGBT); b) spui ca Franta nu e la fel de liberala pecum UK, si ca noi imitam mai degraba modelul francez (asta e de bine, de rau?) - pe de alta parte, Franta a legalizat casatoriile intre persoane de acelasi sex (un act care contravine conservatorismului ei - poate ca statul nu ia mereu decizii conforme sondajelor?); c) de ce o manifestare a unui grup minoritar necesita discriminare pozitiva din partea statului si se traduce prin tirania minoritatii?</div>
+<div>A2</div>
+<div>- la nivel formal - ma bucur ca aceste discurs contine titluri ale argumentelor</div>
+<div>- sesizezi bine ca existenta legii nu e sinonima cu aplicarea ei, dar poate era util sa dai (si) alte exemple de drepturi, in afara celui legat de casatorie, tocmai ca sa iesi din zona sensibila a acestui subiect la care se poate raspunde cu "nu suntem inca pregatiti, poate naste violenta" (Asta ca alegere strategica a exemplelor. Extra tip: Poate era util sa folosesti raportul referitor la perceptia romanilor asupra discriminarii, disponibil pe site, la resurse de lectura)</div>
+<div>- foarte la punct critica argumentului negator referitor la tirania minoritatii - si clarificarea ideii de libertate de expresie</div>
+<div>- castigi din teren explicand de ce toleranta sporita e sol fertil pentru schimbari sociale benefice minoritatilor, dar era utila o explicatie mai amanuntita a felului in care Paradele Gay contribuie la toleranta sporita, eventual niste studii sau o analiza empirica</div>
+<div>N2</div>
+<div>&nbsp;- nu mi-e f clara analiza aceasta a drepturilor si libertatilor:</div>
+<div>"Ca urmare a acestui fapt, nu se poate vorbi de obţinerea unui drept dacă sistemul social nu permite acest lucru, mai ales că echipa afirmatoare vorbeşte despre drept ca despre o libertate. Dreptul este de natură socială, este reglementat, &icirc;n timp ce libertatea ţine de natura umană. Deci libertatea este deodată sau a priori fiinţei individuale, &icirc;n timp ce dreptul apare odată cu entitatea socială, iar asupra dreptului de manifestare colectiv (cum sunt paradele Gay Pride), tot societatea este singura care are legitimitate democratică să decidă."</div>
+<div>Spun ca nu mi-e clara analiza pentru ca, in urma dezbaterii de pana acum, pare acceptat de ambele echipe ca in Franta casatoria intre persoanele de acelasi sex a fost legalizata, mai degraba fara decat cu sprijinul majoritatii - in opinia negatorilor asta e o anomalie, un fapt regretabil cu consecinte majore? O analiza a costurilor/consecintelor ar fi fost decisiva. Interesant exemplul modificarii constitutiei Romaniei, dar nu e deloc clar ca aceasta e o consecinta a Gay Pride parade sau o solicitare a societatii, in numele libertatii colective.</div>
+<div>- nu e clar de ce paradele gay (neanalizate nici de afirmatori, nici de negatori, din pacate, la nivel de continut/manifestare) pun presiuni referitoare la adoptarea unor legi si/sau sunt tiranice</div>
+<div>- "C&acirc;nd libertăţile individuale intră &icirc;n conflict cu cele colective, libertatea colectivă este superioară şi se impune [2]." - "Problema de acceptare socială nu este un teritoriu pe care sa ne dăm cu părerea, ci este un fapt acceptat stiinţific (citare N1, Hayek)"</div>
+<div>In dezbateri nu e recomandat sa te mizezi doar pe o autoritate, indiferent de anvergura sa, sa dovedesti ca libertatea colectiva e superioara, si "acceptata stiintific" (ce inseamna acest fapt?) - repet, mai degraba o analiza cost-beneficiu ar fi convingatoare.</div>
+<div>DECIZIA</div>
+<div>Multumesc pentru un meci bun, cu o atitudine fair intre debateri. Sper ca feedback-ul individual sa va fie de folos pentru a intelege punctele forte/nevralgice ale pledoariilor voastre.</div>
+<div>Ce lipseste ambelor echipe este o analiza a formei si continutului acestor Gay Pride Parades (in Romania). Pana la finalul dezbaterii nu am o imagine asupra a ce se intampla acolo (activitati), cine participa (participanti - LGBT sau non), care sunt consecintele (impact), cum ne situam fata de alte tari (context). Afirmatorii imi spun ca este un eveniment care educa si face societatea mai toleranta, echipa negatoare imi zice ca e un show grotesc, care agaseaza pe majoritatea oamenilor si care constituie un act de tiranie a minoritatii. Pentru mine nici una dintre aceste analize nu e suficienta si corect efectuata - pentru ca nu e ancorata in concret; am continuat evaluarea meciului fara sa stiu exact la ce ma raportez, incercand sa pastrez o viziune moderata (nici prea optimista, nici prea pesimista) asupra evenimentului.</div>
+<div>Desi subdezvoltata, retin ideea afirmatorilor ca existenta legilor nu e sinonima cu aplicarea ei si ca homofobia se manifesta in continuare (tare mi-ar fi placut sa va folositi de rapoartele existente referitoare la discriminare/prceptia discriminarii). Din aceasta perspectiva, inteleg ca "merita sa facem ceva". Intrebarea e daca Paradele Gay Pride contribuie la o mai buna incluziune a minoritatii LGBT. Afirmatorii imi arata ca exista un efect intarziat al societatii, ca dupa ce inteleg un fenomen si il "digera", sunt mai dispusi sa fie toleranti - si ca parada gay pride contribuie la aceasta intelegere. Chiar daca e generica analiza, e usor de acceptat ideea ca exista o legatura intre cunoastere/intelegere si acceptare/toleranta/incluziune, Negatorii zic ca Paradele Gay Pride contravin ideii de drept colectiv, necesita discriminare pozitiva si se traduc in tirania minoritatii. Analiza negatorilor nu ma convinge,e &nbsp;sprijinita intr-un suport teoretic care insa nu se traduce si intr-o analiza a unor consecinte concrete: ce se intampla daca sprijinim o minoritate sau, mai concret, ii dam libertate de expresie? Ce fel de si cat de mare e reactia (violenta/non-violenta) a societatii la parade? Studiul acela care demonstreaza reactii violente in urma discriminarii pozitive nu are greutatea dorita, din moment ce nu devine evident ca vorbim de discriminare pozitiva, ci de libertate de expresie. In ultimul paragraf N2 invoca acea consecinta in Romania a modificarii Constitutiei in defavoarea comunitatii LGBT, dar a) nu e deloc evidenta legatura dintre Gay Pride Parade (cuvantul "presiune" nu imi ofera o analiza) si aceasta modificare si b) exemplul putea fi discutat mai pe larg daca aparea mai repede in discutie.</div>
+<div>Argumentul finantatrii nu e central dezbaterii dar ofera cateva puncte in plus echipei afirmatoare, caer explica de ec acest "spatiu de emisie si comercializare" oferit de parade sporesc sansele finantarii. Desigur ca asta nu are legatura cu acceptarea de catre societate (N2) - dar acela e alta argument,a lta sub discutie. La nivel de sprijin financiar, afirmatorii explica un minim mecanism care asigura fonduri suplimentare.</div>
+<div>Din aceste puncte de vedere dau decizia catre echip afirmatoare.</div>
+<div>A1 12 8 5</div>
+<div>N1 13 7 5</div>
+<div>A2 12 8 5</div>
+<div>N2 12 7 5</div>
+</p></div>A1 -> 25 puncte<br>N1 -> 25 puncte<br>A2 -> 25 puncte<br>N2 -> 24 puncte<br>Castiga echipa: <h3 style='display:inline;color:red;'>DS-AES Leonardo si Raluca (afirmatori)</h3></div><hr><h3 class='important'>Vrem parerea ta! Pentru asta, trebuie sa te loghezi.</h3><h3>Clasament meci</h3><p>Medii punctaje</p>A1 -> 24.67 puncte<br>N1 -> 23.67 puncte<br>A2 -> 24.33 puncte<br>N2 -> 23.33 puncte<br>Castiga echipa: <h3 style='display:inline;color:red;'>DS-AES Leonardo si Raluca (afirmatori)</h3>
+                <div class='clear'></div>
+        </div><!-- end main content -->
+         <div class='clear'></div>
+</div>
+<div id="pix"></div>
+
+
+                                </div><!--end main -->
+                                <div id='parteneri'>
+                                    <span class='tr'></span><span class='tl'></span><span class='br'></span><span class='bl'></span><span id="filler"></span>
+                                    <div class='parteneri' id='sustinatori'>
+                                        <span class='floating_text' id='un_proiect'>Un proiect</span>
+                                        <a href='http://www.ardor.org.ro/'><div class='image' id='ardor'>Ardor</div></a>
+                                        <span class='floating_text' id='finantatori'>Finanțatori</span>
+                                        <a href='http://www.opensocietyfoundations.org/'><div class='image' id='open_society'>Open Society Foundation </div></a>
+                                        <a href='http://www.studentiq.ro//'><div class='image' id='memoplus'>MemoPlus</div></a>
+                                        <!-- <a href='http://www.ratiufamilyfoundation.com/'><div class='image' id='FundatiaRatiu'>Ardor</div></a>
+                                        <a href='http://www.eef.md/'><div class='image' id='eef'>East Europe Foundation</div></a>
+                                        <a href='http://www.mts.gov.md/'><div class='image' id='mdminister'>Ministerul Tineretului si Sportului al Republicii Moldova</div></a> -->
+
+                                        <span class='floating_text' id='parteneri_text'>Parteneri</span>
+
+                                        <a href='http://www.policycenter.eu/'><div class='image' id='PolicyCenter'>Policy Center</div></a>
+                                        <a href='http://www.britishcouncil.org/'><div class='image' id='BritishCouncil'>British Council</div></a>
+                                        <a href='http://www.europuls.ro/'><div class='image' id='europuls'>Europuls</div></a>
+                                        <a href='http://www.cere.ro/'><div class='image' id='cere'>Ce-Re</div></a>
+                                        <a href='http://www.primeromania.ro/'><div class='image' id='prime'>Prime Romania</div></a>
+                                        <a href='http://www.cji.ro/'><div class='image' id='cji'>Centrul pentru jurnalism independent</div></a>
+                                        <a href='http://www.aiesectm.ro/'><div class='image' id='aisec'>Aisec</div></a>
+                                        <!-- ===================================================================================================== -->
+                                        <a href='http://www.cogitus.ro/'><div class='image' id='cogitus'>Cogitus</div></a>
+                                        <a href='http://www.adevarul.ro/international/foreign_policy/'><div class='image' id='foreignPolicy'>Foreign Policy</div></a>
+                                        <a href='http://www.elsa.ro/'><div class='image' id='elsa'>Elsa</div></a>
+                                        <a href='http://www.vipromania.ro/'><div class='image' id='vipromania'>Voluntari pentru idei si proiecte</div></a>
+                                        <a href='http://www.ongtrust.ro/'><div class='image' id='ongtrust'>Trust</div></a>
+
+                                        <!-- ===================================================================================================== -->
+                                        <a href='http://www.leap.ro/'><div class='image' id='leap'>Leap</div></a>
+                                        <a href='http://www.younginitiative.org/'><div class='image' id='younginitiative'>Asociatia young initiative</div></a>
+                                        <a href='http://www.asjc.ro/'><div class='image' id='asjc'>Asjc</div></a>
+                                        <a href='http://osut.ro/'><div class='image' id='osut'>Osut</div></a>
+                                        <div class='clear'></div>
+                                    </div>
+                                    <div class='parteneri' id='parteneri_institutionali'>
+                                        <span class='floating_text' id='sponsori_text'>Sus&#539;in&#x0103;tori</span>
+                                        <a href='http://www.cartier.md/'><div class='image' id='cartier_logo'>Editura Cartier</div></a>
+                                        <a href='http://www.pll.md/ro/'><div class='image' id='biblio_logo'>Biblioteca publica de drept</div></a>
+                                        <span class='floating_text' id='institutii_text'>Parteneri institu&#539;ionali</span> 
+                                        <ul id='institutii'>
+                                            <!-- <span class='floating_text' id='institutii_text'>Parteneri institu&#539;ionali:</span> -->
+                                            <li><a href='http://www.politice.ro/'>Facultatea de &#536;tiin&#539;e Politice SNSPA </a></li>
+                                            <li><a href='http://www.comunicare.ro/'>Facultatea de Comunicare &#537;i Rela&#539;ii Publice SNSPA</a></li>
+                                            <li><a href='http://www.fspub.ro/'>Facultatea de &#536;tiin&#539;e Politice Universitatea Bucure&#537;ti</a></li>
+                                            <li><a href='http://www.filosofie.unibuc.ro/'>Facultatea de Filosofie Universitatea Bucure&#537;ti</a></li>
+                                            <li><a href='http://litere.unibuc.ro/'>Facultatea de Litere din Universitatea Bucure&#x015f;ti</a></li>
+                                            <li><a href='http://www.unibuc.ro/ro/fac_fsas_ro'>Facultatea de Sociologie Universitatea Bucure&#537;ti</a></li>
+                                            <li><a href='http://laws.uaic.ro/'>Facultatea de Drept Universitatea Alexandru Ioan Cuza Ia&#537;i</a></li>
+                                            <li><a href='http://www.uaic.ro/uaic/bin/view/Academic/Filosofie'>Facultatea de Filosofie si &#536;tiin&#539;e Social Politice Universitatea AIC Ia&#537;i</a></li>
+                                            <li><a href='http://www.upa.ro/'>Facultatea de Drept si Facultatea de &#x015e;tiin&#x0163;e Politice si Administrative Universitatea Petre Andrei Ia&#x015f;i</a></li> 
+
+                                            <li><a href='http://www.ubbcluj.ro/'>Universitatea Babe&#537;-Bolyai Cluj Napoca</a></li>
+                                            <li><a href='http://www.uvt.ro/'>Universitatea de Vest Timi&#537;oara</a></li>
+                                            <li><a href='http://www.upt.ro/'>Universitatea Politehnica Timi&#537;oara</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class='parteneri' id='parteneri_media'>
+                                        <span class='floating_text' id='media_text'>Parteneri media</span>
+                                        <a href='http://www.hotnews.ro/'><div class='image' id='hotnews'>HotNews</div></a>
+                                        <!-- <a href='http://www.lumebuna.ro/'><div class='image' id='lumebuna'>Lume Buna</div></a> -->
+                                        <a href='http://www.romaniapozitiva.ro/'><div class='image' id='romaniapozitiva'>Romania Pozitiva</div></a>
+                                        <a href='http://totb.ro/'><div class='image' id='thinkoutsidethebox'>Think Outside The Box</div></a>
+                                        <a href='http://www.facebook.com/carevasazica.vip'><div class='image' id='carevasazica'>Carevasazica</div></a>
+                                        <a href='http://www.studentie.ro/'><div class='image' id='studentiero'>Studentie.ro</div></a>
+                                        <a href='http://startub.unibuc.ro/'><div class='image' id='startub'>startub.unibuc.ro</div></a>
+                                        <!-- <a href='http://www.tvr.ro/tvr_cluj.php'><div class='image' id='tvrcluj'>Tvr Cluj</div></a> -->
+                                        <!-- <a href='http://www.radiotransilvania.ro'><div class='image' id='radiotransilvania'>Radio Transilvania</div></a> -->
+                                        <a href='http://iasifun.ziaruldeiasi.ro/'><div class='image' id='iasifun'>Iasi fun</div></a>
+                                        <a href='http://www.ziaruldeiasi.ro/'><div class='image' id='ziaruldeiasi'>Ziarul de Iasi</div></a>
+                                        <a href='http://www.kissfm.ro/timisoara'><div class='image' id='kissfm'>KissFm</div></a>
+
+                                        <div class='clear'></div> 
+                                    </div>
+                                    <div class='clear'></div>
+
+                                </div>	
+                            </div>	<!-- end wrap -->
+                            <div id='footer_mare'>
+                                <div id='footer'>
+                                    <div id='links' class='footer'>
+                                        <div id='menu1' style='margin:auto;'> <ul id='meniu_prinicpal'><li><a href='../../../contacte/index.html'> Contact </a></li>
+<li><a href='../../../clubdebate/index.html'> Cluburile </a></li>
+<li><a href='../../../oamenii/index.html'> Oamenii </a></li>
+<li><a href='../../../proiectul/index.html'> Proiectul </a></li>
+<li><a href='../../../home/index.html'> Acasa </a></li>
+</ul></div><!--end menu-->
+                                    </div><!--
+                                    <div id='contact' class='footer'>
+                                            <h4>Contact</h4>
+                                            <p>office@closer2oxford.ro</p>
+                                            <p>bogdan.draghicescu@closer2oxford.ro<br>
+                                            <span class='detalii'> (asistenta tehnica web - orice probleme legate de site)</span></p>
+                                    </div>
+                                    -->
+                                    <div id='newsletter' class='footer'>
+                                        <script src="../../../../../connect.facebook.net/en_US/all.js#xfbml=1"></script><fb:like href="http://www.facebook.com/pages/Closer2Oxford/162758797069605" width="250" colorscheme="dark"></fb:like>
+                                        <!--<h4>Newsletter</h4>
+                                        <form action='/page/newsletter'>
+                                                <input type='text' name='email'>
+                                                <input type='submit' id='submit' value='>'>
+                                                        
+                                        </form>-->
+                                    </div>
+                                    <div id='credits'>
+                                        Copyright(c) 2021 ARDOR |  Toate drepturile rezervate | Toate logo-urile si sloganurile de pe site sunt proprietate intelectuala inregistrata si nu pot fi reproduse fara acordul explicit al detinatorilor. <br>
+                                            <br /><br />
+                                            <b>Disclaimer</b><br /><i>
+
+                                                Programul educational Closer to Oxford este un program non-profit si nu are o legatura cu universitatea cu acelasi nume, referirea la Oxford avand doar o semnificatie simbolica.
+                                            </i>
+                                    </div>
+
+                                </div>		
+                            </div>		
+
+                            <div id="finantatde">Acest proiect este finantat cu sustinere din partea Comisiei Europene. Aceast publicatie [comunicare] reflecta doar
+                                vederile autorului, iar Comisia nu poate fi facuta  responsabila pentru utilizarea informatiei pe care o contine.</div>
+
+
+                        </body>
+                        </html>

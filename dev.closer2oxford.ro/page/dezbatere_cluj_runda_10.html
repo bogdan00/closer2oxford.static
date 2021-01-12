@@ -1,0 +1,563 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml-strict.dtd">
+<HTML xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+    <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+            <link rel="icon" type="image/png"  href="../../closer2oxford.ro/favicon.html">
+                <link rel="stylesheet" href="var/layout.css" type="text/css">
+                    <title>Closer to Oxford - e timpul pentru argumente!</title>
+                    <link rel="alternate" type="application/rss+xml"  href="rss_feed" title="Stiri Closer2Oxford">
+                        <!-- <link rel="image_src" property="og:image"  href="/images/layout/closer2oxford_fb_white.png" /> -->
+                        <link rel="image_src" property="og:image"   type="image/jpeg"  href="../uploads/2015/06/9/facebook_icon.html" />
+                        <link rel="image_src" type="image/jpeg"  href="../uploads/2015/06/9/icon-facebook.gif" /> 
+						<meta name="description" content="Closer2Oxford pune în valoare oameni şi argumentele lor, în dezbateri online şi publice alături de tineri şi invitați avizaţi"/>
+                        <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9" />
+<script type='text/javascript' src='../js/jquery-1.4.4.min.js'></script>
+<script>var $j = jQuery.noConflict();</script>
+<script type='text/javascript' src='../js/tinymce/tiny_mce.js'></script>
+<script type='text/javascript' src='../js/jquery.form.js'></script>
+<script type='text/javascript' src='../js/fbLoginRegister.js'></script>
+<script type='text/javascript' src='var/javascript.js'></script>
+<script type='text/javascript' src='../js/jquery.hovertip-1.0.min.js'></script> 
+<script type='text/javascript' src='../js/jquery.jgrowl_minimized.js'></script> 
+<link rel='stylesheet' href='../css/jquery.jgrowl.css' media='screen' type='text/css'> 
+<script type='text/javascript' src='../js/jquery.timer-min.js'></script> 
+<link rel='stylesheet' href='var/gallery.css' media='screen' type='text/css'> 
+<script type='text/javascript' src='var/galerie/jquery.prettyPhoto.js'></script> 
+<meta name='description' content=''/> 
+<meta name='keywords' content=''/> 
+<style>.hovertip{
+    position:absolute;
+    padding:10px 13px;
+    z-index:2;
+    max-width:300px;
+    color:#303030;
+    background-color:#f5f5b5;
+    border:1px solid #DECA7E;
+    font-family:sans-serif;
+    font-size:12px;
+    line-height:18px;
+    text-align:left;
+    }</style> 
+<script type='text/javascript'>$j(document).ready(function(){$j('.tooltip').hovertip({'offset':[20,20]});get_notif();});
+
+if(!Array.indexOf){Array.prototype.indexOf = function(obj){for(var i=0; i<this.length; i++){if(this[i]==obj){return i;}}return -1;}}
+    hashuri = [] ;
+	 var tick_timer= 3000 ;
+ 
+	 function get_notif()
+        {
+		  
+		  //console.log(tick_timer);
+	     
+		  setTimeout(get_notif,tick_timer);
+        
+		   $j.ajax(
+            {
+                url: '/page/notif/show_events',
+                dataType: 'json',
+                data: "{}",
+                success: function(data)
+                    {
+                    $j.each(data,function(index,data){
+                        try
+                            {
+                            if( hashuri.indexOf(data.hash) == -1 )
+                                {
+                                hashuri.push(data.hash);
+                                $j.jGrowl(
+                                    data.str,
+                                    {
+                                        corners:'1px',
+                                        life: data.life,
+                                        header:data.title,
+                                        hash: data.hash,
+                                        sticky: data.sticky,
+                                        close: function(e,m,o)
+                                            {
+                                                $j.ajax({url:'/page/notif/delete_single_event/' + o.hash});
+                                            }
+                                    });
+                                }
+                            }
+                        catch(e){}
+                        })
+                    }
+            });
+        }
+	 </script> 
+ 
+                            
+  <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-19111721-1']);
+  _gaq.push(['_setDomainName', '.closer2oxford.ro']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+    
+                        </head>
+                        <body>
+                            <div id="global_wrap">
+                                <div id="header">
+                                    <a href='../index.html'><div id='logo'><img src='../images/layout/sigla.jpg'></div></a>
+                                    <a class='noExternal' href='http://www.facebook.com/pages/Closer2Oxford/162758797069605'><img src='../images/fb.png' style='height:30px;float:right;clear:right;margin:10px 5px 5px 5px;border:none;'/></a>
+                                    <a href='rss_feed'><img src='../images/feed-icon.png' style='height:30px;float:right;clear:right;margin:5px;border:none;'/></a>
+                                </div>
+                                <div id="meniu">
+                                    <div  id='register_login'>
+
+                                        
+  <a href='#' class='todo' id='login'>Login </a> &nbsp;<a href='register.html' class='todo' id='register'>Register</a>
+    <div id='login_box'>
+		  <form action='https://dev.closer2oxford.ro/page/ro/login_user/logon' method='post' id='user_login_form'>
+					 <div>Email: <input type='text' name='email'/> </div><br />
+					 <div>Pass: <input type='password' name='passwd'/></div><br />
+					 <a href='#' class='password_forgot'>forgot password?</a>
+					 <input type='hidden' value='/page/dezbatere_cluj_runda_10' name='returnto' class='submiter'/><br />
+					 <input type='submit' value='login' name='btn' class='submiter'/><br />
+		  </form>
+		  
+		  <form action='https://dev.closer2oxford.ro/page/ro/login_user/reset_user_pw' method='post' id='user_reset_form'>
+					 <div>Email: <input type='text' name='email'/> </div><br />
+					 <a href='#' class='password_forgot'>login?</a>
+					 <input type='hidden' value='/page/dezbatere_cluj_runda_10' name='returnto' class='submiter'/><br />
+					 <input type='submit' value='reset' name='btn' class='submiter'/><br />
+		  </form>
+		  
+    </div>
+    
+                                    </div>
+                                    <div id='menu1' style='margin:auto;'> <ul id='meniu_prinicpal'><li><a href='contacte/index.html'> Contact </a></li>
+<li><a href='clubdebate/index.html'> Cluburile </a></li>
+<li><a href='oamenii/index.html'> Oamenii </a></li>
+<li><a href='proiectul/index.html'> Proiectul </a></li>
+<li><a href='home/index.html'> Acasa </a></li>
+</ul></div><!--end menu-->
+                                </div>
+                                <div id="main"> 
+                                    <!--<div id='stiri-padding'>
+        <div id='stiri_back'>
+                {stiri} 
+    
+               
+        </div>-->
+        
+</div>
+<div  id="content-padding">
+        <div id='sidebar_menu'>
+                <span class='tr'></span>
+                <span class='tl'></span>
+                <span class='br'></span>
+                <span class='bl'></span>
+                <span id="filler"></span>
+                    
+                <ul></ul>
+                
+                <div class='clear'></div>
+        </div>
+        <div id="content">
+                <span class='tr'></span>
+                <span class='tl'></span>
+                <span class='br'></span>
+                <span class='bl'></span>
+                <span id="filler"></span>
+                <script type='text/javascript' src='../js/jquery.hovertip-1.0.min.js'></script> 
+<script type='text/javascript' src='../js/jquery.jgrowl_minimized.js'></script> 
+<link rel='stylesheet' href='../css/jquery.jgrowl.css' media='screen' type='text/css'> 
+<script type='text/javascript' src='../js/jquery.timer-min.js'></script> 
+<link rel='stylesheet' href='var/gallery.css' media='screen' type='text/css'> 
+<style>.hovertip{
+    position:absolute;
+    padding:10px 13px;
+    z-index:2;
+    max-width:300px;
+    color:#303030;
+    background-color:#f5f5b5;
+    border:1px solid #DECA7E;
+    font-family:sans-serif;
+    font-size:12px;
+    line-height:18px;
+    text-align:left;
+    }</style> 
+<script type='text/javascript'>$j(document).ready(function(){$j('.tooltip').hovertip({'offset':[20,20]});get_notif();});
+
+if(!Array.indexOf){Array.prototype.indexOf = function(obj){for(var i=0; i<this.length; i++){if(this[i]==obj){return i;}}return -1;}}
+    hashuri = [] ;
+	 var tick_timer= 3000 ;
+ 
+	 function get_notif()
+        {
+		  
+		  //console.log(tick_timer);
+	     
+		  setTimeout(get_notif,tick_timer);
+        
+		   $j.ajax(
+            {
+                url: '/page/notif/show_events',
+                dataType: 'json',
+                data: "{}",
+                success: function(data)
+                    {
+                    $j.each(data,function(index,data){
+                        try
+                            {
+                            if( hashuri.indexOf(data.hash) == -1 )
+                                {
+                                hashuri.push(data.hash);
+                                $j.jGrowl(
+                                    data.str,
+                                    {
+                                        corners:'1px',
+                                        life: data.life,
+                                        header:data.title,
+                                        hash: data.hash,
+                                        sticky: data.sticky,
+                                        close: function(e,m,o)
+                                            {
+                                                $j.ajax({url:'/page/notif/delete_single_event/' + o.hash});
+                                            }
+                                    });
+                                }
+                            }
+                        catch(e){}
+                        })
+                    }
+            });
+        }
+	 </script> 
+
+<script type='text/javascript' src='../js/jquery.hovertip-1.0.min.js'></script> 
+<script type='text/javascript' src='../js/jquery.jgrowl_minimized.js'></script> 
+<link rel='stylesheet' href='../css/jquery.jgrowl.css' media='screen' type='text/css'> 
+<script type='text/javascript' src='../js/jquery.timer-min.js'></script> 
+<link rel='stylesheet' href='var/gallery.css' media='screen' type='text/css'> 
+<script type='text/javascript' src='var/galerie/jquery.prettyPhoto.js'></script> 
+<style>.hovertip{
+    position:absolute;
+    padding:10px 13px;
+    z-index:2;
+    max-width:300px;
+    color:#303030;
+    background-color:#f5f5b5;
+    border:1px solid #DECA7E;
+    font-family:sans-serif;
+    font-size:12px;
+    line-height:18px;
+    text-align:left;
+    }</style> 
+<script type='text/javascript'>$j(document).ready(function(){$j('.tooltip').hovertip({'offset':[20,20]});get_notif();});
+
+if(!Array.indexOf){Array.prototype.indexOf = function(obj){for(var i=0; i<this.length; i++){if(this[i]==obj){return i;}}return -1;}}
+    hashuri = [] ;
+	 var tick_timer= 3000 ;
+ 
+	 function get_notif()
+        {
+		  
+		  //console.log(tick_timer);
+	     
+		  setTimeout(get_notif,tick_timer);
+        
+		   $j.ajax(
+            {
+                url: '/page/notif/show_events',
+                dataType: 'json',
+                data: "{}",
+                success: function(data)
+                    {
+                    $j.each(data,function(index,data){
+                        try
+                            {
+                            if( hashuri.indexOf(data.hash) == -1 )
+                                {
+                                hashuri.push(data.hash);
+                                $j.jGrowl(
+                                    data.str,
+                                    {
+                                        corners:'1px',
+                                        life: data.life,
+                                        header:data.title,
+                                        hash: data.hash,
+                                        sticky: data.sticky,
+                                        close: function(e,m,o)
+                                            {
+                                                $j.ajax({url:'/page/notif/delete_single_event/' + o.hash});
+                                            }
+                                    });
+                                }
+                            }
+                        catch(e){}
+                        })
+                    }
+            });
+        }
+	 </script> 
+
+<style type="text/css">
+.poze
+{
+    float:right;
+    width:110px;
+}
+.poze a img
+{    border:none;
+}
+.main_content
+{
+    float:left;
+    width:560px;
+}
+</style>
+
+ <div class = 'poze'>
+            <a class='thumb' href='https://www.youtube.com/watch?v=WeZdonkJVzc' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../../img.youtube.com/vi/WeZdonkJVzc/1.jpg' alt='' />
+                <span class='desc'>Calin Rus - Afirmator 1</span>
+            </a>
+        
+
+            <a class='thumb' href='https://www.youtube.com/watch?v=nixUt7Th2PA' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../../img.youtube.com/vi/nixUt7Th2PA/1.jpg' alt='' />
+                <span class='desc'>Cross examination 1</span>
+            </a>
+        
+
+            <a class='thumb' href='https://www.youtube.com/watch?v=wbYDjN4vuys' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../../img.youtube.com/vi/wbYDjN4vuys/1.jpg' alt='' />
+                <span class='desc'>Lavinia Florea - Negator 1</span>
+            </a>
+        
+
+            <a class='thumb' href='https://www.youtube.com/watch?v=_1kQuBHRDXc' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../../img.youtube.com/vi/_1kQuBHRDXc/1.jpg' alt='' />
+                <span class='desc'>Cross examination 2</span>
+            </a>
+        
+
+            <a class='thumb' href='https://www.youtube.com/watch?v=Xxh9iAeJiv8' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../../img.youtube.com/vi/Xxh9iAeJiv8/1.jpg' alt='' />
+                <span class='desc'>Mihai Morar - Afirmator 2</span>
+            </a>
+        
+
+            <a class='thumb' href='https://www.youtube.com/watch?v=wQy-pm4tsKU' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../../img.youtube.com/vi/wQy-pm4tsKU/1.jpg' alt='' />
+                <span class='desc'>Stefan Covaciu - Negator 2</span>
+            </a>
+        
+
+
+    <script>
+    $j(document).ready(function(){
+      		$j("a[rel^='prettyPhoto']").prettyPhoto({theme:'facebook'});
+        });
+    
+    </script>
+    </div>
+
+<div class='main_content'>
+<p>&nbsp;</p>
+<div><strong>Dezbatere publică Cluj&nbsp;</strong><br /><strong>10 dec 2013, Facultatea de Stiinte Politice, Administrative si ale comunicarii, Cluj</strong><br /><strong>E timpul ca statul să nu mai subvenționeze specializările care nu au căutare pe piața muncii?</strong><br /><br /></div>
+<div>Echipa pro - Calin Rus, student la Facultatea de Informatica UBB &amp;&nbsp; Lavinia Florea HR Business Partner Office Depot Service Center</div>
+<div>Echipa contra - Mihai Morar, student la Facultatea de Drept UBB &amp; Stefan Covaciu HR Sr. Project Manager Leoni Romania</div>
+<div></div>
+<div>
+<p class="western" lang="ro-RO"><strong>Afirmator 1 &mdash; Călin Rus</strong></p>
+<p class="western" lang="ro-RO">Ce-ar fi să vă &icirc;ntreb &icirc;n primul r&acirc;nd dacă știați că la nivel mondial există trei sute de milioane de șomeri tineri. Mai departe, observăm că Rom&acirc;nia stă foarte prost la capitolul acesta și se află printre ultimele locuri &icirc;n lume la nivel de șomeri tineri și la modul &icirc;n care tinerii se pot angaja &icirc;n societate. Optzeci la sută dintre absolvenți nu se angajează &icirc;n domeniul &icirc;n care au fost pregătiți &icirc;n facultate. Ce putem noi vedea este că există șase mii de oameni care termină administrație publică și științe politice și care &icirc;și găsesc loc de muncă &icirc;n domeniu &icirc;n proporție de 14 %. Există studii de piață, de exemplu la Universitatea din București care &icirc;ncearcă să vadă &icirc;n ce măsură se angajează studenții lor și &icirc;n funcție de asta să modifice planurile de &icirc;nvățăm&acirc;nt, iar acestea sunt niște lucruri fezabile, care sunt aplicate &icirc;n momentul de față și pe care le putem aplica și noi. De fapt, noi dorim ca să oferim locuri &icirc;n facultăți &icirc;n mod proporțional cu numărul locurilor de muncă din domeniul respectiv și să le finanțăm &icirc;n acest mod.</p>
+<p class="western" lang="ro-RO">Vom vorbi pe două mari puncte: ce se &icirc;nt&acirc;mplă la nivel de stat și ce se &icirc;nt&acirc;mplă la nivel de schimbare a sistemului de &icirc;nvățăm&acirc;nt. Și vedem că rolul statului &icirc;n privința educației este să o asigure, iar el face asta, av&acirc;nd &icirc;n vedere că avem &icirc;nvățăm&acirc;nt primar, gimnazial și de liceu oferit &icirc;n mod gratuit; ce ne răm&acirc;ne este facultatea, care după cum &icirc;i spune și numele, este facultativă. Statul, &icirc;n momentul de față dă fonduri substanțiale pentru educație, bani pe care &icirc;i primește de la societate. Societatea, la r&acirc;ndul ei, trebuie să beneficieze de aceste fonduri, și de aceea, nu este OK să lăsăm acest sistem de educație doar la latitudinea individului, a studentului care vrea sau nu să aleagă ceva, ci trebuie cumva corijată piața astfel &icirc;nc&acirc;t individul să aleagă ceea ce este necesar și folositor pentru societate. &Icirc;n momentul de față statul dă bani pentru două mii de locuri la jurnalism, &icirc;n condițiile &icirc;n care un procent foarte mic reușește ulterior să profeseze &icirc;n domeniu, versus banii pe care &icirc;i dă &icirc;n matematică, informatică, medicină, domenii de viitor &icirc;n care nu se investește la fel de mult.</p>
+<p class="western" lang="ro-RO">Astfel ajungem la cel de-al doilea punct major la nivel de stat, legat de elementul economic. Trebuie să avem &icirc;n vedere o dezvoltare &icirc;n viitor; practic, trebuie să luăm o atitudine acum pentru a avea o schimbare la acest nivel. Vedem cum &icirc;n demografia actuală este o problemă foarte mare, pentru că tinerii sunt din ce &icirc;n ce mai puțini și asta face tot mai greu sustenabil economic actual. Asta &icirc;nseamnă taxe și impozite din ce &icirc;n ce mai mari pentru a susține toată populația. Iar aceste taxe se obțin tocmai de la oamenii care lucrează, care au un capital c&acirc;t mai mare sau care cheltuiesc mult &icirc;n societate. Vedem cum statul este responsabil să reintegreze oamenii pe piața muncii, tocmai pentru a beneficia de pe urma lor și pentru a putea susține &icirc;n continuare societatea și de aceea trebuie să privim la nivel de stup, nu de albină.</p>
+<p class="western" lang="ro-RO">Acum să vedem cum facem revirimentul acesta &icirc;n &icirc;nvățăm&acirc;nt. Este foarte ușor dacă &icirc;l comparăm cu sportul. Acum, statul investește foarte mult &icirc;n fotbal, &icirc;n timp ce n-am mai avut o calificare de la campionatul mondial din 94, iar fix același lucru se &icirc;nt&acirc;mplă acum și &icirc;n &icirc;nvățăm&acirc;nt. De exemplu, c&acirc;te facultăți avem &icirc;n top 300 mondial? Niciuna. Dar c&acirc;te facultăți de matematică avem? Chiar avem trei, iar una chiar &icirc;n top 150.  Acolo ar trebui să investim pentru că noi credem &icirc;n calitatea sistemului de &icirc;nvățăm&acirc;nt și credem că această calitate se poate &icirc;mbunătăți. Vedem că sistemul s-a descentralizat foarte mult și că universitățile au autonomie mult prea mare. Astfel, lăsăm autonomia universităților la nivel de manageriere, dar le controlăm prin intermediul fondurilor și așa reușim să avem un impact asupra sistemului de &icirc;nvățăm&acirc;nt. Iar astfel obținem calitate, fondurile fiind aceleași, noi trebuie să facem &icirc;n așa fel &icirc;nc&acirc;t să mergem &icirc;nspre a-i lăsa și pe ceilalți să participe și să beneficieze. Astfel, nu vom mai da 20 de mii de euro spre &icirc;nvățăm&acirc;nt, ci vom da mai mult spre facultățile care &icirc;ntr-adevăr contează și pentru a le evolua pe acestea.</p>
+<p class="western" lang="ro-RO">Din ce v-am spus astăzi, v-am arătat cum statul &icirc;n sine se va schimba și sistemul de &icirc;nvățăm&acirc;nt va deveni mai bun și pentru acestea nu pot dec&acirc;t să aprob moțiunea. Vă mulțumesc!</p>
+<p class="western" lang="ro-RO"><br /><br /></p>
+<p class="western"><strong>Cross examination 1</strong></p>
+<p class="western" lang="ro-RO"><strong>Lavinia Florea (negator 1):</strong> Suntem un pic curioși &icirc;n legătură cu sursele pentru procentele și cifrele pe care le-ai dat.</p>
+<p class="western" lang="ro-RO"><strong>Călin Rus (afirmator 1):</strong> Sursele de unde am obținut aceste lucruri sunt, pe deoparte AJOFM-ul, unde am văzut &icirc;n ce măsură se reintegrează oamenii pe piața muncii &icirc;n domeniile pe care le-au urmat &icirc;n facultăți, alte studii le-am luat de pe site-urile facultăților unde poți efectiv să vezi &icirc;n ce măsură reușesc tinerii să se integreze pe piața muncii &icirc;n domeniile urmate&hellip;</p>
+<p class="western" lang="ro-RO"><strong>Lavinia Florea (negator 1):</strong> De la AJOFM ce anume ai găsit?</p>
+<p class="western" lang="ro-RO"><strong>Călin Rus (afirmator 1):</strong> Erau niște procente despre &icirc;n ce proporție reușesc oamenii să se reintegreze pe piața muncii &icirc;n domeniul &icirc;n care au terminat facultatea&hellip;</p>
+<p class="western" lang="ro-RO"><strong>Lavinia Florea (negator 1):</strong> Reintegrare, asta &icirc;nseamnă un om care a pierdut un job &icirc;n domeniul &icirc;n care a lucrat și acum trebuie să se reintegreze, sau cum?</p>
+<p class="western" lang="ro-RO"><strong>Călin Rus (afirmator 1):</strong> Nu neapărat. De exemplu, o persoană care activează &icirc;n momentul de față &icirc;n sistemul de &icirc;nvățăm&acirc;nt și se reintegrează &icirc;n societate prin intermediul locurilor de muncă.</p>
+<p class="western" lang="ro-RO"><strong>Lavinia Florea (negator 1):</strong> Ok, și ce-a reieșit de-acolo?</p>
+<p class="western" lang="ro-RO"><strong>Călin Rus (afirmator 1):</strong> Că 80% &icirc;n momentul de față nu activează &icirc;n domeniile &icirc;n care termină studiile.</p>
+<p class="western" lang="ro-RO"><strong>Lavinia Florea (negator 1):</strong> N-o să intru &icirc;n tehnicalități, despre ce face AJOFM-ul. Definește un pic piața muncii, ce &icirc;nțelegeți voi prin asta, ca să știm care e rolul discuției&hellip;</p>
+<p class="western" lang="ro-RO"><strong>Călin Rus (afirmator 1):</strong> Prin piața muncii &icirc;nțelegem toate domeniile de activitate &icirc;n care cineva poate să profeseze &icirc;n momentul de față.</p>
+<p class="western" lang="ro-RO"><strong>Lavinia Florea (negator 1): </strong>Vreau să aduc &icirc;n discuție partea vocațională. Tu vrei să mergem, &icirc;n principiu, pe matematică, de exemplu &mdash; ai spus de cel puțin trei ori cuv&acirc;ntul matematică &mdash; pentru că acolo avem talente și facultățile sunt &icirc;n top 150. Ce ne facem cu cei, probabil, 80 la sută care detestă matematica?</p>
+<p class="western" lang="ro-RO"><strong>Călin Rus (afirmator 1):</strong> &Icirc;n momentul &icirc;n care există oameni care detestă un anumit domeniu, asta este o problemă a sistemului de &icirc;nvățăm&acirc;nt și a persoanei &icirc;n sine. &Icirc;n momentul &icirc;n care o persoană nu dorește să activeze &icirc;ntr-un anumit domeniu, cu siguranță va găsi un alt domeniu profitabil, pe care societatea &icirc;l dorește, &icirc;n care să poată activa.</p>
+<p class="western" lang="ro-RO"><br /><br /></p>
+<p class="western" lang="ro-RO"><strong>Negator 1 &mdash; Lavinia Florea</strong></p>
+<p class="western" lang="ro-RO">&Icirc;mi face deosebită plăcere să țin un meci de debate după șapte sau opt ani. Voi trece prin tot ce s-a spus pentru a contraargumenta echipa afirmatoare și, dacă mai e timp voi mai aduce și c&acirc;teva argumente pe care le aveam pregătite de la &icirc;nceput.</p>
+<p class="western" lang="ro-RO">Avem statistici care ne spun că sunt 300 de milioane de șomeri, probabil la nivel global, &icirc;nsă nu ni s-a spus că, poate aceștia sunt șomeri din cauză că statul nu le-a subvenționat educația, că nu au o educație destul de bună pentru a se integra pe piața muncii. Apoi, 80% nu lucrează &icirc;n domeniu, dar, ce vrem noi să spunem e că a lucra &icirc;n domeniu este o chestie relativă. Noi lucrăm &icirc;n HR și știm că statul nu știe cine unde lucrează &icirc;n Rom&acirc;nia. Singura lor modalitate de a vedea acest lucru este prin sistemul Revisal, unde se poate verifica &icirc;n funcție de COR-uri (Clasificarea Ocupațiilor din Rom&acirc;nia) cine ce joburi are.</p>
+<p class="western" lang="ro-RO">Dacă problema sunt banii, faptul că acei oameni lucrează, chiar dacă &icirc;ntr-un alt domeniu, e &icirc;n regulă, pentru că noi ne dorim ca oamenii să plătească taxe, impozite, să susțină viitorul, să putem da bani și pentru chestiile vocaționale, de exemplu, sau pentru alte lucruri care se doresc a fi făcute, dar nu aduc profit, cum ar fi asistența socială.  14% din absolvenții acestei facultăți nu lucrează &icirc;n domeniu. Din nou, este un lucru supraapreciat să lucrezi &icirc;n domeniu. C&acirc;nd Andrei Marga a hotăr&acirc;t ca admiterea să nu mai fie pe bază de examen și ca oricine să poată, practic, intra la facultate, de fapt, și-a dorit un anumit lucru: nivelul general al educației populației din Rom&acirc;nia să crească. Ceea ce conferă sunt niște competențe generale importante care angajatorii le doresc pe piața muncii. Dar dacă ești chimist și ai decis &icirc;n timpul facultății că nu-ți place chimia sau dacă ai terminat științe politice și nu-ți găsești de lucru &icirc;n domeniu, dar vorbești o limbă străină, noi o să te angajăm, de exemplu. &Icirc;n plus, companiile investesc mulți bani, asumat, pentru <em>on the job training</em>. Adică, companiile din ziua de azi te vor &icirc;nvăța ce trebuie să știi pentru locul de muncă.</p>
+<p class="western" lang="ro-RO">Statul nu poate să aprecieze nevoile pe piața muncii. Noi, de exemplu, pentru că COR-urile nu sunt armonizate cu joburile de pe piață &icirc;i integrăm pe oameni cu o chestie care nu poate fi așa de vizibilă pentru statisticile stimatului afirmator 1 despre piața muncii. Oamenii lucrează &icirc;n domeniul economic fără ca statul să vadă &icirc;n Revisal chestia asta.</p>
+<p class="western" lang="ro-RO">Spuneați că rolul statului este să asigure educație p&acirc;nă la un anumit nivel pentru că facultatea e facultativă. V-am spus că ne interesează acele abilități generale de comunicare, de documentare, astfel &icirc;nc&acirc;t angajatorii știu ce au de făcut cu o persoană care are atitudinea potrivită și care vrea să muncească.</p>
+<p class="western" lang="ro-RO">Afirmatorii &icirc;și doresc ca toată societatea să beneficieze de bani, nu numai niște indivizi care și-au ales prin vocație ceva nepotrivit. Vreau să spun că indivizii sunt societatea și noi, dacă dorim să blocăm fondurile, să spunem, pentru geologie &mdash; că nu sună foarte sexi &mdash; sau pentru administrație publică, de ce avem nevoie &icirc;n viitor? De exemplu, dacă s-ar fi blocat &icirc;n SUA cursurile de caligrafie, Steve Jobs nu le-ar fi urmat și astăzi nu am mai fi avut la dispoziție fonturile de pe Mac-uri.</p>
+<p class="western" lang="ro-RO">&Icirc;n ceea ce privește schimbarea sistemului economic, pentru viitor, da, populația &icirc;mbătr&acirc;nește și da, avem nevoie de taxe, dar oamenii care se angajează pot să aibă joburi, pot lucra pe PFA sau pe drepturi de autor, iar cine chiar vrea, cu siguranță reușește. La noi &icirc;n companie, care are profil economic, 30% din studenți au studii economice, &icirc;n rest și ceilalți sunt la fel de buni. Pentru că au &icirc;nvățat &icirc;ntr-o lună tot ce trebuiau să știe, &icirc;ncă mai bine și mai aplicat dec&acirc;t cea ce ar fi putut face &icirc;n facultate. Iar dacă statul vrea să controleze ce iese din facultăți, are alte criterii, nu să taie banii. De exemplu, să facă o curriculă mai adaptată, să aibă relații potrivite cu angajatorii, astfel &icirc;nc&acirc;t să le asigure studenților internship-uri din  timpul facultății sau să se asigure că ei vor avea un loc de muncă.</p>
+<p class="western" lang="ro-RO">Vreau să mai aduc &icirc;n discuție o singură idee: g&acirc;ndiți-vă că vorbim și despre internaționalitate pe piața muncii și este dreptul vocațional al fiecăruia de a se răzg&acirc;ndi. Prin urmare, dacă eu am făcut o facultate și nu mi-a plăcut sau nu mi-am găsit &icirc;n domeniu, sunt foarte bine astăzi pentru că am reușit să mă reconvertesc și singură.</p>
+<p class="western" lang="ro-RO"><br /><br /></p>
+<p class="western" lang="ro-RO"><strong>Cross examination 2</strong></p>
+<p class="western" lang="ro-RO"><strong>Călin Rus (afirmator 1):</strong> Ne-ai spus despre stat și despre problema acestuia de fezabilitate. Dacă am exclude asta, crezi că măsura ar fi bună sau nu?</p>
+<p class="western" lang="ro-RO"><strong>Lavinia Florea (negator 1):</strong> Cum poți exclude baza ideii tale?</p>
+<p class="western" lang="ro-RO"><strong>Călin Rus (afirmator 1):</strong> Ai spus că nu-i o problemă că nu lucrezi &icirc;n domeniu at&acirc;ta timp c&acirc;t reușești să contribui la stat. Atunci, nu crezi că s-ar aduce și mai mulți bani dacă oamenii ar lucra &icirc;n domeniu, ar fi mai performanți și mai bine plătiți fiind specializați &icirc;n domeniul respectiv?</p>
+<p class="western" lang="ro-RO"><strong>Lavinia Florea (negator 1):</strong> E o chestie ciudată. Nu știu dacă tu poți să-mi spui acum care ar trebui să fie salariul unuia care a terminat matematica, care ar trebui să fie salariul unui IT-ist sau al unui economist. Din păcate nu poți să zici că, dacă ai terminat științe politice, vei fi mai bine plătit dec&acirc;t cineva care a terminat o facultate de științe economice și se angajează &icirc;ntr-o companie cum suntem noi. Companiile nu se uită la studii, se uită la abilități și ceea ce ai putut să asimilezi c&acirc;nd ești la ei.</p>
+<p class="western" lang="ro-RO"><strong>Călin Rus (afirmator 1):</strong> Chestia asta ține de cultură generală și de c&acirc;t ești de autodidact. Ce nevoie mai ai de universitate ca să faci asta?</p>
+<p class="western" lang="ro-RO"><strong>Lavinia Florea (negator 1):</strong> Mă-ntrebi d ce avem nevoi de școală? Atunci de ce avem nevoie de spitale, de asistență socială?!&hellip; &icirc;n principiu poți să trăiești și &icirc;n pădure și să fii autosuficient și să-ți rezolvi singur toate problemele.</p>
+<p class="western" lang="ro-RO"><strong>Călin Rus (afirmator 1):</strong> Vorbeai de firme care fac training-uri. &Icirc;n ce măsură ar putea firmele respective să sprijine efectiv universitățile private, așa cum se &icirc;nt&acirc;mplă &icirc;n străinătate?</p>
+<p class="western" lang="ro-RO"><strong>Lavinia Florea (negator 1):</strong> Este foarte complexă chestiunea asta. Putem discuta despre lobby, de exemplu și de companiile americane care nu au voie să dea bani niciunei instituții rom&acirc;nești pentru că există o lege internațională care &icirc;ți interzice să dai orice către o instituție de stat din Rom&acirc;nia.</p>
+<p class="western" lang="ro-RO"><strong>Călin Rus (afirmator 1):</strong> La nivel de alternative, vorbeai foarte mult despre curriculă și despre cum schimbi foarte multe chestii și ai aceleași avantaje. De ce nu le poți face pe ambele?</p>
+<p class="western" lang="ro-RO"><strong>Lavinia Florea (negator 1):</strong> Nu este treaba noastră să propunem să facem ambele lucruri. &Icirc;n principiu, soluția noastră e să se lucreze la altceva. Credem &icirc;n statul liberal, credem că piața muncii se autoreglează și credem că da, se poate &icirc;ntări legătura dintre stat și mediul universitar, dar fără să zicem &bdquo;..și dacă nu, vă tăiem fondurile.&rdquo; Nu poți ști ca stat ce se cere &icirc;n viitor. Eu c&acirc;nd am terminat facultatea nu știam că există domeniul outsourcing. Acum, sunt 3200 de locuri de muncă &icirc;n outsourcing &icirc;n Cluj. Noi nu putem ști dacă un anumit domeniu va mai exista &icirc;n următorii ani, sau dacă un alt domeniu &icirc;nflorește. Dacă tu nu ai oameni din urmă care să fi studiat un anume lucru &icirc;n facultate, investitorii vor alege să meargă &icirc;n altă țară.</p>
+<p class="western" lang="ro-RO"><br /><br /></p>
+<p class="western" lang="ro-RO"><strong>Afirmator 2 &mdash; Mihai Morar</strong></p>
+<p class="western" lang="ro-RO">Scurt, &icirc;n patru puncte. &Icirc;n primul r&acirc;nd, cum ne dăm seama care-s nevoile? Simplu, nu ne dăm seama &icirc;n momentul de față că nu suntem Nostradamus. &Icirc;n schimb ne dăm seama cine se-angajează și care facultăți produc oameni care au locuri de muncă. Un exemplu foarte bun sunt facultățile din Anglia, unde la ei pe site poți vedea care este procentul oamenilor angajați &icirc;n domeniu. Asta ar trebui să vedem: care este procentul oamenilor care se angajează &icirc;n domeniu după ce termină o facultate și ajung să susțină statul, să susțină o familie.</p>
+<p class="western" lang="ro-RO">Al doilea punct. Partea de reorientare pe piața muncii. Considerăm că da, e o cale de scăpare din sistemul acesta, &icirc;nsă o considerăm o problemă. &Icirc;n momentul &icirc;n care eu fac patru ani la facultatea de drept și apoi &icirc;ncă doi ani de master, nu vreau să mă reorientez către altceva, vreau să lucrez &icirc;n domeniul meu.  &Icirc;n momentul &icirc;n care eu trebuie să caut alt loc de muncă este deja o problemă. Statul ar trebui să dea bani doar acolo unde se creează locuri de muncă. &Icirc;n momentul de față fondurile se alocă proporțional. Noi nu vrem ca unele facultăți nu vor mai primi bani, ci vor primi bani &icirc;n funcție de performanțe. Asta va face ca facultățile să &icirc;ncerce să &icirc;și sporească performanțele pentru a primi mai mulți bani.</p>
+<p class="western" lang="ro-RO">Ce se &icirc;nt&acirc;mplă &icirc;n momentul &icirc;n care eu termin o facultate și nu pot să mă angajez? Considerăm că angajatorul caută experiență și entuziasm din partea celor care vor să se angajeze. Cu c&acirc;t trece mai mult timp &icirc;n care eu nu găsesc de muncă &icirc;n domeniu, cu at&acirc;t mai mult scad șansele de a mă angaja.</p>
+<p class="western" lang="ro-RO">Multe dintre facultățile din Rom&acirc;nia se orientează către un &icirc;nvățăm&acirc;nt pur teoretic și au cursuri care nu sunt neapărat folositoare. Dacă &icirc;n facultate nu se oferă ocazia de practică, de aceste internship-uri de care vorbea și echipa negatoare, noi o să vă tăiem din fonduri. Fiecare facultate trebuie să-și modifice curricula astfel &icirc;nc&acirc;t să devină performante, să creeze oameni pregătiți pentru piața muncii.</p>
+<p class="western" lang="ro-RO">Piața muncii nu se autoreglementează &icirc;n momentul de față. Avem foarte mari probleme. De ce? Pentru că, de exemplu, &icirc;n Spania avem unul din patru tineri care nu este angajat deloc, nu vorbim de mediul &icirc;n care a făcut facultatea. Dacă tot ceea ce se caută la o firmă este să știe o limbă străină, considerăm că atunci nu ai nevoie de &icirc;nvățăm&acirc;nt superior. Nu putem spune că o persoană care are anumite cunoștințe generale ar putea să devină medic sau avocat.</p>
+<p class="western" lang="ro-RO">Considerăm că moțiunea pornește de la o problemă foarte clară. De la problema că o grămadă de oameni nu sunt mulțumiți de ceea ce fac. De ce? Pentru că nu sunt angajați. Pentru că au plătit facultatea timp de patru ani și apoi au mai plătit un master timp de &icirc;ncă doi ani și nu se pot angaja &icirc;n domeniul &icirc;n care ar fi vrut să profeseze. Noi trebuie să le arătăm oamenilor că trebuie să schimbăm lucrurile. Ori &icirc;și aleg alt domeniu care &icirc;ntr-adevăr ar fi sustenabil și-i va ajuta pe termen lung, ori dimpotrivă, facultatea va face astfel &icirc;nc&acirc;t să atragă mai mulți bani și să-i ofere studentului o perspectivă mai bună. Iar &icirc;n momentul &icirc;n care termini o facultate să poți să-ți faci o familie, să-ți poți cumpăra o mașină, o casă și așa mai departe pentru că ai deja un loc de muncă. Considerăm că oamenii care stau și hoinăresc după ce termină facultatea nu ne-ajută cu nimic. De aceea considerăm că moțiunea ar trebui aprobată.</p>
+<p class="western" lang="ro-RO"><br /><br /></p>
+<p class="western" lang="ro-RO"><strong>Negator 2 &mdash; Ștefan Covaciu</strong></p>
+<p class="western" lang="ro-RO">P&acirc;nă la urmă avem un caz relativ subțire ca și construcție pentru că stă &icirc;n două argumente și c&acirc;teva cifre. Guvernul nu reușește să cadreze problema. Mergem de la 300 de milioane de șomeri la nivel global la niște cifre ale AJOFM, care este o instituție județeană, cu niște exemple din Anglia și Spania și ne mai &icirc;ntoarcem &icirc;n altă parte. P&acirc;nă la urmă aceasta este o problemă locală, județeană, națională sau internațională? E foarte important, pentru că trebuie să stabilim despre care universități vorbim și de care piețe ale muncii vorbim. A doua confuzie care este inclusă &icirc;ncontinuu &icirc;n discurs și care &icirc;l face un caz necredibil este ce &icirc;nseamnă performanță universitară. &Icirc;nseamnă ca oamenii să se angajeze &icirc;n domeniu, sau performanța &icirc;n cercetare &mdash; un criteriu care se ia &icirc;n considerare atunci c&acirc;nd se fac topurile?</p>
+<p class="western" lang="ro-RO">A treia distonanță care ne face să nu &icirc;nțelegem unde bate guvernul cu această măsură este tratarea oamenilor care nu s-au angajat &icirc;n domeniu ca pe niște șomeri. Se arată că 80 la sută dintre oamenii care termină o facultate nu se angajează &icirc;n domeniu, și asta e problema. Păi, de ce e o problemă? Ei nu-s șomeri, au venituri, generează impozit, au mașină, au tot ce trebuie. Chiar dacă nu și-au folosit unele competențe &icirc;nvățate &icirc;n facultate, cu siguranță și-au folosit alte competențe &icirc;nvățate &icirc;n facultate necesare pentru angajare. Oricum facultatea i-a format, chiar dacă nu &icirc;n domeniul acela de nișă, ci &icirc;n altă parte.</p>
+<p class="western" lang="ro-RO">Problemele pe care le-am găsit &icirc;n caz sunt legate de faptul că nu se știe exact care sunt dimensiunile, unde se poate trage linia, la ce facultăți să le tăiem din fonduri sau cam c&acirc;t din aceste fonduri.</p>
+<p class="western" lang="ro-RO">Pornind de la această construcție șubredă, ei vin cu două argumente. Unul este legat de eficiența statului. Adică statul ar trebui să fie mai atent cum &icirc;și cheltuie banii și toți contribuitorii ar trebui să beneficieze de el.  Statul nu face asta prin definiție. Statul c&acirc;nd face autostrăzi toacă banii celor fără mașini sau c&acirc;nd face spitale toacă banii celor care nu se tratează iar c&acirc;nd investește banii &icirc;ntr-o facultate care la alții nu le place, toacă banii acestor grupuri. Acest model nu există &icirc;n general. Orice stat este cunoscut pentru ineficiența lui, iar c&acirc;nd ne punem problema să facem mai eficiente aceste cheltuieli publice, fix finanțarea acestor facultăți este locul din care trebuie să &icirc;ncepem. Legat de acest argument al eficienței economice: oamenii ăștia primesc niște subvenții &icirc;n timpul facultății, se &icirc;ntorc undeva &icirc;n piața muncii, unde &icirc;și găsesc, după care generează impozite și plătesc &icirc;napoi acești bani.</p>
+<p class="western" lang="ro-RO">P&acirc;nă la urmă, echipa guvernului construiește un caz legat de inutilitate. Adică sunt niște oameni care trec&acirc;nd printr-o facultate și apoi nu-și găsesc un loc de muncă &icirc;n domeniu, sunt inutili pentru societate. Ideea nu e nouă. Au mai avut-o și comuniștii &icirc;nainte. I-au considerat foarte periculoși pe oamenii care nu se puteau &icirc;ncadra &icirc;n c&acirc;mpul muncii. I-au băgat la Canal și i-au distrus. Sigur, guvernul de azi e mai uman. Zice, hai să nu-i omor&acirc;m, numai să le tăiem accesul la studii, sau dacă vor să și le facă, să și le plătească din banii părinților lor. După cum știți, proiectul a fost destul de spectaculos invalidat acum vreo douăzeci de ani și de aia nu pot dec&acirc;t să le urez succes colegilor din guvern &icirc;n &icirc;ncercarea lor de a &icirc;ntoarce roata istoriei. &nbsp;</p>
+</div>
+<p>&nbsp;</p>
+</div>
+                <div class='clear'></div>
+        </div><!-- end main content -->
+         <div class='clear'></div>
+</div>
+<div id="pix"></div>
+
+
+                                </div><!--end main -->
+                                <div id='parteneri'>
+                                    <span class='tr'></span><span class='tl'></span><span class='br'></span><span class='bl'></span><span id="filler"></span>
+                                    <div class='parteneri' id='sustinatori'>
+                                        <span class='floating_text' id='un_proiect'>Un proiect</span>
+                                        <a href='http://www.ardor.org.ro/'><div class='image' id='ardor'>Ardor</div></a>
+                                        <span class='floating_text' id='finantatori'>Finanțatori</span>
+                                        <a href='http://www.opensocietyfoundations.org/'><div class='image' id='open_society'>Open Society Foundation </div></a>
+                                        <a href='http://www.studentiq.ro//'><div class='image' id='memoplus'>MemoPlus</div></a>
+                                        <!-- <a href='http://www.ratiufamilyfoundation.com/'><div class='image' id='FundatiaRatiu'>Ardor</div></a>
+                                        <a href='http://www.eef.md/'><div class='image' id='eef'>East Europe Foundation</div></a>
+                                        <a href='http://www.mts.gov.md/'><div class='image' id='mdminister'>Ministerul Tineretului si Sportului al Republicii Moldova</div></a> -->
+
+                                        <span class='floating_text' id='parteneri_text'>Parteneri</span>
+
+                                        <a href='http://www.policycenter.eu/'><div class='image' id='PolicyCenter'>Policy Center</div></a>
+                                        <a href='http://www.britishcouncil.org/'><div class='image' id='BritishCouncil'>British Council</div></a>
+                                        <a href='http://www.europuls.ro/'><div class='image' id='europuls'>Europuls</div></a>
+                                        <a href='http://www.cere.ro/'><div class='image' id='cere'>Ce-Re</div></a>
+                                        <a href='http://www.primeromania.ro/'><div class='image' id='prime'>Prime Romania</div></a>
+                                        <a href='http://www.cji.ro/'><div class='image' id='cji'>Centrul pentru jurnalism independent</div></a>
+                                        <a href='http://www.aiesectm.ro/'><div class='image' id='aisec'>Aisec</div></a>
+                                        <!-- ===================================================================================================== -->
+                                        <a href='http://www.cogitus.ro/'><div class='image' id='cogitus'>Cogitus</div></a>
+                                        <a href='http://www.adevarul.ro/international/foreign_policy/'><div class='image' id='foreignPolicy'>Foreign Policy</div></a>
+                                        <a href='http://www.elsa.ro/'><div class='image' id='elsa'>Elsa</div></a>
+                                        <a href='http://www.vipromania.ro/'><div class='image' id='vipromania'>Voluntari pentru idei si proiecte</div></a>
+                                        <a href='http://www.ongtrust.ro/'><div class='image' id='ongtrust'>Trust</div></a>
+
+                                        <!-- ===================================================================================================== -->
+                                        <a href='http://www.leap.ro/'><div class='image' id='leap'>Leap</div></a>
+                                        <a href='http://www.younginitiative.org/'><div class='image' id='younginitiative'>Asociatia young initiative</div></a>
+                                        <a href='http://www.asjc.ro/'><div class='image' id='asjc'>Asjc</div></a>
+                                        <a href='http://osut.ro/'><div class='image' id='osut'>Osut</div></a>
+                                        <div class='clear'></div>
+                                    </div>
+                                    <div class='parteneri' id='parteneri_institutionali'>
+                                        <span class='floating_text' id='sponsori_text'>Sus&#539;in&#x0103;tori</span>
+                                        <a href='http://www.cartier.md/'><div class='image' id='cartier_logo'>Editura Cartier</div></a>
+                                        <a href='http://www.pll.md/ro/'><div class='image' id='biblio_logo'>Biblioteca publica de drept</div></a>
+                                        <span class='floating_text' id='institutii_text'>Parteneri institu&#539;ionali</span> 
+                                        <ul id='institutii'>
+                                            <!-- <span class='floating_text' id='institutii_text'>Parteneri institu&#539;ionali:</span> -->
+                                            <li><a href='http://www.politice.ro/'>Facultatea de &#536;tiin&#539;e Politice SNSPA </a></li>
+                                            <li><a href='http://www.comunicare.ro/'>Facultatea de Comunicare &#537;i Rela&#539;ii Publice SNSPA</a></li>
+                                            <li><a href='http://www.fspub.ro/'>Facultatea de &#536;tiin&#539;e Politice Universitatea Bucure&#537;ti</a></li>
+                                            <li><a href='http://www.filosofie.unibuc.ro/'>Facultatea de Filosofie Universitatea Bucure&#537;ti</a></li>
+                                            <li><a href='http://litere.unibuc.ro/'>Facultatea de Litere din Universitatea Bucure&#x015f;ti</a></li>
+                                            <li><a href='http://www.unibuc.ro/ro/fac_fsas_ro'>Facultatea de Sociologie Universitatea Bucure&#537;ti</a></li>
+                                            <li><a href='http://laws.uaic.ro/'>Facultatea de Drept Universitatea Alexandru Ioan Cuza Ia&#537;i</a></li>
+                                            <li><a href='http://www.uaic.ro/uaic/bin/view/Academic/Filosofie'>Facultatea de Filosofie si &#536;tiin&#539;e Social Politice Universitatea AIC Ia&#537;i</a></li>
+                                            <li><a href='http://www.upa.ro/'>Facultatea de Drept si Facultatea de &#x015e;tiin&#x0163;e Politice si Administrative Universitatea Petre Andrei Ia&#x015f;i</a></li> 
+
+                                            <li><a href='http://www.ubbcluj.ro/'>Universitatea Babe&#537;-Bolyai Cluj Napoca</a></li>
+                                            <li><a href='http://www.uvt.ro/'>Universitatea de Vest Timi&#537;oara</a></li>
+                                            <li><a href='http://www.upt.ro/'>Universitatea Politehnica Timi&#537;oara</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class='parteneri' id='parteneri_media'>
+                                        <span class='floating_text' id='media_text'>Parteneri media</span>
+                                        <a href='http://www.hotnews.ro/'><div class='image' id='hotnews'>HotNews</div></a>
+                                        <!-- <a href='http://www.lumebuna.ro/'><div class='image' id='lumebuna'>Lume Buna</div></a> -->
+                                        <a href='http://www.romaniapozitiva.ro/'><div class='image' id='romaniapozitiva'>Romania Pozitiva</div></a>
+                                        <a href='http://totb.ro/'><div class='image' id='thinkoutsidethebox'>Think Outside The Box</div></a>
+                                        <a href='http://www.facebook.com/carevasazica.vip'><div class='image' id='carevasazica'>Carevasazica</div></a>
+                                        <a href='http://www.studentie.ro/'><div class='image' id='studentiero'>Studentie.ro</div></a>
+                                        <a href='http://startub.unibuc.ro/'><div class='image' id='startub'>startub.unibuc.ro</div></a>
+                                        <!-- <a href='http://www.tvr.ro/tvr_cluj.php'><div class='image' id='tvrcluj'>Tvr Cluj</div></a> -->
+                                        <!-- <a href='http://www.radiotransilvania.ro'><div class='image' id='radiotransilvania'>Radio Transilvania</div></a> -->
+                                        <a href='http://iasifun.ziaruldeiasi.ro/'><div class='image' id='iasifun'>Iasi fun</div></a>
+                                        <a href='http://www.ziaruldeiasi.ro/'><div class='image' id='ziaruldeiasi'>Ziarul de Iasi</div></a>
+                                        <a href='http://www.kissfm.ro/timisoara'><div class='image' id='kissfm'>KissFm</div></a>
+
+                                        <div class='clear'></div> 
+                                    </div>
+                                    <div class='clear'></div>
+
+                                </div>	
+                            </div>	<!-- end wrap -->
+                            <div id='footer_mare'>
+                                <div id='footer'>
+                                    <div id='links' class='footer'>
+                                        <div id='menu1' style='margin:auto;'> <ul id='meniu_prinicpal'><li><a href='contacte/index.html'> Contact </a></li>
+<li><a href='clubdebate/index.html'> Cluburile </a></li>
+<li><a href='oamenii/index.html'> Oamenii </a></li>
+<li><a href='proiectul/index.html'> Proiectul </a></li>
+<li><a href='home/index.html'> Acasa </a></li>
+</ul></div><!--end menu-->
+                                    </div><!--
+                                    <div id='contact' class='footer'>
+                                            <h4>Contact</h4>
+                                            <p>office@closer2oxford.ro</p>
+                                            <p>bogdan.draghicescu@closer2oxford.ro<br>
+                                            <span class='detalii'> (asistenta tehnica web - orice probleme legate de site)</span></p>
+                                    </div>
+                                    -->
+                                    <div id='newsletter' class='footer'>
+                                        <script src="../../connect.facebook.net/en_US/all.js#xfbml=1"></script><fb:like href="http://www.facebook.com/pages/Closer2Oxford/162758797069605" width="250" colorscheme="dark"></fb:like>
+                                        <!--<h4>Newsletter</h4>
+                                        <form action='/page/newsletter'>
+                                                <input type='text' name='email'>
+                                                <input type='submit' id='submit' value='>'>
+                                                        
+                                        </form>-->
+                                    </div>
+                                    <div id='credits'>
+                                        Copyright(c) 2021 ARDOR |  Toate drepturile rezervate | Toate logo-urile si sloganurile de pe site sunt proprietate intelectuala inregistrata si nu pot fi reproduse fara acordul explicit al detinatorilor. <br>
+                                            <br /><br />
+                                            <b>Disclaimer</b><br /><i>
+
+                                                Programul educational Closer to Oxford este un program non-profit si nu are o legatura cu universitatea cu acelasi nume, referirea la Oxford avand doar o semnificatie simbolica.
+                                            </i>
+                                    </div>
+
+                                </div>		
+                            </div>		
+
+                            <div id="finantatde">Acest proiect este finantat cu sustinere din partea Comisiei Europene. Aceast publicatie [comunicare] reflecta doar
+                                vederile autorului, iar Comisia nu poate fi facuta  responsabila pentru utilizarea informatiei pe care o contine.</div>
+
+
+                        </body>
+                        </html>

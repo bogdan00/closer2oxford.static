@@ -1,0 +1,515 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml-strict.dtd">
+<HTML xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+    <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+            <link rel="icon" type="image/png"  href="../../../../../closer2oxford.ro/favicon.html">
+                <link rel="stylesheet" href="../../../var/layout.css" type="text/css">
+                    <title>Closer to Oxford - e timpul pentru argumente!</title>
+                    <link rel="alternate" type="application/rss+xml"  href="../../../rss_feed" title="Stiri Closer2Oxford">
+                        <!-- <link rel="image_src" property="og:image"  href="/images/layout/closer2oxford_fb_white.png" /> -->
+                        <link rel="image_src" property="og:image"   type="image/jpeg"  href="../../../../uploads/2015/06/9/facebook_icon.html" />
+                        <link rel="image_src" type="image/jpeg"  href="../../../../uploads/2015/06/9/icon-facebook.gif" /> 
+						<meta name="description" content="Closer2Oxford pune în valoare oameni şi argumentele lor, în dezbateri online şi publice alături de tineri şi invitați avizaţi"/>
+                        <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9" />
+<script type='text/javascript' src='../../../../js/jquery-1.4.4.min.js'></script>
+<script>var $j = jQuery.noConflict();</script>
+<script type='text/javascript' src='../../../../js/tinymce/tiny_mce.js'></script>
+<script type='text/javascript' src='../../../../js/jquery.form.js'></script>
+<script type='text/javascript' src='../../../../js/fbLoginRegister.js'></script>
+<script type='text/javascript' src='../../../var/javascript.js'></script>
+<script type='text/javascript' src='../../../../js/jquery.hovertip-1.0.min.js'></script> 
+<script type='text/javascript' src='../../../../js/jquery.jgrowl_minimized.js'></script> 
+<link rel='stylesheet' href='../../../../css/jquery.jgrowl.css' media='screen' type='text/css'> 
+<script type='text/javascript' src='../../../../js/jquery.timer-min.js'></script> 
+<style>.hovertip{
+    position:absolute;
+    padding:10px 13px;
+    z-index:2;
+    max-width:300px;
+    color:#303030;
+    background-color:#f5f5b5;
+    border:1px solid #DECA7E;
+    font-family:sans-serif;
+    font-size:12px;
+    line-height:18px;
+    text-align:left;
+    }
+           .normal_text ol,.normal_text ol *{text-align:left !important}
+           .normal_text *{font-weight:normal !important;font-size:12px !important;font-face:tahoma !important}</style> 
+<script type='text/javascript'>$j(document).ready(function(){$j('.tooltip').hovertip({'offset':[20,20]});get_notif();});
+
+if(!Array.indexOf){Array.prototype.indexOf = function(obj){for(var i=0; i<this.length; i++){if(this[i]==obj){return i;}}return -1;}}
+    hashuri = [] ;
+	 var tick_timer= 3000 ;
+ 
+	 function get_notif()
+        {
+		  
+		  //console.log(tick_timer);
+	     
+		  setTimeout(get_notif,tick_timer);
+        
+		   $j.ajax(
+            {
+                url: '/page/notif/show_events',
+                dataType: 'json',
+                data: "{}",
+                success: function(data)
+                    {
+                    $j.each(data,function(index,data){
+                        try
+                            {
+                            if( hashuri.indexOf(data.hash) == -1 )
+                                {
+                                hashuri.push(data.hash);
+                                $j.jGrowl(
+                                    data.str,
+                                    {
+                                        corners:'1px',
+                                        life: data.life,
+                                        header:data.title,
+                                        hash: data.hash,
+                                        sticky: data.sticky,
+                                        close: function(e,m,o)
+                                            {
+                                                $j.ajax({url:'/page/notif/delete_single_event/' + o.hash});
+                                            }
+                                    });
+                                }
+                            }
+                        catch(e){}
+                        })
+                    }
+            });
+        }
+	 </script> 
+ 
+                            
+  <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-19111721-1']);
+  _gaq.push(['_setDomainName', '.closer2oxford.ro']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+    
+                        </head>
+                        <body>
+                            <div id="global_wrap">
+                                <div id="header">
+                                    <a href='../../../../index.html'><div id='logo'><img src='../../../../images/layout/sigla.jpg'></div></a>
+                                    <a class='noExternal' href='http://www.facebook.com/pages/Closer2Oxford/162758797069605'><img src='../../../../images/fb.png' style='height:30px;float:right;clear:right;margin:10px 5px 5px 5px;border:none;'/></a>
+                                    <a href='../../../rss_feed'><img src='../../../../images/feed-icon.png' style='height:30px;float:right;clear:right;margin:5px;border:none;'/></a>
+                                </div>
+                                <div id="meniu">
+                                    <div  id='register_login'>
+
+                                        
+  <a href='#' class='todo' id='login'>Login </a> &nbsp;<a href='../../../register.html' class='todo' id='register'>Register</a>
+    <div id='login_box'>
+		  <form action='https://dev.closer2oxford.ro/page/ro/login_user/logon' method='post' id='user_login_form'>
+					 <div>Email: <input type='text' name='email'/> </div><br />
+					 <div>Pass: <input type='password' name='passwd'/></div><br />
+					 <a href='#' class='password_forgot'>forgot password?</a>
+					 <input type='hidden' value='/page/ro/vezi_meciuri/284/' name='returnto' class='submiter'/><br />
+					 <input type='submit' value='login' name='btn' class='submiter'/><br />
+		  </form>
+		  
+		  <form action='https://dev.closer2oxford.ro/page/ro/login_user/reset_user_pw' method='post' id='user_reset_form'>
+					 <div>Email: <input type='text' name='email'/> </div><br />
+					 <a href='#' class='password_forgot'>login?</a>
+					 <input type='hidden' value='/page/ro/vezi_meciuri/284/' name='returnto' class='submiter'/><br />
+					 <input type='submit' value='reset' name='btn' class='submiter'/><br />
+		  </form>
+		  
+    </div>
+    
+                                    </div>
+                                    <div id='menu1' style='margin:auto;'> <ul id='meniu_prinicpal'><li><a href='../../../contacte/index.html'> Contact </a></li>
+<li><a href='../../../clubdebate/index.html'> Cluburile </a></li>
+<li><a href='../../../oamenii/index.html'> Oamenii </a></li>
+<li><a href='../../../proiectul/index.html'> Proiectul </a></li>
+<li><a href='../../../home/index.html'> Acasa </a></li>
+</ul></div><!--end menu-->
+                                </div>
+                                <div id="main"> 
+                                    <!--<div id='stiri-padding'>
+        <div id='stiri_back'>
+                {stiri} 
+    
+               
+        </div>-->
+        
+</div>
+<div  id="content-padding">
+        <div id='sidebar_menu'>
+                <span class='tr'></span>
+                <span class='tl'></span>
+                <span class='br'></span>
+                <span class='bl'></span>
+                <span id="filler"></span>
+                    
+                <ul></ul>
+                
+                <div class='clear'></div>
+        </div>
+        <div id="content">
+                <span class='tr'></span>
+                <span class='tl'></span>
+                <span class='br'></span>
+                <span class='bl'></span>
+                <span id="filler"></span>
+                  <script>
+        $j(document).ready(function(){
+        $j('.discurs_toggler').toggle(
+                function(){
+                $j(this).attr('src', '../../../../images/little_stuff/16-em-down.png');   
+                $j(this).parent().next('.discurs').hide('fast');
+                },
+                function(){
+                $j(this).attr('src', '../../../../images/little_stuff/16-em-up.png');
+                $j(this).parent().next('.discurs').show('fast');
+                });
+            });
+        </script><style>.nowrap{white-space: nowrap;}
+		.noJustify{text-align:left;}
+		</style><h2 class='noJustify'><span class='nowrap'>'Teo si George'</span> <span class='notif'>(afirmatori)</span> vs <span class='nowrap'>'Andreea si Irina'</span> <span class='notif'>(negatori)</span></h2><h3>A1 (Teodora Alexandru) <img src='../../../../images/little_stuff/16-em-up.png' class='discurs_toggler'></h3>
+            <div class='discurs normal_text'><p><span style="font-family: Calibri, sans-serif;">Este timpul ca amenzile sa fie proportionale cu veniturile</p>
+<p><span style="font-family: Calibri, sans-serif;">Atunci cand vorbim de amenzi, vorbim despre amenzile civile aplicate ca sanctiuni pentru savarsirea contraventiilor, fie ele in domeniul rutier, tulburarea linistii publice, pe care le pot comite cetatenii, excluzand contraventiile stabilite pentru respectarea normelor pentru anumite categorii de profesii (militar, medic, contabil etc.)</p>
+<p><span style=""><span style="font-family: Calibri, sans-serif;">introducerea unui sistem de amenzi proportionale cu veniturile presupune ca de la o valoare de baza a amenzii existenta la momentul actual sa se poata creste progresiv sau cobori in functie de veniturile persoanei in raport de venitul minim pe economie sau, conform unor sisteme, in functie de un procent din venitul zilnic disponibil (day fine<sup><span style="font-family: Calibri, sans-serif;"><a class="sdfootnoteanc" name="sdfootnote1anc" href="#sdfootnote1sym"><sup>1</sup></a></sup><span style="font-family: Calibri, sans-serif;">). Sistemul poate varia si nu vrem sa propunem in mod expres unul, dar sustinem ca efectul pe care vrem sa-l atingem este urmatorul: daca un sofer auto castiga<span style="font-family: Calibri, sans-serif;">&nbsp;<span style="font-family: Calibri, sans-serif;">1000<span style="font-family: Calibri, sans-serif;">&nbsp;<span style="font-family: Calibri, sans-serif;">lei pe luna si plateste amenda de<span style="font-family: Calibri, sans-serif;">&nbsp;<span style="font-family: Calibri, sans-serif;">100<span style="font-family: Calibri, sans-serif;">&nbsp;<span style="font-family: Calibri, sans-serif;">lei, care il afecteaza, si un alt sofer castiga<span style="font-family: Calibri, sans-serif;">&nbsp;<span style="font-family: Calibri, sans-serif;">10000<span style="font-family: Calibri, sans-serif;">&nbsp;<span style="font-family: Calibri, sans-serif;">lei, ii vom cere o suma care sa-l afecteze in aceeasi masura. Aceasta suma nu va reprezenta intr-un sistem simplu tot 10%, adica<span style="font-family: Calibri, sans-serif;">&nbsp;<span style="font-family: Calibri, sans-serif;">1000<span style="font-family: Calibri, sans-serif;">&nbsp;<span style="font-family: Calibri, sans-serif;">lei, dar pot exista si ecuatii mai complicate de determinare a unei amenzi, luand in considerare si salariul minim pe economie, nivel de trai, impozite, consum zilnic, din punct de vedere statistic, pentru ca sistemul sa nu devina excesiv.</p>
+<p><span style="font-family: Calibri, sans-serif;">1. Amenzile trebuie sa usture ca sa aiba efect prohibitiv</p>
+<p><span style=""><span style="font-family: Calibri, sans-serif;">Amenzile reprezinta sanctiuni pentru nerespectarea unei conduite corecte impuse de lege pentru protectia celorlalti cetateni sau pentru buna desfasurare a relatiilor sociale. Sanctiunea este menita a-l determina pe faptuitor sa nu mai comita a doua oara fapta, si eventual sa n-o fi comis de loc de frica sanctiunii. De exemplu, daca un tanar tulbura linistea publica difuzand muzica extrem de zgomotoasa noaptea sau conduce cu viteza excesiva in localitati, sau provoaca scandal public prin exhibitionism, el va fi amendat. Insa amenda poate sa nu fie perceputa ca o sanctiune daca valoare acesteia nu este semnificativa pentru faptuitor. De aceea, in acest domeniu, legiuitorul poate si trebuie sa se asigure ca amenda este semnificativa pentru fiecare faptuitor si acest lucru se poate realiza doar cand amenda este proportionala cu venitul. Daca pentru un faptuitor amenda de<span style="font-family: Calibri, sans-serif;">&nbsp;<span style="font-family: Calibri, sans-serif;">200<span style="font-family: Calibri, sans-serif;">&nbsp;<span style="font-family: Calibri, sans-serif;">lei e echivalentul banilor de buzunar pe o zi<sup><span style="font-family: Calibri, sans-serif;"><a class="sdfootnoteanc" name="sdfootnote2anc" href="#sdfootnote2sym"><sup>2</sup></a></sup><span style="font-family: Calibri, sans-serif;">, nu o va resimti ca pe o amenda si nu se va corecta. Asadar, proportionalitatea amenzilor este necesara pentru eficienta amenzilor.</p>
+<p><span style="font-family: Calibri, sans-serif;">2. Se mentine egalitatea din punct de vedere juridic</p>
+<p><span style="font-family: Calibri, sans-serif;">populatia, mai ales cea foarte bogata, ar putea considera aceasta masura ca un tratament discriminatoriu si abuziv din partea statului. Sustinem insa ca in acest caz devine evident de ce oamenii sunt egali in fata legii, chiar daca nu sunt egali intre ei. Aici, scopul statului nu este sa-ti ia banii si deci sa abuzeze de bogati, cazul nu este similar cu cel al impozitelor proportionale cu veniturile. In acest caz, in schimb, persoana este cea care are libertate de decizie de a savarsi sau nu o contraventie, iar statul o sanctioneaza ca atare, dar trebuie si poate sa o sanctioneze personalizat, conform vinovatiei ei, atitudinii ei de indiferenta fata de regula, si cu mijloacele cele mai adecvate pentru a asigura prevenirea savarsirii de noi contraventii in viitor.</p>
+<p><span style="font-family: Calibri, sans-serif;">3.Acest sistem asigura mai bine respectul legii</p>
+<p><span style="font-family: Calibri, sans-serif;">Tocmai pentru ca pana acum amenzile au fost uniforme, cei care isi permiteau sa incalce in mod grosolan legea erau tocmai cei care simteau ca nu trebuie sa suporte consecintele, cei care nu "simteau" amenda. Iar acestia au si tendinta sa aiba comportamentul cel mai daunator in societate, avand si mijloacele sa provoace consecintele nedorite.</p>
+<p><span style=""><span style="font-family: Calibri, sans-serif;">Tocmai pentru ca acum exista posibilitatea unor amenzi cu valoare foarte mare face ca acest mecanism sa previna savarsirea de contraventii mult mai bine decat cel anterior. Poate ca la nivelul populatiei cu venituri medii nu se vor produce schimbari semnificative, dar in randul cetatenilor cu venituri peste aceasta medie, teama de a nu plati o suma mare are un efect dublu, pentru ca le afecteaza atat imaginea si prestigiul public, cat si loveste puternic in conceptia acestor persoane de libertate totala bazata pe avere. De asemenea, oricat de bogate ar fi aceste persoane, nimanui nu-i este placut sa piarda o suma considerabila ca amenda, cu atat mai mult cu cat in Romania mandria celor bogati este sa nu piarda bani<sup><span style="font-family: Calibri, sans-serif;"><a class="sdfootnoteanc" name="sdfootnote3anc" href="#sdfootnote3sym"><sup>3</sup></a></sup><span style="font-family: Calibri, sans-serif;">, nu sa ii castige.</p>
+<p><span style="font-family: Calibri, sans-serif;">Apare asadar un factor preventiv sporit pentru ca devine cu adevarat o sanctiune deranjanta si pentru cei care isi permiteau lejer amenzile prevazute pana acum.</p>
+<p class="western">&nbsp;</p>
+<p class="western">Referinte:<br /><a class="sdfootnotesym" name="sdfootnote1sym" href="#sdfootnote1anc">1</a> Pentru detalii: <span style="color: #0000ff;"><a href="http://en.wikipedia.org/wiki/Day-fine">http://en.wikipedia.org/wiki/Day-fine</a></p>
+<div id="sdfootnote2">
+<p class="sdfootnote-western"><a class="sdfootnotesym" name="sdfootnote2sym" href="#sdfootnote2anc">2</a> Pentru un exemplu largit, vezi: 	<span style="color: #0000ff;"><a href="http://marshallbrain.com/etq-gas-tax.htm">http://marshallbrain.com/etq-gas-tax.htm</a></p>
+</div>
+<div id="sdfootnote3">
+<p class="sdfootnote-western"><a class="sdfootnotesym" name="sdfootnote3sym" href="#sdfootnote3anc">3</a> Teorie interesanta privind pierderi in cazul amenzilor: 	<span style="color: #0000ff;"><a href="http://marcfbellemare.com/wordpress/2012/02/speeding-fines-that-vary-with-income-absolute-vs-relative-risk-aversion-and-public-policy/">http://marcfbellemare.com/wordpress/2012/02/speeding-fines-that-vary-with-income-absolute-vs-relative-risk-aversion-and-public-policy/</a></p>
+</div>
+</div><hr><h3>N1 (Irina Alexandra Negruțiu) <img src='../../../../images/little_stuff/16-em-up.png' class='discurs_toggler'></h3>
+            <div class='discurs normal_text'>
+<p>&Icirc;nainte de a trece la o analiză efectivă a modului &icirc;n care o amendă ar trebui aplicată, nu putem ignora faptul că amenda reprezintă echivalentul patrimonial al unei fapte pe care societatea o califică la un moment al evoluției sale ca fiind ilicită, contrară unor principii pe care le promovează. Astfel, considerăm că amenzile ar trebui să reflecte gradul de pericol social al acestor fapte, iar valoarea lor ar trebui apreciată strict relativ la gravitatea și la circumstanțele generale &icirc;n care fapta a fost comisă, fără a le raporta la patrimoniul făptuitorului. &Icirc;n plus, reglementarea propusă ar fi inutilă; și la ora actuală amenzile contravenționale au prevăzut un minim și un maxim, iar organele abilitate au posibilitatea de a alege cuantumul pe care ele &icirc;l consideră optim.</p>
+
+<p><strong>1. Sancționarea se face deja diferențiat, iar măsura propusă nu este eficientă</strong></p>
+
+<p>Există studii<a href="#_ftn1"><sup><sup>[1]</sup></sup></a> care demonstrează că impunerea unor consecințe negative mai oneroase, &icirc;n loc să reducă comportamentul care le-a generat, duce la propagarea acestui comportament. De asemenea, s-a arătat și că &icirc;nlăturarea ulterioară a acestor consecințe negative nu determină o scădere a comportamentului ilicit, ci menținerea lui ca urmare a desconsiderării scopului amenzii. Astfel, o sancționare mai dură nu este neapărat și una mai eficientă. Mai mult, ineficiența măsurii devine și mai evidentă odată cu analizarea costurilor (mari!) implementării ei raportat la (posibilele) rezultate.</p>
+<p>Deoarece important este scopul sancțiunii și nu doar patrimonialitatea acesteia, dorim să subliniem și finalitatea pe care o urmărește societatea prin aplicarea amenzii - sancționarea unei fapte comise de către o persoană și traducerea ei &icirc;n bani. Pentru atingerea acestui deziderat, legiuitorul prevede un minim și un maxim al amenzii, pentru ca individualizarea pedepsei să se poată face &icirc;n funcție de circumstanțele concrete &icirc;n care a fost comisă fapta (care includ și persoana făptuitorului!) &ndash; put&acirc;nd opta pentru majorarea limitelor pedepsei legale dacă aceasta este &icirc;n pericol de a nu mai fi efectivă. Așadar, amenda va fi aplicată diferit de către agentul competent pentru un șofer care se grăbea la serviciu pentru a nu risca să fie dat afară, &icirc;n ciuda faptului că situația lui financiară este mult peste medie, depășind astfel viteza legală, față de aceeași contravenție săv&acirc;rșită pentru simplu amuzament de un șofer care nu are mijloace financiare semnificative.</p>
+
+<p><strong>2. Egalitatea juridică e aparentă, dar total inexistentă &icirc;n cazul măsurii propuse</strong></p>
+
+<p>Echipa afirmatoare susține că deși măsura ar putea fi considerată discriminatorie, ea este &icirc;n fapt impunerea egalității prin proporționalitate, dar nu reușește să ne explice cum anume intervine egalitatea &icirc;n cazul sancționării diferite a două persoane pentru aceeași faptă, săv&acirc;rșită &icirc;n aceleași circumstanțe, diferită fiind doar situația materială a celor implicați. Mai mult, nu &icirc;nțelegem de ce ar trebui sancționați cei care c&acirc;știgă mai mult, tax&acirc;ndu-le astfel hărnicia - considerăm imoral să sancționăm bogăția unei persoane &icirc;n acest caz, dat fiind că nu vorbim de un impozit, care are o natură total diferită, ci despre sancționarea unei greșeli. Prin aplicarea măsurii propuse, am ajunge la situații absurde, &icirc;n care am sancționa o faptă mai ușoară mult mai oneros dec&acirc;t una gravă, pentru simplul motiv că făptuitorul lucrează mai mult și astfel are o situație materială mai bună. Mai mult, implicațiile măsurii merg mai departe dec&acirc;t nivelul superficial bogat-sărac. Astfel, va fi sancționat mai drastic cel care are &icirc;n grijă o familie, care fiind obligat să asigure &icirc;ntreținerea mai multor persoane va urmări să c&acirc;știge mai mult dec&acirc;t cel care nu trebuie să se hrănească dec&acirc;t pe sine și astfel va fi pasibil de o amendă mai mare dec&acirc;t o persoană care c&acirc;știgă mai puțin, dar are un trai mai bun.</p>
+
+<p><strong>3. Acest sistem va duce la desconsiderarea legii</strong></p>
+
+<p>Implementarea unui sistem discriminatoriu, care nu asigură de fapt egalitatea &icirc;n fața legii, va duce la desconsiderarea legii de către cei pe care &icirc;i defavorizează, cre&acirc;nd mediul pentru creșterea incidenței contravențiilor. Cu c&acirc;t este considerată mai nedreaptă o prevedere, cu at&acirc;t va fi mai &icirc;ncălcată, dat fiind că nu mai reprezintă un posibil barometru pentru balanța bine-greșit și nu mai apelează la conștința morală a făptuitorului.<a href="#_ftn2"><sup><sup>[2]</sup></sup></a> Astfel, &icirc;n situațiile &icirc;n care este puțin probabil să fie prins, scade probabilitatea ca cel &icirc;n cauză să aleagă să nu facă ce este interzis - miza nu mai este sancțiunea, ci doar măsura p&acirc;nă la care persoana consideră că este imoral să facă ceva - ori dacă ceva nu este corect, egal, cum mai poate fi greșit să acționezi &icirc;n contra lui?</p>
+
+
+<p>Datorită implicaților pe care măsura propusă le poate avea: creșterea incidenței contravențiilor, situații absurde de discriminare socială și modificarea total ineficientă a unui sistem funcțional &ndash; considerăm că amenzile nu ar trebui să fie proporționale cu veniturile.</p>
+
+
+
+
+<p>Referinte:</p>
+<p>1. Gneezy, U., Rustichini, A., 2000. &lsquo;A Fine is a Price&rsquo;. <em>Journal of Legal Studies., </em>vol. 29 pp1-17, <a href="http://www.google.ro/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=1&amp;cad=rja&amp;ved=0CCoQFjAA&amp;url=http%3A%2F%2Fwww.socio.ethz.ch%2Feducation%2Ffs12%2Fenvirsoc%2FGneezy_Rustichini_A_fine_is_a_price.pdf&amp;ei=w1WRUf-oKcPeswbiyYCgDA&amp;usg=AFQjCNGeVyeF7qMGQBkp8idD55U-NEpOeA&amp;sig2=aPSGuTbBLqaH-GxgaJ3PMg&amp;bvm=bv.46340616,d.Yms">http://www.google.ro/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=1&amp;cad=rja&amp;ved=0CCoQFjAA&amp;url=http%3A%2F%2Fwww.socio.ethz.ch%2Feducation%2Ffs12%2Fenvirsoc%2FGneezy_Rustichini_A_fine_is_a_price.pdf&amp;ei=w1WRUf-oKcPeswbiyYCgDA&amp;usg=AFQjCNGeVyeF7qMGQBkp8idD55U-NEpOeA&amp;sig2=aPSGuTbBLqaH-GxgaJ3PMg&amp;bvm=bv.46340616,d.Yms</a></p>
+<p>2. Cianfrocca, Francis, &lsquo;Wealth Creation Under Attack&rsquo;, <em>Commentary</em>, June 2009,<a href="http://www.commentarymagazine.com/article/wealth-creation-under-attack/"> </a><a href="http://www.commentarymagazine.com/article/wealth-creation-under-attack/">http://www.commentarymagazine.com/article/wealth-creation-under-attack/</a></p>
+<div><br /> 
+<hr size="1" />
+<div>
+<p><a href="#_ftnref1"></a>&nbsp;</p>
+</div>
+<div>
+<p><a href="#_ftnref2"></a>&nbsp;</p>
+</div>
+</div></div><hr><h3>A2 (George Manea) <img src='../../../../images/little_stuff/16-em-up.png' class='discurs_toggler'></h3>
+            <div class='discurs normal_text'><p>Mulţumim echipei negatoare pentru discursul oferit. Echipa afirmatoare consideră că negatorii nu au reușit să răspundă argumentelor afirmatorilor, mai mult, problemele identificate de ei nu sunt cele reale. Așadar, răspundem acestora și reiterăm cazul afirmator.</p>
+<p>Toţi oamenii sunt egali &icirc;n faţa legii. Legea pedepseşte &icirc;n mod egal dar cel mai important este ca legea să pedepsească cetăţenii &icirc;n aşa fel &icirc;nc&acirc;t pentru aceeaşi infracţiune procesul coercitiv să &icirc;i afecteze &icirc;n mod egal şi să resimtă deopotrivă consecinţele infracţiunii. De aceea considerăm că e timpul ca amenzile să fie proporţionale cu veniturile.</p>
+<p>1. Amenzile trebuie să usture ca să aibă efect prohibitiv</p>
+<p>Noi am arătat &icirc;n discursul anterior că numai printr-o prevenţie eficientă (amenzile trebuie să aibă rol prohibitiv, nu să reprezinte o taxă suplimentară pentru cei care şi-o permit şi un factor de dezagregare socială &ndash; prin sărăcire &ndash; pentru cei dezavantajaţi economic) şi printr-o descurajare echilibrată şi etică pentru toţi membrii societăţii poate fi atins acest deziderat al scăderii &icirc;ncălcărilor frecvente de lege.</p>
+<p>Măsura propusă este eficientă pentru că ridică gradul de conştientizare al persoanei. Pe baza exemplelor menţionate de către echipa negatoare, dorim să contra-argumentăm prin a menţiona că este de datoria şoferului să plece mai devreme de acasă şi să &icirc;şi ia o marjă de timp astfel &icirc;nc&acirc;t să fie &icirc;n grafic. Mai mult, dacă vorbim despre amuzament, ai greşit prin urmare ai plătit, a doua oară cu siguranţă nu te mai joci. N</p>
+<p>Costurile ridicate pentru implementarea acestei legi (conform N1) reprezintă practic o investiţie, amenzile contribuind la bugetul de stat, tot acolo de unde banii pleacă pentru implementarea unei astfel de legi. Amortizarea cheltuielilor se face &icirc;n timp şi aduce cu sine efectele benefice ale educaţiei prin constr&acirc;ngere.</p>
+<p>Corelarea amenzilor de circulaţie cu veniturile sau averea şoferilor care &icirc;ncalcă legea nu este o noutate &icirc;n Europa<a  href="#3ceb1">[1]</a>. De aproape 10 ani astfel de structuri de calcul sunt utilizate &icirc;n Finlanda, Norvegia sau Elveţia, unde milionarii plătesc sute de mii de euro pentru depăşirea vitezei şi uneori trebuie să facă şi muncă &icirc;n folosul comunităţii dacă nu au banii necesari să plăteacă amenda.</p>
+<p>&Icirc;n Finlanda, politica de acordare a amenzilor &icirc;n functie de venituri a fost perfecţionată de-a lungul anilor, iar &icirc;n prezent, politiştii dispun de aparatură de ultima generaţie prin care pot afla pe loc cuantumul amenzii. Prin introducerea codului de asigurări sociale a şoferului indisciplinat &icirc;ntr-o aplicaţie de pe telefonul mobil, se accesează o bază de date a administraţiei financiare şi se verifică fişa fiscală din anul anterior.&nbsp; Şoferii nu au cum să evite declararea &icirc;ntregului venit pentru a-şi reduce amenzile. Şi veţi spune că Rom&acirc;nia nu este Finlanda, dar implementarea unui astfel de sistem perfectibil &icirc;n timp este un semn al schimbării.</p>
+
+<p>Norvegienii sunt &icirc;ncă şi mai drastici cu cei care &icirc;ncalcă regulile de circulaţie. Un milionar de 55 ani prins beat la volan a fost nevoit să platească 85.000 dolari amenda, pe baza venitului &icirc;nregistrat, iar politistii i-au suspendat carnetul pentru 3 ani. &Icirc;n plus, timp de 30 zile, milionarul a fost obligat de judecatori să taie lemne de foc.</p>
+<p>2. Se menţine egalitatea din punct de vedere juridic</p>
+<p>Nu vorbim despre taxarea hărniciei şi nici nu aducem &icirc;n discuţie clişeul bogat-sărac (conform N1). Persoanele sunt egale &icirc;n faţa legii, iar legile sunt făcute pentru a fi respectate, iar orice &icirc;ncălcare a lor trebuie să aducă o pedeapsă pe măsură. Biroul Naţional de Statistică ne comunică date &icirc;n care arată că <a  href="#3ceb2">[2]</a> &icirc;n anul 2011 au fost constatate 156,4 mii cazuri de contravenţii &icirc;n domeniul circulaţiei rutiere,&nbsp; cu 11,8% mai mult comparativ cu anul precedent.&nbsp; &Icirc;n majoritatea cazurilor au fost aplicate amenzi (97%), circa 4,4 mii personae au fost avertizate, 448 persoane private de anumite drepturi, iar pentru 110 persoane a fost aplicat arestul contravenţional. <a  href="#3ceb3">[3]</a>Iar &icirc;n anul 2012 pe categorii de contravenţii, fiecare al doilea caz sunt &icirc;ncălcările &icirc;n domeniul circulaţiei rutiere. Deci constatăm că sancţiunile aplicate nu prea au efect. Trebuie să recunoaştem că această modificare legislativă este o condiţie sine qua non pentru demararea măsurilor &icirc;n vederea stopării problemei.</p>
+<p>3. Acest sistem asigură mai bine respectul legii</p>
+<p>Sistemul nu conduce către desconsiderarea legii (conform N1), ci conduce către un grad ridicat de responsabilizare a persoanelor. Statul nu are dreptul să ierte recidiva &ndash; &icirc;nt&acirc;lnită preponderant &icirc;n cazul celor care nu resimt amenda, care au pofta de distracţie pe autostradă şi drumuri naţionale, tocmai fiindcă amenda nu este &icirc;n proporţie cu venitul lor. Considerăm că după o astfel de amendă sigur nu te mai joci cu focul, g&acirc;ndeşti de două ori &icirc;nainte, &icirc;ţi iei măsurile de precauţie şi acţionezi o dată conform legii. Prin urmare excludem posibilitatea creşterii incidenţei contravenţiilor.</p>
+
+<p>Echipa afirmatore conchide astfel că adoptarea moţiunii este o modalitate expresă de a rezolva problema care durează de prea mult timp, consider&acirc;nd cu tărie că moţiunea trebuie aprobată !</p>
+
+
+
+<div><br /> 
+<hr size="1" />
+<div>
+<p><a  name="3ceb1">[1]</a> http://www.conso.ro/citeste-comentariu/119/auto/Amenzile-corelate-cu-venitul--reteta-tarilor-nordice-pentru-respectarea-vitezei-legale.html</p>
+</div>
+<div>
+<p><a  name="3ceb2">[2]</a> <a href="http://www.statistica.md/newsview.php?l=ro&amp;id=3743&amp;idc=168" target="_blank">http://www.statistica.md/newsview.php?l=ro&amp;id=3743&amp;idc=168</a></p>
+</div>
+<div>
+<p><a  name="3ceb3">[3]</a> <a href="http://www.statistica.md/newsview.php?l=ro&amp;idc=168&amp;id=4057" target="_blank">http://www.statistica.md/newsview.php?l=ro&amp;idc=168&amp;id=4057</a></p>
+
+</div>
+</div>
+</div><hr><h3>N2 (Andreea Oțet) <img src='../../../../images/little_stuff/16-em-up.png' class='discurs_toggler'></h3>
+            <div class='discurs normal_text'><p><!--[if gte mso 9]><xml> <o:OfficeDocumentSettings> <o:AllowPNG /> </o:OfficeDocumentSettings> </xml><![endif]--></p>
+<p><!--[if gte mso 9]><xml> <w:WordDocument> <w:View>Normal</w:View> <w:Zoom>0</w:Zoom> <w:TrackMoves /> <w:TrackFormatting /> <w:PunctuationKerning /> <w:ValidateAgainstSchemas /> <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid> <w:IgnoreMixedContent>false</w:IgnoreMixedContent> <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText> <w:DoNotPromoteQF /> <w:LidThemeOther>RO</w:LidThemeOther> <w:LidThemeAsian>X-NONE</w:LidThemeAsian> <w:LidThemeComplexScript>X-NONE</w:LidThemeComplexScript> <w:Compatibility> <w:BreakWrappedTables /> <w:SnapToGridInCell /> <w:WrapTextWithPunct /> <w:UseAsianBreakRules /> <w:DontGrowAutofit /> <w:SplitPgBreakAndParaMark /> <w:EnableOpenTypeKerning /> <w:DontFlipMirrorIndents /> <w:OverrideTableStyleHps /> </w:Compatibility> <m:mathPr> <m:mathFont m:val="Cambria Math" /> <m:brkBin m:val="before" /> <m:brkBinSub m:val="&#45;-" /> <m:smallFrac m:val="off" /> <m:dispDef /> <m:lMargin m:val="0" /> <m:rMargin m:val="0" /> <m:defJc m:val="centerGroup" /> <m:wrapIndent m:val="1440" /> <m:intLim m:val="subSup" /> <m:naryLim m:val="undOvr" /> </m:mathPr></w:WordDocument> </xml><![endif]--><!--[if gte mso 9]><xml> <w:LatentStyles DefLockedState="false" DefUnhideWhenUsed="true"   DefSemiHidden="true" DefQFormat="false" DefPriority="99"   LatentStyleCount="267"> <w:LsdException Locked="false" Priority="0" SemiHidden="false"    UnhideWhenUsed="false" QFormat="true" Name="Normal" /> <w:LsdException Locked="false" Priority="9" SemiHidden="false"    UnhideWhenUsed="false" QFormat="true" Name="heading 1" /> <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 2" /> <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 3" /> <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 4" /> <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 5" /> <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 6" /> <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 7" /> <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 8" /> <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 9" /> <w:LsdException Locked="false" Priority="39" Name="toc 1" /> <w:LsdException Locked="false" Priority="39" Name="toc 2" /> <w:LsdException Locked="false" Priority="39" Name="toc 3" /> <w:LsdException Locked="false" Priority="39" Name="toc 4" /> <w:LsdException Locked="false" Priority="39" Name="toc 5" /> <w:LsdException Locked="false" Priority="39" Name="toc 6" /> <w:LsdException Locked="false" Priority="39" Name="toc 7" /> <w:LsdException Locked="false" Priority="39" Name="toc 8" /> <w:LsdException Locked="false" Priority="39" Name="toc 9" /> <w:LsdException Locked="false" Priority="35" QFormat="true" Name="caption" /> <w:LsdException Locked="false" Priority="10" SemiHidden="false"    UnhideWhenUsed="false" QFormat="true" Name="Title" /> <w:LsdException Locked="false" Priority="1" Name="Default Paragraph Font" /> <w:LsdException Locked="false" Priority="11" SemiHidden="false"    UnhideWhenUsed="false" QFormat="true" Name="Subtitle" /> <w:LsdException Locked="false" Priority="22" SemiHidden="false"    UnhideWhenUsed="false" QFormat="true" Name="Strong" /> <w:LsdException Locked="false" Priority="20" SemiHidden="false"    UnhideWhenUsed="false" QFormat="true" Name="Emphasis" /> <w:LsdException Locked="false" Priority="59" SemiHidden="false"    UnhideWhenUsed="false" Name="Table Grid" /> <w:LsdException Locked="false" UnhideWhenUsed="false" Name="Placeholder Text" /> <w:LsdException Locked="false" Priority="1" SemiHidden="false"    UnhideWhenUsed="false" QFormat="true" Name="No Spacing" /> <w:LsdException Locked="false" Priority="60" SemiHidden="false"    UnhideWhenUsed="false" Name="Light Shading" /> <w:LsdException Locked="false" Priority="61" SemiHidden="false"    UnhideWhenUsed="false" Name="Light List" /> <w:LsdException Locked="false" Priority="62" SemiHidden="false"    UnhideWhenUsed="false" Name="Light Grid" /> <w:LsdException Locked="false" Priority="63" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium Shading 1" /> <w:LsdException Locked="false" Priority="64" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium Shading 2" /> <w:LsdException Locked="false" Priority="65" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium List 1" /> <w:LsdException Locked="false" Priority="66" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium List 2" /> <w:LsdException Locked="false" Priority="67" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium Grid 1" /> <w:LsdException Locked="false" Priority="68" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium Grid 2" /> <w:LsdException Locked="false" Priority="69" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium Grid 3" /> <w:LsdException Locked="false" Priority="70" SemiHidden="false"    UnhideWhenUsed="false" Name="Dark List" /> <w:LsdException Locked="false" Priority="71" SemiHidden="false"    UnhideWhenUsed="false" Name="Colorful Shading" /> <w:LsdException Locked="false" Priority="72" SemiHidden="false"    UnhideWhenUsed="false" Name="Colorful List" /> <w:LsdException Locked="false" Priority="73" SemiHidden="false"    UnhideWhenUsed="false" Name="Colorful Grid" /> <w:LsdException Locked="false" Priority="60" SemiHidden="false"    UnhideWhenUsed="false" Name="Light Shading Accent 1" /> <w:LsdException Locked="false" Priority="61" SemiHidden="false"    UnhideWhenUsed="false" Name="Light List Accent 1" /> <w:LsdException Locked="false" Priority="62" SemiHidden="false"    UnhideWhenUsed="false" Name="Light Grid Accent 1" /> <w:LsdException Locked="false" Priority="63" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium Shading 1 Accent 1" /> <w:LsdException Locked="false" Priority="64" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium Shading 2 Accent 1" /> <w:LsdException Locked="false" Priority="65" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium List 1 Accent 1" /> <w:LsdException Locked="false" UnhideWhenUsed="false" Name="Revision" /> <w:LsdException Locked="false" Priority="34" SemiHidden="false"    UnhideWhenUsed="false" QFormat="true" Name="List Paragraph" /> <w:LsdException Locked="false" Priority="29" SemiHidden="false"    UnhideWhenUsed="false" QFormat="true" Name="Quote" /> <w:LsdException Locked="false" Priority="30" SemiHidden="false"    UnhideWhenUsed="false" QFormat="true" Name="Intense Quote" /> <w:LsdException Locked="false" Priority="66" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium List 2 Accent 1" /> <w:LsdException Locked="false" Priority="67" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium Grid 1 Accent 1" /> <w:LsdException Locked="false" Priority="68" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium Grid 2 Accent 1" /> <w:LsdException Locked="false" Priority="69" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium Grid 3 Accent 1" /> <w:LsdException Locked="false" Priority="70" SemiHidden="false"    UnhideWhenUsed="false" Name="Dark List Accent 1" /> <w:LsdException Locked="false" Priority="71" SemiHidden="false"    UnhideWhenUsed="false" Name="Colorful Shading Accent 1" /> <w:LsdException Locked="false" Priority="72" SemiHidden="false"    UnhideWhenUsed="false" Name="Colorful List Accent 1" /> <w:LsdException Locked="false" Priority="73" SemiHidden="false"    UnhideWhenUsed="false" Name="Colorful Grid Accent 1" /> <w:LsdException Locked="false" Priority="60" SemiHidden="false"    UnhideWhenUsed="false" Name="Light Shading Accent 2" /> <w:LsdException Locked="false" Priority="61" SemiHidden="false"    UnhideWhenUsed="false" Name="Light List Accent 2" /> <w:LsdException Locked="false" Priority="62" SemiHidden="false"    UnhideWhenUsed="false" Name="Light Grid Accent 2" /> <w:LsdException Locked="false" Priority="63" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium Shading 1 Accent 2" /> <w:LsdException Locked="false" Priority="64" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium Shading 2 Accent 2" /> <w:LsdException Locked="false" Priority="65" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium List 1 Accent 2" /> <w:LsdException Locked="false" Priority="66" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium List 2 Accent 2" /> <w:LsdException Locked="false" Priority="67" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium Grid 1 Accent 2" /> <w:LsdException Locked="false" Priority="68" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium Grid 2 Accent 2" /> <w:LsdException Locked="false" Priority="69" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium Grid 3 Accent 2" /> <w:LsdException Locked="false" Priority="70" SemiHidden="false"    UnhideWhenUsed="false" Name="Dark List Accent 2" /> <w:LsdException Locked="false" Priority="71" SemiHidden="false"    UnhideWhenUsed="false" Name="Colorful Shading Accent 2" /> <w:LsdException Locked="false" Priority="72" SemiHidden="false"    UnhideWhenUsed="false" Name="Colorful List Accent 2" /> <w:LsdException Locked="false" Priority="73" SemiHidden="false"    UnhideWhenUsed="false" Name="Colorful Grid Accent 2" /> <w:LsdException Locked="false" Priority="60" SemiHidden="false"    UnhideWhenUsed="false" Name="Light Shading Accent 3" /> <w:LsdException Locked="false" Priority="61" SemiHidden="false"    UnhideWhenUsed="false" Name="Light List Accent 3" /> <w:LsdException Locked="false" Priority="62" SemiHidden="false"    UnhideWhenUsed="false" Name="Light Grid Accent 3" /> <w:LsdException Locked="false" Priority="63" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium Shading 1 Accent 3" /> <w:LsdException Locked="false" Priority="64" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium Shading 2 Accent 3" /> <w:LsdException Locked="false" Priority="65" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium List 1 Accent 3" /> <w:LsdException Locked="false" Priority="66" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium List 2 Accent 3" /> <w:LsdException Locked="false" Priority="67" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium Grid 1 Accent 3" /> <w:LsdException Locked="false" Priority="68" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium Grid 2 Accent 3" /> <w:LsdException Locked="false" Priority="69" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium Grid 3 Accent 3" /> <w:LsdException Locked="false" Priority="70" SemiHidden="false"    UnhideWhenUsed="false" Name="Dark List Accent 3" /> <w:LsdException Locked="false" Priority="71" SemiHidden="false"    UnhideWhenUsed="false" Name="Colorful Shading Accent 3" /> <w:LsdException Locked="false" Priority="72" SemiHidden="false"    UnhideWhenUsed="false" Name="Colorful List Accent 3" /> <w:LsdException Locked="false" Priority="73" SemiHidden="false"    UnhideWhenUsed="false" Name="Colorful Grid Accent 3" /> <w:LsdException Locked="false" Priority="60" SemiHidden="false"    UnhideWhenUsed="false" Name="Light Shading Accent 4" /> <w:LsdException Locked="false" Priority="61" SemiHidden="false"    UnhideWhenUsed="false" Name="Light List Accent 4" /> <w:LsdException Locked="false" Priority="62" SemiHidden="false"    UnhideWhenUsed="false" Name="Light Grid Accent 4" /> <w:LsdException Locked="false" Priority="63" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium Shading 1 Accent 4" /> <w:LsdException Locked="false" Priority="64" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium Shading 2 Accent 4" /> <w:LsdException Locked="false" Priority="65" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium List 1 Accent 4" /> <w:LsdException Locked="false" Priority="66" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium List 2 Accent 4" /> <w:LsdException Locked="false" Priority="67" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium Grid 1 Accent 4" /> <w:LsdException Locked="false" Priority="68" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium Grid 2 Accent 4" /> <w:LsdException Locked="false" Priority="69" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium Grid 3 Accent 4" /> <w:LsdException Locked="false" Priority="70" SemiHidden="false"    UnhideWhenUsed="false" Name="Dark List Accent 4" /> <w:LsdException Locked="false" Priority="71" SemiHidden="false"    UnhideWhenUsed="false" Name="Colorful Shading Accent 4" /> <w:LsdException Locked="false" Priority="72" SemiHidden="false"    UnhideWhenUsed="false" Name="Colorful List Accent 4" /> <w:LsdException Locked="false" Priority="73" SemiHidden="false"    UnhideWhenUsed="false" Name="Colorful Grid Accent 4" /> <w:LsdException Locked="false" Priority="60" SemiHidden="false"    UnhideWhenUsed="false" Name="Light Shading Accent 5" /> <w:LsdException Locked="false" Priority="61" SemiHidden="false"    UnhideWhenUsed="false" Name="Light List Accent 5" /> <w:LsdException Locked="false" Priority="62" SemiHidden="false"    UnhideWhenUsed="false" Name="Light Grid Accent 5" /> <w:LsdException Locked="false" Priority="63" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium Shading 1 Accent 5" /> <w:LsdException Locked="false" Priority="64" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium Shading 2 Accent 5" /> <w:LsdException Locked="false" Priority="65" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium List 1 Accent 5" /> <w:LsdException Locked="false" Priority="66" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium List 2 Accent 5" /> <w:LsdException Locked="false" Priority="67" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium Grid 1 Accent 5" /> <w:LsdException Locked="false" Priority="68" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium Grid 2 Accent 5" /> <w:LsdException Locked="false" Priority="69" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium Grid 3 Accent 5" /> <w:LsdException Locked="false" Priority="70" SemiHidden="false"    UnhideWhenUsed="false" Name="Dark List Accent 5" /> <w:LsdException Locked="false" Priority="71" SemiHidden="false"    UnhideWhenUsed="false" Name="Colorful Shading Accent 5" /> <w:LsdException Locked="false" Priority="72" SemiHidden="false"    UnhideWhenUsed="false" Name="Colorful List Accent 5" /> <w:LsdException Locked="false" Priority="73" SemiHidden="false"    UnhideWhenUsed="false" Name="Colorful Grid Accent 5" /> <w:LsdException Locked="false" Priority="60" SemiHidden="false"    UnhideWhenUsed="false" Name="Light Shading Accent 6" /> <w:LsdException Locked="false" Priority="61" SemiHidden="false"    UnhideWhenUsed="false" Name="Light List Accent 6" /> <w:LsdException Locked="false" Priority="62" SemiHidden="false"    UnhideWhenUsed="false" Name="Light Grid Accent 6" /> <w:LsdException Locked="false" Priority="63" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium Shading 1 Accent 6" /> <w:LsdException Locked="false" Priority="64" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium Shading 2 Accent 6" /> <w:LsdException Locked="false" Priority="65" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium List 1 Accent 6" /> <w:LsdException Locked="false" Priority="66" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium List 2 Accent 6" /> <w:LsdException Locked="false" Priority="67" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium Grid 1 Accent 6" /> <w:LsdException Locked="false" Priority="68" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium Grid 2 Accent 6" /> <w:LsdException Locked="false" Priority="69" SemiHidden="false"    UnhideWhenUsed="false" Name="Medium Grid 3 Accent 6" /> <w:LsdException Locked="false" Priority="70" SemiHidden="false"    UnhideWhenUsed="false" Name="Dark List Accent 6" /> <w:LsdException Locked="false" Priority="71" SemiHidden="false"    UnhideWhenUsed="false" Name="Colorful Shading Accent 6" /> <w:LsdException Locked="false" Priority="72" SemiHidden="false"    UnhideWhenUsed="false" Name="Colorful List Accent 6" /> <w:LsdException Locked="false" Priority="73" SemiHidden="false"    UnhideWhenUsed="false" Name="Colorful Grid Accent 6" /> <w:LsdException Locked="false" Priority="19" SemiHidden="false"    UnhideWhenUsed="false" QFormat="true" Name="Subtle Emphasis" /> <w:LsdException Locked="false" Priority="21" SemiHidden="false"    UnhideWhenUsed="false" QFormat="true" Name="Intense Emphasis" /> <w:LsdException Locked="false" Priority="31" SemiHidden="false"    UnhideWhenUsed="false" QFormat="true" Name="Subtle Reference" /> <w:LsdException Locked="false" Priority="32" SemiHidden="false"    UnhideWhenUsed="false" QFormat="true" Name="Intense Reference" /> <w:LsdException Locked="false" Priority="33" SemiHidden="false"    UnhideWhenUsed="false" QFormat="true" Name="Book Title" /> <w:LsdException Locked="false" Priority="37" Name="Bibliography" /> <w:LsdException Locked="false" Priority="39" QFormat="true" Name="TOC Heading" /> </w:LatentStyles> </xml><![endif]--><!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-parent:"";
+	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-para-margin-top:0in;
+	mso-para-margin-right:0in;
+	mso-para-margin-bottom:10.0pt;
+	mso-para-margin-left:0in;
+	line-height:115%;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:RO;}
+</style>
+<![endif]-->
+<p class="MsoNormal" style="margin-bottom: .0001pt; text-align: justify; line-height: normal;"><span style="font-size: 12.0pt; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;; mso-fareast-font-family: &quot;Times New Roman&quot;; color: black; mso-fareast-language: RO;" lang="RO">Considerăm că implementarea unui sistem nou de sancționare care prezintă un risc crescut de alterare a mediului social, &icirc;n locul adjustării sistemului existent, este inutilă.</p>
+<p class="MsoNormal" style="margin-bottom: .0001pt; text-align: justify; line-height: normal; tab-stops: 308.25pt;"><span style="font-size: 12.0pt; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;; mso-fareast-font-family: &quot;Times New Roman&quot;; mso-fareast-language: RO;" lang="RO"><span style="mso-tab-count: 1;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </p>
+<p class="MsoNormal" style="margin-bottom: .0001pt; text-align: justify; line-height: normal;"><span style="font-size: 12.0pt; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;; mso-fareast-font-family: &quot;Times New Roman&quot;; color: black; mso-fareast-language: RO;" lang="RO">&Icirc;n primul discurs negator am arătat că o sancționare mai dură nu este neapărat și una mai eficientă &ndash; onerozitatea sancțiunii nefiind principalul factor inhibitor și am vorbit despre dezechilibrul faptă gravă-faptă mai puțin gravă care s-ar produce &icirc;n ipoteza &icirc;n care am accepta moțiunea.</p>
+<p class="MsoNormal" style="margin-bottom: .0001pt; text-align: justify; line-height: normal;"><span style="font-size: 12.0pt; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;; mso-fareast-font-family: &quot;Times New Roman&quot;; mso-fareast-language: RO;" lang="RO">&nbsp;</p>
+<p class="MsoNormal" style="margin-bottom: .0001pt; text-align: justify; line-height: normal;"><span style="font-size: 12.0pt; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;; mso-fareast-font-family: &quot;Times New Roman&quot;; color: black; mso-fareast-language: RO;" lang="RO">Măsura propusă nu duce la o reală conștientizare a problemei<span style="font-size: 12.0pt; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;; mso-fareast-font-family: &quot;Times New Roman&quot;; color: black; mso-fareast-language: RO;" lang="RO">, așa cum se susține (A2), ci dimpotrivă, face ca mesajul transmis să fie unul de dezagregare socială &ndash; sancțion&acirc;nd discriminatoriu pe criteriul averii; problema devine &bdquo;muncesc mai mult, plătesc mai mult pentru aceeași faptă.&rdquo; Apreciem totuși preluarea integrală și fidelă de către echipa afirmatoare, a exemplelor din presă &icirc;n care se arată cuantumul exagerat al unor amenzi date pentru depășirea vitezei legale. &Icirc;n contraargumentare, arătăm că un om bogat care nu are centura pusă va fi sancționat mult mai grav dec&acirc;t un om mai puțin bogat care circulă cu 100 de km/h &icirc;n localitate, &icirc;n ciuda faptului că fapta ultimului produce un pericol social mult mai semnificativ. Dacă se majorează &icirc;nsă limitele de pedeapsă - așa cum am sugerat- organul abilitat va putea aprecia că ultima persoană a comis o faptă mai gravă - deci o va sancționa mai drastic dec&acirc;t pe prima. &Icirc;n același timp, pentru o faptă identică comisă cei doi, i se va putea aplica o amendă mai mare celui bogat argument&acirc;ndu-se că pedeapsa se aplică țin&acirc;nd cont de totalitatea circumstanțelor &icirc;n care s-a produs, inclusiv persoana făptuitorului. Cum &icirc;i vom explica bogatului din primul exemplu cuantumul amenzii cu 50% mai mare dec&acirc;t cel al săracului și cum va &icirc;nțelege el că măsura impusă este una etică? &nbsp;Efectul ar fi acela că cel bogat va continua să comită fapte mai puțin grave &icirc;n ideea că oricum plătește pentru ele, &icirc;n timp ce persoana mai puțin bogată se va raporta la valoarea generală a banilor și va concluziona că este &icirc;n regulă să circule cu 100 km/h &icirc;n localitate de vreme ce plătește o amendă echivalentă cu zece p&acirc;ini. Mai mult, efectele nocive ale sistemului s-au văzut și &icirc;n țări care l-au implementat și apoi au renunțat la el după &icirc;ncercarea efectelor sale &ndash; Anglia experiment&acirc;nd zilele-amendă timp de un singur an și ajung&acirc;nd la rezultate precum amendarea unui om cu 1200 lire pentru aruncarea unui ambalaj pe jos, &icirc;n timp ce vecinii săi au primit amenzi de 75 lire, respectiv 1500 lire pentru conducerea unui autovehicul fără a avea asigurare.</p>
+<p class="MsoNormal" style="margin-bottom: .0001pt; text-align: justify; line-height: normal;"><span style="font-size: 12.0pt; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;; mso-fareast-font-family: &quot;Times New Roman&quot;; mso-fareast-language: RO;" lang="RO">&nbsp;</p>
+<p class="MsoNormal" style="margin-bottom: .0001pt; text-align: justify; line-height: normal;"><span style="font-size: 12.0pt; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;; mso-fareast-font-family: &quot;Times New Roman&quot;; color: black; mso-fareast-language: RO;" lang="RO">Afirmatorii nu sunt foarte convinși că măsura propusă nu este &icirc;n fapt o taxă, un impozit pe avere, că scopul nu este ca guvernul să se &icirc;mbogățească, ci ca oamenii să fie sancționați pentru faptele lor. Deși &icirc;n primul lor discurs ne indică răspicat faptul că acest mod de aplicare a amenzii nu are natura unei impozitări, revin și ne indică &icirc;n al doilea discurs că de fapt, costurile implementării sunt o investiție profitabilă pentru stat, reeducarea făptuitorului fiind doar un beneficiu subsecvent. Noi am arătat că scopul amenzii este sancționarea celui care a săv&acirc;rșit o contravenție, fiind echivalentul patrimonial al faptei ilicite și oglindind pericolul social al acesteia. &Icirc;n continuare, costurile de implementare pe care implicit le recunosc și propunătorii măsurii nu se justifică &icirc;n &nbsp;aceste condiții &ndash; pentru augmentarea veniturilor statului există &icirc;ntr-adevăr impozitarea venitului, tradusă &icirc;n procente &ndash; dar care are ca justificare contribuția fiecăruia după posibilități la viața comunității, iar nu pedepsirea unei fapte ilicite.</p>
+<p class="MsoNormal" style="margin-bottom: .0001pt; text-align: justify; line-height: normal;"><span style="font-size: 12.0pt; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;; mso-fareast-font-family: &quot;Times New Roman&quot;; mso-fareast-language: RO;" lang="RO">&nbsp;</p>
+<p class="MsoNormal" style="margin-bottom: .0001pt; text-align: justify; line-height: normal;"><span style="font-size: 12.0pt; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;; mso-fareast-font-family: &quot;Times New Roman&quot;; color: black; mso-fareast-language: RO;" lang="RO">Problema discutată nu era cea a ineficienței măsurilor actuale, ci oportunitatea &icirc;mbunătățirii lor prin metoda propusă. Astfel, nu susținem faptul că situația actuală este ideală, iar sancțiunile perfect eficiente; argumentăm doar că măsura propusă nu este oportună, exist&acirc;nd alte posibilități de a ajunge la rezultatul scontat &ndash; după cum am indicat, majorarea limitelor pedepselor reprezent&acirc;nd o soluție cu cost de implementare zero și posibilitate mai mare de a crea amenzi proporționale.</p>
+<p class="MsoNormal" style="margin-bottom: .0001pt; text-align: justify; line-height: normal;"><span style="font-size: 12.0pt; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;; mso-fareast-font-family: &quot;Times New Roman&quot;; mso-fareast-language: RO;" lang="RO">&nbsp;</p>
+<p class="MsoNormal" style="margin-bottom: .0001pt; text-align: justify; line-height: normal;"><span style="font-size: 12.0pt; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;; mso-fareast-font-family: &quot;Times New Roman&quot;; color: black; mso-fareast-language: RO;" lang="RO">&Icirc;n ceea ce privește respectul legii, am arătat &icirc;n primul nostru discurs cum implementarea sistemului proporționalității amenzii cu veniturile contravenientului duce la perceperea măsurii ca fiind incorectă și astfel scade numărul celor care aleg să nu &icirc;ncalce legea pentru că acest lucru este imoral. &bdquo;Miza&rdquo; &icirc;n cadrul sistemului actual de sancționare poate fi crescută (și chiar este &icirc;n anumite cazuri &ndash; mai multe puncte amenda &icirc;n cazul săv&acirc;rșirii unei contravenții rutiere la mai puțin de 6 luni după comiterea primei fapte de acest gen) &ndash; pentru cei care nesocotesc legea și o &icirc;ncalcă &icirc;n repetate r&acirc;nduri, prin reglementarea recidivei. Considerăm astfel că &bdquo;pofta scade&rdquo; automat, nefiind nevoie de nedreptăți și amenzi ridicol de ridicate pentru aceasta.<span style="font-size: 12.0pt; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;; mso-fareast-font-family: &quot;Times New Roman&quot;; mso-fareast-language: RO;" lang="RO">&nbsp;</p>
+<p class="MsoNormal" style="margin-bottom: .0001pt; text-align: justify; line-height: normal;"><span style="font-size: 12.0pt; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;; mso-fareast-font-family: &quot;Times New Roman&quot;; color: black; mso-fareast-language: RO;" lang="RO">Datorită faptului că sistemul propus este ineficient, nedrept și poate duce la creșterea numărului contravențiilor, considerăm că acesta nu ar trebui adoptat.</p>
+<p class="MsoNormal" style="margin-bottom: .0001pt; text-align: justify; line-height: normal;"><span style="font-size: 12.0pt; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;; mso-fareast-font-family: &quot;Times New Roman&quot;; mso-fareast-language: RO;" lang="RO">&nbsp;</p>
+<p class="MsoNormal" style="margin-bottom: .0001pt; text-align: justify; line-height: normal;"><span style="font-size: 12.0pt; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;; mso-fareast-font-family: &quot;Times New Roman&quot;; color: black; mso-fareast-language: RO;" lang="RO">Referinte:</p>
+<p class="MsoNormal" style="margin-bottom: .0001pt; text-align: justify; line-height: normal;"><span lang="RO"><a href="http://www.telegraph.co.uk/news/uknews/1453091/Higher-fines-proposed-for-wealthy.html"><span style="font-size: 12.0pt; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;; mso-fareast-font-family: &quot;Times New Roman&quot;; color: #1155cc; mso-fareast-language: RO;">http://www.telegraph.co.uk/news/uknews/1453091/Higher-fines-proposed-for-wealthy.html</a></p>
+<p class="MsoNormal"><span lang="RO"><a href="http://en.wikipedia.org/wiki/Day-fine"><span style="font-size: 12.0pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;; mso-fareast-font-family: &quot;Times New Roman&quot;; color: #1155cc; mso-fareast-language: RO;">http://en.wikipedia.org/wiki/Day-fine</a></p>
+</p></div><hr><hr><h2>Decizii:</h2> <script>
+        $j(document).ready(function(){
+			$j('.decizie_toggler').toggle( 
+				function(){
+					$j(this).attr('src', '../../../../images/little_stuff/16-em-down.png');   
+					$j(this).parent().next('.decizie').hide('fast'); 
+                },
+                function(){
+					$j(this).attr('src', '../../../../images/little_stuff/16-em-up.png');
+					$j(this).parent().next('.decizie').show('fast'); 
+                } 
+			);
+		});</script><div class='decizie'><h3>Bogdan Ratiu
+                <img src='../../../../images/little_stuff/16-em-up.png' class='decizie_toggler'></h3><div class='normal_text'><p>A1:</p>
+<p>Definesti bine cadrul dezbaterii si prezinti 3 argumente pe care se bazeaza cazul afirmator:</p>
+<p>1.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Amenzile trebuie sa aiba impact pentru a descuraja. Un argument destul de bun pe care l-ai sustinut prin exemple destul de elocvente.</p>
+<p>2.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Egalitatea din punct de vedere juridic. Este un argument insuficient argumentat, imi prezinti de ce un bogat ar putea sa se simta nedreptatit si apoi spui ca sanctiunile trebuie sa fie personalizate. Nu mi se pare ca a fi egal in fata legii si sanctiuni personalizate sunt doua formulari care se sustin una pe alta.</p>
+<p>3.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Se respecta mai bine legea &ndash; ca sa continui eu: pentru ca amenzile au impact si descurajeaza. Un argument foarte asemantor cu primul argument. E corect explicat, dar nu este fundamental decat o reformulare a primului argument si sustinut de un alt exemplu.</p>
+<p>N1.</p>
+<p>E bine ca ai prezentat la inceput un fel de sumar al ideii pe care va bazati contraargumentarea.</p>
+<p>Ai urmarit firul argumentelor afirmatoare si ai combatut punctual fiecare argument in parte.</p>
+<p>La primul argument aduci in discutie doua aspecte. Studiul care sugereaza ca introducerea de noi amenzi sau cresterea unor amenzi ar putea sa aiba un rezultat contrar celui asteptat. Dovada in sine pare destul de usor de atacat si nu inteleg de ce afirmatorii nu au facut acest lucru: In primul rand e vorba in dovada de introducerea de noi amenzi, nu de cresterea unora deja existente (deci cumva un caz diferit fata de ceea ce se discuta aici) si doi, chiar din studiu se preciza ca daca sanctiunea devine disproportionat de mare, ea automat va descuraja. Din punctul meu de vedere in studiu parintii nu se mai simteau vinovati pentru ca ei considerau ca platesc un serviciu. Acestea sunt&nbsp;&nbsp;pareri personale ale mele, dar nefiind aduse in discutie de negatori raman la stadiu de sfat. Al doilea aspect adus in vedere este ca deja amenzile se aplica deja diferentiat.</p>
+<p>La al doilea argument ai sesizat punctual slab si anume faptul ca nu prea se sustine egalitatea in fara legii. Exemplele aduse sunt foarte usor de urmarit.&nbsp;</p>
+<p>La al treilea argument spuneti ca masura ar putea sa duca la desconsiderarea legii. Din nou dovada adusa este destul de greu de urmarit si acceptat, se refera la un altfel de situatie si nu cred ca puteam trage asa usor concluzia pe care ati tras-o voi. Dar ridici niste semne de intrebare valide la care afirmatorul 2 trebuie sa isi raspunda.</p>
+<p>Era bine daca mai aduceati si niste argumente proprii care sa va sustina punctul de vedere.</p>
+
+<p>A2:</p>
+<p>Reiei argumentele primului vorbitor dar din pacate de multe ori nu tii cont de cele spunse de negatorul 1. Rolul vorbitorului 2 este de a re-sustine cazul si de a explica de ce in ciuda celor spuse de negator, argumentele raman in picioare.</p>
+<p>La primul argument ai explicat foarte pe larg cum functioneaza un sistem cu amenzi proportionale cu venitul. Era mai bine daca prezentai si o statistica care sa arate ca in acele tari rata contraventiilor a scazut. De asemenea nu ai spus nimic referitor la ideea lansata de negatori cum ca niste amenzi mai mari pot sa insemne tocmai o crestere a numarului de contravenienti (conform stdiului citat de ei). Chiar daca e greu de acceptat trebuia macar sa aduceti in discutie validitatea studiului sau credibilitatea lui.</p>
+<p>Al doilea argument nu este sustinut de exemplul adus. Nu vad nici o legatura intre egalitatea in fata legii, o statistica ingrijoratoare legata de numarul contraventiilor in anul 2011 si necesitatea introducerii amenzilor proportionale cu venitul. Trebuia explicat mult mai bine care este legatura intre aceste trei idei ale voastre. Trebuia sa imi aratati o statistica care sa imi spuna ca persoanele cu venituri mari incalca legea mai mult decat cele cu venituri mai mici. Ceea ce imi aratati este ca toata lumea incalca legea si nu vad cum schimband modul de penalizare se va imbunatati ceva. Si din nou, legatura cu egalitatea in fata legii este foarte neclara. Dovada adusa este buna, are impact, dar trebuie legata mult mai bine de argumentare.&nbsp;</p>
+
+<p>Argumentul 3 este sustinut doar pe baza unor afirmatii simple:</p>
+
+<p>&ldquo;Sistemul nu conduce către desconsiderarea legii (conform N1), ci conduce către un grad ridicat de responsabilizare a persoanelor.&rdquo; De ce? Nu ai explicat nimic, doar oferi o alternativa care ar trebui sa fie mai buna. &ldquo;Considerăm că după o astfel de amendă sigur nu te mai joci cu focul, g&acirc;ndeşti de două ori &icirc;nainte, &icirc;ţi iei măsurile de precauţie şi acţionezi o dată conform legii. Prin urmare excludem posibilitatea creşterii incidenţei contravenţiilor.&rdquo; Ceea ce considerati voi, deci parerile personale nu pot sa aiba valoare de argument. Intr-o dezbatere nu au ce sa caute parerile personale si nu se poate sa argumentezi pe baza a ceea ce crezi, fara sa te bazezi pe nimic altceva. Mai bine era sa spui, consider ca nu este asa, pentru ca: o amenda proportionala cu venitul face ca orice cetatean sa resimta in mod egal pedeapsa aplicata. (un exemplu care si acesta trebuia continuat cu alte argumente).</p>
+
+<p>N2:</p>
+<p>Ai prezentat cele doua argumente pricipale ale echipei negatoare.</p>
+<p>1.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;O sanctionare mai dura nu este neaparat si mai eficienta. Ai continuat ideea primului negator, neatacata de afirmatori.</p>
+<p>2.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Inegalitatea introdusa de masura afirmatorilor. Ai sustinut din nou cu exemple bune si ai mai spus ca avem alternative deja existenta cu niste paliere de amenzi care sunt mai putin discriminatorii.</p>
+<p>Structura discursului nu a fost cea mai buna, ai sarit destul de mult in cadrul paragrafelor de la o idee la alta si ar fi fost mai bine daca prezentai care au fost ariile de conflict si nu neaparat sa urmaresti doar linia de argumentare asa cum a fost introdusa de afirmatori.</p>
+<p>Imi prezinti aceiasi dovada care deja a fost prezentata de A1 si nu vad exact unde ar trebui folosita aceasta dovada.</p>
+
+<p>Decizia: Au contat doua aspecte:</p>
+<p>1.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Vor scadea contraventiile ca urmare a amenzilor proportionale? Negatorii au prezentat un studiu neatacat care spune ca dimpotriva, iar afirmatorii au putut doar sa prezinte cum e implementat acest sistem in alta parte, ce efecte are la bugetul de stat, dar nu au aratat nici o dovada sau argumentare cum ca vor scadea contraventiile.</p>
+<p>2.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Este sau nu discriminare? Si acest argument merge la negatori care au reusit mult mai bine sa arate injustetea care poate sa fie adusa si care au prezentat si situatia actuala cu amenzi differentiate in functie de alte circumstante ca mult mai de dorit.</p>
+
+<p><strong>Castiga echipa negatoare.</strong></p>
+
+<p>A1: continut 12 strategie 8stil 4 - 24</p>
+<p>N1: continut 13 strategie 9 stil 4 - 26</p>
+<p>A2: continut 10 strategie 8 stil 4 - 22</p>
+<p>N2: continut 13 strategie 9 stil 4 - 26</p>
+
+</div>A1 -> 24 puncte<br>N1 -> 26 puncte<br>A2 -> 22 puncte<br>N2 -> 26 puncte<br>Castiga echipa: <h3 style='display:inline;color:red;'>Andreea si Irina (negatori)</h3></div><hr><div class='decizie'><h3>David Moscovici
+                <img src='../../../../images/little_stuff/16-em-up.png' class='decizie_toggler'></h3><div class='normal_text'><p>A1&nbsp;<br /><br />Vorbitorul clarfica ce concept de model au cu privire la masura, fara a preciza un algoritm de calcul anume, &nbsp;dar explicand variatiile potentiale.<br /><br />In primul argument, este explicat factorul prohibitiv care ar fi adaugat pentru a reduce cum nu reduce astazi motivatia de a incalca legea.<br /><br />Cel de-al doilea argument este un argument defensiv care arata de ce masura nu constituie discriminare.<br /><br />Cel de-al treilea argument explica de ce zonele din societate care vor fi afectate de masura vor fi fix cele in care este nevoie de un spor de repectare a legilor.<br /><br />N1<br /><br />Primul argument negator arata ca empiric, chiar daca contra-intuitiv, nu se produce efectul scontat, ci potential unul opus prin masuri ca cea afirmatoare. Este subliniat cum exista in statu quo mijloace de a proportiona deja amendele la fapta de la caz la caz.<br /><br />In cel de-al doilea argument, insistand pe descrierea amenzii drept cost-pentru-actiune, se face reducerea la absurdul situatiei in care se platesc preturi diferite pentru exact aceeasi actiune facuta de oameni cu venit diferit.<br /><br />Argumentul trei prezinta riscul de-legitimarii interdictiilor sanctionate astfel.<br />&nbsp;&nbsp;<br /><br />A2<br /><br />Afirmatorii explica ca egalitatea care trebuie realizata este aceea a efectului coercitiv.<br /><br />In analiza cu privire la cat de usturatoare sunta amenzile, este conturat clar obiectivul realizarii interdictiei prin demotivare si sunt invocate precedente relevante.<br /><br />Al doilea argument insista pe gravitatea problemei la care se propune solutia in timp ce al treilea argument cauta sa raspunda ideii de risc al de-legitimarii insa doar bazand argumentul pe increderea in masura si in argumentele anterioare.<br /><br /></p>
+<p>N2</p>
+<p>Negatorii insista pe riscul diviziunii sociale si pe riscul ca cei care platesc mult sa fie alienati si deci sa se simta ca daca platesc mult, isi cumpara prin urmare dreptul la a incalca legea. Sunt invocate precedente negative ale unor tentative de adoptare de masuri similare.<br /><br />Invocand explicatia afirmatoare facuta prin analogie cu impozitarea, negatorii subliniaza natura problematica a masurii si cer drept criteriu unic crearea de pericol social.<br /><br />Alternativa majorarii limitelor pentru ca amenzile sa fie proportionate dupa pericolul social mai puternic este re-subliniata, aratata ca o masura cu mai putine implicatii problematice. (Insa nefiiind aratat cum rezolva problema in cazurile avute in vedere de afirmatori fara a deveni exact masura afirmatoare).<br /><br />Este invocata pedepsirea suplimentara pentru recidiva din statu quo, insa nu este clar pana in acest punct cum va fi redusa problema avuta in vedere de afirmatori prin masura negatoare sau cum este rezolvata o problema curenta in mod satisfacator cu mijloacele de la ora actuala.<br /><br /><br />A fost o dezbatere buna, insa afirmatorii reusesc sa centreze discutia pe efectul prohibitiv pe care vor sa il adreseze celor care nu sunt afectati de amenzi astazi. Desi performeaza bine, negatorii nu ajung sa explice cum acest efect nu ar fi realizat sau cum poate fi realizat altfel. Negatorii contureaza niste riscuri ce pot surveni in urma adoptarii sistemului de taxare proportionala, insa acestea nu sunt aratate ca fiind mai probabile sau contra-balansand realizarea care poate fi bifata de afirmatori in randul celor bogati. Daca negatorii invoca majorarea limitelor si admit ca ar amenda bogatii mai mult pentru ca sunt bogati, devin de acord cu afirmatorii, iar daca spun ca vor amenda saracii si bogatii la fel pentru aceeasi actiune, atunci nu rezolva problema de la care afirmatorii au inceput discutia. Intr-un meci bun si strans, castigul merge&nbsp;<strong>catre afirmatori.</strong></p>
+<p>A1: Continut -13/15 , Strategie-8/10 ,Stil -4/5 , Total- 25</p>
+<p>N1 Continut -13/15 , Strategie-8/10 ,Stil -4/5 , Total- 25</p>
+<p>A2 Continut -13/15 , Strategie-8/10 ,Stil -4/5 , Total- 25</p>
+<p>N2 Continut -13/15 , Strategie-7/10 ,Stil -4/5 , Total- 24</p>
+</div>A1 -> 25 puncte<br>N1 -> 25 puncte<br>A2 -> 25 puncte<br>N2 -> 24 puncte<br>Castiga echipa: <h3 style='display:inline;color:red;'>Teo si George (afirmatori)</h3></div><hr><div class='decizie'><h3>Madalin Guruianu
+                <img src='../../../../images/little_stuff/16-em-up.png' class='decizie_toggler'></h3><div class='normal_text'><p>Una dintre dezbaterile foarte bune, o bucurie pentru un arbitru să asiste la o asemenea desfășurare de argumente pro și contra moțiunii propuse.</p>
+<p>Discursul A1 a prezentat concis și cu abilitate, at&acirc;t termenii dezbaterii, cadrul acesteia, filosofia de caz și argumentele, plus exemple concludente care să ne facă să credem că trebuie să luăm decizia introducerii măsurii. Esențială răm&acirc;ne mai buna respectare a legii, pornind de la efectul prohibitiv și egalitatea tuturor &icirc;n fața legii. Reuseste sa convinga atat pe partea de cotninut, dar si ca stil, exemplele sunt bune si prezentarea inițială a cazului este aproape fără cusur.</p>
+<p>Discursul N1 deschide o linie masivă de contraargumentare din partea echipei negatoare, care contestă at&acirc;t ineficiența măsurii, ba chiar faptul că dezavantajele sunt mai mari dec&acirc;t eventualele avantaje aduse situației de fapt. Atacurile la adresa filosofiei de caz sunt extrem de pertinente: pericolul social este important și nu patrimoniul făptuitorului, dar chiar și acum există limite maxime și minime &icirc;n acordarea amenzilor. Contraargumentarea este cheia &icirc;ntregului discurs: at&acirc;t minimizarea reușitei implentării unui asemenea sistem și existența deja a unor normative suficiente, c&acirc;t mai ales atacul la adresa egalității, departe de a fi obținut prin aplicarea unor măsuri disproporționate &icirc;n funcție de avere și nu de faptă. Un alt aspect important este faptul că echipa afirmatoare pornește de la principiul că merită taxați cei care au mulți bani, indiferent cum i-au obținut, ceea ce echipa negatoare surprinde perfect: taxăm mai mult hărnicia sau inventivitatea și dăm loc la speculații de tip, "nu am chiar at&acirc;ta avere/e a altor membri". Discriminarea care apare a fost bine argumentată de către negatori pe parcursul acestui discurs.</p>
+<p>Discursul A2 reface &icirc;ntr-o oarecare măsură cazul afirmator, &icirc;ncerc&acirc;nd să aducă exemple noi pentru susținerea argumentelor inițiale, atacate pe scară largă de către negatori. Chiar dacă a fost un discurs pertinent, problema acestui discurs a fost că nu a răspuns concludent la obiecțiile ridicate de negator și expuse &icirc;n comentariul pe care l-am făcut la N1. Mai mult, legătura subțire &icirc;ntre cuantumul amenzii și eficiență a rămas punctul central al cazului afirmator. Exemplele cu țările nordice au fost excelente, dar a lipsit răspunsul argumentat la obiețiile clare ale negatorilor ridicate cu privire la inegaliatea extraordinară promovată prin amendarea disproporționată a persoanelor care au ajuns la anumite sume de bani &icirc;n mod perfect legal și meritat</p>
+<p>Discursul N2 oferă lovituri sistematice și la mai multe niveluri cazului afirmator, tranș&acirc;nd cazul si aducand clarificarile eseniala. Odată că ar fi mai eficient să-l adaptăm pe cel actual, nu să schimbăm cu ceva care are prea multe dezavantaje. A doua oară că anumite țări au implementat de probă și au eliminat sitemul propus de afirmatori. A treia oară că măsura nu duce la egalitate, ci la transmiterea de mesaje greșite &icirc;n societate, cu adevărat imorale. Nu aș putea să votez cu cei a căror măsură propusă creează at&acirc;t de multe probleme la nivel de implementare și aduce reale dezavantaje, inclusiv la nivelul transmiterii de mesaje populiste.</p>
+<p>Ariile de conflict din această foarte frumoasa dezbatere au fost &icirc;n jurul ideii de eficiență &icirc;n aplicarea măsurii, pornind de la premisa că ambele echipe urmăresc &icirc;mbunătățirea pe viitor a situației de fapt. Pe mine m-au convins negatorii deoarece au răspuns la obiecțiile centrale ale afirmatorilor: efectul prohibitiv al măririi amenzilor are limite evidente, iar egalitatea &icirc;n fața legilor nu este dată de plata &icirc;n concordanță cu mărimea venitului, c&acirc;t de o aplicare eficientă a legislației actuale, care are deja limite maxime și minime, care pot fi, așa cum propun negatorii, ajustate.&nbsp;&nbsp;Av&acirc;nd &icirc;n vedere faptul că soluția propusă de afirmatori nu aduce o &icirc;mbunătățire reală iar dezavantajele subliniate de negatori sunt de luat &icirc;n seamă, am votat cu echipa negatoare.</p>
+</div>A1 -> 25 puncte<br>N1 -> 27 puncte<br>A2 -> 24 puncte<br>N2 -> 26 puncte<br>Castiga echipa: <h3 style='display:inline;color:red;'>Andreea si Irina (negatori)</h3></div><hr><h3 class='important'>Vrem parerea ta! Pentru asta, trebuie sa te loghezi.</h3><h3>Clasament meci</h3><p>Medii punctaje</p>A1 -> 24.67 puncte<br>N1 -> 26.00 puncte<br>A2 -> 23.67 puncte<br>N2 -> 25.33 puncte<br>Castiga echipa: <h3 style='display:inline;color:red;'>Andreea si Irina (negatori)</h3>
+                <div class='clear'></div>
+        </div><!-- end main content -->
+         <div class='clear'></div>
+</div>
+<div id="pix"></div>
+
+
+                                </div><!--end main -->
+                                <div id='parteneri'>
+                                    <span class='tr'></span><span class='tl'></span><span class='br'></span><span class='bl'></span><span id="filler"></span>
+                                    <div class='parteneri' id='sustinatori'>
+                                        <span class='floating_text' id='un_proiect'>Un proiect</span>
+                                        <a href='http://www.ardor.org.ro/'><div class='image' id='ardor'>Ardor</div></a>
+                                        <span class='floating_text' id='finantatori'>Finanțatori</span>
+                                        <a href='http://www.opensocietyfoundations.org/'><div class='image' id='open_society'>Open Society Foundation </div></a>
+                                        <a href='http://www.studentiq.ro//'><div class='image' id='memoplus'>MemoPlus</div></a>
+                                        <!-- <a href='http://www.ratiufamilyfoundation.com/'><div class='image' id='FundatiaRatiu'>Ardor</div></a>
+                                        <a href='http://www.eef.md/'><div class='image' id='eef'>East Europe Foundation</div></a>
+                                        <a href='http://www.mts.gov.md/'><div class='image' id='mdminister'>Ministerul Tineretului si Sportului al Republicii Moldova</div></a> -->
+
+                                        <span class='floating_text' id='parteneri_text'>Parteneri</span>
+
+                                        <a href='http://www.policycenter.eu/'><div class='image' id='PolicyCenter'>Policy Center</div></a>
+                                        <a href='http://www.britishcouncil.org/'><div class='image' id='BritishCouncil'>British Council</div></a>
+                                        <a href='http://www.europuls.ro/'><div class='image' id='europuls'>Europuls</div></a>
+                                        <a href='http://www.cere.ro/'><div class='image' id='cere'>Ce-Re</div></a>
+                                        <a href='http://www.primeromania.ro/'><div class='image' id='prime'>Prime Romania</div></a>
+                                        <a href='http://www.cji.ro/'><div class='image' id='cji'>Centrul pentru jurnalism independent</div></a>
+                                        <a href='http://www.aiesectm.ro/'><div class='image' id='aisec'>Aisec</div></a>
+                                        <!-- ===================================================================================================== -->
+                                        <a href='http://www.cogitus.ro/'><div class='image' id='cogitus'>Cogitus</div></a>
+                                        <a href='http://www.adevarul.ro/international/foreign_policy/'><div class='image' id='foreignPolicy'>Foreign Policy</div></a>
+                                        <a href='http://www.elsa.ro/'><div class='image' id='elsa'>Elsa</div></a>
+                                        <a href='http://www.vipromania.ro/'><div class='image' id='vipromania'>Voluntari pentru idei si proiecte</div></a>
+                                        <a href='http://www.ongtrust.ro/'><div class='image' id='ongtrust'>Trust</div></a>
+
+                                        <!-- ===================================================================================================== -->
+                                        <a href='http://www.leap.ro/'><div class='image' id='leap'>Leap</div></a>
+                                        <a href='http://www.younginitiative.org/'><div class='image' id='younginitiative'>Asociatia young initiative</div></a>
+                                        <a href='http://www.asjc.ro/'><div class='image' id='asjc'>Asjc</div></a>
+                                        <a href='http://osut.ro/'><div class='image' id='osut'>Osut</div></a>
+                                        <div class='clear'></div>
+                                    </div>
+                                    <div class='parteneri' id='parteneri_institutionali'>
+                                        <span class='floating_text' id='sponsori_text'>Sus&#539;in&#x0103;tori</span>
+                                        <a href='http://www.cartier.md/'><div class='image' id='cartier_logo'>Editura Cartier</div></a>
+                                        <a href='http://www.pll.md/ro/'><div class='image' id='biblio_logo'>Biblioteca publica de drept</div></a>
+                                        <span class='floating_text' id='institutii_text'>Parteneri institu&#539;ionali</span> 
+                                        <ul id='institutii'>
+                                            <!-- <span class='floating_text' id='institutii_text'>Parteneri institu&#539;ionali:</span> -->
+                                            <li><a href='http://www.politice.ro/'>Facultatea de &#536;tiin&#539;e Politice SNSPA </a></li>
+                                            <li><a href='http://www.comunicare.ro/'>Facultatea de Comunicare &#537;i Rela&#539;ii Publice SNSPA</a></li>
+                                            <li><a href='http://www.fspub.ro/'>Facultatea de &#536;tiin&#539;e Politice Universitatea Bucure&#537;ti</a></li>
+                                            <li><a href='http://www.filosofie.unibuc.ro/'>Facultatea de Filosofie Universitatea Bucure&#537;ti</a></li>
+                                            <li><a href='http://litere.unibuc.ro/'>Facultatea de Litere din Universitatea Bucure&#x015f;ti</a></li>
+                                            <li><a href='http://www.unibuc.ro/ro/fac_fsas_ro'>Facultatea de Sociologie Universitatea Bucure&#537;ti</a></li>
+                                            <li><a href='http://laws.uaic.ro/'>Facultatea de Drept Universitatea Alexandru Ioan Cuza Ia&#537;i</a></li>
+                                            <li><a href='http://www.uaic.ro/uaic/bin/view/Academic/Filosofie'>Facultatea de Filosofie si &#536;tiin&#539;e Social Politice Universitatea AIC Ia&#537;i</a></li>
+                                            <li><a href='http://www.upa.ro/'>Facultatea de Drept si Facultatea de &#x015e;tiin&#x0163;e Politice si Administrative Universitatea Petre Andrei Ia&#x015f;i</a></li> 
+
+                                            <li><a href='http://www.ubbcluj.ro/'>Universitatea Babe&#537;-Bolyai Cluj Napoca</a></li>
+                                            <li><a href='http://www.uvt.ro/'>Universitatea de Vest Timi&#537;oara</a></li>
+                                            <li><a href='http://www.upt.ro/'>Universitatea Politehnica Timi&#537;oara</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class='parteneri' id='parteneri_media'>
+                                        <span class='floating_text' id='media_text'>Parteneri media</span>
+                                        <a href='http://www.hotnews.ro/'><div class='image' id='hotnews'>HotNews</div></a>
+                                        <!-- <a href='http://www.lumebuna.ro/'><div class='image' id='lumebuna'>Lume Buna</div></a> -->
+                                        <a href='http://www.romaniapozitiva.ro/'><div class='image' id='romaniapozitiva'>Romania Pozitiva</div></a>
+                                        <a href='http://totb.ro/'><div class='image' id='thinkoutsidethebox'>Think Outside The Box</div></a>
+                                        <a href='http://www.facebook.com/carevasazica.vip'><div class='image' id='carevasazica'>Carevasazica</div></a>
+                                        <a href='http://www.studentie.ro/'><div class='image' id='studentiero'>Studentie.ro</div></a>
+                                        <a href='http://startub.unibuc.ro/'><div class='image' id='startub'>startub.unibuc.ro</div></a>
+                                        <!-- <a href='http://www.tvr.ro/tvr_cluj.php'><div class='image' id='tvrcluj'>Tvr Cluj</div></a> -->
+                                        <!-- <a href='http://www.radiotransilvania.ro'><div class='image' id='radiotransilvania'>Radio Transilvania</div></a> -->
+                                        <a href='http://iasifun.ziaruldeiasi.ro/'><div class='image' id='iasifun'>Iasi fun</div></a>
+                                        <a href='http://www.ziaruldeiasi.ro/'><div class='image' id='ziaruldeiasi'>Ziarul de Iasi</div></a>
+                                        <a href='http://www.kissfm.ro/timisoara'><div class='image' id='kissfm'>KissFm</div></a>
+
+                                        <div class='clear'></div> 
+                                    </div>
+                                    <div class='clear'></div>
+
+                                </div>	
+                            </div>	<!-- end wrap -->
+                            <div id='footer_mare'>
+                                <div id='footer'>
+                                    <div id='links' class='footer'>
+                                        <div id='menu1' style='margin:auto;'> <ul id='meniu_prinicpal'><li><a href='../../../contacte/index.html'> Contact </a></li>
+<li><a href='../../../clubdebate/index.html'> Cluburile </a></li>
+<li><a href='../../../oamenii/index.html'> Oamenii </a></li>
+<li><a href='../../../proiectul/index.html'> Proiectul </a></li>
+<li><a href='../../../home/index.html'> Acasa </a></li>
+</ul></div><!--end menu-->
+                                    </div><!--
+                                    <div id='contact' class='footer'>
+                                            <h4>Contact</h4>
+                                            <p>office@closer2oxford.ro</p>
+                                            <p>bogdan.draghicescu@closer2oxford.ro<br>
+                                            <span class='detalii'> (asistenta tehnica web - orice probleme legate de site)</span></p>
+                                    </div>
+                                    -->
+                                    <div id='newsletter' class='footer'>
+                                        <script src="../../../../../connect.facebook.net/en_US/all.js#xfbml=1"></script><fb:like href="http://www.facebook.com/pages/Closer2Oxford/162758797069605" width="250" colorscheme="dark"></fb:like>
+                                        <!--<h4>Newsletter</h4>
+                                        <form action='/page/newsletter'>
+                                                <input type='text' name='email'>
+                                                <input type='submit' id='submit' value='>'>
+                                                        
+                                        </form>-->
+                                    </div>
+                                    <div id='credits'>
+                                        Copyright(c) 2021 ARDOR |  Toate drepturile rezervate | Toate logo-urile si sloganurile de pe site sunt proprietate intelectuala inregistrata si nu pot fi reproduse fara acordul explicit al detinatorilor. <br>
+                                            <br /><br />
+                                            <b>Disclaimer</b><br /><i>
+
+                                                Programul educational Closer to Oxford este un program non-profit si nu are o legatura cu universitatea cu acelasi nume, referirea la Oxford avand doar o semnificatie simbolica.
+                                            </i>
+                                    </div>
+
+                                </div>		
+                            </div>		
+
+                            <div id="finantatde">Acest proiect este finantat cu sustinere din partea Comisiei Europene. Aceast publicatie [comunicare] reflecta doar
+                                vederile autorului, iar Comisia nu poate fi facuta  responsabila pentru utilizarea informatiei pe care o contine.</div>
+
+
+                        </body>
+                        </html>

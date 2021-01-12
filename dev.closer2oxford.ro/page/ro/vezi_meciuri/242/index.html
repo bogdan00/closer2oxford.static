@@ -1,0 +1,582 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml-strict.dtd">
+<HTML xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+    <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+            <link rel="icon" type="image/png"  href="../../../../../closer2oxford.ro/favicon.html">
+                <link rel="stylesheet" href="../../../var/layout.css" type="text/css">
+                    <title>Closer to Oxford - e timpul pentru argumente!</title>
+                    <link rel="alternate" type="application/rss+xml"  href="../../../rss_feed" title="Stiri Closer2Oxford">
+                        <!-- <link rel="image_src" property="og:image"  href="/images/layout/closer2oxford_fb_white.png" /> -->
+                        <link rel="image_src" property="og:image"   type="image/jpeg"  href="../../../../uploads/2015/06/9/facebook_icon.html" />
+                        <link rel="image_src" type="image/jpeg"  href="../../../../uploads/2015/06/9/icon-facebook.gif" /> 
+						<meta name="description" content="Closer2Oxford pune în valoare oameni şi argumentele lor, în dezbateri online şi publice alături de tineri şi invitați avizaţi"/>
+                        <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9" />
+<script type='text/javascript' src='../../../../js/jquery-1.4.4.min.js'></script>
+<script>var $j = jQuery.noConflict();</script>
+<script type='text/javascript' src='../../../../js/tinymce/tiny_mce.js'></script>
+<script type='text/javascript' src='../../../../js/jquery.form.js'></script>
+<script type='text/javascript' src='../../../../js/fbLoginRegister.js'></script>
+<script type='text/javascript' src='../../../var/javascript.js'></script>
+<script type='text/javascript' src='../../../../js/jquery.hovertip-1.0.min.js'></script> 
+<script type='text/javascript' src='../../../../js/jquery.jgrowl_minimized.js'></script> 
+<link rel='stylesheet' href='../../../../css/jquery.jgrowl.css' media='screen' type='text/css'> 
+<script type='text/javascript' src='../../../../js/jquery.timer-min.js'></script> 
+<style>.hovertip{
+    position:absolute;
+    padding:10px 13px;
+    z-index:2;
+    max-width:300px;
+    color:#303030;
+    background-color:#f5f5b5;
+    border:1px solid #DECA7E;
+    font-family:sans-serif;
+    font-size:12px;
+    line-height:18px;
+    text-align:left;
+    }
+           .normal_text ol,.normal_text ol *{text-align:left !important}
+           .normal_text *{font-weight:normal !important;font-size:12px !important;font-face:tahoma !important}</style> 
+<script type='text/javascript'>$j(document).ready(function(){$j('.tooltip').hovertip({'offset':[20,20]});get_notif();});
+
+if(!Array.indexOf){Array.prototype.indexOf = function(obj){for(var i=0; i<this.length; i++){if(this[i]==obj){return i;}}return -1;}}
+    hashuri = [] ;
+	 var tick_timer= 3000 ;
+ 
+	 function get_notif()
+        {
+		  
+		  //console.log(tick_timer);
+	     
+		  setTimeout(get_notif,tick_timer);
+        
+		   $j.ajax(
+            {
+                url: '/page/notif/show_events',
+                dataType: 'json',
+                data: "{}",
+                success: function(data)
+                    {
+                    $j.each(data,function(index,data){
+                        try
+                            {
+                            if( hashuri.indexOf(data.hash) == -1 )
+                                {
+                                hashuri.push(data.hash);
+                                $j.jGrowl(
+                                    data.str,
+                                    {
+                                        corners:'1px',
+                                        life: data.life,
+                                        header:data.title,
+                                        hash: data.hash,
+                                        sticky: data.sticky,
+                                        close: function(e,m,o)
+                                            {
+                                                $j.ajax({url:'/page/notif/delete_single_event/' + o.hash});
+                                            }
+                                    });
+                                }
+                            }
+                        catch(e){}
+                        })
+                    }
+            });
+        }
+	 </script> 
+ 
+                            
+  <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-19111721-1']);
+  _gaq.push(['_setDomainName', '.closer2oxford.ro']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+    
+                        </head>
+                        <body>
+                            <div id="global_wrap">
+                                <div id="header">
+                                    <a href='../../../../index.html'><div id='logo'><img src='../../../../images/layout/sigla.jpg'></div></a>
+                                    <a class='noExternal' href='http://www.facebook.com/pages/Closer2Oxford/162758797069605'><img src='../../../../images/fb.png' style='height:30px;float:right;clear:right;margin:10px 5px 5px 5px;border:none;'/></a>
+                                    <a href='../../../rss_feed'><img src='../../../../images/feed-icon.png' style='height:30px;float:right;clear:right;margin:5px;border:none;'/></a>
+                                </div>
+                                <div id="meniu">
+                                    <div  id='register_login'>
+
+                                        
+  <a href='#' class='todo' id='login'>Login </a> &nbsp;<a href='../../../register.html' class='todo' id='register'>Register</a>
+    <div id='login_box'>
+		  <form action='https://dev.closer2oxford.ro/page/ro/login_user/logon' method='post' id='user_login_form'>
+					 <div>Email: <input type='text' name='email'/> </div><br />
+					 <div>Pass: <input type='password' name='passwd'/></div><br />
+					 <a href='#' class='password_forgot'>forgot password?</a>
+					 <input type='hidden' value='/page/ro/vezi_meciuri/242/' name='returnto' class='submiter'/><br />
+					 <input type='submit' value='login' name='btn' class='submiter'/><br />
+		  </form>
+		  
+		  <form action='https://dev.closer2oxford.ro/page/ro/login_user/reset_user_pw' method='post' id='user_reset_form'>
+					 <div>Email: <input type='text' name='email'/> </div><br />
+					 <a href='#' class='password_forgot'>login?</a>
+					 <input type='hidden' value='/page/ro/vezi_meciuri/242/' name='returnto' class='submiter'/><br />
+					 <input type='submit' value='reset' name='btn' class='submiter'/><br />
+		  </form>
+		  
+    </div>
+    
+                                    </div>
+                                    <div id='menu1' style='margin:auto;'> <ul id='meniu_prinicpal'><li><a href='../../../contacte/index.html'> Contact </a></li>
+<li><a href='../../../clubdebate/index.html'> Cluburile </a></li>
+<li><a href='../../../oamenii/index.html'> Oamenii </a></li>
+<li><a href='../../../proiectul/index.html'> Proiectul </a></li>
+<li><a href='../../../home/index.html'> Acasa </a></li>
+</ul></div><!--end menu-->
+                                </div>
+                                <div id="main"> 
+                                    <!--<div id='stiri-padding'>
+        <div id='stiri_back'>
+                {stiri} 
+    
+               
+        </div>-->
+        
+</div>
+<div  id="content-padding">
+        <div id='sidebar_menu'>
+                <span class='tr'></span>
+                <span class='tl'></span>
+                <span class='br'></span>
+                <span class='bl'></span>
+                <span id="filler"></span>
+                    
+                <ul></ul>
+                
+                <div class='clear'></div>
+        </div>
+        <div id="content">
+                <span class='tr'></span>
+                <span class='tl'></span>
+                <span class='br'></span>
+                <span class='bl'></span>
+                <span id="filler"></span>
+                  <script>
+        $j(document).ready(function(){
+        $j('.discurs_toggler').toggle(
+                function(){
+                $j(this).attr('src', '../../../../images/little_stuff/16-em-down.png');   
+                $j(this).parent().next('.discurs').hide('fast');
+                },
+                function(){
+                $j(this).attr('src', '../../../../images/little_stuff/16-em-up.png');
+                $j(this).parent().next('.discurs').show('fast');
+                });
+            });
+        </script><style>.nowrap{white-space: nowrap;}
+		.noJustify{text-align:left;}
+		</style><h2 class='noJustify'><span class='nowrap'>'Equilibrium'</span> <span class='notif'>(afirmatori)</span> vs <span class='nowrap'>'Clipa si Mihaela'</span> <span class='notif'>(negatori)</span></h2><h3>A1 (Alexandru Drăgulean) <img src='../../../../images/little_stuff/16-em-up.png' class='discurs_toggler'></h3>
+            <div class='discurs normal_text'><p>&Icirc;n calitate de prim afirmator aş dori să menţionez două maxime, pe care le consider perfect potrivite &icirc;ntru susţinerea moţiunii: &bdquo;Dura lex sed lex&rdquo; (Legea este dură, dar e lege) şi &bdquo;Nil inultum remanebit&rdquo; (Nimic nu trebuie să răm&icirc;nă nepedepsit).</p>
+<p>Pentru a avea o claritate referitor la subiectul dezbaterii este necesar de definit c&icirc;ţiva termeni-cheie, cum ar fi:</p>
+<p>- &bdquo;a sancţiona prin lege&rdquo; &ndash; pedeapsa care urmează a fi aplicată să fie prevăzută &icirc;n mod expres &icirc;n textul unei legi, prin urmare să corespundă &icirc;n primul r&icirc;nd principiului umanităţii;</p>
+<p>- &bdquo;pasivitatea individului&rdquo; &ndash; inacţiunea cetăţeanului &icirc;n situaţii periculoase pentru viaţă, c&icirc;nd se ştia despre primejdie şi exista posibilitatea de a interveni pentru acordarea ajutorului necesar victimei;</p>
+<p>- &bdquo;martor&rdquo; &ndash; nu doar persoanele care sunt prezente &icirc;n scena acţiunii sau &icirc;n nemijlocita ei apropiere, dar şi cei care cunosc despre comiterea nelegiuirilor (exemplu: vecinii care aud cum peste perete părinţii &icirc;şi maltratează copii);</p>
+<p>- &bdquo;&icirc;ncălcări ale legii&rdquo; &ndash; infracţiuni, contravenţii, abateri disciplinare, &icirc;n general tot ce ateantează la lege.</p>
+<p>Echipa afirmatoare este ferm convinsă că aplicarea sancţiunilor legale faţă de pasivitatea indivizilor care sunt martori la comiterea ilegalităţilor va contribui esenţial la &icirc;mbunătăţirea unui şir de aspecte ale vieţii cetăţenilor, precum şi la consolidarea statului de drept, av&icirc;nd &icirc;n continuare c&icirc;teva argumente menite să susţină acest punct de vedere:</p>
+<p>1. Lipsa unor sancţiuni pentru martorii indiferenţi la comiterea nelegiuirilor este &icirc;ntr-o str&icirc;nsă legătură cu creşterea fenomenului infracţionalităţii.</p>
+<p>Situaţia actuală la capitolul legislaţie nu permite tragerea la răspundere a martorilor infracţiunilor care dau dovadă de ingnoranţă, fapt confirmat de cazul lui Kitty Genovese<a  href="#708b1">[1]</a> şi cazul lui Ilan Halimi<a  href="#708b2">[2]</a>, c&icirc;nd zeci de martori la atrocităţile săv&icirc;rşite de criminali au fost pasivi, aş spune chiar indiferenţi şi nu s-au ales absolut cu nici o pedeapsă. Este groaznic, oribil şi imoral. Astfel, orice semn evident de lipsă de ordine şi nerespectare a normelor şi regulilor general-acceptate &icirc;i provoacă pe oameni să uite, la r&icirc;ndul lor, de aceste reguli. &Icirc;n rezultatul reacţiei &icirc;n lanţ apărute, conform &bdquo;teoriei geamurilor sparte&rdquo;<a  href="#708b3">[3]</a> un cartier decent poate fi repede transformat &icirc;ntr-o gaură, unde oamenii se tem să iasă &icirc;n stradă. Suntem obligaţi să luăm atitudine pentru a evita cazuri c&icirc;nd poliţişti traumaţi zac la păm&icirc;nt şi nimeni nu le acordă ajutor<a  href="#708b4">[4]</a> sau chiar un simplu cetăţean se află &icirc;ntr-o situaţie de urgenţă şi toţi trec indiferenţi pe l&icirc;ngă el<a  href="#708b5">[5]</a>.</p>
+<p>2. Implicarea activă a cetăţenilor la prevenirea şi combaterea fărădelegilor va contribui la consolidarea statului de drept.</p>
+<p>Un factor important &icirc;n combaterea criminalităţii este implicarea activă a tuturor cetăţenilor, mai ales a celor care devin martori la pregătirea de infracţiune sau la comiterea acesteia de acţiona ferm şi prompt pentru prevenirea faptelor ilicite, reţinerea infractorilor şi acordarea ajutorului necesar victimelor. Dacă fiecare va conştientiza că de el direct depinde construirea unui stat de drept, mesajul nostru fiind că &icirc;n virtutea &bdquo;contractului social&rdquo;<a  href="#708b6">[6]</a> pe care l-am &icirc;ncheiat, ne-am obligat să ne ajutăm reciproc, necesitatea intervenţiei cetăţeanului &icirc;n situaţii de criză este evidentă.</p>
+<p>3. Prin educarea fiecărui cetăţean &icirc;n parte &icirc;n &bdquo;spiritul unui bun samaritean&rdquo; vom educa &icirc;ntreaga societate să convieţuiască &icirc;n armonie.</p>
+<p>Fiind &icirc;ngrozite şi sensibilizate de un şir de fărădelegi care au avut loc &icirc;n lume şi s-au izbit de ignoranţa martorilor la acele odioase evenimente, printre care şi cazul Shandei Sharer<a  href="#708b7">[7]</a>, cazul fotografului Kevin Carter<a  href="#708b8">[8]</a>, accidentul fatal al prinţesei Diana<a  href="#708b9">[9]</a>, cazul micuţei Yue Yue<a  href="#708b10">[10]</a>, etc., mai multe state au adoptat &bdquo;legea bunului samaritean&rdquo;, care prevede obligaţia de a interveni &icirc;n diferite situaţii de urgenţă, care pun &icirc;n pericol viaţa şi integritatea corporală a persoanei, la care suntem martori. Prin transpunerea &icirc;n realitate a moţiunii vom &icirc;ncuraja oamenii să dea dovadă de compasiune &icirc;ntr-o situaţie de urgenţă, deoarece uneori chiar şi un simplu apel la serviciile de urgenţă poate fi &icirc;ndeajuns pentru salvarea unei vieţi omeneşti. &Icirc;ntr-o societate civilizată indiferenţa nu este o opţiune.</p>
+<p>Adopt&icirc;nd principiul formulat &icirc;n textul moţiunii &icirc;n calitate de instrument al instanţelor de judecată pentru &icirc;nfăptuirea justiţiei, &icirc;n combinaţie cu implementarea unui set de programe statele menite să pregătească cetăţenii pentru acest gen de intervenţii<a  href="#708b11">[11]</a>, metodă recunoscută de experţi internaţionali, vor fi &icirc;ntr-adevăr un pilon de bază la reducerea &bdquo;efectului de trecător&rdquo;<a  href="#708b12">[12]</a>, prin urmare şi la diminuarea cazurilor de &icirc;ncălcare a legii.</p>
+
+<div><br />
+<hr size="1" />
+<div>
+<p><a  name="708b1">[1]</a> http://www.youtube.com/watch?v=iSfVvldlhqs</p>
+</div>
+<div>
+<p><a  name="708b2">[2]</a> http://listverse.com/2009/11/02/10-notorious-cases-of-the-bystander-effect/</p>
+</div>
+<div>
+<p><a  name="708b3">[3]</a> http://www.scientia.ro/homo-humanus/52-psihologie-experimente-cu-oameni/103-teoria-ferestrelor-sparte.html</p>
+</div>
+<div>
+<p><a  name="708b4">[4]</a> http://www.youtube.com/watch?v=D7z6Qucs1zI</p>
+</div>
+<div>
+<p><a  name="708b5">[5]</a> <a href="http://raproject.org/video/entry/the-bystander-effect-an-experiment">http://raproject.org/video/entry/the-bystander-effect-an-experiment</a></p>
+</div>
+<div>
+<p><a  name="708b6">[6]</a> http://en.wikipedia.org/wiki/Social_contract#Classical_thought</p>
+</div>
+<div>
+<p><a  name="708b7">[7]</a> http://listverse.com/2009/11/02/10-notorious-cases-of-the-bystander-effect/</p>
+</div>
+<div>
+<p><a  name="708b8">[8]</a> http://listverse.com/2009/11/02/10-notorious-cases-of-the-bystander-effect/</p>
+</div>
+<div>
+<p><a  name="708b9">[9]</a> <a href="http://www.time.com/time/specials/2007/article/0,28804,1650830_1654034_1654000,00.html">http://www.time.com/time/specials/2007/article/0,28804,1650830_1654034_1654000,00.html</a></p>
+</div>
+<div>
+<p><a  name="708b10">[10]</a> http://www.telegrafonline.ro/1319144400/articol/177594/legea_bunului_samaritean.html</p>
+</div>
+<div>
+<p><a  name="708b11">[11]</a> http://becblair.blogspot.ro/2007/10/bystander-effect-appendix-b.html</p>
+</div>
+<div>
+<p><a  name="708b12">[12]</a> http://www.edmondschools.net/Portals/3/docs/Terri_McGill/READ-Bystander%20effect.pdf</p>
+</div>
+</div></div><hr><h3>N1 (Mihaela) <img src='../../../../images/little_stuff/16-em-up.png' class='discurs_toggler'></h3>
+            <div class='discurs normal_text'><p style="text-align: right;"> &ldquo;Unde se gaseste un om care sa fie pentru sine insusi un cenzor sever, <em>un martor</em>, un acuzator, un judecator care sa-si recunoasca vina, sa se cheme el insusi in fata tribunalului constiintei sale, sa se recunoasca vinovat si sa se pedepseasca.&rdquo;<br /> <strong><em>Confucius</em></strong></p>
+<p> Echipa negatoare isi va apara pozitia sustinind ca : unul din cele mai importante lucruri pe care, de preferat, este să nu-l uităm &icirc;n nici un moment este dreptul nostru de a alege. Alegerile făcute la un moment dat, ne influențează &icirc;n ceea ce vom &icirc;ntreprinde &icirc;n acțiunile noastre viitoare, și chiar și așa, oric&acirc;nd, ne putem opri &icirc;n loc pentru a alege.<strong> </strong>&nbsp;Nu de puține ori se poate &icirc;nt&acirc;mpla, din diverse motive, să uiți, să ignori, să te abții&nbsp; &icirc;n definitiv și a alege este o opțiune. c&acirc;nd ai senzația că lucrurile te iau pe nepregătite și poate ai sentimentul că evenimentele te depășesc cu mult, este bine să-ți amintești că ai deja dreptul de a alege din nenumăratele opțiuni ce pot fi descoperite sau create pentru a putea depăși astfel de moment.</p>
+<p> Pentru o mai buna intelegere a cazului de negator vom incepe prin a da o alta definitie&nbsp; echipei afirmatoare privind termenul :<strong>&ldquo;martor</strong>&rdquo;.</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>In primul rand</strong>,<em>martorii</em> sunt consideraţi <strong><em>&bdquo;ochii şi urechile justiţiei&rdquo;</em></strong> iar această caracterizare se &icirc;ntemeiază at&acirc;t pe vechimea &icirc;n timp a acestui mijloc de probă, c&acirc;t şi pe faptul că el este aproape nelipsit dintr-un proces penal .</p>
+<p><strong><em> &nbsp;</em></strong>Potrivit dispoziţiilor <em>art. 78 din Codul de procedură penală<strong> </strong></em><strong>martorul</strong> este: &bdquo;persoana care are cunoştinţă despre vreo faptă sau vreo &icirc;mprejurare de natură să servească la aflarea adevărului &icirc;n procesul penal&rdquo;. &Icirc;n anumite situaţii, dacă există probe sau indicii temeinice, că prin prezentarea dumneavoastră &icirc;n faţa organului judiciar şi declararea unor fapte sau &icirc;mprejurări ale cauzei, aţi putea pune &icirc;n pericol viaţa &nbsp;instanţa de judecată poate incunviinta ii se atribuie o altă identitate.</p>
+<p><strong>  In al doilea rand</strong> vom contraargumenta ceea ce sustine echipa A1 din argumentele 1 si 2 a motiunii:</p>
+<ul>
+<li><strong>ContraArgument:</strong></li>
+</ul>
+<p><strong><em>  Moralitatea</em></strong> si <strong><em>simtul civic</em></strong> trebuie sa aiba intietate si trebuie inbunatatit simtul civic al oamenilor prin educatie si nu prin constrangere intrucat o persoana constransa va prefera sa se ascunda si sa nu ia la cunostinta de comiterea unei infractiuni de frica sanctiunilor legale la care poate fi supus.Pe cand o persoana cu un puternic <em>simt <strong>civic</strong></em><strong> </strong>v-a prefera sa iasa singura si sa denunte savarsirea unei infractiuni pentru a intampina repetarea aceleiasi fapte.<br /> <br /></p>
+<ul>
+<li><strong>ContraArgument:</strong></li>
+</ul>
+<p><strong><em> Spiritul de bun Samaritean</em></strong> nu pot fi predate oamenilor in contextual in care <em>bunului samaritean</em> nu i se ofera o protective adecvata si este supus unor presiuni si unor riscuri care depasesc in mintea oricarui om binele public.Simtul de <strong>autoconservarea </strong>umana este cel mai puternic simt pe care il are o persoana si care nu poate fi inlaturat ci doar adaptat,prin <em>securitate,stabilitate</em> si <em>existent unui risc minim.</em></p>
+<p><br /> <strong> Exemplu </strong>: te plimbai noaptea pe strada si l-ai vazut pe Gigel spargand o casa, nu esti complice. Nu ai nicio obligatie decat daca e vorba de infractiuni grave precum cele impotriva sigurantei statului, omor si altele, cand esti obligat sa denunti.<br /> <br /> <strong>&nbsp;</strong></p>
+<p><strong> A1</strong> sustine ca &ldquo;<strong>martorii sunt indiferenţi la comiterea nelegiuirilor&rdquo;</strong> dar numarul infractiunilor a crescut din cauza lipsei agentilor de politie&nbsp;si nu numai dar fiind cauzate si din perspectiva individuala, drept cauze: nevoia de dominare (62%), razbunarea (47%), invidia (43%), consum de droguri sau alcool (32%)".Care este vina <strong>&ldquo;martorului pasiv&rdquo;?</strong> Studiile arata ca peste o jumatate de miliar de infractiuni sunt comise de delicventii in serie cacare tocmai au iesit de dupa gratii sau care-si ispasesc pedeapsa prin munca in comunitate.Cifrele Ministerului Justitiei din Marea Britanie arata ca 155.000 delicventi anual repeta infractiunile in mai putin de 12 luni de la eliberare.</p>
+<p><strong> Guvernul</strong> ar trebui sa asigure functionarea permanenta a unui <strong>telefon fierbinte,</strong> prin care fiecare cetatean ar putea sa&nbsp; aduca cazuri concrete de incalcare a drepturilor a infractiunilor a nedreptatilor numit in cazul nostu ca :<strong>&ldquo;martor pasiv&rdquo;</strong>. Un <strong>ONG</strong> ar fi bine sa monitorizeze rezolvarea si reflectarea cazurilor .</p>
+<p>&nbsp;  In concluzie pasivitatea martorului la incalcare legii nu poate fi condamnabila avand in vedere dreptul nativ de a decide una din regulile morale este sa-ti aperi propriile valori ,iar pedepsirea martorului este irationala deoarece&nbsp;fiecare trebuie sa lupte pentru viata sa si dreptate ,de cele mai multe ori implicarea in actiunile judiciare afecteaza viata personala a celor implicati indirect.</p>
+<p><a href="http://www.dreptonline.ro/dictionar_juridic/termen_juridic.php?cuvant=martor">http://www.dreptonline.ro/dictionar_juridic/termen_juridic.php?cuvant=martor</a></p>
+<p><a href="../../../../../www.anp-just.ro/interna/Codul%20Penal.html">http://www.anp-just.ro/interna/Codul%20Penal.pdf</a></p>
+<p><a href="http://forum.softpedia.com/lofiversion/index.php/t335804.html">http://forum.softpedia.com/lofiversion/index.php/t335804.html</a></p>
+<p><a href="http://www.teologiepentruazi.ro/2008/09/10/cum-procedezi-daca-esti-citat-ca-martor-intr-un-proces/">http://www.teologiepentruazi.ro/2008/09/10/cum-procedezi-daca-esti-citat-ca-martor-intr-un-proces/</a></p>
+
+
+
+</div><hr><h3>A2 (Nicolai) <img src='../../../../images/little_stuff/16-em-up.png' class='discurs_toggler'></h3>
+            <div class='discurs normal_text'><p>Considerăm că echipa negatoare a tratat cu superficialitate cazul dat &icirc;n ceea ce se referă la termenii-cheie, deoarece a adus ca exemplu doar ceea ce este stipulat &icirc;n legislaţia penală rom&acirc;nă, deşi cazul ar fi trebuit să fie discutat la general. De asemenea, ei &icirc;şi exprimă doar opinia privind dreptul martorului de alege, dar nu combat cu claritate argumentele expuse de echipa afirmatoare.</p>
+<p>Astfel, deşi fiecare din noi beneficiază de dreptul de a alege, trebui să conştientizăm că alegerile noastre trebuie să fie corecte, să se conformeze bunelor moravuri, precum şi să fie &icirc;n strictă conformitate cu legislaţia &icirc;n vigoare. Nu este corect să fim egoişti, să ne iubim doar pe noi &icirc;nşine. Convieţuim &icirc;mpreună cu semenii noştri şi tot ce li se &icirc;nt&icirc;mplă lor, &icirc;ntr-o bună zi ne poate afecta şi pe noi. Să ne amintim de soarta eroului principal din filmul &bdquo;Spider Man&rdquo;, care deşi avuse posibilitatea să reţină infractorul, nu a făcut-o, ulterior acest infractor asasin&icirc;ndu-i unchiul. Ceea ce ne demonstrează că dacă nu stopăm infractorul &icirc;n situaţia c&icirc;nd am devenit martori şi a fost &icirc;n puterile noastre să-l oprim, &icirc;ntr-o bună zi putem deveni victima acestuia.<a  href="#2d201">[1]</a></p>
+<p>&Icirc;n acest sens, echipa afirmatoare susţine faptul că &icirc;mpreună trebuie să colaborăm la prevenirea şi combaterea ilegalităţilor, iar acei martori indiferenţi care cu siguranţă au avut posibilitatea de interveni pentru a stopa infractorul sau pentru a ajuta victima merită să fie sancţionaţi.</p>
+<p>Nimeni nu a spus că problema poate fi soluţionată doar prin aplicarea sancţiunilor pentru martorii pasivi la comiterea infracţiunilor. Noi am vorbit despre desfăşurarea unor activităţi menite să educe cetăţenii &icirc;n spiritul bunului simţ, acordării ajutorului necesar celor din jur, precum şi de pregătirea lor moral-psihologică pentru situaţii de criză.<a  href="#2d202">[2]</a> Atunci c&icirc;nd discutăm despre sancţionarea prin lege a pasivităţii individului care este martor la &icirc;ncălcări de lege, vorbim despre acele persoane care &icirc;ntr-adevăr puteau interveni pentru a ajuta pe cei care se aflau &icirc;n situaţii de pericol, dar n-au făcut-o deşi exista o posibilitate reală (de exemplu: viaţa lor nu se afla &icirc;n pericol,<a  href="#2d203">[3]</a> nu puteau fi identificaţi de infractor<a  href="#2d204">[4]</a>, infractorul nu era periculos, etc.). Existenţa unor sancţiuni pentru aceşti &bdquo;martori pasivi&rdquo; nu are menirea de a teroriza populaţia, ci din contra pentru a-i disciplina, pentru a evita unele eventuale riscuri c&icirc;nd indiferenţa martorului la infracţiune poate avea efecte negative (de exemplu: decesul victimei pentru că nu i s-a acordat ajutor medical la timp).</p>
+<p>Negatorii vorbesc despre lipsa protecţiei martorilor şi despre frica lor de a denunţa infracţiunile. Absolut &icirc;n toate statele civilizate există legi cu privire la protecţia martorilor şi nu văd care ar fi justificarea &icirc;n a fi pasiv la &icirc;ncălcările de lege. &Icirc;n cazul &icirc;n care eşti martor la o infracţiune care nu te vizează (exemplul negatorilor), deşi conform legii nu eşti complice, dar prin nedenunţare admiţi comiterea acesteia. Atunci cum putem vorbi despre moralitate şi simţul civic &icirc;n această situaţie.</p>
+<p>Nimeni nu ştie care va fi viitorul, dar toţi avem posibilitatea de a influenţa viitorul să aibă un curs mai benefic pentru toţi cetăţenii. &Icirc;n acest sens, pasivitatea martorului la &icirc;ncălcări ale legii va avea ca efect &bdquo;tăierea crengii de sub picioare&rdquo;. &Icirc;n fiecare dintre noi trebuie să fie implantat un &bdquo;om al legii&rdquo;. Reprezentaţii organelor de drept nu pot fi peste tot, de accea se şi solicită ajutorul populaţiei &icirc;n prevenirea şi combaterea criminalităţii.</p>
+<p>Cu telefonul fierbinte ar fi o idee, dar şi aceasta are părţile sale negative, p&icirc;nă ajung oamenii legii la locul săv&icirc;rşirii infracţiunii, posibil să nu mai găsească pe nimeni acolo, nici martorul, nici infractorul şi nici măcar urmele... Drept vorbind &icirc;n unele state există astfel de servicii telefonice, dar nu prea funcţionează. Aşa-i natura omului, at&icirc;t timp c&icirc;t nu există sancţiuni pentru pasivitatea martorului şi el are oportunitatea de a alege nedenunţarea infracţiunii, situaţia nu se va &icirc;mbunătăţi.</p>
+<p>Pasivitatea poate fi şi trebuie condamnată atunci c&icirc;nd din ea rezultă consecinţe drastice, cum s-a &icirc;nt&icirc;mplat &icirc;n: cazul lui Axel Casial<a  href="#2d205">[5]</a>, cazul lui Hugo Alfredo Tale-Yax<a  href="#2d206">[6]</a>, cazul lui Wang Yue<a  href="#2d207">[7]</a>, cazul lui Kitty Genovese<a  href="#2d208">[8]</a>, etc.</p>
+<p>&Icirc;n baza celor expuse anterior, mai ales că negatorii nu s-au obosit să demonstreze efectele negative ale unei astfel de legi, moţiunea nu poate fi respinsă, ci din contra să fie susţinută şi pusă &icirc;n aplicare cu chibzuinţă, &icirc;n combinaţie cu măsuri menite să-i protejeze pe acei martori care oferă ajutorul necesar, p&icirc;nă la obţinerea rezultatelor scontate.</p>
+<div><br /> 
+<hr size="1" />
+<div>
+<p><a  name="2d201">[1]</a> http://naturaly.ro/legea-cauzei-si-efectului/</p>
+</div>
+<div>
+<p><a  name="2d202">[2]</a> http://becblair.blogspot.ro/2007/10/bystander-effect-appendix-b.html</p>
+</div>
+<div>
+<p><a  name="2d203">[3]</a> <a href="http://www.time.com/time/specials/2007/article/0,28804,1650830_1654034_1654000,00.html">http://www.time.com/time/specials/2007/article/0,28804,1650830_1654034_1654000,00.html</a></p>
+</div>
+<div>
+<p><a  name="2d204">[4]</a> http://www.descopera.org/efectul-spectatorului/</p>
+</div>
+<div>
+<p><a  name="2d205">[5]</a> http://www.cbsnews.com/stories/2008/06/18/national/main4189884.shtml</p>
+</div>
+<div>
+<p><a  name="2d206">[6]</a> Livingston, Ikimulisa (2010-04-24). <a href="http://www.nypost.com/p/news/local/queens/passers_by_let_good_sam_die_5SGkf5XDP5ooudVuEd8fbI">"A homeless man dies and nearly 25 people in Queens keep walking by"</a></p>
+</div>
+<div>
+<p><a  name="2d207">[7]</a> http://www.telegraph.co.uk/news/worldnews/asia/china/8830790/Chinese-toddler-run-over-twice-after-being-left-on-street.html</p>
+</div>
+<div>
+<p><a  name="2d208">[8]</a> Manning, R.; Levine, M.; Collins, A. (2007). <a href="http://www.lancaster.ac.uk/psychology/people/">"The Kitty Genovese murder and the social psychology of helping: The parable of the 38 witnesses"</a>.</p>
+</div>
+</div></div><hr><h3>N2 (Clipa Anamaria) <img src='../../../../images/little_stuff/16-em-up.png' class='discurs_toggler'></h3>
+            <div class='discurs normal_text'><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &Icirc;n calitate de negator și de vorbitor final voi structura discursul pe 3 planuri.</p>
+<p>  Primul plan face &nbsp;referire la aspectele interpretate greșit de afirmatorul 2. Astfel, &nbsp;nu am făcut referiri la corectitudinea alegerilor noastre, ci la dreptul de a alege, mai exact la alegerea de a nu ne implica. <strong>Neimplicarea civică</strong> nu &icirc;nseamnă egoism. &nbsp;Apoi, afirmatorii confundă termenii <strong>&bdquo;martor&rdquo;</strong> și <strong>&bdquo;complice&rdquo;</strong> &ndash; alegerea nedenunțarii infractorului nu &icirc;nseamnă &nbsp;admiterea săv&acirc;rșirea infracțiunii. <strong>Cazul cetățeanului brașovean</strong> &icirc;mpușcat &icirc;ncerc&acirc;nd să oprească &nbsp;jefuitorul unei case de schimb valutar evidențiază reticența &nbsp;intervenirii &icirc;n asemenea cazuri. &nbsp;Pentru a avea spirit justițiar, trebuie să punem accentul pe<strong> educație</strong> &ndash; ideea centrală a argumentării noastre, susținută și de afirmatori &icirc;n ambele discursuri. S-a afirmat că ideea numărului de telefon pentru astfel de evenimente are &bdquo;părți negative&rdquo; invoc&acirc;nd &bdquo;pierderea de timp&rdquo;; nu cunoaștem modalitate mai rapidă de-a anunța autoritățile.<br /> Următorul plan aduce clarificări de ordin discursiv. Observ&acirc;nd lipsa coerenței logice (sofisme, contradicții) și anumite derapaje lingvistice (pleonasme) &icirc;n discursurile afirmatorilor, voi reconstrui cazul negator demonstr&acirc;nd că argumentele &nbsp;afirmatorilor pentru susținerea tezei sunt incoerente.<br /> Contraargument 1:</p>
+<p> <strong>Lipsa sancțiunilor pentru pasivitatea martorilor infracțiunilor nu are &nbsp;legătură cu creșterea infracționalității.</strong> Nimeni nu-i mai presus de lege [1], dar asta nu &icirc;nseamnă că pedepsirea pasivității martorilor &nbsp;favorizeaza scăderea &nbsp;ratei infracționalității, &nbsp;dimpotrivă, este foarte probabil să nu aibă &nbsp;efecte. Aici s-a comis sofismul falsei cauze [2]. Creșterea gradului responsabilității cetățenilor &icirc;n fața nedreptăților, schimbarea atitudinii față de fenomenul infracțional nu se &nbsp;realizeaza prin măsuri coercitive de ordin juridic, ci prin politici publice, educaționale care să inducă comportamente civilizate și acceptate de toți actorii vieții publice. <strong>Nu exemplul forței, ci forța exemplului &ndash; asta susținem noi.</strong></p>
+<p>&nbsp;<strong>&bdquo;Indiferența&rdquo; și &bdquo;ignoranța&rdquo; </strong>nu sunt sancționabile, fiind atitudini cu grad ridicat de relativizare, care presupun interpretări variate, &nbsp;contradictorii.&nbsp;</p>
+<p> Contraargument 2:</p>
+<p> Al 2-lea argument al afirmatorilor se lovește de ignorarea tezei de argumentat [3]. Lipsește explicația conceptului de<strong> &bdquo;stat de drept&rdquo;</strong>&nbsp; care să sugereze raportul cu <strong>&bdquo;implicarea activă a tuturor cetățenilor&rdquo; </strong><em>(eroarea generalizării pripite)</em>. Un principiu care fundamentează &bdquo;statul de drept&rdquo; este respectarea drepturilor și libertăților naturale ale omului [4]. Inclusiv dreptul de a alege neimplicarea &nbsp;&icirc;n viața publică. Societate liberă nu poate impune această atitudine &nbsp;[5]. Apoi, &bdquo;implicarea activă&rdquo; poate degenera &icirc;n <strong>delațiune </strong>- &nbsp;fenomen caracteristic societăților totalitare [6].&nbsp;</p>
+<p> Contraargument 3:</p>
+<p> Al 3-lea argument este doar un contraargument al tezei dezbaterii. &Icirc;ntr-adevăr, educarea fiecărui cetățean &icirc;ntru transformarea acestuia &icirc;ntr-un &bdquo;bun samaritean&rdquo;, poate conduce la schimbarea atitudinii, comportamentului față de semeni, &nbsp;nu legi suplimentare &nbsp;care să se condamne pasivitatea martorului.</p>
+<p>Al 3-lea plan presupune continuarea argumentării:</p>
+<p> Argument 1:</p>
+<p><strong> Existența politicilor educaționale care să transforme individul &icirc;n cetățean responsabil, care să contribuie prin comportamentul său la ordinea și armonia societății.</strong></p>
+<p>Cea mai profitabilă investiție este &nbsp;&icirc;n educație, pentru că pe termen lung aceste investiții produc cele mai mari schimbări. Educația este fundația pe care este clădită civilizația. Astfel, cunoașterea legilor, cultivarea respectului și atitudinii binevoitoare față de semeni, &icirc;ncurajarea actelor caritabile și de voluntariat sunt c&acirc;teva aspecte ale educației care pot &icirc;năbuși fenomenul infracțional. &Icirc;n acest mod, dacă infracțiunile se vor rări, atunci și posibilii martori la aceste fărădelegi vor fi &nbsp;mai puțini. <strong>Așadar, educația, &nbsp;nu sancționarea pasivității martorilor, va conduce la scăderea infracționalității.</strong></p>
+<p> &nbsp;Argument 2:</p>
+<p><strong> Gestionarea eficientă a sistemului de ordine și siguranță publice</strong>.&nbsp;Incertitudinea, imprevizibilitatea, nesiguranţa, teama, lipsa de infomaţii utile şi normative legale care să orienteze modul de acţiune al individului şi comunităţilor, constituie factori de risc care afectează nivelul siguranţei personale şi, prin extensie, cel al siguranţei unei comunități . <strong>&bdquo;Ordinea publică&rdquo;</strong> și <strong>&bdquo;siguranţa publică&rdquo;</strong> exprimă sentimentul de linişte şi &icirc;ncredere conferit de autoritățile statului pentru aplicarea măsurilor de menţinerea liniştii publice, a gradului de siguranţă al persoanelor, colectivităţilor şi bunurilor.&nbsp;<br /> &Icirc;n concluzie, &nbsp;legile care să sancționeze pasivitatea martorilor la infracțiuni nu sunt necesare, at&acirc;ta timp c&acirc;t cetățeanul este bine educat și i se conferă de către autorități un grad ridicat de siguranță personală. Așadar, susțineți cazul nostru.<br /><br /><br /><br />[1] &ndash; Constituția Rom&acirc;niei, Cap. I, Art. 16, alin.(2)</p>
+<p>[2] &ndash; sofismul non sequitur, adică &bdquo;nu decurge&rdquo;.</p>
+<p>[3] - Sofism de relevanţă &ndash; ignoratio elenchi&ndash; se ocoleşte teza de demonstrat, argumentarea duc&acirc;ndu-se &icirc;nfavoarea altei teze şi concluzion&acirc;ndu-se că teza iniţială a fost demonstrată.</p>
+<p>[4] - http://ro.wikipedia.org/wiki/Stat_de_drept</p>
+<p>[5] - &Icirc;n concepţia filosofului englez John Stuart Mill, armonia socială se realizează &icirc;n funcţie de armonizarea intereselor individuale, fiind vorba mai mult de autolimitarea comportamentală dec&acirc;t de intervenţia unui factor extern coercitiv, aceasta evidenţiind faptul că elementul moral este prevalent celui de natură juridică, iar acesta poate interveni &icirc;n ultimă instanţă.&nbsp;</p>
+<p>[6] - http://www.zf.ro/ziarul-de-duminica/despre-delatiune-2894875/</p>
+
+</div><hr><hr><h2>Decizia:</h2> <script>
+        $j(document).ready(function(){
+			$j('.decizie_toggler').toggle( 
+				function(){
+					$j(this).attr('src', '../../../../images/little_stuff/16-em-down.png');   
+					$j(this).parent().next('.decizie').hide('fast'); 
+                },
+                function(){
+					$j(this).attr('src', '../../../../images/little_stuff/16-em-up.png');
+					$j(this).parent().next('.decizie').show('fast'); 
+                } 
+			);
+		});</script><div class='decizie'><h3>George Maxim
+                <img src='../../../../images/little_stuff/16-em-up.png' class='decizie_toggler'></h3><div class='normal_text'><p>Feedback runda &nbsp;242</p>
+<p>Partea 1 &ndash; Remarci individuale</p>
+<p>Afirmatorul 1:</p>
+<ul>
+<li>Un caz bun, cu argumente clar definite si exemple pertinente</li>
+<li>Argumentul 1 &ndash; &ldquo;Lipsa unor sancţiuni pentru martorii indiferenţi la comiterea nelegiuirilor este &icirc;ntr-o str&icirc;nsă legătură cu creşterea fenomenului infracţionalităţii.&rdquo; &ndash; avand in vedere ca aduci doar&nbsp; exemple singulare ca si dovezi este greu sa generalizezi acea legatura logica pe care vrei sa o sustii; o exprimare nuantata, de exemplu: &ldquo;lipsa unor sanctiuni&hellip;. <strong>poate</strong> avea ca efect&hellip;&rdquo; ar fi de preferat.</li>
+</ul>
+<p>Negatorul 1:</p>
+<ul>
+<li>O contraargumentare ok, dar focalizata doar pe legislatia romana</li>
+<li>&ldquo;Studiile arata ca peste o jumatate de miliar&rdquo; &ndash; atentie la exprimare si la citarea surselor (care studii? Un link catre sursa ar fi fost foarte util)</li>
+<li>&ldquo;<strong>Guvernul</strong> ar trebui sa asigure functionarea permanenta a unui <strong>telefon fierbinte,</strong> prin care fiecare cetatean ar putea sa&nbsp; aduca cazuri concrete de incalcare a drepturilor a infractiunilor a nedreptatilor numit in cazul nostu ca :<strong>&ldquo;martor pasiv&rdquo;</strong>. Un <strong>ONG</strong> ar fi bine sa monitorizeze rezolvarea si reflectarea cazurilor .&rdquo; &ndash; in primul rand mare atentie la preluarea termenilor din engleza, hotline traducandu-se prin linie verde si nu telefon fierbinte J; in al doilea rand, motiunea cere sa se dezbata <strong>DACA </strong>o astfel de reglementare ar fi benefica (motiune de valoare) si nu <strong>CUM </strong>sa se desfasoare (motiune de strategie)</li>
+</ul>
+<p>Afirmatorul 2:</p>
+<ul>
+<li>&ldquo;Considerăm că echipa negatoare a tratat cu superficialitate&rdquo; &ndash; judecatile de valoare calitativa a discursurilor pot fi facute doar de catre arbitru si nu de cei implicati in runda</li>
+<li>Spider Man este ok ca si parabola, nu ca si dovada pentru sustinerea unui argument J</li>
+<li>&ldquo;Nimeni nu ştie care va fi viitorul, dar toţi avem posibilitatea de a influenţa viitorul să aibă un curs mai benefic pentru toţi cetăţenii&rdquo; &ndash; truism care ar trebui evitat</li>
+<li>&ldquo;Drept vorbind &icirc;n unele state există astfel de servicii telefonice, dar nu prea funcţionează. Aşa-i natura omului, at&icirc;t timp c&icirc;t nu există sancţiuni pentru pasivitatea martorului şi el are oportunitatea de a alege nedenunţarea infracţiunii, situaţia nu se va &icirc;mbunătăţi.&rdquo; &ndash; care este dovada care demonstraza ca nu functioneaza acele linii verzi? Atentie la truisme si afirmatii generale legate de natura omului</li>
+</ul>
+<p>Negatorul 2:</p>
+<ul>
+<li>Un discurs excelent de contraargumentare cu mentiunea ca fiind unul sumativ ar trebui sa se incheie prin identificarea ariilor de conflict principale pe care sa se acorde castig de cauza uneia dintre echipe</li>
+<li>La fel ca si primul negator, dovezile se axeaza doar pe Romania evitand cadrul general al dezbaterii si dovezile aduse de afirmatori</li>
+</ul>
+<p>Partea 2 &ndash; Verdict si punctaje</p>
+<p>Per total o runda ok, care aduce in discutie argumente bune. Dovezile aduse de afirmatori (prin exemplele internationale) au mai multa greutate fata de cele ale negatorilor (care se axeaza doar pe Romania). Insa, avand in vedere ca echipa afirmatoare nu reuseste pana la final sa sustina argumentele lor in mod convingator din punct de vedere logic, verdictul merge catre echipa negatoare.</p>
+<p>Felicitari ambelor echipe!</p>
+<table border="1" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td width="128" valign="top">
+<p>Vorbitor</p>
+</td>
+<td width="128" valign="top">
+<p>Continut</p>
+</td>
+<td width="128" valign="top">
+<p>Strategie</p>
+</td>
+<td width="128" valign="top">
+<p>Stil</p>
+</td>
+<td width="128" valign="top">
+<p>Total</p>
+</td>
+</tr>
+<tr>
+<td width="128" valign="top">
+<p>A1</p>
+</td>
+<td width="128" valign="top">
+<p>10</p>
+</td>
+<td width="128" valign="top">
+<p>8</p>
+</td>
+<td width="128" valign="top">
+<p>4</p>
+</td>
+<td width="128" valign="top">
+<p>22</p>
+</td>
+</tr>
+<tr>
+<td width="128" valign="top">
+<p>N1</p>
+</td>
+<td width="128" valign="top">
+<p>12</p>
+</td>
+<td width="128" valign="top">
+<p>8</p>
+</td>
+<td width="128" valign="top">
+<p>4</p>
+</td>
+<td width="128" valign="top">
+<p>24</p>
+</td>
+</tr>
+<tr>
+<td width="128" valign="top">
+<p>A2</p>
+</td>
+<td width="128" valign="top">
+<p>9</p>
+</td>
+<td width="128" valign="top">
+<p>5</p>
+</td>
+<td width="128" valign="top">
+<p>4</p>
+</td>
+<td width="128" valign="top">
+<p>18</p>
+</td>
+</tr>
+<tr>
+<td width="128" valign="top">
+<p>N2</p>
+</td>
+<td width="128" valign="top">
+<p>13</p>
+</td>
+<td width="128" valign="top">
+<p>8</p>
+</td>
+<td width="128" valign="top">
+<p>5</p>
+</td>
+<td width="128" valign="top">
+<p>26</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</div>A1 -> 22 puncte<br>N1 -> 24 puncte<br>A2 -> 18 puncte<br>N2 -> 26 puncte<br>Castiga echipa: <h3 style='display:inline;color:red;'>Clipa si Mihaela (negatori)</h3></div><hr><h3 class='important'>Vrem parerea ta! Pentru asta, trebuie sa te loghezi.</h3>
+                <div class='clear'></div>
+        </div><!-- end main content -->
+         <div class='clear'></div>
+</div>
+<div id="pix"></div>
+
+
+                                </div><!--end main -->
+                                <div id='parteneri'>
+                                    <span class='tr'></span><span class='tl'></span><span class='br'></span><span class='bl'></span><span id="filler"></span>
+                                    <div class='parteneri' id='sustinatori'>
+                                        <span class='floating_text' id='un_proiect'>Un proiect</span>
+                                        <a href='http://www.ardor.org.ro/'><div class='image' id='ardor'>Ardor</div></a>
+                                        <span class='floating_text' id='finantatori'>Finanțatori</span>
+                                        <a href='http://www.opensocietyfoundations.org/'><div class='image' id='open_society'>Open Society Foundation </div></a>
+                                        <a href='http://www.studentiq.ro//'><div class='image' id='memoplus'>MemoPlus</div></a>
+                                        <!-- <a href='http://www.ratiufamilyfoundation.com/'><div class='image' id='FundatiaRatiu'>Ardor</div></a>
+                                        <a href='http://www.eef.md/'><div class='image' id='eef'>East Europe Foundation</div></a>
+                                        <a href='http://www.mts.gov.md/'><div class='image' id='mdminister'>Ministerul Tineretului si Sportului al Republicii Moldova</div></a> -->
+
+                                        <span class='floating_text' id='parteneri_text'>Parteneri</span>
+
+                                        <a href='http://www.policycenter.eu/'><div class='image' id='PolicyCenter'>Policy Center</div></a>
+                                        <a href='http://www.britishcouncil.org/'><div class='image' id='BritishCouncil'>British Council</div></a>
+                                        <a href='http://www.europuls.ro/'><div class='image' id='europuls'>Europuls</div></a>
+                                        <a href='http://www.cere.ro/'><div class='image' id='cere'>Ce-Re</div></a>
+                                        <a href='http://www.primeromania.ro/'><div class='image' id='prime'>Prime Romania</div></a>
+                                        <a href='http://www.cji.ro/'><div class='image' id='cji'>Centrul pentru jurnalism independent</div></a>
+                                        <a href='http://www.aiesectm.ro/'><div class='image' id='aisec'>Aisec</div></a>
+                                        <!-- ===================================================================================================== -->
+                                        <a href='http://www.cogitus.ro/'><div class='image' id='cogitus'>Cogitus</div></a>
+                                        <a href='http://www.adevarul.ro/international/foreign_policy/'><div class='image' id='foreignPolicy'>Foreign Policy</div></a>
+                                        <a href='http://www.elsa.ro/'><div class='image' id='elsa'>Elsa</div></a>
+                                        <a href='http://www.vipromania.ro/'><div class='image' id='vipromania'>Voluntari pentru idei si proiecte</div></a>
+                                        <a href='http://www.ongtrust.ro/'><div class='image' id='ongtrust'>Trust</div></a>
+
+                                        <!-- ===================================================================================================== -->
+                                        <a href='http://www.leap.ro/'><div class='image' id='leap'>Leap</div></a>
+                                        <a href='http://www.younginitiative.org/'><div class='image' id='younginitiative'>Asociatia young initiative</div></a>
+                                        <a href='http://www.asjc.ro/'><div class='image' id='asjc'>Asjc</div></a>
+                                        <a href='http://osut.ro/'><div class='image' id='osut'>Osut</div></a>
+                                        <div class='clear'></div>
+                                    </div>
+                                    <div class='parteneri' id='parteneri_institutionali'>
+                                        <span class='floating_text' id='sponsori_text'>Sus&#539;in&#x0103;tori</span>
+                                        <a href='http://www.cartier.md/'><div class='image' id='cartier_logo'>Editura Cartier</div></a>
+                                        <a href='http://www.pll.md/ro/'><div class='image' id='biblio_logo'>Biblioteca publica de drept</div></a>
+                                        <span class='floating_text' id='institutii_text'>Parteneri institu&#539;ionali</span> 
+                                        <ul id='institutii'>
+                                            <!-- <span class='floating_text' id='institutii_text'>Parteneri institu&#539;ionali:</span> -->
+                                            <li><a href='http://www.politice.ro/'>Facultatea de &#536;tiin&#539;e Politice SNSPA </a></li>
+                                            <li><a href='http://www.comunicare.ro/'>Facultatea de Comunicare &#537;i Rela&#539;ii Publice SNSPA</a></li>
+                                            <li><a href='http://www.fspub.ro/'>Facultatea de &#536;tiin&#539;e Politice Universitatea Bucure&#537;ti</a></li>
+                                            <li><a href='http://www.filosofie.unibuc.ro/'>Facultatea de Filosofie Universitatea Bucure&#537;ti</a></li>
+                                            <li><a href='http://litere.unibuc.ro/'>Facultatea de Litere din Universitatea Bucure&#x015f;ti</a></li>
+                                            <li><a href='http://www.unibuc.ro/ro/fac_fsas_ro'>Facultatea de Sociologie Universitatea Bucure&#537;ti</a></li>
+                                            <li><a href='http://laws.uaic.ro/'>Facultatea de Drept Universitatea Alexandru Ioan Cuza Ia&#537;i</a></li>
+                                            <li><a href='http://www.uaic.ro/uaic/bin/view/Academic/Filosofie'>Facultatea de Filosofie si &#536;tiin&#539;e Social Politice Universitatea AIC Ia&#537;i</a></li>
+                                            <li><a href='http://www.upa.ro/'>Facultatea de Drept si Facultatea de &#x015e;tiin&#x0163;e Politice si Administrative Universitatea Petre Andrei Ia&#x015f;i</a></li> 
+
+                                            <li><a href='http://www.ubbcluj.ro/'>Universitatea Babe&#537;-Bolyai Cluj Napoca</a></li>
+                                            <li><a href='http://www.uvt.ro/'>Universitatea de Vest Timi&#537;oara</a></li>
+                                            <li><a href='http://www.upt.ro/'>Universitatea Politehnica Timi&#537;oara</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class='parteneri' id='parteneri_media'>
+                                        <span class='floating_text' id='media_text'>Parteneri media</span>
+                                        <a href='http://www.hotnews.ro/'><div class='image' id='hotnews'>HotNews</div></a>
+                                        <!-- <a href='http://www.lumebuna.ro/'><div class='image' id='lumebuna'>Lume Buna</div></a> -->
+                                        <a href='http://www.romaniapozitiva.ro/'><div class='image' id='romaniapozitiva'>Romania Pozitiva</div></a>
+                                        <a href='http://totb.ro/'><div class='image' id='thinkoutsidethebox'>Think Outside The Box</div></a>
+                                        <a href='http://www.facebook.com/carevasazica.vip'><div class='image' id='carevasazica'>Carevasazica</div></a>
+                                        <a href='http://www.studentie.ro/'><div class='image' id='studentiero'>Studentie.ro</div></a>
+                                        <a href='http://startub.unibuc.ro/'><div class='image' id='startub'>startub.unibuc.ro</div></a>
+                                        <!-- <a href='http://www.tvr.ro/tvr_cluj.php'><div class='image' id='tvrcluj'>Tvr Cluj</div></a> -->
+                                        <!-- <a href='http://www.radiotransilvania.ro'><div class='image' id='radiotransilvania'>Radio Transilvania</div></a> -->
+                                        <a href='http://iasifun.ziaruldeiasi.ro/'><div class='image' id='iasifun'>Iasi fun</div></a>
+                                        <a href='http://www.ziaruldeiasi.ro/'><div class='image' id='ziaruldeiasi'>Ziarul de Iasi</div></a>
+                                        <a href='http://www.kissfm.ro/timisoara'><div class='image' id='kissfm'>KissFm</div></a>
+
+                                        <div class='clear'></div> 
+                                    </div>
+                                    <div class='clear'></div>
+
+                                </div>	
+                            </div>	<!-- end wrap -->
+                            <div id='footer_mare'>
+                                <div id='footer'>
+                                    <div id='links' class='footer'>
+                                        <div id='menu1' style='margin:auto;'> <ul id='meniu_prinicpal'><li><a href='../../../contacte/index.html'> Contact </a></li>
+<li><a href='../../../clubdebate/index.html'> Cluburile </a></li>
+<li><a href='../../../oamenii/index.html'> Oamenii </a></li>
+<li><a href='../../../proiectul/index.html'> Proiectul </a></li>
+<li><a href='../../../home/index.html'> Acasa </a></li>
+</ul></div><!--end menu-->
+                                    </div><!--
+                                    <div id='contact' class='footer'>
+                                            <h4>Contact</h4>
+                                            <p>office@closer2oxford.ro</p>
+                                            <p>bogdan.draghicescu@closer2oxford.ro<br>
+                                            <span class='detalii'> (asistenta tehnica web - orice probleme legate de site)</span></p>
+                                    </div>
+                                    -->
+                                    <div id='newsletter' class='footer'>
+                                        <script src="../../../../../connect.facebook.net/en_US/all.js#xfbml=1"></script><fb:like href="http://www.facebook.com/pages/Closer2Oxford/162758797069605" width="250" colorscheme="dark"></fb:like>
+                                        <!--<h4>Newsletter</h4>
+                                        <form action='/page/newsletter'>
+                                                <input type='text' name='email'>
+                                                <input type='submit' id='submit' value='>'>
+                                                        
+                                        </form>-->
+                                    </div>
+                                    <div id='credits'>
+                                        Copyright(c) 2021 ARDOR |  Toate drepturile rezervate | Toate logo-urile si sloganurile de pe site sunt proprietate intelectuala inregistrata si nu pot fi reproduse fara acordul explicit al detinatorilor. <br>
+                                            <br /><br />
+                                            <b>Disclaimer</b><br /><i>
+
+                                                Programul educational Closer to Oxford este un program non-profit si nu are o legatura cu universitatea cu acelasi nume, referirea la Oxford avand doar o semnificatie simbolica.
+                                            </i>
+                                    </div>
+
+                                </div>		
+                            </div>		
+
+                            <div id="finantatde">Acest proiect este finantat cu sustinere din partea Comisiei Europene. Aceast publicatie [comunicare] reflecta doar
+                                vederile autorului, iar Comisia nu poate fi facuta  responsabila pentru utilizarea informatiei pe care o contine.</div>
+
+
+                        </body>
+                        </html>

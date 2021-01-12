@@ -1,0 +1,750 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml-strict.dtd">
+<HTML xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+    <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+            <link rel="icon" type="image/png"  href="../../../../../closer2oxford.ro/favicon.html">
+                <link rel="stylesheet" href="../../../var/layout.css" type="text/css">
+                    <title>Closer to Oxford - e timpul pentru argumente!</title>
+                    <link rel="alternate" type="application/rss+xml"  href="../../../rss_feed" title="Stiri Closer2Oxford">
+                        <!-- <link rel="image_src" property="og:image"  href="/images/layout/closer2oxford_fb_white.png" /> -->
+                        <link rel="image_src" property="og:image"   type="image/jpeg"  href="../../../../uploads/2015/06/9/facebook_icon.html" />
+                        <link rel="image_src" type="image/jpeg"  href="../../../../uploads/2015/06/9/icon-facebook.gif" /> 
+						<meta name="description" content="Closer2Oxford pune în valoare oameni şi argumentele lor, în dezbateri online şi publice alături de tineri şi invitați avizaţi"/>
+                        <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9" />
+<script type='text/javascript' src='../../../../js/jquery-1.4.4.min.js'></script>
+<script>var $j = jQuery.noConflict();</script>
+<script type='text/javascript' src='../../../../js/tinymce/tiny_mce.js'></script>
+<script type='text/javascript' src='../../../../js/jquery.form.js'></script>
+<script type='text/javascript' src='../../../../js/fbLoginRegister.js'></script>
+<script type='text/javascript' src='../../../var/javascript.js'></script>
+<script type='text/javascript' src='../../../../js/jquery.hovertip-1.0.min.js'></script> 
+<script type='text/javascript' src='../../../../js/jquery.jgrowl_minimized.js'></script> 
+<link rel='stylesheet' href='../../../../css/jquery.jgrowl.css' media='screen' type='text/css'> 
+<script type='text/javascript' src='../../../../js/jquery.timer-min.js'></script> 
+<style>.hovertip{
+    position:absolute;
+    padding:10px 13px;
+    z-index:2;
+    max-width:300px;
+    color:#303030;
+    background-color:#f5f5b5;
+    border:1px solid #DECA7E;
+    font-family:sans-serif;
+    font-size:12px;
+    line-height:18px;
+    text-align:left;
+    }
+           .normal_text ol,.normal_text ol *{text-align:left !important}
+           .normal_text *{font-weight:normal !important;font-size:12px !important;font-face:tahoma !important}</style> 
+<script type='text/javascript'>$j(document).ready(function(){$j('.tooltip').hovertip({'offset':[20,20]});get_notif();});
+
+if(!Array.indexOf){Array.prototype.indexOf = function(obj){for(var i=0; i<this.length; i++){if(this[i]==obj){return i;}}return -1;}}
+    hashuri = [] ;
+	 var tick_timer= 3000 ;
+ 
+	 function get_notif()
+        {
+		  
+		  //console.log(tick_timer);
+	     
+		  setTimeout(get_notif,tick_timer);
+        
+		   $j.ajax(
+            {
+                url: '/page/notif/show_events',
+                dataType: 'json',
+                data: "{}",
+                success: function(data)
+                    {
+                    $j.each(data,function(index,data){
+                        try
+                            {
+                            if( hashuri.indexOf(data.hash) == -1 )
+                                {
+                                hashuri.push(data.hash);
+                                $j.jGrowl(
+                                    data.str,
+                                    {
+                                        corners:'1px',
+                                        life: data.life,
+                                        header:data.title,
+                                        hash: data.hash,
+                                        sticky: data.sticky,
+                                        close: function(e,m,o)
+                                            {
+                                                $j.ajax({url:'/page/notif/delete_single_event/' + o.hash});
+                                            }
+                                    });
+                                }
+                            }
+                        catch(e){}
+                        })
+                    }
+            });
+        }
+	 </script> 
+ 
+                            
+  <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-19111721-1']);
+  _gaq.push(['_setDomainName', '.closer2oxford.ro']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+    
+                        </head>
+                        <body>
+                            <div id="global_wrap">
+                                <div id="header">
+                                    <a href='../../../../index.html'><div id='logo'><img src='../../../../images/layout/sigla.jpg'></div></a>
+                                    <a class='noExternal' href='http://www.facebook.com/pages/Closer2Oxford/162758797069605'><img src='../../../../images/fb.png' style='height:30px;float:right;clear:right;margin:10px 5px 5px 5px;border:none;'/></a>
+                                    <a href='../../../rss_feed'><img src='../../../../images/feed-icon.png' style='height:30px;float:right;clear:right;margin:5px;border:none;'/></a>
+                                </div>
+                                <div id="meniu">
+                                    <div  id='register_login'>
+
+                                        
+  <a href='#' class='todo' id='login'>Login </a> &nbsp;<a href='../../../register.html' class='todo' id='register'>Register</a>
+    <div id='login_box'>
+		  <form action='https://dev.closer2oxford.ro/page/ro/login_user/logon' method='post' id='user_login_form'>
+					 <div>Email: <input type='text' name='email'/> </div><br />
+					 <div>Pass: <input type='password' name='passwd'/></div><br />
+					 <a href='#' class='password_forgot'>forgot password?</a>
+					 <input type='hidden' value='/page/ro/vezi_meciuri/275/' name='returnto' class='submiter'/><br />
+					 <input type='submit' value='login' name='btn' class='submiter'/><br />
+		  </form>
+		  
+		  <form action='https://dev.closer2oxford.ro/page/ro/login_user/reset_user_pw' method='post' id='user_reset_form'>
+					 <div>Email: <input type='text' name='email'/> </div><br />
+					 <a href='#' class='password_forgot'>login?</a>
+					 <input type='hidden' value='/page/ro/vezi_meciuri/275/' name='returnto' class='submiter'/><br />
+					 <input type='submit' value='reset' name='btn' class='submiter'/><br />
+		  </form>
+		  
+    </div>
+    
+                                    </div>
+                                    <div id='menu1' style='margin:auto;'> <ul id='meniu_prinicpal'><li><a href='../../../contacte/index.html'> Contact </a></li>
+<li><a href='../../../clubdebate/index.html'> Cluburile </a></li>
+<li><a href='../../../oamenii/index.html'> Oamenii </a></li>
+<li><a href='../../../proiectul/index.html'> Proiectul </a></li>
+<li><a href='../../../home/index.html'> Acasa </a></li>
+</ul></div><!--end menu-->
+                                </div>
+                                <div id="main"> 
+                                    <!--<div id='stiri-padding'>
+        <div id='stiri_back'>
+                {stiri} 
+    
+               
+        </div>-->
+        
+</div>
+<div  id="content-padding">
+        <div id='sidebar_menu'>
+                <span class='tr'></span>
+                <span class='tl'></span>
+                <span class='br'></span>
+                <span class='bl'></span>
+                <span id="filler"></span>
+                    
+                <ul></ul>
+                
+                <div class='clear'></div>
+        </div>
+        <div id="content">
+                <span class='tr'></span>
+                <span class='tl'></span>
+                <span class='br'></span>
+                <span class='bl'></span>
+                <span id="filler"></span>
+                  <script>
+        $j(document).ready(function(){
+        $j('.discurs_toggler').toggle(
+                function(){
+                $j(this).attr('src', '../../../../images/little_stuff/16-em-down.png');   
+                $j(this).parent().next('.discurs').hide('fast');
+                },
+                function(){
+                $j(this).attr('src', '../../../../images/little_stuff/16-em-up.png');
+                $j(this).parent().next('.discurs').show('fast');
+                });
+            });
+        </script><style>.nowrap{white-space: nowrap;}
+		.noJustify{text-align:left;}
+		</style><h2 class='noJustify'><span class='nowrap'>'Alex si Radu'</span> <span class='notif'>(afirmatori)</span> vs <span class='nowrap'>'Pokemon'</span> <span class='notif'>(negatori)</span></h2><h3>A1 (Alex Vasile) <img src='../../../../images/little_stuff/16-em-up.png' class='discurs_toggler'></h3>
+            <div class='discurs normal_text'><p>Cu siguranta, pentru oricare dintre voi, faptul ca Romania are probleme, mai mari sau mai mici, la toate capitolele, nu este nicio noutate. Iar una dintre cele mai importante estea cea a nerespectarii legilor in general. La noi in tara, fiecare incearca sa &ldquo;pacaleasca&rdquo; statul cu tot ce poate. Si asa ajungem si la discutia noastra de astazi, si anume referitoare la faptul ca &ldquo;Este timpul ca amenzile sa fie acordate in functie de venituri&rdquo;.</p>
+<p>Cuvintele cheie ale acestei motiuni sunt acelea de amenda, care este contravalorarea(pedeapsa) &nbsp;in bani sau munca in folosul comunitatii a nerespectarii legii; si venit, care este sursa banoasa de pe urma careia beneficiaza fiecare persoana.</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Pozitia echipei afirmatoare cu privire la acest subiect este dusa pe ideea faptului ca incercam in primul si-n primul rand sa pedepsim persoanele&nbsp; mai instarite de la noi din tara, pentru ca, dupa cum va fi demonstrat in discursul meu, exista diferente mari intre clasele sociale in Romania, iar cei mai instariti se cred de cele mai multe ori mai presus de lege, iar acest lucru poate fi rezolvat daca motiunea va fi aprobata.</p>
+<p>In prima parte a cazului va voi prezenta argumentul numarul 1, si anume argumentul economic, urmand s ail prezint pe cel in care voi vorbi despre siguranta, iar pe final va voi demonstra intr-un mod foarte simplu cum poate fi implementata si aplicata aceasta motiune.</p>
+<p>&nbsp;Argumentul 1, si anume cel economic, se refera, cum am spus si in ideea principal, la diferentele foarte mari dintre clasele sociale si nu numai atat, cu atat mai mult cu cat cei mai instariti cred ca ei au un avantaj daca au bani mai multi. Ei bine, pentru aceste personae vrem noi sa aplicam motiunea, pentru&nbsp; a putea aduce in bugetul statului ( acesta este locul unde ajung amenzile ) o suma mai mare de bani, si pentru a le da niste lectii in plus &ldquo;regilor soselelor&rdquo;</p>
+<p>Argumentul 2, Siguranta, se refera la mai multe tari din Europa care au aprobat si implementat motiunea: In Germania, amenda maxima poate atinge 16 milioane de euro. &ndash; Germania&nbsp; are o rată mica a deceselor &icirc;n urma unor accidente produse pe drumuri publice &ndash; 4,7 la suta de mii de locuitori, la fel si Danemarca, iar Suedia are o rata de doar 3 %, fata de Romania, unde rata deceselor este una relativ mare, 11,1 % la suta de mii de locuitori, fiind la un nivel foarte apropiat cu Bangladesh &ndash; 11,6&nbsp; si Guineea Ecuatoriala &ndash; 11,4.</p>
+<p>Toate tarile de mai sus au adoptat aceasta motiune, care, se pare ca a functionat. Din moment ce in toate acele tari, in care motiunea a fost aplicata, accidentele rutiere au scazut considerabil, este foarte probabil ca acest lucru sa se intample si in Romania, sporind astfel siguranta pe sosele.</p>
+<p>Iar, in ceea ce priveste implementarea, este extreme de simpla. Politistii, cum e in cazul unor tari din Europa, pot beneficia de o baza de date cu veniturile cetatenilor, sau, pot aplica amenzi in procente: de exemplu, in fuctie de legea incalcata, sa se dea 10% amenda din venit, iar cetateanul, cand va merge sa plateasca amenda la Politie se va prezenta si cu fluturasul de salariu.</p>
+<p>In concluzie, motiunea va aduce multe lucruri bune daca va fi aprobata, deci speram sa judecati corect.</p>
+
+
+<p>&nbsp;"Referinte: - "</p>
+</div><hr><h3>N1 (George Scurtulescu) <img src='../../../../images/little_stuff/16-em-up.png' class='discurs_toggler'></h3>
+            <div class='discurs normal_text'><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&ldquo;&Icirc;n Rom&acirc;nia,&nbsp; 2.774 de oameni mor, &icirc;n medie, &icirc;n fiecare an &icirc;n accidente rutiere&rdquo;<a  href="#24241">[1]</a>. Ne dăm astfel seama că ne confruntăm cu o problemă foarte serioasă, pe care autorităţile caută să o rezolve de c&acirc;ţiva ani, fără prea mult succes &icirc;nsă.</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Dezbaterea este restr&acirc;nsă de către afirmatori pe Romania, iar discuţia merge pe amenzile rutiere, deşi definiţia include toate formele de amenzi.</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Problemele identificate de afirmatori sunt, &icirc;n ordine, lipsa metodelor eficiente de sancţionare a persoanelor cu venituri mari şi siguranţa redusă pe şosele. Prin măsura propusă, se incearcă pedepsirea &ldquo;regilor soselelor&rdquo; şi scăderea numărului victimelor.</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Din păcate, implementarea sistemului propus nu va avea aceste rezultate. Dacă ne uităm la persoanele cu venituri mici şi medii, ne dăm seama că amenzile vor fi de fapt mai mici ca &icirc;n status quo. De exemplu, 3 milioane de rom&acirc;ni trăiesc cu sub 400 RON pe lună<a  href="#24242">[2]</a>, deci o amendă de 10% ar &icirc;nsemna 40 RON, sub chiar şi cele mai mici amenzi actuale. Dacă &icirc;n momentul de fată sistemul de amenzi este ineficient <a  href="#24243">[3]</a>, nu vedem cum scăderea acestora pentru majoritatea populaţiei va ajuta &icirc;n vreun fel. Un alt lucru omis de afirmatori este faptul că majoritatea accidentelor nu se intamplă din cauza persoanelor instărite, ci din cauza vitezei excesive, astfel impactul masurii este cu at&acirc;t mai mult diminuat.</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Deasemenea, echipa afirmatoare pleacă de la ideile nedemonstrate că persoanele &icirc;nstărite &ldquo;se cred de cele mai multe ori mai presus de lege&rdquo; şi &ldquo;cred ca ei au un avantaj daca au bani mai multi&rdquo;, puncte &icirc;n care nu vedem legatura cu moțiunea aşteptăm lămuriri.</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Din punct de vedere al siguranţei, afirmatorii incearcă să ne arate printr-o statistică faptul că implementarea moţiunii va duce automat la scăderea accidentelor, fara &icirc;nsă a face legătura &icirc;ntre cauză şi efect. Considerăm că există alţi factori, mai importanţi dec&acirc;t amenzile, care ar duce la creşterea siguranţei pe şosele, detaliaţi &icirc;n argumentele proprii.</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; La nivel de implementare sesizăm două mari probleme: accesul poliţiştilor la date cu caracter personal şi creşterea birocraţiei prin plata amenzilor la ghişeu, cu fluturaşul de salariu.</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>Problemele</strong> reale cu care se confruntă Rom&acirc;nia &icirc;n momentul de față sunt lipsa siguranței pe șosele și ineficiența măsurilor punitive. <strong>Scopul</strong> echipei opoziției este creșterea siguranței pe drumurile publice prin scăderea numarului accidentelor. Ca să stabilim metode eficiente de rezolvare, trebuie să ne uităm la <strong>cauzele</strong> problemelor și anume: lipsa infrastructurii adecvate și ineficiența sistemului actual de amenzi.</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &Icirc;n țările menționate de afirmatori in cel de-al doilea argument, un alt numitor comun este starea impecabilă a drumurilor, cu aproximativ 13500 km cumulaţi de autostradă &icirc;n Germania, Suedia și Danemarca, cu o densitate pe kilometrul pătrat de 34,63, 3,87 respectiv 31,09 de metri. <a  href="#24244">[4]</a>. Siguranţa autostrăzilor este conferită de faptul că benzile sunt separate, nu există treceri de pietoni, iar starea asfaltului este una foarte bună. Din moment ce romania are&nbsp; 529,39 km de autostradă<a  href="#24245">[5]</a>, timpul de tranzit pe distanţe mari creşte, iar şoferii sunt impinşi să treacă de limita de viteză pentru a economisi timp (viteza excesivă fiind şi cauza principală a producerii accidentelor<a  href="#24246">[6]</a>).</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sistemul actual de amenzi se bazează pe sancţiuni universale pentru toţi şoferii. Amenda actuală maximă este de 7500 RON<a  href="#24247">[7]</a>, in condiţiile in care venitul minim garantat in 2013 este de 750 RON<a  href="#24248">[8]</a>, sistem care nu are un impact semnificativ in creşterea siguranţei<a  href="#24249">[9]</a>. O posibilă măsură eficientă, aplicabilă in orice domeniu, este confiscarea bunului cu care s-au săv&acirc;rşit fapte grave sau repetate, prin implementarea unui sistem de puncte. Eficienţa acestuia ar rezulta din confiscarea maşinii in instanţă de către judecător. Dat fiind faptul că ridicarea temporară a maşinii unui vitezoman de către poliţişti nu i-ar impiedica. Idee susţinută şi de oficialii de la Venţia<a  href="#242410">[10]</a>.</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &Icirc;n concluzie, am demonstrat că implementarea măsurii propuse de afirmatori va avea un impact minor asupra stării de fapt, mai mult dec&acirc;t at&acirc;t, am arătat că va aduce şi dezavantaje la nivelul implementării. Considerăm astfel că v-am demonstrat că moţiunea trebuie negată.</p>
+<div><br /> 
+<hr size="1" />
+<div>
+<p>Referinte:</p>
+<p><a  name="24241">[1]</a> http://www.scienceworld.ro/romania-coda-a-in-imbunata-irea-siguran-ei-rutiere-12244.html</p>
+</div>
+<div>
+<p><a  name="24242">[2]</a> http://www.ziare.com/locuri-de-munca/piata-muncii/milioane-de-romani-supravietuiesc-cu-salarii-extrem-de-mici-efe-1212203</p>
+</div>
+<div>
+<p><a  name="24243">[3]</a> http://adevarul.ro/news/eveniment/Soferi-pregateste-ceva--amenzi-grele-camere-examen-1_515d2c8b00f5182b858189e2/index.html</p>
+</div>
+<div>
+<p><a  name="24244">[4]</a> http://en.wikipedia.org/wiki/List_of_OECD_countries_by_road_network_size</p>
+</div>
+<div>
+<p><a  name="24245">[5]</a> http://www.hotnews.ro/stiri-esential-13892736-harta-interactiva-bilantul-autostrazilor-final-140-2012-230-posibili-2013-risc-0-2014.htm</p>
+</div>
+<div>
+<p><a  name="24246">[6]</a> http://www.evz.ro/detalii/stiri/p-care-sunt-cele-mai-intalnite-cauze-ale-accidentelor-rutiere-1036183.html</p>
+
+</div>
+<div>
+<p><a  name="24247">[7]</a> http://www.realitatea.net/codul-rutier-2013-sanctiunile-pentru-care-poti-primi-amenda-maxima-de-7-500-de-lei_1150188.html</p>
+</div>
+<div>
+<p><a  name="24248">[8]</a> http://www.avocatnet.ro/content/articles/id_31923/Act-normativ-publicat-in-MOf-Salariul-minim-este-de-750-de-lei-de-la-1-februarie.html#axzz2TCuiB2In</p>
+
+</div>
+<div>
+<p><a  name="24249">[9]</a> http://adevarul.ro/news/societate/bilant-tragic-1800-oameni-murit-accidente-rutiere-romania-inceputul-anului-majoritatea-cauza-vitezei-1_50b215b97c42d5a663a31634/index.html</p>
+
+</div>
+<div>
+<p><a  name="242410">[10]</a> http://www.mediafax.ro/social/secretarul-comisiei-de-la-venetia-despre-confiscarea-masinilor-in-cazuri-extreme-e-justificabila-10861787</p>
+
+</div>
+</div>
+</div><hr><h3>A2 (Radu Ionut Mihail) <img src='../../../../images/little_stuff/16-em-up.png' class='discurs_toggler'></h3>
+            <div class='discurs normal_text'><p><!--[if gte mso 9]><xml> <w:WordDocument> <w:View>Normal</w:View> <w:Zoom>0</w:Zoom> <w:PunctuationKerning /> <w:ValidateAgainstSchemas /> <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid> <w:IgnoreMixedContent>false</w:IgnoreMixedContent> <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText> <w:Compatibility> <w:BreakWrappedTables /> <w:SnapToGridInCell /> <w:WrapTextWithPunct /> <w:UseAsianBreakRules /> <w:DontGrowAutofit /> </w:Compatibility> <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel> </w:WordDocument> </xml><![endif]--></p>
+<p><!--[if gte mso 9]><xml> <w:LatentStyles DefLockedState="false" LatentStyleCount="156"> </w:LatentStyles> </xml><![endif]--><!--[if !mso]> 
+<object  classid="clsid:38481807-CA0E-42D2-BF39-B33AF135CC4D" id=ieooui>
+</object>
+<mce:style><!  st1\:*{behavior:url(#ieooui) } --> <!--[endif] --><!--[if gte mso 10]> <mce:style><!   /* Style Definitions */  table.MsoNormalTable 	{mso-style-name:"Table Normal"; 	mso-tstyle-rowband-size:0; 	mso-tstyle-colband-size:0; 	mso-style-noshow:yes; 	mso-style-parent:""; 	mso-padding-alt:0in 5.4pt 0in 5.4pt; 	mso-para-margin:0in; 	mso-para-margin-bottom:.0001pt; 	mso-pagination:widow-orphan; 	font-size:10.0pt; 	font-family:"Times New Roman"; 	mso-ansi-language:#0400; 	mso-fareast-language:#0400; 	mso-bidi-language:#0400;} --> <!--[endif] --></p>
+<p><!--[if gte mso 9]><xml> <w:WordDocument> <w:View>Normal</w:View> <w:Zoom>0</w:Zoom> <w:PunctuationKerning /> <w:ValidateAgainstSchemas /> <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid> <w:IgnoreMixedContent>false</w:IgnoreMixedContent> <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText> <w:Compatibility> <w:BreakWrappedTables /> <w:SnapToGridInCell /> <w:WrapTextWithPunct /> <w:UseAsianBreakRules /> <w:DontGrowAutofit /> </w:Compatibility> <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel> </w:WordDocument> </xml><![endif]--></p>
+<!--[if gte mso 9]><xml> <w:WordDocument> <w:View>Normal</w:View> <w:Zoom>0</w:Zoom> <w:PunctuationKerning /> <w:ValidateAgainstSchemas /> <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid> <w:IgnoreMixedContent>false</w:IgnoreMixedContent> <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText> <w:Compatibility> <w:BreakWrappedTables /> <w:SnapToGridInCell /> <w:WrapTextWithPunct /> <w:UseAsianBreakRules /> <w:DontGrowAutofit /> </w:Compatibility> <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel> </w:WordDocument> </xml><![endif]--><!--[if gte mso 9]><xml> <w:WordDocument> <w:View>Normal</w:View> <w:Zoom>0</w:Zoom> <w:PunctuationKerning /> <w:ValidateAgainstSchemas /> <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid> <w:IgnoreMixedContent>false</w:IgnoreMixedContent> <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText> <w:Compatibility> <w:BreakWrappedTables /> <w:SnapToGridInCell /> <w:WrapTextWithPunct /> <w:UseAsianBreakRules /> <w:DontGrowAutofit /> </w:Compatibility> <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel> </w:WordDocument> </xml><![endif]-->
+<p class="MsoNormal" style="text-align: justify; text-indent: .25in;">O restrangere a motiunii pe Romania? Din moment ce in unele tari s-a aplicat acest lucru, Romania vine ca si un exemplu, echipa afirmatoare neputand sa-si impuna punctul de vedere undeva unde el a fost deja impus.</p>
+<p class="MsoNormal" style="text-align: justify; text-indent: .25in;">&nbsp;</p>
+<p class="MsoNormal" style="text-align: justify; text-indent: .25in;">Discursul meu incepe prin contra-argumentarea echipei negatoare prin urmatoarele puncte:</p>
+<p class="MsoNormal" style="text-align: justify; text-indent: .25in;">&nbsp;</p>
+<p class="MsoNormal" style="text-align: justify; text-indent: .25in;">Ei sustin faptul ca implementarea motiunii nu va avea un efect neaparat, insa statisticile din tarile unde s-a adoptat &ldquo;motiunea&rdquo; tine sa ii contrazica cu o rata a accidentelor de cca. 7% mai mica ca in Romania.</p>
+<p class="MsoNormal" style="text-align: justify; text-indent: .25in;">&nbsp;</p>
+<p class="MsoNormal" style="text-align: justify; text-indent: .25in;">Un urmator punct pe care doresc sa il aduc in discutie este sustinearea lor in faptul ca noi &ldquo;reducem amenzile&rdquo;, deoarece un numar mare al romanilor traieste cu 400 RON pe luna. Acei oameni care traiesc cu 400 RON pe luna intr-un numar mare de cazuri nu au bani sa isi cumpere o masina. Deci ei nu pot incalca legea prin diversele infractiuni.</p>
+<p class="MsoNormal" style="text-align: justify; text-indent: .25in;">&nbsp;</p>
+<p class="MsoNormal" style="text-align: justify; text-indent: .25in;">Si dupa cum este precizat pe afirmator 1, cei cu bani ( George Copos, fiul lui Radu Mazare, Cristian Tanase si altii ) comit in cele mai multe cazuri infractiuni, deoarece isi permit sa plateasca amenzile la stadiul lor de acum, de aceea dorim sa <span style="mso-spacerun: yes;">&nbsp;le marim<span style="mso-spacerun: yes;">&nbsp; ca &ldquo;regii soselelor&rdquo; sa nu mai treaca cu atata usurinta peste orice amenda.</p>
+<p class="MsoNormal" style="text-align: justify; text-indent: .25in;">&nbsp;</p>
+<p class="MsoNormal" style="text-align: justify; text-indent: .25in;">Acest lucru este sustinut si de parlamentarul Iulian Orban care a venit in Romania cu aceasta idee si spune ca &ldquo;Sofatul a ajuns un sport extrem din cauza persoanelor instarite care isi permit sa plateasca amenzile.&rdquo;, cu alte cuvinte sper ca am clarificat si acest aspect prin prisma faptului ca echipa negatoare sustinea ca nu avem sustinere la argumente.</p>
+<p class="MsoNormal" style="text-align: justify; text-indent: .25in;">&nbsp;</p>
+<p class="MsoNormal" style="text-align: justify; text-indent: .25in;">Iar la nivel de implementare&hellip;negatorii au sesizat faptul ca &ldquo;politistii au acces la o baza mai mare de data prin aprobarea motiunii&rdquo;. Tin sa ii contrazic prin doua puncte, unu este acela ca exista deja exista tari in care s-au implementat astfel de amenzi iar ele nu sufera deloc din pricina acestei &ldquo;baze de date&rdquo;, iar al doilea punct este reprezentat prin plata amenzii, prin prezentarea fluturasului sau a unui act doveditor al salariului sau a pensiei pentru a se calcula amenda care din nou nu reprezinta nicio problema.</p>
+<p class="MsoNormal" style="text-align: justify; text-indent: .25in;">&nbsp;</p>
+<p class="MsoNormal" style="text-align: justify; text-indent: .25in;">Un alt lucru sesizat de echipa negatoare consta in lipsa infrastructurii. Sunt de parere ca lipsa infrastructurii nu este deloc un factor decisiv, deoarece stim ca avem probleme cu infrastrctura pe langa multe altele, dar lucrurile nu se vor rezolva de la sine si trebuie sa avem un punct de unde sa incepem sa cladim un anumit lucru, noi pornim acest lucru de la schimbarea amenzilor doarece avem mai multe modele de tari unde acest proiect a functionat.</p>
+<p class="MsoNormal" style="text-align: justify; text-indent: .25in;">&nbsp;</p>
+<p class="MsoNormal" style="text-align: justify; text-indent: .25in;">&nbsp;</p>
+<p class="MsoNormal" style="text-align: justify; text-indent: .25in;">Singurul argument al echipei negatoare, acela de a confisca masina cu care a fost savarsita o infractiune ne sustine ideea deoarece fiecare isi cumpara masina dupa venit deci tot dupa venit sanctioneaza si negatorii infaptuitul. Iar ideea lor era sustinuta cred eu de ofiterii din &ldquo;Venetia&rdquo; (scria Ventia) unde in 95% din cazuri se circula cu barca.</p>
+<p class="MsoNormal" style="text-align: justify; text-indent: .25in;">&nbsp;</p>
+<p class="MsoNormal" style="text-align: justify; text-indent: .25in;">Concluzia este ca echipa afirmatore si-a atins scopul de a arata ca implementarea motiunii este una nu numai benefica ci si profitabila. Astfel cred ca motiunea trebuie aprobata !</p>
+<p class="MsoNormal" style="text-align: justify; text-indent: .25in;"><em style="mso-bidi-font-style: normal;">&nbsp;</em></p>
+<p class="MsoNormal" style="margin-right: 9.0pt; text-align: justify; text-indent: .25in;">&nbsp;</p>
+<p class="MsoNormal" style="margin-right: 9.0pt; text-align: justify; text-indent: .25in;">&nbsp;</p>
+<p class="MsoNormal" style="margin-right: 9.0pt; text-align: justify; text-indent: .25in;">Referinte:</p>
+<p class="MsoNormal" style="margin-right: 9.0pt; text-align: justify; text-indent: .25in;">&nbsp;</p>
+<p class="MsoNormal" style="text-align: justify; text-indent: .25in;"><a href="http://stiri.tvr.ro/fiul-lui-mazare-a-ramas-fara-permis-dupa-ce-a-gonit-cu-170km-h-pe-autostrada-soarelui_15338.html">http://stiri.tvr.ro/fiul-lui-mazare-a-ramas-fara-permis-dupa-ce-a-gonit-cu-170km-h-pe-autostrada-soarelui_15338.html</a></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: .25in;">&nbsp;</p>
+<p class="MsoNormal" style="text-align: justify; text-indent: .25in;"><a href="http://www.gsp.ro/fotbal/liga-1/george-copos-a-ramas-fara-carnet-dupa-ce-a-circulat-cu-peste-200-km-h-143649.html">http://www.gsp.ro/fotbal/liga-1/george-copos-a-ramas-fara-carnet-dupa-ce-a-circulat-cu-peste-200-km-h-143649.html</a></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: .25in;">&nbsp;</p>
+<p class="MsoNormal" style="text-align: justify; text-indent: .25in;"><a href="http://stirileprotv.ro/stiri/eveniment/stelistul-cristi-tanase-fara-permis-mergea-cu-107-km-h-in-localitate.html">http://stirileprotv.ro/stiri/eveniment/stelistul-cristi-tanase-fara-permis-mergea-cu-107-km-h-in-localitate.html</a></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: .25in;">&nbsp;</p>
+<p class="MsoNormal" style="text-align: justify; text-indent: .25in;"><a href="http://www.bzi.ro/mihaela-borcea-a-ramas-fara-permis-auto-245212">http://www.bzi.ro/mihaela-borcea-a-ramas-fara-permis-auto-245212</a></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: .25in;">&nbsp;</p>
+<p class="MsoNormal" style="text-align: justify; text-indent: .25in;"><a href="http://stirileprotv.ro/stiri/eveniment/nicolae-guta-a-ramas-fara-permis-gonea-cu-152-km-h.html">http://stirileprotv.ro/stiri/eveniment/nicolae-guta-a-ramas-fara-permis-gonea-cu-152-km-h.html</a></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: .25in;">&nbsp;</p>
+<p class="MsoNormal" style="text-align: justify; text-indent: .25in;"><a href="http://www.realitatea.net/mircea-badea-se-lauda-ca-a-ramas-fara-carnet-cred-ca-eram-in-franare-si-aveam-vant-din-fata_995204.html">http://www.realitatea.net/mircea-badea-se-lauda-ca-a-ramas-fara-carnet-cred-ca-eram-in-franare-si-aveam-vant-din-fata_995204.html</a></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: .25in;">http://www.editie.ro/articole/special/amenzi-in-functie-de-venit.html</p>
+<p class="MsoNormal" style="text-align: justify; text-indent: .25in;">&nbsp;</p>
+<p class="MsoNormal" style="text-align: justify; text-indent: .25in;">&nbsp;</p>
+<p class="MsoNormal" style="text-align: justify; text-indent: .25in;">&nbsp;</p>
+<p class="MsoNormal" style="margin-right: 9.0pt; text-align: justify; text-indent: .25in;">&nbsp;</p>
+<!--[if gte mso 9]><xml> <w:LatentStyles DefLockedState="false" LatentStyleCount="156"> </w:LatentStyles> </xml><![endif]--><!--[if !mso]> 
+<object  classid="clsid:38481807-CA0E-42D2-BF39-B33AF135CC4D" id=ieooui>
+</object>
+<mce:style><!  st1\:*{behavior:url(#ieooui) } --> <!--[endif] --><!--[if gte mso 10]> <mce:style><!   /* Style Definitions */  table.MsoNormalTable 	{mso-style-name:"Table Normal"; 	mso-tstyle-rowband-size:0; 	mso-tstyle-colband-size:0; 	mso-style-noshow:yes; 	mso-style-parent:""; 	mso-padding-alt:0in 5.4pt 0in 5.4pt; 	mso-para-margin:0in; 	mso-para-margin-bottom:.0001pt; 	mso-pagination:widow-orphan; 	font-size:10.0pt; 	font-family:"Times New Roman"; 	mso-ansi-language:#0400; 	mso-fareast-language:#0400; 	mso-bidi-language:#0400;} --> <!--[endif] --><!--[if gte mso 9]><xml> <w:LatentStyles DefLockedState="false" LatentStyleCount="156"> </w:LatentStyles> </xml><![endif]--><!--[if !mso]> 
+<object  classid="clsid:38481807-CA0E-42D2-BF39-B33AF135CC4D" id=ieooui>
+</object>
+<mce:style><!  st1\:*{behavior:url(#ieooui) } --> <!--[endif] --><!--[if gte mso 10]> <mce:style><!   /* Style Definitions */  table.MsoNormalTable 	{mso-style-name:"Table Normal"; 	mso-tstyle-rowband-size:0; 	mso-tstyle-colband-size:0; 	mso-style-noshow:yes; 	mso-style-parent:""; 	mso-padding-alt:0in 5.4pt 0in 5.4pt; 	mso-para-margin:0in; 	mso-para-margin-bottom:.0001pt; 	mso-pagination:widow-orphan; 	font-size:10.0pt; 	font-family:"Times New Roman"; 	mso-ansi-language:#0400; 	mso-fareast-language:#0400; 	mso-bidi-language:#0400;} --> <!--[endif] -->
+</div><hr><h3>N2 (Lorant Koszegi) <img src='../../../../images/little_stuff/16-em-up.png' class='discurs_toggler'></h3>
+            <div class='discurs normal_text'><p> Multumim afirmatorilor pentru raspuns. Prin &ldquo;restrangere pe Romania&rdquo;, echipa negatoare se refera la faptul ca afirmatorii incearca sa demonstreze si sa aplice motiunea pentru tara noastra si nu o contestam in vreun fel.</p>
+<p> La nivel economic, salariul mediu a fost in martie 2013 1617 RON net<a  href="#622ei">[i]</a>, dar avand o inechitate sociala ridicata - 6,2 <a  href="#622eii">[ii]</a>, ne dam seama ca sunt mult mai multi oameni care traiesc sub pragul mediu, dintre care multi sub pragul saraciei. Pentru acestia, am demonstrat la nivel de N1 ca amenzile vor scadea fata de momentul actual, lucru care in mod evident, va scadea eficienta masurii amenzilor in sine. Un alt punct este existenta masinilor de serviciu, care ignora in mare parte veniturile, astfel multi oameni ajung sa conduca masini mai puternice decat isi permit, astfel argumentul afirmatorilor nu ramane in picioare.</p>
+<p> Statistica invocata de echipa afirmatoare<a  href="#622eiii">[iii]</a> nu a fost nici de aceasta data legata printr-un rationament de cauza problemei pe care vor sa o rezolve.</p>
+<p> Ne-au fost oferite mai multe exemple ale unor oameni publici care au incalcat regulile in trafic, ex. George Copos, Cristi Tanase etc. In continuare, lipsa unui rationament solid care sa lege aceste exemple de un argument nu aduce afirmatorii mai aproape de demonstrarea necesitatii motiunii. Suntem constienti ca exista anumite persoane care sfideaza legile de circulatie, dar consideram mult mai oportuna masura confiscarii obiectului cu care s-au savarsit fapte grave sau repetate prin prisma faptului ca persoana in cauza nu va mai avea posibilitatea sa incalce legea pentru ca nu mai are mijloacele necesare.</p>
+<p> In continuare, afirmatorii invoca precedentul unor tari care au implementat masura si unde existenta bazei de date in posesia politistilor de circulatie nu este o problema. Diferenta dintre Romania si Finlanda, spre exemplu, este faptul ca in tara nordica, situatia incasarii taxelor de la intreaga populatie este publica<a  href="#622eiv">[iv]</a>, pe cand in Romania nu se intampla acest lucru.</p>
+<p> Contraargumentarea cazului negator este facuta la modul &ldquo;avem o problema, dar nu e o problema pentru ca stim de ea&rdquo;. E ca si cand am spune ca Polio sau cancerul omoara oameni, dar nu este o problema pentru ca stim ca aceste boli omoara oameni.</p>
+<p> O problema interesanta ridicata de negatori este punctul de plecare inspre rezolvarea problemei, insa nu se demonstreaza ca punctul propus de ei este cel potivit pentru ca invocarea precedentului nu este destul in acest sens.</p>
+<p> Consideram de asemenea o entitate potrivita Consiliul de la Venetia ca sustinator al masurii confiscarii obiectului cu care s-a savarsit fapta in cazuri grave deoarece aceasta comisie are rol consultativ pentru UE in drept consitutional<a  href="#622ev">[v]</a>.</p>
+<p> In concluzie, avem pe o parte cazul afirmator, care nu ramane in picioare, si pe alta parte cazul negator care demostreaza ca masura propusa nu ar trebui implementata.</p>
+<div></div>
+<div>Referinte:<br /> 
+<hr size="1" />
+<div>
+<p><a  name="622ei">[i]</a> http://www.business24.ro/companii/salarii/salariul-mediu-net-pe-economie-a-ajuns-la-1-617-lei-in-crestere-cu-4-1-la-suta-in-martie-1528681</p>
+</div>
+<div>
+<p><a  name="622eii">[ii]</a></p>
+</div>
+<div>
+<p><a  name="622eiii">[iii]</a> http://epp.eurostat.ec.europa.eu/statistics_explained/index.php/Transport_accident_statistics</p>
+</div>
+<div>
+<p><a  name="622eiv">[iv]</a> http://www.stayfreemagazine.org/public/wsj_finland.html</p>
+
+</div>
+<div>
+<p><a  name="622ev">[v]</a> http://en.wikipedia.org/wiki/Venice_Commission</p>
+
+</div>
+</div>
+</div><hr><hr><h2>Decizii:</h2> <script>
+        $j(document).ready(function(){
+			$j('.decizie_toggler').toggle( 
+				function(){
+					$j(this).attr('src', '../../../../images/little_stuff/16-em-down.png');   
+					$j(this).parent().next('.decizie').hide('fast'); 
+                },
+                function(){
+					$j(this).attr('src', '../../../../images/little_stuff/16-em-up.png');
+					$j(this).parent().next('.decizie').show('fast'); 
+                } 
+			);
+		});</script><div class='decizie'><h3>Vlad Vidican
+                <img src='../../../../images/little_stuff/16-em-up.png' class='decizie_toggler'></h3><div class='normal_text'><p>Decizia mea merge catre echipa negatoare, care, desi nu a avut un discurs 100% coerent, a reusit sa traga asupra cazului afirmator destule umbre de indoiala, motive pentru care afirmatorii nu au reusit sa cucereasca increderea arbitrului.</p>
+<p>In primul discurs afirmator ne sunt prezentate doua argumente: cel economic si cel al cresterii sigurantei pe drumurile publice. Avand in vedere ca argumentul economic a fost abandonat de catre cel de-al doilea membru al afirmatorilor, relevanta acestuia in cadrul dezbaterii a scazut considerabil, asa ca ramane sa se dezbata pana la capatul meciului despre siguranta cetatenilor pe drumurile publice (desi contraventiile se pot da si in alte domenii, lucru semnalat de catre negatori). Revenind la argumentul sigurantei, acesta nu a fost demonstrat printr-un rationament logic ci doar printr-o insiruire de tari care au adoptat acest sistem al sanctionarii contravenientilor proportional cu veniturile acestora, ca mai apoi sa se traga concluzia, pripita, ca si in Romania se va intampla la fel. Este superfluu sa atrag atentia asupra faptului ca nu au fost folosite in primul discurs date de referinta (dovezi).</p>
+<p>Primul negator are cateva puncte de argumentare si anume: isi da seama ca afirmatorii au restrans discutia pe amenzile rutiere, dar se conformeaza dand dovada de fairplay, gaseste cateva motive care arata ca nesiguranta pe drumurile publice se datoreaza altor realitati decat cele invocate de afirmatori si propune o masura noua, un contraplan. S-au fosit destule note de referinta, lucru ce a dat veridicitate celor spuse de vorbitor. Nu in ultimul rand a fost bine ca s-a atras atentia asupra lipsei rationamentului logic cauza-efect.</p>
+<p>La nivelul ultimilor vorbitori se discuta in continuare despre aria de conflict amintita mai sus, perpetuandu-se strategia afirmatorilor de a da exemple de oameni instariti care au fost sanctionati contraventional, insa acest lucru nu este destul intr-o dezbatere.</p>
+<p>Argumentele care nu-si aveau locul in acest context si care nu au putut fi&nbsp;&nbsp;luate in calcul prea mult in luarea deciziei au fost discutiile despre venitul mediu de 400 de lei, despre faptul ca acesti oameni nu isi pot lua masina, dar au masini de serviciu, iar in Venetia se circula cu barca&hellip;</p>
+
+<p>Ceea ce as fi asteptat din partea afirmatorilor ar fi fost, cel putin, un rationament de genul: Rolurile unei sanctiuni contraventionale sunt rolul punitiv si cel preventiv. Prin implementarea masurii s-ar intari ambele roluri ale acestei sanctiuni deoarece toti oamenii s-ar teme in mod egal de efectele pecuniare ale unei sanctiuni, nu doar cei cu venituri medii si mici. Pe de alta parte sistemul actual este si unul discriminatoriu&hellip;etc</p>
+<p>A1 A lipsit rationamentul cauza efect si referintele bibliografice. Ar fi trebuit explicat mai mult argumentul economic. Structura a fost buna.</p>
+<p>N1 Era necesar sa se delimitele mai clar contraargumentarea de cazul propriu. Structura nu a fost cea mai reusita, dar a compensat descoperirea erorii de rationament facuta de catre A1.</p>
+<p>A2 Este de apreciat ca s-au folosti notele bibliografice, dar problematic ca doar pentru a dovedi exemplele nenumarate, care nu au folosit foarte mult in lipsa rationamentului logic cauza-efect despre care am tot vorbit.</p>
+<p>N2 Nu era nevoie sa se piarda energie si timp pe discutia salariilor cetatenilor. Ar fi fost utila o concluzie putin mai dezvoltata. Raspunsurile la micile &ldquo;rautati&rdquo; din partea afirmatorilor au fost bune si sustinute de dovezi.</p>
+<p>O atentionare globala: aveti grija la greselile de exprimare, punctuatie, acord. Nu folositi limbaj colocvial intr-o dezbarere academica. Adresati-va arbitrului, nu vorbiti unii cu altii in timpul dezbaterii; fiti mai impersonali.</p>
+<p>Echipa castigatoare: E. Negatoare</p>
+
+
+<table border="1" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td width="128" valign="top">
+<p>Vorbitor</p>
+</td>
+<td width="128" valign="top">
+<p>Continut</p>
+</td>
+<td width="128" valign="top">
+<p>Strategie</p>
+</td>
+<td width="128" valign="top">
+<p>Stil</p>
+</td>
+<td width="128" valign="top">
+<p>Total</p>
+</td>
+</tr>
+<tr>
+<td width="128" valign="top">
+<p>A1</p>
+</td>
+<td width="128" valign="top">
+<p>10</p>
+</td>
+<td width="128" valign="top">
+<p>6</p>
+</td>
+<td width="128" valign="top">
+<p>4</p>
+</td>
+<td width="128" valign="top">
+<p>20</p>
+</td>
+</tr>
+<tr>
+<td width="128" valign="top">
+<p>N1</p>
+</td>
+<td width="128" valign="top">
+<p>11</p>
+</td>
+<td width="128" valign="top">
+<p>8</p>
+</td>
+<td width="128" valign="top">
+<p>4</p>
+</td>
+<td width="128" valign="top">
+<p>23</p>
+</td>
+</tr>
+<tr>
+<td width="128" valign="top">
+<p>A2</p>
+</td>
+<td width="128" valign="top">
+<p>10</p>
+</td>
+<td width="128" valign="top">
+<p>7</p>
+</td>
+<td width="128" valign="top">
+<p>4</p>
+</td>
+<td width="128" valign="top">
+<p>21</p>
+</td>
+</tr>
+<tr>
+<td width="128" valign="top">
+<p>N2</p>
+</td>
+<td width="128" valign="top">
+<p>11</p>
+</td>
+<td width="128" valign="top">
+<p>8</p>
+</td>
+<td width="128" valign="top">
+<p>4</p>
+</td>
+<td width="128" valign="top">
+<p>23</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+
+</div>A1 -> 20 puncte<br>N1 -> 23 puncte<br>A2 -> 21 puncte<br>N2 -> 23 puncte<br>Castiga echipa: <h3 style='display:inline;color:red;'>Pokemon (negatori)</h3></div><hr><div class='decizie'><h3>Horia Ciochina
+                <img src='../../../../images/little_stuff/16-em-up.png' class='decizie_toggler'></h3><div class='normal_text'><p>discurs A1</p>
+
+<p>Argumentele sunt prezentate mult prea succint. Ar fi trebuit ca vorbitorul sa vina cu mai multe exemple la primul argument si sa detalieze cum anume motiune ar ajuta. Exemplele care ar fi fost relevant: personaje instarite care au platit amenzi infime pentru diverse incalcari ale legii.</p>
+<p>Argumentul al doilea arata care anume e situatie in tari in care motiunea a fost adoptata. Argumentul ar fi fost mult mai efficient daca s-ar fi demonstrate ca introducerea legii a dus la o siguranta crescuta pe sosele.</p>
+
+<p>discurs N1</p>
+
+<p>Primul contra-argument cu care vine N1 este unul foarte bun: demonstreaza ca, practice, amenzile pe care romanii le vor avea de platit vor fi mai mici decat sub SQ, datorita veniturilor mici pe care le au (cel putin in mod official).</p>
+<p>Apoi N1 vine si arata ca argumentul al doilea al afirmatorilor nu arata o cauza si un efect si ca, putin mai tarziu in discurs, exista diferente foarte mari intre calitatea infrastructurii rutiere din tara noastra si din tarile date ca exemplu. Un argument mai puternic ar fi fost sa se arata ca in tari la fel de dezvoltate unde nu se aplica motiunea, numarul de accidente/victim este similar.</p>
+<p>N1 vine si propune&nbsp;&nbsp;o alta abordare aceea a confiscarii autovehiculului, dar aceasta propunere nu exclude implementarea motiunii.</p>
+<p>Salut modul de folosire a surselor, pentru a fi perfect trebuie indicate si data accesarii sursei.</p>
+
+<p>discurs A2</p>
+
+<p>Discursul incepe bine cu aducerea catorva exemple de oameni care au ramas fara permis pentru ca au condus cu viteza prea mare. Acest lucru nu arata daca sau nu acesti oameni ar fi facut acelasi lucru avand in vedere implementarea motiunii.</p>
+<p>Contra-argumentarea primului argument adus de N1 ar fi putut fi mai buna. Este adevarat ca cei cu venituri mici nici nu si-ar putea cumpara masini, dar aici se discuta de veniturile oficiale si nu de piata neagra. Ar fi fost o idee ca afirmatorii sa preia ideea negatorilor si sa arate cum anume pe baza tipului de masina se poate calcula amenda.</p>
+<p>Apoi se revine la ideea ca infrastructura este, sau nu, importanta in siguranta strazilor, iar A2 ne spune ca el nu considera un factor decisiv lipsa infrastructurii adecvate. Din pacate simpla exprimare a parerii nu este indeajuns.</p>
+<p>Incheierea penultimului paragraf ne arata un A2 neglijent. Ar fi fost frumos sa verifice sursa si sa vada ca A1 se referea la Comisia de la Venetia formata din experti in drept constitutional si nu la politistii venetieni.</p>
+
+<p>discurs N2</p>
+
+<p>N2 vine si reface contra-argumentele negatoare aratand chestiunile ignorate de catre echipa Afirmatoare. Avand in vedere lungimea redusa a discursului ar fi fost recomandata detalierea unor parti cum ar fi problema accesului politistilor la date personale sau poate chiar o analiza pe baza ariilor de conflict din motiune.</p>
+
+<p>Decizie</p>
+<p>Decizia merge&nbsp;<strong>catre negatori:</strong>&nbsp;acestia reusesc sa demonstreze faptul ca amenzile pe care oamenii le-ar plati ar fi mai mici si sa arate faptul ca afirmatorii nu si-au facut datoria in a demonstra ca implementarea acestei motiuni va avea efecte benefice.</p>
+
+<table border="0" cellspacing="0" cellpadding="0" width="259">
+<tbody>
+<tr>
+<td width="64" valign="bottom">
+<p><strong>Vorbitor</strong></p>
+</td>
+<td width="67" valign="bottom">
+<p><strong>Categorie</strong></p>
+</td>
+<td width="64" valign="bottom">
+<p><strong>Punctaj</strong></p>
+</td>
+<td width="64" valign="bottom">
+<p><strong>Total</strong></p>
+</td>
+</tr>
+<tr>
+<td rowspan="3" width="64">
+<p>A1</p>
+</td>
+<td width="67">
+<p>Continut</p>
+</td>
+<td width="64">
+<p>9</p>
+</td>
+<td rowspan="3" width="64">
+<p>20</p>
+</td>
+</tr>
+<tr>
+<td width="67">
+<p>Strategie</p>
+</td>
+<td width="64">
+<p>8</p>
+</td>
+</tr>
+<tr>
+<td width="67">
+<p>Stil</p>
+</td>
+<td width="64">
+<p>3</p>
+</td>
+</tr>
+<tr>
+<td rowspan="3" width="64">
+<p>N1</p>
+</td>
+<td width="67">
+<p>Continut</p>
+</td>
+<td width="64">
+<p>10</p>
+</td>
+<td rowspan="3" width="64">
+<p>24</p>
+</td>
+</tr>
+<tr>
+<td width="67">
+<p>Strategie</p>
+</td>
+<td width="64">
+<p>9</p>
+</td>
+</tr>
+<tr>
+<td width="67">
+<p>Stil</p>
+</td>
+<td width="64">
+<p>5</p>
+</td>
+</tr>
+<tr>
+<td rowspan="3" width="64">
+<p>A2</p>
+</td>
+<td width="67">
+<p>Continut</p>
+</td>
+<td width="64">
+<p>10</p>
+</td>
+<td rowspan="3" width="64">
+<p>19</p>
+</td>
+</tr>
+<tr>
+<td width="67">
+<p>Strategie</p>
+</td>
+<td width="64">
+<p>7</p>
+</td>
+</tr>
+<tr>
+<td width="67">
+<p>Stil</p>
+</td>
+<td width="64">
+<p>2</p>
+</td>
+</tr>
+<tr>
+<td rowspan="3" width="64">
+<p>N2</p>
+</td>
+<td width="67">
+<p>Continut</p>
+</td>
+<td width="64">
+<p>10</p>
+</td>
+<td rowspan="3" width="64">
+<p>22</p>
+</td>
+</tr>
+<tr>
+<td width="67">
+<p>Strategie</p>
+</td>
+<td width="64">
+<p>9</p>
+</td>
+</tr>
+<tr>
+<td width="67">
+<p>Stil</p>
+</td>
+<td width="64">
+<p>3</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</div>A1 -> 20 puncte<br>N1 -> 24 puncte<br>A2 -> 19 puncte<br>N2 -> 22 puncte<br>Castiga echipa: <h3 style='display:inline;color:red;'>Pokemon (negatori)</h3></div><hr><h3 class='important'>Vrem parerea ta! Pentru asta, trebuie sa te loghezi.</h3><h3>Clasament meci</h3><p>Medii punctaje</p>A1 -> 20.00 puncte<br>N1 -> 23.50 puncte<br>A2 -> 20.00 puncte<br>N2 -> 22.50 puncte<br>Castiga echipa: <h3 style='display:inline;color:red;'>Pokemon (negatori)</h3>
+                <div class='clear'></div>
+        </div><!-- end main content -->
+         <div class='clear'></div>
+</div>
+<div id="pix"></div>
+
+
+                                </div><!--end main -->
+                                <div id='parteneri'>
+                                    <span class='tr'></span><span class='tl'></span><span class='br'></span><span class='bl'></span><span id="filler"></span>
+                                    <div class='parteneri' id='sustinatori'>
+                                        <span class='floating_text' id='un_proiect'>Un proiect</span>
+                                        <a href='http://www.ardor.org.ro/'><div class='image' id='ardor'>Ardor</div></a>
+                                        <span class='floating_text' id='finantatori'>Finanțatori</span>
+                                        <a href='http://www.opensocietyfoundations.org/'><div class='image' id='open_society'>Open Society Foundation </div></a>
+                                        <a href='http://www.studentiq.ro//'><div class='image' id='memoplus'>MemoPlus</div></a>
+                                        <!-- <a href='http://www.ratiufamilyfoundation.com/'><div class='image' id='FundatiaRatiu'>Ardor</div></a>
+                                        <a href='http://www.eef.md/'><div class='image' id='eef'>East Europe Foundation</div></a>
+                                        <a href='http://www.mts.gov.md/'><div class='image' id='mdminister'>Ministerul Tineretului si Sportului al Republicii Moldova</div></a> -->
+
+                                        <span class='floating_text' id='parteneri_text'>Parteneri</span>
+
+                                        <a href='http://www.policycenter.eu/'><div class='image' id='PolicyCenter'>Policy Center</div></a>
+                                        <a href='http://www.britishcouncil.org/'><div class='image' id='BritishCouncil'>British Council</div></a>
+                                        <a href='http://www.europuls.ro/'><div class='image' id='europuls'>Europuls</div></a>
+                                        <a href='http://www.cere.ro/'><div class='image' id='cere'>Ce-Re</div></a>
+                                        <a href='http://www.primeromania.ro/'><div class='image' id='prime'>Prime Romania</div></a>
+                                        <a href='http://www.cji.ro/'><div class='image' id='cji'>Centrul pentru jurnalism independent</div></a>
+                                        <a href='http://www.aiesectm.ro/'><div class='image' id='aisec'>Aisec</div></a>
+                                        <!-- ===================================================================================================== -->
+                                        <a href='http://www.cogitus.ro/'><div class='image' id='cogitus'>Cogitus</div></a>
+                                        <a href='http://www.adevarul.ro/international/foreign_policy/'><div class='image' id='foreignPolicy'>Foreign Policy</div></a>
+                                        <a href='http://www.elsa.ro/'><div class='image' id='elsa'>Elsa</div></a>
+                                        <a href='http://www.vipromania.ro/'><div class='image' id='vipromania'>Voluntari pentru idei si proiecte</div></a>
+                                        <a href='http://www.ongtrust.ro/'><div class='image' id='ongtrust'>Trust</div></a>
+
+                                        <!-- ===================================================================================================== -->
+                                        <a href='http://www.leap.ro/'><div class='image' id='leap'>Leap</div></a>
+                                        <a href='http://www.younginitiative.org/'><div class='image' id='younginitiative'>Asociatia young initiative</div></a>
+                                        <a href='http://www.asjc.ro/'><div class='image' id='asjc'>Asjc</div></a>
+                                        <a href='http://osut.ro/'><div class='image' id='osut'>Osut</div></a>
+                                        <div class='clear'></div>
+                                    </div>
+                                    <div class='parteneri' id='parteneri_institutionali'>
+                                        <span class='floating_text' id='sponsori_text'>Sus&#539;in&#x0103;tori</span>
+                                        <a href='http://www.cartier.md/'><div class='image' id='cartier_logo'>Editura Cartier</div></a>
+                                        <a href='http://www.pll.md/ro/'><div class='image' id='biblio_logo'>Biblioteca publica de drept</div></a>
+                                        <span class='floating_text' id='institutii_text'>Parteneri institu&#539;ionali</span> 
+                                        <ul id='institutii'>
+                                            <!-- <span class='floating_text' id='institutii_text'>Parteneri institu&#539;ionali:</span> -->
+                                            <li><a href='http://www.politice.ro/'>Facultatea de &#536;tiin&#539;e Politice SNSPA </a></li>
+                                            <li><a href='http://www.comunicare.ro/'>Facultatea de Comunicare &#537;i Rela&#539;ii Publice SNSPA</a></li>
+                                            <li><a href='http://www.fspub.ro/'>Facultatea de &#536;tiin&#539;e Politice Universitatea Bucure&#537;ti</a></li>
+                                            <li><a href='http://www.filosofie.unibuc.ro/'>Facultatea de Filosofie Universitatea Bucure&#537;ti</a></li>
+                                            <li><a href='http://litere.unibuc.ro/'>Facultatea de Litere din Universitatea Bucure&#x015f;ti</a></li>
+                                            <li><a href='http://www.unibuc.ro/ro/fac_fsas_ro'>Facultatea de Sociologie Universitatea Bucure&#537;ti</a></li>
+                                            <li><a href='http://laws.uaic.ro/'>Facultatea de Drept Universitatea Alexandru Ioan Cuza Ia&#537;i</a></li>
+                                            <li><a href='http://www.uaic.ro/uaic/bin/view/Academic/Filosofie'>Facultatea de Filosofie si &#536;tiin&#539;e Social Politice Universitatea AIC Ia&#537;i</a></li>
+                                            <li><a href='http://www.upa.ro/'>Facultatea de Drept si Facultatea de &#x015e;tiin&#x0163;e Politice si Administrative Universitatea Petre Andrei Ia&#x015f;i</a></li> 
+
+                                            <li><a href='http://www.ubbcluj.ro/'>Universitatea Babe&#537;-Bolyai Cluj Napoca</a></li>
+                                            <li><a href='http://www.uvt.ro/'>Universitatea de Vest Timi&#537;oara</a></li>
+                                            <li><a href='http://www.upt.ro/'>Universitatea Politehnica Timi&#537;oara</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class='parteneri' id='parteneri_media'>
+                                        <span class='floating_text' id='media_text'>Parteneri media</span>
+                                        <a href='http://www.hotnews.ro/'><div class='image' id='hotnews'>HotNews</div></a>
+                                        <!-- <a href='http://www.lumebuna.ro/'><div class='image' id='lumebuna'>Lume Buna</div></a> -->
+                                        <a href='http://www.romaniapozitiva.ro/'><div class='image' id='romaniapozitiva'>Romania Pozitiva</div></a>
+                                        <a href='http://totb.ro/'><div class='image' id='thinkoutsidethebox'>Think Outside The Box</div></a>
+                                        <a href='http://www.facebook.com/carevasazica.vip'><div class='image' id='carevasazica'>Carevasazica</div></a>
+                                        <a href='http://www.studentie.ro/'><div class='image' id='studentiero'>Studentie.ro</div></a>
+                                        <a href='http://startub.unibuc.ro/'><div class='image' id='startub'>startub.unibuc.ro</div></a>
+                                        <!-- <a href='http://www.tvr.ro/tvr_cluj.php'><div class='image' id='tvrcluj'>Tvr Cluj</div></a> -->
+                                        <!-- <a href='http://www.radiotransilvania.ro'><div class='image' id='radiotransilvania'>Radio Transilvania</div></a> -->
+                                        <a href='http://iasifun.ziaruldeiasi.ro/'><div class='image' id='iasifun'>Iasi fun</div></a>
+                                        <a href='http://www.ziaruldeiasi.ro/'><div class='image' id='ziaruldeiasi'>Ziarul de Iasi</div></a>
+                                        <a href='http://www.kissfm.ro/timisoara'><div class='image' id='kissfm'>KissFm</div></a>
+
+                                        <div class='clear'></div> 
+                                    </div>
+                                    <div class='clear'></div>
+
+                                </div>	
+                            </div>	<!-- end wrap -->
+                            <div id='footer_mare'>
+                                <div id='footer'>
+                                    <div id='links' class='footer'>
+                                        <div id='menu1' style='margin:auto;'> <ul id='meniu_prinicpal'><li><a href='../../../contacte/index.html'> Contact </a></li>
+<li><a href='../../../clubdebate/index.html'> Cluburile </a></li>
+<li><a href='../../../oamenii/index.html'> Oamenii </a></li>
+<li><a href='../../../proiectul/index.html'> Proiectul </a></li>
+<li><a href='../../../home/index.html'> Acasa </a></li>
+</ul></div><!--end menu-->
+                                    </div><!--
+                                    <div id='contact' class='footer'>
+                                            <h4>Contact</h4>
+                                            <p>office@closer2oxford.ro</p>
+                                            <p>bogdan.draghicescu@closer2oxford.ro<br>
+                                            <span class='detalii'> (asistenta tehnica web - orice probleme legate de site)</span></p>
+                                    </div>
+                                    -->
+                                    <div id='newsletter' class='footer'>
+                                        <script src="../../../../../connect.facebook.net/en_US/all.js#xfbml=1"></script><fb:like href="http://www.facebook.com/pages/Closer2Oxford/162758797069605" width="250" colorscheme="dark"></fb:like>
+                                        <!--<h4>Newsletter</h4>
+                                        <form action='/page/newsletter'>
+                                                <input type='text' name='email'>
+                                                <input type='submit' id='submit' value='>'>
+                                                        
+                                        </form>-->
+                                    </div>
+                                    <div id='credits'>
+                                        Copyright(c) 2021 ARDOR |  Toate drepturile rezervate | Toate logo-urile si sloganurile de pe site sunt proprietate intelectuala inregistrata si nu pot fi reproduse fara acordul explicit al detinatorilor. <br>
+                                            <br /><br />
+                                            <b>Disclaimer</b><br /><i>
+
+                                                Programul educational Closer to Oxford este un program non-profit si nu are o legatura cu universitatea cu acelasi nume, referirea la Oxford avand doar o semnificatie simbolica.
+                                            </i>
+                                    </div>
+
+                                </div>		
+                            </div>		
+
+                            <div id="finantatde">Acest proiect este finantat cu sustinere din partea Comisiei Europene. Aceast publicatie [comunicare] reflecta doar
+                                vederile autorului, iar Comisia nu poate fi facuta  responsabila pentru utilizarea informatiei pe care o contine.</div>
+
+
+                        </body>
+                        </html>

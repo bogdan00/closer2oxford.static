@@ -1,0 +1,337 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml-strict.dtd">
+<HTML xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+    <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+            <link rel="icon" type="image/png"  href="../../closer2oxford.ro/favicon.html">
+                <link rel="stylesheet" href="var/layout.css" type="text/css">
+                    <title>Closer to Oxford - e timpul pentru argumente!</title>
+                    <link rel="alternate" type="application/rss+xml"  href="rss_feed" title="Stiri Closer2Oxford">
+                        <!-- <link rel="image_src" property="og:image"  href="/images/layout/closer2oxford_fb_white.png" /> -->
+                        <link rel="image_src" property="og:image"   type="image/jpeg"  href="../uploads/2015/06/9/facebook_icon.html" />
+                        <link rel="image_src" type="image/jpeg"  href="../uploads/2015/06/9/icon-facebook.gif" /> 
+						<meta name="description" content="Closer2Oxford pune în valoare oameni şi argumentele lor, în dezbateri online şi publice alături de tineri şi invitați avizaţi"/>
+                        <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9" />
+<script type='text/javascript' src='../js/jquery-1.4.4.min.js'></script>
+<script>var $j = jQuery.noConflict();</script>
+<script type='text/javascript' src='../js/tinymce/tiny_mce.js'></script>
+<script type='text/javascript' src='../js/jquery.form.js'></script>
+<script type='text/javascript' src='../js/fbLoginRegister.js'></script>
+<script type='text/javascript' src='var/javascript.js'></script>
+<script type='text/javascript' src='../js/jquery.hovertip-1.0.min.js'></script> 
+<script type='text/javascript' src='../js/jquery.jgrowl_minimized.js'></script> 
+<link rel='stylesheet' href='../css/jquery.jgrowl.css' media='screen' type='text/css'> 
+<script type='text/javascript' src='../js/jquery.timer-min.js'></script> 
+<meta name='description' content=''/> 
+<meta name='keywords' content=''/> 
+<style>.hovertip{
+    position:absolute;
+    padding:10px 13px;
+    z-index:2;
+    max-width:300px;
+    color:#303030;
+    background-color:#f5f5b5;
+    border:1px solid #DECA7E;
+    font-family:sans-serif;
+    font-size:12px;
+    line-height:18px;
+    text-align:left;
+    }</style> 
+<script type='text/javascript'>$j(document).ready(function(){$j('.tooltip').hovertip({'offset':[20,20]});get_notif();});
+
+if(!Array.indexOf){Array.prototype.indexOf = function(obj){for(var i=0; i<this.length; i++){if(this[i]==obj){return i;}}return -1;}}
+    hashuri = [] ;
+	 var tick_timer= 3000 ;
+ 
+	 function get_notif()
+        {
+		  
+		  //console.log(tick_timer);
+	     
+		  setTimeout(get_notif,tick_timer);
+        
+		   $j.ajax(
+            {
+                url: '/page/notif/show_events',
+                dataType: 'json',
+                data: "{}",
+                success: function(data)
+                    {
+                    $j.each(data,function(index,data){
+                        try
+                            {
+                            if( hashuri.indexOf(data.hash) == -1 )
+                                {
+                                hashuri.push(data.hash);
+                                $j.jGrowl(
+                                    data.str,
+                                    {
+                                        corners:'1px',
+                                        life: data.life,
+                                        header:data.title,
+                                        hash: data.hash,
+                                        sticky: data.sticky,
+                                        close: function(e,m,o)
+                                            {
+                                                $j.ajax({url:'/page/notif/delete_single_event/' + o.hash});
+                                            }
+                                    });
+                                }
+                            }
+                        catch(e){}
+                        })
+                    }
+            });
+        }
+	 </script> 
+ 
+                            
+  <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-19111721-1']);
+  _gaq.push(['_setDomainName', '.closer2oxford.ro']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+    
+                        </head>
+                        <body>
+                            <div id="global_wrap">
+                                <div id="header">
+                                    <a href='../index.html'><div id='logo'><img src='../images/layout/sigla.jpg'></div></a>
+                                    <a class='noExternal' href='http://www.facebook.com/pages/Closer2Oxford/162758797069605'><img src='../images/fb.png' style='height:30px;float:right;clear:right;margin:10px 5px 5px 5px;border:none;'/></a>
+                                    <a href='rss_feed'><img src='../images/feed-icon.png' style='height:30px;float:right;clear:right;margin:5px;border:none;'/></a>
+                                </div>
+                                <div id="meniu">
+                                    <div  id='register_login'>
+
+                                        
+  <a href='#' class='todo' id='login'>Login </a> &nbsp;<a href='register.html' class='todo' id='register'>Register</a>
+    <div id='login_box'>
+		  <form action='https://dev.closer2oxford.ro/page/ro/login_user/logon' method='post' id='user_login_form'>
+					 <div>Email: <input type='text' name='email'/> </div><br />
+					 <div>Pass: <input type='password' name='passwd'/></div><br />
+					 <a href='#' class='password_forgot'>forgot password?</a>
+					 <input type='hidden' value='/page/arbitru' name='returnto' class='submiter'/><br />
+					 <input type='submit' value='login' name='btn' class='submiter'/><br />
+		  </form>
+		  
+		  <form action='https://dev.closer2oxford.ro/page/ro/login_user/reset_user_pw' method='post' id='user_reset_form'>
+					 <div>Email: <input type='text' name='email'/> </div><br />
+					 <a href='#' class='password_forgot'>login?</a>
+					 <input type='hidden' value='/page/arbitru' name='returnto' class='submiter'/><br />
+					 <input type='submit' value='reset' name='btn' class='submiter'/><br />
+		  </form>
+		  
+    </div>
+    
+                                    </div>
+                                    <div id='menu1' style='margin:auto;'> <ul id='meniu_prinicpal'><li><a href='contacte/index.html'> Contact </a></li>
+<li><a href='clubdebate/index.html'> Cluburile </a></li>
+<li><a href='oamenii/index.html'> Oamenii </a></li>
+<li><a href='proiectul/index.html'> Proiectul </a></li>
+<li><a href='home/index.html'> Acasa </a></li>
+</ul></div><!--end menu-->
+                                </div>
+                                <div id="main"> 
+                                    <!--<div id='stiri-padding'>
+        <div id='stiri_back'>
+                {stiri} 
+    
+               
+        </div>-->
+        
+</div>
+<div  id="content-padding">
+        <div id='sidebar_menu'>
+                <span class='tr'></span>
+                <span class='tl'></span>
+                <span class='br'></span>
+                <span class='bl'></span>
+                <span id="filler"></span>
+                <ul class='submeniu'><a href='clubdebate.html'><li>Club debate  </li></a><a href='coach.html'><li>Coach  </li></a><a href='tainer.html'><li>Trainer  </li></a><a href='profesor.html'><li>Profesor  </li></a><a href='arbitru.html'><li>Arbitru  </li></a></ul>    
+                <ul></ul>
+                
+                <div class='clear'></div>
+        </div>
+        <div id="content">
+                <span class='tr'></span>
+                <span class='tl'></span>
+                <span class='br'></span>
+                <span class='bl'></span>
+                <span id="filler"></span>
+                <p><strong>&nbsp;</strong><strong>ARBITRUL</strong></p>
+<p><a href="../documents/cluburi/arbitru.pdf">Textul in format pdf</a>&nbsp;</p>
+<p>&nbsp;</p>
+<p><strong>&nbsp;Standarde de jurizare</strong></p>
+<p>Arbitrii nu sunt singura componentă necesară desfășurării unei dezbateri, &icirc;nsă aceștia aduc o contribuție extrem de importantă la nivel pedagogic. Interacțion&acirc;nd cu arbitrii, studenții devin motivați să participe la evenimente de acest fel, &icirc;n vederea&nbsp; dob&acirc;ndirii experienței &icirc;n dezbateri și a dezvoltării aptitudinilor oratorice. Așadar, un arbitru trebuie să conștientizeze faptul că rolul său nu este doar de a desemna un c&acirc;știgător, ci și de a se asigura că &icirc;ntreaga experiență este una educativă pentru toți studenții. Astfel, arbitrii trebuie să fie permanent la curent cu maniera de jurizare a diferitelor evenimente și să răm&acirc;nă tot timpul bine informați vis a vis de conduita pe care trebuie să o adopte.</p>
+<p><strong>I.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </strong><strong>Conduita fundamentală de jurizare</strong></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &Icirc;n timpul unui discurs sau al unei dezbateri, arbitrii sunt observatori nepărtinitori, așadar este esențial ca aceștia să fie profesioniști și demni. &Icirc;n același timp, ei ar trebui să &icirc;ncurajeze o atmosferă plăcută &icirc;nainte, &icirc;n timpul și după rundă. &Icirc;n general, arbitrii ar trebui să respecte următoarele principii:</p>
+<p><em>A. Un arbitru trebuie fie punctual.</em></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Arbitrul trebuie să ajungă la timp la runda pe care urmează să o jurizeze. Acesta trebuie să fie conștient dacă este cuprins sau nu &icirc;n schema de arbitraj și trebuie să cunoască programul și regulile unei competiții. Arbitrul trebuie să cunoască locația competiției, pentru a evita &icirc;nt&acirc;rzierile. De asemenea, acesta trebuie să se informeze dacă buletinul său de vot va fi adus la rundă de către organizatori sau trebuie sa și-l procure el/ea &icirc;nsuși/&icirc;nsăși. &Icirc;n toate cazurile, arbitrii trebuie să fie accesibili &icirc;ntre runde, &icirc;n cazul &icirc;n care e nevoie de aceștia pentru jurizarea altor evenimente.</p>
+<p><em>&nbsp;B. Un arbitru nu poate juriza runde unde există un conflict de interese.</em></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Arbitrii nu trebuie să jurizeze atunci c&acirc;nd un posibil conflict de interese ar putea implica o atitudine părtinitoare. &Icirc;n acest sens, un arbitru nu va juriza o echipă sau un student de la facultatea (&icirc;n cazul unei competiții locale) sau din localitatea (&icirc;n cazul unei competiții naționale) pe care o reprezintă. De asemenea, acesta nu va juriza o echipă sau un student cu care a făcut pregătire &icirc;n prealabil. Mai mult, &icirc;n interacțiunea cu studenții, un arbitru ar trebui să fie atent la aparențe. Chiar dacă trebuie să fie disponibil și amabil, favorizarea &icirc;n orice fel a unul student trebuie evitată. Acest lucru poate duce la formarea unei idei greșite sau &icirc;n anumite cazuri la descurajarea altor studenți. &Icirc;n final, &icirc;n majoritatea cazurilor (mai ales &icirc;nainte de rundele eliminatorii), un arbitru nu ar trebui să arbitreze același student sau aceeași echipă de mai multe ori și ar trebui să se consulte cu directorul de turneu &icirc;n cazul &icirc;n care sunt planificați să o facă.<em> <br /></em></p>
+<p><em>C. Un arbitru trebuie să asigure o atmosferă respectuoasă &icirc;n timpul evenimentului pe care &icirc;l jurizează.</em></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Toți participanții au dreptul la un mediu de sprijin și respect &icirc;n care să fie auziți. &Icirc;n acest sens, arbitrii trebuie să anunțe membrii audienței să păstreze liniștea și să se abțină de la un comportament nepotrivit precum răspunsul la telefoanele mobile, vorbitul sau distragerea atenției participanților. Dacă este necesar, poate mustra orice membru al audienței ce devine un factor disturbator (&icirc;naintea sau &icirc;n timpul evenimentului).</p>
+<p><em>D. Un arbitru trebuie să păstreze o atitudine respectuoasă.</em></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Este esențial ca un arbitru să mențină o atmosferă de respect și maturitate &icirc;n timpul unei runde. Arbitrii trebuie să demonstreze că sunt pe deplin atenți la discursurile studenților, at&acirc;t prin ascultarea activă, c&acirc;t și prin luarea notițelor. De asemenea, &icirc;n timpul unei runde, arbitrii trebuie să adope o atitudine deschisă, &icirc;ncurajatoare, pentru a insufla o stare de confort studenților. Ei nu trebuie nicidecum să pară amenințători, ostili. Un arbitru nu ar trebui să-și compromită integritatea prin afișarea unor &bdquo;semnale&rdquo; - fie acestea pozitive sau negative &ndash; care l-ar implica automat &icirc;n rundă.</p>
+<p><em>E. Un arbitru ia notițe &icirc;n mod activ &icirc;n timpul evenimentului pe care &icirc;l jurizează.</em></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Luarea de notițe sau &bdquo;flowing-ul&rdquo; &icirc;n timpul unei runde nu este doar un mod excelent de a dovedi vorbitorilor că arbitrul este atent, ci și o componentă necesară pentru luarea unei decizii cinstite ce poate ajuta la completarea buletinului de vot. Dacă un arbitru nu ar lua notițe &icirc;n timpul unei dezbateri, ar fi foarte dificil pentru acesta să țină pasul cu toate argumentele pe măsură ce acestea sunt prezentate. De asemenea, atunci c&acirc;nd punctajele și rangurile sunt stabilite la sf&acirc;rșitul unei runde, notarea unor detalii referitoare la prestația vorbitorului pot ajuta arbitrul să facă diferențe nuanțate &icirc;ntre participanți. Totodată, un flow complet este foarte util pentru a acorda un feedback coerent și cosntructiv.</p>
+<p><em>F. Un arbitru trebuie să asigure cronometrarea adecvată a unei runde.</em></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Pentru a garanta un eveniment corect pentru toți participanții, arbitrul trebuie să asigure cronometrarea potrivită a rundei. Acest lucru nu &icirc;nseamnă că acesta trebuie nepărat să țină personal timpul; această sarcină poate fi delegată către un spectator (&icirc;n mod ideal o persoană neasociată cu nici un participant). &Icirc;n general, arbitrul sau cel ce &ldquo;ține timpul&rdquo; (&icirc;n engleză ,,timekeeper&rdquo;) indică timpul rămas &icirc;ntr-o etapă a dezbaterii ridic&acirc;nd numărul corespunzător de degete (trei degete indic&acirc;nd trei minute rămase, șamd.). Atunci c&acirc;nd mai răm&acirc;n doar 30 de secunde, ceasornicul va indica acest lucru &icirc;nchiz&acirc;ndu-și m&acirc;nă pe jumătate. C&acirc;nd timpul s-a epuizat, ceasornicul ridică pumnul sau formează un T cu palmele, pentru a atenționa că &ldquo;time is out&rdquo;. Nu este necesar ca semnalele să fie afișate permanent, &icirc;nsă acestea trebuie păstrate p&acirc;nă c&acirc;nd vorbitorul le observă.</p>
+<p>Vorbitorul nu trebuie să se oprească &icirc;n mijlocul unei propoziții atunci c&acirc;nd semnalul este etalat. Totuși, nu &icirc;l poate ignora &icirc;n totalitate. Dacă acesta continuă &icirc;n mod excesiv (&icirc;ntr-o dezbatere acest lucru &icirc;nseamna &icirc;nceperea unei idei noi; &icirc;ntr-un discurs, acest lucru &icirc;nseamnă am&acirc;narea &icirc;ncheierii frazei), un arbitru ar trebui să ignore ce s-a spus dupa semnalul de epuizare a timpului și (eventual) să penalizeze vorbitorul.</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &Icirc;n cazul &icirc;n care evenimentul a fost prevăzut cu timp de g&acirc;ndire, arbitrul trebuie să se asigure ca acest timp să fie cronometrat și anunțat, fie de către <em>time keeper</em>, fie de el &icirc;nsuși.</p>
+<p><em>G. Un arbitru ar trebui să prezinte o scurtă filozofie de arbitraj, de care să țină cont &icirc;n luarea deciziilor (dacă regulile competiției permit acest lucru).</em></p>
+<p>&nbsp;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>II.</strong> <strong>Luarea deciziilor, completarea buletinelor de vot și comentariile.</strong></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;Procesul prin care un arbitru ajunge la o decizie trebuie să fie nepărtinitor, rațional și cinstit. Mai mult, arbitrul este obligat să explice clar decizia sa &icirc;ntr-un mod ce avantajează toți participanții. Arbitrii trebuie să respecte cu strictețe criteriile asociate formatului pe care &icirc;l arbitrează. &Icirc;n toate competițiile, mai puțin cele ce folosesc regulile Campionatului Mondial de Dezbateri Universitare, arbitrii trebuie să ajungă la o decizie &icirc;n mod independent, fără o discuție preliminară cu un complet de arbitri sau cu participanții.</p>
+<p>&nbsp;</p>
+<p><em>A. Un arbitru trebuie să tindă spre o decizie cinstită și nepărtinitoare. Procesul decizional al unui arbitru este dublu:</em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p>1. Trebuie să evalueze runda dupa regulile specifice evenimentului. Anumite evenimente &ndash; &icirc;n general discursurile publice &ndash; au prevăzute penalizări pentru anumite &icirc;ncălcări ale regulilor, iar acestea trebuie puse &icirc;n balanță (buletinele de vot pot include liste de referință pentru aceste penalizări).</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2. Trebuie să aibă o judecată critică &icirc;n evaluarea rundei &icirc;n termenii săi proprii. &Icirc;n luarea unei decizii, un arbitru trebuie să facă un efort pentru a nu privilegia propriile gusturi, cunoștințe aprofundate sau impresii personale despre participanți, provenite din runde anterioare.</p>
+<p>&nbsp;</p>
+<p><em>B. Un arbitru trebuie să completeze un buletin de vot ce justifică decizia și oferă participanților o critică clară și constructivă. </em></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Pe parcursul scrierii buletinelor de vot, arbitrii au posibilitatea să explice raționamentele din spatele deciziilor și să ofere critici constructive, utile studenților pentru a se perfecționa. &Icirc;n consecință, arbitrii trebuie să fie meticuloși &icirc;n completarea buletinelor de vot. Nu este suficientă simpla indicare a &bdquo;c&acirc;știgătorului&rdquo;. După o dezbatere, de exemplu, un arbitru ar trebui să se concentreze asupra ce consideră ca fiind ariile centrale de discuție, indic&acirc;nd at&acirc;t cum și de ce cazul c&acirc;știgător a fost cel mai convingător, c&acirc;t și neajunsurile echipei &icirc;nvinse. De asemenea, arbitrii trebuie să explice fiecărui participant motivul pentru care a fost punctat &icirc;n felul respectiv, sublini&acirc;nd moduri &icirc;n care studentul nu a reușit să producă impactul dorit. Arbitrii trebuie să alăture criticii și un feedback constructiv &ndash; chiar &icirc;n completarea unui buletin nec&acirc;știgător, și ar trebui să evite un ton de superioritate. &Icirc;n final, un arbitru trebuie să aprecieze curajul dovedit de toți participanții de a se exprima &icirc;n fața unui public, &icirc;mplic&acirc;ndu-se &icirc;n discutarea unor subiecte complicate și controversate.</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Buletinul de vot este o resursă valoroasă pentru studenți, antrenori și echipe &icirc;ntregi; dacă studenții nu conștientizează motivul pentru care au c&acirc;știgat sau au pierdut o rundă, aceștia nu au posibilitatea să &icirc;nvețe din propria experiență. Aspectele redate &icirc;ntr-un buletin de vot dau șansa participanților să &icirc;nțeleagă cum &icirc;și pot &icirc;mbunătăți performața (de exemplu, vorbitorul nu s-a auzit, a fost prea agresiv sau prea putin expresiv, s-a axat prea mult asupra unor scheme argumentative mai puțin convingătoare etc).</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Buletinele de vot ar trebui să fie accesibile și scrise clar, deoarece anumiți participanți s-ar putea să le citească cu ore sau chiar zile după ce au fost scrise. Arbitrii trebuie să se asigure că scrisul lor este lizibil și pentru că buletinele sunt adesea fotocopiate de mai multe ori și se pot deteriora. Nu &icirc;n ultimul r&acirc;nd, arbitrii trebuie să returneze buletinele de vot la sala de tabulare &icirc;n c&acirc;t mai scurt timp după terminarea dezbaterii.</p>
+<p>&nbsp;</p>
+<p><em>C. Un arbitru trebuie să critice constructiv după rundă (&icirc;n cazul &icirc;n care evenimentul permite acest lucru).</em></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; După anunțarea deciziei, arbitrii ar trebui să profite de ocazie pentru a discuta cu participanții (daca organizatorii competiției permit acest tip de interacțiune). Aceste discuții pot fi extrem de utile pentru studenți, &icirc;n măsura &icirc;n care oferă arbitrilor ocazia de a explica probleme complicate pe larg. Totodată, cu această ocazie, arbitrul poate explicita anumite aspecte importante (și demne de &icirc;mbunătățit/exploatat) din performanța debaterilor &icirc;nainte ca aceștia să avanseze &icirc;n competiție.</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; E important de menționat faptul că aprecierile verbale trebuie să amplifice buletinele de vot &ndash; și nicidecum să le &icirc;nlocuiască. Deoarece comentariile sunt folositoare nu doar participanților, dar și persoanelor care s-au ocupat de pregătirea acestora (care de obicei nu sunt prezente &icirc;n timpul deciziei), este nevoie de o evidență scrisă pe buletine. &Icirc;n toate circumstanțele, arbitrii ar trebui să afle de la organizatorii competiției dacă dezvăluirea deciziilor este permisă. Dacă runda este &ldquo;&icirc;nchisă&rdquo; (adică nu se anunță decizia), arbitrii trebuie doar să ridice probleme importante din dezbatere &icirc;n discuțiile lor cu participanții, fără a specifica &icirc;n mod clar rezultatul deliberării acestora.</p>
+                <div class='clear'></div>
+        </div><!-- end main content -->
+         <div class='clear'></div>
+</div>
+<div id="pix"></div>
+
+
+                                </div><!--end main -->
+                                <div id='parteneri'>
+                                    <span class='tr'></span><span class='tl'></span><span class='br'></span><span class='bl'></span><span id="filler"></span>
+                                    <div class='parteneri' id='sustinatori'>
+                                        <span class='floating_text' id='un_proiect'>Un proiect</span>
+                                        <a href='http://www.ardor.org.ro/'><div class='image' id='ardor'>Ardor</div></a>
+                                        <span class='floating_text' id='finantatori'>Finanțatori</span>
+                                        <a href='http://www.opensocietyfoundations.org/'><div class='image' id='open_society'>Open Society Foundation </div></a>
+                                        <a href='http://www.studentiq.ro//'><div class='image' id='memoplus'>MemoPlus</div></a>
+                                        <!-- <a href='http://www.ratiufamilyfoundation.com/'><div class='image' id='FundatiaRatiu'>Ardor</div></a>
+                                        <a href='http://www.eef.md/'><div class='image' id='eef'>East Europe Foundation</div></a>
+                                        <a href='http://www.mts.gov.md/'><div class='image' id='mdminister'>Ministerul Tineretului si Sportului al Republicii Moldova</div></a> -->
+
+                                        <span class='floating_text' id='parteneri_text'>Parteneri</span>
+
+                                        <a href='http://www.policycenter.eu/'><div class='image' id='PolicyCenter'>Policy Center</div></a>
+                                        <a href='http://www.britishcouncil.org/'><div class='image' id='BritishCouncil'>British Council</div></a>
+                                        <a href='http://www.europuls.ro/'><div class='image' id='europuls'>Europuls</div></a>
+                                        <a href='http://www.cere.ro/'><div class='image' id='cere'>Ce-Re</div></a>
+                                        <a href='http://www.primeromania.ro/'><div class='image' id='prime'>Prime Romania</div></a>
+                                        <a href='http://www.cji.ro/'><div class='image' id='cji'>Centrul pentru jurnalism independent</div></a>
+                                        <a href='http://www.aiesectm.ro/'><div class='image' id='aisec'>Aisec</div></a>
+                                        <!-- ===================================================================================================== -->
+                                        <a href='http://www.cogitus.ro/'><div class='image' id='cogitus'>Cogitus</div></a>
+                                        <a href='http://www.adevarul.ro/international/foreign_policy/'><div class='image' id='foreignPolicy'>Foreign Policy</div></a>
+                                        <a href='http://www.elsa.ro/'><div class='image' id='elsa'>Elsa</div></a>
+                                        <a href='http://www.vipromania.ro/'><div class='image' id='vipromania'>Voluntari pentru idei si proiecte</div></a>
+                                        <a href='http://www.ongtrust.ro/'><div class='image' id='ongtrust'>Trust</div></a>
+
+                                        <!-- ===================================================================================================== -->
+                                        <a href='http://www.leap.ro/'><div class='image' id='leap'>Leap</div></a>
+                                        <a href='http://www.younginitiative.org/'><div class='image' id='younginitiative'>Asociatia young initiative</div></a>
+                                        <a href='http://www.asjc.ro/'><div class='image' id='asjc'>Asjc</div></a>
+                                        <a href='http://osut.ro/'><div class='image' id='osut'>Osut</div></a>
+                                        <div class='clear'></div>
+                                    </div>
+                                    <div class='parteneri' id='parteneri_institutionali'>
+                                        <span class='floating_text' id='sponsori_text'>Sus&#539;in&#x0103;tori</span>
+                                        <a href='http://www.cartier.md/'><div class='image' id='cartier_logo'>Editura Cartier</div></a>
+                                        <a href='http://www.pll.md/ro/'><div class='image' id='biblio_logo'>Biblioteca publica de drept</div></a>
+                                        <span class='floating_text' id='institutii_text'>Parteneri institu&#539;ionali</span> 
+                                        <ul id='institutii'>
+                                            <!-- <span class='floating_text' id='institutii_text'>Parteneri institu&#539;ionali:</span> -->
+                                            <li><a href='http://www.politice.ro/'>Facultatea de &#536;tiin&#539;e Politice SNSPA </a></li>
+                                            <li><a href='http://www.comunicare.ro/'>Facultatea de Comunicare &#537;i Rela&#539;ii Publice SNSPA</a></li>
+                                            <li><a href='http://www.fspub.ro/'>Facultatea de &#536;tiin&#539;e Politice Universitatea Bucure&#537;ti</a></li>
+                                            <li><a href='http://www.filosofie.unibuc.ro/'>Facultatea de Filosofie Universitatea Bucure&#537;ti</a></li>
+                                            <li><a href='http://litere.unibuc.ro/'>Facultatea de Litere din Universitatea Bucure&#x015f;ti</a></li>
+                                            <li><a href='http://www.unibuc.ro/ro/fac_fsas_ro'>Facultatea de Sociologie Universitatea Bucure&#537;ti</a></li>
+                                            <li><a href='http://laws.uaic.ro/'>Facultatea de Drept Universitatea Alexandru Ioan Cuza Ia&#537;i</a></li>
+                                            <li><a href='http://www.uaic.ro/uaic/bin/view/Academic/Filosofie'>Facultatea de Filosofie si &#536;tiin&#539;e Social Politice Universitatea AIC Ia&#537;i</a></li>
+                                            <li><a href='http://www.upa.ro/'>Facultatea de Drept si Facultatea de &#x015e;tiin&#x0163;e Politice si Administrative Universitatea Petre Andrei Ia&#x015f;i</a></li> 
+
+                                            <li><a href='http://www.ubbcluj.ro/'>Universitatea Babe&#537;-Bolyai Cluj Napoca</a></li>
+                                            <li><a href='http://www.uvt.ro/'>Universitatea de Vest Timi&#537;oara</a></li>
+                                            <li><a href='http://www.upt.ro/'>Universitatea Politehnica Timi&#537;oara</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class='parteneri' id='parteneri_media'>
+                                        <span class='floating_text' id='media_text'>Parteneri media</span>
+                                        <a href='http://www.hotnews.ro/'><div class='image' id='hotnews'>HotNews</div></a>
+                                        <!-- <a href='http://www.lumebuna.ro/'><div class='image' id='lumebuna'>Lume Buna</div></a> -->
+                                        <a href='http://www.romaniapozitiva.ro/'><div class='image' id='romaniapozitiva'>Romania Pozitiva</div></a>
+                                        <a href='http://totb.ro/'><div class='image' id='thinkoutsidethebox'>Think Outside The Box</div></a>
+                                        <a href='http://www.facebook.com/carevasazica.vip'><div class='image' id='carevasazica'>Carevasazica</div></a>
+                                        <a href='http://www.studentie.ro/'><div class='image' id='studentiero'>Studentie.ro</div></a>
+                                        <a href='http://startub.unibuc.ro/'><div class='image' id='startub'>startub.unibuc.ro</div></a>
+                                        <!-- <a href='http://www.tvr.ro/tvr_cluj.php'><div class='image' id='tvrcluj'>Tvr Cluj</div></a> -->
+                                        <!-- <a href='http://www.radiotransilvania.ro'><div class='image' id='radiotransilvania'>Radio Transilvania</div></a> -->
+                                        <a href='http://iasifun.ziaruldeiasi.ro/'><div class='image' id='iasifun'>Iasi fun</div></a>
+                                        <a href='http://www.ziaruldeiasi.ro/'><div class='image' id='ziaruldeiasi'>Ziarul de Iasi</div></a>
+                                        <a href='http://www.kissfm.ro/timisoara'><div class='image' id='kissfm'>KissFm</div></a>
+
+                                        <div class='clear'></div> 
+                                    </div>
+                                    <div class='clear'></div>
+
+                                </div>	
+                            </div>	<!-- end wrap -->
+                            <div id='footer_mare'>
+                                <div id='footer'>
+                                    <div id='links' class='footer'>
+                                        <div id='menu1' style='margin:auto;'> <ul id='meniu_prinicpal'><li><a href='contacte/index.html'> Contact </a></li>
+<li><a href='clubdebate/index.html'> Cluburile </a></li>
+<li><a href='oamenii/index.html'> Oamenii </a></li>
+<li><a href='proiectul/index.html'> Proiectul </a></li>
+<li><a href='home/index.html'> Acasa </a></li>
+</ul></div><!--end menu-->
+                                    </div><!--
+                                    <div id='contact' class='footer'>
+                                            <h4>Contact</h4>
+                                            <p>office@closer2oxford.ro</p>
+                                            <p>bogdan.draghicescu@closer2oxford.ro<br>
+                                            <span class='detalii'> (asistenta tehnica web - orice probleme legate de site)</span></p>
+                                    </div>
+                                    -->
+                                    <div id='newsletter' class='footer'>
+                                        <script src="../../connect.facebook.net/en_US/all.js#xfbml=1"></script><fb:like href="http://www.facebook.com/pages/Closer2Oxford/162758797069605" width="250" colorscheme="dark"></fb:like>
+                                        <!--<h4>Newsletter</h4>
+                                        <form action='/page/newsletter'>
+                                                <input type='text' name='email'>
+                                                <input type='submit' id='submit' value='>'>
+                                                        
+                                        </form>-->
+                                    </div>
+                                    <div id='credits'>
+                                        Copyright(c) 2021 ARDOR |  Toate drepturile rezervate | Toate logo-urile si sloganurile de pe site sunt proprietate intelectuala inregistrata si nu pot fi reproduse fara acordul explicit al detinatorilor. <br>
+                                            <br /><br />
+                                            <b>Disclaimer</b><br /><i>
+
+                                                Programul educational Closer to Oxford este un program non-profit si nu are o legatura cu universitatea cu acelasi nume, referirea la Oxford avand doar o semnificatie simbolica.
+                                            </i>
+                                    </div>
+
+                                </div>		
+                            </div>		
+
+                            <div id="finantatde">Acest proiect este finantat cu sustinere din partea Comisiei Europene. Aceast publicatie [comunicare] reflecta doar
+                                vederile autorului, iar Comisia nu poate fi facuta  responsabila pentru utilizarea informatiei pe care o contine.</div>
+
+
+                        </body>
+                        </html>

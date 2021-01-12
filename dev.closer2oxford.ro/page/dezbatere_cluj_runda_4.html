@@ -1,0 +1,631 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml-strict.dtd">
+<HTML xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+    <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+            <link rel="icon" type="image/png"  href="../../closer2oxford.ro/favicon.html">
+                <link rel="stylesheet" href="var/layout.css" type="text/css">
+                    <title>Closer to Oxford - e timpul pentru argumente!</title>
+                    <link rel="alternate" type="application/rss+xml"  href="rss_feed" title="Stiri Closer2Oxford">
+                        <!-- <link rel="image_src" property="og:image"  href="/images/layout/closer2oxford_fb_white.png" /> -->
+                        <link rel="image_src" property="og:image"   type="image/jpeg"  href="../uploads/2015/06/9/facebook_icon.html" />
+                        <link rel="image_src" type="image/jpeg"  href="../uploads/2015/06/9/icon-facebook.gif" /> 
+						<meta name="description" content="Closer2Oxford pune în valoare oameni şi argumentele lor, în dezbateri online şi publice alături de tineri şi invitați avizaţi"/>
+                        <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9" />
+<script type='text/javascript' src='../js/jquery-1.4.4.min.js'></script>
+<script>var $j = jQuery.noConflict();</script>
+<script type='text/javascript' src='../js/tinymce/tiny_mce.js'></script>
+<script type='text/javascript' src='../js/jquery.form.js'></script>
+<script type='text/javascript' src='../js/fbLoginRegister.js'></script>
+<script type='text/javascript' src='var/javascript.js'></script>
+<script type='text/javascript' src='../js/jquery.hovertip-1.0.min.js'></script> 
+<script type='text/javascript' src='../js/jquery.jgrowl_minimized.js'></script> 
+<link rel='stylesheet' href='../css/jquery.jgrowl.css' media='screen' type='text/css'> 
+<script type='text/javascript' src='../js/jquery.timer-min.js'></script> 
+<link rel='stylesheet' href='var/gallery.css' media='screen' type='text/css'> 
+<script type='text/javascript' src='var/galerie/jquery.prettyPhoto.js'></script> 
+<meta name='description' content=''/> 
+<meta name='keywords' content=''/> 
+<style>.hovertip{
+    position:absolute;
+    padding:10px 13px;
+    z-index:2;
+    max-width:300px;
+    color:#303030;
+    background-color:#f5f5b5;
+    border:1px solid #DECA7E;
+    font-family:sans-serif;
+    font-size:12px;
+    line-height:18px;
+    text-align:left;
+    }</style> 
+<script type='text/javascript'>$j(document).ready(function(){$j('.tooltip').hovertip({'offset':[20,20]});get_notif();});
+
+if(!Array.indexOf){Array.prototype.indexOf = function(obj){for(var i=0; i<this.length; i++){if(this[i]==obj){return i;}}return -1;}}
+    hashuri = [] ;
+	 var tick_timer= 3000 ;
+ 
+	 function get_notif()
+        {
+		  
+		  //console.log(tick_timer);
+	     
+		  setTimeout(get_notif,tick_timer);
+        
+		   $j.ajax(
+            {
+                url: '/page/notif/show_events',
+                dataType: 'json',
+                data: "{}",
+                success: function(data)
+                    {
+                    $j.each(data,function(index,data){
+                        try
+                            {
+                            if( hashuri.indexOf(data.hash) == -1 )
+                                {
+                                hashuri.push(data.hash);
+                                $j.jGrowl(
+                                    data.str,
+                                    {
+                                        corners:'1px',
+                                        life: data.life,
+                                        header:data.title,
+                                        hash: data.hash,
+                                        sticky: data.sticky,
+                                        close: function(e,m,o)
+                                            {
+                                                $j.ajax({url:'/page/notif/delete_single_event/' + o.hash});
+                                            }
+                                    });
+                                }
+                            }
+                        catch(e){}
+                        })
+                    }
+            });
+        }
+	 </script> 
+ 
+                            
+  <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-19111721-1']);
+  _gaq.push(['_setDomainName', '.closer2oxford.ro']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+    
+                        </head>
+                        <body>
+                            <div id="global_wrap">
+                                <div id="header">
+                                    <a href='../index.html'><div id='logo'><img src='../images/layout/sigla.jpg'></div></a>
+                                    <a class='noExternal' href='http://www.facebook.com/pages/Closer2Oxford/162758797069605'><img src='../images/fb.png' style='height:30px;float:right;clear:right;margin:10px 5px 5px 5px;border:none;'/></a>
+                                    <a href='rss_feed'><img src='../images/feed-icon.png' style='height:30px;float:right;clear:right;margin:5px;border:none;'/></a>
+                                </div>
+                                <div id="meniu">
+                                    <div  id='register_login'>
+
+                                        
+  <a href='#' class='todo' id='login'>Login </a> &nbsp;<a href='register.html' class='todo' id='register'>Register</a>
+    <div id='login_box'>
+		  <form action='https://dev.closer2oxford.ro/page/ro/login_user/logon' method='post' id='user_login_form'>
+					 <div>Email: <input type='text' name='email'/> </div><br />
+					 <div>Pass: <input type='password' name='passwd'/></div><br />
+					 <a href='#' class='password_forgot'>forgot password?</a>
+					 <input type='hidden' value='/page/dezbatere_cluj_runda_4' name='returnto' class='submiter'/><br />
+					 <input type='submit' value='login' name='btn' class='submiter'/><br />
+		  </form>
+		  
+		  <form action='https://dev.closer2oxford.ro/page/ro/login_user/reset_user_pw' method='post' id='user_reset_form'>
+					 <div>Email: <input type='text' name='email'/> </div><br />
+					 <a href='#' class='password_forgot'>login?</a>
+					 <input type='hidden' value='/page/dezbatere_cluj_runda_4' name='returnto' class='submiter'/><br />
+					 <input type='submit' value='reset' name='btn' class='submiter'/><br />
+		  </form>
+		  
+    </div>
+    
+                                    </div>
+                                    <div id='menu1' style='margin:auto;'> <ul id='meniu_prinicpal'><li><a href='contacte/index.html'> Contact </a></li>
+<li><a href='clubdebate/index.html'> Cluburile </a></li>
+<li><a href='oamenii/index.html'> Oamenii </a></li>
+<li><a href='proiectul/index.html'> Proiectul </a></li>
+<li><a href='home/index.html'> Acasa </a></li>
+</ul></div><!--end menu-->
+                                </div>
+                                <div id="main"> 
+                                    <!--<div id='stiri-padding'>
+        <div id='stiri_back'>
+                {stiri} 
+    
+               
+        </div>-->
+        
+</div>
+<div  id="content-padding">
+        <div id='sidebar_menu'>
+                <span class='tr'></span>
+                <span class='tl'></span>
+                <span class='br'></span>
+                <span class='bl'></span>
+                <span id="filler"></span>
+                    
+                <ul></ul>
+                
+                <div class='clear'></div>
+        </div>
+        <div id="content">
+                <span class='tr'></span>
+                <span class='tl'></span>
+                <span class='br'></span>
+                <span class='bl'></span>
+                <span id="filler"></span>
+                <script type='text/javascript' src='../js/jquery.hovertip-1.0.min.js'></script> 
+<script type='text/javascript' src='../js/jquery.jgrowl_minimized.js'></script> 
+<link rel='stylesheet' href='../css/jquery.jgrowl.css' media='screen' type='text/css'> 
+<script type='text/javascript' src='../js/jquery.timer-min.js'></script> 
+<link rel='stylesheet' href='var/gallery.css' media='screen' type='text/css'> 
+<style>.hovertip{
+    position:absolute;
+    padding:10px 13px;
+    z-index:2;
+    max-width:300px;
+    color:#303030;
+    background-color:#f5f5b5;
+    border:1px solid #DECA7E;
+    font-family:sans-serif;
+    font-size:12px;
+    line-height:18px;
+    text-align:left;
+    }</style> 
+<script type='text/javascript'>$j(document).ready(function(){$j('.tooltip').hovertip({'offset':[20,20]});get_notif();});
+
+if(!Array.indexOf){Array.prototype.indexOf = function(obj){for(var i=0; i<this.length; i++){if(this[i]==obj){return i;}}return -1;}}
+    hashuri = [] ;
+	 var tick_timer= 3000 ;
+ 
+	 function get_notif()
+        {
+		  
+		  //console.log(tick_timer);
+	     
+		  setTimeout(get_notif,tick_timer);
+        
+		   $j.ajax(
+            {
+                url: '/page/notif/show_events',
+                dataType: 'json',
+                data: "{}",
+                success: function(data)
+                    {
+                    $j.each(data,function(index,data){
+                        try
+                            {
+                            if( hashuri.indexOf(data.hash) == -1 )
+                                {
+                                hashuri.push(data.hash);
+                                $j.jGrowl(
+                                    data.str,
+                                    {
+                                        corners:'1px',
+                                        life: data.life,
+                                        header:data.title,
+                                        hash: data.hash,
+                                        sticky: data.sticky,
+                                        close: function(e,m,o)
+                                            {
+                                                $j.ajax({url:'/page/notif/delete_single_event/' + o.hash});
+                                            }
+                                    });
+                                }
+                            }
+                        catch(e){}
+                        })
+                    }
+            });
+        }
+	 </script> 
+
+<script type='text/javascript' src='../js/jquery.hovertip-1.0.min.js'></script> 
+<script type='text/javascript' src='../js/jquery.jgrowl_minimized.js'></script> 
+<link rel='stylesheet' href='../css/jquery.jgrowl.css' media='screen' type='text/css'> 
+<script type='text/javascript' src='../js/jquery.timer-min.js'></script> 
+<link rel='stylesheet' href='var/gallery.css' media='screen' type='text/css'> 
+<script type='text/javascript' src='var/galerie/jquery.prettyPhoto.js'></script> 
+<style>.hovertip{
+    position:absolute;
+    padding:10px 13px;
+    z-index:2;
+    max-width:300px;
+    color:#303030;
+    background-color:#f5f5b5;
+    border:1px solid #DECA7E;
+    font-family:sans-serif;
+    font-size:12px;
+    line-height:18px;
+    text-align:left;
+    }</style> 
+<script type='text/javascript'>$j(document).ready(function(){$j('.tooltip').hovertip({'offset':[20,20]});get_notif();});
+
+if(!Array.indexOf){Array.prototype.indexOf = function(obj){for(var i=0; i<this.length; i++){if(this[i]==obj){return i;}}return -1;}}
+    hashuri = [] ;
+	 var tick_timer= 3000 ;
+ 
+	 function get_notif()
+        {
+		  
+		  //console.log(tick_timer);
+	     
+		  setTimeout(get_notif,tick_timer);
+        
+		   $j.ajax(
+            {
+                url: '/page/notif/show_events',
+                dataType: 'json',
+                data: "{}",
+                success: function(data)
+                    {
+                    $j.each(data,function(index,data){
+                        try
+                            {
+                            if( hashuri.indexOf(data.hash) == -1 )
+                                {
+                                hashuri.push(data.hash);
+                                $j.jGrowl(
+                                    data.str,
+                                    {
+                                        corners:'1px',
+                                        life: data.life,
+                                        header:data.title,
+                                        hash: data.hash,
+                                        sticky: data.sticky,
+                                        close: function(e,m,o)
+                                            {
+                                                $j.ajax({url:'/page/notif/delete_single_event/' + o.hash});
+                                            }
+                                    });
+                                }
+                            }
+                        catch(e){}
+                        })
+                    }
+            });
+        }
+	 </script> 
+
+<style type="text/css">
+.poze
+{
+    float:right;
+    width:110px;
+}
+.poze a img
+{    border:none;
+}
+.main_content
+{
+    float:left;
+    width:560px;
+}
+</style>
+
+ <div class = 'poze'>
+            <a class='thumb' href='../uploads/2012/02/13/cluj_inainte.p13dvo.png' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../uploads/2012/02/13/thumb_cluj_inainte.p13dvo.png' alt='' />
+                <span class='desc'></span>
+            </a>
+        
+
+            <a class='thumb' href='http://www.youtube.com/watch?v=NrKwi1Bf6no&amp;list=UU-3LzucGkqNFFxhKO7JCI8Q&amp;index=1&amp;feature=plcp' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../../img.youtube.com/vi/NrKwi1Bf6no/1.jpg' alt='' />
+                <span class='desc'>Introducere</span>
+            </a>
+        
+
+            <a class='thumb' href='http://www.youtube.com/watch?v=PuOMlN0p94E&amp;feature=youtu.be' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../../img.youtube.com/vi/PuOMlN0p94E/1.jpg' alt='' />
+                <span class='desc'>Discurs A1 - Norbert Petrovici</span>
+            </a>
+        
+
+            <a class='thumb' href='http://www.youtube.com/watch?v=HRCKR5ebtco&amp;feature=mfu_in_order&amp;list=UL' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../../img.youtube.com/vi/HRCKR5ebtco/1.jpg' alt='' />
+                <span class='desc'>Intrebari pentru Norbert Petrovici</span>
+            </a>
+        
+
+            <a class='thumb' href='http://www.youtube.com/watch?v=lePktS1u0ko&amp;feature=BFa&amp;list=ULHRCKR5ebtco&amp;lf=mfu_in_order' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../../img.youtube.com/vi/lePktS1u0ko/1.jpg' alt='' />
+                <span class='desc'>Discurs N1 - Gabriel Badescu</span>
+            </a>
+        
+
+            <a class='thumb' href='http://www.youtube.com/watch?v=KTSsXjn1IG4&amp;feature=BFa&amp;list=ULlePktS1u0ko&amp;lf=mfu_in_order' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../../img.youtube.com/vi/KTSsXjn1IG4/1.jpg' alt='' />
+                <span class='desc'>Intrebari pentru Gabriel Badescu</span>
+            </a>
+        
+
+            <a class='thumb' href='http://www.youtube.com/watch?v=EKDgbDgSFS4&amp;feature=BFa&amp;list=ULKTSsXjn1IG4&amp;lf=mfu_in_order' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../../img.youtube.com/vi/EKDgbDgSFS4/1.jpg' alt='' />
+                <span class='desc'>Discurs A2 - Flaviu Miron</span>
+            </a>
+        
+
+            <a class='thumb' href='http://www.youtube.com/watch?v=xH6RncVFd8c&amp;feature=BFa&amp;list=ULEKDgbDgSFS4&amp;lf=mfu_in_order' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../../img.youtube.com/vi/xH6RncVFd8c/1.jpg' alt='' />
+                <span class='desc'>Intrebari pentru Flaviu Miron</span>
+            </a>
+        
+
+            <a class='thumb' href='http://www.youtube.com/watch?v=INeIUZbGFns&amp;feature=BFa&amp;list=ULxH6RncVFd8c&amp;lf=mfu_in_order' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../../img.youtube.com/vi/INeIUZbGFns/1.jpg' alt='' />
+                <span class='desc'>Discurs N2 - Bianca Prunea</span>
+            </a>
+        
+
+            <a class='thumb' href='http://www.youtube.com/watch?v=LNGe4TvGOrg' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../../img.youtube.com/vi/LNGe4TvGOrg/1.jpg' alt='' />
+                <span class='desc'>Intrebari pentru Bianca Prunea</span>
+            </a>
+        
+
+            <a class='thumb' href='http://www.youtube.com/watch?v=7dC4BdXo9G0&amp;feature=BFa&amp;list=ULoaAA58Lf5iQ&amp;lf=mfu_in_order' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../../img.youtube.com/vi/7dC4BdXo9G0/1.jpg' alt='' />
+                <span class='desc'>Interventii</span>
+            </a>
+        
+
+            <a class='thumb' href='http://www.youtube.com/watch?v=oaAA58Lf5iQ&amp;feature=BFa&amp;list=ULLNGe4TvGOrg&amp;lf=mfu_in_order' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../../img.youtube.com/vi/oaAA58Lf5iQ/1.jpg' alt='' />
+                <span class='desc'>Concluzii</span>
+            </a>
+        
+
+            <a class='thumb' href='../uploads/2012/02/13/cluj_final.vounsk.png' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../uploads/2012/02/13/thumb_cluj_final.vounsk.png' alt='' />
+                <span class='desc'></span>
+            </a>
+        
+
+
+    <script>
+    $j(document).ready(function(){
+      		$j("a[rel^='prettyPhoto']").prettyPhoto({theme:'facebook'});
+        });
+    
+    </script>
+    </div>
+
+<div class='main_content'>
+<p><strong>Dezbatere publică Cluj</strong></p>
+<p><strong>8 decembrie 2011, FSEGA, sala 242</strong></p>
+<p><strong><em>&ldquo;E timpul să afirmăm că nesupunerea civilă este legitimă &icirc;ntr-o democraţie?&rdquo;</em></strong><em>&nbsp;</em></p>
+<p><strong>Echipa afirmatoare:</strong>&nbsp; <strong>Norbert Petrovici</strong> (Facultatea de Sociologie UBB) şi <strong>Flaviu Miron</strong> (elev Colegiul National &ldquo;Emil Racoviţă&rdquo; Cluj)</p>
+<p><strong>Echipa negatoare:</strong>&nbsp;<strong>Gabriel Bădescu</strong> (Facultatea de Ştiinţe Politice UBB) şi<strong> Bianca Prunea</strong> (studentă Facultatea de Drept UBB)</p>
+<p><strong>Modereaza</strong>&nbsp; <strong>Raul Salagean,</strong> ARDOR</p>
+<p><strong><em>Mo</em></strong><strong><em>ţ</em></strong><strong><em>iunea obţine &icirc;n final voturi egale 50% pro vs 50% contra, cu votul de start 82% pro vs 18% contra</em></strong><strong><em></em></strong></p>
+<p>&nbsp;</p>
+<p><strong>Raul Salagean (moderator)&nbsp;</strong></p>
+<p>Acest eveniment se desfasoara in cadrul programului Closer to Oxford, care este un program de dezbateri academice destinat studentilor. In prima parte se desfasoara aceste dezbateri online, in urma acestor dezbateri online care sunt arbitrate de catre arbitri de-ai ARDOR Transilvania, se determina primii 16 vorbitori din clasamentul respectiv. Acesti 16 vorbitori sunt invitati la un seminar de lectura critica si argumentare (acest eveniment a avut deja loc) si in finalul unei runde Closer to Oxford se organizeaza aceasta conferinta publica in care se dezbate pana la urma pe aceeasi tema pe care s-a dezbatut si online, si am sa v-o prezint imediat, insa, de aceasta data vor dezbate doi studenti, alaturi de doua personalitati locale, in doua echipe mixte, fiecare echipa fiind formata din cate o personalitate si un student. Ok, sa va prezint motiunea pe care se va discuta, tema dezbaterii de astazi: tema este, dupa cum va ziceam exact aceeasi pe care s-a dezbatut si in runda online si suna &ldquo;<strong>Este timpul sa afirmam ca nesupunerea civila este legitima intr-o democratie</strong>&rdquo;. Cu alte cuvinte, acum vom trece la partea de votare. Ideea este ca timp de 30 de secunde laptopul prin intermediul acestui stick va receptiona voturile dumneavoastra. Si-atunci, practic, cand am sa va dau eu semnalul, aveti 30 de secunde la dispozitie ca sa votati. Ok, din acest moment puteti vota timp de 30 de secunde, multumesc.</p>
+<p><strong>Norbert Petrovici (A1)</strong></p>
+<p>Definitia de la care pornim pentru nesupunere civica este contestarea non-violenta a unei legi sau a unor legi prin incalcarea lor cu scopul de a le schimba. Nesupunerea civica nu contesta insusi sistemul de drept, ordinea de drept, ci, mai degraba, contesta o lege sau un sistem de legi particulare, care sunt vazute ca nedrepte sau ilegitime. Formularea clasica a acestui principiu o avem la Henry Thoreau, la mijlocul secolului XIX, care contesta insasi institutia sclaviei care era legala si lipsa de drepturi civile a sclavilor. Reformularea probabil cea mai cunoscuta este a lui John Rawls, in 1971, care adauga la aceste principii doua clarificari foarte importante. Acela care porneste nesupunerea civica <strong>isi asuma public acest fapt</strong> si in acelasi timp <strong>isi va asuma toate consecintele incalcarii legale </strong>pentru ca cel care nu este de acord cu acea lege este de acord cu insasi existenta legilor. Modul in care a fost utilizata nesupunerea publica a fost &ldquo;capturata&rdquo; in mare masura de miscari care incearca sa operationalizeze conceptele de democratie consensuala. De exemplu, miscarea de eliberare indiana, Civil Rights Movement cu nenumaratele sitting-uri sau proteste in care oamenii incercau sa creeze spatii autonome de dezbatere, fie in universitati, fie in afara lor, in fabrici, fie ca vorbim de Statele Unite, sau ca vorbim de miscarile tot din anii &rsquo;70 impotriva razboiului din Italia. Meritul central al acestui lucru este tocmai faptul ca nesupunerea civica e legata in practica de democratia consensuala si de constituirea unor spatii alternative, in afara ordinii de drept; crearea unei ordini locale. Argumentul meu mare si pe care aceasta echipa il sustine este ca, in ciuda faptului ca nesupunerea civica isi are originea in traditia liberala, forta nesupunerii civice si caracterul sau subversiv vin din faptul ca ea nu poate fi continuta de catre tocmai aceasta democratie, pentru ca ea [nesupunerea civica] invita la forme de democratie radicala, adica forme de democratie in care decizia se ia in mod consensual.</p>
+<p>Argumentul are doua bifurcatii aici: prima este ca nesupunerea civica adanceste proiectul democratiei liberale; &nbsp;prin democratie liberala inteleg democratia reprezentativa sau modul in care a fost institutionalizata ea (prin faptul ca deciziile se iau de catre majoritati, majoritati formate din persoane care reprezinta un grup).&nbsp; Majoritatile acestea automat implica formularea unor minoritati - care implica de asemenea necesitatea unui aparat coercitiv, care sa impuna deciziile pe care majoritatea le ia. Prin nesupunerea civica, proiectul democratiei consensuale contesta insasi existenta minoritatilor create <em>ab initio</em> din logica formularii democratiei radicale. Nu fac un argument pentru exclusiv democratie consensuala, ci mai degraba nesupunerea civica o localizez&nbsp;in spatiile in care tocmai brutalitatea devine posibila in interiorul democratiei liberale clasice si face necesara adancirea acestui proiect.</p>
+<p>Un exemplu este relocarea populatiei sarace din strada Pata Rit care a ajuns sa fie relocata la groapa de gunoi a orasului, in urma unui vot al unei majoritati a reprezentantilor unei comunitati - comunitatea din Cluj. Nesupunerea civica prin contestarea acestei relocari mi se pare legitima si emerge din insusi modul in care se formuleaza democratia radicala.</p>
+<p>Al doilea, democratia civica depaseste proiectul democratei liberale. Democratia liberala functioneaza in parametrii statului capitalist si a acumularii de capital, adica statul este pus in situatia de a reglementa piata pentru a asigura insasi prosperitatea statului, care se bazeaza pe prosperitatea cetatenilor. Efectul este ca aceste tipuri de constrangere date de acumulari pot conduce ca democratia reprezentativa sa nu formulize/sa fie in imposibilitatea de a formula alternative. Miscarea indignatilor de democratie consensuala este exact legata de acest lucru: in Spania, tocmai pentru ca partidele care ar trebui sa reprezinte populatia nu au fost capabile sa ofere alternative, amandoua formuland politici de austeritate, ceea ce a condus la nesupunere publica si formularea unor statii autonome in pietele din Spania. Concluzia: organizarea consensuala si nesupunerea civica au dus la noi forme si &ldquo;tehnologii&rdquo; de organizare sociala, ceea ce este o implicatie foarte importanta in reformularea vocii publice, astfel incat vocile minoritatilor sa fie auzite.</p>
+<p><strong>&nbsp;</strong></p>
+<p><strong>Cross examination 1</strong></p>
+<p><strong>Gabriel Badescu</strong>: Sunt un pic fermecat de folosirea termenului de nesupunere civica si nu civila asa cum este definitia competitiei. Sunt perfect sinonime sau e o diferenta de accent pe care trebuie s-o tina oamenii minte?</p>
+<p><strong>Norbert Petrovici</strong>: In acest moment le pot vedea pe cele doua ca sinonime. Nu le incarc pe cele doua cu sensuri distincte.</p>
+<p><strong>Bianca Prunea</strong>: As mai avea eu o intrebare. Referitor la ultima parte a argumentului prezentat, si anume la existenta minoritatilor si cum, de fapt, toate formele de nesupunere civica contesta in sine existenta minoritatilor; Puteti sa ne explicati exact de ce este rau ca intr-o societate democratica ca cea pe care o avem astazi in majoritatea statelor e rau ca majoritatea sa ia in anumite momente anumite decizii pentru minoritate? In general, nu doar referitoare la cazuri particulare in care minoritatea este evident opresata.</p>
+<p><strong>Norbert Petrovici</strong>: Democratia reprezentativa nu poate functiona in afara unei formule represive, astfel incat minoritatea care nu este de acord cu deciziile luate trebuie convinsa &ndash; daca nu poate fi convinsa trebuie obligata - sa se supuna majoritatii. Acest lucru poate conduce in multe conditii ca cei care nu sunt de acord cu deciziile luate de majoritate sa nu aiba o alta voce de a-si formula dezacordul. De exemplu, consensul in ceea ce priveste evacuarea romilor din oras si sentimentele anti-romi sunt in acord cu majoritatea, insa efectele sunt directe deasupra celor care in acest caz constituie o minoritate; aparatele coercitive in acest caz in Cluj au fost foarte brutale: evacuarea la -15 grade iarna.</p>
+<p><strong>Bianca Prunea</strong>: Da, intr-adevar, e regretabil ce s-a intamplat in acel caz, insa si asta se leaga de urmatoarea intrebare. Ati definit nesupunerea civica ca si contestarea non-violenta a unor legi pe care le schimba. Considerati ca aceasta definitie se aplica in toate cazurile si ca de fiecare data cand ne gandim la nesupunere civila ne referim la cazuri non-violente?<strong></strong></p>
+<p><strong>Norbert Petrovici</strong>: Prin definitie fac acest lucru, altfel voi defini nesupunere civica ca si <em>civil disorder.</em> Aceasta definitie e mai degraba comuna.[&hellip;]</p>
+<p><strong>Gabriel Badescu (N1)</strong></p>
+<p>Este o tema foarte interesanta si am aruncat o privire peste voturile de la laptop si am vazut ca divide asa destul de mult in grupuri. Ma bucur ca sunteti aici! Venind inspre sala asta am vazut o lista lunga cu economisti importanti pe holul universitatii si am avut asa un seniment de usurare: uite, e criza, dar uite cati oameni importanti au fost si sunt de paza. Sigur, glumesc. Vreau sa ma refer mai mult la Romania in contextul acestei chestiuni aici, are o tranzitie dificila si trece prin momente dificile acum. E asemenea unei barci&nbsp;in furtuna si problema majora este nivelul scazut de participare publica in general.</p>
+<p>Argumentul meu este ca da, sigur, ne dorim mai multa participare &ndash; aparent, orice forma de participare e dezirabila, dar cred eu ca <strong>unele combinatii sunt nefaste sau toxice si exact chestiunea nesupunerii civile nu e un panaceu ci, mai degraba, in contextul Romaniei poate sa aiba efecte negative</strong>. Dificil la prima vedere de argumentat lucrul asta pentru ca vorbim de chipuri; cand spun nesupunere civila cei care participa sunt exact genul de oameni simpatici pe care-i vrem pe Facebook si vrem sa povestim cu ei, pe cand ceilalti sunt niste biocrati cenusii sau niste jandarmi amenintatori, dar rugamintea mea pentru votanti e sa uitati de distinctia asta si sa incercati sa vedeti lucrurile la rece si sa rezolvati in special in aceasta ecuatie a acestei forme de participare care ar trebui sau nu incurajata, in relatia cu cantitatea de democratie aplicata in special in cazul Romaniei.</p>
+<p>Argumentul meu general e acela ca atunci cand ne referim la participare avem tendinta sa credem uneori ca cu cat e mai multa participare - indiferent de tipul de participare - lucrurile merg mai bine, dar, e oare asa? E o literatura bogata pe tema asta si de fapt, stim din alte cazuri ca e un optim de participare si o combinatie optima de tipuri de participare. Mai specific, in ceea ce priveste nesupunerea publica, argumentul meu este ca e o forma de participare ce am putea-o compara cu un scuter galagios: mult, mult zgomot, ii radicalizeaza pe cei din jur, creeaza disconfort celorlalti, dar eficienta e relativ modesta in comparatie cu alte mijloace de participare. Nu se preteaza bine negocierii, nu se preteaza bine dialogului. De asemeni, in termeni de bine public, asemeni scuterelor, daca toti ar merge cu scutere, traficul cu autobuzul ar fi mai greoi, si asta e o problema, pentru ca e un tip de participare pe care ne-o dorim mai mult. E si o chestiune de reprezentare: problema participarii e nu doar in termeni de cantitate, ci si de voci care sunt auzite. Nu oricine se urca pe un scuter. E si o problema de directie: unii se urca pe scuter fiindca le place calatoria, dar nu le pasa unde ajung.</p>
+<p>In fine, acum, referindu-ma la cazul Romaniei, aici sunt doua probleme serioase cu acest tip de participare, care in alte context poate ca merge mai bine. Una este chestiunea nerespectarii legii. Avem studii care arata ca una e sa vezi efectul nerespectarii legii &ndash; a coruptiei de exemplu &ndash; in Suedia si alta e sa o vezi in Grecia, Romania. E complet diferit. Intr-o tara in care inca granitele intre lege si nerespectarea ei sunt atat de fluide, acest tip de participare risca sa sporeasca confuzia. Si a doua chestiune care cred ca e importanta in cazul Romaniei e aceea ca e o forma de participare care in general merge atunci cand sunt epuizate toate celelalte mijloace. Si cu asta inchei. Ganditi-va la formele de nesupunere publica pe care le stiti in cazul Romaniei si puneti-va singuri urmatoarele intrebari. Daca au folosit, daca au avut vreun rezultat?; daca da, cat de mult au folosit in comparatie cu alte forme de participare de protest? Si, in fine, daca nu s-ar fi putut imagina forme de participare de protest - ganditi-va la Pata Rat, ganditi-va la Rosia Montana si Continental - care sa fie in cadrul legii, dar care sa fie mai eficiente?</p>
+<p><strong>&nbsp;</strong></p>
+<p><strong>&nbsp;</strong></p>
+<p><strong>Cross examination 2</strong></p>
+<p><strong>Norbert Petrovici</strong>: Spuneti ca democratia se bazeaza pe persoane mature si noi cum nu suntem suficient de maturi, in timp ce in alte parti oamenii sunt suficient de maturi pentru democratie. Va rog sa dezvoltati putin acest argument.</p>
+<p><strong>Gabriel Badescu</strong>: Avem studii empirice comparate care arata ca romanii participa putin fata de altii, au institutii care seamana cu cele din alte tari, nu ma refer la vot, ma refer la participare in demonstratii) si nivelul de participare e scazut. Nu pentru ca oamenii n-ar fi maturi, ci pericolul puternic aici este socializarea in familie, e ceva care tine de scoala, e experienta &ndash; prima data Romania trece prin situatii de criza cum sunt cele de acum, deci asta poate sa explice de ce participarea politica de tip conventional si ne-conventional e putin folosita in contextul Romaniei.</p>
+<p><strong>Norbert Petrovici</strong>: Scoala, educatie... asta inseamna ca cei care sunt competenti pentru a participa si cei care participa in general sunt mai degraba clase de mijloc, sunt cei care sunt mai degraba voluntari? Asta inseamna ca cei fara educatie superioara nu sunt suficient de competenti pentru a fi persoane indicate in interiorul unui sistem democratic?</p>
+<p><strong>Gabriel Badescu</strong>: Ba da, si tocmai asta e problema cu formele de participare radicala. Aceea ca empiric, tind sa subreprezinte anumite categorii de populatie. Sigur problema asta e atenuata de faptul ca uneori cei educati vorbesc in numele celor needucati si Pata Rat e un exemplu de acest tip, dar ele tind sa acorde o voce mult prea amplificata celor care sunt, in cazul Romaniei, tineri educati si instariti si in orase mari.</p>
+<p><strong>Flaviu Miron</strong>: As dori sa va intreb de ce considerati ca e necesar sa facem restrangerea pe Romania si de ce sa nu vorbim in general daca aceasta masura este sau nu legitima intr-o democratie.</p>
+<p><strong>Gabriel Badescu</strong>: Argumentul este ca genul asta de solutii nu sunt de tip universal, nu functioneaza la fel peste tot in timp si in spatiu. Sigur, nu putem nega faptul ca in cazul Indiei, sau al Africii de Sud nu au fost cazuri de succes si lucrurile nu au mers bine datorita acestui tip de nesupunere publica, dar ceea ce vreau sa spun este ca in democratii mai de inceput si mai ales intr-o combinatie care, spun eu, e toxica intre democratii slabe si grupuri de coruptie acest tip de participare publica nu e la fel de eficienta ca si acolo.</p>
+<p><strong>Flaviu Miron</strong>: Dar este suficient un caz particular, cum este de exemplu Romania ca sa dezaprobe in sine ideea de nesupunere civica?</p>
+<p><strong>Gabriel Badescu</strong>: Nu-mi propun sa argumentez faptul ca nicicand metoda asta nu ar trebui sa fie folosita, ci o compar cu alte metode. E la fel ca si in medicina, atunci cand spectrul de mijloace posibile nu o compari cu absenta aplicarii metodei, ci o compari cu metode alternative. Ati dat exemplul cu Pata Rat, eu ma gandeam si la cazul cu Rosia Montana care este foarte interesant, si care are un caz concret de nesupunere publica, dar argumentul meu este ca daca privim acel pachet de metode folosite in acea situatie si incercam sa evaluam eficienta lor, <strong>cele care au contat cel mai mult au fost cele conventionale,</strong> banale: atacarea in instanta, descurajarea bancii mondiale de a se implica, si asa mai departe; cat si chiar si pentru cele de protest pot fi imaginate metode in cadrul legii care sa aiba un impact similar sau mai mare.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><strong>Discurs Flaviu Miron (A2)</strong></p>
+<p>Voi avea 3 puncte mari in discursul meu: in primul rand voi vorbi in legatura cu descrierea facuta de echipa opozitiei si daca este sau nu corect sa judecam aceasta motiune prin prisma unei singure tari. Voi vorbi apoi despre consens versus majoritate si in ultimul rand voi vorbi despre proteste si care proteste sunt mai eficiente.</p>
+<p>Referitor la restrangere, la fel de bine as putea sa spun ca daca vreau sa cresc nivelul de oxigen in Sahara si as planta brazi n-ar fi eficient. Normal ca nu ar fi eficient, pentru ca brazii nu cresc in desert: brazii au nevoie de o anumita altitudine ca sa produca oxigen si ca sa existe in sine. Asadar, nu vedem foarte relevanta restrangerea facuta de echipa opozitiei in momentul in care vorbim despre o valoarea abstracta a societatii in care traim, respectiv democratia. Intr-adevar este mai relevant sa particularizam discutia pe diferite state, dar nu este neaparat corect fata de cealalta echipa pentru ca la fel de bine noi am putea particulariza si am putea contextualiza aceasta discutie pe o tara in care valorile democratice sunt mai puternice, in care populatia este mai bine educata, si asa mai departe, in care argumentele noastre ar sta mult mai bine in picioare. Asadar, in continuare voi vorbi despre democratie in genere.</p>
+<p>Bun, referitor la consens versus majoritate: ce facem de cele mai multe ori cand suntem pusi in fata unei propuneri? De cele mai multe ori exista doua optiuni: asa cum vedeti si in fata dumneavoastra acum, exista guvernul si opozitia. Asta ce inseamna? Asta inseamna ca ne limitam ca si un calculator &ndash; avem o alegere binara. Problema e ca inteligenta noastra e capabila de mult mai mult si ideea de consens nu propune adoptarea unei pozitii si apararea ei pana la capat, dar mai degraba incercarea de a combina toate propunerile spre a obtine un compromis constructiv, un compromis care sa nu aiba pierzatori. Pe de alta parte, cand vorbim despre o majoritate (ganditi-va ca o majoritate inseamna si 51%, inseamna si atunci exista chiar 49% din oameni care nu sunt multumiti de o anumita decizie, de o anumita politica guvernamentala) In momentul in care incerci sa ajungi la un consens, chiar si cei care nu sunt neaparat de acord cu motiunea sau cu planul respectiv, nu au aceleasi obiectii ca si in cazul unei majoritati. Al doilea punct la nivelul acestei analize ar fi faptul ca noi ne-am referit un pic si la particularizarea acestor decizii la context local. In momentul in care ai o problema locala acea problema poate cel mai bine fi rezolvata prin consens, tocmai datorita faptului ca ai de-a face cu un numar mult mai mic de oameni implicati, lucru care nu a fost contraargumentat de echipa negatoare.</p>
+<p>Trecand la al treilea punct, respectiv protestele, observam ca protestele in sine sunt o trasatura a democratiei. Chiar si in cazul unei democratii reprezentative, in momentul in care reprezentantii poporului nu mai indeplinesc dorinta populatiei, ce putem face? Stam si asteptam sa vina urmatorul mandat si nu ii vom alege pe aceia, fiindca ei sunt baietii rai, sau actionam, sau ne sustinem drepturile, sau vorbim? Evident, vorbim. Intrebarea e cum alegem sa vorbim? Exista diferite metode de a protesta. Unele pot fi considerate mai legitime decat altele. Exista protestele pasnice, protestele legale, pur si simplu afisarea unor pancarte sau bannere. Problema e ca in momentul in care acestea se dovedesc ineficiente, atunci ce facem? Ori, alternativa la care se recurge de cele mai multe ori este acest protest, protestul sub forma nesupunerii civice. Ce presupune nesupunere civica? Asa cum v-am prezentat si pe parcursul primului discurs, nesupunerea civica inseamna incalcarea legii si acceptarea consecintelor care vin cu aceasta, inseamna transmiterea <strong>mesajului ca eu sunt dispus sa incalc legea pentru a-mi apara principiile.</strong> Asa cum Martin Luther King spunea &bdquo;punish me if you will, although I don&rsquo;t deserve it, I will respect that, but people will know that I&rsquo;m right and you&rsquo;re wrong&rdquo;. Exact acesta este mesajul care se transmite prin nesupunerea civica. Se transmite mesajul ca suntem dispusi sa protestam chiar cu pretul &ldquo;pieii&rdquo; noastre si mesajul este mai puternic. Referitor la Rosia Montana, exista 65 de procese castigate. Judecand din prisma acestor idei, este evident ca trebuie sa sustinem aceasta motiune. Va multumesc!</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><strong>Cross examination 3</strong></p>
+<p><strong>Bianca Prunea</strong>: Prima intrebare: ce propuneti sa facem atunci cand hai sa zicem ca trecem la lumea consensului si trebuie sa luam o decizie noi toti din sala asta si sa zicem ca Raul nu-i de acord. Ce facem in situatia asta?</p>
+<p><strong>Flaviu Miron</strong>: Nu spunem ca trebuie sa trecem la un consens absolut, in ideea de consens national. Asa cum v-am demonstrat si in cazul afirmator, protestele au de cele mai multe ori caracter local, ori in momentul in care vorbesti de o optiune cu caracter local e mult mai usor si mult mai fezabil pentru a satisface populatia sa actionezi prin luarea deciziei prin consens.</p>
+<p><strong>Bianca Prunea</strong>: Da, e mai usor sa faci asta la nivel local decat la nivel national si totusi, in 90% dintre cazuri nu se intampla. Ce propuneti sa facem cu Raul in momentul in care el nu e de acord cu o masura pe care noi toti ne-o dorim?</p>
+<p><strong>Flaviu Miron</strong>: Asta nu este in sine un argument al nesupunerii civice. In al doilea rand, daca Raul nu va fi de acord, atunci asta e! In timp va fi de acord, vom ajunge la un compromis, pentru ca inseamna ca Raul are opinia lui. El isi va spune opinia lui si incet-incet construim ceva care sa-l satisfaca si pe Raul.</p>
+<p><strong>Bianca Prunea</strong>: Referitor la proteste, si cum de fapt ele sunt o trasatura a democratiei, motiv pentru care ar trebui sa le acceptam pentru ca pur si simplu nu putem sa asteptam sa treaca cei 4 ani din mandatul cuiva pentru a nu-l alege. Sunteti constient de faptul ca vorbim despre nesupunere civica, despre incalcarea legii si despre anumite drepturi ale unei parti a societatii, nu despre alegerea presedintelui, pe care oricum nu il putem rasturna prin protest, nu? La altceva se refera tipul de proteste care fac parte din categoria nesupunerii civice.</p>
+<p><strong>Flaviu Miron</strong>: Nu neaparat. Nesupunerea civica poate veni, asa cum si antevorbitorul tau a spus, ca o ultima forma de protest, in momentul in care toate celelalte proteste sunt ignorate si de foarte multe ori asta se intampla!</p>
+<p><strong>Gabriel Badescu</strong>: Care e in final universul de situatii in care metoda asta e dezirabila si ar merita sa fie recomandata din moment ce excluderea Romaniei se poate face fara mari probleme si excluderea tarilor care sunt in categoria asta gresita, de fapt s-ar putea sa fie majoritatea tarilor din lume? Chiar si exemplul care a fost dat legat de Pata Rat; nu sunt convins ca e un exemplu care tine de incalcarea legii, ci mai degraba e o situatie de protest in perimetrul municipiului, deci in final, venim cu o bucata de branza si un svaiter in care gaurile cresc progresiv, si mai apare si ideea asta cu consensul care mie mi se pare paradoxal, pentru ca este exact tipul de protest care foloseste cel mai greu la a Alte situatii in care esecul cooperarii duce in final catre aceasta forma in care spui &ldquo;hai sa o luam de la 0, tot restul trebuie anulat&rdquo;: alegeri si alte forme de protest.</p>
+<p><strong>Norbert Petrovici</strong>: In cazul Pata Rat, ce s-a intamplat e ca am fost in spiritul legii, dar nu in litera legii. Cei care ne-am dus sa protestam, noi nu am anuntat ca facem un protest si in momentul in care am facut lucrurile a fost sa fim la marginea legalitatii, sau pe coltul legalitatii. Nesupunerea civica exact in aceasta logica lucreaza. Argumentul celalalt, legat de consens, este ca din punct de vedere empiric apare nesupunerea civica sau logica in care apare este folosita nesupunerea civica (logica de protest non-violenta) e <strong>legata de procesele in care minoritatile sunt excluse exact prin logica deciziilor intr-o democratie reprezentativa</strong> si in modurile in care s-a facut empiric impunerea exista o corelatie destul de puternica intre instantele in care diferitele tipuri de miscari sociale au utilizat aceasta metoda si modul in care ea propriu-zis a fost utilizata pentru a institui ordini locale de formula consens local, de dezbatere, de discutii-maraton. De exemplu studentii din anii &rsquo;70 din America, sau dezbaterile-maraton din Plaza del Sol din Spania, din Madrid, in Barcelona, pe acea sintagma, gen ce se intampla cu miscarile Occupy Wall Street? Toate acestea merg in aceasta directie.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><strong>Bianca Prunea (N2)</strong></p>
+<p>O sa am si eu trei puncte in discursul meu ca vad ca e la moda. O sa vorbesc despre scop, despre valorile sociale si despre mesajul pe care il transmitem noi astazi daca acceptam ca si legitima nesupunerea civica/civila. Dar mai intai trebuie sa am si niste puncte de contraargumentare pentru ca ni s-au reprosat foarte multe de catre al doilea vorbitor, dar n-am contraargumentat nimic, asa ca voi face asta acum. Referitor la restrangere pentru ca ceea ce a inteles astazi echipa afirmatoare sunt doua chestiuni, cred eu: 1. Ca noi vrem sa spunem prin exemplul Romaniei ca nesupunerea civica nu ar fi legitima la nivel global si ca noi am dat acest exemplu ca sa ne facem viata mai usoara. Nu! Noi am facut restrangerea din dorinta de a face simpatica dezbaterea de astazi pentru ca &bdquo;traim in Romania si asta ne ocupa tot timpul&rdquo; si credeam ca ar fi dragut sa dezbatem despre societatea romaneasca, dar mai mult decat atat, in Romania, dat fiind ca este o democratie relativ tanara, mai tanara decat mine (si eu sunt destul de mica), credem ca nesupunerea civica nu ar trebui sa fie acceptata. Daca sunt unele democratii extraordinar de puternice in care aceasta forma ar avea un anumit grad de legitimitate, asta este o alta discutie, dar, daca vreti sa vorbim si despre restul lumii, ca s-a simtit echipa afirmatoare lezata, voi vorbi astazi despre al doilea punct si anume despre faptul ca noi mergem impotriva valorilor general acceptate de catre societatea in care traim, indiferent ca vorbim despre Romania, sau vorbim despre alte tari.</p>
+<p>Cum s-a vorbit de consens, mi se pare usor paradoxal faptul ca echipa afirmatoare sustine ca noi ar trebui sa ne grabim catre consens cand nesupunerea civila nu ia in calcul sub nici o forma consensul, pentru ca este, din nou, doar o parte a societatii, care vrea un anumit lucru, si merge impotriva altei parti a societatii impotriva dorintelor altor oameni...atata doar ca s-ar putea ca cei care sunt angajati intr-o miscare de nesupunere civica sa nu fie 51%, pot fi mai multi, sau mai putini. Si referitor la cei 49% care ar fi nemultumiti indiferent de ce masura am lua, noi consideram ca ei au la indemana in Romania, sau in orice alta societate democratica functionala metode de protest care sunt in interiorul legii. Consideram ca ei pot, cel putin in momentul de fata, sa-si exprime opinia, sa-si faca vocea auzita, daca vreti, prin alte metode care nu merg impotriva valorilor sociale, si va voi explica de ce aceste valori sociale sunt foarte importante pentru noi astazi. Si de ce vrem noi sa mergem in continuare pe democratia noastra majoritara? Pentru ca de cele mai multe ori daca trebuie sa luam niste masuri rapide, cum ar fi daca am astepta nu dupa Raul, pentru ca de obicei, deciziile importante nu se iau la nivel local, cum ar fi sa asteptam la nivelul unui stat, sau la nivelul unei comunitati pana cand o sa fim cu totii de acord sa facem ceva? De cele mai multe ori avem nevoie de niste masuri rapide, de niste decizii luate in timp real gen &bdquo;e criza economica, trebuie sa facem ceva&rdquo;. Daca am astepta ca toata lumea sa fie de acord cu o anumita masura, democratia insasi, societatea respectiva nu ar mai fi functionala, si atunci suntem de acord sa opresam minoritatea in anumite situatii pentru a face ceva si sa le dam totusi legal oportunitatea celor care nu sunt de acord sa-si exprime opinia si sa vedem daca putem sau nu efectiv in concret sa schimbam situatia respectiva.</p>
+<p>Si acum, care este scopul acestor miscari? Atunci cand cineva se supara foarte tare pentru ca un drept ii este incalcat, vrea sa-l ia inapoi si asa apare nesupunerea civica. Vrem sa ne obtinem anumite drepturi si da, exemplul cu Occupy Wall-Street cred ca este cel mai bun. Oamenii aceia s-au dus acolo pentru ca pur si simplu se simt opresati de corporatii, se simt opresati de statul in care traiesc, pentru ca toata puterea economica merge spre o mica parte a societatii si atunci ceea ce au vrut ei a fost sa-si obtina drepturile inapoi. Noi consideram ca intr-o democratie tanara, daca tot am dat exemplul Romaniei, nu conteaza cel mai mult scopul final al unei asemenea masuri. Conteaza modul in care mergi sa obtii acele drepturi pentru ca pana la urma modul in care tu, ca si minoritate opresata ai mers sa-ti faci vocea auzita te defineste pe tine si daca tu ajungi sa obtii acel lucru pana la urma nu mai este legitim pentru ca ai mers impotriva valorilor sociale. Si de ce-s valorile sociale atat de importante? Pentru ca in momentul in care ne angajam intr-o actiune de nesupunere civica mergem impotriva unor norme general-acceptate si respectate de societatea in care traim. Si prin faptul ca noi facem ??? nu luam in considerare ca s-ar putea sa afectam pana si intr-un mod violent, sau non-violent dar s-ar putea sa afectam o alta parte a societatii in care traim si nu luam in considerare, noi, la randul nostru, care ne plangem ca am fost opresati, opresam in continuare restul societatii, pentru ca ii afectam si pe ei in mod indirect. Orice am obtine, dreptul respectiv nu mai este in sine legitim. Consideram ca in ultimul rand trebuie sa va ganditi ca transmitem un mesaj gresit in momentul in care am accepta nesupunerea civica ca si forma legitima de manifestare. De ce? Pentru ca daca ne gandim &bdquo;of, 49%, sau oamenii care au fost mutati in Pata Rat au suferit si ca noi am vrea ca ei sa-si faca vocea auzita&rdquo; si am vrea sa facem acest lucru, dar in momentul de fata suntem tentati sa credem ca orice modalitate in care ei fac asta e buna si nu e adevarat! Dupa cum a explicat si colegul meu, exista un optim al participatiei si o metoda optima in care trebuie sa facem asta. Nu orice am face e un lucru bun, chiar daca momentan nu facem nimic, trebuie sa luam in considerare cea mai buna alternativa. Acestea fiind spuse, va rog sa va ganditi bine inainte sa votati!</p>
+<p><strong>Cross examination 4 </strong></p>
+<p><strong>Norbert Petrovici</strong>: Scopul este eficienta in luarea deciziilor sau exista un optim al participarii, insa atunci cum ramane cu insusi argumentul facut de echipa legat de valorile la care trebuie sa ne supunem? Eficienta poate incalca tocmai valorile in numele carora se ia decizia eficienta.</p>
+<p><strong>Bianca Prunea</strong>: Da, exista situatii in care se poate intampla chestia asta si noi e cateodata posibil sa ni le asumam. Vrem sa ne asumam riscul ca in anumite situatii, gen 0.1% sa se incalce aceste valori, dar spunem ca nu e cazul, de cele mai multe ori pentru ca tot ceea ce se intampla in momentul in care luam decizia majoritar e transparent. Atunci cand ne angajam intr-o miscare de nesupunere civica, nu mai exista transparenta... exista un protest, in care 100 de oameni vor ceva, si se bat pentru acel ceva. De cele mai multe ori, nici ei nu stiu ce vor. Dar consideram ca incalcarea valorilor sociale este mult, mult mai mare atunci cand conferim legitimitate acestei miscari: de exemplu atunci cand majoritatea intr-un mod transparent si public ia o decizie.</p>
+<p><strong>Norbert Petrovici</strong>: In cazul Occupy Wall Street&nbsp; protestatarii contesta insusi faptul ca legile sunt injuste, sunt luate de cei impotriva carora protesteaza, respectiv, datorita sistemului de lobby foarte puternic insele legile ii apara pe cei foarte puternici, astfel incat exista imposibilitatea sa definesti ca legal ceea ce ar fi important pentru minoritati. De exemplu, Fed-ul a tiparit bani, pe care i-a dat bancilor, care dupa aceea au cumparat treasury bonds la un pret foarte scump, astfel incat s-a facut un transfer de valori incredibil de mari dintr-o parte in alta, tocmai datorita lobby-ului bancilor, iar in acest moment exista imposibilitatea de reglementare directa prin sistem legal.</p>
+<p><strong>Bianca Prunea</strong>:Ok, dar asta, ca sa-l citez pe Flaviu nu este un dezavantaj al regulii majoritatii in sine. Asta este un dezavantaj al situatiei existente in Statele Unite. Daca momentan legile de acolo ii protejeaza pe cei bogati, pentru ca au fost suficient de destepti incat sa faca asta, nu inseamna ca noi in continuare n-ar mai trebui sa luam decizii pe baza regulii majoritatii, ca ar trebui sa schimbam modul in care facem si ca societatea democratica in genere nu e caracterizata de ceea ce se intampla momentan in Statele Unite, care-i foarte puternic influentata de miscarile de lobby.</p>
+<p><strong>Flaviu Miron</strong>: Mda... echipa negatoare a pornit cumva de la premisa ca in prezent aceste proteste sunt condamnate?</p>
+<p><strong>Bianca Prunea</strong>: Nu! Echipa negatoare a pornit de la premisa ca aceste proteste ar trebui condamnate si nu ma refer neaparat penal sau legal, ci la nivel al societatii, ca nu ar trebui sa le acceptam ca fiind legitime.</p>
+<p><strong>Interventii din sala</strong></p>
+<p><strong>Raul Salagean (moderator)</strong></p>
+<p>Sa vedem o persoana care si-a schimba opinia de-a lungul dezbaterii si a votat diferit a doua oara fata de primul vot. Sau daca nu, cineva sa argumenteze de ce a votat cu o anumita echipa in ambele momente de vot.</p>
+<p><strong>Interventie din sala 1</strong></p>
+<p>Mie mi-a placut echipa negatoare foarte mult, mai ales ca eu am votat cu echipa negatoare si prima data si a doua oara pentru ca mi se pare ca &ldquo;supunerea civica&rdquo; ar trebui sa fie la baza unei societati sanatoase, ca sa zic asa. Si oricat de matura ar deveni ea, si cat de traditionala ar fi democratia, tot trebuie sa existe acea supunere civica, ca sa functioneze bine mecanismele statului si tot ce se intampla in el. Si mi-a placut foarte mult ca s-a pus accent pe faptul ca exista si alte alternative care in limita legii lasa libertatea oamenilor sa se exprime si sa-si exprime dezacordul fata de anumite legi sau decizii pe care le iau majoritatea la un moment dat.</p>
+<p><strong>Interventie din sala 2</strong></p>
+<p>Eu sunt printre cei care si-au schimbat votul. Pe mine m-a castigat echipa negatoare pentru ca initial m-am gandit si eu la faptul ca poate majoritatea a ales ceva care nu-mi convine mie... bineinteles ca vreau sa am dreptul sa protestez. Dar, ceea ce m-a convins din ceea ce a spus echipa negatoare, desi nu stiu daca au spus chiar explicit, dar au facut o aluzie la faptul ca e totusi mai bine sa opresam minoritatea decat sa opresam minoritatea. Pentru ca un protest, pana la urma ii deranjeaza mult mai mult pe majoritate, decat sunt deranjati minoritatea de decizia luata de majoritate.</p>
+<p><strong>Norbert Petrovici</strong></p>
+<p>Daca luam exemplul de aici, exemplul Rosia Montana, in care cei de la Rosia Montana au facut tot posibilul sa intre pe caile legale sa conteste acest proiect. Sunt probabil cei mai experti in utilizarea legala din societatea civila pe care o cunosc. Practic au castigat in instanta tot ce si-au propus. Au dat in judecata tot. Au castigat peste 65 de cazuri in instanta, insa pe de alta parte, cei de la Gabriel Gold Corporation au fost foarte tenace la randul lor, efectiv prin sistemul de lobby reusind sa obtina un lucru incredibil precum schimbarea legii minelor, care este propunerea de la care se dezbate in acest moment in Parlament, care practic, le va permite celor de la Gabriel Resources sa exproprieze pe cine vor ei si in acelasi timp au reusit incredibilul lucru sa fie a treia firma care cumpara cea mai multa publicitate in Romania, dupa Orange si Vodafone, ceea ce inseamna ca a impus un embargo mediatic in ceea ce priveste orice informatie legata de o opozitie publica, astfel incat, atat sistemul legislativ, care are purtator principal de cuvant Traian Basescu, si executivul si legislativul sunt purtatorii de cuvant Gabriel Resources, iar cei de aici au recurs, dupa ce au facut toti pasii legali, la o masura inedita, sa faca ocuparea Continentalului. Iar in cazul Continentalului au facut foarte legal tot ce se intampla, respectiv Continentalul este detinut de catre cineva care e cautat prin Interpol si in momentul in care au spus &bdquo;Afara, Politia!&rdquo; au fost sa-l cheme pe primul invadator imobiliar care a spus ca ii vrea afara... adica din punct de vedere legal, Politia cand a intervenit si i-a scos pe cei de acolo, au facut-o ilegal. Deci in momentul in care au facut nesupunerea civica &ndash; in acest caz a fost non-violent, si-au mers pe marginea legii spunand ca incalcarea ei nu s-a facut explicit, in spiritul ei, in timp ce scoaterea lor afara s-a facut ilegal, iar in cazul Pata Rat, iarasi lucrurile au fost foarte dure pentru ca 27 de familii aveau contracte in acel spatiu cand au fost scosi (si buletine), iar modul in care Primaria a lucrat a fost ilegal, iar testarile pe care s-au marit toate caile posibile, astfel incat noi, ca si &ndash; Gabi Badescu fiind aici un actor destul de important in acest proces &ndash; a fost in schimb o alianta trans-nationala. [&hellip;] Am incercat sa facem o alianta trans-nationala prin care sa atragem atentia cu ce se intampla acolo, insa singurul mod in care am reusit sa atragem atentia realmente, au fost cateva momente-cheie de nesupunere civica , in care chiar am facut proteste, in care n-am anuntat de la inceput pentru ca si atunci cand am anuntat, lucrurile nu au iesit bine.</p>
+<p><strong>Gabriel Badescu</strong></p>
+<p>Sunt foarte convins de tot ce spune Norbert si de ce a spus colegul lui, dar am o singura problema si anume ca multe din exemple se refereau dupa definitia voastra, nu la nesupunere civica, ci la participare de protest. E chiar ideea asta de a respecta de fapt legea si de a-i obliga pe ceilalti sa nu o respecte. Aproape toate exemplele au fost de acest tip. Deci in general, nu sunt convins. Norbert tocmai a spus ca la Continental nu a fost incalcata legea si atunci acest exemplu nu se clarifica aici. Si situatia cu autoritatile care incalca legea in mod repetat arata de ce ar putea sa fie o problema situatia in care si noi incalcam legea, fiindca le raspundem cu aceeasi moneda, cand Romania, o tara in care legea se incalca frecvent e tara in care iesi in evidenta folosindu-te creativ in spatiul legii. Pe cand intr-o tara in care sa faci asta e iesit din comun, acolo intr-adevar trebuie avut curaj. Aici poti sa o incalci, vei fi asemeni multor celorlalti, deci nu e nimic deosebit, si nici nu-ti risti pielea ta. Eu consider Romania tara in care Gulerele Albe nu prea sunt pedepsite: au vocatie. Si de fapt, ideea asta de risc si de altruism care in general e acceptata drept nesupunere civica, Romania isi pierde destul de mult din eficienta. Si intorcandu-ma la cazul Rosia Montana, unde sunt multi dintre cei care si-ar dori ca investitia sa nu fie acolo, sau cel putin sunt deranjati de toata chestia cu presa si cu autoritatile carora li se forteaza mana, compar urmatoarele doua situatii: sa zicem ca investitia merge mai departe, si ultimii mohicani, vor sa blocheze si se leaga cu lanturi si asa mai departe... blocheaza drumul pe Valea Ariesului. Compar cu situatia in care gasesti treceri de pietoni pe Valea Ariesului si incerci sa traversezi incet, nu? E si asta o forma de protest in care noi incalcam legea, efectul fiind acelasi ca ai blocat toata circulatia, dar cumva ramai in cadrul legii.</p>
+<p><strong>Norbert Petrovici</strong></p>
+<p>Cred ca in acest caz ce e interesant e ca eu citesc nesupunere civila nu ca incalcare a legii, ci nesupunere la lege. In sens ca in mod activ nu iti asumi legea. In cazul de aici de exemplu cu ocuparea Conti-ului, ce a fost interesant e ca ei nu si-au asumat legea in sensul ca a fost dat afara, folosindu-se ilegal legea, deci criminal, insa, pe de alta parte, ei au primit amenzi, care dupa aceea au fost retrase pentru dezordine publica, respectiv faptul ca au pus muzica tare, faptul ca au pus bannere si ca au facut un protest in care nu au anuntat dinainte fortele de ordine publica, care in toate aceste trei cazuri nu sunt.</p>
+<p><strong>Gabriel Badescu</strong></p>
+<p>Practic din ceea ce spui eu cred ca doar atunci cand anticipezi faptul ca va fi interpretata drept incalcare a legii se califica pentru faptul respectiv, altfel, orice acuza a autoritatii la adresa ta, daca tu esti in perimetrul legii, ar intra in chestiunea asta. Si spune-mi Rosia Montana ilustreaza un alt risc posibil, si anume acela ca gesturile publice vizibile, spectaculoase, in conditiile unei opinii publice putin formate si mass-media cu voci putine sa atraga atentia asa ca un reflector si in spate sa fie alte lucruri. De exemplu, Gabriel Resources mai are cateva locuri in care sapa de zor, sunt mine uriase. Deci s-ar putea sa descoperim cu surprindere ca ne-am pierdut ani buni vazand ce e acolo si intre timp s-au deschis alte zece mine care nu sunt cu aur, nu sunt cu cianura, dar sunt cu alte substante toxice, acesta fiind alte riscuri legate de gesturile pe care le-au facut.</p>
+<p><strong>Norbert Petrovici</strong></p>
+<p>Ma gandesc aici ca nu neaparat mai gasesc legitim argumentul starii de exceptie. Argumentul starii de exceptie cred ca poate lua doua forme: prima, ea spune in general asa: &bdquo;nu este cazul acum sa...&rdquo; Starea de exceptie in acest caz funtioneaza &bdquo;nu e cazul sa ne gandim la o democratie complexa si matura, pentru ca noi nu suntem maturi, prin urmare, trebuie sa facem toti acei pasi, care, chiar daca ar fi legitimi intr-o democratie matura, in acest caz nu merge pentru ca populatia este prea slaba, needucata, si cealalta forma e o stare de exceptie in sensul ca e criza economica, prin urmare trebuie sa suspendam logica democratiei reprezentative si sa luam exemplul ordonantei de urgenta, ceea ce din nou intra in aceeasi logica, dar la paliere diferite. Eu cred ca e un argument periculos sa mergem in aceasta directie, atat pentru filosofia politica, insasi pentru valorile in care credem. Nu cred in argumentul Romaniei profunde sau in faptul ca nu suntem suficient de capabili de a ne asuma o democratie. Inteleg argumentele pe care le aducem daca facem cercetare, insa pe de alta parte, daca definim democratia in acest fel, ea este in apanajul doar al celor educati, al clasei de mijloc. Cei care sunt captivati si care cresc in voluntar, cei care sunt capabili sa se maturizeze.&nbsp; Si cred ca aici e o problema serioasa insasi la baza democratiei si in modul in care functioneaza ea. Adica eu vad democratia si in spatiile de exemplu traditionale romanesti ale satului obstesc.</p>
+<p>&nbsp;</p>
+<p><strong><br /></strong></p>
+</div>
+                <div class='clear'></div>
+        </div><!-- end main content -->
+         <div class='clear'></div>
+</div>
+<div id="pix"></div>
+
+
+                                </div><!--end main -->
+                                <div id='parteneri'>
+                                    <span class='tr'></span><span class='tl'></span><span class='br'></span><span class='bl'></span><span id="filler"></span>
+                                    <div class='parteneri' id='sustinatori'>
+                                        <span class='floating_text' id='un_proiect'>Un proiect</span>
+                                        <a href='http://www.ardor.org.ro/'><div class='image' id='ardor'>Ardor</div></a>
+                                        <span class='floating_text' id='finantatori'>Finanțatori</span>
+                                        <a href='http://www.opensocietyfoundations.org/'><div class='image' id='open_society'>Open Society Foundation </div></a>
+                                        <a href='http://www.studentiq.ro//'><div class='image' id='memoplus'>MemoPlus</div></a>
+                                        <!-- <a href='http://www.ratiufamilyfoundation.com/'><div class='image' id='FundatiaRatiu'>Ardor</div></a>
+                                        <a href='http://www.eef.md/'><div class='image' id='eef'>East Europe Foundation</div></a>
+                                        <a href='http://www.mts.gov.md/'><div class='image' id='mdminister'>Ministerul Tineretului si Sportului al Republicii Moldova</div></a> -->
+
+                                        <span class='floating_text' id='parteneri_text'>Parteneri</span>
+
+                                        <a href='http://www.policycenter.eu/'><div class='image' id='PolicyCenter'>Policy Center</div></a>
+                                        <a href='http://www.britishcouncil.org/'><div class='image' id='BritishCouncil'>British Council</div></a>
+                                        <a href='http://www.europuls.ro/'><div class='image' id='europuls'>Europuls</div></a>
+                                        <a href='http://www.cere.ro/'><div class='image' id='cere'>Ce-Re</div></a>
+                                        <a href='http://www.primeromania.ro/'><div class='image' id='prime'>Prime Romania</div></a>
+                                        <a href='http://www.cji.ro/'><div class='image' id='cji'>Centrul pentru jurnalism independent</div></a>
+                                        <a href='http://www.aiesectm.ro/'><div class='image' id='aisec'>Aisec</div></a>
+                                        <!-- ===================================================================================================== -->
+                                        <a href='http://www.cogitus.ro/'><div class='image' id='cogitus'>Cogitus</div></a>
+                                        <a href='http://www.adevarul.ro/international/foreign_policy/'><div class='image' id='foreignPolicy'>Foreign Policy</div></a>
+                                        <a href='http://www.elsa.ro/'><div class='image' id='elsa'>Elsa</div></a>
+                                        <a href='http://www.vipromania.ro/'><div class='image' id='vipromania'>Voluntari pentru idei si proiecte</div></a>
+                                        <a href='http://www.ongtrust.ro/'><div class='image' id='ongtrust'>Trust</div></a>
+
+                                        <!-- ===================================================================================================== -->
+                                        <a href='http://www.leap.ro/'><div class='image' id='leap'>Leap</div></a>
+                                        <a href='http://www.younginitiative.org/'><div class='image' id='younginitiative'>Asociatia young initiative</div></a>
+                                        <a href='http://www.asjc.ro/'><div class='image' id='asjc'>Asjc</div></a>
+                                        <a href='http://osut.ro/'><div class='image' id='osut'>Osut</div></a>
+                                        <div class='clear'></div>
+                                    </div>
+                                    <div class='parteneri' id='parteneri_institutionali'>
+                                        <span class='floating_text' id='sponsori_text'>Sus&#539;in&#x0103;tori</span>
+                                        <a href='http://www.cartier.md/'><div class='image' id='cartier_logo'>Editura Cartier</div></a>
+                                        <a href='http://www.pll.md/ro/'><div class='image' id='biblio_logo'>Biblioteca publica de drept</div></a>
+                                        <span class='floating_text' id='institutii_text'>Parteneri institu&#539;ionali</span> 
+                                        <ul id='institutii'>
+                                            <!-- <span class='floating_text' id='institutii_text'>Parteneri institu&#539;ionali:</span> -->
+                                            <li><a href='http://www.politice.ro/'>Facultatea de &#536;tiin&#539;e Politice SNSPA </a></li>
+                                            <li><a href='http://www.comunicare.ro/'>Facultatea de Comunicare &#537;i Rela&#539;ii Publice SNSPA</a></li>
+                                            <li><a href='http://www.fspub.ro/'>Facultatea de &#536;tiin&#539;e Politice Universitatea Bucure&#537;ti</a></li>
+                                            <li><a href='http://www.filosofie.unibuc.ro/'>Facultatea de Filosofie Universitatea Bucure&#537;ti</a></li>
+                                            <li><a href='http://litere.unibuc.ro/'>Facultatea de Litere din Universitatea Bucure&#x015f;ti</a></li>
+                                            <li><a href='http://www.unibuc.ro/ro/fac_fsas_ro'>Facultatea de Sociologie Universitatea Bucure&#537;ti</a></li>
+                                            <li><a href='http://laws.uaic.ro/'>Facultatea de Drept Universitatea Alexandru Ioan Cuza Ia&#537;i</a></li>
+                                            <li><a href='http://www.uaic.ro/uaic/bin/view/Academic/Filosofie'>Facultatea de Filosofie si &#536;tiin&#539;e Social Politice Universitatea AIC Ia&#537;i</a></li>
+                                            <li><a href='http://www.upa.ro/'>Facultatea de Drept si Facultatea de &#x015e;tiin&#x0163;e Politice si Administrative Universitatea Petre Andrei Ia&#x015f;i</a></li> 
+
+                                            <li><a href='http://www.ubbcluj.ro/'>Universitatea Babe&#537;-Bolyai Cluj Napoca</a></li>
+                                            <li><a href='http://www.uvt.ro/'>Universitatea de Vest Timi&#537;oara</a></li>
+                                            <li><a href='http://www.upt.ro/'>Universitatea Politehnica Timi&#537;oara</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class='parteneri' id='parteneri_media'>
+                                        <span class='floating_text' id='media_text'>Parteneri media</span>
+                                        <a href='http://www.hotnews.ro/'><div class='image' id='hotnews'>HotNews</div></a>
+                                        <!-- <a href='http://www.lumebuna.ro/'><div class='image' id='lumebuna'>Lume Buna</div></a> -->
+                                        <a href='http://www.romaniapozitiva.ro/'><div class='image' id='romaniapozitiva'>Romania Pozitiva</div></a>
+                                        <a href='http://totb.ro/'><div class='image' id='thinkoutsidethebox'>Think Outside The Box</div></a>
+                                        <a href='http://www.facebook.com/carevasazica.vip'><div class='image' id='carevasazica'>Carevasazica</div></a>
+                                        <a href='http://www.studentie.ro/'><div class='image' id='studentiero'>Studentie.ro</div></a>
+                                        <a href='http://startub.unibuc.ro/'><div class='image' id='startub'>startub.unibuc.ro</div></a>
+                                        <!-- <a href='http://www.tvr.ro/tvr_cluj.php'><div class='image' id='tvrcluj'>Tvr Cluj</div></a> -->
+                                        <!-- <a href='http://www.radiotransilvania.ro'><div class='image' id='radiotransilvania'>Radio Transilvania</div></a> -->
+                                        <a href='http://iasifun.ziaruldeiasi.ro/'><div class='image' id='iasifun'>Iasi fun</div></a>
+                                        <a href='http://www.ziaruldeiasi.ro/'><div class='image' id='ziaruldeiasi'>Ziarul de Iasi</div></a>
+                                        <a href='http://www.kissfm.ro/timisoara'><div class='image' id='kissfm'>KissFm</div></a>
+
+                                        <div class='clear'></div> 
+                                    </div>
+                                    <div class='clear'></div>
+
+                                </div>	
+                            </div>	<!-- end wrap -->
+                            <div id='footer_mare'>
+                                <div id='footer'>
+                                    <div id='links' class='footer'>
+                                        <div id='menu1' style='margin:auto;'> <ul id='meniu_prinicpal'><li><a href='contacte/index.html'> Contact </a></li>
+<li><a href='clubdebate/index.html'> Cluburile </a></li>
+<li><a href='oamenii/index.html'> Oamenii </a></li>
+<li><a href='proiectul/index.html'> Proiectul </a></li>
+<li><a href='home/index.html'> Acasa </a></li>
+</ul></div><!--end menu-->
+                                    </div><!--
+                                    <div id='contact' class='footer'>
+                                            <h4>Contact</h4>
+                                            <p>office@closer2oxford.ro</p>
+                                            <p>bogdan.draghicescu@closer2oxford.ro<br>
+                                            <span class='detalii'> (asistenta tehnica web - orice probleme legate de site)</span></p>
+                                    </div>
+                                    -->
+                                    <div id='newsletter' class='footer'>
+                                        <script src="../../connect.facebook.net/en_US/all.js#xfbml=1"></script><fb:like href="http://www.facebook.com/pages/Closer2Oxford/162758797069605" width="250" colorscheme="dark"></fb:like>
+                                        <!--<h4>Newsletter</h4>
+                                        <form action='/page/newsletter'>
+                                                <input type='text' name='email'>
+                                                <input type='submit' id='submit' value='>'>
+                                                        
+                                        </form>-->
+                                    </div>
+                                    <div id='credits'>
+                                        Copyright(c) 2021 ARDOR |  Toate drepturile rezervate | Toate logo-urile si sloganurile de pe site sunt proprietate intelectuala inregistrata si nu pot fi reproduse fara acordul explicit al detinatorilor. <br>
+                                            <br /><br />
+                                            <b>Disclaimer</b><br /><i>
+
+                                                Programul educational Closer to Oxford este un program non-profit si nu are o legatura cu universitatea cu acelasi nume, referirea la Oxford avand doar o semnificatie simbolica.
+                                            </i>
+                                    </div>
+
+                                </div>		
+                            </div>		
+
+                            <div id="finantatde">Acest proiect este finantat cu sustinere din partea Comisiei Europene. Aceast publicatie [comunicare] reflecta doar
+                                vederile autorului, iar Comisia nu poate fi facuta  responsabila pentru utilizarea informatiei pe care o contine.</div>
+
+
+                        </body>
+                        </html>

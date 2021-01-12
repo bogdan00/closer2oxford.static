@@ -1,0 +1,585 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml-strict.dtd">
+<HTML xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+    <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+            <link rel="icon" type="image/png"  href="../../closer2oxford.ro/favicon.html">
+                <link rel="stylesheet" href="var/layout.css" type="text/css">
+                    <title>Closer to Oxford - e timpul pentru argumente!</title>
+                    <link rel="alternate" type="application/rss+xml"  href="rss_feed" title="Stiri Closer2Oxford">
+                        <!-- <link rel="image_src" property="og:image"  href="/images/layout/closer2oxford_fb_white.png" /> -->
+                        <link rel="image_src" property="og:image"   type="image/jpeg"  href="../uploads/2015/06/9/facebook_icon.html" />
+                        <link rel="image_src" type="image/jpeg"  href="../uploads/2015/06/9/icon-facebook.gif" /> 
+						<meta name="description" content="Closer2Oxford pune în valoare oameni şi argumentele lor, în dezbateri online şi publice alături de tineri şi invitați avizaţi"/>
+                        <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9" />
+<script type='text/javascript' src='../js/jquery-1.4.4.min.js'></script>
+<script>var $j = jQuery.noConflict();</script>
+<script type='text/javascript' src='../js/tinymce/tiny_mce.js'></script>
+<script type='text/javascript' src='../js/jquery.form.js'></script>
+<script type='text/javascript' src='../js/fbLoginRegister.js'></script>
+<script type='text/javascript' src='var/javascript.js'></script>
+<script type='text/javascript' src='../js/jquery.hovertip-1.0.min.js'></script> 
+<script type='text/javascript' src='../js/jquery.jgrowl_minimized.js'></script> 
+<link rel='stylesheet' href='../css/jquery.jgrowl.css' media='screen' type='text/css'> 
+<script type='text/javascript' src='../js/jquery.timer-min.js'></script> 
+<link rel='stylesheet' href='var/gallery.css' media='screen' type='text/css'> 
+<script type='text/javascript' src='var/galerie/jquery.prettyPhoto.js'></script> 
+<meta name='description' content=''/> 
+<meta name='keywords' content=''/> 
+<style>.hovertip{
+    position:absolute;
+    padding:10px 13px;
+    z-index:2;
+    max-width:300px;
+    color:#303030;
+    background-color:#f5f5b5;
+    border:1px solid #DECA7E;
+    font-family:sans-serif;
+    font-size:12px;
+    line-height:18px;
+    text-align:left;
+    }</style> 
+<script type='text/javascript'>$j(document).ready(function(){$j('.tooltip').hovertip({'offset':[20,20]});get_notif();});
+
+if(!Array.indexOf){Array.prototype.indexOf = function(obj){for(var i=0; i<this.length; i++){if(this[i]==obj){return i;}}return -1;}}
+    hashuri = [] ;
+	 var tick_timer= 3000 ;
+ 
+	 function get_notif()
+        {
+		  
+		  //console.log(tick_timer);
+	     
+		  setTimeout(get_notif,tick_timer);
+        
+		   $j.ajax(
+            {
+                url: '/page/notif/show_events',
+                dataType: 'json',
+                data: "{}",
+                success: function(data)
+                    {
+                    $j.each(data,function(index,data){
+                        try
+                            {
+                            if( hashuri.indexOf(data.hash) == -1 )
+                                {
+                                hashuri.push(data.hash);
+                                $j.jGrowl(
+                                    data.str,
+                                    {
+                                        corners:'1px',
+                                        life: data.life,
+                                        header:data.title,
+                                        hash: data.hash,
+                                        sticky: data.sticky,
+                                        close: function(e,m,o)
+                                            {
+                                                $j.ajax({url:'/page/notif/delete_single_event/' + o.hash});
+                                            }
+                                    });
+                                }
+                            }
+                        catch(e){}
+                        })
+                    }
+            });
+        }
+	 </script> 
+ 
+                            
+  <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-19111721-1']);
+  _gaq.push(['_setDomainName', '.closer2oxford.ro']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+    
+                        </head>
+                        <body>
+                            <div id="global_wrap">
+                                <div id="header">
+                                    <a href='../index.html'><div id='logo'><img src='../images/layout/sigla.jpg'></div></a>
+                                    <a class='noExternal' href='http://www.facebook.com/pages/Closer2Oxford/162758797069605'><img src='../images/fb.png' style='height:30px;float:right;clear:right;margin:10px 5px 5px 5px;border:none;'/></a>
+                                    <a href='rss_feed'><img src='../images/feed-icon.png' style='height:30px;float:right;clear:right;margin:5px;border:none;'/></a>
+                                </div>
+                                <div id="meniu">
+                                    <div  id='register_login'>
+
+                                        
+  <a href='#' class='todo' id='login'>Login </a> &nbsp;<a href='register.html' class='todo' id='register'>Register</a>
+    <div id='login_box'>
+		  <form action='https://dev.closer2oxford.ro/page/ro/login_user/logon' method='post' id='user_login_form'>
+					 <div>Email: <input type='text' name='email'/> </div><br />
+					 <div>Pass: <input type='password' name='passwd'/></div><br />
+					 <a href='#' class='password_forgot'>forgot password?</a>
+					 <input type='hidden' value='/page/dezbatere_timisoara_toamna' name='returnto' class='submiter'/><br />
+					 <input type='submit' value='login' name='btn' class='submiter'/><br />
+		  </form>
+		  
+		  <form action='https://dev.closer2oxford.ro/page/ro/login_user/reset_user_pw' method='post' id='user_reset_form'>
+					 <div>Email: <input type='text' name='email'/> </div><br />
+					 <a href='#' class='password_forgot'>login?</a>
+					 <input type='hidden' value='/page/dezbatere_timisoara_toamna' name='returnto' class='submiter'/><br />
+					 <input type='submit' value='reset' name='btn' class='submiter'/><br />
+		  </form>
+		  
+    </div>
+    
+                                    </div>
+                                    <div id='menu1' style='margin:auto;'> <ul id='meniu_prinicpal'><li><a href='contacte/index.html'> Contact </a></li>
+<li><a href='clubdebate/index.html'> Cluburile </a></li>
+<li><a href='oamenii/index.html'> Oamenii </a></li>
+<li><a href='proiectul/index.html'> Proiectul </a></li>
+<li><a href='home/index.html'> Acasa </a></li>
+</ul></div><!--end menu-->
+                                </div>
+                                <div id="main"> 
+                                    <!--<div id='stiri-padding'>
+        <div id='stiri_back'>
+                {stiri} 
+    
+               
+        </div>-->
+        
+</div>
+<div  id="content-padding">
+        <div id='sidebar_menu'>
+                <span class='tr'></span>
+                <span class='tl'></span>
+                <span class='br'></span>
+                <span class='bl'></span>
+                <span id="filler"></span>
+                    
+                <ul></ul>
+                
+                <div class='clear'></div>
+        </div>
+        <div id="content">
+                <span class='tr'></span>
+                <span class='tl'></span>
+                <span class='br'></span>
+                <span class='bl'></span>
+                <span id="filler"></span>
+                <script type='text/javascript' src='../js/jquery.hovertip-1.0.min.js'></script> 
+<script type='text/javascript' src='../js/jquery.jgrowl_minimized.js'></script> 
+<link rel='stylesheet' href='../css/jquery.jgrowl.css' media='screen' type='text/css'> 
+<script type='text/javascript' src='../js/jquery.timer-min.js'></script> 
+<link rel='stylesheet' href='var/gallery.css' media='screen' type='text/css'> 
+<style>.hovertip{
+    position:absolute;
+    padding:10px 13px;
+    z-index:2;
+    max-width:300px;
+    color:#303030;
+    background-color:#f5f5b5;
+    border:1px solid #DECA7E;
+    font-family:sans-serif;
+    font-size:12px;
+    line-height:18px;
+    text-align:left;
+    }</style> 
+<script type='text/javascript'>$j(document).ready(function(){$j('.tooltip').hovertip({'offset':[20,20]});get_notif();});
+
+if(!Array.indexOf){Array.prototype.indexOf = function(obj){for(var i=0; i<this.length; i++){if(this[i]==obj){return i;}}return -1;}}
+    hashuri = [] ;
+	 var tick_timer= 3000 ;
+ 
+	 function get_notif()
+        {
+		  
+		  //console.log(tick_timer);
+	     
+		  setTimeout(get_notif,tick_timer);
+        
+		   $j.ajax(
+            {
+                url: '/page/notif/show_events',
+                dataType: 'json',
+                data: "{}",
+                success: function(data)
+                    {
+                    $j.each(data,function(index,data){
+                        try
+                            {
+                            if( hashuri.indexOf(data.hash) == -1 )
+                                {
+                                hashuri.push(data.hash);
+                                $j.jGrowl(
+                                    data.str,
+                                    {
+                                        corners:'1px',
+                                        life: data.life,
+                                        header:data.title,
+                                        hash: data.hash,
+                                        sticky: data.sticky,
+                                        close: function(e,m,o)
+                                            {
+                                                $j.ajax({url:'/page/notif/delete_single_event/' + o.hash});
+                                            }
+                                    });
+                                }
+                            }
+                        catch(e){}
+                        })
+                    }
+            });
+        }
+	 </script> 
+
+<script type='text/javascript' src='../js/jquery.hovertip-1.0.min.js'></script> 
+<script type='text/javascript' src='../js/jquery.jgrowl_minimized.js'></script> 
+<link rel='stylesheet' href='../css/jquery.jgrowl.css' media='screen' type='text/css'> 
+<script type='text/javascript' src='../js/jquery.timer-min.js'></script> 
+<link rel='stylesheet' href='var/gallery.css' media='screen' type='text/css'> 
+<script type='text/javascript' src='var/galerie/jquery.prettyPhoto.js'></script> 
+<style>.hovertip{
+    position:absolute;
+    padding:10px 13px;
+    z-index:2;
+    max-width:300px;
+    color:#303030;
+    background-color:#f5f5b5;
+    border:1px solid #DECA7E;
+    font-family:sans-serif;
+    font-size:12px;
+    line-height:18px;
+    text-align:left;
+    }</style> 
+<script type='text/javascript'>$j(document).ready(function(){$j('.tooltip').hovertip({'offset':[20,20]});get_notif();});
+
+if(!Array.indexOf){Array.prototype.indexOf = function(obj){for(var i=0; i<this.length; i++){if(this[i]==obj){return i;}}return -1;}}
+    hashuri = [] ;
+	 var tick_timer= 3000 ;
+ 
+	 function get_notif()
+        {
+		  
+		  //console.log(tick_timer);
+	     
+		  setTimeout(get_notif,tick_timer);
+        
+		   $j.ajax(
+            {
+                url: '/page/notif/show_events',
+                dataType: 'json',
+                data: "{}",
+                success: function(data)
+                    {
+                    $j.each(data,function(index,data){
+                        try
+                            {
+                            if( hashuri.indexOf(data.hash) == -1 )
+                                {
+                                hashuri.push(data.hash);
+                                $j.jGrowl(
+                                    data.str,
+                                    {
+                                        corners:'1px',
+                                        life: data.life,
+                                        header:data.title,
+                                        hash: data.hash,
+                                        sticky: data.sticky,
+                                        close: function(e,m,o)
+                                            {
+                                                $j.ajax({url:'/page/notif/delete_single_event/' + o.hash});
+                                            }
+                                    });
+                                }
+                            }
+                        catch(e){}
+                        })
+                    }
+            });
+        }
+	 </script> 
+
+<style type="text/css">
+.poze
+{
+    float:right;
+    width:110px;
+}
+.poze a img
+{    border:none;
+}
+.main_content
+{
+    float:left;
+    width:560px;
+}
+</style>
+
+ <div class = 'poze'>
+            <a class='thumb' href='../uploads/2011/01/5/timisoara_initial.px9lo6.png' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../uploads/2011/01/5/thumb_timisoara_initial.px9lo6.png' alt='' />
+                <span class='desc'>Vot public initial</span>
+            </a>
+        
+
+            <a class='thumb' href='http://www.youtube.com/watch?v=kI_So_HusKA' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../../img.youtube.com/vi/kI_So_HusKA/1.jpg' alt='' />
+                <span class='desc'>Discurs Andreea Nistor</span>
+            </a>
+        
+
+            <a class='thumb' href='http://www.youtube.com/watch?v=vkY36DFvxqI' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../../img.youtube.com/vi/vkY36DFvxqI/1.jpg' alt='' />
+                <span class='desc'>Discurs Stefania Heler</span>
+            </a>
+        
+
+            <a class='thumb' href='http://www.youtube.com/watch?v=t1i4GXYKfns' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../../img.youtube.com/vi/t1i4GXYKfns/1.jpg' alt='' />
+                <span class='desc'>Discurs Claudiu Mesaros</span>
+            </a>
+        
+
+            <a class='thumb' href='http://www.youtube.com/watch?v=FOJMomz9ElE' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../../img.youtube.com/vi/FOJMomz9ElE/1.jpg' alt='' />
+                <span class='desc'>Discurs</span>
+            </a>
+        
+
+            <a class='thumb' href='../uploads/2011/01/6/timi5.jkqo5x.jpg' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../uploads/2011/01/6/thumb_timi5.jkqo5x.jpg' alt='' />
+                <span class='desc'></span>
+            </a>
+        
+
+            <a class='thumb' href='../uploads/2011/01/6/timi4.5x1git.jpg' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../uploads/2011/01/6/thumb_timi4.5x1git.jpg' alt='' />
+                <span class='desc'></span>
+            </a>
+        
+
+            <a class='thumb' href='../uploads/2011/01/6/timi3.it3l0w.jpg' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../uploads/2011/01/6/thumb_timi3.it3l0w.jpg' alt='' />
+                <span class='desc'></span>
+            </a>
+        
+
+            <a class='thumb' href='../uploads/2011/01/6/timi2.1git3l.jpg' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../uploads/2011/01/6/thumb_timi2.1git3l.jpg' alt='' />
+                <span class='desc'></span>
+            </a>
+        
+
+            <a class='thumb' href='../uploads/2011/01/6/timi1.67drhi.jpg' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../uploads/2011/01/6/thumb_timi1.67drhi.jpg' alt='' />
+                <span class='desc'></span>
+            </a>
+        
+
+            <a class='thumb' href='../uploads/2011/01/6/timi6.l0wamb.jpg' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../uploads/2011/01/6/thumb_timi6.l0wamb.jpg' alt='' />
+                <span class='desc'></span>
+            </a>
+        
+
+            <a class='thumb' href='../uploads/2011/01/5/timisoara_final.kmuchr.png' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../uploads/2011/01/5/thumb_timisoara_final.kmuchr.png' alt='' />
+                <span class='desc'>Vot public final</span>
+            </a>
+        
+
+
+    <script>
+    $j(document).ready(function(){
+      		$j("a[rel^='prettyPhoto']").prettyPhoto({theme:'facebook'});
+        });
+    
+    </script>
+    </div>
+
+<div class='main_content'>
+<p><strong>Timisoara, Universitatea de Vest,&nbsp;9 decembrie 2010, ora 16</strong></p>
+<p>Echipa afirmatoare: Andreea Nistor &ndash; studenta Facultatea de Comunicare si Claudiu Mesaros- prodecan Facultatea de Stiinte Politice, Filosofie si Stiintele Comunicarii</p>
+<p>Echipa Negatoare: Stefania Heler &ndash; studenta Facultatea de Medicina Generala si Marcel Tolcea, profesor Facultatea de Jurnalism, publicist.</p>
+<p>moderator: Liviu Herman - trainer ARDOR&nbsp;</p>
+<p>&nbsp;</p>
+<p><strong>Andreea Nistor (Afirmator 1)</strong></p>
+<p>Am să rezum pe scurt ceea ce &icirc;mi propun eu &icirc;mpreuna cu domnul profesor Mesaros să vă prezentăm. Ce credem noi pentru moțiunea de astăzi este că dincolo de scopurile imediate ale televiziunilor private, care sunt de exemplu funcția de divertisment, funcția pe plan social - pe care toate televiziunile o au, credem că este foarte importantă [și ar trebui să o facem și mai importantă de acum &icirc;ncolo] funcția educațională. &nbsp;Și &icirc;n urmatoarele minute o să vă explic ce &icirc;nțelegem noi prin moțiunea de astazi și cum ne dorim ca televiziunile private să se implice mai mult &icirc;n educatia populației.</p>
+<p>C&acirc;nd ne g&acirc;ndim la cum ar putea sa facă asta, avem mai multe raspunsuri -din punctul nostru de vedere - și o sa le &icirc;nregistrez cu cateva exemple: primul exemplu ar fi ca televiziunile private ar putea să se implice mai mult campanii de ajutorare, campanii de caritate si campanii de dezvoltare a comportamentului. De exemplu, ne dorim ca televiziunile private să facă mai multă educație prin mesaje, ne dorim să vorbească mai mult despre cum ar trebui sa arate o alimentație corectă, despre igiena personala, &nbsp;despre moderația in consumul de alcool și de tutun, sau despre cum ar trebui să ne gestionăm investițile personale pe timp de criză. Și ultimul exemplu, foarte important, ne-ar placea să existe niște norme oficial recunoscute de către stat cu privire la frecvența și conținutul educative care este difuzat săptăm&acirc;nal &icirc;n grilele de program de la TV. Cum asta? O să vă dau un exemplu, &icirc;n America &icirc;n 1996 și 1997 exista reglementarea statului care spunea fiecare televiziune să difuzeze minim 3 ore de conținut educativ si instructiv la televizor pe săptăm&acirc;nă și este obligată ca &icirc;n colțul ecranului să aibă o bulină &icirc;n care să scrie E.I. ca populația să stie că astea sunt emisiunile cu conținut instructiv si educativ.</p>
+<p>O să trec mai departe la argumentele pe care vi le vom prezenta astăzi ca să suținem această moțiune.</p>
+<p>Primul argument e &ldquo;fața ascunsă a televiziunii&rdquo;. Probabil că &icirc;n momentul &icirc;n care ne uităm la televizor, fiecare dintre noi nu ne gandim că televiziunea este cel mai important mijloc de promovare a tot ce există pe lumea asta. Ne uităm la televizor, ne uităm des și ne uităm mult. Statisticile ne arată ca ne petrecem ore &icirc;n șir saptamanal făc&acirc;nd asta, uit&acirc;ndu-ne la acea cutie neagra. Dincolo de asta, fiecare companie care vinde un produs pe lumea asta dorește să &icirc;l v&acirc;ndă și pentru ca mulți oameni se uită la televizor, doreste să-l v&acirc;ndă prin intermediul televizorului. Un producător de televiziune american a spus odată &ldquo;tot ceea ce face compania mea face este pur si simplu sa pregătească creierul persoanei /consumatorului care se uită la televizor ca să poată cumpara din ce in ce mai multe produse Coca-Cola&rdquo; De ce? Pentru că chiar și atunci c&acirc;nd nu avem publicitate și ne uităm numai la o emisiune sau la un film, ceea ce se intamplă e că televiziunile ne furnizează mesaje relaxante, emisiuni de divertisment, toate astea ca să ne pregătească psihologic mintea pentru pauzele publicitare &icirc;n care urmează acele reclame la Coca-Cola, cu sticla din care curge sucul in pahare mari, o pungă de popcorn și așa mai departe. Ăsta e un lucru la care nici unul din noi nu se g&acirc;ndește c&acirc;nd se uită la televizor; dacă am sta să analizam cu adevarat ce face televiziunea cu noi, răspunsul ar fi: ne emite mesaje care ne fac să cumpărăm mai mult, să cumpărăm ceea ce vor oamenii care sponsorizează reclamele și care plătesc ca să aibă reclamele la televizor; să crească numarul de consumatori din ce &icirc;n ce mai mult, pentru produse care nu ne trebuie sau nu sunt indispensabile existenței noastre.</p>
+<p>Vă uitați la televizor, vă informați despre candidați, urmariți emisiuni cu dezbateri publice &icirc;n care să-I vedeți pe fiecare dintre ei, urmariți ce se spune despre ei. &Icirc;n momentul &icirc;n care o să vă alegeți un frigider sau &icirc;n momentul &icirc;n care cumpărați o &icirc;nghețată, o faceți după ce v-ați uitat la televizor și după ce v-ați informat de acolo cu privire la asta, dupa ce ați fost &icirc;ntr-un fel sau altul educați de catre mass media. Faptul că mass media ne transmite valori, mesaje, principii, toate astea fac parte din educatie. Educatia nu este doar formare, și nu o primim doar aici in amfiteatre, educația este o chestiune cu care intri permanent &icirc;n contact &icirc;n fiecare zi. Foarte important de &icirc;nțeles este &nbsp;ca fără sa ne dăm seama, mass media ne educă astfel &icirc;nc&acirc;t să genereze &icirc;n g&acirc;ndul nostru un anume comportament pe care ea și-l dorește.</p>
+<p>Ce generează mass-media?</p>
+<p>Generează gustul pentru mediocritate; &icirc;n momentul ăsta, dacă ar fi să ne uitam la emisiunile pe care le găsim la orele de maximă audiență la televizor, cu siguranță nu sunt emisiuni culturale, nu vorbim despre jazz, nu vorbim despre calatorii, destinații pentru vacanță și asa mai departe. Promovează non-valorile, gen &ldquo;haideți să ne uităm la Monica Columbeanu&rdquo;.</p>
+<p>Dacă nu iti mai placea publicul din orașul tău și locuitorii din orașul &icirc;n care aveai fabrica, pur și simplu mutai fabrica &icirc;n alt oraș. &Icirc;n momentul ăsta, ne confruntăm cu urmatoarea teorie: locul este limitat, nu avem unde să ne extindem corporațiile mai mult dec&acirc;t am facut-o deja, am ajuns &icirc;n toate colțurile planetei, fabricăm obiecte peste tot &icirc;n lume, e cazul să investim &icirc;n oamenii care se află acolo unde noi ne desfăsurăm activitatea, e cazul să ne fidelizăm publicul - dacă suntem un post privat de televiziune și e cazul să investim &icirc;n asta.</p>
+<p>Ce &icirc;nseamnă asta pe scurt? Responsabilitatea unei companii. Asta trebuie să faca massmedia care doreste să nu evite să fie atemporală, pentru ca ăsta e trendul cu care ne confruntăm acum și ăsta e viitorul unei companii care peste timp va deveni competitivă care dorește să-și păstreze publicul, doreste să devină credibilă și importantă. Putem să vedem ca cea mai mare diferență &icirc;ntre ele este credibilitatea, și cred că sunteți de acord cu mine.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><strong>Cross 1</strong></p>
+<p><strong>Stefania Heller: </strong>Aș vrea să te intreb un lucru: C&acirc;t de mare este &icirc;n momentul de față interesul publicului față de cultură?</p>
+<p><strong>Andreea Nistor: </strong>Cred că &icirc;mi dau seama unde vrei sa bați, vrei să spui că &icirc;n momentul ăcesta mass-media &icirc;ncearcă să difuzeze ceea ce se vinde și ceea ce caută publicul. &nbsp;Raspunsul meu la chestia asta este că &icirc;n același timp o persoană care se uită foarte mult la televizor [chiar și la ore de varf la ProTV și se uită la aproape orice, chiar &icirc;n momentul &icirc;n care aici am conținut important cultural], &icirc;n același timp, dacă o &icirc;ntrebi ar spune &ldquo;măi n-am la ce să mă uit.&rdquo; Poate m-aș uita și la altceva, dar nu prea am opțiuni, asta pentru că &icirc;n marea majoritate a cazurilor, televiziunile private furnizează numai asta. Drept pentru care dacă, &icirc;n masă, toate televiziunile și-ar schimba un pic grila de programe, ar crește puțin conținutul educativ difuzat, cred că consumatorii n-ar avea de ales pur si simplu si s-ar uita la chestiuni puțin mai inteligente dec&acirc;t &ldquo;Te pui cu blondele&rdquo;.</p>
+<p><strong>Stefania Heller: </strong>Există &icirc;n momentul de fața televiziuni care să aibă conținuit exclusiv cultural?</p>
+<p><strong>Andreea Nistor: </strong>Categoric exista, &icirc;nsă ce vrem noi este ca acele televiziuni care au audienta mare, gen Antena1, Realitatea, OTV și asa mai departe, ar trebui și ele sa se ralieze la această regulă tocmai pentru că ele au mai mult acces la populație dec&acirc;t Discovery Channel sau TVR Cultural, tocmai pentru că ele intră mai mult in casa noastră și sunt un fel de &ldquo;musafiri&rdquo; mai mult dec&acirc;t TVR Cultural și Teleenciclopedia, e și de datoria lor să difuzeze și conținut educațional.</p>
+<p><strong>Stefania Heller: </strong>Crezi tu că &icirc;l &icirc;mpiedică pe telespectatorul de zi cu zi să nu schimbe postul de pe &ldquo;Te pui cu blondele&rdquo; pe un balet pe TVR Cultural?</p>
+<p><strong>Andreea Nistor: </strong>Cred că acum vorbim despre extreme. E clar ca un anumit conținut educațional nu &icirc;nseamnă numai balet și numai opera, la care nici eu nu m-aș uita toată ziua; &icirc;nseamna un &ldquo;Te pui cu blondele&rdquo; cu un limbaj mai puțin vulgar, mai puține injurii și atacuri la persoană. Pe de altă parte, dacă vorbim de copii spre exemplu care &icirc;și petrec o cantitate de timp imensă &icirc;n fața televizorului cu siguranță, ei nu vor schimba canalul și sunt acele persoane care sunt lipsite de aparare &icirc;n fața televiziunii.</p>
+<p>&nbsp;</p>
+<p><strong>Stefania Heler (Negator 1)</strong></p>
+<p>Mă simt puțin ciudat sa stau &icirc;ntr-un amfiteatru de partea asta a baricadei de obicei sunt undeva &icirc;n randul 4-5 și scriu de zor, dar asta se &icirc;ntamplă la mine la facultate.&nbsp; Am tot vorbit despre faptul că ar trebui să avem un conținut cultural mai mare. Am anticipat puțin ceea ce vroiam să spun &icirc;n discursul meu la nivelul <em>cross-ex</em>-ului si am &icirc;ntrebat de ce nu sunt accesate aceste programe cu conținut exclusiv cultural. Pentru că telespectatorul de r&acirc;nd are nevoie și de cultura și de educație și de programe de divertisment și de <em>teleshopping</em> pentru cei care gustă așa ceva, de programe variate. Ei bine &icirc;n momentul de fata, grila de programe are at&acirc;t de multe &icirc;ncat putem să satisfacem toate aceste grupuri. Eu cred că problema este cu totul alta, problema nu este că nu avem oferta suficient de mare &icirc;n programe educaționale &icirc;n programe culturale, problema este că oamenii nu sunt deschiși &icirc;n momentul de față pentru așa ceva. Că rom&acirc;nii din păcate preferă să urmarească emisiuni mediocre, că urmaresc emisiuni de maximă audienta unde este promovat prostul gust. Haideți să nu ne ascundem dupa deget, &rdquo;nu, noi ne-am uita la balet, am urmări opera, am urmări emisiuni despre o dieta sănătoasă&rdquo; și așa mai departe. &Icirc;ntradevăr oamenii de cele mai multe ori utilizeaza televiziunea ca un mijloc de divertisment și atunci le este mult mai ușor să se relaxeze urmărind o emisiune mediocră dec&acirc;t să urmarească un act dintr-o operetă.</p>
+<p>Apoi ne-au vorbit că trebuie să implementeze aceste mesaje care să promoveze un consum moderat de alcool, o alimentație sănătoasă. La nivelul Banatului &ldquo;consumați sare iodată &rdquo; nu se poate aplica. De ce? Pentru ca consumăm de 2 sau de 3 ori mai multă sare iodată dec&acirc;t avem nevoie. Cam la ce ar duce toată chestia asta? Probabil ați văzut de multe ori persoane grase cu gușa respectivă, gușa nu vine neaparat de la grasime, gușa vine de la afecțiuni ale glandei tiroide. Consumul excesiv de sare iodată determină acumularea de iod la nivelul glandei tiroide și va determina &icirc;n timp hipotiroidism, ceea ce e o afecțiune foarte, foarte gravă. Sper că nu v-am plictisit foarte tare cu detaliile medicale vă dadeam doar un exemplu cam c&acirc;t de nociv poate sa fie un astfel de mesaj transmis la nivelul televiziunii. Ne mai vorbea despre faptul că ar trebui să existe niște norme oficiale pentru că televiziunile să treacă dincolo de această &ldquo;față &nbsp;ascunsa&rdquo; și să nu ne mai păcălească cu &ldquo;consumați Coca-Cola&rdquo;&nbsp; arăt&acirc;nd un tip &icirc;nsetat și să te regasești și tu &icirc;n personajul respectiv.</p>
+<p>Dincolo de toate astea, nu cred că &icirc;n Romania am putea să facem un lucru ca ăsta. De ce? Pentru că televiziunile private au catigat &icirc;n &lsquo;89 un lucru foarte important și anume libertatea. Și nu mi se pare normal ca at&acirc;ta timp c&acirc;t ți-ai c&acirc;știgat libertatea să acționezi la nivelul ăsta și sa le impui un anumit program pentru că, poate aparent nu e nimic grav, dar facem un compromis: &icirc;mpunandu-le acum ceva, vom avea posibilitatea să le impunem și altă dată. &Icirc;ncet, &icirc;ncet &icirc;ncepem să tăiem din aceasta libertate care chiar dacă am impune lucrurile astea ar fi cu at&acirc;t (arată distanța dintre 2 degete) mai mica, am facut rabat la ceva ce ar trebui să fie de neclintit. &Icirc;n același timp această problemă s-ar putea traduce ca fiind o problemă de tip cerere-ofertă. Avem o ofertă destul de larga care cuprinde toate genurile de programe, &icirc;nsă cererea pentru aceste genuri de programe este redusă. Nu putem să marim această ofertă, nu are rost să marești ceva care nu se cere. E ca și cum am avea un medicament foarte bun care s-ar putea să vindece răceala, dar sunt prea puțini oameni raciți, noi ce am face nu am face dec&acirc;t să mărim cantitate de medicament și astfel să credem că vom rezolva problema. Problema este la a deschide gustul oamenilor spre educatie si asta nu se face la nivelul televizorului - pe care marea majoritate &icirc;l consideră un mijloc de divertisment și informare la nivel de programe de știri. Această educație trebuie să se faca dincolo: de familie, de școala, trebuie să se facă &icirc;n mod direct adaptată la nevoia fiecarui cetățean. Abia atunci am putea să vorbim de o oarecare responsabilizare.</p>
+<p>Vă mulțumesc.</p>
+<p>&nbsp;</p>
+<p><strong>Cross 2</strong></p>
+<p><strong>Claudiu Mesaros: </strong>Susțineți cumva că &icirc;ntre umorul ca gen și non-valoare ar trebui să &icirc;nțelegem o egalitate?</p>
+<p><strong>Stefania Heller: </strong>Din punctul meu de vedere, umorul de calitate ar trebui să aibă locul lui, dar din păcate ceea ce observ la societatea rom&acirc;nească din ziua de azi, umorul de calitate nu este valorificat și nu este apreciat, probabil că nu este &icirc;nțeles, din punctul meu de vedere. <strong>Marcel Tolcea: </strong>Educația nu se face &icirc;n fața televizoarelor. Cordel a fost &icirc;ntrebat &icirc;n 1924 despre toleranță: &ldquo;Unde e toleranța?&rdquo; și Cordel a spus pentru toleranță există casă specializată. Pentru educație există locuri specializate, dacă educația se va face la televiziune riscăm să-i facem de r&acirc;s pe profesori, pentru că educația &icirc;n Rom&acirc;nia este at&acirc;t de jos &icirc;ncat nu trebuie mare lucru &icirc;ncat să nu mai răm&acirc;nă nimic din ea.</p>
+<p><strong>Claudiu Mesaros: </strong>&Icirc;n ce e specializată mass media?</p>
+<p><strong>Marcel Tolcea: </strong>&Icirc;n opinia mea, specializarea televiziunii este <em>entertainment</em>, &icirc;n nici &icirc;ntr-un caz, din pacate, &icirc;n educație. Funcția educativă se referă nu la educație, ci mai degrabă la influența pozitivă. &Icirc;ntre influența pozitivă și educație există o foarte mare diferență. Noi putem să fim influențați pozitiv de televiziune &icirc;nsa la nivelul raporturilor educației sociale.</p>
+<p>&nbsp;</p>
+<p><strong>Claudiu Mesaros (Afirmator 2)</strong></p>
+<p>Primul argument era faptul că televiziunea este un fel de &ldquo;musafir&rdquo; al nostru, &ldquo;musafir&rdquo; nu nepoftit e adevărat, pentru ca noi ne-am cumpărat un televizor, dar un musafir căruia i-am spune &ldquo;musafirul cu cagula&rdquo; și știți cagula are 2 semnificații una negativă atunci cand ești atacat de cineva și una pozitivă atunci c&acirc;nd este vorba de un serviciu specializat &icirc;n protecție personală. Chestiunea este că televiziunea poarta o cagulă a carei identitate nu o știm. Trebuie să păstrăm o anumită prudență față de această cagulă, e adevarat că avem telecomanda , dar p&acirc;nă mutăm canalul s-ar putea să vedem niște imagini sau să auzim niște mesaje pe care nu ni le-am dorit. &Icirc;n sensul acesta spunea colega mea că reglementarea legală și poate instituirea unor agenții de control care pot fi guvernamentale, dar pot fi și non-guvernamentale, asemenea cazul asociatiei americane a brokerilor care colaborează foarte bine cu autoritățile de stat și care duc la autocenzură.</p>
+<p>Vreau să insist asupra faptului că producțile de <em>entertainment</em>, puteți să le numiti <em>infotainment </em>precum Discovery, pot aduce un plus dacă sunt de calitate, deci <em>entertainment</em>-ul de calitate poate exista.</p>
+<p>Aș insista mai mult pe ultima parte a ceea ce s-a adus aici, și anume faptul că există specialiști &icirc;n marketing care atrag atenția &icirc;n ultimii ani apupra faptului că viitorul aparține acelor corporații care vor avea tupeul să spună &ldquo;produsul meu este la fel de bun sau de prost ca și produsul concurenței, doar că eu vorbesc mai frumos cu consumatorii&rdquo;. Asta ar fi un sens al asumarii responsabilitații sociale a corporațiilor, și nu ma refer aici la un producator de bere care mă sfatuieste să consumam produsul lui cu moderație, mă gandesc la faptul că un canal de <em>entertainment </em>să ne sfătuiască sa &icirc;l consumăm cu moderație sau să nu facem abuz de expunerea proprie sau a unui membru al familiei la un anumit tip de imagini. Asta nu este compatibil cu libertatea și cu caracaterul de corporație, de investiție privată a canalului respectiv, nu poate fi negat faptul că oricum exista niste obligații legale de distribuire a emisiunilor după ore, după varste și asa mai departe, ar fi &icirc;nbunatățite cu niște mesaje pozitive comparabile, &icirc;mi place mie să spun, cu felul cum &icirc;și asuma [asta] autoritățile de stat care &icirc;ncasează taxe și amenzi, uneori te duci și faci ca un boschetar că trebuie să te apleci la un ghiseu situat jos. &Icirc;n cazul nostrum, te duci și poți să stai drept, demn și să vorbești cu persoana din spatele ghișeului fără să te doară coloana vertebrală; diferența &icirc;ntre a-ți asuma minimala obligație legala, de a asigura [doar] gaurica aia prin care eu vorbesc cu funcționarul sau să fac puțin mai mult și să nu ma oblige să mă umilesc cu 20 de persoane &icirc;n spate. Există o diferență &icirc;ntre atitudine și cred că produsul se vinde mai bine &icirc;n cazul al doilea.</p>
+<p>Aș face trimitere la o campanie riscantă p&acirc;nă la urmă, pentru vanzari, campanie &icirc;n urma cu c&acirc;țiva ani &icirc;n Rom&acirc;nia &icirc;n care mesajul era &ldquo;Faci ce vrei, dar știi ce faci&rdquo;. Ceea ce &icirc;nsemnă că &icirc;ntr-un fel ni se limita, eram atenționați că există o anumită limitare la adresa unei practici și totuși o &icirc;ncurajare din punct de vedere cultural.</p>
+<p>Vă mulțumesc.</p>
+<p>&nbsp;</p>
+<p><strong>&nbsp;Marcel Tolcea (Negator 2)</strong></p>
+<p>Nimeni nu vrea să &icirc;i sune telefonul dec&acirc;t cu ring-ul lui, nimeni nu se uită la televizor dec&acirc;t la programul la care &icirc;i place, nimeni nu ascultă jazz dacă vrea să asculte manele. Traiască manelele, mă fac ambasadorul universal al tuturor manelelor din lume. Și vă spun urmatorul mesaj: fac parte din cei 1% care nu asculta manele. Cine sunt eu să spun că tu nu trebuie să asculți manele? Că gustul meu e mai bun ca gustul tau? Cine stabilește &icirc;n comisia respectivă ce programe să intre pe televiziune ca să ne educam? Cine-i omul ăla? Cine-i persoana care stabilește criteriul axiologic? Cine e persoana care spune că trebuie să mă uit la ceva și să-l pun &icirc;n program? Dacă sunt o televiziune de stat zic, e minunat.</p>
+<p>Eu mi-am deschis un magazin alimentar &icirc;n 1992, stiți ce vroiam să vindem? Să vindem suncă presată.Am dat faliment. &Icirc;n cartier se caută marele prinț al caltaboșului. Omul consumă, cumpară, vine acolo unde dorește să ia ceea ce are el &icirc;n obicei. Desigur, a spune ca suntem o echipa &icirc;mpotriva dorinței de educație este cu totul și cu totul exagerat, noi &icirc;nsa &icirc;nțelegem acest tip de implicare nationala, ca unul de cenzurare a exceselor care sunt evident nocive la nivelul societații și &icirc;n al doilea rand, un tip de construire a unui mental social sănătos. Filmele lui James Bond &icirc;n care personajul &icirc;n 1970 intra &icirc;n masină și &icirc;și punea centura de siguranță au creat un efect educativ mult mai mare dec&acirc;t orice &icirc;nseamna un discurs pedagogic mediat. &Icirc;mpotriva acestui tip de discurs noi spunem un &ldquo;nu&rdquo; hotăr&acirc;t.</p>
+<p>&nbsp;</p>
+<p><em>&nbsp;</em></p>
+<p><em>&nbsp;</em></p>
+<p><em>&nbsp;</em></p>
+</div>
+                <div class='clear'></div>
+        </div><!-- end main content -->
+         <div class='clear'></div>
+</div>
+<div id="pix"></div>
+
+
+                                </div><!--end main -->
+                                <div id='parteneri'>
+                                    <span class='tr'></span><span class='tl'></span><span class='br'></span><span class='bl'></span><span id="filler"></span>
+                                    <div class='parteneri' id='sustinatori'>
+                                        <span class='floating_text' id='un_proiect'>Un proiect</span>
+                                        <a href='http://www.ardor.org.ro/'><div class='image' id='ardor'>Ardor</div></a>
+                                        <span class='floating_text' id='finantatori'>Finanțatori</span>
+                                        <a href='http://www.opensocietyfoundations.org/'><div class='image' id='open_society'>Open Society Foundation </div></a>
+                                        <a href='http://www.studentiq.ro//'><div class='image' id='memoplus'>MemoPlus</div></a>
+                                        <!-- <a href='http://www.ratiufamilyfoundation.com/'><div class='image' id='FundatiaRatiu'>Ardor</div></a>
+                                        <a href='http://www.eef.md/'><div class='image' id='eef'>East Europe Foundation</div></a>
+                                        <a href='http://www.mts.gov.md/'><div class='image' id='mdminister'>Ministerul Tineretului si Sportului al Republicii Moldova</div></a> -->
+
+                                        <span class='floating_text' id='parteneri_text'>Parteneri</span>
+
+                                        <a href='http://www.policycenter.eu/'><div class='image' id='PolicyCenter'>Policy Center</div></a>
+                                        <a href='http://www.britishcouncil.org/'><div class='image' id='BritishCouncil'>British Council</div></a>
+                                        <a href='http://www.europuls.ro/'><div class='image' id='europuls'>Europuls</div></a>
+                                        <a href='http://www.cere.ro/'><div class='image' id='cere'>Ce-Re</div></a>
+                                        <a href='http://www.primeromania.ro/'><div class='image' id='prime'>Prime Romania</div></a>
+                                        <a href='http://www.cji.ro/'><div class='image' id='cji'>Centrul pentru jurnalism independent</div></a>
+                                        <a href='http://www.aiesectm.ro/'><div class='image' id='aisec'>Aisec</div></a>
+                                        <!-- ===================================================================================================== -->
+                                        <a href='http://www.cogitus.ro/'><div class='image' id='cogitus'>Cogitus</div></a>
+                                        <a href='http://www.adevarul.ro/international/foreign_policy/'><div class='image' id='foreignPolicy'>Foreign Policy</div></a>
+                                        <a href='http://www.elsa.ro/'><div class='image' id='elsa'>Elsa</div></a>
+                                        <a href='http://www.vipromania.ro/'><div class='image' id='vipromania'>Voluntari pentru idei si proiecte</div></a>
+                                        <a href='http://www.ongtrust.ro/'><div class='image' id='ongtrust'>Trust</div></a>
+
+                                        <!-- ===================================================================================================== -->
+                                        <a href='http://www.leap.ro/'><div class='image' id='leap'>Leap</div></a>
+                                        <a href='http://www.younginitiative.org/'><div class='image' id='younginitiative'>Asociatia young initiative</div></a>
+                                        <a href='http://www.asjc.ro/'><div class='image' id='asjc'>Asjc</div></a>
+                                        <a href='http://osut.ro/'><div class='image' id='osut'>Osut</div></a>
+                                        <div class='clear'></div>
+                                    </div>
+                                    <div class='parteneri' id='parteneri_institutionali'>
+                                        <span class='floating_text' id='sponsori_text'>Sus&#539;in&#x0103;tori</span>
+                                        <a href='http://www.cartier.md/'><div class='image' id='cartier_logo'>Editura Cartier</div></a>
+                                        <a href='http://www.pll.md/ro/'><div class='image' id='biblio_logo'>Biblioteca publica de drept</div></a>
+                                        <span class='floating_text' id='institutii_text'>Parteneri institu&#539;ionali</span> 
+                                        <ul id='institutii'>
+                                            <!-- <span class='floating_text' id='institutii_text'>Parteneri institu&#539;ionali:</span> -->
+                                            <li><a href='http://www.politice.ro/'>Facultatea de &#536;tiin&#539;e Politice SNSPA </a></li>
+                                            <li><a href='http://www.comunicare.ro/'>Facultatea de Comunicare &#537;i Rela&#539;ii Publice SNSPA</a></li>
+                                            <li><a href='http://www.fspub.ro/'>Facultatea de &#536;tiin&#539;e Politice Universitatea Bucure&#537;ti</a></li>
+                                            <li><a href='http://www.filosofie.unibuc.ro/'>Facultatea de Filosofie Universitatea Bucure&#537;ti</a></li>
+                                            <li><a href='http://litere.unibuc.ro/'>Facultatea de Litere din Universitatea Bucure&#x015f;ti</a></li>
+                                            <li><a href='http://www.unibuc.ro/ro/fac_fsas_ro'>Facultatea de Sociologie Universitatea Bucure&#537;ti</a></li>
+                                            <li><a href='http://laws.uaic.ro/'>Facultatea de Drept Universitatea Alexandru Ioan Cuza Ia&#537;i</a></li>
+                                            <li><a href='http://www.uaic.ro/uaic/bin/view/Academic/Filosofie'>Facultatea de Filosofie si &#536;tiin&#539;e Social Politice Universitatea AIC Ia&#537;i</a></li>
+                                            <li><a href='http://www.upa.ro/'>Facultatea de Drept si Facultatea de &#x015e;tiin&#x0163;e Politice si Administrative Universitatea Petre Andrei Ia&#x015f;i</a></li> 
+
+                                            <li><a href='http://www.ubbcluj.ro/'>Universitatea Babe&#537;-Bolyai Cluj Napoca</a></li>
+                                            <li><a href='http://www.uvt.ro/'>Universitatea de Vest Timi&#537;oara</a></li>
+                                            <li><a href='http://www.upt.ro/'>Universitatea Politehnica Timi&#537;oara</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class='parteneri' id='parteneri_media'>
+                                        <span class='floating_text' id='media_text'>Parteneri media</span>
+                                        <a href='http://www.hotnews.ro/'><div class='image' id='hotnews'>HotNews</div></a>
+                                        <!-- <a href='http://www.lumebuna.ro/'><div class='image' id='lumebuna'>Lume Buna</div></a> -->
+                                        <a href='http://www.romaniapozitiva.ro/'><div class='image' id='romaniapozitiva'>Romania Pozitiva</div></a>
+                                        <a href='http://totb.ro/'><div class='image' id='thinkoutsidethebox'>Think Outside The Box</div></a>
+                                        <a href='http://www.facebook.com/carevasazica.vip'><div class='image' id='carevasazica'>Carevasazica</div></a>
+                                        <a href='http://www.studentie.ro/'><div class='image' id='studentiero'>Studentie.ro</div></a>
+                                        <a href='http://startub.unibuc.ro/'><div class='image' id='startub'>startub.unibuc.ro</div></a>
+                                        <!-- <a href='http://www.tvr.ro/tvr_cluj.php'><div class='image' id='tvrcluj'>Tvr Cluj</div></a> -->
+                                        <!-- <a href='http://www.radiotransilvania.ro'><div class='image' id='radiotransilvania'>Radio Transilvania</div></a> -->
+                                        <a href='http://iasifun.ziaruldeiasi.ro/'><div class='image' id='iasifun'>Iasi fun</div></a>
+                                        <a href='http://www.ziaruldeiasi.ro/'><div class='image' id='ziaruldeiasi'>Ziarul de Iasi</div></a>
+                                        <a href='http://www.kissfm.ro/timisoara'><div class='image' id='kissfm'>KissFm</div></a>
+
+                                        <div class='clear'></div> 
+                                    </div>
+                                    <div class='clear'></div>
+
+                                </div>	
+                            </div>	<!-- end wrap -->
+                            <div id='footer_mare'>
+                                <div id='footer'>
+                                    <div id='links' class='footer'>
+                                        <div id='menu1' style='margin:auto;'> <ul id='meniu_prinicpal'><li><a href='contacte/index.html'> Contact </a></li>
+<li><a href='clubdebate/index.html'> Cluburile </a></li>
+<li><a href='oamenii/index.html'> Oamenii </a></li>
+<li><a href='proiectul/index.html'> Proiectul </a></li>
+<li><a href='home/index.html'> Acasa </a></li>
+</ul></div><!--end menu-->
+                                    </div><!--
+                                    <div id='contact' class='footer'>
+                                            <h4>Contact</h4>
+                                            <p>office@closer2oxford.ro</p>
+                                            <p>bogdan.draghicescu@closer2oxford.ro<br>
+                                            <span class='detalii'> (asistenta tehnica web - orice probleme legate de site)</span></p>
+                                    </div>
+                                    -->
+                                    <div id='newsletter' class='footer'>
+                                        <script src="../../connect.facebook.net/en_US/all.js#xfbml=1"></script><fb:like href="http://www.facebook.com/pages/Closer2Oxford/162758797069605" width="250" colorscheme="dark"></fb:like>
+                                        <!--<h4>Newsletter</h4>
+                                        <form action='/page/newsletter'>
+                                                <input type='text' name='email'>
+                                                <input type='submit' id='submit' value='>'>
+                                                        
+                                        </form>-->
+                                    </div>
+                                    <div id='credits'>
+                                        Copyright(c) 2021 ARDOR |  Toate drepturile rezervate | Toate logo-urile si sloganurile de pe site sunt proprietate intelectuala inregistrata si nu pot fi reproduse fara acordul explicit al detinatorilor. <br>
+                                            <br /><br />
+                                            <b>Disclaimer</b><br /><i>
+
+                                                Programul educational Closer to Oxford este un program non-profit si nu are o legatura cu universitatea cu acelasi nume, referirea la Oxford avand doar o semnificatie simbolica.
+                                            </i>
+                                    </div>
+
+                                </div>		
+                            </div>		
+
+                            <div id="finantatde">Acest proiect este finantat cu sustinere din partea Comisiei Europene. Aceast publicatie [comunicare] reflecta doar
+                                vederile autorului, iar Comisia nu poate fi facuta  responsabila pentru utilizarea informatiei pe care o contine.</div>
+
+
+                        </body>
+                        </html>

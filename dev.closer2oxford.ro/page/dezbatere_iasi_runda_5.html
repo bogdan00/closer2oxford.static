@@ -1,0 +1,959 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml-strict.dtd">
+<HTML xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+    <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+            <link rel="icon" type="image/png"  href="../../closer2oxford.ro/favicon.html">
+                <link rel="stylesheet" href="var/layout.css" type="text/css">
+                    <title>Closer to Oxford - e timpul pentru argumente!</title>
+                    <link rel="alternate" type="application/rss+xml"  href="rss_feed" title="Stiri Closer2Oxford">
+                        <!-- <link rel="image_src" property="og:image"  href="/images/layout/closer2oxford_fb_white.png" /> -->
+                        <link rel="image_src" property="og:image"   type="image/jpeg"  href="../uploads/2015/06/9/facebook_icon.html" />
+                        <link rel="image_src" type="image/jpeg"  href="../uploads/2015/06/9/icon-facebook.gif" /> 
+						<meta name="description" content="Closer2Oxford pune în valoare oameni şi argumentele lor, în dezbateri online şi publice alături de tineri şi invitați avizaţi"/>
+                        <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9" />
+<script type='text/javascript' src='../js/jquery-1.4.4.min.js'></script>
+<script>var $j = jQuery.noConflict();</script>
+<script type='text/javascript' src='../js/tinymce/tiny_mce.js'></script>
+<script type='text/javascript' src='../js/jquery.form.js'></script>
+<script type='text/javascript' src='../js/fbLoginRegister.js'></script>
+<script type='text/javascript' src='var/javascript.js'></script>
+<script type='text/javascript' src='../js/jquery.hovertip-1.0.min.js'></script> 
+<script type='text/javascript' src='../js/jquery.jgrowl_minimized.js'></script> 
+<link rel='stylesheet' href='../css/jquery.jgrowl.css' media='screen' type='text/css'> 
+<script type='text/javascript' src='../js/jquery.timer-min.js'></script> 
+<link rel='stylesheet' href='var/gallery.css' media='screen' type='text/css'> 
+<script type='text/javascript' src='var/galerie/jquery.prettyPhoto.js'></script> 
+<meta name='description' content=''/> 
+<meta name='keywords' content=''/> 
+<style>.hovertip{
+    position:absolute;
+    padding:10px 13px;
+    z-index:2;
+    max-width:300px;
+    color:#303030;
+    background-color:#f5f5b5;
+    border:1px solid #DECA7E;
+    font-family:sans-serif;
+    font-size:12px;
+    line-height:18px;
+    text-align:left;
+    }</style> 
+<script type='text/javascript'>$j(document).ready(function(){$j('.tooltip').hovertip({'offset':[20,20]});get_notif();});
+
+if(!Array.indexOf){Array.prototype.indexOf = function(obj){for(var i=0; i<this.length; i++){if(this[i]==obj){return i;}}return -1;}}
+    hashuri = [] ;
+	 var tick_timer= 3000 ;
+ 
+	 function get_notif()
+        {
+		  
+		  //console.log(tick_timer);
+	     
+		  setTimeout(get_notif,tick_timer);
+        
+		   $j.ajax(
+            {
+                url: '/page/notif/show_events',
+                dataType: 'json',
+                data: "{}",
+                success: function(data)
+                    {
+                    $j.each(data,function(index,data){
+                        try
+                            {
+                            if( hashuri.indexOf(data.hash) == -1 )
+                                {
+                                hashuri.push(data.hash);
+                                $j.jGrowl(
+                                    data.str,
+                                    {
+                                        corners:'1px',
+                                        life: data.life,
+                                        header:data.title,
+                                        hash: data.hash,
+                                        sticky: data.sticky,
+                                        close: function(e,m,o)
+                                            {
+                                                $j.ajax({url:'/page/notif/delete_single_event/' + o.hash});
+                                            }
+                                    });
+                                }
+                            }
+                        catch(e){}
+                        })
+                    }
+            });
+        }
+	 </script> 
+ 
+                            
+  <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-19111721-1']);
+  _gaq.push(['_setDomainName', '.closer2oxford.ro']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+    
+                        </head>
+                        <body>
+                            <div id="global_wrap">
+                                <div id="header">
+                                    <a href='../index.html'><div id='logo'><img src='../images/layout/sigla.jpg'></div></a>
+                                    <a class='noExternal' href='http://www.facebook.com/pages/Closer2Oxford/162758797069605'><img src='../images/fb.png' style='height:30px;float:right;clear:right;margin:10px 5px 5px 5px;border:none;'/></a>
+                                    <a href='rss_feed'><img src='../images/feed-icon.png' style='height:30px;float:right;clear:right;margin:5px;border:none;'/></a>
+                                </div>
+                                <div id="meniu">
+                                    <div  id='register_login'>
+
+                                        
+  <a href='#' class='todo' id='login'>Login </a> &nbsp;<a href='register.html' class='todo' id='register'>Register</a>
+    <div id='login_box'>
+		  <form action='https://dev.closer2oxford.ro/page/ro/login_user/logon' method='post' id='user_login_form'>
+					 <div>Email: <input type='text' name='email'/> </div><br />
+					 <div>Pass: <input type='password' name='passwd'/></div><br />
+					 <a href='#' class='password_forgot'>forgot password?</a>
+					 <input type='hidden' value='/page/dezbatere_iasi_runda_5' name='returnto' class='submiter'/><br />
+					 <input type='submit' value='login' name='btn' class='submiter'/><br />
+		  </form>
+		  
+		  <form action='https://dev.closer2oxford.ro/page/ro/login_user/reset_user_pw' method='post' id='user_reset_form'>
+					 <div>Email: <input type='text' name='email'/> </div><br />
+					 <a href='#' class='password_forgot'>login?</a>
+					 <input type='hidden' value='/page/dezbatere_iasi_runda_5' name='returnto' class='submiter'/><br />
+					 <input type='submit' value='reset' name='btn' class='submiter'/><br />
+		  </form>
+		  
+    </div>
+    
+                                    </div>
+                                    <div id='menu1' style='margin:auto;'> <ul id='meniu_prinicpal'><li><a href='contacte/index.html'> Contact </a></li>
+<li><a href='clubdebate/index.html'> Cluburile </a></li>
+<li><a href='oamenii/index.html'> Oamenii </a></li>
+<li><a href='proiectul/index.html'> Proiectul </a></li>
+<li><a href='home/index.html'> Acasa </a></li>
+</ul></div><!--end menu-->
+                                </div>
+                                <div id="main"> 
+                                    <!--<div id='stiri-padding'>
+        <div id='stiri_back'>
+                {stiri} 
+    
+               
+        </div>-->
+        
+</div>
+<div  id="content-padding">
+        <div id='sidebar_menu'>
+                <span class='tr'></span>
+                <span class='tl'></span>
+                <span class='br'></span>
+                <span class='bl'></span>
+                <span id="filler"></span>
+                    
+                <ul></ul>
+                
+                <div class='clear'></div>
+        </div>
+        <div id="content">
+                <span class='tr'></span>
+                <span class='tl'></span>
+                <span class='br'></span>
+                <span class='bl'></span>
+                <span id="filler"></span>
+                <script type='text/javascript' src='../js/jquery.hovertip-1.0.min.js'></script> 
+<script type='text/javascript' src='../js/jquery.jgrowl_minimized.js'></script> 
+<link rel='stylesheet' href='../css/jquery.jgrowl.css' media='screen' type='text/css'> 
+<script type='text/javascript' src='../js/jquery.timer-min.js'></script> 
+<link rel='stylesheet' href='var/gallery.css' media='screen' type='text/css'> 
+<style>.hovertip{
+    position:absolute;
+    padding:10px 13px;
+    z-index:2;
+    max-width:300px;
+    color:#303030;
+    background-color:#f5f5b5;
+    border:1px solid #DECA7E;
+    font-family:sans-serif;
+    font-size:12px;
+    line-height:18px;
+    text-align:left;
+    }</style> 
+<script type='text/javascript'>$j(document).ready(function(){$j('.tooltip').hovertip({'offset':[20,20]});get_notif();});
+
+if(!Array.indexOf){Array.prototype.indexOf = function(obj){for(var i=0; i<this.length; i++){if(this[i]==obj){return i;}}return -1;}}
+    hashuri = [] ;
+	 var tick_timer= 3000 ;
+ 
+	 function get_notif()
+        {
+		  
+		  //console.log(tick_timer);
+	     
+		  setTimeout(get_notif,tick_timer);
+        
+		   $j.ajax(
+            {
+                url: '/page/notif/show_events',
+                dataType: 'json',
+                data: "{}",
+                success: function(data)
+                    {
+                    $j.each(data,function(index,data){
+                        try
+                            {
+                            if( hashuri.indexOf(data.hash) == -1 )
+                                {
+                                hashuri.push(data.hash);
+                                $j.jGrowl(
+                                    data.str,
+                                    {
+                                        corners:'1px',
+                                        life: data.life,
+                                        header:data.title,
+                                        hash: data.hash,
+                                        sticky: data.sticky,
+                                        close: function(e,m,o)
+                                            {
+                                                $j.ajax({url:'/page/notif/delete_single_event/' + o.hash});
+                                            }
+                                    });
+                                }
+                            }
+                        catch(e){}
+                        })
+                    }
+            });
+        }
+	 </script> 
+
+<script type='text/javascript' src='../js/jquery.hovertip-1.0.min.js'></script> 
+<script type='text/javascript' src='../js/jquery.jgrowl_minimized.js'></script> 
+<link rel='stylesheet' href='../css/jquery.jgrowl.css' media='screen' type='text/css'> 
+<script type='text/javascript' src='../js/jquery.timer-min.js'></script> 
+<link rel='stylesheet' href='var/gallery.css' media='screen' type='text/css'> 
+<script type='text/javascript' src='var/galerie/jquery.prettyPhoto.js'></script> 
+<style>.hovertip{
+    position:absolute;
+    padding:10px 13px;
+    z-index:2;
+    max-width:300px;
+    color:#303030;
+    background-color:#f5f5b5;
+    border:1px solid #DECA7E;
+    font-family:sans-serif;
+    font-size:12px;
+    line-height:18px;
+    text-align:left;
+    }</style> 
+<script type='text/javascript'>$j(document).ready(function(){$j('.tooltip').hovertip({'offset':[20,20]});get_notif();});
+
+if(!Array.indexOf){Array.prototype.indexOf = function(obj){for(var i=0; i<this.length; i++){if(this[i]==obj){return i;}}return -1;}}
+    hashuri = [] ;
+	 var tick_timer= 3000 ;
+ 
+	 function get_notif()
+        {
+		  
+		  //console.log(tick_timer);
+	     
+		  setTimeout(get_notif,tick_timer);
+        
+		   $j.ajax(
+            {
+                url: '/page/notif/show_events',
+                dataType: 'json',
+                data: "{}",
+                success: function(data)
+                    {
+                    $j.each(data,function(index,data){
+                        try
+                            {
+                            if( hashuri.indexOf(data.hash) == -1 )
+                                {
+                                hashuri.push(data.hash);
+                                $j.jGrowl(
+                                    data.str,
+                                    {
+                                        corners:'1px',
+                                        life: data.life,
+                                        header:data.title,
+                                        hash: data.hash,
+                                        sticky: data.sticky,
+                                        close: function(e,m,o)
+                                            {
+                                                $j.ajax({url:'/page/notif/delete_single_event/' + o.hash});
+                                            }
+                                    });
+                                }
+                            }
+                        catch(e){}
+                        })
+                    }
+            });
+        }
+	 </script> 
+
+<style type="text/css">
+.poze
+{
+    float:right;
+    width:110px;
+}
+.poze a img
+{    border:none;
+}
+.main_content
+{
+    float:left;
+    width:560px;
+}
+</style>
+
+ <div class = 'poze'>
+            <a class='thumb' href='http://www.youtube.com/watch?v=StL9d7nPE_A&amp;list=PL6AA47F8CFA4ECCDF&amp;index=1&amp;feature=plpp_video' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../../img.youtube.com/vi/StL9d7nPE_A/1.jpg' alt='' />
+                <span class='desc'>Introducere</span>
+            </a>
+        
+
+            <a class='thumb' href='http://www.youtube.com/watch?v=CzJLyAxUq2c&amp;list=PL6AA47F8CFA4ECCDF&amp;index=2&amp;feature=plpp_video' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../../img.youtube.com/vi/CzJLyAxUq2c/1.jpg' alt='' />
+                <span class='desc'>Afirmator 1</span>
+            </a>
+        
+
+            <a class='thumb' href='http://www.youtube.com/watch?v=mFCoO1bH0wk&amp;list=PL6AA47F8CFA4ECCDF&amp;index=3&amp;feature=plpp_video' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../../img.youtube.com/vi/mFCoO1bH0wk/1.jpg' alt='' />
+                <span class='desc'>Cross 1</span>
+            </a>
+        
+
+            <a class='thumb' href='http://www.youtube.com/watch?v=EJE0Cb3ksf0&amp;list=PL6AA47F8CFA4ECCDF&amp;index=4&amp;feature=plpp_video' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../../img.youtube.com/vi/EJE0Cb3ksf0/1.jpg' alt='' />
+                <span class='desc'>Negator 1</span>
+            </a>
+        
+
+            <a class='thumb' href='http://www.youtube.com/watch?v=1f023wJBNRM&amp;list=PL6AA47F8CFA4ECCDF&amp;index=5&amp;feature=plpp_video' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../../img.youtube.com/vi/1f023wJBNRM/1.jpg' alt='' />
+                <span class='desc'>Cross 2</span>
+            </a>
+        
+
+            <a class='thumb' href='http://www.youtube.com/watch?v=NDguq1ozbng&amp;list=PL6AA47F8CFA4ECCDF&amp;index=6&amp;feature=plpp_video' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../../img.youtube.com/vi/NDguq1ozbng/1.jpg' alt='' />
+                <span class='desc'>Afirmator 2</span>
+            </a>
+        
+
+            <a class='thumb' href='http://www.youtube.com/watch?v=bs4C1_AvT2Y&amp;list=PL6AA47F8CFA4ECCDF&amp;index=7&amp;feature=plpp_video' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../../img.youtube.com/vi/bs4C1_AvT2Y/1.jpg' alt='' />
+                <span class='desc'>Negator 2</span>
+            </a>
+        
+
+            <a class='thumb' href='http://www.youtube.com/watch?v=sPh6Flq7Luk&amp;list=PL6AA47F8CFA4ECCDF&amp;index=8&amp;feature=plpp_video' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../../img.youtube.com/vi/sPh6Flq7Luk/1.jpg' alt='' />
+                <span class='desc'>Discutie cu public 1</span>
+            </a>
+        
+
+            <a class='thumb' href='http://www.youtube.com/watch?v=1lCQ0M-cZ0k&amp;list=PL6AA47F8CFA4ECCDF&amp;index=9&amp;feature=plpp_video' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../../img.youtube.com/vi/1lCQ0M-cZ0k/1.jpg' alt='' />
+                <span class='desc'>Discutie cu public 2</span>
+            </a>
+        
+
+
+    <script>
+    $j(document).ready(function(){
+      		$j("a[rel^='prettyPhoto']").prettyPhoto({theme:'facebook'});
+        });
+    
+    </script>
+    </div>
+
+<div class='main_content'>
+<p><strong>Dezbatere publica Iasi, Facultatea de Stiintele Comunicarii</strong></p>
+<p><strong>Universitatea Al. I. Cuza din Iași, 2 Mai, ora 18.15</strong></p>
+<p><strong>&nbsp;</strong></p>
+<p><strong><em>&bdquo;E timpul să decriminalizăm pirateria online?&rdquo; </em></strong></p>
+
+<p>Echipa afirmatoare: <strong>Vasile Alaiba</strong> (colaborator al Facultatii de Informatica Iasi, managing partner la Mobile Touch) și <strong>Cristina Beatrice Condrea</strong> (studenta la Sociologie, anul I)</p>
+<p>Echipa negatoare: <strong>Ilie Ghiciuc</strong> (managing partner Thinslices) și <strong>Bogdan Hadarag</strong> (student la Psihologie, anul I).</p>
+
+<p>Moderator, <strong>Liviu Gajora</strong></p>
+
+
+
+<p><strong>Liviu Gajora:</strong> Bun venit la dezbaterea publică din cadrul proiectului Closer 2 Oxford, e vorba de un proiect &icirc;n care &icirc;n fiecare semestru, trimestru, &icirc;ncercăm să invităm, să &icirc;ncurajăm studenții, și nu numai, să se implice, să dialogheze argumentat, rațional, despre chestiuni care &ndash; sperăm noi &ndash; sunt importante pentru societatea rom&acirc;nească.</p>
+
+<p>Runda aceasta am discutat dacă e timpul ca societatea rom&acirc;nească să decriminalizeze pirateria online, pirateria pe Internet, altfel spus dacă e timpul să renunțăm la a mai pedepsi actele de&nbsp; piraterie pe Internet.</p>
+
+<p>Dezbaterea publică de azi o să se desfășoare &icirc;n două etape. &Icirc;ntr-o primă etapă o să avem o dezbatere &icirc;n stil clasic, &icirc;n care două echipe, una pro moțiune și una contra moțiune se vor &icirc;nfrunta, și &icirc;n a doua, &icirc;n a doua fază, o să &icirc;ncercăm să inițiem un dialog cu publicul (pornind de la ideile care s-au schimbat &icirc;n timpul dezbaterii), să mergem mai departe, mai &icirc;n profunzime și să abordăm și alte lucruri. Cei patru invitați nu sunt neapărat trup și suflet &icirc;n echipa &icirc;n care sunt, asta &icirc;nsemn&acirc;nd că s-ar putea să nu fie sută la sută de acord cu poziția pe care o susțin.</p>
+
+<p><strong>Ilie Ghiciuc:</strong> Nu?</p>
+
+<p><strong>Liviu Gajora:</strong> Nu știu, zic. &Icirc;nsă asta vom vedea și de la ei. &Icirc;nsă le mulțumim tuturor, cu at&acirc;t mai mult dacă s-ar putea ca unele dintre argumentele pe care le prezintă să fie &icirc;mpotriva părerii proprii.</p>
+
+<p>&Icirc;n echipa afirmatoare, &icirc;n echipa care ține cu pirații runda asta, &icirc;i avem pe Vasile Alaiba, care este colaborator la Facultatea de Informatică Iași, dar și managing partner la Mobile Touch. &Icirc;n echipă cu domnul Alaiba este Cristina Beatrice Condrea, care este studentă la sociologie &icirc;n anul I. &Icirc;n echipa negatorilor &icirc;i avem pe Ilie Ghiciuc, managing partner la ThinSlices și, ca să invităm simetria de invitat-student, Bogdan Hadarag, student la Psihologie &icirc;n anul I. Iată așadar doi managing partner de o parte și de alta a aceleiași problematici, și anume cea a pirateriei pe Internet.</p>
+
+<p>Aveți, fiecare dintre voi, sau ar trebui să aveți fiecare dintre voi, un aparat de vot. Ce o să vă rugăm o să fie ca să pregătiți aparatele de vot; &nbsp;o să solicităm de la voi ceea ce am numi un vot &icirc;n blanc. Altfel spus, &icirc;nainte să discutăm orice despre moțiune, orice despre ce presupune ideea de piraterie online și de ce ar trebui să fim pro sau contra, o să vă solicităm, apăs&acirc;nd butonul 1, spuneți &bdquo;Da&rdquo;, suntem de acord cu decriminalizarea pirateriei online apăs&acirc;nd butonul 2 veți spune &bdquo;Nu&rdquo;, nu suntem de acord cu decriminalizarea pirateriei online. Ce solicităm acum de la voi este momentul zero, care este părerea voastră vizavi de moțiune, așa cum o &icirc;nțelegeți voi &icirc;n momentul acesta. Deci 1 dacă sunteți de acord, &icirc;n principiu cu pirateria online, ca pirateria online să fie decriminalizata si 2 daca nu.</p>
+
+<p><strong>Public 1:</strong> Am o &icirc;ntrebare</p>
+
+<p><strong>Liviu Gajora:</strong> Da.</p>
+
+<p><strong>Public 1:</strong> Păi&hellip; pentru că ne puneți &icirc;n fața lui &bdquo;Da&rdquo; sau &bdquo;Nu&rdquo;, răsp&acirc;ntia asta, ori &bdquo;Da&rdquo; ori &bdquo;Nu&rdquo;, eu vă &icirc;ntreb &ndash; metodologic &ndash; dacă nu există posibilitatea &bdquo;Nici da, nici nu&rdquo;, deocamdată.</p>
+
+<p><strong>Liviu Gajora:</strong> Cu siguranță. La fel cum, dacă e să abordăm metodologia un pic brutal, vom spune că, chiar dacă nu sunteți hotăr&acirc;ți, s-ar putea să fiți un pic mai mult &icirc;nspre o parte dec&acirc;t spre cealaltă. Faptul că votați &bdquo;Da&rdquo; sau &bdquo;Nu&rdquo; nu &icirc;nseamnă că sunteți neapărat sută la sută sau că nu &icirc;ntrevedeți și zonele gri, ci doar că &icirc;n principiu s-ar putea procentual să fiți, procentual vorbind să fiți un pic mai mult &icirc;ntr-o parte dec&acirc;t &icirc;n cealaltă.</p>
+
+<p><strong>Public 1:</strong> Știi de ce-am propus asta? Pentru că aici domină prezențele feminine și &icirc;n general femininul este mai oscilant.</p>
+
+<p>Liviu Gajora: O să &icirc;ncercăm să nu generalizăm și să trecem la vot. Puteți apăsa &icirc;n momentul ăsta 1 dacă sunteți pentru decriminalizare sau 2 dacă sunteți &icirc;mpotrivă, dacă credeți că avem nevoie &icirc;n continuare de pedepse. Ok, a apucat să voteze toată lumea, mai așteptăm?. Bun, o să punem deocamdată votul ăsta, o să-l punem deoparte, o să-l ținem minte și o să revenim asupra lui la final.</p>
+
+<p>Să trecem acum la dezbaterea propriu-zisă și o să invit, &icirc;n ordine, vorbitorii celor două echipe. O să mergem &icirc;n ordine: primul vorbitor pro, primul contra, al doilea vorbitor pro, al doilea contra. După fiecare dintre primele două discursuri o să lăsăm membrii să adreseze și &icirc;ntrebări unii altora.</p>
+
+<p>Acestea fiind spuse, o să invit primul membru al echipei pro să ne spună de ce e timpul, &icirc;ntr-adevăr, ca pirateria online să fie decriminalizată.</p>
+
+<h2>Afirmator 1 &ndash; Cristina Beatrice Condrea</h2>
+
+<p>Bună ziua, mă numesc Cristina Beatrice Condrea și sunt primul afirmator din seara asta. Voi &icirc;ncepe prin a defini pirateria online și decriminalizarea pirateriei online. Pirateria este, &icirc;n termeni absoluți, exercitarea unuia din drepturile exclusive ale deținătorului dreptului de autor, fără permisiunea acestuia. Totuși, prin decriminalizarea pirateriei online, se urmărește considerarea utilizării libere și gratuite, &icirc;n scop necomercial, a materialelor ce intră sub incidența drepturilor de autor, un fapt social și juridic acceptat. Trebuie menționat că cei ce obțin profit din distribuirea acestor materiale contra cost &icirc;n mod legal, răm&acirc;n &icirc;n continuare sub incidența acestor drepturi.</p>
+
+<p>&Icirc;n ziua de astăzi toată lumea a ajuns să eticheteze pirateria online ca pe un fenomen extrem de grav și negativ.&nbsp; Dar ce ar fi dacă am considera pirateria online un rău necesar al epocii tehnologizate? Trebuie să ținem cont de faptul că, &icirc;n primul r&acirc;nd, oferă promovare gratuită, oferind publicului o modalitate de a testa &icirc;nainte calitatea produsului și de a se decide dacă &icirc;ntr-adevăr merită banii. Prin punerea la dispoziție pe Internet &icirc;n mod gratuit a produselor crește numărul celor interesați, atrăg&acirc;nd atenția și celor &ndash; și altor persoane care poate &icirc;nainte nu ar fi avut o altă modalitate de informare asupra acestui produs. Implicit sunt atrași și mai mulți fani, dintre care cu siguranță unii vor cumpăra produsul &icirc;n original. Și c&acirc;nd spun &bdquo;cu siguranță&rdquo; trebuie să avem &icirc;n vedere faptul că trăim &icirc;ntr-o societate &icirc;n care consumismul este un fenomen cu o răsp&acirc;ndire poate mai mare dec&acirc;t a pirateriei pe Internet. Este cu adevărat o problemă dacă o persoană descarcă un film de pe Internet, &icirc;l vizionează, &icirc;i place și apoi &icirc;și invită prietenii la cinematograf pentru a &icirc;l viziona &icirc;mpreună? Un bun exemplu pentru acest caz este filmul &bdquo;The Man from Earth&rdquo;; acest film, după ce a fost pus pe blogul releaselog, &icirc;mpreună cu un scurt review și un link pentru a fi descărcat &icirc;n mod gratuit și fără acordul autorului, a atras o mulțime de vizitatori, care mai apoi a &icirc;ncurajat un număr și mai mare de persoane să &icirc;l cumpere și să &icirc;l vizioneze &icirc;n cinematografe. Raportul dintre downloadări și cumpărări sau vizionări &icirc;n cinematografe este de 1 la 10. De reținut, de asemenea, că &icirc;nainte de a fi pus pe acel blog, filmul se afla pe locul 11235 &icirc;n topul IMDB, pentru ca apoi să ajungă al cincilea cel mai vizitat film pe același site. Acum ne &icirc;ntrebăm cu toții unde este pierderea. Acel film ar fi rămas &icirc;n umbră dacă nu ar fi fost pus &icirc;n mod gratuit la dispoziția utilizatorilor de Internet, devenind astfel accesibil publicului larg.</p>
+
+<p>O altă falsă iluzie pe care o au unii despre pirateria pe Internet este că orice descărcare a unui produs ar fi echivalentă cu o pierdere financiară. Este greșit să considerăm că, &icirc;n lipsa posibilității de a descărca gratuit un album muzical sau o melodie, individul l-ar cumpăra. &Icirc;n primul r&acirc;nd, cred că fiecare dintre noi a ascultat măcar o dată pe You Tube o melodie care mai apoi nu i-a plăcut și a dat-o uitării. Credeți că ar fi cumpărat acea melodie doar din curiozitate pentru a descoperi dacă &icirc;i place sau nu? Internetul are un rol informativ, și de asemenea ne lărgește bagajul de cunoștințe, d&acirc;ndu-ne ocazia de a pretesta produsele. Un adevărat fan al unei formații nu s-ar limita doar la deținerea melodiilor piratate, ci și-ar dori să aibă albumele &icirc;n original, sau măcar să meargă la concerte. Dacă popularitatea formației crește pe baza pirateriei online, ea va obține astfel mai mulți admiratori, și probabil mai mulți participanți la aceste concerte. Conform studiilor efectuate de institutul Cato, oamenii au tendința de a investi banii destinați muzicii &icirc;n concerte &icirc;n momentul &icirc;n care au posibilitatea de a descoperi noi artiști prin intermediul Internetului. Aceste fenomen este, &icirc;ntr-adevăr, &icirc;n detrimentul materialelor &icirc;nregistrate, dezavantaj&acirc;nd companiile care obțin profit din v&acirc;nzarea albumelor. Dacă privim &icirc;nsă la nivel macro, reprezintă un avantaj pentru industria muzicală, &icirc;ncuraj&acirc;ndu-se acest tip de reprezentații live. Un fenomen asemănător &icirc;nt&acirc;lnim și la nivelul cinematografiei. Putem, deci, spune că pirateria online a determinat o schimbare &icirc;n ceea ce privește atitudinea oamenilor față de proprietatea intelectuală, &icirc;nsă nu putem condamna această schimbare ca fiind negativă.</p>
+
+<p>Concluzionăm prin a spune că pirateria online, chiar dacă nu este cel mai folositor fenomen al epocii noastre, nu este nici cea mai gravă problemă cu care se confruntă societatea. Are at&acirc;t părți bune, c&acirc;t și rele și uneori poate fi chiar benefică. Dacă &icirc;n loc de piraterie online am privi-o ca pe un mod de promovare a produselor, am putea considera că pierderile raportate la c&acirc;știguri nu sunt chiar at&acirc;t de mari. Doar produsele de proastă calitate sunt dezavantajate de fenomenul pirateriei online. Mulțumesc.</p>
+
+<p><strong>Liviu Gajora:</strong> Mulțumim și noi și acuma pentru a oferi și taberei contra posibilitatea de a intra devreme &icirc;n joc o să permitem celor două echipe să interacționeze printr-un scurt schimb de &icirc;ntrebări de maxim trei minute; invităm tabăra contra să adreseze taberei pro orice &icirc;ntrebări simt că au nevoie de clarificare.</p>
+
+<h2>&Icirc;ntrebări din partea Negatorilor, pentru Afirmatori</h2>
+
+<p><strong>Ilie Ghiciuc:</strong> Eu aș avea două &icirc;ntrebări. Pot &icirc;nțelege să nu folosim consumatorii de produse piratate: filme, muzică, softuri etc., dar ar trebui să pedepsim cei ce facilitează consumul? Adică persoana care a v&acirc;ndut cincizeci de mii de CD-uri, &icirc;ntr-un an, cu filme?</p>
+
+<p><strong>Cristina Beatrice Condrea:</strong> Am definit la &icirc;nceput utilizarea &icirc;n scop necomercial, adică doar &icirc;n scop personal, nu reproducerea pentru a fi v&acirc;ndute mai departe și a obține profit.</p>
+
+<p><strong>Ilie Ghiciuc:</strong> Ok, și cum ar trebui să facem distincția, cum ar &ndash; instituțiile statului, cum ar trebui să &icirc;și dea seama dacă downloadul pe care l-ai făcut tu e pentru tine sau pentru a-l da și prietenilor tăi? Cam greu.</p>
+
+<p><strong>Vaile Alaiba:</strong> Aș putea răspunde eu la această &icirc;ntrebare. &Icirc;n primul r&acirc;nd downloadul, sau descărcarea, &icirc;n limba rom&acirc;nă, a unei opere, fie ea carte, film, melodie sau software, nu ar trebui să fie incriminată &icirc;n sine, ci reproducerea &icirc;n scop comercial. Această reproducere se poate incrimina foarte simplu prin interceptarea &icirc;n flagrant a vinderii unei copii piratate.</p>
+
+<p><strong>Ilie Ghiciuc:</strong> Ok, și a doua &icirc;ntrebare ar fi &ndash; unul din argumenta a fost că ascultăm melodiile și dacă ne plac o să le cumpărăm. C&acirc;t de des cumpărați muzică de pe Internet și care sunt magazinele de unde o procurați?</p>
+
+<p><strong>Cristina Beatrice Condrea:</strong> Chiar dacă nu cumpărăm albumele propriu-zise, putem să participăm la concerte și eu mă declar fana concertelor live. Și, după cum am spus, este mai degrabă o schimbare de atitudine a oamenilor față de arta &icirc;n sine. Mai degrabă ajungem să mergem la reprezentațiile live dec&acirc;t să cumpărăm albumele &icirc;nregistrate. Asta susține oarecum și creșterea calitativă a industriei muzicale sau a artei.</p>
+
+<p><strong>Ilie Ghiciuc:</strong> Mulțumim.</p>
+
+<p><strong>Liviu Gajora:</strong> Mulțumim și noi. Trecem la cuv&acirc;ntul&hellip; prima intervenție a echipei negatoare.</p>
+
+<h2>Negator 1 &ndash; Bogdan Hadarag</h2>
+
+<p>Mă pot face auzit p&acirc;nă &icirc;n spate?... Bine, atunci o să vorbesc la microfon. Bună seara, mă numesc Bogdan, sunt negator 1 și voi contraargumenta echipa afirmatoare prin a spune că nu e bine ca pirateria să fie acceptată. Voi prezenta prima dată argumentele noastre, după aceea voi trece la contraargumentare.</p>
+
+<p>Primul argument al nostru este că pirateria este un furt. Este un furt definit de lege prin articolul 208, care spune, citez, &bdquo;luarea unui bun mobil din posesia sau detenția altuia, fără consimțăm&acirc;ntul acestuia, &icirc;n scopul de a-și &icirc;nsușii pe nedrept, se pedepsește cu &icirc;nchisoare de la 1 la 12 ani&rdquo;. Articolul 12 definește pirateria ca, citez, &bdquo;jefuirea prin acte de violență, săv&acirc;rșite &icirc;n scopuri personale de personalul sau pasagerii unei nave &icirc;mpotriva persoanelor sau bunurilor care se găsesc pe acea navă ori &icirc;mpotriva unei nave, dacă navele se află &icirc;n mări sau &icirc;ntr-un loc anume supus jurisdicției unui stat&rdquo;. Iar &icirc;n cazul Internetului, pirateria este copierea unui software fără a avea consimțăm&acirc;ntul celui care a creat acel software.</p>
+
+<p>Considerăm că este un furt deoarece, pe l&acirc;ngă faptul că nu se ține cont de efortul pe care l-a depus creatorul programului &ndash; a cheltuit timp și bani ca să-l creeze și ca noi să ne putem folosi de el &ndash;, și este furt pentru că, pe l&acirc;ngă faptul că aducem prejudicii statului &icirc;n sensul că provocăm pierderi economice&hellip; &icirc;mi cer scuze, am emoții&hellip; provocăm pierderi economice. Spun eu că de fapt &icirc;l vindem mai departe și cerem bani pentru ceea ce am cerut.</p>
+
+<p>Un al doilea argument ar fi că pentru software-urile piratate pe care &icirc;n mod obișnuit le folosim și nu ar trebui să le folosim, ar fi că există alternative la ele. Putem să folosim alte programe care sunt gratuite, se distribuie gratuit pe Internet, au aceeași siguranță pe care o prezintă și software-urile licențiate și care costă; de asemenea, ele sunt și open source, &icirc;n sensul &icirc;n care, &icirc;n sensul că, dacă nu &icirc;ți convine cum le confecționează ele, poți să le schimbi dacă ești priceput &icirc;n informatică și știi cum să faci treaba asta.</p>
+
+<p>Trec la contraargumentare. Vom spune că echipa afirmatoare a zis că sunt scoși bani destui din concerte. Da, dar nu destul&hellip; nu se scot at&acirc;ția bani c&acirc;t se scot din cumpărarea software-urilor. Descărcarea este o pierdere financiară. Da, este o pierdere financiară dacă ele sunt piratate, și sunt statistici care spun că 9.12 miliarde de euro au fost pierderile &icirc;ncasate de producție&hellip; caselor de producție, &icirc;mi cer scuze, cauzate pirateriei, și 1.52 miliarde de euro pierd muncitorii din cauza descărcărilor ilegale. Dacă nu s-ar mai pirata, atunci s-ar c&acirc;știga 193 de miliarde de dolari &icirc;n primii doi ani, cu un profit de 43 de miliarde acum. Cam at&acirc;t am de zis&hellip; at&acirc;t am de zis.</p>
+
+<p><strong>Liviu Gajora:</strong> Ok, să permitem și afirmatorilor să clarifice c&acirc;teva chestiuni din discursul negator; trei minute pentru &icirc;ntrebări.</p>
+
+<h2>&Icirc;ntrebări din partea Afirmatorilor, pentru Negatori</h2>
+
+<p><strong>Cristina Beatrice Condrea:</strong> Ai spus, pentru &icirc;nceput, că sunt pierduți bani din descărcările albumelor și s-ar fi c&acirc;știgat mult mai mult dacă nu s-ar fi bazat toată lumea doar pe concerte. Am și eu o &icirc;ntrebare: este corect ca un artist să obțină profit doar pentru un album &icirc;nregistrat, iar c&acirc;nd vine vorba de o reprezentație live, acesta să &icirc;și dezamăgească fanii și să &icirc;i dezamăgească pe cei care au plătit pentru a-i vedea live?</p>
+
+<p><strong>Ilie Ghiciuc:</strong> Aș putea să răspund eu la chestia asta. Dacă tu muncești trei ani să faci un album, care speri că &ndash; o să primești o sumă de bani, care să-ți permită să muncești și următorii trei ani să faci un album, și de fapt nu primești dec&acirc;t trei la sută din c&acirc;t ai preconizat că vei primi, cam cu ce poftă ai să te duci la primul concert?</p>
+
+<p><strong>Cristina Beatrice Condrea:</strong> Da, dar &icirc;n cazul ăsta &icirc;nseamnă că tu nu ai fost destul de bun și ar trebui să-ți alegi altă slujbă.</p>
+
+<p><strong>Public 1:</strong> Cine n-a fost destul de bun, cine? Care-i rolul? Rolul?</p>
+
+<p><strong>Cristina Beatrice Condrea:</strong> Cel care a scos albumul.</p>
+
+<p><strong>Ilie Ghiciuc:</strong> Individul respectiv care a produs opera respectiva. Nu a fost suficient de bun pentru că toată lumea a folosit opera lui fără să plătească. Nu sunt cu totul de acord.</p>
+
+<p><strong>Cristina Beatrice Condrea:</strong> Dar nu cred că chiar toată lumea folosește pirateria online. Mai sunt, bine, poate destul de rar, dar mai sunt oameni care, &icirc;ntr-adevăr, plătesc pentru muzica pe care o ascultă. Și &icirc;n plus poate să scoată profit și &icirc;n alte moduri, cum ar fi folosirea pe coloana sonoră a unui film a melodiei respective și alte lucruri de genul ăsta.</p>
+
+<p><strong>Ilie Ghiciuc:</strong> Ok, deci le folosim acum și pe coloana sonoră a filmelor.</p>
+
+<p><strong>Cristina Beatrice Condrea:</strong> Exact.</p>
+
+<p><strong>Ilie Ghiciuc:</strong> Plătim pentru ele, de data asta.</p>
+
+<p><strong>Vasile Alaiba: </strong>Ok, aș vrea să aduc totuși o completare. Aș vrea să aduc o completare legată de argumentul negatorilor, și anume faptul că s-a demonstrat &icirc;n mai multe r&acirc;nduri faptul că atunci c&acirc;nd o operă este foarte pirată, automat cresc v&acirc;nzările. Și, ca parte a argumentului nostru a fost faptul că pentru fiecare zece copii piratate, există o copie sau o modalitate de a materializa financiar acea v&acirc;nzare. &Icirc;ntr-o matematică simplă &ndash; vedem aici multe miliarde &icirc;n afirmațiile negatorilor, aceste miliarde aș vrea să subliniez faptul ca nu există, da?</p>
+
+<p><strong>Ilie Ghiciuc:</strong> Păi nu există dacă toată lumea descarcă gratuit&hellip;</p>
+
+<p><strong>Vasile Alaiba:</strong> Nu există pentru că aceste potențiale venituri presupun că toate copiile care s-au realizat ar fi trebuit plătite. Lucru care de obicei nu se &icirc;nt&acirc;mplă, tocmai pentru că, &icirc;n cazul &icirc;n care pirateria nu ar fi existat și autorul nu ar fi dat gratuit sub nicio formă opera sa, cu siguranță numărul de descărcări și vizibilitatea acesteia ar fi fost mult mai mică.</p>
+
+<p><strong>Liviu Gajora:</strong> Ok, ne oprim aici și trecem direct la discursul afirmatorului 2.</p>
+
+<h2>Afirmator 2 &ndash; Vasile Alaiba</h2>
+
+<p>A, cred că deja &icirc;ncepusem. &Icirc;n regulă. Aș vrea să aduc o anumită afirmație care s-a &icirc;nt&acirc;mplat &icirc;n limba engleză de către Stewart Brand către co-fondatorul Apple, Steve Wozniak, spun&acirc;nd &bdquo;information wants to be free&rdquo;, informația vrea să fie liberă. Și aș pune această afirmație &icirc;mpreună cu realitatea economică a faptului (că) costul marginal al producerii, al reproducerii nemodificate a informației tinde către zero, o dată cu dezvoltarea tehnologică. Iar &icirc;n cazul Internetului și al pirateriei online, &icirc;ntr-adevăr acesta este foarte, foarte aproape de zero, &icirc;nc&acirc;t poate fi considerat nul. &Icirc;n aceste condiții, țin&acirc;nd cont de această realitate, ar putea fi chiar privit, dintr-un anumit punct de vedere, injust faptul că creatorii cer o sumă de bani relativ mare pentru o reproducere care practic nu costa nimic. Acesta ar fi primul meu argument.</p>
+
+<p>Legat de acest lucru mai putem să adăugăm faptul că de multe ori consumatorii nu sunt dispuși să plătească pentru a obține o copie, mai ales că conștientizăm faptul că autorul nu face efectiv nimic pentru noi, și acest lucru este valabil și &icirc;n cazul software-ului. De multe ori software-ul, o dată creat, costul reproducerii sale este aproape de zero. Și spun lucrul acesta fiind, &icirc;n același timp, partener la o firmă producătoare de soft. De multe ori, mai ales &icirc;n modelele open source, softul se oferă gratuit &icirc;n ideea de a vinde servicii auxiliare, cum ar fi suport, expertiză și așa mai departe.</p>
+
+<p>Un al treilea argument pe care &icirc;l putem aduce este faptul că pirateria are niște efecte benefice foarte puternice la nivel social. Și c&acirc;nd spun acest lucru mă refer mai ales la pirateria care se realizează &icirc;n jurul produselor software profesionale și al cărților de specialitate. Probabil că mulți dintre voi ați &icirc;nvățat să utilizați un calculator pe un sistem de operare Windows piratat. Nu o să vă cer să ridicați m&acirc;na, dar faptul că r&acirc;deți confirmă acest lucru. De asemenea, mulți dintre, nu știu dacă voi, dar noi, cei care lucrăm &icirc;n informatică, am crescut &icirc;ntr-un context &icirc;n care, să spunem, indisponibilitatea legală a unor produse software de specialitate ne-a făcut imposibilă dezvoltarea profesională. Și același lucru se poate aplica și la cărțile de specialitate. &Icirc;n absența unor surse, să spunem, dintr-o zonă oarecum gri a Internetului, a unor cărți de calitate foarte bună, mulți dintre noi sunt convins că nu și-ar permite să cheltuie 100 de Euro, 200 de Euro, pentru a obține publicații de specialitate de ultimă oră, pentru uz personal. Repet, sunt pentru uz personal, nu cu scopul de a le redistribui și a face un profit din acest lucru. Mulțumesc.</p>
+
+<p><strong>Liviu Gajora:</strong> Ok. Mulțumim și noi și trecem la replica, ultima replică a negatorilor pe seara asta.</p>
+
+<h2>Negator 2 &ndash; Ilie Ghiciuc</h2>
+
+<p>Da. Din păcate noi suntem puțin dezavantajați &icirc;n poziția &icirc;n care suntem pentru că trebuie să combatem un fenomen care este at&acirc;t de răsp&acirc;ndit, &icirc;nc&acirc;t ar trebui să spunem că trebuie să pedepsim studenții care merg pe jos. Cam așa ceva.</p>
+
+<p>Dar o să pornesc puțin de la afirmațiile colegului care a spus &ndash; a vorbit despre efectele benefice &icirc;n societate ale pirateriei. Și vreau să fac puțin o comparație aici, e ca și cum am spune că &bdquo;ok, violul e ceva rău, dar măcar crește natalitatea&rdquo; sau &bdquo;nu-i ok să omor&acirc;m oameni bătr&acirc;ni, dar ne rezolvăm problema pensiilor&rdquo;, deci cam așa ceva. Hai să tolerăm un fenomen social negativ pentru că are c&acirc;teva aspecte pozitive.</p>
+
+<p>Mai departe aș vrea să vă-ntreb &ndash; și o să vorbesc destul de mult legat de software, pentru că &icirc;n zona asta activez &ndash;, c&acirc;t de multe produse software rom&acirc;nești de succes cunoașteți și folosiți? Nu foarte multe. Ați auzit poate de BitDefender, care a fost v&acirc;ndut la Microsoft, dar nu prea mai sunt altele. Și motivul e că, pentru a veni &icirc;n piață cu un produs de succes, un produs care să aibă un succes la nivel internațional, care să devină lider de piață, costurile sunt uriașe. Vorbim de sute de mii de Euro, dacă nu milioane chiar. &Icirc;ntr-adevăr, odată ce acel software a fost produs, costurile de distribuție sunt marginale, sunt marginale față de costurile de marketing, față de costurile legate de resurse umane, dar marginal &icirc;nseamnă un mic procent din costul total, asta nu &icirc;nseamnă că valoarea absolută este mică. Pot să vă spun că, de exemplu, compania mea &icirc;ncearcă să introducă un produs &icirc;n piață acum. Acel cost de distribuție, Internetul, cloud computing, care face totul foarte ieftin, tot vorbim de mii de Euro, da? Deci nu vorbim de zeci de Euro, sau sume care pot fi complet neglijate.</p>
+
+<p>Mai departe, folosim software piratat din anumite motive. Folosim Windows piratat &icirc;n camera de cămin pentru că ne oferă niște beneficii, da? E răsp&acirc;ndit, e mai ușor de folosit, putem face &icirc;n zece minute ce am face cu un alt sistem de operare mult mai greu, și atunci vă &icirc;ntreb: de ce nu am plăti pentru acele beneficii? Avem o creștere de productivitate. Companiile oricum știu că folosim software-ul lor fără să plătim și tolerează acest lucru o vreme. Tolerează să ne &icirc;ncepem o afacere cu software piratat, da? Un an, doi, trei, devenim profitabili, ar trebui la un moment dat să plătim pentru beneficiile pe care le primim. Asta o să permită acelei companii să inoveze. Cazul nostru de exemplu: dacă investim o sută, două sute de mii de Euro &icirc;ntr-un produs și nu ne primim banii &icirc;napoi, echipa respectivă, acei șapte oameni care au lucrat la acel produs unșpe luni, doișpe luni, nu mai putem să-i plătim, trebuie să meargă acasă, să facă altceva. Ok, oferim o parte din acest serviciu gratuit, dăm ocazia utilizatorului să-l testeze, dăm ocazia să aibă parte de c&acirc;teva beneficii, dar &icirc;n momentul &icirc;n care &icirc;ncepi să c&acirc;știgi de pe urma lui, e normal să plătești. Nu vrem să criminalizăm consumul, dar: beneficiem de acele produse; cărțile pe care le citim ne ajută să vindem servicii de consultanță mai scumpe. Și-atunci ar trebui să le plătim, nu? Poate nu imediat, poate nu avem timp imediat, dar ar trebui să venim la un moment dat și să plătim pentru ele&hellip; Ok?</p>
+
+<p>Mai departe, sa lăsăm puțin zona de software la o parte, mai ales zona de produse foarte scumpe, da? Vorbim de Adobe, de exemplu, de suita Photoshop, 1800 de Euro, 2000 de Euro. Un student care vrea să facă freelancing și care vrea să c&acirc;știge 100 de Euro pe lună nu-și permite să plătească banii ăștia, dar exist opțiunile gratuite: avem Gimp, avem o grămadă de, de tool-uri, de instrumente gratuite. De ce nu depunem efortul să &icirc;nvățăm să folosim acele aplicații care, &icirc;ntr-adevăr poate merg&hellip; nu sunt la fel de eficiente, dar avem opțiunea? Sau, după ce-am făcut primul proiect, primul contract, am putea să ne cumpărăm o subscripție la Adobe, costă doar 40 de dolari pe lună. Și dacă nu avem suficiente proiecte, atunci poate nu avem nevoie de acel instrument, nu?</p>
+
+<p>Muzică. Costă 9 dolari pe lună să asculți oric&acirc;t de multă muzică vrei. De ce să nu plătim? E mai ușor să downloadăm? Nu cred. De multe ori nu găsim melodia pe care o vrem, nu e la calitatea suficient de bună. Nu putem face un argument din faptul că o să ascult acum muzică, o să pun și la mine-n bar, o să dau și la mine acasă o petrecere cu muzică pe care n-o plătesc, pentru că la un moment dat mă voi duce la un concert. Ok, și dacă artistul respectiv a murit &icirc;ntre timp? Ei, ghinionul lui. Și, cam astea sunt argumentele mele.</p>
+
+<h2>Discuții</h2>
+
+<p><strong>Liviu Gajora:</strong> Ok&hellip; o să profităm acuma c&acirc;t e&hellip; c&acirc;t sunt calde toate aceste idei și o să vă invit să refacem un pic votul, de data asta &icirc;ncerc&acirc;nd să luați &icirc;n calcul toate lucrurile pe care le-ați auzit; &icirc;ncerc&acirc;nd să vă g&acirc;ndiți pentru c&acirc;teva secunde dacă ceva din ce ați auzit v-a schimbat un pic părerea, sau din contra, v-a făcut mai &icirc;ncrezători &icirc;n părerea pe care o aveați oricum. Așa că avem un nou vot. Iarăși, 1 &icirc;nseamnă că sunteți &icirc;n continuare de acord cu decriminalizarea, 2 &icirc;nseamnă nu sunteți de acord cu decriminalizarea, pirateria ar trebui să răm&acirc;nă ilegală și pedepsită.</p>
+
+<p><strong>Public 1:</strong> La sf&acirc;rșit ne dați cifrele, da?</p>
+
+<p><strong>Liviu Gajora:</strong> La sf&acirc;rșit facem comparația.</p>
+
+<p>Ok, cred că suntem bine, suntem pe drumul cel bun.</p>
+
+<p><strong>Public 1:</strong> Nu vă cerem cifre, dar rezultatul celei de-a doua votări e &icirc;nfiorător.</p>
+
+<p><strong>Liviu Gajora:</strong> Bun&hellip; &icirc;naintea dezbaterii am avut 64.5 la sută pro decriminalizare, pro-pirați, 35.5 contra și după&hellip; nu e o schimbare foarte mare, dar e un pic, 71 la sută pro și 29 contra.</p>
+
+<p>Acuma, dincolo de exercițiul ăsta cu votul pe care &icirc;l facem ca să răm&acirc;nem cumva ancorați &icirc;ntr-o&hellip; și &icirc;ntr-un cadru cantitativ, și &icirc;ntr-un cadru material, cred că s-au schimbat &icirc;n cursul dezbaterii acesteia foarte multe idei interesante, mult mai multe idei reale despre ce &icirc;nseamnă de fapt piraterie și despre motivele reale pentru care ar trebui sau nu să renunțăm la a pedepsi pirateria dec&acirc;t am văzut &icirc;n multe dezbateri din cadrul public. Așa &icirc;nc&acirc;t vă invit &icirc;n următoarea jumătate de oră să &icirc;ncercăm deschidem un dialog mai profund despre unele dintre chestiunile pe care le-am auzit. Și-o să vă invit pe oricare dintre voi, dacă aveți de pus o &icirc;ntrebare unuia dintre invitați, sau dacă aveți de făcut un comentariu-completare și vreți să primiți și un răspuns la ceea ce vreți să spuneți&hellip; aveți toată libertatea să interveniți, să puneți o &icirc;ntrebare, să faceți o clarificare, sau să ne &icirc;mpărtășiți din experiența de pirați sau non-pirați. Și &icirc;ncepem de-acolo.</p>
+
+<p><strong>Public 2:</strong> Din punctul meu de vedere, evident, cred că Internetul, &icirc;n forma sa actuală de astăzi, oferă transparență și cred că e foarte bine. Apropo de ce se spunea despre artiști că&hellip;</p>
+
+<p><strong>Public 1:</strong> Transparența a ce?</p>
+
+<p><strong>Public 2:</strong> Transparența produselor, transparența serviciilor. Știm despre ce produs este vorba, știm despre ce serviciu este vorba. Știm cum funcționează anumite instituții, probabil, sau anumite firme. Ceea ce din punctul meu de vedere este foarte bine. &Icirc;mi creează&hellip; e cu două tăișuri. Ba &icirc;mi poate crea o siguranță că pot cumpăra acel produs, convins mie la sută, sau, probabil, n-o să-l cumpăr deloc. Aici intervine calitatea produsului oferit, din punctul meu de vedere. Și aici intervine strict competiția &icirc;ntre cei doi coloși. Apoi&hellip; Revin.</p>
+
+<p><strong>Liviu Gajora:</strong> Ok&hellip;</p>
+
+<p><strong>Public 1:</strong> Acum vă opriți la coloșii ăștia? Care-s coloșii?</p>
+
+<p><strong>Public 2:</strong> Păi de exemplu, dacă văd o melodie de la un anumit artist, care e &icirc;n competiție cu un alt artist și ascult melodii de la ambii, am să tratez calitatea, n-am să tratez calitatea, n-am să tratez faptul că nu știu despre ce produs este vorba.</p>
+
+<p><strong>Public 1:</strong> Da și dacă sunt doi coloși le piratăm pe am&acirc;ndouă?</p>
+
+<p><strong>Public 2:</strong> Păi, doi coloși e ok. Răm&acirc;n Microsoft și Apple. Sau&hellip;</p>
+
+<p><strong>Bogdan Hadarag:</strong> Ok, vreau să răspund la ceea ce ai zis tu privitor la transparență. Din researchul pe care l-am făcut eu am descoperit faptul că software-urile piratate nu-ți oferă informații cu privire la securitatea programului pe care-l iei tu. Practic dacă iei un Windows de pe Internet, c&acirc;nd &icirc;l downloadezi, fără key-ul acela sau ce-o fi el, nu poți să știi sigur dacă este sigur sau nu; dacă nu are o problemă, nu se blochează, chestii din astea. Pe c&acirc;nd dacă &icirc;l cumperi poți fi foarte sigur că ăla este bun; nu o să aibă blocaje și chestii din astea. Transparență. și ai mai zis că &icirc;ți mai oferă transparență și prin faptul că știi ce fel funcționează compania respectivă&hellip; Te-aș &icirc;ntreba dacă știi cum funcționează Windows ca companie.</p>
+
+<p><strong>Public 2:</strong> Bine&hellip; poate nu chiar știu cum funcționează.</p>
+
+<p><strong>Bogdan Hadarag:</strong> Ideea e de transparență pentru că dacă downloadezi un software piratat nu afli deloc dacă este sau nu bun, dacă este sau nu de calitate, iar privitor la muzică, așa cum ai zis tu, poți să asculți muzică de calitate, să o testezi, și chestiuni din astea, muzica originală pe care o cumperi e bună, calitativ, &icirc;n comparație cu cea care-i piratată.</p>
+
+<p><strong>Cristina Beatrice Condrea:</strong> Nu cred că se referea la calitatea melodiei propriu-zise ci la calitatea&hellip;</p>
+
+<p><strong>Bogdan Hadarag:</strong> Starea pe care ți-o provoacă.</p>
+
+<p><strong>Cristina Beatrice Condrea:</strong> Da, la calitatea artei.</p>
+
+<p><strong>Public 3:</strong> Referitor la ceea ce-ai spus cu Windows-ul, de pe net, luat. Ok, bun el nu funcționează doar dacă nu-i găsești cheia respectivă care trebuie să funcționeze, și tot pe Internet găsești și key code-ul respectiv ca să funcționeze Windows-ul. Iar referitor la muzică, cum au zis și colegele din spate: clar, o asculți, pentru că este și mai bună calitativ, și mai proastă calitativ și ai de unde alege și de ce să plătești c&acirc;nd poți să alegi fără să plătești și atunci ai la calitate destul de bună.</p>
+
+<p><strong>Ilie Ghiciuc:</strong> Tragi de pe torrente un Windows, da? Cauți &icirc;n continuare, găsești și-o cheie de Windows. Alea două &icirc;mpreună &icirc;ți permit să folosești Windows-ul fără să fi plătit pentru el. Microsoft știe chestia asta. Apar diverși viruși, diverse probleme de securitate; toate chestiile astea sunt documentate, probabil afirmatorii pot să-mi susțină afirmațiile. Microsoft este pus &icirc;n poziția &icirc;n care trebuie să-ți actualizeze copia ta de Windows fără ca tu să fi plătit pentru ea. Deci ei &icirc;n continuare muncesc pentru tine, să-ți actualizeze Windowsul tău, fără ca tu să fi plătit pentru acea aplicație, da, pentru acel Windows, pentru că altfel, dacă nu ar face asta și tu ți-ai pierde toate documentele și ai scrie pe blog, și-ai spune &bdquo;ok, Windowsul e un produs de doi lei, pentru că nu&hellip; uite, am avut un virus și mi-a stricat tot&rdquo;, va pune compania respectivă &icirc;ntr-o poziție, &icirc;ntr-o lumină negativă. Și &icirc;n momentul ăsta e&hellip; ceva nu mi se pare ok, adică folosești un serviciu pentru care nu plătești dar totuși mă forțezi pe mine &icirc;n continuare să-ți ofer suport ca tu &icirc;n continuare să beneficiezi de un bun &ndash; de o experiență a utilizatorului bună.</p>
+
+<p><strong>Vasile Alaiba:</strong> Aș dori eu să preiau discuția de aici. &Icirc;n primul r&acirc;nd, eu nu sunt de acord cu modelul pe care l-a construit Microsoft &icirc;n jurul Windowsului, deoarece Microsoft ne cere o sumă de bani disproporționat de mare față de costurile replicării sistemului de operare. &Icirc;nsă, sunt de acord cu argumentul colegului meu de breaslă &ndash; &icirc;n ce sens? Și acest model &icirc;l putem vedea de exemplu la Red Hat, distribuția comercială de Linux. Suntem liberi să instalăm acea distribuție, la fel cum după părerea mea ar trebui să fim liberi să instalăm Windows, dar nu este corect să primim updateuri fără să plătim un abonament lunar. Și din punctul ăsta de vedere cred că Microsoft ar face foarte bine &ndash; și din punct de vedere financiar, și ar avea și mai mult sens pentru utilizator &ndash; ca &icirc;n loc să ne pună să plătim o sumă de bani disproporționat de mare față de valoarea pe care o primim &icirc;n momentul cumpărării, să plătim o sumă lunară.</p>
+
+<p><strong>Public 4:</strong> Cred că toată lumea ar vrea&hellip;</p>
+
+<p><strong>Public 5:</strong> Putem chiar să primim updateuri de la Windows fără chiar să le cerem.</p>
+
+<p><strong>Ilie Ghiciuc:</strong> Există Windows disponibil &icirc;n acest model. Costă 9 dolari pe lună. Serviciul se numește Windows Intune. Mă leg de punctul ăsta, de ce? Ultimii zece ani au schimbat industria. Au schimbat industria de software, industria de muzică, industria de filme. Companiile se chinuie să se adapteze, &icirc;ntr-adevăr mult mai lent dec&acirc;t ne-am dori noi, dar există o schimbare &icirc;n modul &icirc;n care abordează piața. Companiile de muzică &icirc;ncep să ofere subscripții: ascultă c&acirc;t vrei și ne plătești nouă dolari. Nouă dolari &icirc;nseamnă 27 de lei pe lună, deci mult mai ieftin dec&acirc;t un CD.</p>
+
+<p><strong>Public 5:</strong> &Icirc;ntr-adevăr, oricine are o conexiune la Internet poate să vadă faptul că pirații se află &icirc;ntr-un război constant cu producătorii și unele&hellip; aicea trebuie să discutăm despre principalul avantaj al pirateriei, faptul că poate duplica un software, o melodie, fără costuri, la infinit. E greu să concurezi ca producător cu asta. Dar companiile care s-au adaptat au găsit sisteme care să contraatace acești pirați. De exemplu unele jocuri acuma cer conexiune constantă la Internet pentru a juca &icirc;n rețea. Există canale care distribuie muzica unor artiști pentru publicitate, sau pentru&hellip;</p>
+
+<p><strong>Ilie Ghiciuc:</strong> Da, ar putea fi o soluție, să folosim mai multă tehnologie ca să forțăm consumatorii &icirc;ntr-un model de a face lucrurile, &icirc;ntr-un model de business, cum ne convine nouă. Mult mai bine ar fi, &icirc;n schimb, să schimbăm acel model de business &icirc;n așa fel &icirc;nc&acirc;t să servim nevoia consumatorilor și să facem bani. Ce-a făcut Steve Jobs cu iTunes, de exemplu, mesajul lui a fost &bdquo;downloadezi de pe&rdquo; &ndash; cum se numea, Kazaa? &ndash; &bdquo;downloadezi de pe Kazaa melodiile pe care vrei să le asculți, dar multă muzică nu e de bună calitate, așa că tre&rsquo; să cauți&rdquo; și&hellip; timpul pe care &icirc;l petreci căut&acirc;nd acele melodii are un cost, da? Pentru că tu ai putea să muncești &icirc;n orele respective, sau ai putea să faci altceva. Așa că propunerea a fost: plătește 99 de cenți și-ți dăm orice vrei să asculți de bună calitate, la o calitate bună. Deci aicea, aici s-a produs prima schimbare &icirc;n ultimii zece ani, &icirc;n industria de muzică cel puțin.</p>
+
+<p><strong>Public 6:</strong> Corect, și a fost o mișcare care a adus mai mult prin asta, că era ceva ieftin, ceva accesibil. Pentru &ndash; c&acirc;nd pui un cost de c&acirc;teva sute sau mii de Euro, chiar și pentru un software pentru care cred că au muncit oameni, zeci, sute de oameni care au muncit zeci de luni de zile, &icirc;nsă totuși tu nu ți-l poți permite, iar c&acirc;nd trebuie să plătești 99 de cenți, mi se pare ceva destul de accesibil și vorbesc chiar din propria experiență, pentru că atunci c&acirc;nd am avut ceva gratuit, &icirc;ntr-adevăr am fost motivată să dau un ban pentru că am vrut să susțin chestia asta. Atunci c&acirc;nd calitatea&hellip;</p>
+
+<p><strong>Public 1:</strong> Dacă era gratuit, atunci de ce mai dădeați un ban?</p>
+
+<p><strong>Public 6:</strong> Pentru că am vrut să susțin, pentru că&hellip;</p>
+
+<p><strong>Public 1:</strong> A, din proprie inițiativă.</p>
+
+<p><strong>Public 6:</strong> Da, fiind ceva de calitate mi se pare normal și mi se pare ok să susțin chestia asta. &Icirc;nsă atunci c&acirc;nd nu știu pentru ce plătesc, deja devin suspicioasă și nu prea vreau să mai plătesc, pentru că nu știu pe ce dau banul.</p>
+
+<p><strong>Public 7:</strong> Pe aceeași idee de la iTunes, o formație a pus următoarea chestie: &bdquo;dați-mi c&acirc;t de mulți bani vreți, de la un cent, sau de la nimic, p&acirc;nă la 100 de dolari&rdquo;. Și acea formație a primit cam patru dolari, &icirc;n medie, de la utilizatori.</p>
+
+<p><strong>Public 1:</strong> Benevol, benevol.</p>
+
+<p><strong>Public 7:</strong> Față de 99 de cenți, c&acirc;t costă orice melodie din iTunes, să zicem.</p>
+
+<p><strong>Public 1:</strong> Da, am și eu două &icirc;ntrebări. Una pentru dumneavoastră, și sectorul Caraibe, și sectorul Paza de Coastă, și anume: de fapt legislația avută &icirc;n vedere pentru a penaliza infracțiunile, pirateria, ce urmări are &icirc;n ce privește c&acirc;știgul financiar, asupra cui se va revărsa plusul ăsta de &icirc;ncasări? Asupra interpreților, asupra creatorilor, sau de fapt asupra casei de produse de acest gen, care are copyrightul? Asta-i prima &icirc;ntrebare. A doua-i una pe care o consider un fel de test de sinceritate, ca să vedem ce valoare are exercițiul nostru de dezbaterei, debate, debat, vă rog. Dacă nu cumva e vreun conflict de interese, din start, așa, c&acirc;ți dintre noi s-au bucurat de costurile reduse grație piraților? Eu unul m-am bucurat.</p>
+
+<p><strong>Ilie Ghiciuc:</strong> Nu cred că-i nimeni aicea care să nu se fi bucurat.</p>
+
+<p><strong>Public 1:</strong> Păi atunci e clar că votul nostru este un vot&hellip; interesat.</p>
+
+<p><strong>Ilie Ghiciuc:</strong> Păi de asta am zis că-i ca și cum ai pedepsi mersul pe jos; ei o poziție greu de susținut. Mai ales c&acirc;nd &ndash; chiar mi-am adus aminte &icirc;n drum, &icirc;n mașină &ndash; la venirea lui Bill Gates &icirc;n Rom&acirc;nia, c&acirc;nd au inaugurat centrul global de suport, Traian Băsescu &icirc;i mulțumește oficial lui Bill Gates pentru faptul că am folosit produsele piratate &icirc;n ultimii cinsprezece ani și iată economia noastră a crescut.</p>
+
+<p><strong>Public 1:</strong> Păi mai pirat dec&acirc;t ăsta&hellip;</p>
+
+<p><strong>Ilie Ghiciuc:</strong> Nu vreau să intru &icirc;n discuția asta&hellip;</p>
+
+<p><strong>Public 1:</strong> Nu politic, nu politic.</p>
+
+<p><strong>Ilie Ghiciuc:</strong> Deci doar la nivel oficial, șeful statului să transmită un asemenea mesaj nu e ok. Indiferent dacă credem sau nu credem &icirc;n asta. Legea spune ceva.</p>
+
+<p><strong>Public 1:</strong> Acela era un mesaj populist. Și avea implicații și politice.</p>
+
+<p><strong>Ilie Ghiciuc:</strong> Dar, ca să răspund și la prima &icirc;ntrebare&hellip;</p>
+
+<p><strong>Public 1:</strong> Legislația, da.</p>
+
+<p><strong>Ilie Ghiciuc:</strong> Industria &icirc;ncearcă, există un sector care &icirc;ncearcă să se adapteze la noua economie. &Icirc;ntr-adevăr, din zece milioane de dolari &icirc;ncasări, artistul ia un mic procent, ia sub 200 de mii. Majoritatea banilor merg la canalul de distribuție, la casa de discuri, &icirc;ntr-adevăr.</p>
+
+<p><strong>Public 1:</strong> Atunci vrem piraterie &icirc;n continuare.</p>
+
+<p><strong>Cristina Beatrice Condrea:</strong> Un alt beneficiu al pirateriei online ar fi, de exemplu, dezvoltarea pirateriei 3D. Pentru că &icirc;n momentul &icirc;n care toată lumea descărca filme de pe Internet și nu plătea nimic, cinematografele au &icirc;ncercat să facă tot posibilul pentru a-i atrage &icirc;n cinematografe, &icirc;n cinematografele lor și a-i face să plătească măcar acel bilet. Astfel s-a dezvoltat cinematografia 3D și implicit și tehnica cinematografică, deci este &icirc;ncă un plus pentru piraterie.</p>
+
+<p><strong>Public 1:</strong> Bine, cu adaosul ăsta și cu ce a spus colegul nostru din sectorul Pazei de Coastă despre implicațiile de ordinul calității receptării, cu asta suntem mult mai &icirc;n miezul problemelor. Nu se rezolvă totul &icirc;n cifre și bani. Există un efect negativ al pirateriei &icirc;n ce privește calitatea receptării, și aici este mult mai interesat tocmai artistul, tocmai creatorul, pentru că acea creație a lui este de fapt degradată, pe această rută a pirateriei. Ar trebui să ne g&acirc;ndim și la asta. Arta &ndash; de artă vorbesc eu &icirc;n special, eu sunt profesor la Litere, sunt analfabet complet &icirc;n materie de inteligență computațională. Dar uneori e bine să mai fie și analfabeți de ăștia. Eu cred că trebuie avut &icirc;n vedere degradarea progresivă și &icirc;ntr-un ritm accelerat a raportului publicului cu arta; raporturi degradate &icirc;ngrozitor, &icirc;ngrozitor. Nu se vine la cinematograf pentru că se vede filmul pe Internet, pe ecranul de televizor. Și nu &icirc;nt&acirc;mplător&nbsp; există un soi de coabitare a serialelor, toate spanacurile astea americane și hispano-americane, și coreene și-așa mai departe, și de cealaltă parte, filmul care &ndash; teleplayurile și alte filme de astea care se fac pe linia &bdquo;dă-le, că au să r&acirc;dă ei, iar dacă nu r&acirc;d ei pre&icirc;nregistrăm noi r&acirc;sul&rdquo;. Ne tratează cretini, așa.</p>
+
+<p><strong>Cristina Beatrice Condrea:</strong> S-a vorbit&hellip; voiam să spun că &icirc;ncă o idee ar fi că dumneavoastră ați spus că prin replicarea și cumpărarea produselor și materialelor &icirc;nregistrate, p&acirc;nă la urmă casele de producție au profit, și nu artiștii. &Icirc;n cazul acesta nu ar fi mult mai bine ca oamenii să se ducă la concerte? Pentru că din concerte clar le iese un profit și artiștilor propriu-ziși.</p>
+
+<p><strong>Public 1:</strong> Nu toată lumea poate ajunge la Demis Rousos, sau nu știu unde la concert și rezistă la prețul acela. E normal, industria asta care multiplică pe disc de calitate, CD de calitate și așa mai departe, are, mă rog, rațiunea ei de existență. Celibidache, Sergiu Celibidache, nu a acceptat niciun fel de &icirc;nregistrare, pentru că el avea principiul că acel concert, din sala Filarmonicii și așa mai departe, are o dimensiune &icirc;n plus, care lipsește indiferent c&acirc;t de &icirc;naltă ar fi tehnologia reproducerii pe disc.</p>
+
+<p><strong>Vasile Alaiba:</strong> Da, aici aș vrea să mai adaug ceva. Văd că &icirc;ncet-&icirc;ncet alunecăm pe o anumită pantă a condamnării &icirc;nregistrării. Aș vrea totuși să nu ajungem acolo pentru că&hellip;</p>
+
+<p><strong>Public 1:</strong> N-a condamnat nimeni.</p>
+
+<p><strong>Vasile Alaiba:</strong> Teza noastră astăzi nu este &icirc;ncurajarea pirateriei absolute. Vorbim despre ne&hellip;&nbsp; &ndash;&nbsp; cum era? &ndash; decriminalizarea pirateriei online.</p>
+
+<p><strong>Public 1:</strong> Mica piraterie.</p>
+
+<p><strong>Vasile Alaiba:</strong> Și prin lucrul acesta mă refer la acea persoană care descarcă c&acirc;teva melodii pentru a se &ndash; nu știu &ndash; bucura de ele &icirc;ntr-un anumit moment. Faptul că acest lucru se &icirc;nt&acirc;mplă uneori chiar &icirc;ncurajează v&acirc;nzarea de produse care sunt asociate brandului prin creșterea vizibilității acelui brand. Și există numeroase exemple; vă recomand să citiți o carte &ndash; nu știu, dar nu cred că este tradusă &icirc;n limba rom&acirc;nă &ndash; care se numește &bdquo;Free: The&rdquo; &ndash; ai citit-o? am recunoscut exemplul care l-ai dat &ndash; &bdquo;The Future of a Radical Price&rdquo;. Da, deci &bdquo;Gratis: Viitorul unui Preț Radical&rdquo;. Vă recomand cu căldură să o căutați pe Internet, o găsiți &icirc;nregistrată pe You Tube &ndash; pe iTunes &ndash; gratuit, puteți să cumpărați cartea fizică, dacă vreți, tot de acolo. Eu personal vă spun că am luat-o de pe iTunes, n-am piratat-o, și mi-am ars-o pe un CD singurel și am ascultat-o &icirc;n mașină &icirc;n timp ce, mă rog, răm&acirc;neam blocat &icirc;n trafic &icirc;n drum spre facultate. Dar vă recomand cu căldură să o citiți pentru că acolo veți observa cum se nasc noi modele de afacere &icirc;n jurul acestui preț de zero. Pentru că practic prin piraterie noi ce &icirc;nțelegem? Și aici am vrut să adaug ceva și vizavi de colegul din spate. Tu ai afirmat că pirații sunt &icirc;n luptă cu companiile și companiile cu pirații. Nu este nimic mai fals dec&acirc;t asta. Și anume, mai este și afirmația potrivit căreia costul pentru pirați, de a multiplica, este zero. Nu. Costul tuturor este zero. Costul multiplicării informației este zero. E bine să nu uităm acest lucru. Deci nu doar costul pentru pirați al multiplicării este zero. Și pentru Microsoft este tot aproape zero. Pe ei nu-i costă mult mai mult să facă acest lucru. Ideea, practic, la care am ajuns, este că ceea ce &icirc;nseamnă crearea de arte, creare de experiment, de fapt, de experiență, de trăire, asta este de fapt ce ar trebui noi să plătim, nu discul de plastic.</p>
+
+<p><strong>Public 8:</strong> S-a discutat foarte mult despre pirateria softwareurilor și &icirc;n general despre muzică, &icirc;nsă nimeni nu a vorbit despre cărți. Tot s-a vorbit și de chestiunea banilor. Dacă ne uităm puțin &icirc;n sală, marea majoritate suntem studenți și mulți dintre noi, din c&acirc;te văd, suntem &icirc;n pragul licenței, deci avem nevoie de cărți, cărți care de multe ori nu le găsim &icirc;n&hellip;</p>
+
+<p><strong>Public 1:</strong> Da&rsquo; mai citiți? Citiți?</p>
+
+<p><strong>Public 8:</strong> Bine&icirc;nțeles, citim. Cărți pe care nu le găsim &icirc;n biblioteca facultății sau nu le găsim poate nici chiar pe piață. Poate sunt cărți ale unor autori străini care la noi &icirc;ncă nu au apărut. Și atunci ce facem, interzicem dreptul studenților de a-și procura singurele surse de informare? Nu știu; și o altă problemă care mi se pare iară &ndash; dacă s-ar interzice pirateria și, bine, nu &icirc;n totalitate să zicem, ce s-ar &icirc;nt&acirc;mpla atunci cu acei autori debutanți, poate chiar muzicanți, sau poate chiar autori de cărți? Ei &ndash; nu le-ar mai asculta nimeni, nu le-ar mai citi nimeni operele, și atunci ar fi necunoscuți cu totul. Deci ar trebui să le dăm dreptul și lor, c&acirc;tuși de puțin să fie descoperiți, nu știu. Foarte mulți dintre noi citim diferite bloguri, site-uri care ne ajută &icirc;n oarecare măsură.</p>
+
+<p><strong>Vasile Alaiba:</strong> Aș putea eu să &icirc;ncep răspunsul. Cu privire la primul punct, legat de cărți: a fostul unul din argumentele noastre. Faptul că pentru un anumit nivel, un anumit student aflat &icirc;n formare, costul consumului de carte &icirc;n format electronic &ndash; mergeți pe Amazon să luați o carte &icirc;n format pdf, de specialitate &ndash; poate să coste &icirc;n jur de 100 de Euro sau mai mult. &Icirc;n acest context, &icirc;ntr-adevăr este o dilemă puternică pentru societate. Cu privire la punctul al doilea recomand cu căldură cartea pe care am menționat-o mai devreme. Și aici nu vorbim de faptul că pirateria interzice acelor autori necunoscuți să &icirc;și dea cărțile gratuit. Eu personal dacă o să scriu o carte, sau, mă rog, nu dacă, c&acirc;nd voi scrie acea carte, o voi da cu siguranță gratuit. Așa cum și cartea de care am menționat mai devreme a stat gratuit&nbsp; o vreme exact ca experiment. Și doar &icirc;n două săptăm&acirc;ni s-au descărcat trei sute de mii de exemplare.</p>
+
+<p><strong>Public 1:</strong> Vă dați pe dumneavoastră ca exemplu, dar s-ar putea să nu fiți urmat de &icirc;ntreaga suflare creștinească a autorilor.</p>
+
+<p><strong>Vasile Alaiba:</strong> E posibil, e posibil, dar&hellip;</p>
+
+<p><strong>Public 1:</strong> Eu sunt sigur de contrar.</p>
+
+<p><strong>Vasile Alaiba:</strong> Eu cred că&hellip;</p>
+
+<p><strong>Public 1:</strong> Autorii vor bani, au muncit.</p>
+
+<p><strong>Vasile Alaiba:</strong> Sigur, sigur. Sunt de acord cu lucrul acesta, dar o carte &icirc;n primul r&acirc;nd reprezintă exprimarea unor idei. Și ce-ați prefera: să vindeți o mie de exemplare și să faceți un mic profit, sau să&hellip;</p>
+
+<p><strong>Public 1:</strong> Aș prefera ca munca intelectuală să fie și ea plătită.</p>
+
+<p><strong>Vasile Alaiba:</strong> Desigur, sau să distribuiți cartea &icirc;n mod gratuit pe Internet și să oferiți o variantă de calitate foarte bună, care poate fi &icirc;n coperți groase, de pus &icirc;n bibliotecă, clasic, cum ne place, la un preț dublu față de c&acirc;t v-ați să vindeți g&acirc;ndit inițial? Eu sunt sigur că dacă alegeți varianta a doua veți face mai mulți bani și veți fi mult mai cunoscut dec&acirc;t &icirc;n prima variantă.</p>
+
+<p><strong>Public 1:</strong> &nbsp;Pot să glumesc? Vreau s-o previn pe vecina mea de centru-dreapta că există un mare pericol; tocmai &icirc;n Rom&acirc;nia există un mare pericol, pentru că există cărți, din-astea, dizertații de master, cursuri, &icirc;n care se transcrie cuv&acirc;nt cu cuv&acirc;nt versiunea rom&acirc;nească din cărți străine &icirc;ncă netipărite &icirc;n limba rom&acirc;nă. Nu e o practic numai pe la Iași, e &icirc;n toată țara; vă amintiți de Beuran? Ăla, ministru al sănătății prins cu plagiatul? Eram la Sibiu, la colocviul Blaga, organizat de universitatea care poartă numele lui Lucian Blaga acolo, și erau comunicări ale studenților, din diferite centre universitare din țară, cu secvențe plagiate, clar. Recunoșteai nu numai ideile, armătura de idei, dar chiar și formulări. Vorbesc de metafore critice, de treburi din-astea, &icirc;n domeniul meu, al nostru. Și-i auzeam pe studenți, și de la Iași, și de la Sibiu, și de la Cluj, București, de pe unde erau, &bdquo;băi, comunicarea asta-i cam beurată&rdquo;. &bdquo;Beurată&rdquo;, de la Beuran, &icirc;nsemna plagiată. Vreau să spun că, mă rog, procedeele astea de furt intelectual, că noi suntem aici la răsp&acirc;ntia intersecției dintre sociologia culturii, sociologia produsului cultura, și de cealaltă parte, proprietatea intelectuală, dreptul de ordine &ndash; ordinul proprietății intelectuale. Nu e o joaca aicea, nu e o glumă, știți? Ar descuraja o evidență, un sistem bine pus la punct, inclusiv programe de detectare a plagiatelor la doctorate, la licență, la master, la toate, la toate. Detectarea plagiatelor, pentru că molima plagiatului și a furtului intelectual a atins proporții inimaginabile &icirc;n Rom&acirc;nia. Mai avem puțin și-o să plagieze ăia de la grădiniță; deocamdată fac numai banchet.</p>
+
+<p><strong>Liviu Gajora:</strong> Bun, n-aș vrea să ne depărtăm, să intrăm prea mult pe latura de plagiate, deși intră &icirc;n aceeași discuție mai largă pe ce &icirc;nseamnă proprietate și ce &icirc;nseamnă furt intelectual&hellip; Aș vrea să revenim, dacă mai sunt și alte intervenții mai ales ale oamenilor care nu au vorbit p&acirc;nă acum, mai ales acolo &icirc;n spate&hellip;</p>
+
+<p><strong>Public 1:</strong> Eu promit că tac.</p>
+
+<p><strong>Public 9:</strong> E vorba și de informație aicea, Internetul ne-a oferit informație gratis și &icirc;n cantități enorme și se schimbă tot rapid. La fel, cărțile ne oferă informații și cred că suntem de acord cu toții că, ca să ai informații de calitate, trebuie să citești niște cărți, nu poți să te duci numai așa, pe Internet, să navighezi așa, și atuncea dacă informația este gratuită, dacă suntem de acord că informația ar trebui să fie gratis, atunci de ce să nu fie și cărțile așa? Iarăși, cred că ar fi fost bine și de ajutor dacă ni s-ar fi prezentat niște procedee care &ndash; eu cred că sunt foarte utilizate &ndash; de a găsi alte modalități de a face bani, at&acirc;t pentru industria cinematografică, muzicală, software&hellip; Filmele eu nu cred că au foarte mari probleme av&acirc;nd &icirc;n vedere cinematografele, televiziunea, care trebuie să cumpere filme care să le difuzeze, muzica&hellip; Eu cred că societatea se dezvoltă foarte mult și n-ar fi o problemă mare referitor la bani, doar, de a găsi alte modalități de a face bani și a dezvolta aceste produse. Se vede asta &icirc;n societatea noastră. Firmele mari nu&hellip; probabil că au suferit pierderi din cauza pirateriei, dar &icirc;ncă o duc foarte bine.</p>
+
+<p><strong>Liviu Gajora:</strong> O să mulțumesc pentru &icirc;ntrebare și, &icirc;nainte de a lua celelalte &icirc;ntrebări, am să &icirc;mi permit să duc un pic mai departe intervenția și să &icirc;ntreb ambele echipe: care credeți că ar fi coordonatele unei schimbări &icirc;n modelul de business care ar face, cumva, &icirc;nvechită, anacronică, ideea de piraterie? Sau care ar face-o nenecesară, inutilă?</p>
+
+<p><strong>Ilie Ghiciuc:</strong> Vreau să &icirc;ncep cu două chestii care mi se par absolut dubioase. Unu: &icirc;n America ai posibilitatea să downloadezi un film cu un dolar, dar trebuie să-l vezi &icirc;n 24 de ore. Deci &icirc;l downloadezi, te uiți, după care nu poți să-l mai vezi a doua oară, tre&rsquo; să plătești din nou pentru el. Un dolar. Asta &icirc;nseamnă de cinci ori mai ieftin dec&acirc;t dacă mergi la mall cu prietenul tău, sau cu prietena ta. Eu aș face asta, cred că mulți oameni ar face asta. Nu reușesc să-mi explic de ce firmele nu aduc acest model &icirc;n toată lumea și fac asta doar &icirc;n America. Unu; doi: pe Amazon, dacă vrei să downloadezi o carte pe Kindle, deci &icirc;n format electronic, de multe ori este mai scumpă dec&acirc;t cartea fizică. Iar o chestie pe care nu reușesc să mi-o explic.</p>
+
+<p>De asta zic că foarte mult firmele &icirc;ncearcă să se acomodeze, dar nu a existat foarte multă inovație &icirc;n zona asta. Cred că, nu știu, un model ar fi cel care se numește freemium, ce explica mai devreme și colegul: &icirc;ți ofer ceva gratis, care-i destul de mult &icirc;nc&acirc;t să-ți servească nevoile, dar nu e tot ce ai nevoie. De exemplu Office, Office de la Microsoft, ăla care costă 500 de Euro. S-a vehiculat la un moment dat ideea unei versiuni pe care o poți folosi gratuit at&acirc;ta timp c&acirc;t tolerezi și niște reclame. Ceea ce pare un compromis rezonabil, nu? Adică ai un produs care &icirc;n mod normal te-ar costa 3-4-500 de Euro și singurul inconvenient e că &icirc;ntr-un colț ai niște reclame. Sună ok. Dropbox, Gmail, o grămadă de alte produse: ai parte de toate funcționalitățile, &icirc;ți rezolvi multe din probleme dar nu toate. Și atunci &icirc;n momentul &icirc;n care ajungi la acea limită &icirc;nseamnă că folosești produsul &icirc;ntr-un mod care ți-e productiv. Și atunci ar trebui să plătești. Asta e unul din modelele curente: freemium se numește. Deci oferi ceva gratuit &icirc;ntr-un mod gratuit. Cei care plătesc subvenționează pentru cei care folosesc gratuit, deci gratuitul ăsta nu vine din&hellip; nu se materializează din senin. Iar al doilea model cred că e cel bazat pe subscripții, care sunt cu un cost foarte mic și &icirc;ți permit să ai acces la acel produs. Am dat exemplul cu Photoshop. Photoshop &ndash; 1800 de Euro costă acea licență, dar o poți lua cu 49 de dolari pe lună, ceva de genul. Dacă ești designer și faci proiecte nu-i așa de mult.</p>
+
+<p><strong>Liviu Gajora:</strong> Avem din&hellip; ultima bancă și revenim așa, progresiv, da? De-acolo.</p>
+
+<p><strong>Public 10:</strong> Aici mă refer la studenții de la informatică care, să zicem că vin dintr-un mediu foarte sărac și chiar vor să facă programare și nu-și permit. Produse ca Javascript, PHP, CSS, nu le putem găsi la un preț foarte mic. Și probabil nu avem bani să cumpărăm licența, dar vrem să devenim programatori pentru că ne place, de aia am și dat la Informatică. Cum putem progresa dacă nu am avea acces la aceste programe, sau chiar acces la platforme sau la motoare de căutare?</p>
+
+<p><strong>Ilie Ghiciuc:</strong> Dacă &icirc;nțeleg eu bine &icirc;ntrebarea, vorbim de instrumente pe care le folosim ca să facem aplicații, da? Dacă vorbim de HTML, PHP, CSS, fără să intrăm foarte mult &icirc;n detalii, avem instrumente gratuite. Dacă vorbim de tehnologii Microsoft, cred că sunt mulți dintre voi care nu știu că există un parteneriat &icirc;ntre universitate și Microsoft prin care majoritatea studenților au acces la software Microsoft gratuit pe perioada studenției, deci toate produsele Microsoft.</p>
+
+<p><strong>Vasile Alaiba:</strong> Și &icirc;n plus există și versiunile expres, care pot fi utilizate chiar și comercial, p&acirc;nă la o anumită limită, gratuit, din partea Microsoft. Deci din punctul ăsta de vedere, să spunem, partea asta de dezvoltare, de programare, unelte software, este una dintre cele mai evoluate ca model de business, și cea mai adaptată la ceea ce se &icirc;nt&acirc;mplă &icirc;n momentul de față.</p>
+
+<p><strong>Ilie Ghiciuc:</strong> Dacă vorbim de cărți, dacă vorbim de knowledge, e o altă discuție. &Icirc;ntr-adevăr, ești student, ești venit&hellip; nu știu, de undeva de unde părinții tăi abia dacă au bani să te trimită la Iași. Nu ai bani să dai două milioane, trei milioane pe-o carte. Ți-o procuri, cumva. Ideea e că cunoștințele respective&hellip; dar, ar trebui să ne punem &icirc;ntrebarea &ndash; dați-mi un echivalent pentru &bdquo;behavior&rdquo; &ndash; comportamentul respectiv care &icirc;l aplici patru-cinci ani, nu ar trebui să devină obișnuință, ăsta-i argumentul pe care &icirc;l aduc. Folosești o vreme, folosești cărți, &icirc;ți crești productivitatea, devii mai bun, ajungi să faci &icirc;n două zile ce făceai &icirc;n două săptăm&acirc;ni, la un moment dat ar trebui să plătești pentru lucrurile alea. Nu imediat, dar la un moment dat, măcar.</p>
+
+<p><strong>Public 1:</strong> La primul salar.</p>
+
+<p><strong>Public 11:</strong> Păi asta voiam să zic, că dacă ai &icirc;nvățat &icirc;ndeajuns și ești un om care, totuși, c&acirc;t de c&acirc;t te respecți, și ai anumite chestiuni de etică care pentru tine sunt foarte importante, &icirc;n momentul c&acirc;nd tu o să-ncepi să lucrezi, și (cu) toate cunoștințele pe care le-ai acumulat, o să poți să-ți permiți să plătești. P&acirc;nă atunci o să ne mai bucurăm&hellip;</p>
+
+<p><strong>Public 1:</strong> N-aș crede, memoria nu prea rezistă mulți ani de zile.</p>
+
+<p><strong>Ilie Ghiciuc:</strong> Asta colegul de la Psihologie poate să ne explice. Dacă avem un drum foarte ușor care ne oferă imediat satisfacție și unul care nu ne oferă imediat satisfacție. Cinci ani am mers pe-aici, e greu să schimbăm macazul după.</p>
+
+<p><strong>Bogdan Hadarag:</strong> Da, tre&rsquo; să vin cu o completare. &Icirc;n ceea ce privește knowledge, cunoștințele, cum am spus, cel puțin Cuza, Universitatea Cuza oferă o bază de date de cercetări&hellip;</p>
+
+<p><strong>Public 1:</strong> Alexandru Ioan Cuza, pentru că a mai existat un Cuza la universitatea asta.</p>
+
+<p><strong>Bogdan Hadarag:</strong> &Icirc;mi cer scuze, Universitatea Alexandru Ioan Cuza, da. Anelis oferă surse de informații, baze de date, de cercetare. Și sunt gratuite pentru studenți, p&acirc;nă la o anumită limită.</p>
+
+<p><strong>Liviu Gajora:</strong> Și o &icirc;ntrebare acolo&hellip; sau o intervenție.</p>
+
+<p><strong>Public 2:</strong> Da, ați auzit de Linux și de Windows. Ați citit vreodată, sau c&acirc;te persoane știu &ndash; sunt sigur că poate unele persoane știu &ndash; c&acirc;te persoane știu cum a fost creat Linux și respectiv Windows? Linuxul a fost creat mai mult prin voluntariat, prin intermediul Internetului, adică toată lumea care se pricepea la programare și venea cu idei putea să upgradeze Linuxul. &Icirc;n schimb Windowsul știm foarte bine cum este creat, da, sunt angajați foarte mulți oameni. Wikipedia și Encarta au luat naștere &icirc;n același timp, numai că Wikipedia, știm foarte bine cum funcționează Wikipedia, toată lumea poate să scrie pe Wikipedia c&acirc;te ceva. &Icirc;n schimb pe Encarta, la fel, a fost creat &icirc;n Windows, mai mulți oameni din toate domeniile au pus informații cap la cap și au creat o enciclopedie. Toată lumea știm de Wikipedia și folosim Wikipedia, și a fost creată voluntar, prin intermediul Internetului, și (de) Encarta puțini mai știu. Totuși e un semn de &icirc;ntrebare că &ndash; practic, poate ne orientăm spre o altfel de folosință a Internetului.</p>
+
+<p><strong>Ilie Ghiciuc:</strong> Da, se produce o schimbare, &icirc;ntr-adevăr. Curentul se numește crowdsourcing; crowds, mulțimile creează conținutul.</p>
+
+<p><strong>Public 2:</strong> Scuză-mă, pentru asta recomand o carte, Drive, Daniel Pink, dacă o cunoașteți, acolo am aflat de așa ceva.</p>
+
+<p><strong>Public 1:</strong> Cum se numește, crowds working?</p>
+
+<p><strong>Ilie Ghiciuc:</strong> Crowdsourcing. Crowds, mulțimile sunt sursa de informații. Ideea e că, &icirc;ntr-adevăr, Wikipedia a fost creată de mulțimi, dar costul de operare al acestui site &ndash; știți că e al cincilea cel mai vizitat site din lume? Microsoft are &ndash; c&acirc;t are, 70 000, 80 000 de angajați? Da, ceva de genul? Wikipedia are 70 de angajați. ei nu-și permit&hellip; &icirc;n fiecare an au un proiect prin care &icirc;ncearcă să adune două-trei-patru milioane de dolari ca să țină site-ul ăsta să funcționeze, al cincilea cel mai vizitat site din lume, probabil cea mai importantă sursă de informație pentru mulți dintre noi. Apropo de costul de distribuție: costul de distribuție e marginal, &icirc;ntr-adevăr, e patru-cinci milioane de Euro, sau de dolari, dar c&acirc;ți dintre noi donează? Mulți scriu, dar puțini donează.</p>
+
+<p><strong>Public 7:</strong> O chestie foarte interesantă care am găsit-o &icirc;n cartea Free, știați că și dumneavoastră plătiți la Wikipedia?</p>
+
+<p><strong>Ilie Ghiciuc:</strong> Da? Eu am donat, de exemplu, eu am plătit.</p>
+
+<p><strong>Public 7:</strong> Bine, dumneavoastră ați donat, dar să zicem că nu ați fi donat. Totuși ați&hellip; deja ați plătit. Să presupunem că ați cumpărat ceva de pe Emag, ați cumpărat?</p>
+
+<p><strong>Ilie Ghiciuc:</strong> Da.</p>
+
+<p><strong>Public 7:</strong> Ok, ați intrat pe un banner de la Emag?</p>
+
+<p><strong>Ilie Ghiciuc:</strong> Da</p>
+
+<p><strong>Public 7:</strong> Ok, bannerul ăla este sponsorizat de Google, da?&nbsp; Ok, Google &icirc;și ia o anumită sumă din tranzacție, sau din cost per click. Ok, și ca să ajung mai departe, Google sponsorizează Wikipedia. Deci, plătiți Wikipedia.</p>
+
+<p><strong>Public 1:</strong> Lanțuri, lanțuri.</p>
+
+<p><strong>Liviu Gajora:</strong> Ar fi un scenariu al treilea pentru un model de business care să facă, cumva, legătura&hellip;</p>
+
+<p><strong>Ilie Ghiciuc:</strong> Da, să plătească Google pentru tot. Așa ar fi cel mai simplu.</p>
+
+<p><strong>Liviu Gajora:</strong> Ok, &icirc;ncercăm să mai stăm cam 5 minute, dacă mai aveți intervenții, &icirc;ntrebări sau completări la ceea ce s-a spus deja, primim cu&hellip; cu mare drag.</p>
+
+<p><strong>Public 3:</strong> Referitor la prima chestiune care a spus-o negatorul numărul 2, de ce nu se aduce același sistem ca și-n America și la noi. Răspunsul probabil ar fi pentru că la noi din multe puncte de vedere nu s-a găsit &icirc;ncă un echilibru, lumea ori este prea lacomă și nu știe c&acirc;t să mai ia și c&acirc;t să mai fure, ori vrea să ia totul gratis, și atunci echilibrul ăla mai durează p&acirc;nă o să se găsească și la noi ca să fie o chestiune c&acirc;t de c&acirc;t legală și ok.</p>
+
+<p><strong>Vasile Alaiba:</strong> Sunt convins că lucrurile sunt mult mai profunde de at&acirc;t. &Icirc;n primul r&acirc;nd, Rom&acirc;nia are un nivel de taxe și impozite incomparabil cu Statele Unite, cel puțin pentru tehnologie. A plăti 24 la sută TVA din tot ce se vehiculează pe iTunes, și &icirc;n același timp să menții prețul de un dolar, hai să zicem &ndash; c&acirc;t e? &ndash; 0.79 Euro, care este tariful de bază pe iTunes, este aproape imposibil. Noi suntem o firmă de dezvoltare software pentru iTunes și avem și c&acirc;teva aplicații exact pentru acest model freemium, &icirc;n care oferim nu o versiune limitată, ci chiar versiunea completă, gratuit. De exemplu calendarul creștin-ortodox, sau convertor valutar. Și avem undeva un banner, din care nu facem niciun ban. Dar avem o versiune premium care costă 0.79 de Euro. Circuitul banilor este foarte complex. Acei 0.79 de Euro sunt luați de pe cardul consumatorului rom&acirc;n, sunt virați &icirc;ntr-un cont dintr-o țară europeană care are impozit 10 la sută, și apoi sunt transformați &icirc;n lei și virați &icirc;n contul nostru.</p>
+
+<p><strong>Ilie Ghiciuc:</strong> Și diferența merge &icirc;n America, &icirc;n dolari.</p>
+
+<p><strong>Vasile Alaiba:</strong> Da, deci circuitul banilor este foarte complex. Pentru o aplicație funcționează lucrul acesta, pentru că noi ne mulțumim cu o mică parte din acei 0.79 de Euro, dar imaginați-vă că ați cumpăra un film &icirc;n HD, care a fost premieră anul acesta. Credeți că s-ar acoperi costurile? Eu nu cred. Eu nu cred. &Icirc;n Statele Unite &icirc;n schimb, da, &icirc;ncă funcționează lucrul acesta. &Icirc;n plus, mai este și problema de construire nu doar a infrastructurii legale, ci și a infrastructurii propriu-zise de distribuție.</p>
+
+<p><strong>Public 1:</strong> Acolo funcționează pentru că există mai puțini șmecheri &icirc;n America.</p>
+
+<p><strong>Vasile Alaiba:</strong> Nu m-aș ralia neapărat pe această teză&hellip; Au plecat mulți rom&acirc;ni acolo.</p>
+
+<p><strong>Public 1:</strong> Ei, așa mai crește, &icirc;ntr-adevăr&hellip;</p>
+
+<p><strong>Ilie Ghiciuc:</strong> E dificil de spus. Probabil&hellip; cu siguranță problema legislativă e unu. Doi: sondajele care absolut descurajează. Deci acuma, nu știu, cinci ani, BSA a făcut un sondaj &ndash; bine, nu ne putem &icirc;ncrede complet &icirc;n ce spun ei, dar &ndash; procentul era ceva de genul, 93 la sută din utilizatorii de Internet folosesc produse piratate. Deci nu vorbim de 50 la sută, 60, 70 &ndash; 93. Ăia 7 la sută probabil nu știu că folosesc produse piratate, da? Cam asta-i concluzia pe care poți s-o tragi. Pe de altă parte, ultimele studii spun că a scăzut undeva la 60, &icirc;n jur de 60, &icirc;ntre 60 și 70.</p>
+
+<p><strong>Vasile Alaiba:</strong> Da, asta voiam să completez.</p>
+
+<p><strong>Ilie Ghiciuc:</strong> Oricum suntem mult peste media europoeană.</p>
+
+<p><strong>Public 1:</strong> Poate e o chestie ca &icirc;n Caragiale, știți, poartă numărul 9 se chema &bdquo;O noapte furtunoasă&rdquo;, din cauză că numărul de la poartă, ba e șase, ba e nouă.</p>
+
+<p><strong>Vasile Alaiba:</strong> Da, cu siguranță, cu siguranță &icirc;n Rom&acirc;nia a scăzut mult pirateria &icirc;n ultimii ani, și mă aștept să scadă &icirc;n continuare, pentru că pe măsură ce crește nivelul de trai raportul dintre riscul pe care ți-l asumi, cel puțin &icirc;n momentul &icirc;n care ești profesionist, cum suntem noi, o mică organizație care produce software, noi avem tot softul cumpărat, noi nu piratăm absolut nimic&hellip;</p>
+
+<p><strong>Ilie Ghiciuc:</strong> E prea periculos, pur și simplu-i prea&hellip;</p>
+
+<p><strong>Vasile Alaiba:</strong> Nu se merită, pui &icirc;n balanță costul unei licențe de Windows, cu costul pe care-l ai, &icirc;n primul r&acirc;nd de imagine, de brand, după aceea de&hellip; pur și simplu de amenzi, de lucruri care se pot &icirc;nt&acirc;mpla, nu mai rentează. Nu pot să spun că lucrurile acestea se &icirc;nt&acirc;mplă și pentru un student.</p>
+
+<p><strong>Ilie Ghiciuc:</strong> &Icirc;ntr-adevăr. Ați auzit că a fost un caz acum un an sau doi, cred, un call-center din Iași, o firmă foarte mare, o firmă multinațională, cu 400 de angajați&hellip; au fost descoperiți că nu foloseau software cu licență. Vorbim de milioane de Euro pe an venit, probabil sute de mii sau milioane de Euro pe an profit, și nu foloseau software cu licență, pe care l-au achiziționat &icirc;n ziua controlului pentru o sută de mii de Euro, sau ceva de genul ăsta. Deci pur și simplu nu face sens, nu mai face sens &icirc;n ziua de azi să nu&hellip; Mai ales dacă ești o companie. De asta zic că firmele știu, ele tolerează o vreme, te lasă, p&acirc;nă la un punct, oarecare. Nu poți să ai 400 de angajați și să nu plătești nimic, adică e&hellip;</p>
+
+<p><strong>Public 1:</strong> Tolerează c&acirc;tă vreme mai speră să-ți vină &icirc;ncă mintea la cap&hellip;</p>
+
+<p><strong>Ilie Ghiciuc:</strong> Cam așa ceva.</p>
+
+<p><strong>Vasile Alaiba:</strong> &Icirc;n orice caz, o singură idee am mai avut, legat de studiile care se realizează, să spunem că &icirc;n Rom&acirc;nia, dacă faci un sondaj, probabil că mare majoritate vor spune că nu vor cumpăra filme de pe iTunes. Răposatul Steve Jobs are o replică celebră, care spune &bdquo;nu poți să-ți &icirc;ntrebi utilizatorii ce-și doresc, pentru că p&acirc;nă &icirc;n momentul &icirc;n care ajungi să construiești, ei &icirc;și vor dori altceva&rdquo;.</p>
+
+<p><strong>Public 1:</strong> Mobilități.</p>
+
+<p><strong>Vasile Alaiba:</strong> De aceea, probabil că &icirc;n momentul &ndash; nu, motivul pentru care noi nu avem &icirc;ncă lucrurile astea &icirc;n Rom&acirc;nia este pentru că &icirc;ncă nu au reușit să fie construite. Lucrurile astea și &icirc;n Statele Unite nu datează de mult timp, sunt c&acirc;țiva ani abia de c&acirc;nd funcționează. Eu cred că e o chestiune de timp, nu este o chestiune de imposibilitate.</p>
+
+<p><strong>Public 1:</strong> La chestia asta cu infractorii, să știți că există soluția Balzac&hellip; adică angajezi un mare t&acirc;lhar &ndash; Vautrin. Vautrin din Balzac este un mare t&acirc;lhar, angajat, racolat de poliție, devine șeful poliției. &Icirc;n romanele lui Balzac, Vautrin este un t&acirc;lhar reciclat. Ei ăsta-i tot așa de inventiv, mai inventiv dec&acirc;t ăia.</p>
+
+<p><strong>Ilie Ghiciuc:</strong> Apropo de chestia asta cu hackerii rom&acirc;ni care-s angajați la FBI: mit urban. Deci nu-ncercați chestia asta că nu se-nt&acirc;mplă.</p>
+
+<p><strong>Public 1:</strong> Mai țineți minte băiatul acela care-a spart codul NASA &ndash; rom&acirc;n &ndash; la 12-13 ani? Ăla a fost angajat de NASA și cu bursă plătită de NASA, &icirc;n Statele Unite. Soluția e tot cea din Balzac.</p>
+
+<p><strong>Ilie Ghiciuc:</strong> Unul dintr-o mie, că restul merg la pușcărie.</p>
+
+<p><strong>Public 1:</strong> Păi da bine&icirc;nțeles, &icirc;ți ajunge unul ca să-i bagi pe toți la pușcărie.</p>
+
+<p><strong>Liviu Gajora:</strong> Ok, pe această notă și cu această rimă&hellip;</p>
+
+<p><strong>Public 1:</strong> Nu, nu, nu, mai aveam ceva, iertați-mă.</p>
+
+<p><strong>Liviu Gajora:</strong> Ok, ultima intervenție.</p>
+
+<p><strong>Public 1:</strong> Vreau să vă fac un elogiu. Domnilor &ndash; și domnișoarelor &ndash; e foarte bună ideea de a organiza astfel de exerciții&hellip; nu vorbesc foarte serios, vă invidiez, să știți, pe cei de la Comunicare.</p>
+
+<p><strong>Ilie Ghiciuc:</strong> Noi suntem doar participanți, organizatorii sunt&hellip;</p>
+
+<p><strong>Public 1:</strong> Mă rog, invidiez pe organizatori, cei care au creat acest cadru, de laborator retoric. Păi da, e foarte important, uitați-vă c&acirc;t se b&acirc;lb&acirc;ie la televiziuni, la radio, peste tot, chiar &icirc;n scris, pun &icirc;n scris b&acirc;lb&acirc;ielile. E nevoie de așa ceva; e nevoie să știi să argumentezi; e nevoie de inventio, dispositio, elocutio, e nevoie de toate astea. Și faceți asta. Dar am o curiozitate de ordinul metodei, pentru că eu voi propaga ce faceți aici. Vă voi aduce un elogiu &icirc;n scris, &icirc;n Ziarul de Iași. Pentru că avem nevoie &icirc;n Rom&acirc;nia de o astfel de metodologie, a stimulării dialogului inteligent, argumentat, și &icirc;n același timp și deschis către opinia celuilalt &ndash; dia-logos. Eu vreau să vă-ntreb, g&acirc;ndindu-mă la staffurile electorale din America, &icirc;n cei doi ani c&acirc;nd am lucrat la Universitatea Washingtonului, așa se cheamă, nu a statului Washington, a Washingtonului ca ținut din Seattle. Am asistat la o campanie electorală prezidențială; trebuie să știți că acolo staffurile astea sunt făcute din experți, ultra-experți, care-i &icirc;nvață totul: și ce cravată să pună, și ce fel de &ndash; mă rog &ndash; reacții faciale să-și reprime, și așa mai departe.</p>
+
+<p><strong>Ilie Ghiciuc:</strong> Exact ca la noi, nu?</p>
+
+<p>Public 1: Nu, vreau să vă &icirc;ntreb: ați făcut simulare, de o parte și de alta? Caraibele de o parte, Paza de Coastă pe de altă parte? Adică să vă imaginați ce au să, cu ce-au să ne &ndash; mă rog &ndash; &icirc;nțepe la &icirc;ntrebări ăilalți, să banuiești &icirc;ntrebările, să le anticipezi. Ați făcut așa ceva?</p>
+
+<p><strong>Ilie Ghiciuc:</strong> Noi ne-am &icirc;nt&acirc;lnit, presupun că și voi v-ați &icirc;nt&acirc;lnit.</p>
+
+<p><strong>Public 1:</strong> Eu cred că ar trebui făcut.</p>
+
+<p><strong>Vasile Alaiba:</strong> Da, aș vrea&hellip; totuși, puțin anecdotic. Sper că nu se supără organizatorul.</p>
+
+<p><strong>Public 1:</strong> O dovadă a reușitei.</p>
+
+<p><strong>Vasile Alaiba:</strong> Da, da, da. Eu am aflat undeva ieri la pr&acirc;nz că va exista această dezbatere de la un fost student de-al meu care trebuia să dezbată, de fapt, &icirc;n locul meu, și care a trebuit să plece din țară și căruia &icirc;i mulțumesc, s-a g&acirc;ndit să apeleze la mine, chiar m-am bucurat.</p>
+
+<p><strong>Public:</strong> Cum &icirc;l cheamă?</p>
+
+<p><strong>Vasile Alaiba:</strong> Horia, Horia Ciochină.</p>
+
+<p><strong>Public 1:</strong> Domnule profesor, păi sigur că v-ați bucurat să stați l&acirc;ngă fata asta.</p>
+
+<p><strong>Vasile Alaiba:</strong> Pe care am cunoscut-o cu exact oră &icirc;nainte de dezbateri. Și &icirc;n ora pe care am petrecut-o ne-am schimbat cele c&acirc;teva notițe pe care le-aveam și ne-am sincronizat, să spunem, ne-am pus de acord planul de bătaie.</p>
+
+<p><strong>Public:</strong> Felicitări!</p>
+
+<p><strong>Vasile Alaiba:</strong> Mulțumim.</p>
+</div>
+                <div class='clear'></div>
+        </div><!-- end main content -->
+         <div class='clear'></div>
+</div>
+<div id="pix"></div>
+
+
+                                </div><!--end main -->
+                                <div id='parteneri'>
+                                    <span class='tr'></span><span class='tl'></span><span class='br'></span><span class='bl'></span><span id="filler"></span>
+                                    <div class='parteneri' id='sustinatori'>
+                                        <span class='floating_text' id='un_proiect'>Un proiect</span>
+                                        <a href='http://www.ardor.org.ro/'><div class='image' id='ardor'>Ardor</div></a>
+                                        <span class='floating_text' id='finantatori'>Finanțatori</span>
+                                        <a href='http://www.opensocietyfoundations.org/'><div class='image' id='open_society'>Open Society Foundation </div></a>
+                                        <a href='http://www.studentiq.ro//'><div class='image' id='memoplus'>MemoPlus</div></a>
+                                        <!-- <a href='http://www.ratiufamilyfoundation.com/'><div class='image' id='FundatiaRatiu'>Ardor</div></a>
+                                        <a href='http://www.eef.md/'><div class='image' id='eef'>East Europe Foundation</div></a>
+                                        <a href='http://www.mts.gov.md/'><div class='image' id='mdminister'>Ministerul Tineretului si Sportului al Republicii Moldova</div></a> -->
+
+                                        <span class='floating_text' id='parteneri_text'>Parteneri</span>
+
+                                        <a href='http://www.policycenter.eu/'><div class='image' id='PolicyCenter'>Policy Center</div></a>
+                                        <a href='http://www.britishcouncil.org/'><div class='image' id='BritishCouncil'>British Council</div></a>
+                                        <a href='http://www.europuls.ro/'><div class='image' id='europuls'>Europuls</div></a>
+                                        <a href='http://www.cere.ro/'><div class='image' id='cere'>Ce-Re</div></a>
+                                        <a href='http://www.primeromania.ro/'><div class='image' id='prime'>Prime Romania</div></a>
+                                        <a href='http://www.cji.ro/'><div class='image' id='cji'>Centrul pentru jurnalism independent</div></a>
+                                        <a href='http://www.aiesectm.ro/'><div class='image' id='aisec'>Aisec</div></a>
+                                        <!-- ===================================================================================================== -->
+                                        <a href='http://www.cogitus.ro/'><div class='image' id='cogitus'>Cogitus</div></a>
+                                        <a href='http://www.adevarul.ro/international/foreign_policy/'><div class='image' id='foreignPolicy'>Foreign Policy</div></a>
+                                        <a href='http://www.elsa.ro/'><div class='image' id='elsa'>Elsa</div></a>
+                                        <a href='http://www.vipromania.ro/'><div class='image' id='vipromania'>Voluntari pentru idei si proiecte</div></a>
+                                        <a href='http://www.ongtrust.ro/'><div class='image' id='ongtrust'>Trust</div></a>
+
+                                        <!-- ===================================================================================================== -->
+                                        <a href='http://www.leap.ro/'><div class='image' id='leap'>Leap</div></a>
+                                        <a href='http://www.younginitiative.org/'><div class='image' id='younginitiative'>Asociatia young initiative</div></a>
+                                        <a href='http://www.asjc.ro/'><div class='image' id='asjc'>Asjc</div></a>
+                                        <a href='http://osut.ro/'><div class='image' id='osut'>Osut</div></a>
+                                        <div class='clear'></div>
+                                    </div>
+                                    <div class='parteneri' id='parteneri_institutionali'>
+                                        <span class='floating_text' id='sponsori_text'>Sus&#539;in&#x0103;tori</span>
+                                        <a href='http://www.cartier.md/'><div class='image' id='cartier_logo'>Editura Cartier</div></a>
+                                        <a href='http://www.pll.md/ro/'><div class='image' id='biblio_logo'>Biblioteca publica de drept</div></a>
+                                        <span class='floating_text' id='institutii_text'>Parteneri institu&#539;ionali</span> 
+                                        <ul id='institutii'>
+                                            <!-- <span class='floating_text' id='institutii_text'>Parteneri institu&#539;ionali:</span> -->
+                                            <li><a href='http://www.politice.ro/'>Facultatea de &#536;tiin&#539;e Politice SNSPA </a></li>
+                                            <li><a href='http://www.comunicare.ro/'>Facultatea de Comunicare &#537;i Rela&#539;ii Publice SNSPA</a></li>
+                                            <li><a href='http://www.fspub.ro/'>Facultatea de &#536;tiin&#539;e Politice Universitatea Bucure&#537;ti</a></li>
+                                            <li><a href='http://www.filosofie.unibuc.ro/'>Facultatea de Filosofie Universitatea Bucure&#537;ti</a></li>
+                                            <li><a href='http://litere.unibuc.ro/'>Facultatea de Litere din Universitatea Bucure&#x015f;ti</a></li>
+                                            <li><a href='http://www.unibuc.ro/ro/fac_fsas_ro'>Facultatea de Sociologie Universitatea Bucure&#537;ti</a></li>
+                                            <li><a href='http://laws.uaic.ro/'>Facultatea de Drept Universitatea Alexandru Ioan Cuza Ia&#537;i</a></li>
+                                            <li><a href='http://www.uaic.ro/uaic/bin/view/Academic/Filosofie'>Facultatea de Filosofie si &#536;tiin&#539;e Social Politice Universitatea AIC Ia&#537;i</a></li>
+                                            <li><a href='http://www.upa.ro/'>Facultatea de Drept si Facultatea de &#x015e;tiin&#x0163;e Politice si Administrative Universitatea Petre Andrei Ia&#x015f;i</a></li> 
+
+                                            <li><a href='http://www.ubbcluj.ro/'>Universitatea Babe&#537;-Bolyai Cluj Napoca</a></li>
+                                            <li><a href='http://www.uvt.ro/'>Universitatea de Vest Timi&#537;oara</a></li>
+                                            <li><a href='http://www.upt.ro/'>Universitatea Politehnica Timi&#537;oara</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class='parteneri' id='parteneri_media'>
+                                        <span class='floating_text' id='media_text'>Parteneri media</span>
+                                        <a href='http://www.hotnews.ro/'><div class='image' id='hotnews'>HotNews</div></a>
+                                        <!-- <a href='http://www.lumebuna.ro/'><div class='image' id='lumebuna'>Lume Buna</div></a> -->
+                                        <a href='http://www.romaniapozitiva.ro/'><div class='image' id='romaniapozitiva'>Romania Pozitiva</div></a>
+                                        <a href='http://totb.ro/'><div class='image' id='thinkoutsidethebox'>Think Outside The Box</div></a>
+                                        <a href='http://www.facebook.com/carevasazica.vip'><div class='image' id='carevasazica'>Carevasazica</div></a>
+                                        <a href='http://www.studentie.ro/'><div class='image' id='studentiero'>Studentie.ro</div></a>
+                                        <a href='http://startub.unibuc.ro/'><div class='image' id='startub'>startub.unibuc.ro</div></a>
+                                        <!-- <a href='http://www.tvr.ro/tvr_cluj.php'><div class='image' id='tvrcluj'>Tvr Cluj</div></a> -->
+                                        <!-- <a href='http://www.radiotransilvania.ro'><div class='image' id='radiotransilvania'>Radio Transilvania</div></a> -->
+                                        <a href='http://iasifun.ziaruldeiasi.ro/'><div class='image' id='iasifun'>Iasi fun</div></a>
+                                        <a href='http://www.ziaruldeiasi.ro/'><div class='image' id='ziaruldeiasi'>Ziarul de Iasi</div></a>
+                                        <a href='http://www.kissfm.ro/timisoara'><div class='image' id='kissfm'>KissFm</div></a>
+
+                                        <div class='clear'></div> 
+                                    </div>
+                                    <div class='clear'></div>
+
+                                </div>	
+                            </div>	<!-- end wrap -->
+                            <div id='footer_mare'>
+                                <div id='footer'>
+                                    <div id='links' class='footer'>
+                                        <div id='menu1' style='margin:auto;'> <ul id='meniu_prinicpal'><li><a href='contacte/index.html'> Contact </a></li>
+<li><a href='clubdebate/index.html'> Cluburile </a></li>
+<li><a href='oamenii/index.html'> Oamenii </a></li>
+<li><a href='proiectul/index.html'> Proiectul </a></li>
+<li><a href='home/index.html'> Acasa </a></li>
+</ul></div><!--end menu-->
+                                    </div><!--
+                                    <div id='contact' class='footer'>
+                                            <h4>Contact</h4>
+                                            <p>office@closer2oxford.ro</p>
+                                            <p>bogdan.draghicescu@closer2oxford.ro<br>
+                                            <span class='detalii'> (asistenta tehnica web - orice probleme legate de site)</span></p>
+                                    </div>
+                                    -->
+                                    <div id='newsletter' class='footer'>
+                                        <script src="../../connect.facebook.net/en_US/all.js#xfbml=1"></script><fb:like href="http://www.facebook.com/pages/Closer2Oxford/162758797069605" width="250" colorscheme="dark"></fb:like>
+                                        <!--<h4>Newsletter</h4>
+                                        <form action='/page/newsletter'>
+                                                <input type='text' name='email'>
+                                                <input type='submit' id='submit' value='>'>
+                                                        
+                                        </form>-->
+                                    </div>
+                                    <div id='credits'>
+                                        Copyright(c) 2021 ARDOR |  Toate drepturile rezervate | Toate logo-urile si sloganurile de pe site sunt proprietate intelectuala inregistrata si nu pot fi reproduse fara acordul explicit al detinatorilor. <br>
+                                            <br /><br />
+                                            <b>Disclaimer</b><br /><i>
+
+                                                Programul educational Closer to Oxford este un program non-profit si nu are o legatura cu universitatea cu acelasi nume, referirea la Oxford avand doar o semnificatie simbolica.
+                                            </i>
+                                    </div>
+
+                                </div>		
+                            </div>		
+
+                            <div id="finantatde">Acest proiect este finantat cu sustinere din partea Comisiei Europene. Aceast publicatie [comunicare] reflecta doar
+                                vederile autorului, iar Comisia nu poate fi facuta  responsabila pentru utilizarea informatiei pe care o contine.</div>
+
+
+                        </body>
+                        </html>

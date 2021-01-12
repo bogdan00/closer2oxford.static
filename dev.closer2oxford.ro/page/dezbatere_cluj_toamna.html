@@ -1,0 +1,638 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml-strict.dtd">
+<HTML xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+    <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+            <link rel="icon" type="image/png"  href="../../closer2oxford.ro/favicon.html">
+                <link rel="stylesheet" href="var/layout.css" type="text/css">
+                    <title>Closer to Oxford - e timpul pentru argumente!</title>
+                    <link rel="alternate" type="application/rss+xml"  href="rss_feed" title="Stiri Closer2Oxford">
+                        <!-- <link rel="image_src" property="og:image"  href="/images/layout/closer2oxford_fb_white.png" /> -->
+                        <link rel="image_src" property="og:image"   type="image/jpeg"  href="../uploads/2015/06/9/facebook_icon.html" />
+                        <link rel="image_src" type="image/jpeg"  href="../uploads/2015/06/9/icon-facebook.gif" /> 
+						<meta name="description" content="Closer2Oxford pune în valoare oameni şi argumentele lor, în dezbateri online şi publice alături de tineri şi invitați avizaţi"/>
+                        <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9" />
+<script type='text/javascript' src='../js/jquery-1.4.4.min.js'></script>
+<script>var $j = jQuery.noConflict();</script>
+<script type='text/javascript' src='../js/tinymce/tiny_mce.js'></script>
+<script type='text/javascript' src='../js/jquery.form.js'></script>
+<script type='text/javascript' src='../js/fbLoginRegister.js'></script>
+<script type='text/javascript' src='var/javascript.js'></script>
+<script type='text/javascript' src='../js/jquery.hovertip-1.0.min.js'></script> 
+<script type='text/javascript' src='../js/jquery.jgrowl_minimized.js'></script> 
+<link rel='stylesheet' href='../css/jquery.jgrowl.css' media='screen' type='text/css'> 
+<script type='text/javascript' src='../js/jquery.timer-min.js'></script> 
+<link rel='stylesheet' href='var/gallery.css' media='screen' type='text/css'> 
+<script type='text/javascript' src='var/galerie/jquery.prettyPhoto.js'></script> 
+<meta name='description' content=''/> 
+<meta name='keywords' content=''/> 
+<style>.hovertip{
+    position:absolute;
+    padding:10px 13px;
+    z-index:2;
+    max-width:300px;
+    color:#303030;
+    background-color:#f5f5b5;
+    border:1px solid #DECA7E;
+    font-family:sans-serif;
+    font-size:12px;
+    line-height:18px;
+    text-align:left;
+    }</style> 
+<script type='text/javascript'>$j(document).ready(function(){$j('.tooltip').hovertip({'offset':[20,20]});get_notif();});
+
+if(!Array.indexOf){Array.prototype.indexOf = function(obj){for(var i=0; i<this.length; i++){if(this[i]==obj){return i;}}return -1;}}
+    hashuri = [] ;
+	 var tick_timer= 3000 ;
+ 
+	 function get_notif()
+        {
+		  
+		  //console.log(tick_timer);
+	     
+		  setTimeout(get_notif,tick_timer);
+        
+		   $j.ajax(
+            {
+                url: '/page/notif/show_events',
+                dataType: 'json',
+                data: "{}",
+                success: function(data)
+                    {
+                    $j.each(data,function(index,data){
+                        try
+                            {
+                            if( hashuri.indexOf(data.hash) == -1 )
+                                {
+                                hashuri.push(data.hash);
+                                $j.jGrowl(
+                                    data.str,
+                                    {
+                                        corners:'1px',
+                                        life: data.life,
+                                        header:data.title,
+                                        hash: data.hash,
+                                        sticky: data.sticky,
+                                        close: function(e,m,o)
+                                            {
+                                                $j.ajax({url:'/page/notif/delete_single_event/' + o.hash});
+                                            }
+                                    });
+                                }
+                            }
+                        catch(e){}
+                        })
+                    }
+            });
+        }
+	 </script> 
+ 
+                            
+  <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-19111721-1']);
+  _gaq.push(['_setDomainName', '.closer2oxford.ro']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+    
+                        </head>
+                        <body>
+                            <div id="global_wrap">
+                                <div id="header">
+                                    <a href='../index.html'><div id='logo'><img src='../images/layout/sigla.jpg'></div></a>
+                                    <a class='noExternal' href='http://www.facebook.com/pages/Closer2Oxford/162758797069605'><img src='../images/fb.png' style='height:30px;float:right;clear:right;margin:10px 5px 5px 5px;border:none;'/></a>
+                                    <a href='rss_feed'><img src='../images/feed-icon.png' style='height:30px;float:right;clear:right;margin:5px;border:none;'/></a>
+                                </div>
+                                <div id="meniu">
+                                    <div  id='register_login'>
+
+                                        
+  <a href='#' class='todo' id='login'>Login </a> &nbsp;<a href='register.html' class='todo' id='register'>Register</a>
+    <div id='login_box'>
+		  <form action='https://dev.closer2oxford.ro/page/ro/login_user/logon' method='post' id='user_login_form'>
+					 <div>Email: <input type='text' name='email'/> </div><br />
+					 <div>Pass: <input type='password' name='passwd'/></div><br />
+					 <a href='#' class='password_forgot'>forgot password?</a>
+					 <input type='hidden' value='/page/dezbatere_cluj_toamna' name='returnto' class='submiter'/><br />
+					 <input type='submit' value='login' name='btn' class='submiter'/><br />
+		  </form>
+		  
+		  <form action='https://dev.closer2oxford.ro/page/ro/login_user/reset_user_pw' method='post' id='user_reset_form'>
+					 <div>Email: <input type='text' name='email'/> </div><br />
+					 <a href='#' class='password_forgot'>login?</a>
+					 <input type='hidden' value='/page/dezbatere_cluj_toamna' name='returnto' class='submiter'/><br />
+					 <input type='submit' value='reset' name='btn' class='submiter'/><br />
+		  </form>
+		  
+    </div>
+    
+                                    </div>
+                                    <div id='menu1' style='margin:auto;'> <ul id='meniu_prinicpal'><li><a href='contacte/index.html'> Contact </a></li>
+<li><a href='clubdebate/index.html'> Cluburile </a></li>
+<li><a href='oamenii/index.html'> Oamenii </a></li>
+<li><a href='proiectul/index.html'> Proiectul </a></li>
+<li><a href='home/index.html'> Acasa </a></li>
+</ul></div><!--end menu-->
+                                </div>
+                                <div id="main"> 
+                                    <!--<div id='stiri-padding'>
+        <div id='stiri_back'>
+                {stiri} 
+    
+               
+        </div>-->
+        
+</div>
+<div  id="content-padding">
+        <div id='sidebar_menu'>
+                <span class='tr'></span>
+                <span class='tl'></span>
+                <span class='br'></span>
+                <span class='bl'></span>
+                <span id="filler"></span>
+                    
+                <ul></ul>
+                
+                <div class='clear'></div>
+        </div>
+        <div id="content">
+                <span class='tr'></span>
+                <span class='tl'></span>
+                <span class='br'></span>
+                <span class='bl'></span>
+                <span id="filler"></span>
+                <script type='text/javascript' src='../js/jquery.hovertip-1.0.min.js'></script> 
+<script type='text/javascript' src='../js/jquery.jgrowl_minimized.js'></script> 
+<link rel='stylesheet' href='../css/jquery.jgrowl.css' media='screen' type='text/css'> 
+<script type='text/javascript' src='../js/jquery.timer-min.js'></script> 
+<link rel='stylesheet' href='var/gallery.css' media='screen' type='text/css'> 
+<style>.hovertip{
+    position:absolute;
+    padding:10px 13px;
+    z-index:2;
+    max-width:300px;
+    color:#303030;
+    background-color:#f5f5b5;
+    border:1px solid #DECA7E;
+    font-family:sans-serif;
+    font-size:12px;
+    line-height:18px;
+    text-align:left;
+    }</style> 
+<script type='text/javascript'>$j(document).ready(function(){$j('.tooltip').hovertip({'offset':[20,20]});get_notif();});
+
+if(!Array.indexOf){Array.prototype.indexOf = function(obj){for(var i=0; i<this.length; i++){if(this[i]==obj){return i;}}return -1;}}
+    hashuri = [] ;
+	 var tick_timer= 3000 ;
+ 
+	 function get_notif()
+        {
+		  
+		  //console.log(tick_timer);
+	     
+		  setTimeout(get_notif,tick_timer);
+        
+		   $j.ajax(
+            {
+                url: '/page/notif/show_events',
+                dataType: 'json',
+                data: "{}",
+                success: function(data)
+                    {
+                    $j.each(data,function(index,data){
+                        try
+                            {
+                            if( hashuri.indexOf(data.hash) == -1 )
+                                {
+                                hashuri.push(data.hash);
+                                $j.jGrowl(
+                                    data.str,
+                                    {
+                                        corners:'1px',
+                                        life: data.life,
+                                        header:data.title,
+                                        hash: data.hash,
+                                        sticky: data.sticky,
+                                        close: function(e,m,o)
+                                            {
+                                                $j.ajax({url:'/page/notif/delete_single_event/' + o.hash});
+                                            }
+                                    });
+                                }
+                            }
+                        catch(e){}
+                        })
+                    }
+            });
+        }
+	 </script> 
+
+<script type='text/javascript' src='../js/jquery.hovertip-1.0.min.js'></script> 
+<script type='text/javascript' src='../js/jquery.jgrowl_minimized.js'></script> 
+<link rel='stylesheet' href='../css/jquery.jgrowl.css' media='screen' type='text/css'> 
+<script type='text/javascript' src='../js/jquery.timer-min.js'></script> 
+<link rel='stylesheet' href='var/gallery.css' media='screen' type='text/css'> 
+<script type='text/javascript' src='var/galerie/jquery.prettyPhoto.js'></script> 
+<style>.hovertip{
+    position:absolute;
+    padding:10px 13px;
+    z-index:2;
+    max-width:300px;
+    color:#303030;
+    background-color:#f5f5b5;
+    border:1px solid #DECA7E;
+    font-family:sans-serif;
+    font-size:12px;
+    line-height:18px;
+    text-align:left;
+    }</style> 
+<script type='text/javascript'>$j(document).ready(function(){$j('.tooltip').hovertip({'offset':[20,20]});get_notif();});
+
+if(!Array.indexOf){Array.prototype.indexOf = function(obj){for(var i=0; i<this.length; i++){if(this[i]==obj){return i;}}return -1;}}
+    hashuri = [] ;
+	 var tick_timer= 3000 ;
+ 
+	 function get_notif()
+        {
+		  
+		  //console.log(tick_timer);
+	     
+		  setTimeout(get_notif,tick_timer);
+        
+		   $j.ajax(
+            {
+                url: '/page/notif/show_events',
+                dataType: 'json',
+                data: "{}",
+                success: function(data)
+                    {
+                    $j.each(data,function(index,data){
+                        try
+                            {
+                            if( hashuri.indexOf(data.hash) == -1 )
+                                {
+                                hashuri.push(data.hash);
+                                $j.jGrowl(
+                                    data.str,
+                                    {
+                                        corners:'1px',
+                                        life: data.life,
+                                        header:data.title,
+                                        hash: data.hash,
+                                        sticky: data.sticky,
+                                        close: function(e,m,o)
+                                            {
+                                                $j.ajax({url:'/page/notif/delete_single_event/' + o.hash});
+                                            }
+                                    });
+                                }
+                            }
+                        catch(e){}
+                        })
+                    }
+            });
+        }
+	 </script> 
+
+<style type="text/css">
+.poze
+{
+    float:right;
+    width:110px;
+}
+.poze a img
+{    border:none;
+}
+.main_content
+{
+    float:left;
+    width:560px;
+}
+</style>
+
+ <div class = 'poze'>
+            <a class='thumb' href='../uploads/2011/01/5/cluj_initial.x9lo6q.png' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../uploads/2011/01/5/thumb_cluj_initial.x9lo6q.png' alt='' />
+                <span class='desc'></span>
+            </a>
+        
+
+            <a class='thumb' href='http://vimeo.com/18721752' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../../b.vimeocdn.com/ts/118/036/118036354_100.jpg' alt='' />
+                <span class='desc'>Introducere Moderator - George Jiglau</span>
+            </a>
+        
+
+            <a class='thumb' href='http://vimeo.com/18720728' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../../b.vimeocdn.com/ts/118/029/118029534_100.jpg' alt='' />
+                <span class='desc'>Discurs Afirmator 1 - Dan Chertes</span>
+            </a>
+        
+
+            <a class='thumb' href='http://vimeo.com/18900088' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../../b.vimeocdn.com/ts/119/285/119285087_100.jpg' alt='' />
+                <span class='desc'>Cross 1</span>
+            </a>
+        
+
+            <a class='thumb' href='http://vimeo.com/18721722' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../../b.vimeocdn.com/ts/118/034/118034287_100.jpg' alt='' />
+                <span class='desc'>Discurs Negator 1 - Vlad VIdican</span>
+            </a>
+        
+
+            <a class='thumb' href='http://vimeo.com/18721799' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../../b.vimeocdn.com/ts/118/033/118033557_100.jpg' alt='' />
+                <span class='desc'>Cross 2 </span>
+            </a>
+        
+
+            <a class='thumb' href='http://vimeo.com/18721714' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../../b.vimeocdn.com/ts/118/034/118034994_100.jpg' alt='' />
+                <span class='desc'>Discurs Afirmator 2 - Andreea Chis</span>
+            </a>
+        
+
+            <a class='thumb' href='http://vimeo.com/18900079' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../../b.vimeocdn.com/ts/119/285/119285333_100.jpg' alt='' />
+                <span class='desc'>Discurs Negator 2 - Ioana Georgescu </span>
+            </a>
+        
+
+            <a class='thumb' href='../uploads/2011/01/6/cluj1.z67drh.jpg' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../uploads/2011/01/6/thumb_cluj1.z67drh.jpg' alt='' />
+                <span class='desc'></span>
+            </a>
+        
+
+            <a class='thumb' href='../uploads/2011/01/6/cluj6.qo5x1g.jpg' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../uploads/2011/01/6/thumb_cluj6.qo5x1g.jpg' alt='' />
+                <span class='desc'></span>
+            </a>
+        
+
+            <a class='thumb' href='../uploads/2011/01/6/cluj5.ez67dr.jpg' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../uploads/2011/01/6/thumb_cluj5.ez67dr.jpg' alt='' />
+                <span class='desc'></span>
+            </a>
+        
+
+            <a class='thumb' href='../uploads/2011/01/6/cluj4.2cuez6.jpg' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../uploads/2011/01/6/thumb_cluj4.2cuez6.jpg' alt='' />
+                <span class='desc'></span>
+            </a>
+        
+
+            <a class='thumb' href='../uploads/2011/01/6/cluj3.cuez67.jpg' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../uploads/2011/01/6/thumb_cluj3.cuez67.jpg' alt='' />
+                <span class='desc'></span>
+            </a>
+        
+
+            <a class='thumb' href='../uploads/2011/01/6/cluj2.5x1git.jpg' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../uploads/2011/01/6/thumb_cluj2.5x1git.jpg' alt='' />
+                <span class='desc'></span>
+            </a>
+        
+
+            <a class='thumb' href='../uploads/2011/01/6/cluj7.0wambs.jpg' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../uploads/2011/01/6/thumb_cluj7.0wambs.jpg' alt='' />
+                <span class='desc'></span>
+            </a>
+        
+
+            <a class='thumb' href='../uploads/2011/01/5/cluj_final.y8djzb.png' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../uploads/2011/01/5/thumb_cluj_final.y8djzb.png' alt='' />
+                <span class='desc'></span>
+            </a>
+        
+
+
+    <script>
+    $j(document).ready(function(){
+      		$j("a[rel^='prettyPhoto']").prettyPhoto({theme:'facebook'});
+        });
+    
+    </script>
+    </div>
+
+<div class='main_content'>
+<p><strong>Cluj Napoca, 14 decembrie Aula FSEGA</strong></p>
+<p>Echipa Afirmatoare: Dan Chertes &ndash; avocat&nbsp; si Andreea Chis &ndash; judecator si profesor</p>
+<p>Echipa Negatoare: Vlad Vidican si Ioana Georgescu &ndash; studenti facultatea de Drept</p>
+<p>moderator:&nbsp;George Jiglau-Labunet - jurnalist&nbsp;</p>
+<p><strong>&nbsp;</strong></p>
+<p><strong><br /></strong></p>
+<p><strong>Dan Cherteş (Afirmator 1) </strong></p>
+<p>Ne-am decis ca pentru prezentarea argumentelor noastre <em>pro</em> să facem o abordare care probabil o să vi se pară un pic atipică. Ce &icirc;nseamnă asta? Inseamnă că noi anticipăm care ar fi argumentul principal al adversarilor, al celor cu opinie <em>contra</em> moţiunii. Care ar fi argumentul acesta? Tot timpul c&acirc;nd se discută despre acest subiect, primul argument care se consideră principal şi cel mai important este faptul că televiziunile private, mai exact termenul de privat din această formulare este suficient ca şi contraargument la faptul că acestora ar trebui să li se impună ceva anume. La momentul &icirc;n care discutăm, cel puţin &icirc;n opinia noastră, dacă discutăm de asumarea unui rol de educaţie al televiziunii, bine&icirc;nţeles că rolul acesta televiziunile nu si-l vor asuma din punct de vedere moral, nu fiindcă finanţatorii televiziunilor nu are avea această latură morala ci fiindcă [după cum ştiţi foarte bine], ceea ce se vinde foarte bine &icirc;n Rom&acirc;nia, [pentru că presupun că tema dezbaterii se raporteaza la acest teritoriu], este latura imorala. Scandaluri, cine pe cine a pălmuit, a &icirc;nşelat şi aşa mai departe, cunoaşteţi. Prin urmare, discuţia pleacă de la termenul de privat.</p>
+<p>&Icirc;ntrebarea noastră este: putem pune semnul egal &icirc;ntre noţiunea de privat şi noţiunea de a face orice, bine&icirc;nţeles raportat la televiziuni? Majoritatea ar spune da. De ce? Sunt banii mei şi fac ce vreau cu ei. Investesc, respectiv dau publicului ceea ce consider eu că se vinde, chiar dacă acest material oferit publicului nu este unul educaţional sau este mai degraba o educaţie negativă, ca să spun aşa.</p>
+<p>&Icirc;n opinia noastră, acest semn egal &icirc;ntre termenul privat şi definiţia pe care v-am dat-o se poate pune cu o anumită corectură, si anume &bdquo;poţi să faci ce vrei &icirc;n domeniul privat at&acirc;ta timp c&acirc;t respecţi nişte reguli&rdquo; .De ce zic asta, [stiti asta, trăiţi &icirc;n societatea de azi, nu trăiţi &icirc;n epoca de piatră], regulile acestea ne ajută să convieţuim unii cu alţii. &Icirc;n opinia noastră, regulile după care ar trebui să se ghideze televiziunile sunt stabilite de interesul general. Ce e interesul general, fiindcă se vorbeşte foarte des de anumite noţiuni, a se vedea discursurile politice, pe care lumea nu le poate simţi, nu le poate palpa. Ca să lămurim acest termen, respectiv interes general este foarte simplu: conjugăm toate interesele individuale. Asta puteţi să vă daţi seama ce e, pentru că pentru fiecare, interes individual &icirc;nseamnă un cumul de dorinţe, aspiraţii ş.a.m.d. Interesul general nu e compus din interesele individuale puse unul peste altul, ci sunt interconectate. Şi acum ajung la estenţa discuţiei, raportat la interesul individual. Este &icirc;n interesul individual al fiecaruia [dintre noi] educaţia? &Icirc;n mod sigur da. Probabil că şi pe ciobanul de pe c&acirc;mp dacă &icirc;l &icirc;ntrebaţi, va zice: &bdquo;Da, aş fi vrut să merg la şcoală dar ai mei nu au avut bani&rdquo;. De ce? Pentru că educaţia &icirc;ti aduce bani, &icirc;ţi aduce cunoştinţe multe din punct de vedere intelectual, &icirc;ţi aduce o grămadă de chestii.</p>
+<p>Sub acest aspect, ce face educaţia? Te ajută să &icirc;nţelegi lumea, adică nu răm&acirc;i ignorant. Ştiţi ce rele poate să producă ignoranţa. Mai mult, inveţi cum să te susţii singur, &icirc;nveţi o meserie, din nou un argument că educaţia este benefică. Mai mult, şi cu asta &icirc;nchei, te ajută şi din punct de vedere a relaxării. Relaxarea este o componentă importantă a persoanei. &Icirc;n momentul &icirc;n care cunoşti că există alte locuri de relaxare, nu eşti limitat la comunitatea &icirc;n care trăieşti, &icirc;n care pot să existe metode de relaxare care te plictisesc, poţi să te relaxezi &icirc;n alte locuri. Prin urmare, &icirc;nsum&acirc;nd aceste beneficii ale educaţiei, putem trage concluzia ca educaţia este un beneficiu şi fiind un beneficiu, deci o chestie bună, televiziunile ar trebui să-şi asume această latură, respectiv să educe publicul.</p>
+<p><strong>Cross1 </strong></p>
+<p><strong>George Jiglău:</strong> Dacă cei doi reprezentanţi ai Negatorilor au &icirc;ntrebari la primul discurs?</p>
+<p><strong>Ioana Georgescu:</strong> Aş avea eu c&acirc;teva &icirc;ntrebări. O primă &icirc;ntrebare către domnul Cherteş este dacă televizorul te poate &icirc;nvăţa să ai o meserie, poate lua rolul educaţiei pe care o oferă alte instituţii?</p>
+<p><strong>Dan Cherteş:</strong> Din nou, chestie de procedură, se poate răspunde de către oricare?</p>
+<p><strong>George Jiglău:</strong> Da, sigur.</p>
+<p><strong>Andreea Chiş:</strong> Eu cred ca nu este vorba de a sublini rolul unui profesor, ci a deschide apetitul pentru educaţie.</p>
+<p><strong>Ioana Georgescu:</strong> Ok, şi de ce am avea nevoie de această deschidere a apetitului la ora actuală?</p>
+<p><strong>Andreea Chiş:</strong> Am văzut de exemplu un spot publicitar recent cu vedete cum ar fi Horia Brenciu, despre rolul şcolii: &bdquo;Dacă ştii un copil care are nevoie de ajutor, ajută-l să meargă la şcoală&rdquo;. Iată rolul televiziunii. Este adevărat că era televiziunea publică care facea acest lucru, dar &icirc;ndeamnă toţi parinţii să-şi dea părinţii la şcoală. Este un rol &icirc;n a educa.</p>
+<p><strong>Ioana Georgescu:</strong> Am &icirc;nţeles. La ora actuală există posturi care &icirc;ncearcă să atingă acest segment al educaţiei &icirc;n afară de televiziunea publică?</p>
+<p><strong>Andreea Chiş:</strong> Foarte puţine, cred. Eu am văzut, ca să vă dau un exemplu, pe Pro Cinema este Cinemateca, introdusă de o scurtă prezentare a lui Cristian Tudor Popescu. Este un bun &icirc;nceput. Educi gustul publicului pentru un anume tip de filme. Spui c&acirc;teva lucruri: care este regizorul, care este background-ul, cine sunt actorii, de ce este important şi la ce trebuie să te uiţi c&acirc;nd urmăreşti un film. Eu cred ca este prea puţin. Am văzut emisiuni despre cărţi pe canalele comerciale. Am văzut, e adevărat, emisiuni culinare de exemplu. Nu este tot una daca se prezintă o simplă reţetă sau se prezintă culturi &icirc;n ale m&acirc;ncării şi iată, deja am avut un rol &icirc;n educaţia nu numai a tinerei generaţii ci a publicului care ne urmăreşte &icirc;n general.</p>
+<p><strong>Ioana Georgescu:</strong> Şi de ce credeţi că televiziunile private nu sunt interesate de mai multe emisiuni de acest gen?</p>
+<p><strong>Andreea Chiş:</strong> Eu cred ca ar fi interesate, dar nu sunt conştiente de acest interes. Ele cred ca se vinde numai ce este comercial, numai ce este scandal, dar &icirc;n realitate eu cred ca s-ar vinde orice, depinde de forma &icirc;n care &icirc;mbraci acel &bdquo;ceva&rdquo;. G&acirc;ndiţi-vă la profesorii voştri din facultate, [vă dau acest exemplu pentru că sunteţi studenti], o să vedeţi dacă &icirc;i urmăriţi că sunt profesori care aparent sunt extrem de seci, dar c&acirc;nd urmăreşti cursul vei constata că este plin de substanţă; alţii, care aparent sunt extrem de spectaculoşi, c&acirc;nd vei &icirc;ncerca să &icirc;nveţi cursul pe care ţi l-ai notat, vei constata că nu ţi-a transmis nimic. Deci iată &icirc;n această formulă, pot inclusiv să păcăleasca publicul şi să &icirc;mbrace o chestiune care aparent nu place &icirc;ntr-o formă at&acirc;t de frumoasă astfel &icirc;nc&acirc;t să o faca atractivă.</p>
+<p><strong>Ioana Georgescu:</strong> Vă mulţumesc.</p>
+<p><strong>Vlad Vidican:</strong> Am şi eu o &icirc;ntrebare, după care voi trece la discursul meu.</p>
+<p><strong>Ştefan Strilciuc:</strong> Aţi depăşit timpul alocat &icirc;ntrebărilor.</p>
+<p>&nbsp;</p>
+<p><strong>Vlad Vidican (Negator 1)</strong></p>
+<p>Ok, o să &icirc;ncep &icirc;n primul r&acirc;nd cu a vă saluta. Chiar dacă sunteţi un public mai mic, sunteţi unul călduros şi vă felicit că vă aflaţi aici. Acum să &icirc;ncep cu &icirc;ntrebarea retorică pe care voiam să o pun echipei Afirmatoare şi anume dacă &icirc;n viziune ei această măsură, acest rol &icirc;n educaţie pe care ar trebui să &icirc;l aibă televiziunea ar putea să fie şi ar trebui să fie reglementat din punct de vedere legislativ. Rog următorul vorbitor să ne răspundă la această &icirc;ntrebare. &nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p>Acum, să trec la substanţa pozitivă şi să vă explic de ce televiziunea nu ar trebui să aiba un rol &icirc;n educaţie mai mult dec&acirc;t &icirc;l are acum şi mai ales nu ar trebui să aibă un rol &icirc;n educaţie reglementat de public. Exact aşa cum a zis antevorbitorul meu, niciodată publicul nu ar trebui să se &bdquo;bage&rdquo; peste privat, dec&acirc;t &icirc;ntr-o oarecare măsură, &icirc;n limita bunului simţ. Şi atunci, lucrul acesta mă duce &icirc;n continuare la cele două puncte ale discursului meu şi anume: de ce trebuie publicul niciodată să se &icirc;ntindă prea mult peste privat şi &icirc;n al doilea r&acirc;nd de ce televiziunile private nu sunt &icirc;n măsură si nu trebuie să facă această educaţie.</p>
+<p>In primul şi &icirc;n primul r&acirc;nd, este libertatea televiziunilor private să aleagă ce vor ele să difuzeze. După cum bine ştim, şi astăzi avem televiziuni care se axează pe emisiuni educative şi televiziuni care se axează pe alt gen de public. Atunci dacă privim ce sunt aceste televiziuni private, ele sunt nişte companii, isi urmăresc interesul. Ca orice companie, televiziunile se muleaza după publicul lor, nu invers. Aşadar, dacă televiziunile văd că publicul vrea să vadă sau vrea să asculte un gen de muzică sau alt gen de muzică, pentru a avea profit, vor difuza acest tip de program.</p>
+<p>Pe de altă parte, există bine&icirc;nţeles şi emisiuni şi televiziuni care transmit şi se axează mai mult pe emisiuni culturale. Mai mult dec&acirc;t at&acirc;t, ca să vă arăt că nu există nici o problemă &icirc;n ceea ce priveşte educaţia momentan, mai avem şi televiziunea publica, finanţată de către stat şi a cărei rol principal este acela de a educa populaţia prin emisiunile pe care le difuzează şi atunci problema este rezolvata. Dacă &icirc;ncercăm să facem acest lucru, şi atunci vine al doilea punct al discursului meu, dacă &icirc;ncercăm să facem acest lucru, riscăm să facem mai mult rău dec&acirc;t bine. De ce spun acest lucru? Pentru că televiziunile private, dacă le obligăm să difuzeze şi să se exeze mai mult pe programe culturale care nu le aduc profit şi care trec practic peste rolul educativ şi educaţia cum o privim noi, atunci avem o mare problemă. Din ce puncte de vedere? Pentru că: dacă sesizăm probleme la nivel de cultură a unei populaţii, acea problemă este una la nivel educaţional. Ştim că Rom&acirc;nia se confruntă cu foarte multe probleme la nivelul sistemului educaţional. Fiecare guvern care vine, &icirc;ncearcă să aducă ceva nou, să schimbe, să facă o reformă, pentru că ne dăm seama că sistemul educaţional, mai ales &icirc;nvăţăm&acirc;ntul preuniversitar este deficitar şi ar trebui schimbat ceva. Şi dacă noi sesizăm o problemă, aceasta nu este problema televiziunilor private ci este o problemă a statului şi &icirc;n special o problema sistemului educaţional şi acolo ar trebui să ne axăm.</p>
+<p>&Icirc;n al doilea r&acirc;nd, din păcate, 95% din populaţia Rom&acirc;niei &icirc;şi petrece timpul liber, poate nu &icirc;n mod surprinzător &icirc;n faţa televizorului. Atunci, dacă noi &icirc;i dăm televiziunii un rol &icirc;n educaţia populaţiei, şi ştim foarte bine că din acea 95% populaţie foarte mulţi sunt copii şi daca noi dăm acest rol de a educa populaţia televiziunii, riscăm ca părinţii care şi acum ăşi lasă şi &icirc;şi uită copiii &icirc;n faţa televizoarelor, să fie şi mai &icirc;ncurajaţi de către stat să &icirc;şi uite &icirc;n continuare copiii &icirc;n faţa televizoarelor cu g&acirc;ndul că televiziunea şi-a asumat oricum acest rol &icirc;n educarea copiilor şi a populaţiei &icirc;n general şi ar trebui ca educaţia să fie făcută de către televizor. Să ne aducem aminte de campaniile de acum un an care au fost iniţiate de CNA cu titlul &bdquo;Nu-ţi uita copilul &icirc;n faţa televizorului&rdquo;.</p>
+<p>Pe de altă parte, &icirc;ncă un singur punct &icirc;n discursul meu, acest lucru nici nu se poate implementa. Dacă &icirc;ncercăm să dăm o lege &icirc;n urma căreia fiecare televiziune să aibă un anumit număr de ore cu conţinut educaţional, cum s-a mai &icirc;ncercat &icirc;n alte ţări, acest lucru s-a văzut că nu se poate implementa. Haideţi să ne g&acirc;ndim cum pe Taraf TV, la un moment dat, la o anumită oră, se vor termina manelele şi va intra &bdquo;educaţional&rdquo;. Sau, pe de altă parte, să ne uităm la Sport.ro sau la orice canal, după ce &icirc;l vedem pe Hagi ce a mai făcut şi Gigi Becali cu cine s-a mai certat, din nou &bdquo;programe educaţionale&rdquo;.</p>
+<p>Aşadar, &icirc;n urma celor spuse, nu ar trebui ca acest televiziuni private să &icirc;şi asume un rol &icirc;n educaţie, &icirc;n primul r&acirc;nd pentru că nu sunt &icirc;n stare, nu este benefic pentru noi să facă acest lucru şi pentru că nici nu există o problemă [aici].</p>
+<p>Vă mulţumesc.</p>
+<p>&nbsp;</p>
+<p><strong>Cross 2</strong></p>
+<p><strong>George Jiglău:</strong> Mulţumim lui Vlad Vidican. Dacă există &icirc;ntrebări din partea echipei Afirmatoare?</p>
+<p><strong>Dan Cherteş:</strong> Eu am o singură &icirc;ntrebare. Se afirmă că exista televiziuni private educaţionale.</p>
+<p><strong>Vlad Vidican:</strong> Da, cu conţinut educaţional.</p>
+<p><strong>Dan Cherteş:</strong> Exact. &Icirc;ntrebarea mea e următoarea: deci televiziunile private &icirc;şi pot sau nu asuma rolul de televiziuni educaţionale?</p>
+<p><strong>Vlad Vidican:</strong> Dacă televiziunile private se axează doar pe un conţinut educaţional, &icirc;ntr-o oarecare măsură da, &icirc;şi pot asuma acest rol.</p>
+<p><strong>Andreea Chiş:</strong> Aş avea şi eu o &icirc;ntrebare. Aţi spus că televiziunile comerciale trebuie să se muleze după gustul publicului şi să transmită emisiuni care să fie pe gustul publicului. Ce credeţi, acest gust poate sau nu fi educat?</p>
+<p><strong>Vlad Vidican:</strong> Da, poate fi educat, dar nu de către televizor.</p>
+<p><strong>Andreea Chiş:</strong> &Icirc;ntrebarea logică este atunci de către cine?</p>
+<p><strong>Vlad Vidican:</strong> Poate de către familie, de către sistemul educaţional, să conştientizeze oamenii, dar lucrul ăsta nu poate fi făcut prin televizor, pentru că televiziunile sunt un organism care se mulează pe cerinţele publicului nu invers.</p>
+<p><strong>George Jiglău:</strong> Doamna Andreea Chiş, al doilea discurs afirmator.</p>
+<p>&nbsp;</p>
+<p><strong>Andreea Chiş (Afirmator 2)</strong></p>
+<p>Mărturisesc că atunci c&acirc;nd am auzit tema acestei dezbateri şi ascult&acirc;ndu-i pe colegii mei mai tineri mi-am amintit un film pe care l-am văzut recent la cinematograf, se numeşte <em>Free Rainer,</em> este un film german. Free, acestă expresie se referă la eliberarea minţii, pentru că Rainer este conducătorul unui post privat de televiziune care transmite numai emisiuni pe care am putea să le numim junk-uri, fast-food pentru creier. El se trezeşte &icirc;ntr-o zi, mort de beat şi drogat, &icirc;ncerc&acirc;nd să se uite la propriile canale de televiziune, mută de pe un canal pe altul şi vede că nu are de ales dec&acirc;t &icirc;ntre emisiuni despre sex, scandaluri şi bătăi, absolut pe toate canalele. Deci iată, publicul larg, ca şi Rainer, care vindea aceste emisiuni nu aveau de ales dec&acirc;t dintre aceste tipuri de emisiuni. Rainer disperat, părăseşte postul de televiziune şi se hotărăşte să facă o schimbare fundamentală &icirc;n a educa gustul oamenilor. Ce face: &icirc;ncearcă să sparga sistemul de rating, ajunge &icirc;n casele acelor familii care de fapt dau rating-urile. Falsific&acirc;nd rating-urile, dă rating-uri mari emisiunilor culturale. Ce spun televiziunile private: dacă emisiunile culturale şi sportive au acest rating, de acum vom transmite doar emisiuni culturale şi sportive pentru că acestea se v&acirc;nd. Sigur că &icirc;ntr-o prima fază ideea pare aşa: &bdquo;Pai cum e posibil, că n-o să se mai uite nimeni la televizor&rdquo;- ba da, toată lumea s-a uitat la televizor, pentru că din acel moment aveau de ales &icirc;ntr-o emisiune culturală, una sportivă, &icirc;ncă una culturală şi toate erau &icirc;ntr-un fel sau altul mult mai educaţionale dec&acirc;t cele despre bătăi, sex, ş.a.m.d. .</p>
+<p>Deci iată gustul publicului, după părerea mea se educă, şi televiziunile culturale alături de televiziunea publică au un mare rol &icirc;n educarea gustului publicului. Sigur că este foarte important cum v&acirc;nd un produs. Eu sunt de acord să ne uităm la Harry Potter. Mie &icirc;mi place foarte mult Harry Potter. Dar haideţi, dacă ne place at&acirc;t de mult Harry Potter să discutăm: a citit cineva romanul lui Rowling? Da. C&acirc;ţi? Atunci să mergem mai departe pentru că generaţia t&acirc;nără vorbeşte limba engleza &ndash; aţi citit romanul lui Rowling &icirc;n engleză? Pentru că Rowling are un stil. Hai să ne uităm numai la titlul ultimei cărţi şi vom constata că foloseşte un cuv&acirc;nt pe care nu &icirc;l găsim &icirc;n nici nu dicţionar. Deci iată de undeva putem porni să vindem publicului ceea ce &icirc;i place. Este un bun &icirc;nceput. Da, să vorbim despre Harry Potter dintr-un alt punct de vedere, şi deja am trezit gustul pentru literatură, pentru limba engleză deci.</p>
+<p>Nu cred că putem să ne formalizăm at&acirc;t de mult &icirc;nc&acirc;t să spunem că televiziunile private nu au nici un rol şi că &icirc;n concret nu ar putea să aibă nici un rol. Eu cred &icirc;n libertatea de exprimare. Mai cred că avem impresia doar că televiziunile private ar avea o libertate absolută de a se exprima. Libertatea de exprimare &icirc;nseamnă şi să fiu liber să g&acirc;ndesc, pentru a putea să exprim ce g&acirc;ndesc. Sunt eu oare liber atunci c&acirc;nd creierul meu este &icirc;mb&acirc;csit de aceste emisiuni pe care le vă toată ziua pe canalele private? Eu nu cred că g&acirc;ndesc liber şi atunci nu ma pot exprima liber.</p>
+<p>Ca să raspund la &icirc;ntrebarea pe care mi-aţi pus-o si care n-a fost retorică, dacă ar trebui legiferată o obligaţie &icirc;n sarcina televiziunilor publice private de a avea anumite ore cu emisiuni culturale, răspunsul este categoric nu. Pentru că este sector privat face ce vrea. Dar cred că Guvernul şi televiziunea de stat pot să &icirc;ncerce să trezească interesul televiziunilor private de a avea astfel de emisiuni. Deci, p&acirc;nă la urmă pot să v&acirc;nd orice emisiune, dar este foarte important &icirc;n ce formă o &icirc;mbrac. Şi pentru că vorbeaţi de sport, poate lumea nu este interesată numai de ce face Hagi, dar poate trebuie să trimitem lumea &icirc;n sălile de sport. Poate lumea nu vrea să audă &bdquo;e bine să facem sport, sportul este benefic sănătăţii&rdquo;, dar dacă voi prezenta o sală de Kangoo Jumps, ceea ce este extrem de spectaculos, voi constata că 50% din fetele de clasa a 12-ea vor merge la Kangoo Jumps şi iată că am educat gustul tineretului pentru sport. Răspunsul meu categoric este: se poate, putem educa publicul, iar televiziunile particulare ar trebui să-şi asume un rol &icirc;n această educaţie şi ar trebui să-şi dea seama singure ca este &icirc;n interesul lor să o facă.</p>
+<p><strong>George Jiglău:</strong> Mulţumim doamnei Chiş, &icirc;i dăm cuv&acirc;ntul Ioanei Georgescu pentru al doilea discurs Negator, nu &icirc;nainte de a vă spune că după discursul ei aveţi posibilitatea de a adresa &icirc;ntrebări oricăreia dintre echipe.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><strong>Ioana Georgescu (Negator 2) </strong></p>
+<p>Ca ultim vorbitor, voi &icirc;ncerca să &bdquo;pun punctul pe i&rdquo; şi să vă arăt de ce la ora actuală &icirc;n nici un caz nu ar trebui va fiecare post TV privat să difuzeze emisiuni educaţionale. Voi &icirc;ncepe prin a da un răspuns celeilalte echipe.</p>
+<p>In primul r&acirc;nd, ni s-a spus că la ora actuală, prin analogie cu respectivul film, nu există doar emisiuni care difuzează tot felul de porcării la televizor. Ei bine, la ora acuală, există şi posturi cum ar fi Discovery Channer care difuzeaza şi alt tip de emisiuni, nu doar despre manelişti şau crime. In momentul de faţă, publicul are alternativa de a se uita si la altceva, dacă doreşte acest lucru. Mai mult, ni s-a spus că gustul publicului poate fi educat. Ei bine, şi la ora actuala publicul poate, are opţiunea să se uite la alte emisiuni [&icirc;n afară de cele pe care să zicem ca nu ni le dorim], &icirc;nsă nu alege să facă acest lucru. Să zicem că &icirc;n fiecare zi vor fi pe acela şi post o emisiune cu conţinut educaţional, publicul va avea opţiunea să aleagă dacă vrea să se uite sau să nu se uite, aşa cum are si la ora acutala. Aşadar, obligativitatea ca la un punct din momentul zilei să fie o emisiune educaţională nu va schimba cu nimic starea &icirc;n care ne găsim la momentul actual. &nbsp;Mai mult, ni s-a vorbit despre libertatea de a alege. Da, şi &icirc;n momentul de faţă există libertatea de a alege &icirc;n r&acirc;ndul fiecărei persoane. Dacă vrea să se uite la emisiuni mondene poate să se uite la acestea, dacă vrea să se uite la emisiuni istorice poate să o facă, dacă pur şi simplu nu vrea să se uite la televiziunile private, poate pur şi simplu să citească o carte.</p>
+<p>Trec&acirc;nd mai departe, de ce nu ar fi rolul televiziunilor particulare să facă ceva? &Icirc;n primul r&acirc;nd pentru că &icirc;n asta stă disctincţia dintre televiziunea publică, care este controlată de către stat [ si prin acea televiziune statul transmite un anumit mesaj], şi cu totul alt rol &icirc;l au televiziunile private, care isi vand un produs. Tocmai asta este esenţa existenţei televiziunii private, de a avea libertatea de a alege ce material doresc să difuzeze publicului. Pe ce am insistat noi şi &icirc;n primul discurs, este mesajul pe care l-ar transmite această măsură şi de fapt care este esenţa problemei. Dacă vorbim de o problemă &icirc;n r&acirc;ndul educaţiei oamenilor, această problemă nu vine din transmiterea anumitor emisiuni la televizor. Daca nivelul culturii unor oameni nu este ridicat, adevărata cauza a problemei merge undeva mult mai departe dec&acirc;t implicarea televiziunilor, şi stă tocmai &icirc;n sistemul de educaţie şi &icirc;n felul cum sunt crescuţi copiii de către părinţi, ceea ce li se transmite la şcoala ş.a.m.d.</p>
+<p>Dacă vrem cu adevărat să rezolvăm o problemă &icirc;n domeniul educaţiei, să nu ne ascundem după masca aceasta că dacă le vom arăta la televizor &icirc;n fiecare zi două ore de emisiuni despre Kangoo Jumps, dintr-o dată toată lumea o să fie mult mai fericită şi toţi o să-şi dorească să aibă acces la cultură şi chiar o vor face. Dacă vrem să rezolvăm o problemă, trebuie să mergem la rădăcina cauzei şi acolo să acţionăm, nu să ne facem că rezolvăm problema şi &icirc;n teorie totul este foarte bine şi frumos, &icirc;nsă de fapt noi nu facem nimic. Mai mult, v-am explicat de ce mesajul pe care &icirc;l transmite o asemenea măsură nu este cel pe care ni-l dorim pentru că noi nu dorim să transmitem oamenilor că televiziunea este cea care ar trebui să &icirc;i educe. Este foarte important, aşa cum am explicat, rolul instituţiilor care se axează tocmai pe educaţie. Şi asa la ora actuală există o problemă cu implicarea părinţilor &icirc;n educaţia copiilor, de aceea nu considerăm că şi mai mult trebuie să transmitem mesajul că televizorul se va ocupa de educaţia tinerilor şi a oamenilor &icirc;n general şi astfel să camuflăm de fapt adevărata problemă.</p>
+<p>De aceea, considerăm că nu ar trebui ca televiziunile private să aibă un rol &icirc;n promovarea educaţiei, &icirc;n primul r&acirc;nd pentru că tocmai &icirc;n asta stă esenţa televiziunii private şi libertatea acesteia, &icirc;n a alege ceea ce vor să difuzeze, &icirc;n al doilea r&acirc;nd, considerăm că dacă tot e să rezolvăm o problemă ar fi să mergem la adevărata cauză şi &icirc;n al treilea r&acirc;nd prin implementarea acestei măsuri transmitem un mesaj cu totul greşit, care va dăuna stării actuale a societăţii, de aceea cred că nu ar trebui implicate televiziunile private.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><em>George Jiglău: Cred că dezbaterea a ridicat destule mingi la fileu, de aceea mă aştept să fie destule intervenţii din sală. Vă rog.</em></p>
+<p><em>Interventie: La nivel de moţiune, se poate implementa un plan de motivare a televiziunilor private, adică să li se dea bani pentru a implementa emisiuni educaţionale?</em></p>
+<p><em>Vlad Vidican: Da, se poate. </em></p>
+<p><em>Andreea Chiş: Evident, este o idee foarte bună. Este unul din mijloace. Tocmai pentru că vorbim de comerţ, comerţul &icirc;nseamnă bani şi probabil că &icirc;ntr-o primă fază televiziunile private ar putea fi stimulate prin ajutor de la bugetul public. </em></p>
+<p><em>Vlad Vidican: Ca să-ţi răspund şi mai bine, campaniile despre care am vorbit cu &bdquo;Nu-ţi uita copilul la televizor&rdquo; au fost sponsorizate din fonduri Phare şi fiecare televiziune a putut să primească o sumă de bani ca să difuzeze acele campanii.</em></p>
+<p><em>Andreea Chiş: Da, dar eu cred că acesta este un contraargument. Spunem că copiii noştri &icirc;şi petrec 95%&nbsp; din timp &icirc;n faţa televizorului şi faptul că vom da emisiuni culturale nu va schimba acest lucru pentru că părinţii tot &icirc;i vor uita &icirc;n faţa televizorului. Păi da, dar dacă parinţii tot &icirc;i uită &icirc;n faţa televizorului, atunci să nu le dăm un pic de cultură din partea televizorului? Deci acesta este un argument &icirc;n favoarea noastră şi nicidecum invers. </em></p>
+<p><em>Interventie: Pentru Negatori: aveţi o poziţie foarte fermă că există deja posturi care prezintă emisiuni educaţionale şi nu e necesar să dezvoltăm problema. Eu consider că &icirc;ntr-adevăr sunt televiziuni care sunt pregătite pentru un anumit specific, de exemplu Antena, care e pregătită pentru ştiri. Sunt de acord că nu este o problemă, această ideea am surprins-o şi la Afirmatori. Este &icirc;nsă o problemă de marketing, de cum vinzi ceva şi nu de faptul că vinzi că respectivii oameni din Craiova se &icirc;mpuşcă. Bine, asta &icirc;ntr-adevăr nu ai cum să o vinzi altcumva dar sunt diverse problematici care sunt redatpublicului greşit şi aici cred ca e o mare problemă pentru că de aici atragi sau dezvolţi publicului un gust către scandal.</em></p>
+<p><em>Andreea Chiş: Şi asta &icirc;mi aminteşte emisiunea, dacă &icirc;mi permiteţi, emisiunile de pe OTV. Facem procese publice. Pornim de la un scandal de genul acesta, s-au &icirc;mpuşcat doi pe stradă, şi ne dăm cu părerea asupra verdictului. Poate că ar fi mai important să avem o dezbatere publică dacă este normal să avem un proces la televizor. Dacă este normal să exercit presiuni asupra unui judecător &icirc;n cazul unui proces pe rol. Iată că această emisiune care prezintă acest fapt de interes public ia imediat o turnură educaţională, pentru că educ publicul &icirc;n spiritul de a respecta actul de justiţie. </em></p>
+<p><em>Interventie: Mai mult dec&acirc;t at&acirc;t, iarăşi cazul OTV-ului care ridică de multe ori problematici utile publicului, dar modul &icirc;n care le dezvoltă sau personajele invitate &icirc;n platou ca să explice o anumită problemă de fapt denaturează fondul. Deci apar tot felul de personaje aduse din diverse zone sau domenii, ingineri care fac anchete penale etc. E greşit. Aici e marea problemă.</em></p>
+<p><em>George Jiglău: Alte &icirc;ntrebări?</em></p>
+<p><em>Public: Au venit Negatorii şi au zis cum că ar fi o problemă de fezabilitate din partea Guvernului să introducă emisiuni educative &icirc;n posturile private. Eu cred că ar fi mai degrabă o problemă de fezabilitate să scoţi din toate posturile private emisiunile educative. Adică să fie de exemplu un canal unde să fie toată ziua emisiuni de divertisment. Aţi crede că e posibil? Ar mai supravieţui un post?</em></p>
+<p><em>Vlad Vidican: Problema care se pune este dacă educaţia asta ar trebui să se regăsească &icirc;n televiziuni şi dacă &icirc;n momentul actual nu se &icirc;nt&acirc;mpla lucrul acesta. Dacă unele televiziuni aleg să aibă programe educative, altele şi programe educative şi needucative &icirc;nseamnă că publicul asta cere. Dacă vrei să schimbi acest lucru atunci chiar dacă educaţia este bună, fără o măsură coercitivă nu ai putea să o faci. Asta a fost problema noastră ca Negatori/Opozitie</em></p>
+<p><em>George Jiglău: Dacă nu mai sunt &icirc;ntrebări, vă rog să votaţi din nou, deci primul buton pentru Afirmatori, deci domnul Dan Cherteş şi doamna Andreea Chis şi al doilea buton pentru Vlad Vidican şi Ioana Georgescu. Vă rog să votaţi acum.</em></p>
+<p><em>&Icirc;nainte să aflaţi rezultatul acestui vot, vă spunem că &icirc;n cazul primului vot 77% au fost de partea moţiunii şi restul, 23% &icirc;mpotriva moţiunii. &Icirc;n urma votului, rezultatele sunt 84% la 16 % . C&acirc;ştigătorul clar este echipa Afirmatoare. Cred că am avut parte de o dezbatere bună, mulţumesc pentru participarea publicului atat fizica dar şi prin &icirc;ntrebările adresate. Pe viitor vor mai exista şi alte evenimente &icirc;n cadrul proiectului. Vă invităm să intraţi&nbsp; pe site-ul nostru <a href="http://www.closer2oxford.ro/">www.closer2oxford.ro</a></em><em> pentru informaţii despre noua serie de dezbateri online. </em></p>
+<p><em>Vă dorim toate cele bune.</em></p>
+</div>
+                <div class='clear'></div>
+        </div><!-- end main content -->
+         <div class='clear'></div>
+</div>
+<div id="pix"></div>
+
+
+                                </div><!--end main -->
+                                <div id='parteneri'>
+                                    <span class='tr'></span><span class='tl'></span><span class='br'></span><span class='bl'></span><span id="filler"></span>
+                                    <div class='parteneri' id='sustinatori'>
+                                        <span class='floating_text' id='un_proiect'>Un proiect</span>
+                                        <a href='http://www.ardor.org.ro/'><div class='image' id='ardor'>Ardor</div></a>
+                                        <span class='floating_text' id='finantatori'>Finanțatori</span>
+                                        <a href='http://www.opensocietyfoundations.org/'><div class='image' id='open_society'>Open Society Foundation </div></a>
+                                        <a href='http://www.studentiq.ro//'><div class='image' id='memoplus'>MemoPlus</div></a>
+                                        <!-- <a href='http://www.ratiufamilyfoundation.com/'><div class='image' id='FundatiaRatiu'>Ardor</div></a>
+                                        <a href='http://www.eef.md/'><div class='image' id='eef'>East Europe Foundation</div></a>
+                                        <a href='http://www.mts.gov.md/'><div class='image' id='mdminister'>Ministerul Tineretului si Sportului al Republicii Moldova</div></a> -->
+
+                                        <span class='floating_text' id='parteneri_text'>Parteneri</span>
+
+                                        <a href='http://www.policycenter.eu/'><div class='image' id='PolicyCenter'>Policy Center</div></a>
+                                        <a href='http://www.britishcouncil.org/'><div class='image' id='BritishCouncil'>British Council</div></a>
+                                        <a href='http://www.europuls.ro/'><div class='image' id='europuls'>Europuls</div></a>
+                                        <a href='http://www.cere.ro/'><div class='image' id='cere'>Ce-Re</div></a>
+                                        <a href='http://www.primeromania.ro/'><div class='image' id='prime'>Prime Romania</div></a>
+                                        <a href='http://www.cji.ro/'><div class='image' id='cji'>Centrul pentru jurnalism independent</div></a>
+                                        <a href='http://www.aiesectm.ro/'><div class='image' id='aisec'>Aisec</div></a>
+                                        <!-- ===================================================================================================== -->
+                                        <a href='http://www.cogitus.ro/'><div class='image' id='cogitus'>Cogitus</div></a>
+                                        <a href='http://www.adevarul.ro/international/foreign_policy/'><div class='image' id='foreignPolicy'>Foreign Policy</div></a>
+                                        <a href='http://www.elsa.ro/'><div class='image' id='elsa'>Elsa</div></a>
+                                        <a href='http://www.vipromania.ro/'><div class='image' id='vipromania'>Voluntari pentru idei si proiecte</div></a>
+                                        <a href='http://www.ongtrust.ro/'><div class='image' id='ongtrust'>Trust</div></a>
+
+                                        <!-- ===================================================================================================== -->
+                                        <a href='http://www.leap.ro/'><div class='image' id='leap'>Leap</div></a>
+                                        <a href='http://www.younginitiative.org/'><div class='image' id='younginitiative'>Asociatia young initiative</div></a>
+                                        <a href='http://www.asjc.ro/'><div class='image' id='asjc'>Asjc</div></a>
+                                        <a href='http://osut.ro/'><div class='image' id='osut'>Osut</div></a>
+                                        <div class='clear'></div>
+                                    </div>
+                                    <div class='parteneri' id='parteneri_institutionali'>
+                                        <span class='floating_text' id='sponsori_text'>Sus&#539;in&#x0103;tori</span>
+                                        <a href='http://www.cartier.md/'><div class='image' id='cartier_logo'>Editura Cartier</div></a>
+                                        <a href='http://www.pll.md/ro/'><div class='image' id='biblio_logo'>Biblioteca publica de drept</div></a>
+                                        <span class='floating_text' id='institutii_text'>Parteneri institu&#539;ionali</span> 
+                                        <ul id='institutii'>
+                                            <!-- <span class='floating_text' id='institutii_text'>Parteneri institu&#539;ionali:</span> -->
+                                            <li><a href='http://www.politice.ro/'>Facultatea de &#536;tiin&#539;e Politice SNSPA </a></li>
+                                            <li><a href='http://www.comunicare.ro/'>Facultatea de Comunicare &#537;i Rela&#539;ii Publice SNSPA</a></li>
+                                            <li><a href='http://www.fspub.ro/'>Facultatea de &#536;tiin&#539;e Politice Universitatea Bucure&#537;ti</a></li>
+                                            <li><a href='http://www.filosofie.unibuc.ro/'>Facultatea de Filosofie Universitatea Bucure&#537;ti</a></li>
+                                            <li><a href='http://litere.unibuc.ro/'>Facultatea de Litere din Universitatea Bucure&#x015f;ti</a></li>
+                                            <li><a href='http://www.unibuc.ro/ro/fac_fsas_ro'>Facultatea de Sociologie Universitatea Bucure&#537;ti</a></li>
+                                            <li><a href='http://laws.uaic.ro/'>Facultatea de Drept Universitatea Alexandru Ioan Cuza Ia&#537;i</a></li>
+                                            <li><a href='http://www.uaic.ro/uaic/bin/view/Academic/Filosofie'>Facultatea de Filosofie si &#536;tiin&#539;e Social Politice Universitatea AIC Ia&#537;i</a></li>
+                                            <li><a href='http://www.upa.ro/'>Facultatea de Drept si Facultatea de &#x015e;tiin&#x0163;e Politice si Administrative Universitatea Petre Andrei Ia&#x015f;i</a></li> 
+
+                                            <li><a href='http://www.ubbcluj.ro/'>Universitatea Babe&#537;-Bolyai Cluj Napoca</a></li>
+                                            <li><a href='http://www.uvt.ro/'>Universitatea de Vest Timi&#537;oara</a></li>
+                                            <li><a href='http://www.upt.ro/'>Universitatea Politehnica Timi&#537;oara</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class='parteneri' id='parteneri_media'>
+                                        <span class='floating_text' id='media_text'>Parteneri media</span>
+                                        <a href='http://www.hotnews.ro/'><div class='image' id='hotnews'>HotNews</div></a>
+                                        <!-- <a href='http://www.lumebuna.ro/'><div class='image' id='lumebuna'>Lume Buna</div></a> -->
+                                        <a href='http://www.romaniapozitiva.ro/'><div class='image' id='romaniapozitiva'>Romania Pozitiva</div></a>
+                                        <a href='http://totb.ro/'><div class='image' id='thinkoutsidethebox'>Think Outside The Box</div></a>
+                                        <a href='http://www.facebook.com/carevasazica.vip'><div class='image' id='carevasazica'>Carevasazica</div></a>
+                                        <a href='http://www.studentie.ro/'><div class='image' id='studentiero'>Studentie.ro</div></a>
+                                        <a href='http://startub.unibuc.ro/'><div class='image' id='startub'>startub.unibuc.ro</div></a>
+                                        <!-- <a href='http://www.tvr.ro/tvr_cluj.php'><div class='image' id='tvrcluj'>Tvr Cluj</div></a> -->
+                                        <!-- <a href='http://www.radiotransilvania.ro'><div class='image' id='radiotransilvania'>Radio Transilvania</div></a> -->
+                                        <a href='http://iasifun.ziaruldeiasi.ro/'><div class='image' id='iasifun'>Iasi fun</div></a>
+                                        <a href='http://www.ziaruldeiasi.ro/'><div class='image' id='ziaruldeiasi'>Ziarul de Iasi</div></a>
+                                        <a href='http://www.kissfm.ro/timisoara'><div class='image' id='kissfm'>KissFm</div></a>
+
+                                        <div class='clear'></div> 
+                                    </div>
+                                    <div class='clear'></div>
+
+                                </div>	
+                            </div>	<!-- end wrap -->
+                            <div id='footer_mare'>
+                                <div id='footer'>
+                                    <div id='links' class='footer'>
+                                        <div id='menu1' style='margin:auto;'> <ul id='meniu_prinicpal'><li><a href='contacte/index.html'> Contact </a></li>
+<li><a href='clubdebate/index.html'> Cluburile </a></li>
+<li><a href='oamenii/index.html'> Oamenii </a></li>
+<li><a href='proiectul/index.html'> Proiectul </a></li>
+<li><a href='home/index.html'> Acasa </a></li>
+</ul></div><!--end menu-->
+                                    </div><!--
+                                    <div id='contact' class='footer'>
+                                            <h4>Contact</h4>
+                                            <p>office@closer2oxford.ro</p>
+                                            <p>bogdan.draghicescu@closer2oxford.ro<br>
+                                            <span class='detalii'> (asistenta tehnica web - orice probleme legate de site)</span></p>
+                                    </div>
+                                    -->
+                                    <div id='newsletter' class='footer'>
+                                        <script src="../../connect.facebook.net/en_US/all.js#xfbml=1"></script><fb:like href="http://www.facebook.com/pages/Closer2Oxford/162758797069605" width="250" colorscheme="dark"></fb:like>
+                                        <!--<h4>Newsletter</h4>
+                                        <form action='/page/newsletter'>
+                                                <input type='text' name='email'>
+                                                <input type='submit' id='submit' value='>'>
+                                                        
+                                        </form>-->
+                                    </div>
+                                    <div id='credits'>
+                                        Copyright(c) 2021 ARDOR |  Toate drepturile rezervate | Toate logo-urile si sloganurile de pe site sunt proprietate intelectuala inregistrata si nu pot fi reproduse fara acordul explicit al detinatorilor. <br>
+                                            <br /><br />
+                                            <b>Disclaimer</b><br /><i>
+
+                                                Programul educational Closer to Oxford este un program non-profit si nu are o legatura cu universitatea cu acelasi nume, referirea la Oxford avand doar o semnificatie simbolica.
+                                            </i>
+                                    </div>
+
+                                </div>		
+                            </div>		
+
+                            <div id="finantatde">Acest proiect este finantat cu sustinere din partea Comisiei Europene. Aceast publicatie [comunicare] reflecta doar
+                                vederile autorului, iar Comisia nu poate fi facuta  responsabila pentru utilizarea informatiei pe care o contine.</div>
+
+
+                        </body>
+                        </html>

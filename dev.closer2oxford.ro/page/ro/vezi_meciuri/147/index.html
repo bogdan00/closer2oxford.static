@@ -1,0 +1,568 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml-strict.dtd">
+<HTML xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+    <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+            <link rel="icon" type="image/png"  href="../../../../../closer2oxford.ro/favicon.html">
+                <link rel="stylesheet" href="../../../var/layout.css" type="text/css">
+                    <title>Closer to Oxford - e timpul pentru argumente!</title>
+                    <link rel="alternate" type="application/rss+xml"  href="../../../rss_feed" title="Stiri Closer2Oxford">
+                        <!-- <link rel="image_src" property="og:image"  href="/images/layout/closer2oxford_fb_white.png" /> -->
+                        <link rel="image_src" property="og:image"   type="image/jpeg"  href="../../../../uploads/2015/06/9/facebook_icon.html" />
+                        <link rel="image_src" type="image/jpeg"  href="../../../../uploads/2015/06/9/icon-facebook.gif" /> 
+						<meta name="description" content="Closer2Oxford pune în valoare oameni şi argumentele lor, în dezbateri online şi publice alături de tineri şi invitați avizaţi"/>
+                        <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9" />
+<script type='text/javascript' src='../../../../js/jquery-1.4.4.min.js'></script>
+<script>var $j = jQuery.noConflict();</script>
+<script type='text/javascript' src='../../../../js/tinymce/tiny_mce.js'></script>
+<script type='text/javascript' src='../../../../js/jquery.form.js'></script>
+<script type='text/javascript' src='../../../../js/fbLoginRegister.js'></script>
+<script type='text/javascript' src='../../../var/javascript.js'></script>
+<script type='text/javascript' src='../../../../js/jquery.hovertip-1.0.min.js'></script> 
+<script type='text/javascript' src='../../../../js/jquery.jgrowl_minimized.js'></script> 
+<link rel='stylesheet' href='../../../../css/jquery.jgrowl.css' media='screen' type='text/css'> 
+<script type='text/javascript' src='../../../../js/jquery.timer-min.js'></script> 
+<style>.hovertip{
+    position:absolute;
+    padding:10px 13px;
+    z-index:2;
+    max-width:300px;
+    color:#303030;
+    background-color:#f5f5b5;
+    border:1px solid #DECA7E;
+    font-family:sans-serif;
+    font-size:12px;
+    line-height:18px;
+    text-align:left;
+    }
+           .normal_text ol,.normal_text ol *{text-align:left !important}
+           .normal_text *{font-weight:normal !important;font-size:12px !important;font-face:tahoma !important}</style> 
+<script type='text/javascript'>$j(document).ready(function(){$j('.tooltip').hovertip({'offset':[20,20]});get_notif();});
+
+if(!Array.indexOf){Array.prototype.indexOf = function(obj){for(var i=0; i<this.length; i++){if(this[i]==obj){return i;}}return -1;}}
+    hashuri = [] ;
+	 var tick_timer= 3000 ;
+ 
+	 function get_notif()
+        {
+		  
+		  //console.log(tick_timer);
+	     
+		  setTimeout(get_notif,tick_timer);
+        
+		   $j.ajax(
+            {
+                url: '/page/notif/show_events',
+                dataType: 'json',
+                data: "{}",
+                success: function(data)
+                    {
+                    $j.each(data,function(index,data){
+                        try
+                            {
+                            if( hashuri.indexOf(data.hash) == -1 )
+                                {
+                                hashuri.push(data.hash);
+                                $j.jGrowl(
+                                    data.str,
+                                    {
+                                        corners:'1px',
+                                        life: data.life,
+                                        header:data.title,
+                                        hash: data.hash,
+                                        sticky: data.sticky,
+                                        close: function(e,m,o)
+                                            {
+                                                $j.ajax({url:'/page/notif/delete_single_event/' + o.hash});
+                                            }
+                                    });
+                                }
+                            }
+                        catch(e){}
+                        })
+                    }
+            });
+        }
+	 </script> 
+ 
+                            
+  <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-19111721-1']);
+  _gaq.push(['_setDomainName', '.closer2oxford.ro']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+    
+                        </head>
+                        <body>
+                            <div id="global_wrap">
+                                <div id="header">
+                                    <a href='../../../../index.html'><div id='logo'><img src='../../../../images/layout/sigla.jpg'></div></a>
+                                    <a class='noExternal' href='http://www.facebook.com/pages/Closer2Oxford/162758797069605'><img src='../../../../images/fb.png' style='height:30px;float:right;clear:right;margin:10px 5px 5px 5px;border:none;'/></a>
+                                    <a href='../../../rss_feed'><img src='../../../../images/feed-icon.png' style='height:30px;float:right;clear:right;margin:5px;border:none;'/></a>
+                                </div>
+                                <div id="meniu">
+                                    <div  id='register_login'>
+
+                                        
+  <a href='#' class='todo' id='login'>Login </a> &nbsp;<a href='../../../register.html' class='todo' id='register'>Register</a>
+    <div id='login_box'>
+		  <form action='https://dev.closer2oxford.ro/page/ro/login_user/logon' method='post' id='user_login_form'>
+					 <div>Email: <input type='text' name='email'/> </div><br />
+					 <div>Pass: <input type='password' name='passwd'/></div><br />
+					 <a href='#' class='password_forgot'>forgot password?</a>
+					 <input type='hidden' value='/page/ro/vezi_meciuri/147/' name='returnto' class='submiter'/><br />
+					 <input type='submit' value='login' name='btn' class='submiter'/><br />
+		  </form>
+		  
+		  <form action='https://dev.closer2oxford.ro/page/ro/login_user/reset_user_pw' method='post' id='user_reset_form'>
+					 <div>Email: <input type='text' name='email'/> </div><br />
+					 <a href='#' class='password_forgot'>login?</a>
+					 <input type='hidden' value='/page/ro/vezi_meciuri/147/' name='returnto' class='submiter'/><br />
+					 <input type='submit' value='reset' name='btn' class='submiter'/><br />
+		  </form>
+		  
+    </div>
+    
+                                    </div>
+                                    <div id='menu1' style='margin:auto;'> <ul id='meniu_prinicpal'><li><a href='../../../contacte/index.html'> Contact </a></li>
+<li><a href='../../../clubdebate/index.html'> Cluburile </a></li>
+<li><a href='../../../oamenii/index.html'> Oamenii </a></li>
+<li><a href='../../../proiectul/index.html'> Proiectul </a></li>
+<li><a href='../../../home/index.html'> Acasa </a></li>
+</ul></div><!--end menu-->
+                                </div>
+                                <div id="main"> 
+                                    <!--<div id='stiri-padding'>
+        <div id='stiri_back'>
+                {stiri} 
+    
+               
+        </div>-->
+        
+</div>
+<div  id="content-padding">
+        <div id='sidebar_menu'>
+                <span class='tr'></span>
+                <span class='tl'></span>
+                <span class='br'></span>
+                <span class='bl'></span>
+                <span id="filler"></span>
+                    
+                <ul></ul>
+                
+                <div class='clear'></div>
+        </div>
+        <div id="content">
+                <span class='tr'></span>
+                <span class='tl'></span>
+                <span class='br'></span>
+                <span class='bl'></span>
+                <span id="filler"></span>
+                  <script>
+        $j(document).ready(function(){
+        $j('.discurs_toggler').toggle(
+                function(){
+                $j(this).attr('src', '../../../../images/little_stuff/16-em-down.png');   
+                $j(this).parent().next('.discurs').hide('fast');
+                },
+                function(){
+                $j(this).attr('src', '../../../../images/little_stuff/16-em-up.png');
+                $j(this).parent().next('.discurs').show('fast');
+                });
+            });
+        </script><style>.nowrap{white-space: nowrap;}
+		.noJustify{text-align:left;}
+		</style><h2 class='noJustify'><span class='nowrap'>'Agnes si Tudor'</span> <span class='notif'>(afirmatori)</span> vs <span class='nowrap'>'Bogdan si Razvan'</span> <span class='notif'>(negatori)</span></h2><h3>A1 (Agnes Berecz) <img src='../../../../images/little_stuff/16-em-up.png' class='discurs_toggler'></h3>
+            <div class='discurs normal_text'><p>Aşa cum afirmăm că participarea cetăţeanului &icirc;n formarea democraţiei este o sursă de legitimiyare a regimului, ar trebui acceptat că nesupunerea civică este semnul lipsei de legitimizare a sistemului actual, chiar dacă teoretic vorbind regimul respectă termenii legali a democraţiei. Trebuie &icirc;nţeles foarte bine, că ceea ce numim legal, nu este neapărat legitim. Această problematică a conceptelor apare mai ales &icirc;n cazul &icirc;n care există &nbsp;ciocnire de interese considerabile &icirc;ntre cei care alcătuiesc societatea civilă şi cei care exercită puterea &icirc;n numele &bdquo; demos&rdquo; ului.(mai ales in care organul menţionat nu există primodiar pentru satisfacerea nevoii generale, interesului public, ci pentru a reprezenta interesele particulari) . Pentru a putea dezbate acest subiect este necesar să fie clarificate conceptele de bază:</p>
+<ol>
+<li>Ce este o democraţie?</li>
+<li>Ce este societate civilă?</li>
+<li>Ce &icirc;nseamnă legitimizare?(nu confundat cu legalitate)</li>
+</ol>
+<p>&Icirc;n primul r&acirc;nd trebuie &icirc;nţeles că nesupunerea civică este o condiţie fundamentală şi importantă pentru o democraţie legitimă, av&acirc;nd &icirc;n vedere următoarele argumente:</p>
+<p>(1)Ralf Dahrendorf in cartea lui &bdquo; Democracy beyond the Nation State&rdquo; spune că cea mai simplă metodă este definiţia lui Karl Popper: &bdquo;a constitution which makes it possible to get rid of government without bloodshed...Progress, liberty itself depend on the constitutional possibility... <em>to replace bad government by a better one</em>...&rdquo;. &Icirc;n această sferă intră şi drepturile inalienabile a individului şi a cetăţeanului, pluralism, separarea puterilor in stat, suverenitatea naţională si dreptul de a nu se supune intr-o societate deschisă &icirc;n condiţii &icirc;n care publicul nu este de acord cu acţiuniile regimului respectiv etc. <a href="../../../../../file/C_/Users/Bogdan/Downloads/hiperlink/hiper1.doc">[1.]</a></p>
+<p>&nbsp;(2)De ce este important să definim termenul &bdquo;societatea civilă&rdquo;? Fiindcă sursele posibile a legitimizării &nbsp;democraţiei au adus &icirc;n centrul atenţiei societatea civilă.&nbsp; Societatea civilă poate fi definit ca un set sau un sistem alcătuit de grupuri intermediare clar organizate, care sunt:</p>
+<ol>
+<li>relativ independenţi&nbsp; de autoritatea publică şi de unităţiile private de producţie şi reproducre a firmelor şi familiilor.</li>
+<li>capabile să iau decizii colective şi ca să promoveze interesele lor</li>
+<li>capabile să acţioneze sub reguli pre-definite, bazat pe respect şi interese comune</li>
+</ol>
+<p>Astfel putem afirma că societatea civilă este organismul care are puterea de a intervenii şi &icirc;n acţiuniile statului, a societăţii, dar şi &icirc;n sfera publică şi privată.</p>
+<p>Şi cel mai important: &bdquo;civil society holds government accountable to democratic rules of the game&rdquo;.[3]</p>
+<p>(3)Legitimizare fiind condiţia &icirc;n care termenii legali sunt &icirc;n acordanţă cu normele şi valorile oamenilor. Puterea legitimă este acceptată fiindcă este considerat şi de opinia generală ca adecvată.</p>
+<p>&Icirc;n al doilea r&acirc;nd dacă puterea executivă(guvernul) există pentru oameni, alcătuit de oameni(by the people, for the people) atunci şi societatea civică are dreptul de a exprima voia &icirc;n deciziile de importanţă naţională, sau chiar internatională. Un exemplu pragmatic şi foarte actual, ar fi cazul Proiectului Rosia Montană: daca nu societatea civilă, şi organismele neguvernamentale, fundaţiile ar trebui să fie oponenţii a naţionalizării riscurilor şi privatizării beneficiilor &icirc;n cazul menţionat<a href="../../../../../file/C_/Users/Bogdan/Downloads/Egyetem%202.%20ev/Slide%201-1.doc">[Egyetem 2. ev\Slide 1-1.doc</a>4.], atunci cine? Fiindcă &icirc;ntr-un caz &icirc;n care statul nu ia &icirc;n considerare pierderiile economice(aurul care este foarte important pentru stabilitatea valutei nationale mai ales in conditii de criză) şi culturale(distrugerea site-ului istoric şi habitatului natural)[5<a href="../../../../../file/C_/Users/Bogdan/Downloads/Egyetem%202.%20ev/5.doc">Egyetem 2. ev\5.doc</a>.]&nbsp; pe termen lung din anumite motive ilegitime, atunci măcar un organism funcţional &icirc;ntr-o democraţie trebuie să poată să pună capăt la actiuniile inefective, care sunt contra binelui general &icirc;n societate, chiar dacă asta &icirc;nseamna nesupunere civică in democraţie &icirc;n condiţii legitime.(actiunea exterioara fiind contra normelor si valoriile reprezentate de societatea civilă)</p>
+<p>&Icirc;n al treilea r&acirc;nd societate civică este reflecţiunea soecietătii &icirc;n general, pun&acirc;nd pluralismul social &icirc;n practică, rezult&acirc;nd structuri organizaţionale. Dar ce se int&acirc;mplă &icirc;n cazul &icirc;n care nici nesupunerea civică(la nivel naţional) nu este destul nu nuami pt legitimizarea nesupunerii dar nici pentru legitimizarea a unui element foarte imporant a sistemului.[6]Aici refer&acirc;nd la Mişcarea Occupy Wallstreet[7], care era un semn &icirc;n care nesupunerea civică a apărut din cauza lipsei reguliilor de pe piaţa financiară, din cauza că off-shorii au &icirc;nrăutăţit situaţia economică instabilă deja agravată din Octombrie 2011, şi puterea executivă intr-o democratie reprezentativă nu este teoretic capabilă să pună punct la haosul cultivat de lipsa de reguli &icirc;n lumea afaceriilor.</p>
+<p>Deci intrebarea noastră este dacă nesupunerea civică &icirc;n condiţii &icirc;n care un organ actionează impotriva normelor deja pre-stabilite şi acceptate comun, este destul pentru menţinerea democraţiei reprezentative &icirc;n contextul actual?</p>
+
+
+
+
+<p>Bibliografie:</p>
+
+
+<p>[1.]Ralph Dahrendorf: Democracy beyond the Nation State:</p>
+<p>-&nbsp; http://www.booksamillion.com/p/Democracy-Beyond-Nation-State/Ralf-Dahrendorf/Q586399156</p>
+<p>[2.]Joerg Forbrig: A source of democratic legitimcay? Civil society in East- Central Europe pp. 2-3</p>
+<p>- <a href="../../../../../users.ox.ac.uk/_oaces/conference/papers/Joerg_Forbrig.pdf">http://users.ox.ac.uk/~oaces/conference/papers/Joerg_Forbrig.pdf</a></p>
+<p>[3.] Joerg Forbrig: A source of democratic legitimcay? Civil society in East- Central Europe pp. 5</p>
+<p>- <a href="../../../../../users.ox.ac.uk/_oaces/conference/papers/Joerg_Forbrig.pdf">http://users.ox.ac.uk/~oaces/conference/papers/Joerg_Forbrig.pdf</a></p>
+<p>[4.] Document: Nationalizarea Riscurilor si Privatizarea Beneficiilor la Rosia Montana</p>
+<p>[5.] Document : Adevarul despre Proiectul Rosia Montana</p>
+<p>[6] .]Joerg Forbrig: A source of democratic legitimcay? Civil society in East- Central Europe pp. 21</p>
+<p>- <a href="../../../../../users.ox.ac.uk/_oaces/conference/papers/Joerg_Forbrig.pdf">http://users.ox.ac.uk/~oaces/conference/papers/Joerg_Forbrig.pdf</a></p>
+<p>[7]Occupy Wallstreet:</p>
+<p>-&nbsp; http://en.wikipedia.org/wiki/Occupy_Wall_Street</p>
+</div><hr><h3>N1 (Bogdan Hadarag) <img src='../../../../images/little_stuff/16-em-up.png' class='discurs_toggler'></h3>
+            <div class='discurs normal_text'><p><span style="font-size: x-small;"><span style="font-size: x-small;"><span lang="EN">
+<p>S-a spus multa vreme ca dintre cele mai rele regimuri politice, democratia este cel mai mic rau si in acelasi timp si unul foarte bun iar asta o justifica longevitatea ei chiar daca de la momentul aparitiei ei in Grecia antica si pana astazi si-a schimbat mult, ea reprezinta in continuare aceeasi chintesenta: participarea cetateanului la viata politica in virtutea crearii unei societati propice tuturor.</p>
+<p>Sarcina noastra de astazi este de a sustine ca nesupunerea civica nu este legitima intr-o democratie din motive pe care le vom expune in cele ce urmaza mai jos.</p>
+<p>Se cuvine ca in continuare sa definim conceptele-cheie peentru clarificarea dezbaterii noastre. Suntem de acord cu definitiile conceptelor "democratie" si "legitimitate" pe care echipa afirmatoare le mentioneaza, insa nu suntem de acord cu definitia data asupra conceptului "societate civila" deoarece o consideram reductionista la singura metoda prin care ar putea fi semnalate neregularitatile unui aparat politic.</p>
+<p>Echipa afirmatoare sustine ca nesupunerea civica "</p>
+<span style="font-family: Times New Roman;">condiţie fundamentală şi importantă pentru o democraţie legitimă<span style="font-size: x-small;">" deoarece reprezinta cea mai buna metoda de a schimba un aparat politic (guvern) iar societatea civila are puterea de a interveni in rezolvarea problemelor democratiei.
+<p>Este foarte adevarat ca atunci cand un mecanism politic/ regim politic nu functioneaza asa cum ar trebui atunci societatea trebuie sa intervina intr-un fel sau altul pentru rezolvarea problemei iar aceasta interventie nu trebuie sa fie nicdecum nesupunerea civica, care ajunge sa fie inteleasa de cei mai multi care manifesta o astfel de atitudine ca un comportament antisocial incitand revolte, acte de vandalism cu numeroase consecinte in plan social, politic, cultural, ecnomic. In calitatea noastra de fiinte sociale si rationale, avem obligatia de a recurge la metode pasnice de exprimare a dezacordului unui act politic fara a recurge la incalcare unor legi; in definitiv, exista institutii juridice la care, de cele mai multe ori nu apelam pentru ca avem ideea preconceputa ca daca te lupti cu statul.</p>
+<p>Nesupunerea civica are consecinte pe plan social deoarece, asa cum am spus mai sus, ea este de cele mai multe ori, inteleasa ca un act violent sau ca un act de razvratire manifestat la inceput pasnic dar care de cele mai multe ori, exista cineva rebel care manifesta un comportament antisocial si de aici apare efectul contagiunii sociale ducand la revolte violente. In plan educational este acela ca oamenii vor uita ca exista numeroase cai pasnice de a semnala neregularitatile unei decizii politice care pot fi utilizate inaintea nesupunerii civice.</p>
+<p>Am putea spune, ca un ultim argument, ca orice problema - indiferent de natura ei (politica, econimica, morala, etc) isi are solutia ei iar pentru gasirea ei trebuie sa se implice fiecare dintre noi fara a manifesta un comportament ignorant fata de ele. Acceptarea nesupunerii civice ca fiind dezirabila pentru o democratie, presupune sa afirmi ca este cea mai buna si la indemana metoda prin care poti sa rezolvi problemele si se ajung, in mod inevitabil, la revolte.</p>
+</p></div><hr><h3>A2 (Berecz Agnes) <img src='../../../../images/little_stuff/16-em-up.png' class='discurs_toggler'></h3>
+            <div class='discurs normal_text'><p>Ideea centrală negatoare pune la &icirc;ndoială legitimitatea nesupunerii civice &icirc;ntr-o democraţie, fiindcă s-ar putea să recurgă la vandalism, revolte, acţiuni inumane şi comportamente antisociale, dar echipa afirmatoare susţine &icirc;n continuare, că nesupunerea civică aplicat ca ultima soluţie &icirc;ntr-o democraţie reprezentativă disfuncţională este nu numai legitimă dar şi un drept fundamental a societatii care a legitimat-o la r&acirc;ndul lui c&acirc;ndva regimul-lu&acirc;nd &icirc;n considerare două concepte importante:&nbsp; &bdquo;non-violence&rdquo; şi &bdquo;directness&rdquo; [1.]</p>
+
+
+<p>Echipa negatoare a afirmat că răspunsul la un regim politic disfuncţional nu este nicicum nesupunerea civică. Şi s-ar putea uşor să&nbsp; adreseze următoare &icirc;ntrebare echpei afirmatoare: Aţi menţionat că nesupunerea civică ar trebui aplicat ca ultima soluţie, dar cum puteţi justifica obiectivitatea acestei &bdquo;ultimei soluţi&rdquo;?&nbsp; Dacă vrem o modalitate de a observa c&acirc;nd poate fi adoptat nesupunerea civică ca ultima rezoluţie, pilda lui John Rawls este cel mai adecvat &icirc;n momentul de faţă:</p>
+<p>&nbsp;&nbsp; &bdquo; if past actions have shown the majority to be immovable or apathetic, then further attempts may reasonably be thought fruitless and one may be confident one\'s civil disobedience is a last resort.&rdquo;[2.]- dacă nu este clar, filosoful ne defineşte şi mai clar: &ldquo;civil disobedience actually can seem most justifiable when the situation appears hopeless and when the government refuses to listen to conventional forms of communication&rdquo;.[3.]</p>
+<p>&nbsp;Două elemente care sunt foarte periculoase : lipsa speranţei şi lipsa comunicării &icirc;ntre guvern şi societatea civică. De ce?&nbsp; S-ar putea uşor să conducă la revoluţie.</p>
+
+<p>Prin urmare, vrem să argumentăm că cele două instrumente legitime justifică nu numai legitimitatea nesupunerii civice intr-o democraţie, dar face şi o distincţie clară &icirc;ntre o nesupunere civică justificată (răspuns la abuzurile guvernului, la concetrarea de putere etc.) şi o revoltă violentă:&nbsp;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1. Non-violence-&nbsp; rezistenţa paşnică dă dovadă nu numai de o societate civică culturată şi constiincioasă, dar dovedeşte&nbsp;&nbsp; faptul că societatea civică ştie ce inseamnă o democraţie şi cum trebuie să procedeze &icirc;n cazul nerespectării contractului social- fiindcă dacă societate civică răspunde cu violentă, rezultatul tot va fi un sistem alcătuit de cetăţeni agresivi şi ignoranţi cu o conducere care se axează&nbsp; pe propagandă şi terror.</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2. Directness : &ldquo; the more direct, the more justifiable: direct disobedience targets specific legal wrong that promoted it&rdquo;. [4]</p>
+<p>Dar pentru a putea exersa această premisă trebuie să fie conştient cetăţeanul de motivul nesupunerii lui, de targetul nesupunerii şi de pretenţiile lui.</p>
+<p>Trebuie să ţinem cont că aceste noţiuni şi mai ales mentalitatea sunt care fac diferenţa &icirc;ntre o nesupunere civică protestatoare şi o revoluţie plină de violenţă.</p>
+
+<p>Limita &icirc;ntre revoltă şi nesupunere civică paşnică şi directă este foarte subţire , dar Karl Popper ne sugerează o iniţiativă prin care&nbsp; organele legislative, executive să aibă legitimitatea lor, dar şi&nbsp; societatea civică să aibă la dispoziţie dreptul(apare ca un drept fundamental) să destituie organul incompetent&nbsp; (dar pentru toate acestea &icirc;n primul r&acirc;nd ar trebui să avem o cultură politică):&nbsp; &ldquo; Cine ar trebui să conducă: capitaliştii, muncitorii&hellip;.? Aceste &icirc;ntrebări politice sunt puse greşite&hellip;.Trebuie să &icirc;nlocuim această intrebare cu o intrebare total diferită: Cum am putea să organizăm instituţiile politice,&nbsp; ca conducătorii incompetenţi şi nepricepuţi să nu poate să facă prea multe dăune?&rdquo; [5.]</p>
+<p>Răspunsul şi rezultatul acestei &icirc;ntrebări depinde foarte mult de implicarea cetăţeniilor, organizaţiilor neguvernamentale, fundaţiilor &icirc;n viaţa socială, şi mai ales &icirc;n controlarea vieţii politice.</p>
+
+<p>&Icirc;n ultimul r&acirc;nd, dacă nesupunerea civică nu ar fi legitima&nbsp; probabil că şi acum am avea un Europa separat de zidul Berlinului sau de Cortina de fier, fiindcă nu putem nega că la căderea zidului din Berlin şi la dezmembrarea partidului comunist a contribuit foarte mult şi opoziţia din partea societăţii civile[6.] - de aceea merită reconsiderat din partea echipei negatoare necesitatea nesupunerii civice moderat, şi mai ales un exemplu pragmatic din partea echipei negatoare ar fi util prin care semnalează soluţia pragmatică propusa de ei.</p>
+
+<p>&Icirc;n continuare reafirmăm că nesupunerea civică este un act democratic ce reprezintă, mai ales, acea acțiune &icirc;nfăptuită cu intenție, publică și fără violentă, dar nelegală, care are ca scop schimbarea politicii autorităților publice, &icirc;n baza unei viziuni a moralității și a dreptății considerată ca fiind in interesul public.<br /> Din toate aceste motive enumerate, nesupunerea civică este o forma de manifestare democratică. [7.]</p>
+
+
+<ul>
+<li>[1.] &nbsp;<a href="http://plato.stanford.edu/entries/civil-disobedience/#ModAct">http://plato.stanford.edu/entries/civil-disobedience/#ModAct</a> Stanford Dictionary, Mode of Action, 2.1</li>
+</ul>
+
+<ul>
+<li>[2.] .] &nbsp;<a href="http://plato.stanford.edu/entries/civil-disobedience/#ModAct">http://plato.stanford.edu/entries/civil-disobedience/#ModAct</a> Stanford Dictionary, Mode of Action, 2.1</li>
+</ul>
+
+<ul>
+<li>[3.] .] &nbsp;<a href="http://plato.stanford.edu/entries/civil-disobedience/#ModAct">http://plato.stanford.edu/entries/civil-disobedience/#ModAct</a> Stanford Dictionary, Mode of Action, 2.1</li>
+</ul>
+
+<ul>
+<li>[4.]&nbsp;      .] &nbsp;<a href="http://plato.stanford.edu/entries/civil-disobedience/#ModAct">http://plato.stanford.edu/entries/civil-disobedience/#ModAct</a> Stanford Dictionary, Mode of Action, 2.1</li>
+</ul>
+
+<ul>
+<li>[5.]&nbsp;      Karl Popper &ndash; On the sources of knowledge and ignorance 
+<ul>
+<li>-http://www.the-rathouse.com/CRIntroductionSources.html </li>
+</ul>
+</li>
+</ul>
+
+<ul>
+<li>[6.] <a href="http://en.wikipedia.org/wiki/Examples_of_civil_disobedience">http://en.wikipedia.org/wiki/Examples_of_civil_disobedience</a></li>
+</ul>
+
+<ul>
+<li>[7.]&nbsp;      <a href="http://www.altart.org/gas/2011/kit-de-nesupunere-civica-–-ediția-de-buzunar/">http://www.altart.org/gas/2011/kit-de-nesupunere-civica-%E2%80%93-edi%C8%9Bia-de-buzunar/</a></li>
+</ul></div><hr><h3>N2 (Răzvan Vlădescu) <img src='../../../../images/little_stuff/16-em-up.png' class='discurs_toggler'></h3>
+            <div class='discurs normal_text'><p>Legitimitatea a evoluat de la tipul de legitimitate supranaturală, bazată pe natură divină a monarhului, la legitimitatea civilă, bazată pe teoria consensului și al principiul suveranitații populare, principii consacrate in Revolutia franceză, reprezent&acirc;nd triumful mitului rationalist in politică. Aspectul legitimității s-a impus teoriei politice,&nbsp; in momentul trecerii de la guvernăm&acirc;ntul direct la cel reprezentativ, care crează separația dintre titularul real al legimității (guvenații) de cel formal (aleșii).</p>
+
+<p>Relația dintre legitimitate și legalitate presupune in primul rand &nbsp;&ldquo;paradoxul guvernării&rdquo;, conflictul dintre &ldquo;nemulțumirile legate de procesul de guvernare și expansiunea puterii&rdquo;. Lipsa performanțelor, a randamentului scontat al sistemului politic și al autoritații mandatate să gestioneze puterea intr-o anumită perioadă de timp generează simptome de contestare a puterii aflate in exercițiu.</p>
+
+<p>Diferența dintre revoltă si revoluție este relativă, o revoltă cu obiective finalizate devine revoluție, una esuată rămane doar o simpla tentativă de lovitură de stat. O revoluție victorioasă iși construiește propria sa legitimitate și legalitate. Capacitatea unei revoluții induce un raport cauzal nefiresc, efectul preced&acirc;nd cauza; teroarea revoluției limitează preventiv tendințele unei puteri opresive. &ldquo;Revoluția considera &ndash; nota Fr. Furet (in &ldquo;Reflecții asupra Revoluției franceze&rdquo;) &ndash; că orice putere executivă este coruptă prin natura ei, pentru că este separată de popor și nu are contacte cu el, deci este privată de legitimitatea sa&rdquo;. Astfel, orice revoluție este ilegală și ilegitimă, chiar dacă poate fi invocat dreptul la contestarea puterii care este tot at&acirc;t de natural ca și cel la viață ori la libertate, el supund&acirc;ndu-se dreptului unei comunităti de a-și hotari singură soarta.</p></div><hr><hr><h2>Decizia:</h2> <script>
+        $j(document).ready(function(){
+			$j('.decizie_toggler').toggle( 
+				function(){
+					$j(this).attr('src', '../../../../images/little_stuff/16-em-down.png');   
+					$j(this).parent().next('.decizie').hide('fast'); 
+                },
+                function(){
+					$j(this).attr('src', '../../../../images/little_stuff/16-em-up.png');
+					$j(this).parent().next('.decizie').show('fast'); 
+                } 
+			);
+		});</script><div class='decizie'><h3>Stefan Ionescu
+                <img src='../../../../images/little_stuff/16-em-up.png' class='decizie_toggler'></h3><div class='normal_text'><p class="Corpsdetexte0"><strong><br /></strong></p>
+<table border="1" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td width="135">
+<p class="Corpsdetexte0">Castigatoare:</p>
+<p class="Corpsdetexte0"><strong>Echipa Afirmatoare</strong><strong>&nbsp;</strong></p>
+</td>
+<td width="118">
+<p class="Corpsdetexte0"><strong>Stil</strong></p>
+<p class="Corpsdetexte0"><strong>(5)</strong></p>
+</td>
+<td width="127">
+<p class="Corpsdetexte0"><strong>Continut</strong></p>
+<p class="Corpsdetexte0"><strong>(15)</strong></p>
+</td>
+<td width="127">
+<p class="Corpsdetexte0"><strong>Strategie</strong></p>
+<p class="Corpsdetexte0"><strong>(10)</strong></p>
+</td>
+<td width="112">
+<p class="Corpsdetexte0"><strong>Total</strong></p>
+<p class="Corpsdetexte0"><strong>(30)</strong></p>
+</td>
+</tr>
+<tr>
+<td width="135">
+<p class="Corpsdetexte0"><strong>A1</strong></p>
+</td>
+<td width="118">
+<p class="Corpsdetexte0">3</p>
+</td>
+<td width="127">
+<p class="Corpsdetexte0">10</p>
+</td>
+<td width="127">
+<p class="Corpsdetexte0">7</p>
+</td>
+<td width="112">
+<p class="Corpsdetexte0"><strong>20</strong></p>
+</td>
+</tr>
+<tr>
+<td width="135">
+<p class="Corpsdetexte0"><strong>N1</strong></p>
+</td>
+<td width="118">
+<p class="Corpsdetexte0">3</p>
+</td>
+<td width="127">
+<p class="Corpsdetexte0">9</p>
+</td>
+<td width="127">
+<p class="Corpsdetexte0">7</p>
+</td>
+<td width="112">
+<p class="Corpsdetexte0"><strong>19</strong></p>
+</td>
+</tr>
+<tr>
+<td width="135">
+<p class="Corpsdetexte0"><strong>A2</strong></p>
+</td>
+<td width="118">
+<p class="Corpsdetexte0">3</p>
+</td>
+<td width="127">
+<p class="Corpsdetexte0">10</p>
+</td>
+<td width="127">
+<p class="Corpsdetexte0">8</p>
+</td>
+<td width="112">
+<p class="Corpsdetexte0"><strong>21</strong></p>
+</td>
+</tr>
+<tr>
+<td width="135">
+<p class="Corpsdetexte0"><strong>N2</strong></p>
+</td>
+<td width="118">
+<p class="Corpsdetexte0">3</p>
+</td>
+<td width="127">
+<p class="Corpsdetexte0">8</p>
+</td>
+<td width="127">
+<p class="Corpsdetexte0">7</p>
+</td>
+<td width="112">
+<p class="Corpsdetexte0"><strong>18</strong></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="Corpsdetexte0">&nbsp;</p>
+<p>Această dezbatere a avut de suferit din cauza unor motive c&acirc;t se poate de generale:</p>
+
+<p>- absenţa unor definiţii utile (de exemplu, &bdquo;nesupunerea civică&rdquo; este ori definită greşit, aşa cum au semnalat negatorii, ori nu e definită deloc, ci doar calificată &icirc;ntr-o structură argumentativă de genul &bdquo;condiţie fundamentală&rdquo; pentru o democraţie, ceea ce nu ne ajută deloc să &icirc;nţelegem la ce se referă)&nbsp;;</p>
+<p>- lipsa fie şi a celei mai simple sctructuri coerente a argumentelor (de genul datorită lui A şi B =&gt; Moţiunea);</p>
+<p>- absenţa repetată a reacţiilor la argumentele echipei adverse ;</p>
+<p>- un stil foarte ne&icirc;ngrijit al redactării (multe greşeli gramaticale, de la dezacorduri p&acirc;nă la fraze anacolutice gigante). NICIUN DISCURS NU PARE SĂ FI FOST CITIT DUPĂ REDACTARE.</p>
+
+<p>Esenţa cazului afirmator este că nesupunerea civică este necesară atunci c&acirc;nd supunerea civică nu poate rezolva probleme majore &icirc;ntr-o societate. De ne&icirc;nţeles este, &icirc;nsă, accentul pus de afirmatori pe societatea civilă. &Icirc;n primul r&acirc;nd, ea este definită greşit (&icirc;n definiţia oferită pot intra şi partidele politice). &Icirc;n al doilea r&acirc;nd, este inutil apelul la societatea civilă de vreme ce toate argumentele afirmatorilor nu au nimic care să fie compatibil exclusiv cu acţiunile societăţii civile.</p>
+
+<p>Intuiesc că afirmatorii ar fi dorit ca prin apelul la societatea civilă, să accentueze o idee că genul de nesupunere la care se referă ei este una paşnică şi controlată. Problema aici, este că rezistenţa paşnică este de obicei o legală de rezistenţă legală &icirc;ntr-o democraţie şi este nevoie de ceva analiză şi exemple pentru a demonstra inversul. &Icirc;ntrebarea esenţială aici ar fi fost &bdquo;ce fel de acte de &icirc;ncălcare a contractului social ar putea fi rezolvate cu ceva at&acirc;t de inofensiv ca rezistenţa paşnică.</p>
+
+<p>Negatorii, au avut o abordare extrem de superficială a cazului afirmator. &nbsp;Ei ignoră aspectul de &bdquo;ultimă speranţă&rdquo; pe care &icirc;l are nesupunerea şi nu oferă nicio alternativă la ineficienţa actelor de răzvrătire &bdquo;supuse&rdquo;. Ei par să sugereze că nesupunerea va duce &icirc;ntotdeauna la violenţă dar aceasta nu e făcută niciodată clar. Singurul argument clar este acela că frecvenţa actelor de nesupunere vor face ca oamenii să uite de alternativele legale, &icirc;nsă acest argument nu este urmat de niciun fel de analiză sau explicaţii.</p>
+
+<p>Cred că <strong>echipa afirmatoare a c&acirc;ştigat meciul</strong> &icirc;n ciua inconsistenţei &icirc;n abordare deoarece:</p>
+
+<p>1. echipa negatoare nu a avut niciun moment un răspuns complet şi viabil la vreunul din argumentele afirmatorilor</p>
+<p>2. cazul afirmator a fost lucrat cu ceva mai multă grijă (exemple şi citate) şi consistenţă dec&acirc;t cel negator.</p>
+<p class="Corpsdetexte0">&nbsp;</p>
+<p class="Corpsdetexte0">A1</p>
+<p>Acest discurs pare scris cu multă pasiune ceea ce e bine cu condiţia să fie revizuit &icirc;mpotriva anumitor derapaje. Autorul se concentrează prea mult pe explicarea democraţiei şi prea puţin pe argumente &icirc;n favoarea nesupunerii. &Icirc;n ceea ce priveşte stilul, citatele prezentate &icirc;n limba engleză nu ar trebui să fie bine primite. Se găsesc termeni care nu există &icirc;n dicţionar (&laquo;&nbsp;&icirc;n acordanţă cu&nbsp;&raquo;), o ambiguitate &icirc;ntre &laquo;&nbsp;societate civilă&raquo; sau &laquo;&nbsp;societate civică&nbsp;&raquo; şi chiar greşeli de gramatică sau de tipărire destul de deranjante&nbsp;(&laquo;&nbsp;capabile să iau decizii&nbsp;&raquo; sau &laquo;&nbsp;să fie oponenţii a naţionalizării&nbsp;&raquo;)</p>
+<p class="Corpsdetexte0">&nbsp;</p>
+<p class="Corpsdetexte0">N1</p>
+<p>Conţinutul acestui discurs este adesea prea general (de exemplu, reflecţiile privind valoarea democraţiei de la &icirc;nceput nu par să ducă nicăieri). Atunci c&acirc;nd structura afirmatoare este neclară, rolul negatorilor este să extragă şi să sumarizeze ideile esenţiale ale afirmatorilor, să le enunţe şi să răspundă la ele. &Icirc;n acest discurs nu se găseşte niciunul din aceste elemente. Stilul e de asemenea ne&icirc;ngrijit, Penultimul paragraf conţine c&acirc;te un un anacolut &icirc;n fiecare propoziţie.</p>
+
+<p>A2</p>
+
+<p>Discursul exprimă totuşi ceva mai clar ideea centrală a cazului afirmator. &Icirc;n schimb, există c&acirc;teva greşeli. Argumentele nu sunt suficient explicate ci par doar &icirc;mprumutate de la Karl Popper.</p>
+
+<p>La nivelul greşelilor de stil, am exact aceleaşi observaţii ca pentru A1. Astfel&nbsp;:</p>
+
+<p>Cuvinte inventate &ndash;&nbsp; societate &laquo;&nbsp;culturată&nbsp;&raquo;</p>
+<p>Dezacorduri &ndash; &laquo;&nbsp;drept fundamental a societăţii&nbsp;&raquo;, &laquo;&nbsp;&icirc;ntrebări puse greşite&nbsp;&raquo;, &laquo;&nbsp;un Europa separat&nbsp;&raquo;</p>
+<p>Cacofonii &ndash; &laquo;&nbsp;ca conducătorii&nbsp;&raquo;</p>
+
+<p>Discursul ar trebui să fie &icirc;ntr-o singură limbă&nbsp;!</p>
+
+<p>N2</p>
+
+<p>&Icirc;n cele 3 paragrafe nu există nicio urmă de contra-argument sau concluzie legată de discuţia de mai sus. Referirile la revoluţie sau la paradoxul guvernării sunt mult prea generale şi chiar cu ceva eforturi sunt greu de legat de argumentele afirmatorilor.</p></div>A1 -> 20 puncte<br>N1 -> 19 puncte<br>A2 -> 21 puncte<br>N2 -> 18 puncte<br>Castiga echipa: <h3 style='display:inline;color:red;'>Agnes si Tudor (afirmatori)</h3></div><hr><h3 class='important'>Vrem parerea ta! Pentru asta, trebuie sa te loghezi.</h3>
+                <div class='clear'></div>
+        </div><!-- end main content -->
+         <div class='clear'></div>
+</div>
+<div id="pix"></div>
+
+
+                                </div><!--end main -->
+                                <div id='parteneri'>
+                                    <span class='tr'></span><span class='tl'></span><span class='br'></span><span class='bl'></span><span id="filler"></span>
+                                    <div class='parteneri' id='sustinatori'>
+                                        <span class='floating_text' id='un_proiect'>Un proiect</span>
+                                        <a href='http://www.ardor.org.ro/'><div class='image' id='ardor'>Ardor</div></a>
+                                        <span class='floating_text' id='finantatori'>Finanțatori</span>
+                                        <a href='http://www.opensocietyfoundations.org/'><div class='image' id='open_society'>Open Society Foundation </div></a>
+                                        <a href='http://www.studentiq.ro//'><div class='image' id='memoplus'>MemoPlus</div></a>
+                                        <!-- <a href='http://www.ratiufamilyfoundation.com/'><div class='image' id='FundatiaRatiu'>Ardor</div></a>
+                                        <a href='http://www.eef.md/'><div class='image' id='eef'>East Europe Foundation</div></a>
+                                        <a href='http://www.mts.gov.md/'><div class='image' id='mdminister'>Ministerul Tineretului si Sportului al Republicii Moldova</div></a> -->
+
+                                        <span class='floating_text' id='parteneri_text'>Parteneri</span>
+
+                                        <a href='http://www.policycenter.eu/'><div class='image' id='PolicyCenter'>Policy Center</div></a>
+                                        <a href='http://www.britishcouncil.org/'><div class='image' id='BritishCouncil'>British Council</div></a>
+                                        <a href='http://www.europuls.ro/'><div class='image' id='europuls'>Europuls</div></a>
+                                        <a href='http://www.cere.ro/'><div class='image' id='cere'>Ce-Re</div></a>
+                                        <a href='http://www.primeromania.ro/'><div class='image' id='prime'>Prime Romania</div></a>
+                                        <a href='http://www.cji.ro/'><div class='image' id='cji'>Centrul pentru jurnalism independent</div></a>
+                                        <a href='http://www.aiesectm.ro/'><div class='image' id='aisec'>Aisec</div></a>
+                                        <!-- ===================================================================================================== -->
+                                        <a href='http://www.cogitus.ro/'><div class='image' id='cogitus'>Cogitus</div></a>
+                                        <a href='http://www.adevarul.ro/international/foreign_policy/'><div class='image' id='foreignPolicy'>Foreign Policy</div></a>
+                                        <a href='http://www.elsa.ro/'><div class='image' id='elsa'>Elsa</div></a>
+                                        <a href='http://www.vipromania.ro/'><div class='image' id='vipromania'>Voluntari pentru idei si proiecte</div></a>
+                                        <a href='http://www.ongtrust.ro/'><div class='image' id='ongtrust'>Trust</div></a>
+
+                                        <!-- ===================================================================================================== -->
+                                        <a href='http://www.leap.ro/'><div class='image' id='leap'>Leap</div></a>
+                                        <a href='http://www.younginitiative.org/'><div class='image' id='younginitiative'>Asociatia young initiative</div></a>
+                                        <a href='http://www.asjc.ro/'><div class='image' id='asjc'>Asjc</div></a>
+                                        <a href='http://osut.ro/'><div class='image' id='osut'>Osut</div></a>
+                                        <div class='clear'></div>
+                                    </div>
+                                    <div class='parteneri' id='parteneri_institutionali'>
+                                        <span class='floating_text' id='sponsori_text'>Sus&#539;in&#x0103;tori</span>
+                                        <a href='http://www.cartier.md/'><div class='image' id='cartier_logo'>Editura Cartier</div></a>
+                                        <a href='http://www.pll.md/ro/'><div class='image' id='biblio_logo'>Biblioteca publica de drept</div></a>
+                                        <span class='floating_text' id='institutii_text'>Parteneri institu&#539;ionali</span> 
+                                        <ul id='institutii'>
+                                            <!-- <span class='floating_text' id='institutii_text'>Parteneri institu&#539;ionali:</span> -->
+                                            <li><a href='http://www.politice.ro/'>Facultatea de &#536;tiin&#539;e Politice SNSPA </a></li>
+                                            <li><a href='http://www.comunicare.ro/'>Facultatea de Comunicare &#537;i Rela&#539;ii Publice SNSPA</a></li>
+                                            <li><a href='http://www.fspub.ro/'>Facultatea de &#536;tiin&#539;e Politice Universitatea Bucure&#537;ti</a></li>
+                                            <li><a href='http://www.filosofie.unibuc.ro/'>Facultatea de Filosofie Universitatea Bucure&#537;ti</a></li>
+                                            <li><a href='http://litere.unibuc.ro/'>Facultatea de Litere din Universitatea Bucure&#x015f;ti</a></li>
+                                            <li><a href='http://www.unibuc.ro/ro/fac_fsas_ro'>Facultatea de Sociologie Universitatea Bucure&#537;ti</a></li>
+                                            <li><a href='http://laws.uaic.ro/'>Facultatea de Drept Universitatea Alexandru Ioan Cuza Ia&#537;i</a></li>
+                                            <li><a href='http://www.uaic.ro/uaic/bin/view/Academic/Filosofie'>Facultatea de Filosofie si &#536;tiin&#539;e Social Politice Universitatea AIC Ia&#537;i</a></li>
+                                            <li><a href='http://www.upa.ro/'>Facultatea de Drept si Facultatea de &#x015e;tiin&#x0163;e Politice si Administrative Universitatea Petre Andrei Ia&#x015f;i</a></li> 
+
+                                            <li><a href='http://www.ubbcluj.ro/'>Universitatea Babe&#537;-Bolyai Cluj Napoca</a></li>
+                                            <li><a href='http://www.uvt.ro/'>Universitatea de Vest Timi&#537;oara</a></li>
+                                            <li><a href='http://www.upt.ro/'>Universitatea Politehnica Timi&#537;oara</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class='parteneri' id='parteneri_media'>
+                                        <span class='floating_text' id='media_text'>Parteneri media</span>
+                                        <a href='http://www.hotnews.ro/'><div class='image' id='hotnews'>HotNews</div></a>
+                                        <!-- <a href='http://www.lumebuna.ro/'><div class='image' id='lumebuna'>Lume Buna</div></a> -->
+                                        <a href='http://www.romaniapozitiva.ro/'><div class='image' id='romaniapozitiva'>Romania Pozitiva</div></a>
+                                        <a href='http://totb.ro/'><div class='image' id='thinkoutsidethebox'>Think Outside The Box</div></a>
+                                        <a href='http://www.facebook.com/carevasazica.vip'><div class='image' id='carevasazica'>Carevasazica</div></a>
+                                        <a href='http://www.studentie.ro/'><div class='image' id='studentiero'>Studentie.ro</div></a>
+                                        <a href='http://startub.unibuc.ro/'><div class='image' id='startub'>startub.unibuc.ro</div></a>
+                                        <!-- <a href='http://www.tvr.ro/tvr_cluj.php'><div class='image' id='tvrcluj'>Tvr Cluj</div></a> -->
+                                        <!-- <a href='http://www.radiotransilvania.ro'><div class='image' id='radiotransilvania'>Radio Transilvania</div></a> -->
+                                        <a href='http://iasifun.ziaruldeiasi.ro/'><div class='image' id='iasifun'>Iasi fun</div></a>
+                                        <a href='http://www.ziaruldeiasi.ro/'><div class='image' id='ziaruldeiasi'>Ziarul de Iasi</div></a>
+                                        <a href='http://www.kissfm.ro/timisoara'><div class='image' id='kissfm'>KissFm</div></a>
+
+                                        <div class='clear'></div> 
+                                    </div>
+                                    <div class='clear'></div>
+
+                                </div>	
+                            </div>	<!-- end wrap -->
+                            <div id='footer_mare'>
+                                <div id='footer'>
+                                    <div id='links' class='footer'>
+                                        <div id='menu1' style='margin:auto;'> <ul id='meniu_prinicpal'><li><a href='../../../contacte/index.html'> Contact </a></li>
+<li><a href='../../../clubdebate/index.html'> Cluburile </a></li>
+<li><a href='../../../oamenii/index.html'> Oamenii </a></li>
+<li><a href='../../../proiectul/index.html'> Proiectul </a></li>
+<li><a href='../../../home/index.html'> Acasa </a></li>
+</ul></div><!--end menu-->
+                                    </div><!--
+                                    <div id='contact' class='footer'>
+                                            <h4>Contact</h4>
+                                            <p>office@closer2oxford.ro</p>
+                                            <p>bogdan.draghicescu@closer2oxford.ro<br>
+                                            <span class='detalii'> (asistenta tehnica web - orice probleme legate de site)</span></p>
+                                    </div>
+                                    -->
+                                    <div id='newsletter' class='footer'>
+                                        <script src="../../../../../connect.facebook.net/en_US/all.js#xfbml=1"></script><fb:like href="http://www.facebook.com/pages/Closer2Oxford/162758797069605" width="250" colorscheme="dark"></fb:like>
+                                        <!--<h4>Newsletter</h4>
+                                        <form action='/page/newsletter'>
+                                                <input type='text' name='email'>
+                                                <input type='submit' id='submit' value='>'>
+                                                        
+                                        </form>-->
+                                    </div>
+                                    <div id='credits'>
+                                        Copyright(c) 2021 ARDOR |  Toate drepturile rezervate | Toate logo-urile si sloganurile de pe site sunt proprietate intelectuala inregistrata si nu pot fi reproduse fara acordul explicit al detinatorilor. <br>
+                                            <br /><br />
+                                            <b>Disclaimer</b><br /><i>
+
+                                                Programul educational Closer to Oxford este un program non-profit si nu are o legatura cu universitatea cu acelasi nume, referirea la Oxford avand doar o semnificatie simbolica.
+                                            </i>
+                                    </div>
+
+                                </div>		
+                            </div>		
+
+                            <div id="finantatde">Acest proiect este finantat cu sustinere din partea Comisiei Europene. Aceast publicatie [comunicare] reflecta doar
+                                vederile autorului, iar Comisia nu poate fi facuta  responsabila pentru utilizarea informatiei pe care o contine.</div>
+
+
+                        </body>
+                        </html>

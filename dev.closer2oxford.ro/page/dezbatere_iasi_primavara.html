@@ -1,0 +1,672 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml-strict.dtd">
+<HTML xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+    <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+            <link rel="icon" type="image/png"  href="../../closer2oxford.ro/favicon.html">
+                <link rel="stylesheet" href="var/layout.css" type="text/css">
+                    <title>Closer to Oxford - e timpul pentru argumente!</title>
+                    <link rel="alternate" type="application/rss+xml"  href="rss_feed" title="Stiri Closer2Oxford">
+                        <!-- <link rel="image_src" property="og:image"  href="/images/layout/closer2oxford_fb_white.png" /> -->
+                        <link rel="image_src" property="og:image"   type="image/jpeg"  href="../uploads/2015/06/9/facebook_icon.html" />
+                        <link rel="image_src" type="image/jpeg"  href="../uploads/2015/06/9/icon-facebook.gif" /> 
+						<meta name="description" content="Closer2Oxford pune în valoare oameni şi argumentele lor, în dezbateri online şi publice alături de tineri şi invitați avizaţi"/>
+                        <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9" />
+<script type='text/javascript' src='../js/jquery-1.4.4.min.js'></script>
+<script>var $j = jQuery.noConflict();</script>
+<script type='text/javascript' src='../js/tinymce/tiny_mce.js'></script>
+<script type='text/javascript' src='../js/jquery.form.js'></script>
+<script type='text/javascript' src='../js/fbLoginRegister.js'></script>
+<script type='text/javascript' src='var/javascript.js'></script>
+<script type='text/javascript' src='../js/jquery.hovertip-1.0.min.js'></script> 
+<script type='text/javascript' src='../js/jquery.jgrowl_minimized.js'></script> 
+<link rel='stylesheet' href='../css/jquery.jgrowl.css' media='screen' type='text/css'> 
+<script type='text/javascript' src='../js/jquery.timer-min.js'></script> 
+<link rel='stylesheet' href='var/gallery.css' media='screen' type='text/css'> 
+<script type='text/javascript' src='var/galerie/jquery.prettyPhoto.js'></script> 
+<meta name='description' content=''/> 
+<meta name='keywords' content=''/> 
+<style>.hovertip{
+    position:absolute;
+    padding:10px 13px;
+    z-index:2;
+    max-width:300px;
+    color:#303030;
+    background-color:#f5f5b5;
+    border:1px solid #DECA7E;
+    font-family:sans-serif;
+    font-size:12px;
+    line-height:18px;
+    text-align:left;
+    }</style> 
+<script type='text/javascript'>$j(document).ready(function(){$j('.tooltip').hovertip({'offset':[20,20]});get_notif();});
+
+if(!Array.indexOf){Array.prototype.indexOf = function(obj){for(var i=0; i<this.length; i++){if(this[i]==obj){return i;}}return -1;}}
+    hashuri = [] ;
+	 var tick_timer= 3000 ;
+ 
+	 function get_notif()
+        {
+		  
+		  //console.log(tick_timer);
+	     
+		  setTimeout(get_notif,tick_timer);
+        
+		   $j.ajax(
+            {
+                url: '/page/notif/show_events',
+                dataType: 'json',
+                data: "{}",
+                success: function(data)
+                    {
+                    $j.each(data,function(index,data){
+                        try
+                            {
+                            if( hashuri.indexOf(data.hash) == -1 )
+                                {
+                                hashuri.push(data.hash);
+                                $j.jGrowl(
+                                    data.str,
+                                    {
+                                        corners:'1px',
+                                        life: data.life,
+                                        header:data.title,
+                                        hash: data.hash,
+                                        sticky: data.sticky,
+                                        close: function(e,m,o)
+                                            {
+                                                $j.ajax({url:'/page/notif/delete_single_event/' + o.hash});
+                                            }
+                                    });
+                                }
+                            }
+                        catch(e){}
+                        })
+                    }
+            });
+        }
+	 </script> 
+ 
+                            
+  <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-19111721-1']);
+  _gaq.push(['_setDomainName', '.closer2oxford.ro']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+    
+                        </head>
+                        <body>
+                            <div id="global_wrap">
+                                <div id="header">
+                                    <a href='../index.html'><div id='logo'><img src='../images/layout/sigla.jpg'></div></a>
+                                    <a class='noExternal' href='http://www.facebook.com/pages/Closer2Oxford/162758797069605'><img src='../images/fb.png' style='height:30px;float:right;clear:right;margin:10px 5px 5px 5px;border:none;'/></a>
+                                    <a href='rss_feed'><img src='../images/feed-icon.png' style='height:30px;float:right;clear:right;margin:5px;border:none;'/></a>
+                                </div>
+                                <div id="meniu">
+                                    <div  id='register_login'>
+
+                                        
+  <a href='#' class='todo' id='login'>Login </a> &nbsp;<a href='register.html' class='todo' id='register'>Register</a>
+    <div id='login_box'>
+		  <form action='https://dev.closer2oxford.ro/page/ro/login_user/logon' method='post' id='user_login_form'>
+					 <div>Email: <input type='text' name='email'/> </div><br />
+					 <div>Pass: <input type='password' name='passwd'/></div><br />
+					 <a href='#' class='password_forgot'>forgot password?</a>
+					 <input type='hidden' value='/page/dezbatere_iasi_primavara' name='returnto' class='submiter'/><br />
+					 <input type='submit' value='login' name='btn' class='submiter'/><br />
+		  </form>
+		  
+		  <form action='https://dev.closer2oxford.ro/page/ro/login_user/reset_user_pw' method='post' id='user_reset_form'>
+					 <div>Email: <input type='text' name='email'/> </div><br />
+					 <a href='#' class='password_forgot'>login?</a>
+					 <input type='hidden' value='/page/dezbatere_iasi_primavara' name='returnto' class='submiter'/><br />
+					 <input type='submit' value='reset' name='btn' class='submiter'/><br />
+		  </form>
+		  
+    </div>
+    
+                                    </div>
+                                    <div id='menu1' style='margin:auto;'> <ul id='meniu_prinicpal'><li><a href='contacte/index.html'> Contact </a></li>
+<li><a href='clubdebate/index.html'> Cluburile </a></li>
+<li><a href='oamenii/index.html'> Oamenii </a></li>
+<li><a href='proiectul/index.html'> Proiectul </a></li>
+<li><a href='home/index.html'> Acasa </a></li>
+</ul></div><!--end menu-->
+                                </div>
+                                <div id="main"> 
+                                    <!--<div id='stiri-padding'>
+        <div id='stiri_back'>
+                {stiri} 
+    
+               
+        </div>-->
+        
+</div>
+<div  id="content-padding">
+        <div id='sidebar_menu'>
+                <span class='tr'></span>
+                <span class='tl'></span>
+                <span class='br'></span>
+                <span class='bl'></span>
+                <span id="filler"></span>
+                    
+                <ul></ul>
+                
+                <div class='clear'></div>
+        </div>
+        <div id="content">
+                <span class='tr'></span>
+                <span class='tl'></span>
+                <span class='br'></span>
+                <span class='bl'></span>
+                <span id="filler"></span>
+                <script type='text/javascript' src='../js/jquery.hovertip-1.0.min.js'></script> 
+<script type='text/javascript' src='../js/jquery.jgrowl_minimized.js'></script> 
+<link rel='stylesheet' href='../css/jquery.jgrowl.css' media='screen' type='text/css'> 
+<script type='text/javascript' src='../js/jquery.timer-min.js'></script> 
+<link rel='stylesheet' href='var/gallery.css' media='screen' type='text/css'> 
+<style>.hovertip{
+    position:absolute;
+    padding:10px 13px;
+    z-index:2;
+    max-width:300px;
+    color:#303030;
+    background-color:#f5f5b5;
+    border:1px solid #DECA7E;
+    font-family:sans-serif;
+    font-size:12px;
+    line-height:18px;
+    text-align:left;
+    }</style> 
+<script type='text/javascript'>$j(document).ready(function(){$j('.tooltip').hovertip({'offset':[20,20]});get_notif();});
+
+if(!Array.indexOf){Array.prototype.indexOf = function(obj){for(var i=0; i<this.length; i++){if(this[i]==obj){return i;}}return -1;}}
+    hashuri = [] ;
+	 var tick_timer= 3000 ;
+ 
+	 function get_notif()
+        {
+		  
+		  //console.log(tick_timer);
+	     
+		  setTimeout(get_notif,tick_timer);
+        
+		   $j.ajax(
+            {
+                url: '/page/notif/show_events',
+                dataType: 'json',
+                data: "{}",
+                success: function(data)
+                    {
+                    $j.each(data,function(index,data){
+                        try
+                            {
+                            if( hashuri.indexOf(data.hash) == -1 )
+                                {
+                                hashuri.push(data.hash);
+                                $j.jGrowl(
+                                    data.str,
+                                    {
+                                        corners:'1px',
+                                        life: data.life,
+                                        header:data.title,
+                                        hash: data.hash,
+                                        sticky: data.sticky,
+                                        close: function(e,m,o)
+                                            {
+                                                $j.ajax({url:'/page/notif/delete_single_event/' + o.hash});
+                                            }
+                                    });
+                                }
+                            }
+                        catch(e){}
+                        })
+                    }
+            });
+        }
+	 </script> 
+
+<script type='text/javascript' src='../js/jquery.hovertip-1.0.min.js'></script> 
+<script type='text/javascript' src='../js/jquery.jgrowl_minimized.js'></script> 
+<link rel='stylesheet' href='../css/jquery.jgrowl.css' media='screen' type='text/css'> 
+<script type='text/javascript' src='../js/jquery.timer-min.js'></script> 
+<link rel='stylesheet' href='var/gallery.css' media='screen' type='text/css'> 
+<script type='text/javascript' src='var/galerie/jquery.prettyPhoto.js'></script> 
+<style>.hovertip{
+    position:absolute;
+    padding:10px 13px;
+    z-index:2;
+    max-width:300px;
+    color:#303030;
+    background-color:#f5f5b5;
+    border:1px solid #DECA7E;
+    font-family:sans-serif;
+    font-size:12px;
+    line-height:18px;
+    text-align:left;
+    }</style> 
+<script type='text/javascript'>$j(document).ready(function(){$j('.tooltip').hovertip({'offset':[20,20]});get_notif();});
+
+if(!Array.indexOf){Array.prototype.indexOf = function(obj){for(var i=0; i<this.length; i++){if(this[i]==obj){return i;}}return -1;}}
+    hashuri = [] ;
+	 var tick_timer= 3000 ;
+ 
+	 function get_notif()
+        {
+		  
+		  //console.log(tick_timer);
+	     
+		  setTimeout(get_notif,tick_timer);
+        
+		   $j.ajax(
+            {
+                url: '/page/notif/show_events',
+                dataType: 'json',
+                data: "{}",
+                success: function(data)
+                    {
+                    $j.each(data,function(index,data){
+                        try
+                            {
+                            if( hashuri.indexOf(data.hash) == -1 )
+                                {
+                                hashuri.push(data.hash);
+                                $j.jGrowl(
+                                    data.str,
+                                    {
+                                        corners:'1px',
+                                        life: data.life,
+                                        header:data.title,
+                                        hash: data.hash,
+                                        sticky: data.sticky,
+                                        close: function(e,m,o)
+                                            {
+                                                $j.ajax({url:'/page/notif/delete_single_event/' + o.hash});
+                                            }
+                                    });
+                                }
+                            }
+                        catch(e){}
+                        })
+                    }
+            });
+        }
+	 </script> 
+
+<style type="text/css">
+.poze
+{
+    float:right;
+    width:110px;
+}
+.poze a img
+{    border:none;
+}
+.main_content
+{
+    float:left;
+    width:560px;
+}
+</style>
+
+ <div class = 'poze'>
+            <a class='thumb' href='../uploads/2011/10/3/iasi_inc.avmti4.png' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../uploads/2011/10/3/thumb_iasi_inc.avmti4.png' alt='' />
+                <span class='desc'></span>
+            </a>
+        
+
+            <a class='thumb' href='http://www.youtube.com/watch?v=0dO9cF93cbk' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../../img.youtube.com/vi/0dO9cF93cbk/1.jpg' alt='' />
+                <span class='desc'>Deschidere Conferinta</span>
+            </a>
+        
+
+            <a class='thumb' href='http://www.youtube.com/watch?v=6ZZB9xkXKK0' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../../img.youtube.com/vi/6ZZB9xkXKK0/1.jpg' alt='' />
+                <span class='desc'>Discurs Cristina Roșu - studentă (A1)</span>
+            </a>
+        
+
+            <a class='thumb' href='http://www.youtube.com/watch?v=vd0S1uXuzic' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../../img.youtube.com/vi/vd0S1uXuzic/1.jpg' alt='' />
+                <span class='desc'>Discurs Ioana Coman - studentă (N1)</span>
+            </a>
+        
+
+            <a class='thumb' href='http://www.youtube.com/watch?v=r2Y0YfRvxmk' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../../img.youtube.com/vi/r2Y0YfRvxmk/1.jpg' alt='' />
+                <span class='desc'>Discurs Prof. Daniel Șandru - invitat (A2)</span>
+            </a>
+        
+
+            <a class='thumb' href='http://www.youtube.com/watch?v=TJi4_JMuZ2Y' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../../img.youtube.com/vi/TJi4_JMuZ2Y/1.jpg' alt='' />
+                <span class='desc'>Discurs Conf. Dr. Ilie Fârte - invitat (N2)</span>
+            </a>
+        
+
+            <a class='thumb' href='http://www.youtube.com/watch?v=JX3qLPkQkLI' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../../img.youtube.com/vi/JX3qLPkQkLI/1.jpg' alt='' />
+                <span class='desc'>Întrebări auditoriu</span>
+            </a>
+        
+
+            <a class='thumb' href='http://www.youtube.com/watch?v=BJcupHcuYhY' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../../img.youtube.com/vi/BJcupHcuYhY/1.jpg' alt='' />
+                <span class='desc'>Încheiere</span>
+            </a>
+        
+
+            <a class='thumb' href='../uploads/2011/04/29/dezbatere_iasi_1.diwqei.jpg' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../uploads/2011/04/29/thumb_dezbatere_iasi_1.diwqei.jpg' alt='' />
+                <span class='desc'></span>
+            </a>
+        
+
+            <a class='thumb' href='../uploads/2011/04/29/dezbatere_iasi_2.xg9yjv.jpg' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../uploads/2011/04/29/thumb_dezbatere_iasi_2.xg9yjv.jpg' alt='' />
+                <span class='desc'></span>
+            </a>
+        
+
+            <a class='thumb' href='../uploads/2011/04/29/dezbatere_iasi_3.vo34a8.jpg' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../uploads/2011/04/29/thumb_dezbatere_iasi_3.vo34a8.jpg' alt='' />
+                <span class='desc'></span>
+            </a>
+        
+
+            <a class='thumb' href='../uploads/2011/04/29/dezbatere_iasi_4.urhmls.jpg' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../uploads/2011/04/29/thumb_dezbatere_iasi_4.urhmls.jpg' alt='' />
+                <span class='desc'></span>
+            </a>
+        
+
+            <a class='thumb' href='../uploads/2011/04/29/dezbatere_iasi_5.34a8ft.jpg' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../uploads/2011/04/29/thumb_dezbatere_iasi_5.34a8ft.jpg' alt='' />
+                <span class='desc'></span>
+            </a>
+        
+
+            <a class='thumb' href='../uploads/2011/04/29/dezbatere_iasi_6.i2bzkn.jpg' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../uploads/2011/04/29/thumb_dezbatere_iasi_6.i2bzkn.jpg' alt='' />
+                <span class='desc'></span>
+            </a>
+        
+
+            <a class='thumb' href='../uploads/2011/10/3/iasi_final.1xkl5g.png' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../uploads/2011/10/3/thumb_iasi_final.1xkl5g.png' alt='' />
+                <span class='desc'></span>
+            </a>
+        
+
+
+    <script>
+    $j(document).ready(function(){
+      		$j("a[rel^='prettyPhoto']").prettyPhoto({theme:'facebook'});
+        });
+    
+    </script>
+    </div>
+
+<div class='main_content'>
+<!-- 		@page { margin: 0.79in } 		P { margin-bottom: 0.08in } -->
+<p><em><strong>Dezbatere publica - Iaşi, Universitatea &ldquo;Alexandru Ioan Cuza&rdquo;, 13 aprilie 2011</strong></em></p>
+<p><em>Echipa afirmatoarea: </em><em><strong>Cristina Roşu</strong></em><em>, studentă la Facultatea de Drept si </em><em><strong>Daniel Şandru</strong></em><em>, conferenţiar Facultatea de Ştiinţe Politice şi Administrative a Universităţii &ldquo;Petre Andrei&rdquo; din Iaşi</em></p>
+<p><em>Echipa negatoare: </em><em><strong>Ioana Coman</strong></em><em>, elevă la Colegiul Naţional &ldquo;Emil Racoviţă&rdquo; Iaşi si </em><em><strong>Ilie F&acirc;rte</strong></em><em>, conferenţiar Facultatea de Filosofie a Universităţii &ldquo;Alexandru Ioan Cuza&rdquo; Iaşi</em></p>
+<p><em>Moderator</em><em><strong>: Liviu Antonesei</strong></em><em>, </em><span style="color: #000000;"><em>publicist, profesor la Facultatea de Ştiinţele Educaţiei</em></span></p>
+<p>&nbsp;</p>
+<p><strong>Cristina Roşu , afirmator 1</strong></p>
+<p>Bună seara, mă numesc Cristina Roşu, sunt studentă &icirc;n anul IV la drept şi alături de coechipierul meu domnul conferenţiar Daniel Şandru am deosebita plăcere să sustinem aceasta tema.  <span lang="fr-FR">Vom arata prin argumentele noastre că </span><span lang="fr-FR"><strong>este timpul ca dreptul de informare al cetăţeanului să fie mai important dec&acirc;t dreptul demnitarului la viaţă privată</strong></span><span lang="fr-FR">. Ei bine, &icirc;n discursul meu, surprinzător, nu voi susţine faptul că dreptul la viaţă privată este mai important sau mai puţin important dec&acirc;t dreptul la informare al cetăţeanului, ci dimpotrivă susţin că ambele sunt două valori importante care ar trebui să fie respectate &icirc;ntr-o societate democratic. Totusi, argumentele noastre se vor referi la acele situaţii &icirc;n care aceste două valori vin &icirc;n conflict, şi &icirc;n cadrul acestor situaţii vom susţine faptul că este justificată restricţionarea dreptului demnitarului la viaţă privată atunci c&acirc;nd aceasta se află &icirc;n conflict direct cu dreptul la informare al cetăţeanului. Ei bine, pentru &icirc;nceput ţin să vă prezint c&acirc;teva definiţii: &icirc;n primul r&acirc;nd, prin drept la informare &icirc;nţeleg dreptul pe care &icirc;l au cetăţenii de a cunoaşte anumite informaţii, at&acirc;t in prealabil c&acirc;t şi după exercitarea dreptului lor la vot. Dreptul la vot, ştim cu toţii, reprezintă o legătură directă &icirc;ntre cetăţean şi demnitar, de aceea ne referim la acest proces electoral. </span></p>
+<p>&Icirc;n privinţa dreptului la informare, ţin să evidenţiez două aspecte:  &icirc;n primul r&acirc;nd acesta presupune existenţa unui beneficiu pentru public, pentru că &icirc;n lipsa unui beneficiu nu putem să discutăm despre un anumit drept care este conferit cuiva, şi &icirc;n al doilea r&acirc;nd ţin să mă refer la faptul că dreptul la informare este indisolubil legat de existenţa, de respectarea libertăţii de exprimare &icirc;ntr-o societate democratica. Tin să identific existenţa unor surse de informare care pot fi foarte largi - spre exemplu &icirc;ncep&acirc;nd de la faptul că eu vorbesc &icirc;n faţa dumneavoastră şi termin&acirc;nd cu faptul că există libertatea presei - există posibilitatea fiecăruia să se exprime prin bloguri, prin dezbateri publice, prin mass-media şi aşa mai departe.</p>
+<p>O a doua definiţie pe care vreau să v-o aduc [in discutie] este cea a demnitarilor: din punctul nostru de vedere considerăm că demnitarii sunt reprezentanţii cetăţenilor &icirc;ntr-o democraţie &icirc;n exercitarea puterii publice. Spre exemplu Preşedintele Rom&acirc;niei, Primul Ministru, primarul, prefectul, membrii in Consiliul local şi aşa mai departe. La acest nivel ţin să evidenţiez tot două caracteristici: &icirc;n primul r&acirc;nd, daca sunt persoane publice, &icirc;nseamnă că viaţa lor publică nu se termină atunci c&acirc;nd se termină programul de lucru de la birou, ci dimpotrivă viaţa publică şi viaţa privată se află &icirc;ntr-o devălmăşie, (sic, nota editorului), este greu a se stabili de la bun &icirc;nceput o limită &icirc;ntre ce este public şi ce este privat, şi &icirc;n al doilea r&acirc;nd la nivelul acestei definiţii ţin să subliniez faptul că demnitarii au o obligatii conferite de funcţia pe care o deţin şi anume de a avea o conduită morală deosebită faţă de ceilalţi; ei ar trebui să fie un exemplu pentru noi toţi şi de aceea ştacheta se ridică mai sus &icirc;n cazul lor.</p>
+<p>Primul argument pe care vreau să vi-l aduc &icirc;n discuţie este faptul că există anumite informaţii care ţin de dreptul demnitarului la viaţă privată care ar trebui să fie făcute publice pentru că sunt relevante [pentru public].  Relevanţa acestora rezidă din faptul că &icirc;n lipsa existenţei unor asemenea informaţii, publicul nu are posibilitatea de a controla &icirc;n mod direct competenţa pe care o are demnitarul &icirc;n exercitarea funcţiei; aici să mă refer &icirc;n primul r&acirc;nd la <strong>starea de sănătate pe care un demnitar o poate avea. </strong></p>
+<p><span lang="fr-FR">E</span><span lang="fr-FR">xistă foarte multe exemple de-a lungul istoriei &icirc;n care demnitari care aveau probleme de sănătate nu au mai putut să mai candideze sau au fost nevoiţi să renunţe la funcţia pe care o deţin. Spre exemplu, Robert Dole ar fi suferit hemoragii şi operaţii &icirc;n timpul mandatului său, dacă ar fi ajuns să ocupe funcţia pentru care candida. Se ştia despre faptul că Roosevelt &icirc;nainte de cel de-al treilea mandat era foarte bolnav şi exista posibilitatea să nu supravieţuiască. Ei bine, &icirc;n acest context considerăm că este relevant să facem public aceste informaţii, pentru că este dreptul publicului să cunoască exact toate elementele care ar putea să afecteze competenţa demnitarului respectiv &icirc;n exercitarea mandatului său.</span></p>
+<p><span lang="fr-FR">Al doilea argument pe care vreau s</span><span lang="fr-FR">ă vi-l aduc &icirc;n discuţie este faptul că anumite informaţii care ţin de dreptul demnitarului la viaţă privată ar trebui să fie făcute publice pentru faptul că trebuie să &icirc;ncurajăm o </span><span lang="fr-FR"><strong>exercitare &icirc;n cunoştinţă de cauză a dreptului la vot al cetăţeanului</strong></span><span lang="fr-FR">. Şi aici mă refer la anumite exemple care ţin de conturarea personalităţii demnitarului. Spre exemplu, felul &icirc;n care acesta relaţionează cu familia este foarte relevant: este acesta un bun soţ, este un bun tată, este un bun fiu?  De asemenea, preocupările din timpul liber al acestuia ar putea să fie foarte relevante: este un &icirc;mpătimit al jocurilor de noroc sau este consumator de droguri, sau este alcoolic şi asa mai departe. Practic, aceste informaţii, susţinem noi, sunt relevante pentru public &icirc;n vederea exercitării &icirc;n mod conştient a dreptului la vot. De ce? Pentru existenţa beneficiului public. </span></p>
+<p><span lang="fr-FR">Practic, eu ca cet</span><span lang="fr-FR">ăţean, &icirc;n momentul &icirc;n care votez, cred că este dreptul meu să ştiu pe cine votez, să ştiu exact dacă merită, dacă persoana pe care pun ştampila urmează să mă reprezinte &icirc;ntr-adevăr, dacă este reprezentativ pentru mine. Şi &icirc;n acest context cred că este dreptul nostru al tuturor să cunoaştem aceste informaţii pentru a şti dacă persoana respectivă, spre exemplu, &icirc;şi &icirc;nşeală nevasta, oare persoana respectivă urmează să-şi &icirc;nşele şi electoratul? Cred că este dreptul meu ca cetăţean să &icirc;mi răspund atunci c&acirc;nd votez. Acest lucru nu se poate fără a cunoaşte informaţia respectivă care da, ţine de dreptul demnitarului la viaţă privată. </span></p>
+<p><span lang="fr-FR">Al treilea argument pe care vreau să vi-l aduc &icirc;n discuţie ţine de faptul că </span><span lang="fr-FR"><strong>demnitarul consimte expres sau tacit la restricţionarea dreptului său la viaţă privată</strong></span><span lang="fr-FR">. Consimţăm&acirc;ntul expres este clar, avem foarte multe exemple &icirc;n campanii electorale &icirc;n care nu de multe ori, de fapt de fiecare dată, ne este prezentată familia demnitarului, ne sunt prezentate hobby-urile lui şi aşa mai departe. Ei bine &icirc;n acest context, demnitarul practic este de acord ca aceste informaţii care ţin de sfera sa privată să fie făcute publice. Şi &icirc;n al doilea r&acirc;nd, există un consimţăm&acirc;nt tacit, spunem noi, şi acest consimţăm&acirc;nt tacit rezultă din faptul că, pe de o parte, demnitarul acceptă cadrul legal care este instituit &icirc;n prezent &icirc;n ţara noastră spre exemplu, &icirc;n ceea ce priveste restricţionarea dreptului la viaţă privată, şi mă refer aici la două legi: pe de o parte legea 96 din 2006 privind statutul deputaţilor şi senatorilor şi de asemenea legea 115 din 1996 privind declaraţia şi controlul averii demnitarului. Practic, ceea ce susţinem noi este că legea instituie practic necesitatea respectării principiului transparenţei, obligativitatea depunerii declaraţiei de avere. Şi de asemenea un demnitar ar trebui să accepte faptul că statutul de persoană publică pe care il deţine presupune şi respectarea libertăţii de exprimare, mai ales a jurnaliştilor, care au posibilitatea de a se exprima &icirc;n mod liber. </span></p>
+<p lang="fr-FR">&nbsp;</p>
+<p><strong>Chestionare incrucisata 1:</strong></p>
+<p><strong>Liviu Antonesei</strong>: Mulţumesc echipei afirmatoare. Cred că s-a descurcat bine. <span lang="fr-FR">Dacă mai are de adăugat, mai e şedinţa a doua.</span></p>
+<p><span lang="fr-FR"><strong>Cristina</strong></span><span lang="fr-FR"><strong> Roşu</strong></span><span lang="fr-FR">: Colegul meu o să continue, oricum.</span></p>
+<p><span lang="fr-FR"><strong>Liviu Antonesei</strong></span><span lang="fr-FR">: E tot timpul. Acum aş vrea ca echipa care contestă, dacă are de adus obiecţii, de pus &icirc;ntrebări echipei care afirmă teza.</span></p>
+<p><span lang="fr-FR"><strong>Ilie </strong></span><span lang="fr-FR"><strong>F&acirc;rte</strong></span><span lang="fr-FR">: Comentarii şi &icirc;ntrebări. Atunci c&acirc;nd vorbim de dreptul publicului de a fi informat cu privire la anumite aspecte ale vieţii demnitarului, s-ar &icirc;nţelege că demnitarul are obligaţia de a dezvălui publicului aceste informaţii. Este aşa? Dreptul la informare a publicului se corelează cu o obligaţie a demnitarului de a pune la dispoziţie aceste informaţii?</span></p>
+<p><span lang="fr-FR"><strong>Cristina </strong></span><span lang="fr-FR"><strong>Roşu</strong></span><span lang="fr-FR">: Din punctul acesta de vedere, ţin să fac o delimitare. Pe de o parte, obligaţia instituită prin lege de care discutam adineauri, cum că ar trebui să-şi să fie publice anumite informaţii care ţin de averea demnitarului sau care ţin de statutul deputaţilor şi senatorilor. Şi &icirc;n al doilea r&acirc;nd, ţin să subliniez că &icirc;n societatea noastră ar trebui să fie respectată libertatea de exprimare şi un jurnalist are posibilitatea să discute practic despre orice doreste el &icirc;n momentul &icirc;n care scrie un articol, dar limita este legea şi &icirc;n contextul acesta nu există o obligaţie.</span></p>
+<p><span lang="fr-FR"><strong>Ilie </strong></span><span lang="fr-FR"><strong>F&acirc;rte</strong></span><span lang="fr-FR">: Răspundeţi prin da sau nu. Dreptul publicului de a fi informat implică obligaţia demnitarului de a dezvălui anumite aspecte ale vieţii sale private?  Obligaţii cu privire la informaţiile corespunzătoare. Deci, publicul are dreptul de a fi informat cu privire la avere.</span></p>
+<p><span lang="fr-FR"><strong>Cristina </strong></span><span lang="fr-FR"><strong>Roşu</strong></span><span lang="fr-FR">: Da.</span></p>
+<p><span lang="fr-FR"><strong>Ilie </strong></span><span lang="fr-FR"><strong>F&acirc;rte</strong></span><span lang="fr-FR">: Asta &icirc;nseamnă că demnitarul este obligat să dezvăluie date cu privire la avere. Publicul are dreptul de a fi informat cu privire la starea de sănătate a demnitarului. Implică obligaţia demnitarului de a-şi face public buletinul de sănătate?</span></p>
+<p><span lang="fr-FR"><strong>Daniel </strong></span><span lang="fr-FR"><strong>Şandru</strong></span><span lang="fr-FR">: Răspund eu. La prima &icirc;ntrebare, la prima parte a &icirc;ntrebării dumneavoastră, da. Demnitarul este obligat să anunţe publicul cu privire la averea pe care o are.</span></p>
+<p><span lang="fr-FR"><strong>Ilie </strong></span><span lang="fr-FR"><strong>F&acirc;rte</strong></span><span lang="fr-FR">: Dar &icirc;n principiu, e o problema de principiu. Drepturile unei părţi implică obligaţii corespunzătoare.</span></p>
+<p><span lang="fr-FR"><strong>Liviu </strong></span><span lang="fr-FR"><strong>Antonesei</strong></span><span lang="fr-FR">: Dar este o lege care obligă la asta.</span></p>
+<p><span lang="fr-FR"><strong>Daniel </strong></span><span lang="fr-FR"><strong>Şandru</strong></span><span lang="fr-FR">: Voi da răspuns şi la a doua componentă a &icirc;ntrebării, cu privire la starea de sănătate, dacă această stare de sănătate a demnitarului, să luăm cazul unui preşedinte de stat, poate afecta securitatea naţională, da, demnitarul este obligat să anunţe public acest fapt. </span></p>
+<p><span lang="fr-FR"><strong>Ilie </strong></span><span lang="fr-FR"><strong>F&acirc;rte</strong></span><span lang="fr-FR">: Deci am convenit că drepturile unei părţi implică obligaţiile celeilalte părţi. Şi acuma se pune &icirc;ntrebarea: cum stabilim linia de demarcaţie &icirc;ntre aspectele vieţii personale care sunt relevante pentru public şi care implică obligaţia demnitarului de a le dezvălui şi aspectele strict private pe care demnitarul poate să le dezvăluie, dar nu este obligat? &Icirc;nclin să cred că publicul are dreptul de a fi informat numai cu privire la aspectele personale care au legătură cu funcţia pe care o &icirc;ndeplineste şi nu. Dacă nu se poate stabili o relaţie de cauzalitate &icirc;ntre anumite aspecte ale vieţii personale şi exercitarea funcţiei publice, nu cred că publicul are dreptul de a fi informat iar demnitarul obligaţia.</span></p>
+<p><strong>Liviu Antonesei</strong>: Ok, am &icirc;nteles. La punctul acesta de vedere vei răspunde &icirc;n faza finală, cele trei<span style="color: #ff0000;"> </span>minute s-au cam dus şi trebuie să dăm cuv&acirc;ntul şi echipei care neagă teza.</p>
+<p>&nbsp;</p>
+<p><strong>Ioana Coman, Negator 1</strong></p>
+<p>Bună ziua, mă numesc Coman Ioana si astăzi voi susţine faptul că nu este timpul ca dreptul la informare al cetăţenilor să fie mai important dec&acirc;t dreptul demnitarului la viaţă privată.  <span lang="fr-FR">Echipa afirmatoare a venit cu un caz alcătuit din trei argumente şi definiţii, suntem de acord cu definiţiile date de echipa afirmatoare a demnitarilor, a dreptului la informaţie. </span></p>
+<p><span lang="fr-FR">Primul argument a fost faptul c</span><span lang="fr-FR">ă există anumite informaţii care ţin de viaţa privată şi care contează pentru public. Al doilea argument: faptul că anumite informaţii ar trebui să fie făcute publice pentru cetăţeni astfel &icirc;nc&acirc;t să influenţeze pentru vot. Dar c&acirc;t de relevante sunt aceste informaţii pentru vot şi cum putem stabili exact care aspecte ale vieţii private sunt relevante pentru public şi care sunt strict private? Şi c&acirc;t de mult influenţează unele aspecte ale vieţii private votul cetăţenilor, de exemplu, detalii despre familie, c&acirc;t de mult poate influenţa cetăţenii la vot c&acirc;teva detalii despre familia sa? </span></p>
+<p><span lang="fr-FR">Mai </span><span lang="fr-FR">&icirc;nt&acirc;i, v-aş ruga să vă g&acirc;ndiţi că sunteţi acum niste demnitari, aveţi viaţa voastră privată dar şi viaţa publică. &Icirc;n viaţa publică vă prezentaţi aşa cum vă prezentaţi şi &icirc;n viaţa privată sunteţi urmăriţi de jurnalişti şi să zicem că apar unele conflicte care se publică &icirc;n ziare şi dumneavoastră vă concentraţi mai mult pe acele conflicte pentru aplanarea lor şi neglijaţi funcţia din cauza acestor informaţii care sunt divulgate. </span><span lang="fr-FR"><strong>Ilie F&acirc;rte</strong></span><span lang="fr-FR">: Deci nu mai interesează ce face el ca primar, ci faptul că nu se spală pe dinţi dimineaţa şi-i miroase gura, ceva de genul ăsta, da?</span></p>
+<p><span lang="fr-FR"><strong>Ioana</strong></span><span lang="fr-FR"><strong>: </strong></span><span lang="fr-FR">Da. &Icirc;ncălcării dreptului la viaţă privată. </span><strong>Ilie F&acirc;rte</strong>: Şi ziariştii comentează uite ce halenă oribilă are primarul X, &icirc;n loc să vadă care sunt dispoziţiile pe care le-a adoptat şi ce efecte au asupra vieţii cetăţenilor. Trecem mai departe.</p>
+<p><strong>Ioana: </strong>Mulţumesc. Al treilea argument legat de demnitar, faptul că acesta &icirc;şi dă consimţăm&acirc;ntul şi &icirc;şi prezintă detalii ale vieţii private &icirc;n campanii electorale. Cu acest lucru suntem de acord pentru că &icirc;n campaniile electorale şi &icirc;n discursurile publice demnitarii aleg c&acirc;te informaţii din viaţa privată să fie publice şi aceasta nu este o &icirc;ncălcare la dreptul la viaţă privată a demnitarului. Cazul afirmator se bazează pe faptul că &icirc;ncălcarea dreptului la viaţă privată a demnitarului afectează şi familia acestuia. G&acirc;ndiţi-vă ce impact ar avea dezvăluirea unor informaţii despre acel demnitar &icirc;n public asupra membrilor familiei acestuia şi mai ales asupra copiilor. At&acirc;ta timp c&acirc;t un articol publicat are informaţii false sau adevărate, acesta influenţează foarte mult opinia publică, şi chiar dacă se face un proces şi demnitarul contestă această informaţie, reputaţia sa răm&acirc;ne pătată şi familia este şi ea afectată şi acestuia i s-a &icirc;ncălcat şi dreptul la viaţă privată.</p>
+<p>Alt argument al echipei negatoare este faptul că invadarea dreptului la viaţă privată poate produce conflicte, astfel demnitarul concentr&acirc;ndu-se pe acestea şi neglij&acirc;nd funcţia sa, asa cum am spus mai &icirc;nainte. Am şi c&acirc;teva exemple, de exemplu este cazul senatorului american Lindsey Graham, şantajat cu informarea presei asupra realei sale orientări sexuale. Acesta era homosexual şi nu a vrut ca publicul să afle despre aceasta, a vrut să fie discret. <strong>Ilie F&acirc;rte</strong>: Mai exact, a păstrat discreţie asupra acestui aspect al vieţii personale pe care l-a considerat irelevant.</p>
+<p><strong>Ioana: </strong>Asta deoarece opinia publică este foarte uşor influenţabilă. Alt exemplu este faptul că preşedintele american Obama a ales să păstreze discreţia şi să nu afirme că al doilea nume al său este Hussein &icirc;nainte de alegeri , ar fi fost şantajat de către ziarişti. De asemenea, pentru ca un demnitar să c&acirc;ştige &icirc;ncrederea unui grup mare de persoane, acesta nu trebuie să se deschidă &icirc;n sensul prezentării vieţii sale private relaţiile pe care le are, familia sa, dacă &icirc;i plac jocurile de noroc sau alte lucruri, ci prin ideile sale, prin modul &icirc;n care se prezintă, &icirc;n modul &icirc;n care &icirc;şi &icirc;ndeplineste sarcinile, prin profesionalismul prin care dă dovadă şi de asemenea, prin bunul mers al ţării. Un demnitar are un rol foarte mare &icirc;n conducerea ţării şi implicit &icirc;n bunul mers al societăţii, deci al populaţiei. Daca acesta nu-şi va mai putea &icirc;ndeplini funcţia &icirc;n sensul &icirc;n care acesta se concentrează &icirc;n alte părţi şi doreste să-şi apere dreptul la viaţă privată, astfel ne influenţează şi pe noi. <span lang="fr-FR">Deci considerăm că nu este timpul ca dreptul la informare al cetăţeanului să fie mai important decat dreptul demnitarului la viaţă privată. Mulţumesc.</span></p>
+<p lang="fr-FR">&nbsp;</p>
+<p lang="fr-FR"><strong>Chestionarea &icirc;ncrucişată 2</strong></p>
+<p><span lang="fr-FR"><strong>Liviu Antonesei</strong></span><span lang="fr-FR">: Mulţumesc foarte mult. Ce bine v-aţi &icirc;ncadrat &icirc;n timp. Şi mi-a plăcut şi cooperarea &icirc;ntre cei doi membri ai echipei. Deci &icirc;n momentul de faţă avem prima expunere a fiecăruia din punctele de vedere, echipa negatoare pun&acirc;nd deja şi &icirc;ntrebări pentru prima intervenţie echipei afirmatoare. Acuma o să rog echipa care a afirmat să facă acelaşi lucru cu echipa care a negat, inclusiv dacă doreşte să răspundă la &icirc;ntrebarea care a rămas fără răspuns la prima şedinţă de dezbatere. </span></p>
+<p><span lang="fr-FR"><strong>Cristina</strong></span><span lang="fr-FR"><strong> Roşu</strong></span><span lang="fr-FR">: Da, Ioana, &icirc;n primul r&acirc;nd aş vrea să discutăm despre libertatea de exprimare. Crezi că ar trebui să existe o anumită restricţionare vis-&agrave;-vis de exprimarea unui jurnalist &icirc;ntr-un articol pe bază de relevanţă a informaţiilor respective?</span></p>
+<p><span lang="fr-FR"><strong>Ioana</strong></span><span lang="fr-FR"><strong> Coman</strong></span><span lang="fr-FR">: Consider că &icirc;nainte de publicarea unui articol, informaţia trebuie să fie verificată din mai multe surse, trebuie să fie adevărată şi consider că anumite lucruri nu ar trebui publicate at&acirc;t timp c&acirc;t influenţează drept unei persoane la viaţă privată.</span></p>
+<p><span lang="fr-FR"><strong>Cristina</strong></span><span lang="fr-FR"><strong> Roşu</strong></span><span lang="fr-FR">: Cum adică &icirc;l influenţează?</span></p>
+<p><span lang="fr-FR"><strong>Ioana</strong></span><span lang="fr-FR"><strong> Coman</strong></span><span lang="fr-FR">: &Icirc;n sensul de &ldquo;&icirc;ncalcă&rdquo;.</span></p>
+<p><span lang="fr-FR"><strong>Cristina</strong></span><span lang="fr-FR"><strong> Roşu</strong></span><span lang="fr-FR">: Şi nu ar &icirc;nsemna asta o restricţionare a libertăţii de exprimare a jurnalistului respectiv?</span></p>
+<p><span lang="fr-FR"><strong>Ilie </strong></span><span lang="fr-FR"><strong>F&acirc;rte</strong></span><span lang="fr-FR">: Răspund eu. Este &icirc;ntr-adevăr problematic să credem că putem cu mijloace legale să restricţionăm dreptul ziariştilor de a informa publicul cu privire la viaţa unui demnitar. Spre exemplu, dumneavoastră &icirc;mi puteţi face fotografii &icirc;n timp ce vorbesc. </span>Sunt o persoană publică &icirc;ntr-un spaţiu public, am o performanţă publică. Tot ceea ce se &icirc;nt&acirc;mplă aici priveşte dreptul publicului de a fi informat, &icirc;nsă dacă dumneavoastră selectaţi un cadru &icirc;n care eu apar cu ochii &icirc;nchişi pentru că, nu-i aşa, clipesc, şi cu gura deschisă pentru că, nu-i aşa, nu pot vorbi cu gura inchisa şi publicaţi &icirc;n presa a doua zi fotografia lui Ilie F&acirc;rte, o fotografie horror, asa cum se practică, pot eu să dau &icirc;n judecată jurnalistul că a selectat un cadru irelevant din performanta publică a lui Ilie F&acirc;rte? <span lang="fr-FR">Nu. </span></p>
+<p><span lang="fr-FR"><strong>Daniel Şandru</strong></span><span lang="fr-FR">: Ba de ce nu? </span></p>
+<p><span lang="fr-FR"><strong>Liviu Antonesei</strong></span><span lang="fr-FR">: Chiar se poate.</span></p>
+<p><span lang="fr-FR"><strong>Ilie </strong></span><span lang="fr-FR"><strong>F&acirc;rte</strong></span><span lang="fr-FR">: Este, da, dar este ineficace &icirc;ntruc&acirc;t prejudiciul este deja creat. Cu alte cuvinte, chiar dacă obţin &icirc;n instanţă o hotăr&acirc;re &icirc;mpotriva jurnalistului, imaginea horror a lui Ilie F&acirc;rte circulă şi p&acirc;nă la urmă se stochează.</span></p>
+<p><span lang="fr-FR"><strong>Daniel </strong></span><span lang="fr-FR"><strong>Şandru</strong></span><span lang="fr-FR">: Acuma presupun&acirc;nd că aţi avea o demnitate publică. Deci trebuie să contextualizăm această chestie. Aţi spus persoană publică &icirc;n general. </span></p>
+<p><span lang="fr-FR"><strong>Ilie </strong></span><span lang="fr-FR"><strong>F&acirc;rte</strong></span><span lang="fr-FR">: Bun. Am văzut &icirc;n decembrie 2004 o fotografie horror a lui Ioan Solcanu &icirc;n &ldquo;Lumea Ieşeanului&rdquo; care - ziariştii de la &ldquo;Lumea Ieşeanului&rdquo; n-au probat mult profesionalism atunci - pe prima pagină Ioan Solcanu la o pomană a m&acirc;ncat dintr-o tăviţă de plastic colivă, ei şi i-a căzut o bucată de colivă din gură. Stop cadrul, cu ochii &icirc;nchişi, cu coliva curg&acirc;ndu-i din gură. &Icirc;n fiecare număr, pe prima pagină fotografia lui Ioan Solcanu &icirc;n această postură. Nu mi s-a părut &icirc;n regulă. Nu răspundea dreptului publicului de a fi informat.</span></p>
+<p><span lang="fr-FR"><strong>Liviu Antonesei</strong></span><span lang="fr-FR">: Am epuizat şi cele trei minute ale echipei afirmatoare. Acum fiecare şi-a auzit c&acirc;te un discurs &icirc;ntreg, au avut loc şi schimburi de replici &icirc;n cele două mici şedinţe de &icirc;ntrebări-răspunsuri. Acum are dreptul echipa afirmatoare la ultimul cuv&acirc;nt, ca să spun aşa. Sau na, la ultimul cuv&acirc;nt de aicea, poate vom mai avea cuvinte de-acum &icirc;ncolo. Deci, ultimul cuv&acirc;nt, domnule Şandru.</span></p>
+<p lang="fr-FR">&nbsp;</p>
+<p lang="fr-FR">&nbsp;</p>
+<p><span lang="fr-FR"><strong>Daniel </strong></span><span lang="fr-FR"><strong>Şandru, Afirmator 2:</strong></span></p>
+<p><span lang="fr-FR">Vreau s</span><span lang="fr-FR">ă vă aduc &icirc;n atenţie trei paliere ale discuţiei. &Icirc;n primul r&acirc;nd, ceea ce numesc </span><span lang="fr-FR"><strong>argumentul libertăţii rezonabile.</strong></span><span lang="fr-FR"> Libertatea rezonabilă, care include libertatea de exprimare, dar presupune şi respectarea dreptului la viaţă privată, chiar a demnitarilor, implică totuşi că &icirc;n orice societate democratică trebuie să existe un mecanism care se numeste &ldquo;checks and balances&rdquo;, controale şi contraponderi. Noi nu putem controla &icirc;n mod exclusiv demnitarii care candidează pentru funcţii publice doar atunci cand se &icirc;nt&acirc;mplă ciclul electoral. Ei trebuie controlaţi pe tot parcursul ulterior c&acirc;ştigării mandatului şi singura posibilitate de control, de a asigura acest echilibru, aceste controale şi contraponderi, este inclusiv prin posibilitatea noastră ca public de a fi informaţi de către mijloacele media. De ce se &icirc;nt&acirc;mplă acest lucru? Pentru că &icirc;ntr-o societate democratică, politicienii trebuie să &icirc;ndeplinească un criteriu fundamental: ceea ce britanicii numesc </span><span lang="fr-FR"><em>accountability</em></span><span lang="fr-FR">. Responsabilitate &icirc;n faţa cetăţenilor. </span></p>
+<p><span lang="fr-FR">Şi</span><span lang="fr-FR"> atunci revin la o &icirc;ntrebare pusă aici de echipa afirmatoare: &icirc;n ce măsură este relevant pentru procesul electoral spre exemplu că senatorul american X este homosexual? Eu cred că trebuie să contextualizăm. Poate nu este relevant &icirc;n spaţiul olandez, poate este şi cred că este relevant &icirc;n spaţiul rom&acirc;nesc. Sunt culturi politice diferite, sunt poziţionări ideologice diferite, sunt valori religioase diferite.</span></p>
+<p><span lang="fr-FR">Acum, trec la al doilea argument. </span><span lang="fr-FR"><strong>Argumentul exagerării</strong></span><span lang="fr-FR">, care are un fundament juridic şi care pleacă de la o sinteză dintre articolul 8 din Convenţia Europeană a Drepturilor Omului care prevede dreptul la respectarea vieţii private şi de familie, inclusiv a demnitarului aşadar, şi articolul 10 care se referă la libertatea de exprimare. Sinteza este dată de Curtea Europeană a Drepturilor Omului &icirc;n nenumărate cazuri &icirc;n care jurnaliştii au fost acuzaţi şi au fost condamnaţi, inclusiv &icirc;n ţările membre ale Uniunii Europene pentru intromisiune &icirc;n spaţiul privat al demnitarului. Ca urmare a analizei unor astfel de cazuri, Curtea Europeană a Drepturilor Omului a arătat că: &ldquo;&icirc;n condiţiile &icirc;n care este important dreptul cetăţenilor de a fi informaţi, &icirc;ntr-o societate democratică jurnaliştii au dreptul să exagereze&rdquo;. Echipa afirmatoare a adus aici &icirc;n discuţie contextul &icirc;n care un articol fals ar putea provoca daune morale, de imagine şi aşa mai departe unui demnitar. Trebuie să vă spun &icirc;nsă că jurnaliştii fac, &icirc;n societăţile civilizate, evident, distincţia &icirc;ntre articole de informare, care trebuie probate cu documente, şi articole de opinie, care nu pot fi niciodată probate pentru că opinia, aşa cum ştim din logică, nu se supune valorilor etice</span><span style="color: #ff0000;"><span lang="fr-FR"> </span></span><span lang="fr-FR">, nu poate fi adevărată sau falsă, este pur şi simplu o opinie.</span></p>
+<p><span lang="fr-FR">Şi</span><span lang="fr-FR"> acuma merg mai departe la un exemplu, la un exemplu concret petrecut &icirc;n societatea rom&acirc;nească, un demnitar public care deţine o poziţie de conducere, vă spun şi unde, la Oficiul pentru Protecţia Consumatorului, dar care &icirc;n familie are o firmă de produs p&acirc;ine. Toate controalele &icirc;ndreptate de el ca demnitar &icirc;n funcţie sunt &icirc;ndreptate &icirc;mpotriva firmelor concurente de pe piaţă. Este dreptul publicului să fie informat cu privire la ceea ce face el &icirc;n familie, cu privire la faptul că el produce colaci  &icirc;n familie, şi pe de altă parte din postura de demnitar public atacă firmele concurente? </span>Asta este argumentul final pe care &icirc;l aduc &icirc;n discuţie &icirc;n această seară. Vă mulţumesc.</p>
+<p><strong>Liviu Antonesei</strong>: Mulţumesc şi eu foarte mult, cred că n-ai epuizat şapte minute alocate. Acuma dau cuv&acirc;ntul echipei care neagă teza pentru a-şi susţine ultimul cuv&acirc;nt.</p>
+<p>&nbsp;</p>
+<p><strong>Ilie F&acirc;rte, Negator 2</strong></p>
+<p>Probabil o sa ne dublăm, o să vin eu cu c&acirc;teva idei şi o s-o las şi pe colegă să adauge c&acirc;te ceva. <span lang="fr-FR">Eu &icirc;ntotdeauna corelez drepturile cu obligaţiile. Dar, revin la ideea fundamentală: dacă publicul consideră că are dreptul legitim de a fi informat cu privire la anumite aspecte ale vieţii demnitarului, automat demnitarul este obligat să dezvăluie aceste aspecte personale. Demnitarul are dreptul de a fi discret cu privire la anumite aspecte ale vieţii personale. Asta nu &icirc;nseamnă că el vrea să ascundă, ci doar că este discret cu privire la aceste aspecte personale, mai ales dacă ele nu sunt corelate direct cu exercitarea funcţiei publice. </span></p>
+<p>S-a vorbit despre starea de sănătate a unor demnitari. S-a vorbit despre viaţa de moralitate a vieţii private a unor demnitari. Ce pot să constat, citind istorie. Că foarte mulţi, că foarte multe personalităţi cu rol benefic &icirc;n istorie au avut scăderi &icirc;n viaţa particulară. Alecu Constantinescu zis Porcul, un mare demnitar liberal din perioada interbelică - bănuiţi de ce i se spunea Porcul - a avut un rol decisiv &icirc;n evacuarea Moldovei de către trupele ruseşti bolşevizate. <span lang="fr-FR">Incoruptibilul Robespierre a făcut mai mult rău Franţei decat putredul director Barras. Charles Fox, din păcate premier pentru scurt timp al Angliei după războaiele napoleoniene, a fost excepţional ca demnitar.  Cu alte cuvinte, este foarte greu să stabilim o relaţie de cauzalitate &icirc;ntre anumite aspecte ale vieţii personale a demnitarului şi exercitarea unei funcţii publice. Foarte probabil, dacă Winston Churchill n-ar fi băut at&acirc;t de mult şi n-ar fi avut acele probleme ciclotimice, poate Anglia ar fi cedat şi ar fi &icirc;ncheiat pacea. Poate tocmai aceste scăderi &icirc;n viaţa privată au contribuit la &icirc;nvingerea Germaniei hitleriste. Deci ideea fundamentală este că trebuie păstrată discreţia cu privire la anumite aspecte irelevante pentru exercitarea funcţiei publice. </span></p>
+<p>&Icirc;ntrebarea este dacă am dreptul să impun prin lege ziariştilor anumite graniţe.  Sunt, cred eu, inoperabile, de aceea nu cred că prin instrumente legale pot fi impiedicaţi ziariştii să culeagă informaţii private irelevante, cum ar fi de exemplu o eczemă pe care un demnitar o are pe coapsă. Ok, ştiu şi eu, vrei să fii discret cu privire la acest aspect, &icirc;nsă din nu ştiu ce motive ziaristul află despre această informaţie şi o publică. <span lang="fr-FR">Şi acum eu ce să fac? Să dau &icirc;n judecată ziarul? Nu se poate face asta. Deci nu prin mijloace legale putem asigura acest drept. &Icirc;nsă demnitarul are, trebuie să aibă posibilitatea să se protejeze. Deci, dreptul la discreţie şi dreptul la protecţie. Depinde de demnitar, nu? C&acirc;t de ingenios este &icirc;n a păstra discreţie cu privire la anumite aspecte personale, contestabile poate, discutabile poate, dar fără relevanţă &icirc;n exercitarea funcţiei publice.</span></p>
+<p lang="fr-FR">&nbsp;</p>
+<p><span lang="fr-FR"><em><strong>Liviu Antonesei</strong></em></span><span lang="fr-FR"><em>: Multumesc foarte mult şi echipei negatoare. Am avut parte de o dezbatere chiar foarte interesantă. Ei, sunt un pic &icirc;nfierb&acirc;ntat de partenerii de discuţie de aici,  &icirc;nc&acirc;t am eu c&acirc;teva probleme. Deci, &icirc;n cazul unui demnitar, pe mine mă interesează &icirc;n primul r&acirc;nd eficienţa. Şi din punctul ăsta de vedere, singurele elemente de viaţă privată care au importanţa pentru mine sunt cele care &icirc;i pot impiedica eficienţa sau care &icirc;ncalcă vizibil legea. Depinde, c&acirc;nd un presedinte se duce la băut după care urcă la volan, acolo e &icirc;ncălcarea legii. &Icirc;n alte ţări nu s-ar mai discuta, i s-ar lua carnetul. Poate şi carnetul de conducere &icirc;n sens mai mare, dec&acirc;t &icirc;n sens mai mic. </em></span><em>Churchill sub alcool n-a luat decizii proaste. Alţii iau decizii proaste, nu avem ce face, asta e situaţia, deci nu e o regulă. </em></p>
+<p><span lang="fr-FR"><em>Apoi, </em></span><span lang="fr-FR"><em>&icirc;n ceea ce priveste moralitatea legată de viaţa intimă. Domnule, c&acirc;nd a fost scandalul Clinton, s-a făcut o listă. Toţi presedinţii Americii au avut o problemă cu sexul. Că erau afemeiaţi, că erau homosexuali, toţi au avut o problemă.  Nu este unul, p&acirc;nă la Clinton, care nu a avut o problemă cu sexul. Se pare că Bush junior nu a avut o problemă cu sexul, dar Clinton a lăsat o Americă &icirc;ntr-o formă economică cum nu mai fusese de mult, Bush care e un puritan sudic adevărat republican a lăsat o Americă &icirc;ntr-o criză poate mai mare dec&acirc;t cea din &rsquo;29-&rsquo;33 c&acirc;nd era c&acirc;t pe ce să fie blocat bugetul Americii. </em></span></p>
+<p><span lang="fr-FR"><em><strong>Ilie </strong></em></span><span lang="fr-FR"><em><strong>F&acirc;rte</strong></em></span><span lang="fr-FR"><em>: Domnule profesor, vă rog, nu insinuaţi o falsă relaţie de cauzalitate. Adică să-i internăm acuma pe demnitarii nostri &icirc;n adulter ca sa...</em></span></p>
+<p><span lang="fr-FR"><em><strong>Liviu Antonesei</strong></em></span><span lang="fr-FR"><em>: Nu, nu, dau exemple, că nu e o regulă.</em></span></p>
+<p><span lang="fr-FR"><em><strong>Ilie </strong></em></span><span lang="fr-FR"><em><strong>F&acirc;rte</strong></em></span><span lang="fr-FR"><em>: Dar nici o regulă pe dos.</em></span></p>
+<p><span lang="fr-FR"><em><strong>Liviu Antonesei</strong></em></span><span lang="fr-FR"><em>: Deci problema care se pune &icirc;n ceea ce priveste, cum să zic eu, moralitatea personală şi nu ştiu ce, dacă nu afectează funcţionarea instituţiei, nu mă interesează. Dar trebuie să fii jurnalist inteligent ca să &icirc;nţelegi asta. Că nu tot ceea ce afli este interesant. Trebuie să fii extrem de inteligent, dar la noi nu sunt. Drept dovadă, &icirc;n Franta s-a ştiut tot timpul că Mitterand avea un copil din flori, dar nu s-a făcut caz de asta. Deşi ştia toată presa, a scris cineva despre asta c&acirc;t Mitterand a fost preşedinte? Nu. Păi ei sunt t&acirc;mpiţi să-şi facă preşedintele, să-i strice imaginea preşedintelui lor si al Franţei? Nu. Păi ia să aflăm noi că nu ştiu c&acirc;ţi copii din flori are cineva,  păi ar fi o competiţie &icirc;ntre tabloide, &icirc;ntre tabloide şi ziare serioase, &icirc;ntre televiziunile unor moguli, televiziunile celorlalţi moguli. Unii ar demonstra că are cinci, alţii ar demonstra că nu e-n stare, că nici ai lui nu sunt făcuţi, ce Dumnezeu? Deci mai e şi o chestie de profesionalism. Deci ceea ce ţine de raportul dintre dreptul la informare al cetăţeanului şi dreptul demnitarului la viaţă privată, nu e o chestiune numai a demnitarului şi nu-i o chestiune numai a publicului, e o chestiune şi a agentului de informare. Daca ăla e tăl&acirc;mb, afli o mulţime de lucruri care nu te interesează. De pildă, că unde se duce Irina, că se duce la Iri, că-i la Moni, ce importantă are asta pentru o societate traumatizată de criză cu oameni care mor &icirc;n faţa spitalelor, eu nu ştiu. </em></span></p>
+<p><span lang="fr-FR"><em>Doar asta vedem la tel</em></span><span lang="fr-FR"><em>evizor, nu, şi mai e celebru celălalt divorţ, unde &icirc;nt&acirc;i s-a &icirc;mpăcat Pepe cu soacra, dupa aia &icirc;nsăşi fiica cu mama ei. Domnule, dar e incredibil. Astea-s lucruri care le vedem &icirc;n fiecare zi, păi ce, unde e profesionalismul? Nu are nici o treabă, asa că poţi să le dai la băieţii ăştia toate informaţiile secrete din lume, tot nu o să scoată nimic.  Tot o să reuşească s-o bulibăşească de să nu mai iasă nimic.  Şi eu cu asta m-am oprit, că nu vreau să monopolizez, dar m-au incitat partenerii aici, din st&acirc;nga şi din dreapta. Acuma puncte de vedere, &icirc;ntrebări celor două echipaje. Poftiţi.</em></span></p>
+<p lang="fr-FR">&nbsp;</p>
+<p><span lang="fr-FR"><em><strong>Intervenţie</strong></em></span><span lang="fr-FR"><em><strong> 1</strong></em></span><span lang="fr-FR"><em>: Vă spun bună seara, mă numesc Vlad Ghica. &Icirc;nainte de a adresa &icirc;ntrebările, deci, sunt pentru partea negatoare, adresez pentru partea afirmatoare. Aş vrea mai &icirc;nt&acirc;i să...</em></span></p>
+<p><span lang="fr-FR"><em><strong>Ilie </strong></em></span><span lang="fr-FR"><em><strong>F&acirc;rte</strong></em></span><span lang="fr-FR"><em>: Sunt pentru noi şi le adresaţi lor?</em></span></p>
+<p><em><strong>Vlad Ghica</strong></em><em>: Da, da, da. [r&acirc;sete] </em></p>
+<p><em><strong>Liviu Antonesei</strong></em><em>: Aşa.</em></p>
+<p><em><strong>Vlad Ghica</strong></em><em>: Aş vrea mai &icirc;nt&acirc;i să &icirc;ncadrez un pic &icirc;ntrebările. Este &icirc;n interesul nostru al tuturor, că afirmăm sau negăm, să activăm şi să ne dorim binele tuturor, al cetăţenilor, corect? </em><span lang="fr-FR"><em>Al doilea este că orice demnitar, &icirc;n principiu, ar trebui să arate mai &icirc;nt&acirc;i o performanţă &icirc;n cariera sa profesională pentru a putea perfoma &icirc;n demnitatea publică. </em></span><em>Şi-atunci, nu consideraţi că o expunere excesivă a vieţii private a demnitarilor poate să alunge bunii profesionişti in a-şi alege o astfel de demnitate? Nu consideraţi că nivelul profesional al demnitarilor a scăzut o dată cu &ldquo;Moni şi Iri&rdquo;?</em></p>
+<p><em>A doua temă pe care aş vrea s-o expun ar fi legată de, ştiu eu, anumite considerente psihologice. Toţi psihologii recomandă o căldură a căminului pentru, ştiu eu, pentru liniştirea, pentru relaxarea reacţiilor demnitarilor mai ales. Nu consideraţi că atac&acirc;nd căminul prin atacarea vieţii private, ştiu eu, &icirc;l tensionăm şi aducem atingere capacităţii de a performa &icirc;n demnitate? </em></p>
+<p><em><strong>Daniel Şandru</strong></em><em>: Ok. Răspund acum? </em></p>
+<p><span lang="fr-FR"><em><strong>Liviu Antonesei</strong></em></span><span lang="fr-FR"><em>: La ambele &icirc;ntrebări, da?</em></span></p>
+<p><span lang="fr-FR"><em><strong>Daniel </strong></em></span><span lang="fr-FR"><em><strong>Şandru</strong></em></span><span lang="fr-FR"><em>: Prima &icirc;ntrebare. Vorbim aici de demnitari aflaţi deja &icirc;n funcţie. Asta e primul aspect. Al doilea aspect, accept&acirc;nd &icirc;ntrebarea dumneavoastră. Mecanismele de selecţie se află la nivelul organizaţiilor politice care selectează aceşti demnitari, şi abia ulterior la nivelul cetăţenilor.</em></span></p>
+<p><span lang="fr-FR"><em>A treia chestiune. Atunci c&acirc;</em></span><span lang="fr-FR"><em>nd fac pasul spre o carieră publică, demnitarii &icirc;şi asumă inclusiv faptul că se află &icirc;n vitrină. Dincolo de performanţa lor profesională, ei trebuie să accepte că la un moment dat, dacă nu vor fi discreţi, şi imediat revin aici, ajung la a doua &icirc;ntrebare a dumneavoastră, dacă nu vor fi discreţi cu privire la anumite aspecte din viaţa lor privată care ar putea aduce prejudicii lor sau celor care ar dori sau chiar i-au votat, atunci e mai bine să nu facă acest pas. Şi-acum ajung la a doua &icirc;ntrebare. Şi-o leg de ce spunea aici domnul profesor F&acirc;rte. Că demnitarul are dreptul de a fi discret. Nu. Demnitarul are obligaţia de a fi discret. Curtea Europeană a Drepturilor Omului, plec&acirc;nd de la principiul 13 de la Johannesburg, pe care vi-l citesc: &ldquo;&icirc;n toate legile şi deciziile privitoare la dreptul de a obţine informaţii, interesul public privitor la cunoaşterea informaţiei va fi luat &icirc;n considerare &icirc;n primul r&acirc;nd&rdquo;. Deci nu viaţa privată. Ci interesul public. Dacă ceea ce face demnitarul sigur se leagă de acest interes public. Am convenit deja de la &icirc;nceputul discuţiei această chestiune. Şi acum vă spun ce spune Curtea Europeană a Drepturilor Omului: &ldquo;atunci c&acirc;nd personalităţile politice şi funcţionarii atrag ei &icirc;nşişi atenţia asupra elementelor din viaţa lor privată, media sunt abilitate să-şi exercite dreptul de a cerceta aceste elemente&rdquo;. Cu alte cuvinte, atunci c&acirc;nd un preşedinte de ţară vine &icirc;n faţa camerelor şi ne &icirc;nvaţă că Jack Daniels se bea cu patru cuburi de gheaţă, eu ca jurnalist devin interesat de această problemă. </em></span></p>
+<p><em><strong>Liviu Antonesei</strong></em><em>: Şi număr cuburile.</em></p>
+<p><span lang="fr-FR"><em><strong>Daniel </strong></em></span><span lang="fr-FR"><em><strong>Şandru</strong></em></span><span lang="fr-FR"><em>: Şi de aia spun, revin, că demnitarul n-are dreptul de a fi discret, &icirc;l poate avea acasă, &icirc;n spaţiul public are obligaţia de a fi discret cu privire la viaţa lui privată. </em></span></p>
+<p><span lang="fr-FR"><em><strong>Liviu Antonesei</strong></em></span><span lang="fr-FR"><em>: &Icirc;mi permit să intervin. De fapt, sfatul este prost. &Icirc;n general cine-i băutor de scotch sau de whisky ştie că nu se pune gheaţă. &Atilde;sta e un obicei prost care e practicat de americanii medii care uneori pun mai multă gheaţă decat scotch sau whisky. Recunosc, fac şi eu greşeala asta c&acirc;teodată vara seara. Pun niste gheaţă şi numai o stropesc cu scotch că-i căldură mare.  Dar, să revin acuma la oile noastre.  Vreau să spun un lucru, &icirc;n legătură cu ce spuneau colegele aicea, că familia, vreau să spun că nu jurnalistul trebuie &icirc;n primul r&acirc;nd să se g&acirc;ndească la familia demnitarului, ci demnitarul &icirc;nsuşi, atunci c&acirc;nd făptuieşte. C&acirc;nd a făptuit el trebuie să ştie că nu se pune &icirc;ntr-o imagine proastă numai pe el, ci şi restul familiei. &Icirc;n rest eu sunt de acord cu reglementările, şi europene şi mondiale, care de fapt merg pe primatul dreptului la informaţie. Sigur, asta ţine de profesionalismul presei, ca informaţia să fie reală, informaţia să fie relevantă pentru postura respectivă. Şi vreau să mai spun un lucru. </em></span></p>
+<p><span lang="fr-FR"><em>Uitasem s</em></span><span lang="fr-FR"><em>ă precizez acum şi poate unii nu ştiu cazul că-s foarte tineri şi răman cu o impresie greşită. Cand a &icirc;nceput procedura de suspendare &icirc;mpotriva preşedintelui Clinton, n-a &icirc;nceput pentru faptul că a avut el nu ştiu ce relaţii cu Monica Lewinski.  Asta nu e un lucru care să-l condamne Constituţia Americană. Procesul a &icirc;nceput pentru sperjur. Pentru că &icirc;n momentul &icirc;n care au apărut informaţiile, el a minţit, a spus că nu e adevărat. Bun, dar ajung&acirc;nd la nişte rafinamente avocăteşti de-nnebuneşti. Că el a răspuns aşa, că nu a asociat sexul oral cu sexualitatea. Adică absolut demenţial, nu ştiu cum să spun. De nivelul dicţionarului Oxford de limba engleză de-acuma ajunseseră băieţii. Dar cert este că procedurile au &icirc;nceput şi le-au oprit, că nici americanilor nu le convenea să aibă un presedinte suspendat,</em></span><span style="color: #ff0000;"><span lang="fr-FR"><em> </em></span></span><span lang="fr-FR"><em>mai ales cu popularitatea lui.</em></span></p>
+<p><span lang="fr-FR"><em>Pentru c</em></span><span lang="fr-FR"><em>ă culmea e, scandalul sexual i-a relansat popularitatea. De unde se vede că probabil poporul american preferă un preşedinte care poate unuia care nu poate, dumnezeu ştie, pentru că am văzut o anchetă c&acirc;nd a izbucnit scandalul in New York Times Europe. Erau anchetări cu benzinari, fermieri, din ăştia americani obisnuiţi care nici unul nu avea ceva, &ldquo;pe mine mă interesează că economia e &icirc;n formă&rdquo;, că duduie. Duduia la ei atuncea. Deci asta voiam să spun, deci nu, nu i s-a reproşat relaţia nepotrivită cum a fost denumită la un moment dat. Aşa, ce frumos apar formule de ăstea extraordinare din limbajul politico-diplomatic. Nu, c&acirc;nd a fost război &icirc;n Iugoslavia ţineţi minte, &ldquo;victime colaterale&rdquo;. Deci ăia săracii mureau acolo sub bombe&hellip; bun, eu nu spun că nu era justificată intervenţia, dar totuşi mor niste oameni, si sunt numiti victime colaterale, nu-s &ldquo;oameni morţi&rdquo;. Oameni morţi suna&hellip;rău. </em></span></p>
+<p><span lang="fr-FR"><em><strong>Daniel </strong></em></span><span lang="fr-FR"><em><strong>Şandru</strong></em></span><span lang="fr-FR"><em>: Ştiţi cine fac asta, aşa numiţii &ldquo;spindoctors&rdquo;.</em></span></p>
+<p><span lang="fr-FR"><em><strong>Liviu Antonesei</strong></em></span><span lang="fr-FR"><em>: Da, da, da. Şi care şi construiesc formule, adică sunt nişte băieţi care c&acirc;ştigă un ban bun pe creativitate. De obicei lucrează &icirc;n brainstorming. Că astea ies ca la Caţavencu, c&acirc;nd fac bulele</em></span><span style="color: #ff0000;"><span lang="fr-FR"><em>, </em></span></span><span lang="fr-FR"><em>că doar alea le fac &icirc;mpreună la ora 12 lunea. </em></span></p>
+<p><span lang="fr-FR"><em><strong>Daniel </strong></em></span><span lang="fr-FR"><em><strong>Şandru</strong></em></span><span lang="fr-FR"><em>: La un whisky fără gheaţă.</em></span></p>
+<p><span lang="fr-FR"><em><strong>Persoana</strong></em></span><span lang="fr-FR"><em><strong> 2</strong></em></span><span lang="fr-FR"><em>: Am o &icirc;ntrebare &icirc;n legătură cu ceea ce spuneaţi dumneavoastră. Să spunem că s-a &icirc;ngrădit acest drept, s-a invadat spaţiul privat şi nevoia de informare a publicului a fost satisfăcută. Dumneavoastră personal aţi avea reţineri &icirc;n a vota un candidat foarte competent doar pe baza unei informaţii despre aceste relaţii familiale precare sau probleme cu jocurile de noroc? Deci ipoteza restr&acirc;ngerii celui de-al doilea drept&hellip;</em></span></p>
+<p><span lang="fr-FR"><em><strong>Daniel </strong></em></span><span lang="fr-FR"><em><strong>Şandru</strong></em></span><span lang="fr-FR"><em>: Care ipoteză, puteţi să repetaţi.</em></span></p>
+<p><span lang="fr-FR"><em><strong>Persoana</strong></em></span><span lang="fr-FR"><em><strong> 2</strong></em></span><span lang="fr-FR"><em>: Dreptul la viaţă privată a fost &icirc;ngrădit. Au ieşit din presă diverse informaţii care atestă faptul că are probleme familiale sau probleme cu jocurile de noroc. Dumneavoastră personal aţi avea reţineri la a vota un candidat foarte competent doar pe baza acestei informaţii?</em></span></p>
+<p><span lang="fr-FR"><em><strong>Daniel </strong></em></span><span lang="fr-FR"><em><strong>Şandru</strong></em></span><span lang="fr-FR"><em>: Dacă mă &icirc;ntrebaţi personal, nu &icirc;n postura pe care o am &icirc;n aceasta seară, da. Aş avea mari reţineri pentru că ce &icirc;nseamnă relaţii de familie problematice. </em></span><em>Dacă &icirc;şi bate copilul, da, am o problemă. Dacă &icirc;şi pocneşte soţia, da, am o problemă. </em></p>
+<p><span lang="fr-FR"><em><strong>Persoana 2</strong></em></span><span lang="fr-FR"><em>: Deci facem abstracţie de competenţele lui şi mergem pe..</em></span></p>
+<p><span lang="fr-FR"><em><strong>Daniel </strong></em></span><span lang="fr-FR"><em><strong>Şandru</strong></em></span><span lang="fr-FR"><em>: Comportamentul familial spune ceva despre caracterul său. Are nişte probleme, nişte probleme pe care le putem analiza fie aplic&acirc;nd paradigma psihanalizei, fie &icirc;l putem trimite să se trateze.</em></span></p>
+<p><span lang="fr-FR"><em><strong>Perso</strong></em></span><span lang="fr-FR"><em><strong>ana 2</strong></em></span><span lang="fr-FR"><em>: &hellip; cand nu sunt informaţii aşa de relevante, cum a dat exemplu domnul profesor cu şeful de ţară care are o eczemă sau &hellip;</em></span></p>
+<p><span lang="fr-FR"><em><strong>Liviu Antonesei</strong></em></span><span lang="fr-FR"><em>: Evident, ceea ce aţi spus dumneavoastră a fost aspecte problematice &icirc;n familie. Deci, aspecte problematice &icirc;n familie, să zicem violenţă &icirc;n familie. Nu vă supăraţi, violenţa &icirc;n familie e delict. Deja e delict. </em></span><em>Deci un demnitar care &icirc;ncalcă legea oricum n-am treabă cu el. </em></p>
+<p><em><strong>Daniel Şandru</strong></em><em>: Haideţi să vă spun altceva. Dacă &icirc;n Romania patriarhală, un demnitar este profesional impecabil şi are o orientare sexuală alta dec&acirc;t cea a majorităţii, n-am nici o problemă.</em></p>
+<p><em><strong>Liviu Antonesei</strong></em><em>: N-are nici o sansă. Poate fi numit &icirc;ntr-o funcţie eventual, dar nu are nici o şansă pe continent. </em><span lang="fr-FR"><em>Cum femeile au şanse destul de mici pe continent, din păcate.</em></span></p>
+<p><span lang="fr-FR"><em>&Icirc;n</em></span><span lang="fr-FR"><em>să dincolo de faptul că avem lege care pedepseste violenţa &icirc;n familie, mai e ceva. Eu de unde ştiu dacă &icirc;şi pocneşte soţia pe care o iubeşte, copiii pe care &icirc;i iubeşte, ce face cu bieţii alegători sau cu subordonaţii. &Icirc;i vezi numai &icirc;n palme, săracii. </em></span></p>
+<p>&hellip; <span lang="fr-FR"><em>Mai avem? Pă</em></span><span lang="fr-FR"><em>i dacă nu mai avem, trecem la vot, să ştiţi. </em></span></p>
+<p><span lang="fr-FR"><em><strong>Daniel </strong></em></span><span lang="fr-FR"><em><strong>Şandru</strong></em></span><span lang="fr-FR"><em>: Nu, foarte pe scurt o chestiune, promit, numai zece secunde. S-a dat aici exemplul Churchill pe care aţi avut ocazia să-l vedeţi &icirc;n documentare că bea foarte mult whisky şi fuma vreo patru trabucuri pe zi. Vreau să vă spun că a fost la un moment dat o relaţie de simbioză &icirc;ntre prim-ministeriatul lui Churchill &icirc;n perioada războiului şi presă. Pentru că presa britanică a fost parte a efortului de război. Multe informaţii privind inclusiv politica internă şi dezbaterile din Parlamentul britanic nu au fost niciodată relevate publicului pentru că priveau securitatea naţională. Iar presa britanică a &icirc;nteles lucrul ăsta şi a lucrat dimpotrivă ca aparat de propagandă pentru război, pentru războiul britanic al Aliaţilor &icirc;mpotriva Germaniei naziste şi cu asta am &icirc;ncheiat. </em></span></p>
+<p><span lang="fr-FR"><em><strong>Liviu Antonesei</strong></em></span><span lang="fr-FR"><em>: Şi nefiind o presă de propagandă &icirc;n condiţii normale, că nu poate nimeni spune asta despre presa engleză, ca să zic aşa. O presă critică cu adevărat. Bun. Deocamdată să zicem că am pus punct dezbaterilor şi &icirc;ntre echipe şi a dezbaterii &icirc;ntre noi şi supunem din nou la vot teza. Deci cine crede ca echipa [afirmatoare] că dreptul la informare al cetăţeanului să fie mai important dec&acirc;t dreptul demnitarului la viaţă privată să ridice m&acirc;na acum.</em></span></p>
+<p><em><strong>Georgiana Alexandrescu</strong></em><em>:  La &icirc;nceput 40 pro şi acum 37 pro. Iar la sfarşit 24, 27 contra. </em></p>
+<p><em><strong>Georgiana Alexandrescu</strong></em><em>: A crescut procentul contra.</em></p>
+<p><em><strong>Liviu Antonesei</strong></em><em>: Procentual ar fi cam la fel, nu? Ceea ce &icirc;nseamnă, deci două lucruri &icirc;nseamnă: una, că nici una din echipe n-a adus argumente suficiente &icirc;n favoarea tezei, dar n-a fost asta. </em><span lang="fr-FR"><em>Cred că dimpotrivă a fost vorba de altceva, de faptul că a adus argumente bune, dar echilibrate. Deci cele două echipe au fost la acelaşi bun nivel &icirc;n a-şi argumenta tezele. Ceea ce parcă data trecută nu fusese, c&acirc;nd de la o discrepanţă foarte mare&hellip; e drept că atuncea erau foarte distribuite rezultatele. </em></span></p>
+<p><span lang="fr-FR"><em><strong>Ilie </strong></em></span><span lang="fr-FR"><em><strong>F&acirc;rte</strong></em></span><span lang="fr-FR"><em>: Daca &icirc;mi permiteţi. </em></span><em>&Icirc;ntrebarea a fost cu schepsis. Fiindcă spunem &ldquo; e timpul ca dreptul la informare a publicului sa fie mai important dec&acirc;t&hellip;&rdquo; şi se presupunea că merge şi dreptul la viaţă privată, adică cum ar veni, daaa, cetăţeanul are drept să fie informat, dar, nu-i aşa, e loc şi pentru dreptul la viaţă privată. Pe c&acirc;nd teza contrară presupunea, oarecum, că dreptul la viaţă privată anulează dreptul publicului de a fi informat, adică a fost un pic dezechilibrată &icirc;ntrebarea ca implicaţii. </em><span lang="fr-FR"><em>Era foarte greu să răspunzi da, viaţa privată contează chiar dacă publicul ar avea dreptul sa fie informat. </em></span></p>
+<p><span lang="fr-FR"><em><strong>Liviu Antonesei</strong></em></span><span lang="fr-FR"><em>: Da, dar pe de altă parte aşa cum e formulată e cam &icirc;n spiritul situaţiei, cum să</em></span><span style="color: #ff0000;"><span lang="fr-FR"><em> </em></span></span><span lang="fr-FR"><em>zic. Cam aşa ar trebui să stea lucrurile, adică viaţa privată are importanţa ei, sunt limite care nu pot fi depăşite, dar pe de altă parte, dreptul la informare al publicului e sf&acirc;nt, nu?</em></span></p>
+<p><span lang="fr-FR"><em><strong>Ilie </strong></em></span><span lang="fr-FR"><em><strong>F&acirc;rte</strong></em></span><span lang="fr-FR"><em>: Daca este corelat cu anumite obligaţii.</em></span></p>
+<p><span lang="fr-FR"><em><strong>Liviu Antonesei</strong></em></span><span lang="fr-FR"><em>: Nu, dar asta e&hellip;</em></span></p>
+<p><span lang="fr-FR"><em><strong>Ilie </strong></em></span><span lang="fr-FR"><em><strong>F&acirc;rte</strong></em></span><span lang="fr-FR"><em>: Acuma, nu vreau să vă reţin. &Icirc;ntotdeauna noi luăm decizii pe baza unor simplificatori de informaţie. Vrem să cumpărăm un laptop. Selectăm doar c&acirc;teva date din fişa tehnică, mai tragem cu urechea la ce spun colegii care folosesc un asemenea laptop şi pe baza lor ne fundamentăm decizia de cumpărare. Nu ne documentăm exhaustiv, nu adunăm tratate ca să cumpărăm un produs. &Icirc;n acelaşi fel se petrec lucrurile şi &icirc;n viaţa publică. Apelăm la simplificatori de informaţii pe care &icirc;i oferă presa, pentru a vota pentru un anumit demnitar şi nu pentru un altul. </em></span></p>
+<p><span lang="fr-FR"><em><strong>Liviu Antonesei</strong></em></span><span lang="fr-FR"><em>: Si &icirc;ntr-o lună şi &icirc;n două luni de campanie electorală, c&acirc;nd vedem agenţii la lucru ca să spun aşa. Vedem laptopurile funcţion&acirc;nd &icirc;n faţa noastră, chiar dacă nu noi apăsăm pe butoane. </em></span></p>
+<p><span lang="fr-FR"><em><strong>Ilie </strong></em></span><span lang="fr-FR"><em><strong>F&acirc;rte</strong></em></span><span lang="fr-FR"><em>: &Icirc;ntrebarea este c&acirc;t de relevanţi sunt aceşti simplificatori de informaţie aduşi din sfera privată a demnitarului. Şi &icirc;ncă o chestiune? Pe piaţă ai tot. E problema ta ca şi client să te informezi. Pe c&acirc;nd dincoace se spune că este dreptul demnitarului de a-ţi pune la dispoziţie aceste date, este obligaţia demnitarului de a-ţi pune la dispoziţie aceşti simplificatori. Or eu spun nu, n-ai dec&acirc;t să te informezi, inclusiv cu privire la, uite, o eczemă, dar asta nu &icirc;nseamnă, nu implică obligaţia mea de a-ţi pune la dispoziţie informaţiile. Deci, relaţie drept-obligaţie-discreţie. </em></span></p>
+<p><span lang="fr-FR"><em><strong>Liviu Antonesei</strong></em></span><span lang="fr-FR"><em>: Bun. Vreau să mulţumesc tuturor pentru participare, să felicit cele două echipe. [aplauze] Şi Georgiana bănuiesc că va mai organiza şi altă dată, eu voi veni cu mare plăcere nu neapărat să stau aicea, pot să stau &icirc;n sală. </em></span><em>&Icirc;mi face plăcere să văd o dezbatere inteligentă, că la televizor n-am parte.</em></p>
+</div>
+                <div class='clear'></div>
+        </div><!-- end main content -->
+         <div class='clear'></div>
+</div>
+<div id="pix"></div>
+
+
+                                </div><!--end main -->
+                                <div id='parteneri'>
+                                    <span class='tr'></span><span class='tl'></span><span class='br'></span><span class='bl'></span><span id="filler"></span>
+                                    <div class='parteneri' id='sustinatori'>
+                                        <span class='floating_text' id='un_proiect'>Un proiect</span>
+                                        <a href='http://www.ardor.org.ro/'><div class='image' id='ardor'>Ardor</div></a>
+                                        <span class='floating_text' id='finantatori'>Finanțatori</span>
+                                        <a href='http://www.opensocietyfoundations.org/'><div class='image' id='open_society'>Open Society Foundation </div></a>
+                                        <a href='http://www.studentiq.ro//'><div class='image' id='memoplus'>MemoPlus</div></a>
+                                        <!-- <a href='http://www.ratiufamilyfoundation.com/'><div class='image' id='FundatiaRatiu'>Ardor</div></a>
+                                        <a href='http://www.eef.md/'><div class='image' id='eef'>East Europe Foundation</div></a>
+                                        <a href='http://www.mts.gov.md/'><div class='image' id='mdminister'>Ministerul Tineretului si Sportului al Republicii Moldova</div></a> -->
+
+                                        <span class='floating_text' id='parteneri_text'>Parteneri</span>
+
+                                        <a href='http://www.policycenter.eu/'><div class='image' id='PolicyCenter'>Policy Center</div></a>
+                                        <a href='http://www.britishcouncil.org/'><div class='image' id='BritishCouncil'>British Council</div></a>
+                                        <a href='http://www.europuls.ro/'><div class='image' id='europuls'>Europuls</div></a>
+                                        <a href='http://www.cere.ro/'><div class='image' id='cere'>Ce-Re</div></a>
+                                        <a href='http://www.primeromania.ro/'><div class='image' id='prime'>Prime Romania</div></a>
+                                        <a href='http://www.cji.ro/'><div class='image' id='cji'>Centrul pentru jurnalism independent</div></a>
+                                        <a href='http://www.aiesectm.ro/'><div class='image' id='aisec'>Aisec</div></a>
+                                        <!-- ===================================================================================================== -->
+                                        <a href='http://www.cogitus.ro/'><div class='image' id='cogitus'>Cogitus</div></a>
+                                        <a href='http://www.adevarul.ro/international/foreign_policy/'><div class='image' id='foreignPolicy'>Foreign Policy</div></a>
+                                        <a href='http://www.elsa.ro/'><div class='image' id='elsa'>Elsa</div></a>
+                                        <a href='http://www.vipromania.ro/'><div class='image' id='vipromania'>Voluntari pentru idei si proiecte</div></a>
+                                        <a href='http://www.ongtrust.ro/'><div class='image' id='ongtrust'>Trust</div></a>
+
+                                        <!-- ===================================================================================================== -->
+                                        <a href='http://www.leap.ro/'><div class='image' id='leap'>Leap</div></a>
+                                        <a href='http://www.younginitiative.org/'><div class='image' id='younginitiative'>Asociatia young initiative</div></a>
+                                        <a href='http://www.asjc.ro/'><div class='image' id='asjc'>Asjc</div></a>
+                                        <a href='http://osut.ro/'><div class='image' id='osut'>Osut</div></a>
+                                        <div class='clear'></div>
+                                    </div>
+                                    <div class='parteneri' id='parteneri_institutionali'>
+                                        <span class='floating_text' id='sponsori_text'>Sus&#539;in&#x0103;tori</span>
+                                        <a href='http://www.cartier.md/'><div class='image' id='cartier_logo'>Editura Cartier</div></a>
+                                        <a href='http://www.pll.md/ro/'><div class='image' id='biblio_logo'>Biblioteca publica de drept</div></a>
+                                        <span class='floating_text' id='institutii_text'>Parteneri institu&#539;ionali</span> 
+                                        <ul id='institutii'>
+                                            <!-- <span class='floating_text' id='institutii_text'>Parteneri institu&#539;ionali:</span> -->
+                                            <li><a href='http://www.politice.ro/'>Facultatea de &#536;tiin&#539;e Politice SNSPA </a></li>
+                                            <li><a href='http://www.comunicare.ro/'>Facultatea de Comunicare &#537;i Rela&#539;ii Publice SNSPA</a></li>
+                                            <li><a href='http://www.fspub.ro/'>Facultatea de &#536;tiin&#539;e Politice Universitatea Bucure&#537;ti</a></li>
+                                            <li><a href='http://www.filosofie.unibuc.ro/'>Facultatea de Filosofie Universitatea Bucure&#537;ti</a></li>
+                                            <li><a href='http://litere.unibuc.ro/'>Facultatea de Litere din Universitatea Bucure&#x015f;ti</a></li>
+                                            <li><a href='http://www.unibuc.ro/ro/fac_fsas_ro'>Facultatea de Sociologie Universitatea Bucure&#537;ti</a></li>
+                                            <li><a href='http://laws.uaic.ro/'>Facultatea de Drept Universitatea Alexandru Ioan Cuza Ia&#537;i</a></li>
+                                            <li><a href='http://www.uaic.ro/uaic/bin/view/Academic/Filosofie'>Facultatea de Filosofie si &#536;tiin&#539;e Social Politice Universitatea AIC Ia&#537;i</a></li>
+                                            <li><a href='http://www.upa.ro/'>Facultatea de Drept si Facultatea de &#x015e;tiin&#x0163;e Politice si Administrative Universitatea Petre Andrei Ia&#x015f;i</a></li> 
+
+                                            <li><a href='http://www.ubbcluj.ro/'>Universitatea Babe&#537;-Bolyai Cluj Napoca</a></li>
+                                            <li><a href='http://www.uvt.ro/'>Universitatea de Vest Timi&#537;oara</a></li>
+                                            <li><a href='http://www.upt.ro/'>Universitatea Politehnica Timi&#537;oara</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class='parteneri' id='parteneri_media'>
+                                        <span class='floating_text' id='media_text'>Parteneri media</span>
+                                        <a href='http://www.hotnews.ro/'><div class='image' id='hotnews'>HotNews</div></a>
+                                        <!-- <a href='http://www.lumebuna.ro/'><div class='image' id='lumebuna'>Lume Buna</div></a> -->
+                                        <a href='http://www.romaniapozitiva.ro/'><div class='image' id='romaniapozitiva'>Romania Pozitiva</div></a>
+                                        <a href='http://totb.ro/'><div class='image' id='thinkoutsidethebox'>Think Outside The Box</div></a>
+                                        <a href='http://www.facebook.com/carevasazica.vip'><div class='image' id='carevasazica'>Carevasazica</div></a>
+                                        <a href='http://www.studentie.ro/'><div class='image' id='studentiero'>Studentie.ro</div></a>
+                                        <a href='http://startub.unibuc.ro/'><div class='image' id='startub'>startub.unibuc.ro</div></a>
+                                        <!-- <a href='http://www.tvr.ro/tvr_cluj.php'><div class='image' id='tvrcluj'>Tvr Cluj</div></a> -->
+                                        <!-- <a href='http://www.radiotransilvania.ro'><div class='image' id='radiotransilvania'>Radio Transilvania</div></a> -->
+                                        <a href='http://iasifun.ziaruldeiasi.ro/'><div class='image' id='iasifun'>Iasi fun</div></a>
+                                        <a href='http://www.ziaruldeiasi.ro/'><div class='image' id='ziaruldeiasi'>Ziarul de Iasi</div></a>
+                                        <a href='http://www.kissfm.ro/timisoara'><div class='image' id='kissfm'>KissFm</div></a>
+
+                                        <div class='clear'></div> 
+                                    </div>
+                                    <div class='clear'></div>
+
+                                </div>	
+                            </div>	<!-- end wrap -->
+                            <div id='footer_mare'>
+                                <div id='footer'>
+                                    <div id='links' class='footer'>
+                                        <div id='menu1' style='margin:auto;'> <ul id='meniu_prinicpal'><li><a href='contacte/index.html'> Contact </a></li>
+<li><a href='clubdebate/index.html'> Cluburile </a></li>
+<li><a href='oamenii/index.html'> Oamenii </a></li>
+<li><a href='proiectul/index.html'> Proiectul </a></li>
+<li><a href='home/index.html'> Acasa </a></li>
+</ul></div><!--end menu-->
+                                    </div><!--
+                                    <div id='contact' class='footer'>
+                                            <h4>Contact</h4>
+                                            <p>office@closer2oxford.ro</p>
+                                            <p>bogdan.draghicescu@closer2oxford.ro<br>
+                                            <span class='detalii'> (asistenta tehnica web - orice probleme legate de site)</span></p>
+                                    </div>
+                                    -->
+                                    <div id='newsletter' class='footer'>
+                                        <script src="../../connect.facebook.net/en_US/all.js#xfbml=1"></script><fb:like href="http://www.facebook.com/pages/Closer2Oxford/162758797069605" width="250" colorscheme="dark"></fb:like>
+                                        <!--<h4>Newsletter</h4>
+                                        <form action='/page/newsletter'>
+                                                <input type='text' name='email'>
+                                                <input type='submit' id='submit' value='>'>
+                                                        
+                                        </form>-->
+                                    </div>
+                                    <div id='credits'>
+                                        Copyright(c) 2021 ARDOR |  Toate drepturile rezervate | Toate logo-urile si sloganurile de pe site sunt proprietate intelectuala inregistrata si nu pot fi reproduse fara acordul explicit al detinatorilor. <br>
+                                            <br /><br />
+                                            <b>Disclaimer</b><br /><i>
+
+                                                Programul educational Closer to Oxford este un program non-profit si nu are o legatura cu universitatea cu acelasi nume, referirea la Oxford avand doar o semnificatie simbolica.
+                                            </i>
+                                    </div>
+
+                                </div>		
+                            </div>		
+
+                            <div id="finantatde">Acest proiect este finantat cu sustinere din partea Comisiei Europene. Aceast publicatie [comunicare] reflecta doar
+                                vederile autorului, iar Comisia nu poate fi facuta  responsabila pentru utilizarea informatiei pe care o contine.</div>
+
+
+                        </body>
+                        </html>

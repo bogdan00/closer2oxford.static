@@ -1,0 +1,700 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml-strict.dtd">
+<HTML xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+    <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+            <link rel="icon" type="image/png"  href="../closer2oxford.ro/favicon.html">
+                <link rel="stylesheet" href="page/var/layout.css" type="text/css">
+                    <title>Closer to Oxford - e timpul pentru argumente!</title>
+                    <link rel="alternate" type="application/rss+xml"  href="page/rss_feed" title="Stiri Closer2Oxford">
+                        <link rel="image_src" property="og:image"  href="images/layout/closer2oxford_fb_white.png" />
+                        <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9" />
+<script type='text/javascript' src='js/jquery-1.4.4.min.js'></script>
+<script>var $j = jQuery.noConflict();</script>
+<script type='text/javascript' src='js/tinymce/tiny_mce.js'></script>
+<script type='text/javascript' src='js/jquery.form.js'></script>
+<script type='text/javascript' src='js/fbLoginRegister.js'></script>
+<script type='text/javascript' src='page/var/javascript.js'></script>
+<script type='text/javascript' src='js/jquery.hovertip-1.0.min.js'></script> 
+<script type='text/javascript' src='js/jquery.jgrowl_minimized.js'></script> 
+<link rel='stylesheet' href='css/jquery.jgrowl.css' media='screen' type='text/css'> 
+<script type='text/javascript' src='js/jquery.timer-min.js'></script> 
+<link rel='stylesheet' href='page/var/gallery.css' media='screen' type='text/css'> 
+<script type='text/javascript' src='page/var/galerie/jquery.prettyPhoto.js'></script> 
+<meta name='description' content=''/> 
+<meta name='keywords' content=''/> 
+<style>.hovertip{
+    position:absolute;
+    padding:10px 13px;
+    z-index:2;
+    max-width:300px;
+    color:#303030;
+    background-color:#f5f5b5;
+    border:1px solid #DECA7E;
+    font-family:sans-serif;
+    font-size:12px;
+    line-height:18px;
+    text-align:left;
+    }</style> 
+<script type='text/javascript'>$j(document).ready(function(){$j('.tooltip').hovertip({'offset':[20,20]});get_notif();});
+
+if(!Array.indexOf){Array.prototype.indexOf = function(obj){for(var i=0; i<this.length; i++){if(this[i]==obj){return i;}}return -1;}}
+    hashuri = [] ;
+	 var tick_timer= 3000 ;
+ 
+	 function get_notif()
+        {
+		  
+		  //console.log(tick_timer);
+	     
+		  setTimeout(get_notif,tick_timer);
+        
+		   $j.ajax(
+            {
+                url: '/page/notif/show_events',
+                dataType: 'json',
+                data: "{}",
+                success: function(data)
+                    {
+                    $j.each(data,function(index,data){
+                        try
+                            {
+                            if( hashuri.indexOf(data.hash) == -1 )
+                                {
+                                hashuri.push(data.hash);
+                                $j.jGrowl(
+                                    data.str,
+                                    {
+                                        corners:'1px',
+                                        life: data.life,
+                                        header:data.title,
+                                        hash: data.hash,
+                                        sticky: data.sticky,
+                                        close: function(e,m,o)
+                                            {
+                                                $j.ajax({url:'/page/notif/delete_single_event/' + o.hash});
+                                            }
+                                    });
+                                }
+                            }
+                        catch(e){}
+                        })
+                    }
+            });
+        }
+	 </script> 
+ 
+                            
+  <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-19111721-1']);
+  _gaq.push(['_setDomainName', '.closer2oxford.ro']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+    
+                        </head>
+                        <body>
+                            <div id="global_wrap">
+                                <div id="header">
+                                    <a href='en/index.html'><div id='logo'><img src='images/layout/sigla.jpg'></div></a>
+                                    <a class='noExternal' href='http://www.facebook.com/pages/Closer2Oxford/162758797069605'><img src='images/fb.png' style='height:30px;float:right;clear:right;margin:10px 5px 5px 5px;border:none;'/></a>
+                                    <a href='page/rss_feed'><img src='images/feed-icon.png' style='height:30px;float:right;clear:right;margin:5px;border:none;'/></a>
+                                </div>
+                                <div id="meniu">
+                                    <div  id='register_login'>
+
+                                        
+  <a href='#' class='todo' id='login'>Login </a> &nbsp;<a href='page/register.html' class='todo' id='register'>Register</a>
+    <div id='login_box'>
+		  <form action='https://dev.closer2oxford.ro/page/en/login_user/logon' method='post' id='user_login_form'>
+					 <div>Email: <input type='text' name='email'/> </div><br />
+					 <div>Pass: <input type='password' name='passwd'/></div><br />
+					 <a href='#' class='password_forgot'>forgot password?</a>
+					 <input type='hidden' value='/en' name='returnto' class='submiter'/><br />
+					 <input type='submit' value='login' name='btn' class='submiter'/><br />
+		  </form>
+		  
+		  <form action='https://dev.closer2oxford.ro/page/en/login_user/reset_user_pw' method='post' id='user_reset_form'>
+					 <div>Email: <input type='text' name='email'/> </div><br />
+					 <a href='#' class='password_forgot'>login?</a>
+					 <input type='hidden' value='/en' name='returnto' class='submiter'/><br />
+					 <input type='submit' value='reset' name='btn' class='submiter'/><br />
+		  </form>
+		  
+    </div>
+    
+                                    </div>
+                                    <div id="menu1" style="margin:auto;"> <ul id="meniu_prinicpal">
+                                            <li><a href="page/contactus/index.html"> Contact us </a></li>
+                                            <li><a href="page/theteam/index.html"> The team</a></li>
+                                            <li><a href="page/theproject/index.html"> The project </a></li>
+                                            <li><a href="page/home_en/index.html"> Home</a></li>
+                                        </ul></div>
+                                </div>
+                                <div id="main">
+                                    <a href='en.html'><img src="images/cover/BANNER_c2o_12_DEBATE_ONLINE_results.png" alt=""  usemap="#imgmap_iordania" /></a>
+									<div id='frontpageGallery'> 
+										<script type='text/javascript' src='js/jquery.hovertip-1.0.min.js'></script> 
+<script type='text/javascript' src='js/jquery.jgrowl_minimized.js'></script> 
+<link rel='stylesheet' href='css/jquery.jgrowl.css' media='screen' type='text/css'> 
+<script type='text/javascript' src='js/jquery.timer-min.js'></script> 
+<link rel='stylesheet' href='page/var/gallery.css' media='screen' type='text/css'> 
+<style>.hovertip{
+    position:absolute;
+    padding:10px 13px;
+    z-index:2;
+    max-width:300px;
+    color:#303030;
+    background-color:#f5f5b5;
+    border:1px solid #DECA7E;
+    font-family:sans-serif;
+    font-size:12px;
+    line-height:18px;
+    text-align:left;
+    }</style> 
+<script type='text/javascript'>$j(document).ready(function(){$j('.tooltip').hovertip({'offset':[20,20]});get_notif();});
+
+if(!Array.indexOf){Array.prototype.indexOf = function(obj){for(var i=0; i<this.length; i++){if(this[i]==obj){return i;}}return -1;}}
+    hashuri = [] ;
+	 var tick_timer= 3000 ;
+ 
+	 function get_notif()
+        {
+		  
+		  //console.log(tick_timer);
+	     
+		  setTimeout(get_notif,tick_timer);
+        
+		   $j.ajax(
+            {
+                url: '/page/notif/show_events',
+                dataType: 'json',
+                data: "{}",
+                success: function(data)
+                    {
+                    $j.each(data,function(index,data){
+                        try
+                            {
+                            if( hashuri.indexOf(data.hash) == -1 )
+                                {
+                                hashuri.push(data.hash);
+                                $j.jGrowl(
+                                    data.str,
+                                    {
+                                        corners:'1px',
+                                        life: data.life,
+                                        header:data.title,
+                                        hash: data.hash,
+                                        sticky: data.sticky,
+                                        close: function(e,m,o)
+                                            {
+                                                $j.ajax({url:'/page/notif/delete_single_event/' + o.hash});
+                                            }
+                                    });
+                                }
+                            }
+                        catch(e){}
+                        })
+                    }
+            });
+        }
+	 </script> 
+
+										<script type='text/javascript' src='js/jquery.hovertip-1.0.min.js'></script> 
+<script type='text/javascript' src='js/jquery.jgrowl_minimized.js'></script> 
+<link rel='stylesheet' href='css/jquery.jgrowl.css' media='screen' type='text/css'> 
+<script type='text/javascript' src='js/jquery.timer-min.js'></script> 
+<link rel='stylesheet' href='page/var/gallery.css' media='screen' type='text/css'> 
+<script type='text/javascript' src='page/var/galerie/jquery.prettyPhoto.js'></script> 
+<style>.hovertip{
+    position:absolute;
+    padding:10px 13px;
+    z-index:2;
+    max-width:300px;
+    color:#303030;
+    background-color:#f5f5b5;
+    border:1px solid #DECA7E;
+    font-family:sans-serif;
+    font-size:12px;
+    line-height:18px;
+    text-align:left;
+    }</style> 
+<script type='text/javascript'>$j(document).ready(function(){$j('.tooltip').hovertip({'offset':[20,20]});get_notif();});
+
+if(!Array.indexOf){Array.prototype.indexOf = function(obj){for(var i=0; i<this.length; i++){if(this[i]==obj){return i;}}return -1;}}
+    hashuri = [] ;
+	 var tick_timer= 3000 ;
+ 
+	 function get_notif()
+        {
+		  
+		  //console.log(tick_timer);
+	     
+		  setTimeout(get_notif,tick_timer);
+        
+		   $j.ajax(
+            {
+                url: '/page/notif/show_events',
+                dataType: 'json',
+                data: "{}",
+                success: function(data)
+                    {
+                    $j.each(data,function(index,data){
+                        try
+                            {
+                            if( hashuri.indexOf(data.hash) == -1 )
+                                {
+                                hashuri.push(data.hash);
+                                $j.jGrowl(
+                                    data.str,
+                                    {
+                                        corners:'1px',
+                                        life: data.life,
+                                        header:data.title,
+                                        hash: data.hash,
+                                        sticky: data.sticky,
+                                        close: function(e,m,o)
+                                            {
+                                                $j.ajax({url:'/page/notif/delete_single_event/' + o.hash});
+                                            }
+                                    });
+                                }
+                            }
+                        catch(e){}
+                        })
+                    }
+            });
+        }
+	 </script> 
+
+										<style type="text/css">
+										.poze
+										{
+											float:right;
+											width:110px;
+										}
+										.poze a img
+										{    border:none;
+										}
+										.main_content
+										{
+											float:left;
+											width:560px;
+										}
+										</style>
+										
+										 <div class = 'poze'>
+
+    <script>
+    $j(document).ready(function(){
+      		$j("a[rel^='prettyPhoto']").prettyPhoto({theme:'facebook'});
+        });
+    
+    </script>
+    </div> 
+									
+									</div> 
+                                    
+ 
+
+    <link rel='stylesheet' href='css/table_style.css' type='text/css'>
+    <script type='text/javascript' src='js/table_sorter.js'></script>
+    <script type='text/javascript' src='js/jquery.MetaData.js'></script>
+		<style>
+           tr{margin:10px 0;}
+           td{ text-align:left;border:1px solid black;}
+           td ul{list-style:none;margin:0px;padding:0px;font-size:10px; }
+           .short{width:20px;text-align:center;}
+           #content form{margin:0px;padding:0px;}
+           #content li span {display:block;color:#f00;}
+		   .sad td{background-color:#FFDDDD !important}
+		   th.header{background-color:#000 !important;color:#fff !important}
+		   table.tablesorter{background-color:transparent !important}
+		   table.tablesorter tbody td {padding: 1px 5px;line-height: 12px;}
+		   table.tablesorter tbody td a{text-decoration:none;}
+    </style>
+<script>
+     $j(document).ready(function() { 
+				$j.tablesorter.defaults.widgets = ['zebra']; 
+				$j('.shower').tablesorter({ 
+						headers: { 1: {width: '50px' }}
+				}); 
+     });
+     
+     
+ </script> 
+<h3>Closer2Oxford meets Diwanieh / <span class="notif">25 June</span></h3>
+<p>Eight selected Romanian debaters and two trainers traveled to Jordan between June&nbsp;18<sup>th&nbsp;</sup>- 22<sup>nd</sup>&nbsp;&nbsp;for the debate&nbsp;exchange, the final phase of the <em>Closer2Oxford meets Diwanieh</em> project. We challenged participants to showcase their argumentation and public speaking skills in a mixed team tournament on the topics:</p>
+<ul>
+<li><em>This House Would ban advertising targeting children<br /></em></li>
+<li><em>This House Believes developed countries should not accept skilled migrants from developing countries.<br /></em></li>
+<li><em>This House Believes debate should be a compulsory subject in high school.</em></li>
+</ul>
+<p>The best debaters in the tournament debated in a public event on the topic <em>Governments shouldn't fund arts</em>. Speaking for the motion were <a href="https://www.facebook.com/anca.pelesteanu?fref=ts" target="_blank">Anca Pelesteanu</a>, <a href="https://www.facebook.com/rawan.hourani.7?fref=ts" target="_blank">Rawan Hourani</a> and <a href="https://www.facebook.com/hatem92?fref=ts" target="_blank">Hatem AL Hmoud</a> and speaking against the topic were <a href="https://www.facebook.com/chichernea.paul?fref=ts" target="_blank">Paul Chichernea</a>,<a href="https://www.facebook.com/karmelh?ref=ts&amp;fref=ts" target="_blank">Carmel Hilal</a> and <a href="https://www.facebook.com/Ghassan.W.Hijazi?fref=ts" target="_blank">Ghassan Hijazi</a>. Participating in the audience were the other debaters in the project and citizens of Amman.</p>
+<p>Hats off to all debaters for their hard work, ambition and willingness to step out of their confort zone. The debates and all social activities of the exchange made June memorable.</p>
+<p>The public debate from Weibdeh park is available <a href="https://www.youtube.com/watch?v=oBNGOEorlzE" target="_blank">here</a>.</p>
+<p>Images from the debate exchange are available <a href="https://www.facebook.com/media/set/?set=a.839933039352174.1073741844.162758797069605&amp;type=1" target="_blank">here</a>&nbsp;and <a href="https://www.facebook.com/media/set/?set=a.623478387748099.1073741846.312468892182385&amp;type=1" target="_blank">here</a>.&nbsp;</p>
+<h3><span>Online debate rankings&nbsp;</span>/ <span class="notif">16 April</span></h3>
+<p><span>40 students from Jordan and Romania accepted our debate challenge, after participating in an intensive six day training. After a week of research, consultations and strategizing among team mates, all debate rounds are done, with 2 speeches on each side of the motion - Affirmative and Negative.</span></p>
+<p><span>We are excited to present the ranking below and we congratulate all teams who debated on the motion:&nbsp;</span><em>This House Believes western democracies have a moral duty to spread democracy across the world even when this involves using force.</em><span>&nbsp;If under Ballots it reads 1, it means the team has won the round; if 0, it means it lost. Click on the team name to read the entire debate, scroll down to see the adjudicator's feedback and verdict, together with the speaker points.</span></p>
+<p><span>You can learn more about the adjudicators volunteering for this round on our</span><a href="https://www.facebook.com/media/set/?set=a.796961013649377.1073741840.162758797069605&amp;type=1" target="_blank">&nbsp;Facebook page</a><span>.</span></p>
+<table class="tablesorter shower" style="display: table;">
+<thead> 
+<tr>
+<th class="{sorter: 'digit'} header">Rank</th> <th class="header">Team name</th> <th class="header">Members</th> <th class="{sorter: 'digit'} header">Points</th> <th class="header">Side</th> <th class="header">Ballots</th> <th class="header">Judge</th>
+</tr>
+</thead> 
+<tbody>
+<tr class="even">
+<td>1</td>
+<td><a href="page/en/vezi_meciuri/367/index.html">Carmel and Yazan <span class="notif">(see match  367)</span></a></td>
+<td>Carmel Hilal                 <br />Yazan Thabet Madridista</td>
+<td>51.00</td>
+<td>Negative team</td>
+<td title="ballots: 1 of 1 possible">1</td>
+<td>Laura Bretea</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td><a href="page/en/vezi_meciuri/368/index.html">Fingerprint <span class="notif">(see match  368)</span></a></td>
+<td>Hareth Nwihi                 <br />Rawan Hourani</td>
+<td>49.00</td>
+<td>Affirmative team</td>
+<td title="ballots: 1 of 1 possible">1</td>
+<td>Liviu Gajora</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td><a href="page/en/vezi_meciuri/365/index.html">PoP: Power of People <span class="notif">(see match  365)</span></a></td>
+<td>Ahmed Akour                 <br />Anood Amjad Abutayeh</td>
+<td>49.00</td>
+<td>Negative team</td>
+<td title="ballots: 1 of 1 possible">1</td>
+<td>George Maxim</td>
+</tr>
+<tr class="odd">
+<td>4</td>
+<td><a href="page/en/vezi_meciuri/366/index.html">Seekers <span class="notif">(see match  366)</span></a></td>
+<td>Teo Oprea                 <br />Claudia Pislaru</td>
+<td>49.00</td>
+<td>Affirmative team</td>
+<td title="ballots: 1 of 1 possible">1</td>
+<td>Laura Ardeleanu</td>
+</tr>
+<tr class="even">
+<td>5</td>
+<td><a href="page/en/vezi_meciuri/369/index.html">L.E.D <span class="notif">(see match  369)</span></a></td>
+<td>Andreea Dumitrescu                 <br />Paul Chichernea</td>
+<td>48.00</td>
+<td>Negative team</td>
+<td title="ballots: 1 of 1 possible">1</td>
+<td>George Jiglau</td>
+</tr>
+<tr class="odd">
+<td>6</td>
+<td><a href="page/en/vezi_meciuri/374/index.html">The Minions <span class="notif">(see match  374)</span></a></td>
+<td>Anca Pelesteanu                 <br />Valentin Teodorov</td>
+<td>47.00</td>
+<td>Affirmative team</td>
+<td title="ballots: 1 of 1 possible">1</td>
+<td>Ioana Georgescu</td>
+</tr>
+<tr class="even">
+<td>7</td>
+<td><a href="page/en/vezi_meciuri/373/index.html">Borderless <span class="notif">(see match  373)</span></a></td>
+<td>Nadia Nofal                 <br />Maria Antica</td>
+<td>47.00</td>
+<td>Negative team</td>
+<td title="ballots: 1 of 1 possible">1</td>
+<td>Cristina Rosu</td>
+</tr>
+<tr class="odd">
+<td>8</td>
+<td><a href="page/en/vezi_meciuri/370/index.html">The Argument <span class="notif">(see match  370)</span></a></td>
+<td>Mădălin Blidaru                 <br />Ruxandra Simion</td>
+<td>47.00</td>
+<td>Negative team</td>
+<td title="ballots: 1 of 1 possible">1</td>
+<td>Bianca Prunea</td>
+</tr>
+<tr class="even">
+<td>9</td>
+<td><a href="page/en/vezi_meciuri/372/index.html">The Champions <span class="notif">(see match  372)</span></a></td>
+<td>Dalia Quba                 <br />Hatem Al Hmoud</td>
+<td>43.00</td>
+<td>Negative team</td>
+<td title="ballots: 1 of 1 possible">1</td>
+<td>Calin Muresanu</td>
+</tr>
+<tr class="odd">
+<td>10</td>
+<td><a href="page/en/vezi_meciuri/371/index.html">Democratic Girl <span class="notif">(see match  371)</span></a></td>
+<td>Anamaria Dorofte                 <br />Mihaela Costache</td>
+<td>24.00</td>
+<td>Negative team</td>
+<td title="ballots: 1 of 1 possible">1</td>
+<td>Radu Ocrain</td>
+</tr>
+<tr class="even">
+<td>11</td>
+<td><a href="page/en/vezi_meciuri/368/index.html">The Nile <span class="notif">(see match  368)</span></a></td>
+<td>Luca Avadani                 <br />Olga Cojocariu</td>
+<td>48.00</td>
+<td>Negative team</td>
+<td title="ballots: 0 of 1 possible">0</td>
+<td>Liviu Gajora</td>
+</tr>
+<tr class="odd">
+<td>12</td>
+<td><a href="page/en/vezi_meciuri/365/index.html">Challenge2Progress <span class="notif">(see match  365)</span></a></td>
+<td>Alina Ciobotaru                 <br />Bogdan Muresan</td>
+<td>48.00</td>
+<td>Affirmative team</td>
+<td title="ballots: 0 of 1 possible">0</td>
+<td>George Maxim</td>
+</tr>
+<tr class="even">
+<td>13</td>
+<td><a href="page/en/vezi_meciuri/366/index.html">DBR -Death by Rebuttal <span class="notif">(see match  366)</span></a></td>
+<td>Ruqayya Zakaria                 <br />Ghassan Hijazi</td>
+<td>45.00</td>
+<td>Negative team</td>
+<td title="ballots: 0 of 1 possible">0</td>
+<td>Laura Ardeleanu</td>
+</tr>
+<tr class="odd">
+<td>14</td>
+<td><a href="page/en/vezi_meciuri/367/index.html">Mihai Paun with Laura Dorneanu <span class="notif">(see match  367)</span></a></td>
+<td>Mihai Păun                 <br />Laura Dorneanu</td>
+<td>44.00</td>
+<td>Affirmative team</td>
+<td title="ballots: 0 of 1 possible">0</td>
+<td>Laura Bretea</td>
+</tr>
+<tr class="even">
+<td>15</td>
+<td><a href="page/en/vezi_meciuri/373/index.html">Fire Starters <span class="notif">(see match  373)</span></a></td>
+<td>Anas Oweiwi                 <br />Katia Smadi</td>
+<td>42.00</td>
+<td>Affirmative team</td>
+<td title="ballots: 0 of 1 possible">0</td>
+<td>Cristina Rosu</td>
+</tr>
+<tr class="odd">
+<td>16</td>
+<td><a href="page/en/vezi_meciuri/372/index.html">N.U.R.V. = Never underestimate radical vision <span class="notif">(see match  372)</span></a></td>
+<td>Adelin Dumitru                 <br />Silvia Bitan</td>
+<td>42.00</td>
+<td>Affirmative team</td>
+<td title="ballots: 0 of 1 possible">0</td>
+<td>Calin Muresanu</td>
+</tr>
+<tr class="even">
+<td>17</td>
+<td><a href="page/en/vezi_meciuri/370/index.html">Wind of Change <span class="notif">(see match  370)</span></a></td>
+<td>Osamah Fayez                 <br />Rada Naji</td>
+<td>42.00</td>
+<td>Affirmative team</td>
+<td title="ballots: 0 of 1 possible">0</td>
+<td>Bianca Prunea</td>
+</tr>
+<tr class="odd">
+<td>18</td>
+<td><a href="page/en/vezi_meciuri/369/index.html">Double Trouble (DT) <span class="notif">(see match  369)</span></a></td>
+<td>Ehab Haddad                 <br />Rana Srouji</td>
+<td>42.00</td>
+<td>Affirmative team</td>
+<td title="ballots: 0 of 1 possible">0</td>
+<td>George Jiglau</td>
+</tr>
+<tr class="even">
+<td>19</td>
+<td><a href="page/en/vezi_meciuri/374/index.html">MC - Magical Convincers <span class="notif">(see match  374)</span></a></td>
+<td>Ibrahim Ammar                 <br />Por Osama</td>
+<td>39.00</td>
+<td>Negative team</td>
+<td title="ballots: 0 of 1 possible">0</td>
+<td>Ioana Georgescu</td>
+</tr>
+<tr class="odd">
+<td>20</td>
+<td><a href="page/en/vezi_meciuri/371/index.html">Chaos <span class="notif">(see match  371)</span></a></td>
+<td>Ayyam Alasaad                 <br />Ghassan Hilow</td>
+<td>19.00</td>
+<td>Affirmative team</td>
+<td title="ballots: 0 of 1 possible">0</td>
+<td>Radu Ocrain</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<hr />
+<p>&nbsp;</p>
+<h2>Reading Suggestions&nbsp;<span class="notif"> / 25 March</span></h2>
+<p>We all have our favorite magazines, online publications, books or blogs. We thought it would be useful to share with you some materials that make good reading for the topic of this debate round - "<strong>This House Believes western democracies have a moral duty to spread democracy across the world even when this involves using force.</strong>" We will keep extending this list until the debate starts.</p>
+<p>Researching the motion is an essential step in understanding the topic and generates ideas that can be then turned into the arguments of a convincing debate case. Bear in mind: research makes all the difference between a real debate worth watching/reading and an amateur discussion.</p>
+<p>We invite debaters to extend their knowledge on this topic by reading these articles and others they find relevant.&nbsp;</p>
+<p><span><a href="http://www.huffingtonpost.com/2013/03/21/democracy-index-2013-economist-intelligence-unit_n_2909619.html" target="_blank">Democracy Index 2013: Global Democracy At A Standstill, The Economist Intelligence Unit's Annual Report Shows</a></span></p>
+<p><a href="http://ideas.time.com/2013/07/05/egypt-should-we-cheer-the-people-or-weep-for-democracy/" target="_blank">Egypt: Should We Cheer the People or Weep for Democracy?</a></p>
+<p><a href="http://www.huffingtonpost.com/alon-benmeir/is-islam-compatible-with_b_3562579.html" target="_blank">Is Islam Compatible With Democracy?</a></p>
+<p><a href="http://www.bbc.com/news/magazine-23810527" target="_blank">A Point of View: Democracy and Islamic law</a></p>
+<p><a href="http://news.nationalgeographic.com/news/2003/10/1021_031021_islamicdemocracy.html" target="_blank">Can Islam and Democracy Coexist?</a></p>
+<p><a href="http://www.stanford.edu/~ldiamond/iraq/WSJ021904oped.htm" target="_blank">The Long Haul for Democracy in Iraq</a></p>
+<p><a href="http://www.nytimes.com/2004/11/14/books/review/14KAGANL.html?pagewanted=1&amp;_r=0" target="_blank">'What We Owe Iraq': We Broke It, We Bought It</a></p>
+<p><a href="http://www.nybooks.com/articles/archives/2013/dec/19/rumsfelds-war-and-its-consequences-now/" target="_blank">Rumsfeld&rsquo;s War and Its Consequences Now</a></p>
+<p><a href="../www.journalofdemocracy.org/sites/default/files/Brown-24-4.html" target="_blank">Tracking the "Arab Spring": Egypt&rsquo;s Failed Transition&nbsp;</a></p>
+<p><a href="http://www.huffingtonpost.com/michael-doyle/promoting-democracy-is-no_b_826574.html?" target="_blank">Promoting Democracy Is Not Imposing Democracy</a></p>
+<p><a href="http://politicalviolenceataglance.org/2014/03/03/the-problem-with-ukraines-transition-to-democracy/" target="_blank">The Problem With Ukraine&rsquo;s Transition to Democracy</a></p>
+<p><a href="http://muse.jhu.edu/journals/journal_of_democracy/summary/v007/7.1przeworski.html" target="_blank">What Makes Democracies Endure?</a></p>
+<p>&nbsp;</p>
+<hr />
+<h2>Online poll &nbsp;<span class="notif">/&nbsp;20 March</span></h2>
+<p><span>We invited the online community in Jordan and Romania to vote the topic they thing deserves to be debated online, for a week.&nbsp;</span><br /><span>We proposed three debate motions and, gathering more than 45% of the votes, the topic of the debate rounds among the 40 debaters is:&nbsp;</span><br /><span>This House Believes western democracies have a moral duty to spread democracy across the world even when this involves using force.</span></p>
+<p><img src="uploads/2014/04/16/img_2014_04_16_15_53_51_6.k2t48q.png" alt="" /></p>
+<hr />
+<p>&nbsp;</p>
+<h2>Closer2Oxford meets Diwanieh trainings &nbsp;<span class="notif">/ 11 March</span></h2>
+<p><span>Closer to Oxford meets Diwanieh started off with a series of&nbsp;</span><span>training</span><span>&nbsp;sessions. Students with various academic background (political sciences, law, foreign languages, economic studies, sociology, international relations, Islamic studies, psychology, geopolitics, cultural studies) gathered on March 1st, 2nd, 8th and 9th to share and gain experience in debating. We discussed concepts like motion/topic interpretation, burden of proof, argumentation and counter argumentation, and their impact on the motion. We also started preparing for the next project phase - the online debate to be held later in March, by practicing the&nbsp;</span><a href="../closer2oxford.ro/uploads/2014/02/4/Online_debate_format_Closer2Oxford_meets_Diwanieh.df01v5.html" target="_blank">online debate format</a><span>.&nbsp;&nbsp;</span><span>See pictures from the training sessions on our&nbsp;<a href="https://www.facebook.com/media/set/?set=a.781388698539942.1073741838.162758797069605&amp;type=1" target="_blank">Facebook page</a></span><br /><br /></p>
+<hr />
+<p>&nbsp;</p>
+<h2>Apply for Closer2Oxford meets Diwanieh <span class="notif">/ 5 February</span></h2>
+<p>&nbsp;</p>
+<p>Are you interested in debate and keen to get a taste of the Arab world? Participate in Closer2Oxford meets Diwanieh - a four month project in English, where you hone your argumentation skills by participating in local trainings in Bucharest and an online debate tournament on www.closer2oxford.ro. The best 8 Romanian participants will join a debate exchange in Jordan together with the Jordanian students. If you are one of the happy 8, you will also be part of Diwanieh: a public debate in the streets or a public landmark of Amman!</p>
+<p>&nbsp;</p>
+<p>ELIGIBILITY</p>
+<p>* you are a national or permanent resident living in Romania</p>
+<p>* <span>you are a university student (bachelor/master's/doctoral studies)</span></p>
+<p>* you have an interest in debating and proven interest in current/foreign affairs</p>
+<p>* you should not have extended experience in debating (over 1 year of regular training and/or participation at international competitions)</p>
+<p>* you have a good command of English - reading, writing and speaking</p>
+<p>* you are capable of working in culturally mixed teams</p>
+<p>* you are able to travel to Jordan for 6 days in May 2014</p>
+<p>&nbsp;</p>
+<p>HOW TO APPLY</p>
+<p>[1] Fill out this <a href="https://docs.google.com/forms/d/1os6dWEB4jiPrOWNTTMZlK7WzsSv1qLwwoFw-vABP1Og/viewform">application form</a></p>
+<p>[2] Send your CV to <a href="mailto:office@closer2oxford.ro">office@closer2oxford.ro</a> . Please write a short email introducing yourself, it would be best if you included your phone number.</p>
+<p>The deadline is February 18th.</p>
+<p>Please read <a href="page/theproject/index.html">the project phases</a>&nbsp;and only submit your application if you think you have the time, energy and willingness to fully commit to all phases.</p>
+<p><em><em><em>Please note&nbsp;that the&nbsp;Romanian participants who are chosen to  travel to Jordan are expected to contribute 30% of their travel costs  (120-150 Eur). The rest of the program costs, accommodation and meals  are fully covered for all participants (Romanian and Jordan) chosen to  participate in the last phase. The total cost of the experience is  approx. 1000 Eur/person.</em></em></em></p>
+<p><span id="docs-internal-guid-5c59f054-f9e1-5161-486e-fd79dfae0a71"> </span></p>
+<p>This project is a collaboration between Closer2Oxford (ARDOR) and Diwanieh (Leaders of Tomorrow).</p>
+                                </div><!--end main -->
+                                <div id='parteneri'>
+                                    <span class='tr'></span><span class='tl'></span><span class='br'></span><span class='bl'></span><span id="filler"></span>
+                                    <div class='parteneri' id='sustinatori'>
+                                        <span class='floating_text' id='un_proiect'>Un proiect</span>
+                                        <a href='https://www.facebook.com/Diwanieh'><div class='image' id='diwanieh' >Diwanieh</div></a>
+                                        <a href='http://www.ardor.org.ro/'><div class='image' id='ardor'>Ardor</div></a>
+										<a href='http://www.annalindhfoundation.org/'><div class='image' id='anna_lindh'>Anna Lindh Foundation</div></a>
+                                        <!-- 
+                                        <span class='floating_text' id='finantatori'>Finanțatori</span>
+										<a href='http://www.opensocietyfoundations.org/'><div class='image' id='open_society'>Open Society Foundation </div></a>
+                                        <a href='http://www.studentiq.ro//'><div class='image' id='memoplus'>MemoPlus</div></a>
+                                        <a href='http://www.ratiufamilyfoundation.com/'><div class='image' id='FundatiaRatiu'>Ardor</div></a>
+                                        <a href='http://www.eef.md/'><div class='image' id='eef'>East Europe Foundation</div></a>
+                                        <a href='http://www.mts.gov.md/'><div class='image' id='mdminister'>Ministerul Tineretului si Sportului al Republicii Moldova</div></a> -->
+
+                                        <span class='floating_text' id='parteneri_text'>Parteneri</span>
+
+                                        <a href='http://www.policycenter.eu/'><div class='image' id='PolicyCenter'>Policy Center</div></a>
+                                        <a href='http://www.britishcouncil.org/'><div class='image' id='BritishCouncil'>British Council</div></a>
+                                        <a href='http://www.europuls.ro/'><div class='image' id='europuls'>Europuls</div></a>
+                                        <a href='http://www.cere.ro/'><div class='image' id='cere'>Ce-Re</div></a>
+                                        <a href='http://www.primeromania.ro/'><div class='image' id='prime'>Prime Romania</div></a>
+                                        <a href='http://www.cji.ro/'><div class='image' id='cji'>Centrul pentru jurnalism independent</div></a>
+                                        <a href='http://www.aiesectm.ro/'><div class='image' id='aisec'>Aisec</div></a>
+                                        <!-- ===================================================================================================== -->
+                                        <a href='http://www.cogitus.ro/'><div class='image' id='cogitus'>Cogitus</div></a>
+                                        <a href='http://www.adevarul.ro/international/foreign_policy/'><div class='image' id='foreignPolicy'>Foreign Policy</div></a>
+                                        <a href='http://www.elsa.ro/'><div class='image' id='elsa'>Elsa</div></a>
+                                        <a href='http://www.vipromania.ro/'><div class='image' id='vipromania'>Voluntari pentru idei si proiecte</div></a>
+                                        <a href='http://www.ongtrust.ro/'><div class='image' id='ongtrust'>Trust</div></a>
+
+                                        <!-- ===================================================================================================== -->
+                                        <a href='http://www.leap.ro/'><div class='image' id='leap'>Leap</div></a>
+                                        <a href='http://www.younginitiative.org/'><div class='image' id='younginitiative'>Asociatia young initiative</div></a>
+                                        <a href='http://www.asjc.ro/'><div class='image' id='asjc'>Asjc</div></a>
+                                        <a href='http://osut.ro/'><div class='image' id='osut'>Osut</div></a>
+                                        <div class='clear'></div>
+                                    </div>
+                                    <div class='parteneri' id='parteneri_institutionali'>
+                                        <span class='floating_text' id='sponsori_text'>Sus&#539;in&#x0103;tori</span>
+                                        <a href='http://www.cartier.md/'><div class='image' id='cartier_logo'>Editura Cartier</div></a>
+                                        <a href='http://www.pll.md/ro/'><div class='image' id='biblio_logo'>Biblioteca publica de drept</div></a>
+                                        <span class='floating_text' id='institutii_text'>Parteneri institu&#539;ionali</span> 
+                                        <ul id='institutii'>
+                                            <!-- <span class='floating_text' id='institutii_text'>Parteneri institu&#539;ionali:</span> -->
+                                            <li><a href='http://www.politice.ro/'>Facultatea de &#536;tiin&#539;e Politice SNSPA </a></li>
+                                            <li><a href='http://www.comunicare.ro/'>Facultatea de Comunicare &#537;i Rela&#539;ii Publice SNSPA</a></li>
+                                            <li><a href='http://www.fspub.ro/'>Facultatea de &#536;tiin&#539;e Politice Universitatea Bucure&#537;ti</a></li>
+                                            <li><a href='http://www.filosofie.unibuc.ro/'>Facultatea de Filosofie Universitatea Bucure&#537;ti</a></li>
+                                            <li><a href='http://litere.unibuc.ro/'>Facultatea de Litere din Universitatea Bucure&#x015f;ti</a></li>
+                                            <li><a href='http://www.unibuc.ro/ro/fac_fsas_ro'>Facultatea de Sociologie Universitatea Bucure&#537;ti</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class='parteneri' id='parteneri_media'>
+                                        <span class='floating_text' id='media_text'>Parteneri media</span>
+                                        <a href='http://www.hotnews.ro/'><div class='image' id='hotnews'>HotNews</div></a>
+                                        <!-- <a href='http://www.lumebuna.ro/'><div class='image' id='lumebuna'>Lume Buna</div></a> -->
+                                        <a href='http://www.romaniapozitiva.ro/'><div class='image' id='romaniapozitiva'>Romania Pozitiva</div></a>
+                                        <a href='http://totb.ro/'><div class='image' id='thinkoutsidethebox'>Think Outside The Box</div></a>
+                                        <a href='http://www.facebook.com/carevasazica.vip'><div class='image' id='carevasazica'>Carevasazica</div></a>
+                                        <a href='http://www.studentie.ro/'><div class='image' id='studentiero'>Studentie.ro</div></a>
+                                        <a href='http://startub.unibuc.ro/'><div class='image' id='startub'>startub.unibuc.ro</div></a>
+                                        <!-- <a href='http://www.tvr.ro/tvr_cluj.php'><div class='image' id='tvrcluj'>Tvr Cluj</div></a> -->
+                                        <!-- <a href='http://www.radiotransilvania.ro'><div class='image' id='radiotransilvania'>Radio Transilvania</div></a> -->
+                                        
+
+                                        <div class='clear'></div> 
+                                    </div>
+                                    <div class='clear'></div>
+
+                                </div>	
+                            </div>	<!-- end wrap -->
+                            <div id='footer_mare'>
+                                <div id='footer'>
+                                    <div id='links' class='footer'>
+                                        
+                                    </div><!--
+                                    <div id='contact' class='footer'>
+                                            <h4>Contact</h4>
+                                            <p>office@closer2oxford.ro</p>
+                                            <p>bogdan.draghicescu@closer2oxford.ro<br>
+                                            <span class='detalii'> (asistenta tehnica web - orice probleme legate de site)</span></p>
+                                    </div>
+                                    -->
+                                    <div id='newsletter' class='footer'>
+                                        <script src="../connect.facebook.net/en_US/all.js#xfbml=1"></script><fb:like href="http://www.facebook.com/pages/Closer2Oxford/162758797069605" width="250" colorscheme="dark"></fb:like>
+                                        <!--<h4>Newsletter</h4>
+                                        <form action='/page/newsletter'>
+                                                <input type='text' name='email'>
+                                                <input type='submit' id='submit' value='>'>
+                                                        
+                                        </form>-->
+                                    </div>
+                                    <div id='credits'>
+                                        Copyright(c) 2021 ARDOR |  Toate drepturile rezervate | Toate logo-urile si sloganurile de pe site sunt proprietate intelectuala inregistrata si nu pot fi reproduse fara acordul explicit al detinatorilor. <br>
+                                            <br /><br />
+                                            <b>Disclaimer</b><br /><i>
+
+                                                Programul educational Closer to Oxford este un program non-profit si nu are o legatura cu universitatea cu acelasi nume, referirea la Oxford avand doar o semnificatie simbolica.
+                                            </i>
+                                    </div>
+
+                                </div>		
+                            </div>		
+
+                            <div id="finantatde">Acest proiect este finantat cu sustinere din partea Comisiei Europene. Aceast publicatie [comunicare] reflecta doar
+                                vederile autorului, iar Comisia nu poate fi facuta  responsabila pentru utilizarea informatiei pe care o contine.</div>
+
+
+                        </body>
+                        </html>

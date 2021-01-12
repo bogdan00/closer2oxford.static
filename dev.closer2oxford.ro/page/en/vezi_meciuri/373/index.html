@@ -1,0 +1,631 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml-strict.dtd">
+<HTML xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+    <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+            <link rel="icon" type="image/png"  href="../../../../../closer2oxford.ro/favicon.html">
+                <link rel="stylesheet" href="../../../var/layout.css" type="text/css">
+                    <title>Closer to Oxford - e timpul pentru argumente!</title>
+                    <link rel="alternate" type="application/rss+xml"  href="../../../rss_feed" title="Stiri Closer2Oxford">
+                        <link rel="image_src" property="og:image"  href="../../../../images/layout/closer2oxford_fb_white.png" />
+                        <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9" />
+<script type='text/javascript' src='../../../../js/jquery-1.4.4.min.js'></script>
+<script>var $j = jQuery.noConflict();</script>
+<script type='text/javascript' src='../../../../js/tinymce/tiny_mce.js'></script>
+<script type='text/javascript' src='../../../../js/jquery.form.js'></script>
+<script type='text/javascript' src='../../../../js/fbLoginRegister.js'></script>
+<script type='text/javascript' src='../../../var/javascript.js'></script>
+<script type='text/javascript' src='../../../../js/jquery.hovertip-1.0.min.js'></script> 
+<script type='text/javascript' src='../../../../js/jquery.jgrowl_minimized.js'></script> 
+<link rel='stylesheet' href='../../../../css/jquery.jgrowl.css' media='screen' type='text/css'> 
+<script type='text/javascript' src='../../../../js/jquery.timer-min.js'></script> 
+<link rel='stylesheet' href='../../../var/gallery.css' media='screen' type='text/css'> 
+<script type='text/javascript' src='../../../var/galerie/jquery.prettyPhoto.js'></script> 
+<style>.hovertip{
+    position:absolute;
+    padding:10px 13px;
+    z-index:2;
+    max-width:300px;
+    color:#303030;
+    background-color:#f5f5b5;
+    border:1px solid #DECA7E;
+    font-family:sans-serif;
+    font-size:12px;
+    line-height:18px;
+    text-align:left;
+    }
+           .normal_text ol,.normal_text ol *{text-align:left !important}
+           .normal_text *{font-weight:normal !important;font-size:12px !important;font-face:tahoma !important}</style> 
+<script type='text/javascript'>$j(document).ready(function(){$j('.tooltip').hovertip({'offset':[20,20]});get_notif();});
+
+if(!Array.indexOf){Array.prototype.indexOf = function(obj){for(var i=0; i<this.length; i++){if(this[i]==obj){return i;}}return -1;}}
+    hashuri = [] ;
+	 var tick_timer= 3000 ;
+ 
+	 function get_notif()
+        {
+		  
+		  //console.log(tick_timer);
+	     
+		  setTimeout(get_notif,tick_timer);
+        
+		   $j.ajax(
+            {
+                url: '/page/notif/show_events',
+                dataType: 'json',
+                data: "{}",
+                success: function(data)
+                    {
+                    $j.each(data,function(index,data){
+                        try
+                            {
+                            if( hashuri.indexOf(data.hash) == -1 )
+                                {
+                                hashuri.push(data.hash);
+                                $j.jGrowl(
+                                    data.str,
+                                    {
+                                        corners:'1px',
+                                        life: data.life,
+                                        header:data.title,
+                                        hash: data.hash,
+                                        sticky: data.sticky,
+                                        close: function(e,m,o)
+                                            {
+                                                $j.ajax({url:'/page/notif/delete_single_event/' + o.hash});
+                                            }
+                                    });
+                                }
+                            }
+                        catch(e){}
+                        })
+                    }
+            });
+        }
+	 </script> 
+ 
+                            
+  <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-19111721-1']);
+  _gaq.push(['_setDomainName', '.closer2oxford.ro']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+    
+                        </head>
+                        <body>
+                            <div id="global_wrap">
+                                <div id="header">
+                                    <a href='../../../../en/index.html'><div id='logo'><img src='../../../../images/layout/sigla.jpg'></div></a>
+                                    <a class='noExternal' href='http://www.facebook.com/pages/Closer2Oxford/162758797069605'><img src='../../../../images/fb.png' style='height:30px;float:right;clear:right;margin:10px 5px 5px 5px;border:none;'/></a>
+                                    <a href='../../../rss_feed'><img src='../../../../images/feed-icon.png' style='height:30px;float:right;clear:right;margin:5px;border:none;'/></a>
+                                </div>
+                                <div id="meniu">
+                                    <div  id='register_login'>
+
+                                        
+  <a href='#' class='todo' id='login'>Login </a> &nbsp;<a href='../../../register.html' class='todo' id='register'>Register</a>
+    <div id='login_box'>
+		  <form action='https://dev.closer2oxford.ro/page/en/login_user/logon' method='post' id='user_login_form'>
+					 <div>Email: <input type='text' name='email'/> </div><br />
+					 <div>Pass: <input type='password' name='passwd'/></div><br />
+					 <a href='#' class='password_forgot'>forgot password?</a>
+					 <input type='hidden' value='/page/en/vezi_meciuri/373/' name='returnto' class='submiter'/><br />
+					 <input type='submit' value='login' name='btn' class='submiter'/><br />
+		  </form>
+		  
+		  <form action='https://dev.closer2oxford.ro/page/en/login_user/reset_user_pw' method='post' id='user_reset_form'>
+					 <div>Email: <input type='text' name='email'/> </div><br />
+					 <a href='#' class='password_forgot'>login?</a>
+					 <input type='hidden' value='/page/en/vezi_meciuri/373/' name='returnto' class='submiter'/><br />
+					 <input type='submit' value='reset' name='btn' class='submiter'/><br />
+		  </form>
+		  
+    </div>
+    
+                                    </div>
+                                    <div id="menu1" style="margin:auto;"> <ul id="meniu_prinicpal">
+                                            <li><a href="../../../contactus/index.html"> Contact us </a></li>
+                                            <li><a href="../../../theteam/index.html"> The team</a></li>
+                                            <li><a href="../../../theproject/index.html"> The project </a></li>
+                                            <li><a href="../../../home_en/index.html"> Home</a></li>
+                                        </ul></div>
+                                </div>
+                                <div id="main">
+                                    <a href='../../../../en.html'><img src="../../../../images/cover/BANNER_c2o_12_DEBATE_ONLINE_results.png" alt=""  usemap="#imgmap_iordania" /></a>
+									<div id='frontpageGallery'> 
+										<script type='text/javascript' src='../../../../js/jquery.hovertip-1.0.min.js'></script> 
+<script type='text/javascript' src='../../../../js/jquery.jgrowl_minimized.js'></script> 
+<link rel='stylesheet' href='../../../../css/jquery.jgrowl.css' media='screen' type='text/css'> 
+<script type='text/javascript' src='../../../../js/jquery.timer-min.js'></script> 
+<link rel='stylesheet' href='../../../var/gallery.css' media='screen' type='text/css'> 
+<style>.hovertip{
+    position:absolute;
+    padding:10px 13px;
+    z-index:2;
+    max-width:300px;
+    color:#303030;
+    background-color:#f5f5b5;
+    border:1px solid #DECA7E;
+    font-family:sans-serif;
+    font-size:12px;
+    line-height:18px;
+    text-align:left;
+    }</style> 
+<script type='text/javascript'>$j(document).ready(function(){$j('.tooltip').hovertip({'offset':[20,20]});get_notif();});
+
+if(!Array.indexOf){Array.prototype.indexOf = function(obj){for(var i=0; i<this.length; i++){if(this[i]==obj){return i;}}return -1;}}
+    hashuri = [] ;
+	 var tick_timer= 3000 ;
+ 
+	 function get_notif()
+        {
+		  
+		  //console.log(tick_timer);
+	     
+		  setTimeout(get_notif,tick_timer);
+        
+		   $j.ajax(
+            {
+                url: '/page/notif/show_events',
+                dataType: 'json',
+                data: "{}",
+                success: function(data)
+                    {
+                    $j.each(data,function(index,data){
+                        try
+                            {
+                            if( hashuri.indexOf(data.hash) == -1 )
+                                {
+                                hashuri.push(data.hash);
+                                $j.jGrowl(
+                                    data.str,
+                                    {
+                                        corners:'1px',
+                                        life: data.life,
+                                        header:data.title,
+                                        hash: data.hash,
+                                        sticky: data.sticky,
+                                        close: function(e,m,o)
+                                            {
+                                                $j.ajax({url:'/page/notif/delete_single_event/' + o.hash});
+                                            }
+                                    });
+                                }
+                            }
+                        catch(e){}
+                        })
+                    }
+            });
+        }
+	 </script> 
+
+										<script type='text/javascript' src='../../../../js/jquery.hovertip-1.0.min.js'></script> 
+<script type='text/javascript' src='../../../../js/jquery.jgrowl_minimized.js'></script> 
+<link rel='stylesheet' href='../../../../css/jquery.jgrowl.css' media='screen' type='text/css'> 
+<script type='text/javascript' src='../../../../js/jquery.timer-min.js'></script> 
+<link rel='stylesheet' href='../../../var/gallery.css' media='screen' type='text/css'> 
+<script type='text/javascript' src='../../../var/galerie/jquery.prettyPhoto.js'></script> 
+<style>.hovertip{
+    position:absolute;
+    padding:10px 13px;
+    z-index:2;
+    max-width:300px;
+    color:#303030;
+    background-color:#f5f5b5;
+    border:1px solid #DECA7E;
+    font-family:sans-serif;
+    font-size:12px;
+    line-height:18px;
+    text-align:left;
+    }</style> 
+<script type='text/javascript'>$j(document).ready(function(){$j('.tooltip').hovertip({'offset':[20,20]});get_notif();});
+
+if(!Array.indexOf){Array.prototype.indexOf = function(obj){for(var i=0; i<this.length; i++){if(this[i]==obj){return i;}}return -1;}}
+    hashuri = [] ;
+	 var tick_timer= 3000 ;
+ 
+	 function get_notif()
+        {
+		  
+		  //console.log(tick_timer);
+	     
+		  setTimeout(get_notif,tick_timer);
+        
+		   $j.ajax(
+            {
+                url: '/page/notif/show_events',
+                dataType: 'json',
+                data: "{}",
+                success: function(data)
+                    {
+                    $j.each(data,function(index,data){
+                        try
+                            {
+                            if( hashuri.indexOf(data.hash) == -1 )
+                                {
+                                hashuri.push(data.hash);
+                                $j.jGrowl(
+                                    data.str,
+                                    {
+                                        corners:'1px',
+                                        life: data.life,
+                                        header:data.title,
+                                        hash: data.hash,
+                                        sticky: data.sticky,
+                                        close: function(e,m,o)
+                                            {
+                                                $j.ajax({url:'/page/notif/delete_single_event/' + o.hash});
+                                            }
+                                    });
+                                }
+                            }
+                        catch(e){}
+                        })
+                    }
+            });
+        }
+	 </script> 
+
+										<style type="text/css">
+										.poze
+										{
+											float:right;
+											width:110px;
+										}
+										.poze a img
+										{    border:none;
+										}
+										.main_content
+										{
+											float:left;
+											width:560px;
+										}
+										</style>
+										
+										 <div class = 'poze'>
+
+    <script>
+    $j(document).ready(function(){
+      		$j("a[rel^='prettyPhoto']").prettyPhoto({theme:'facebook'});
+        });
+    
+    </script>
+    </div> 
+									
+									</div> 
+                                    <!--<div id='stiri-padding'>
+        <div id='stiri_back'>
+                {stiri} 
+    
+               
+        </div>-->
+        
+</div>
+<div  id="content-padding">
+        <div id='sidebar_menu'>
+                <span class='tr'></span>
+                <span class='tl'></span>
+                <span class='br'></span>
+                <span class='bl'></span>
+                <span id="filler"></span>
+                    
+                <ul></ul>
+                
+                <div class='clear'></div>
+        </div>
+        <div id="content">
+                <span class='tr'></span>
+                <span class='tl'></span>
+                <span class='br'></span>
+                <span class='bl'></span>
+                <span id="filler"></span>
+                  <script>
+        $j(document).ready(function(){
+        $j('.discurs_toggler').toggle(
+                function(){
+                $j(this).attr('src', '../../../../images/little_stuff/16-em-down.png');   
+                $j(this).parent().next('.discurs').hide('fast');
+                },
+                function(){
+                $j(this).attr('src', '../../../../images/little_stuff/16-em-up.png');
+                $j(this).parent().next('.discurs').show('fast');
+                });
+            });
+        </script><style>.nowrap{white-space: nowrap;}
+		.noJustify{text-align:left;}
+		</style><h2 class='noJustify'><span class='nowrap'>'Fire Starters'</span> <span class='notif'>(Affirmative team)</span> vs <span class='nowrap'>'Borderless'</span> <span class='notif'>(Negative team)</span></h2><h3>A1 (Anas Oweiwi) <img src='../../../../images/little_stuff/16-em-up.png' class='discurs_toggler'></h3>
+            <div class='discurs normal_text'><p>Hi, I am&nbsp;<span class="il">Anas&nbsp;Aloweiwi, this house believes that western democracies have a moral duty to spread democracy across the world even if this involves using force. However, this force must be restricted under some limitations which are:</p>
+<p>1)&nbsp;&nbsp;&nbsp;&nbsp;Using force depends on the intensity of the situation, that not every dictatorial action must be removed using force.</p>
+<p>2)&nbsp;&nbsp;&nbsp;&nbsp;Force must not be used unless all the peaceful ways (like political and economical pressures) in applying democracy had run out.</p>
+<p>3)&nbsp;&nbsp;&nbsp;&nbsp;Force must not be used if it could cause a huge loss of lives or a massive destruction, like using nuclear weapons, or causing a world war.</p>
+<p>4)&nbsp;&nbsp;&nbsp;&nbsp;Force to apply democracy could be used only if the western world countries agreed to work as one unit to apply it.</p>
+<p>5)&nbsp;&nbsp;&nbsp;&nbsp;The main reason for allowing using force is not to use force, but as a method to scare the dictatorship when it sees the huge military union of the western world against it, which would mostly lead to its giving up peacefully.</p>
+<p>In fact, there are many reasons for this motion, but I will discuss 4 of them which are:</p>
+<p>1)&nbsp;&nbsp;&nbsp;&nbsp;The western world is responsible of benefiting people who suffer from dictatorship.</p>
+<p>2)&nbsp;&nbsp;&nbsp;&nbsp;The western world is responsible of saving millions of souls around the world.</p>
+<p>3)&nbsp;&nbsp;&nbsp;&nbsp;The western world is responsible of preventing dictatorships from empowering their authorities.</p>
+<p>4)&nbsp;&nbsp;&nbsp;&nbsp;The western world is responsible of applying human rights in the world.</p>
+<p>&nbsp;<br />Since we all live at the same world, all human beings should act towards one another in a spirit of brother hood [1]. Hence the western world is responsible to work in what is beneficial for other nations, and because spreading democracy to the whole world is totally important and beneficial for human beings, it becomes a responsibility upon the western world shoulders to spread democracy to the whole world. In order to show its importance, we can see the effects of applying democracy at South Korea and applying Dictatorship at North Korea. Thus, the western world is responsible of applying democracy to benefit their brothers around the world.<br />&nbsp;<br />Since some dictators have the system of executing, killing, or torturing whoever face their opinions, applying democracy would save thousands or millions of souls around the world, even if that demanded using a military war, maybe some souls could be lost. On the other hand, doubles of them would be saved, noting that mostly there would be no war because of the huge alliance of the western world countries against the dictator. For example, it&rsquo;s estimated that as many as 15 million civilians were killed by the Nazis&rsquo; Holocaust [2]. Hence if this situation was not held by the western world, maybe billions of people could have been killed because of that totalitarian regime. Therefore, millions of souls could be saved if the western world worked to apply democracy in the world.<br />&nbsp;<br />Unfortunately, the world&rsquo;s current situation allows dictatorships to empower their dictatorial systems, by preventing any state from the threat or use of force against the territorial integrity or political independence of any other state [3], which could cause the spreading of these dictatorial systems to the whole world. Consequently, this situation must be currently changed by applying democracy, by the one who is able to apply it which is actually the western world, in order to create a new world filled with love and peace among all human beings. The proof of the ability of the western world countries of applying democracy to the world is that they are more than 20 countries including three great powers. Therefore the western world is powerful enough to apply democracy across the whole world even if that involved using force. Thus, we would reach to a world which is clean of dictatorships and built upon the basis of peace and love.<br />&nbsp;<br />For thousands of years, wars have been blowing up around the whole world. The world&rsquo;s current situation ,which allows dictatorships to increase their authorities upon human beings&rsquo; simplest rights of enjoying the right of living peacefully without being subjected to torture or to cruel, inhuman or degrading treatment or punishment[4] , must be&nbsp;currently changed in order to create a world filled with Justice and freedom granted to all human beings. Due to that, democracy must be applied in the whole world, and actually the western world has the power to do that. For example, 22 months ago, the UN estimated that more than 10,000 people, mostly civilians, have been killed in Syria since the uprising against Bashar al-Assad began [5]. Thus, human rights are being violated by some dictatorships.<br />&nbsp;<br />For these reasons, I strongly believe that the western world democracies have a moral duty to spread democracy across the world even when this involves force.<br />&nbsp;<br />&nbsp;<br />References:<br /><strong>[1]</strong>&nbsp;The Universal declaration of human rights, art. 1, (available at&nbsp;<a href="http://www.un.org/en/documents/udhr/" target="_blank">http://www.un.org/en/documents/udhr/</a>)<br /><strong>[2]</strong>&nbsp;BBC news, History category,&nbsp;<em>By Dr Steve Paulsson, Last updated 2011-02-17 (</em>available at&nbsp;<a href="http://www.bbc.com/history/worldwars/genocide/holocaust_overview_01.shtml#top" target="_blank">www.bbc.com/history/worldwars/genocide/holocaust_overview_01.shtml#top</a>&nbsp;)<br /><strong>[3]</strong>&nbsp;UN Charter, chapter7, art. 42,&nbsp;(<a href="http://www.un.org/en/documents/charter/chapter7.shtml" target="_blank">http://www.un.org/en/documents/charter/chapter7.shtml</a>)<br /><strong>[4]&nbsp;</strong>The Universal declaration of human rights, art. 5, (available at&nbsp;<a href="http://www.un.org/en/documents/udhr/" target="_blank">http://www.un.org/en/documents/udhr/</a>)</p>
+<h4>[5]&nbsp;UN official website, news category, UN Human Rights Council condemns violence in Syria, para. 4 (available at&nbsp;<a href="http://www.un.org/apps/news/story.asp?NewsID=42409#.UzWRY_vy9rR" target="_blank">http://www.un.org/apps/news/story.asp?NewsID=42409#.UzWRY_vy9rR</a>)</h4>
+
+</div><hr><h3>N1 (Maria Antica) <img src='../../../../images/little_stuff/16-em-up.png' class='discurs_toggler'></h3>
+            <div class='discurs normal_text'><p class="western"><span style="font-family: 'Times New Roman', serif;">We thank to the Affirmative Team for the laid arguments and explanations. However, this House believes that Western democracies don&rsquo;t have a moral duty to spread democracy across the world, especially when this involves the use of force and that countries have the right to choose their desired political regime, no matter its form, on their own. Actually, it is not very clear from the first affirmative speech why Western democracies have any moral duty to promote democracy across the world.</p>
+<p class="western"><span style="font-family: 'Times New Roman', serif;"><strong>Democratization is a slow process to achieve and needs to be chosen directly by the citizens and not violently imposed</strong></p>
+<p class="western"><span style="font-family: 'Times New Roman', serif;">As the former UN Secretary General Kofi Annan stated: &ldquo;&hellip;democracy is a universal right that does not belong to any country or region, and that participatory governance, based on the will of the people, is the best path to freedom, growth and development.&rdquo;<sup><span style="font-family: 'Times New Roman', serif;"><a class="sdfootnoteanc" name="sdfootnote1anc" href="#sdfootnote1sym"><sup>1</sup></a></sup><span style="font-family: 'Times New Roman', serif;"> This actually means that democracy or any other regime cannot be imposed unless it is a bottom up call made by all citizens of a given country. As Larry Diamond said, countries have slowly changed starting with 1848 French Revolution, many of them incorporating democratic characteristics one by one, or resolving the implementation of this form of government by themselves, within their territory with no violent or intrusive intervention from other countries<sup><span style="font-family: 'Times New Roman', serif;"><a class="sdfootnoteanc" name="sdfootnote2anc" href="#sdfootnote2sym"><sup>2</sup></a></sup><span style="font-family: 'Times New Roman', serif;">. Or, as Michael Doyle put it, &lsquo;<span style="font-family: 'Times New Roman', serif;">democracy is not only government "for" the people, it is also government "of" and "by" the people&rsquo;<sup><span style="font-family: 'Times New Roman', serif;"><a class="sdfootnoteanc" name="sdfootnote3anc" href="#sdfootnote3sym"><sup>3</sup></a></sup><span style="font-family: 'Times New Roman', serif;"> therefore only they can decide what type of government they want. </p>
+<p class="western">&nbsp;</p>
+<p class="western"><span style="font-family: 'Times New Roman', serif;"><strong>No matter the limits, the use of force is not legitimate</strong></p>
+<p class="western"><span style="font-family: 'Times New Roman', serif;">If we take into considerations Affirmator&rsquo;s limits for intervention, we agree that they can get involved in order to protect civilians&rsquo; lives when they are at threat, but not necessary to overthrow the regime and not to impose democracy by default. Force CAN be used but only in the act of peacekeeping, but not in trying to change the regime, be that even a dictatorship.</p>
+<p class="western"><span style="font-family: 'Times New Roman', serif;">Military intervention implies the sacrifice of a certain number of people, as long as, there are alternatives to military force, we must not waste any human life. In their so called way to &lsquo;promote&rsquo; democracy, Western countries should not neglect the costs of war, the massive casualties and the impact left on children, nor the losses beard by their part. For instance, in Iraq, 4,486 of American soldiers died<sup><span style="font-family: 'Times New Roman', serif;"><a class="sdfootnoteanc" name="sdfootnote4anc" href="#sdfootnote4sym"><sup>4</sup></a></sup><span style="font-family: 'Times New Roman', serif;">, and approximately 700.000 of people were killed. There has also been a rise in domestic violence,   honour killings, &lsquo;temporary marriages&rsquo; and all types of sexual exploitation.<sup><span style="font-family: 'Times New Roman', serif;"><a class="sdfootnoteanc" name="sdfootnote5anc" href="#sdfootnote5sym"><sup>5</sup></a></sup></p>
+<p class="western">&nbsp;</p>
+<p class="western"><span style="font-family: 'Times New Roman', serif;"><strong>Alternative ways of promoting democracy, different from violence</strong></p>
+<p class="western"><span style="font-family: 'Times New Roman', serif;">Rather than violent interventions, no matter how long the processes are, we believe more that economic sanctions or financial support and transfers of know-how are a more legitimate way of giving them the tools for development, hoping that this would lead to democracy, rather than imposing it. These kind of slow and tedious processes, that can be very well observed in Africa, i.e. Democratic Republic of Congo or Rwanda where ONU intervened to stop the civil wars and continued with development programs, are a good example that improvements and evolution can be achieved without military involvement only after the critical situation was resolved.</p>
+<p class="western"><span style="font-family: 'Times New Roman', serif;">Democracy is best promoted by peaceful means &ndash; investment, trade, foreign aid. UN Democracy Fund counts as multilateral assistance which overall is particularly useful in promoting and encouraging democracy. The &ldquo;trade&rdquo; association coming from the informal &ldquo;Community of Democracies&rdquo; provides a good premise on which values intrinsic to democracy can grow.<sup><span style="font-family: 'Times New Roman', serif;"><a class="sdfootnoteanc" name="sdfootnote6anc" href="#sdfootnote6sym"><sup>6</sup></a></sup></p>
+<p class="western">&nbsp;</p>
+<p class="western"><span style="font-family: 'Times New Roman', serif;"><strong>Western countries are hypocritical when they justify violent interventions through the process of democratization</strong></p>
+<p class="western"><span style="font-family: 'Times New Roman', serif;">Western countries joint and full decision to intervene in a country that is not part of their partnership doesn&rsquo;t legitimate the intervention as per protecting human rights but as for their own survival and interests, be them economic, military or geostrategic, as it happened in Iraq and Afghanistan. Same with Ukraine where just recently the European Union was willing to sacrifice human rights (LGBTQ community) for showing support for the new, conservative Government.<sup><span style="font-family: 'Times New Roman', serif;"><a class="sdfootnoteanc" name="sdfootnote7anc" href="#sdfootnote7sym"><sup>7</sup></a></sup><span style="font-family: 'Times New Roman', serif;"> Overall, every action performed by authorities such as NATO is discussed in depth, interests (geo-strategic, economic, military) being a main prerequisite for taking action<sup><span style="font-family: 'Times New Roman', serif;"><a class="sdfootnoteanc" name="sdfootnote8anc" href="#sdfootnote8sym"><sup>8</sup></a></sup><span style="font-family: 'Times New Roman', serif;"> and not as a moral duty to promote democracy and protect human rights.</p>
+<p class="western"><span style="font-family: 'Times New Roman', serif;">In conclusion, the confusion between "democracy promotion" and "regime change" does no one no good as the values of democracy are thrown in front with no basis; the use of military force is often, in these situations, inconsistent with the characteristics and values upheld by democracy and don&rsquo;t show, often, support for human rights but rather support for the individualistic interest of the states that intervene. The aftermath of violent interventions, such as the one in Afghanistan, is clearly put in the statement of Malalai Joya, a former member of the Afghan Parliament: "Occupation will never bring liberation, and it is impossible to bring democracy by war."<sup><span style="font-family: 'Times New Roman', serif;"><a class="sdfootnoteanc" name="sdfootnote9anc" href="#sdfootnote9sym"><sup>9</sup></a></sup></p>
+<p class="western"><span style="font-family: 'Times New Roman', serif;"><br /></p>
+<div id="sdfootnote1">
+<p class="western"><a class="sdfootnotesym" name="sdfootnote1sym" href="#sdfootnote1anc">1</a><sup><span style="font-family: 'Times New Roman', serif;"><span style="font-size: x-small;"></sup><span style="font-family: 'Times New Roman', serif;"><span style="font-size: x-small;"> <span style="color: #000080;"><span lang="zxx"><span style="font-family: 'Times New Roman', serif;"><span style="font-size: x-small;"><a href="http://www.wmd.org/about/current-challenges/current-challenges-democracy">http://www.wmd.org/about/current-challenges/current-challenges-democracy</a></p>
+</div>
+<div id="sdfootnote2">
+<p class="western"><a class="sdfootnotesym" name="sdfootnote2sym" href="#sdfootnote2anc">2</a><sup><span style="font-family: 'Times New Roman', serif;"><span style="font-size: x-small;"></sup><span style="font-family: 'Times New Roman', serif;"><span style="font-size: x-small;"> Larry Diamond, <span style="font-family: 'Times New Roman', serif;"><span style="font-size: x-small;"><em>Democratic 	Development </em><span style="font-family: 'Times New Roman', serif;"><span style="font-size: x-small;">course, 	accessed from Coursera&rsquo;s website at <span style="color: #000080;"><span lang="zxx"><span style="color: #1155cc;"><span style="font-family: 'Times New Roman', serif;"><span style="font-size: x-small;"><a href="https://class.coursera.org/democraticdev-002/lecture/29">https://class.coursera.org/democraticdev-002/lecture/29</a></p>
+</div>
+<div id="sdfootnote3">
+<p class="western"><a class="sdfootnotesym" name="sdfootnote3sym" href="#sdfootnote3anc">3</a><sup><span style="font-family: 'Times New Roman', serif;"><span style="font-size: x-small;"></sup><span style="font-family: 'Times New Roman', serif;"><span style="font-size: x-small;"> Michael Doyle, <span style="font-family: 'Times New Roman', serif;"><span style="font-size: x-small;"><em>Promoting 	Democracy is not Imposing Democracy</em><span style="font-family: 'Times New Roman', serif;"><span style="font-size: x-small;">, 	accessed at <span style="color: #000080;"><span lang="zxx"><span style="color: #1155cc;"><span style="font-family: 'Times New Roman', serif;"><span style="font-size: x-small;"><a href="http://www.huffingtonpost.com/michael-doyle/promoting-democracy-is-no_b_826574.html">http://www.huffingtonpost.com/michael-doyle/promoting-democracy-is-no_b_826574.html</a></p>
+</div>
+<div id="sdfootnote4">
+<p class="western"><a class="sdfootnotesym" name="sdfootnote4sym" href="#sdfootnote4anc">4</a>&nbsp;<sup><span style="font-family: 'Times New Roman', serif;"><span style="font-size: x-small;"></sup><span style="font-family: 'Times New Roman', serif;"><span style="font-size: x-small;"> <span style="color: #000080;"><span lang="zxx"><span style="color: #3b5998;"><span style="font-family: 'Times New Roman', serif;"><span style="font-size: x-small;"><a href="http://icasualties.org/">http://icasualties.org/</a></p>
+</div>
+<div id="sdfootnote5">
+<p class="western"><a class="sdfootnotesym" name="sdfootnote5sym" href="#sdfootnote5anc">5</a>&nbsp;<sup><span style="font-family: 'Times New Roman', serif;"><span style="font-size: x-small;"></sup><span style="font-family: 'Times New Roman', serif;"><span style="font-size: x-small;"> Joanne Baker, <span style="font-family: 'Times New Roman', serif;"><span style="font-size: x-small;"><em>The 	Impact of the Iraq War on Iraqi Children, </em><span style="font-family: 'Times New Roman', serif;"><span style="font-size: x-small;">accessed 	at: <span style="color: #000080;"><span lang="zxx"><span style="color: #3b5998;"><span style="font-family: 'Times New Roman', serif;"><span style="font-size: x-small;"><a href="http://childvictimsofwar.org.uk/the-impact-of-the-iraq-war-on-iraqi-children/">http://childvictimsofwar.org.uk/the-impact-of-the-iraq-war-on-iraqi-children/</a></p>
+</div>
+<div id="sdfootnote6">
+<p class="western"><a class="sdfootnotesym" name="sdfootnote6sym" href="#sdfootnote6anc">6</a>&nbsp;<sup><span style="font-family: 'Times New Roman', serif;"><span style="font-size: x-small;"></sup><span style="font-family: 'Times New Roman', serif;"><span style="font-size: x-small;"> Michael Doyle, idem 3</p>
+</div>
+<div id="sdfootnote7">
+<p class="western"><a class="sdfootnotesym" name="sdfootnote7sym" href="#sdfootnote7anc">7</a>&nbsp;<sup><span style="font-family: 'Times New Roman', serif;"><span style="font-size: x-small;"></sup><span style="font-family: 'Times New Roman', serif;"><span style="font-size: x-small;"> Hanna Kozlowska, <span style="font-family: 'Times New Roman', serif;"><span style="font-size: x-small;"><em>Will 	the EU Sacrifice Gay Rights in Ukraine for Geopolitics?</em><span style="font-family: 'Times New Roman', serif;"><span style="font-size: x-small;">, 	March 28th, accessed at <span style="color: #000080;"><span lang="zxx"><span style="color: #1155cc;"><span style="font-family: 'Times New Roman', serif;"><span style="font-size: x-small;"><a href="http://blog.foreignpolicy.com/posts/2014/03/28/will_the_eu_sacrifice_gay_rights_in_ukraine_for_geopolitics">http://blog.foreignpolicy.com/posts/2014/03/28/will_the_eu_sacrifice_gay_rights_in_ukraine_for_geopolitics</a></p>
+</div>
+<div id="sdfootnote8">
+<p class="western"><a class="sdfootnotesym" name="sdfootnote8sym" href="#sdfootnote8anc">8</a>&nbsp;<sup><span style="font-family: 'Times New Roman', serif;"><span style="font-size: x-small;"></sup><span style="font-family: 'Times New Roman', serif;"><span style="font-size: x-small;"> Dylan Crimmins, <span style="font-family: 'Times New Roman', serif;"><span style="font-size: x-small;"><em>NATO 	would go into Syria if it could. Here is why it can&rsquo;t</em><span style="font-family: 'Times New Roman', serif;"><span style="font-size: x-small;">, 	accessed at <span style="color: #000080;"><span lang="zxx"><span style="color: #1155cc;"><span style="font-family: 'Times New Roman', serif;"><span style="font-size: x-small;"><a href="http://www.policymic.com/articles/53823/nato-would-go-into-syria-if-it-could-here-s-why-it-can-t">http://www.policymic.com/articles/53823/nato-would-go-into-syria-if-it-could-here-s-why-it-can-t</a></p>
+</div>
+<div id="sdfootnote9">
+<p class="western"><a class="sdfootnotesym" name="sdfootnote9sym" href="#sdfootnote9anc">9</a>&nbsp;<sup><span style="font-family: 'Times New Roman', serif;"><span style="font-size: x-small;"></sup><span style="font-family: 'Times New Roman', serif;"><span style="font-size: x-small;"> <span style="font-family: 'Times New Roman', serif;"><span style="font-size: x-small;">Lupick, 	Travis (12 November 2009). "Suspended Afghan MP Malalai Joya 	wants NATO's mission to end". Straight.com. Retrieved 9 	February 2010.</p>
+</div></div><hr><h3>A2 (Katia Smadi) <img src='../../../../images/little_stuff/16-em-up.png' class='discurs_toggler'></h3>
+            <div class='discurs normal_text'><p class="western">We thank the first speaker of the opposition Team for the laid arguments and explanations. However, this House believes that Western democracies have a moral duty to spread democracy across the world, even if this involves the use of force, we did not say it is obligatory to force Eastern and Western countries to apply democracy, instead we said it&rsquo;s a moral duty for Western Countries, that is why first speaker pointed them out and described them. By saying it is a moral duty To benefit people who suffer from dictatorship because we should treat each other as brothers and sisters and not as enemies, so we should benefit for each other and with each other to spread democracy, To save million souls around the world, To prevent spreading dictatorships from empowering their authorities, and To <a  href="#f8681">[1]</a>apply human rights around the world.</p>
+<p>First of all, logically you cannot Referendum each citizen to ask for his or her will, but instead we can have fair election, and each one will vote for the candidate who suits the best and this candidate will represent their will, otherwise there will be a chaos in each country. And this is what describes the best??? For Michael Doyle quote as the first speaker of opposite team mentioned, that says (democracy is not only government "for" the people, it is also government "of" and "by" the people).</p>
+<p class="western">Secondly, The 2<sup>nd</sup> source is unavailable because that I am not enrolled in this course. If possible provide us with more convenient resource. It is known that The French Revolution marks a stain in history, notorious for one of the bloodiest periods in modern civilization.<sup> (1) </sup>And it is a fact and not an opinion also this is what dictatorship means, to spread the empower of dictators.</p>
+<p class="western">Thirdly, The opposition speaker kept saying that we must always look for peaceful alternative ways as they have said, &ldquo;as long as, there are alternatives to military force, we must not waste any human life&rdquo;, our restrictions for force (in the peaceful ways point) affirmed that. On the other hand, the other team did not mention what to do if these alternatives had run out and had become not effective, while the dictatorship increase its power, oppress, and kill more and more people every coming day, because eventually force would be demanded in some cases.</p>
+<p class="western">Fourthly, N1 did mention that there are other alternative ways to military force but did not mention what are they, so please more details if possible.</p>
+<p>Let me start with Rebuttals, first Rebut for &ldquo;we must not Neglect the cost of war&rdquo;:</p>
+<p>The first speaker second argument detailed this, that we would save millions of souls instead considering the example of Nazis&rsquo; holocaust, noting that mostly there would be no war for what we explained before.</p>
+
+<p>Second Rebut, higher number of people who died when Saddam Hussein was dictator than when fighting for democracy by saying that around one million people where killed under Sadam Hussein&rsquo;s regime <sup>(2)</sup>. And an estimated 10,000 lived, but live daily with the disfigurement and sicknesses from the chemical weapons<sup> (3)&nbsp; </sup></p>
+
+<p>Evermore, It&rsquo;s not valid reference for Iraq because our definition of using force conditioned the existence of the western union, which actually was not in that war.</p>
+<p class="western">Third Rebut, for the hypocritical point: As my friend discussed the interfering would be from all the western countries (not from individual countries as what happened in Iraq and Afghanistan) which actually make the use of interests ineffective or actually prohibited because of the specified aims of the union, and for what happened in Ukraine that European Union wants to and reinforce democracy<sup> (4)</sup> and apply human rights by fulfill the EU&rsquo;s conditions over a certain period of time which include addressing the issues of selective justice, reforming its electoral legislation, and conducting a number of reforms within the <a href="http://eeas.europa.eu/delegations/ukraine/eu_ukraine/political_relations/association_agenda/association_agenda_en.htm">Association Agenda</a><sup>(5)</sup> because there was a dictatorship applied by Viktor Yanukovich</p>
+<p class="western">In conclusion, quotes represents personal opinions, so they cannot be a reference. Even more first speaker of affirmative team said, we should use all peaceful ways to apply democracy by Western countries and not one country before using force, and force is described in a clarified way that force must not be used if it could cause a huge loss of lives or a massive destruction, like using nuclear weapons, or causing a world war. For example Latvia we can see when it was in the Russian Empire &ldquo;dictatorship Empire&rdquo; and after joining European Union, that includes higher standards for living for each citizen, by having a healthy and strong economy. And as Benjamin Franklin said &ldquo;Although our interests as citizens vary, each one is an artery to the heart that pumps life through the body politic, and each is important to the health of democracy&rdquo;. <sup>(6)<a  href="#f8682">[2]</a></sup></p>
+
+
+
+<p>1-<a href="http://www.studentpulse.com/articles/142/degrees-of-violence-in-the-french-revolution">http://www.studentpulse.com/articles/142/degrees-of-violence-in-the-french-revolution</a></p>
+<p>2-<a href="http://www.nytimes.com/2003/01/26/weekinreview/the-world-how-many-people-has-hussein-killed.html?src=pm&amp;pagewanted=2">http://www.nytimes.com/2003/01/26/weekinreview/the-world-how-many-people-has-hussein-killed.html?src=pm&amp;pagewanted=2</a></p>
+<p>3-http://history1900s.about.com/od/saddamhussein/a/husseincrimes.htm</p>
+<p>4-<a href="http://www.schuman.info/UN4849.htm">http://www.schuman.info/UN4849.htm</a></p>
+<p>5-<a href="http://carnegieeurope.eu/2013/04/16/why-does-ukraine-matter-to-eu/fzq3">http://carnegieeurope.eu/2013/04/16/why-does-ukraine-matter-to-eu/fzq3</a></p>
+<p>6-http://www.notable-quotes.com/d/democracy_quotes.html</p>
+</div><hr><h3>N2 (Nadia Nofal) <img src='../../../../images/little_stuff/16-em-up.png' class='discurs_toggler'></h3>
+            <div class='discurs normal_text'><p class="western"><span style="font-family: 'Times New Roman', serif;">What makes Western democracies worthy of spreading a system or another? Is it the economical advancements, political system that puts an emphasis on human rights, diversity and freedoms? As we know, in most Western democracies there are still fights for equal human rights (Roma, LGBT<sup><span style="font-family: 'Times New Roman', serif;"><a class="sdfootnoteanc" name="sdfootnote1anc" href="#sdfootnote1sym"><sup>1</sup></a></sup><span style="font-family: 'Times New Roman', serif;">) death threats<sup><span style="font-family: 'Times New Roman', serif;"><a class="sdfootnoteanc" name="sdfootnote2anc" href="#sdfootnote2sym"><sup>2</sup></a></sup><span style="font-family: 'Times New Roman', serif;"> (even though to a softer level compared to a war zone), unfair elections, corruption and so on so why should such countries try and give an example to those who have dictatorships? Even more, which of the Western countries do we refer to? Based on the &ldquo;The Economist Intelligence Unit&rdquo; analyses, out of the 25 full democracies worldwide, some are not Western at all (Japan, South Korea or Costa Rica) while some Western countries aren&rsquo;t considered full democracies at all (Italy, Greece etc).<sup><span style="font-family: 'Times New Roman', serif;"><a class="sdfootnoteanc" name="sdfootnote3anc" href="#sdfootnote3sym"><sup>3</sup></a></sup><span style="font-family: 'Times New Roman', serif;"> </p>
+<p class="western">&nbsp;</p>
+<p class="western"><span style="font-family: 'Times New Roman', serif;">While we can agree these are important assets, there is no clear connection with any moral duty. Rather it is by choice that they&rsquo;re helping other countries become more democratic through funds for development projects or money for civil societies. In case these options run out, as A2 pointed out, UN and NATO have the tools and mandate to intervene and end civil wars and send peace forces. This choice can be one of a kantian, idealistic type (love of all human beings and souls, as A1 made it clear already), but it can also be a more pragmatic one (securing borders, natural resources, military threats). EU is such an example: despite its official stand as a human rights and peace promoter, its Eastern Enlargement project was to secure her borders and have stabil countries there in order for it to function properly<sup><span style="font-family: 'Times New Roman', serif;"><a class="sdfootnoteanc" name="sdfootnote4anc" href="#sdfootnote4sym"><sup>4</sup></a></sup><span style="font-family: 'Times New Roman', serif;">. Our example with Ukraine was an evidence to highlight exactly this: EU is willing to give up its fight for human rights (LGBT community in Ukraine) in order to satisfy a conservative government in Kiev and have a so called stability there. </p>
+<p class="western">&nbsp;</p>
+<p class="western"><span style="font-family: 'Times New Roman', serif;">USA&rsquo;s intervention in Iraq is another one: they wanted to make sure they don&rsquo;t have nuclear weapons (besides reassuring Americans the 9/11 will be revenged), even though they used the democracy promotion speech afterwards. We understood from the other team this would be an illegitimate intervention due to the fact there was no joint Western agreement on this intervention but there is no such agreement in any intervention so far, especially when it is not very clear which Western country do we expect the moral duty to act. Syria&rsquo;s case, given as an example by the Affirmative team, is another type of situation where Western countries&rsquo; hypocrisy is highlighted as they chose not to intervene and save those &ldquo;more than 10,000 people, mostly civilians, killed in Syria since the uprising against Bashar al-Assad began&rdquo; in order to respect Russia&rsquo;s vetoing in the Security Council.<sup><span style="font-family: 'Times New Roman', serif;"><a class="sdfootnoteanc" name="sdfootnote5anc" href="#sdfootnote5sym"><sup>5</sup></a></sup><span style="font-family: 'Times New Roman', serif;"> </p>
+<p class="western">&nbsp;</p>
+<p class="western"><span style="font-family: 'Times New Roman', serif;">The 1848 French Revolution example we gave was one to underlie the idea that the people can choose what type of political regime they want and that the transition to it is of a long shot (still, based on the same &ldquo;The Economist&rdquo; analyses, France is still a &ldquo;flawed&rdquo; democracy.<sup><span style="font-family: 'Times New Roman', serif;"><a class="sdfootnoteanc" name="sdfootnote6anc" href="#sdfootnote6sym"><sup>6</sup></a></sup><span style="font-family: 'Times New Roman', serif;"> Although each citizen from a dictatorial state cannot be logically asked through a referendum what system they want (as the Affirmative team noticed), they can still take on the streets and voice their options through revolutions and bring down their dictators, as it happened with the ex-communist countries or the Arab one. It was people&rsquo;s choice to what kind of political system and values they want to adhere to: countries like Romania, Poland, the Baltic countries and so on made efforts to reach a higher level of democracy through the EU accession<sup><span style="font-family: 'Times New Roman', serif;"><a class="sdfootnoteanc" name="sdfootnote7anc" href="#sdfootnote7sym"><sup>7</sup></a></sup><span style="font-family: 'Times New Roman', serif;"> (that promotes, overall even though imperfect, equal, women, human rights), while Egypt, Libya or Tunisia chose other values through the newly elected political leaders, different from the Western model.<sup><span style="font-family: 'Times New Roman', serif;"><a class="sdfootnoteanc" name="sdfootnote8anc" href="#sdfootnote8sym"><sup>8</sup></a></sup><span style="font-family: 'Times New Roman', serif;"> This is what we meant when we quoted <span style="font-family: 'Times New Roman', serif;">Michael Doyle when he said, &lsquo;democracy is not only government "for" the people&rdquo; (meaning something that can imposed), but a &ldquo;government "of" and "by" the people&rsquo; (meaning that they can choose the type of democracy or political system and values they want, even though they&rsquo;re different from the Western world).<span style="font-family: 'Times New Roman', serif;"> </p>
+<p class="western">&nbsp;</p>
+<p class="western"><span style="font-family: 'Times New Roman', serif;">The motion is based on two strong statements for which the arguments brought by the Affirmative team are not explicit enough, meaning that from their affirmations we couldn&rsquo;t figure out  why Western democracies in particular have any moral duty to promote anything, especially their own democratic political system. The underlying idea behind our argument that these states are hypocritical was exactly the fact that they don&rsquo;t have such or any moral duty to promote anything but their own self interest and well-being, despite the fact that &ldquo;all human beings should act towards one another in a spirit of brotherhood&rdquo;, as the first team said. To that we add that people themselves need to choose their own path. </p>
+<div id="sdfootnote1">
+<p class="western"><a class="sdfootnotesym" name="sdfootnote1sym" href="#sdfootnote1anc">1</a><a href="http://www.dailymail.co.uk/news/article-2326004/More-QUARTER-gay-people-Europe-attacked-threatened-years.html"><span style="color: #1155cc;"><span style="font-size: x-small;">http://www.dailymail.co.uk/news/article-2326004/More-QUARTER-gay-people-Europe-attacked-threatened-years.html</a></p>
+<p class="sdfootnote-western">&nbsp;</p>
+</div>
+<div id="sdfootnote2">
+<p class="western"><a class="sdfootnotesym" name="sdfootnote2sym" href="#sdfootnote2anc">2</a><a href="http://www.wsws.org/en/articles/2011/09/czec-s09.html"><span style="color: #1155cc;"><span style="font-size: x-small;">http://www.wsws.org/en/articles/2011/09/czec-s09.html</a></p>
+<p class="sdfootnote-western">&nbsp;</p>
+</div>
+<div id="sdfootnote3">
+<p class="western"><a class="sdfootnotesym" name="sdfootnote3sym" href="#sdfootnote3anc">3</a><span style="color: #000080;"><span lang="zxx"><a href="https://www.eiu.com/home.aspx"><span style="color: #1155cc;"><span style="font-size: x-small;">http://pages.eiu.com/rs/eiu2/images/Democracy-Index-2012.pdf</a><span style="font-size: x-small;">, 	page 3-4</p>
+<p class="sdfootnote-western">&nbsp;</p>
+</div>
+<div id="sdfootnote4">
+<p class="western"><a class="sdfootnotesym" name="sdfootnote4sym" href="#sdfootnote4anc">4</a>&nbsp;<a href="../../../../../ec.europa.eu/europeaid/where/neighbourhood/eastern_partnership/documents/eastern_partnership_flyer_final_en.html"><span style="color: #1155cc;"><span style="font-size: x-small;">http://ec.europa.eu/europeaid/where/neighbourhood/eastern_partnership/documents/eastern_partnership_flyer_final_en.pdf</a></p>
+<p class="sdfootnote-western">&nbsp;</p>
+</div>
+<div id="sdfootnote5">
+<p class="western"><a class="sdfootnotesym" name="sdfootnote5sym" href="#sdfootnote5anc">5</a>&nbsp;<sup></sup><span style="font-size: x-small;"> <span style="color: #000080;"><span lang="zxx"><a href="http://www.un.org/apps/news/story.asp/story.asp?NewsID=39935&amp;Cr=syria&amp;Cr1=#.Uz8VzfmSwlQ"><span style="color: #1155cc;"><span style="font-size: x-small;">http://www.un.org/apps/news/story.asp/story.asp?NewsID=39935&amp;Cr=syria&amp;Cr1=#.Uz8VzfmSwlQ</a></p>
+<p class="sdfootnote-western">&nbsp;</p>
+</div>
+<div id="sdfootnote6">
+<p class="western"><a class="sdfootnotesym" name="sdfootnote6sym" href="#sdfootnote6anc">6</a>&nbsp;<sup></sup><span style="font-size: x-small;"> Ibidem, p. 4</p>
+<p class="sdfootnote-western">&nbsp;</p>
+</div>
+<div id="sdfootnote7">
+<p class="western"><a class="sdfootnotesym" name="sdfootnote7sym" href="#sdfootnote7anc">7</a>&nbsp;<span style="font-size: x-small;">David Cameron, <span style="color: #000080;"><span lang="zxx"><a href="../../../../../web.law.columbia.edu/sites/default/files/microsites/law-theory-workshop/files/Cameron%20-%20Post-Soviet%20Affairs.pdf"><span style="color: #1155cc;"><span style="font-size: x-small;">http://web.law.columbia.edu/sites/default/files/microsites/law-theory-workshop/files/Cameron%20-%20Post-Soviet%20Affairs.pdf</a></p>
+<p class="sdfootnote-western">&nbsp;</p>
+</div>
+<div id="sdfootnote8">
+<p class="western"><a class="sdfootnotesym" name="sdfootnote8sym" href="#sdfootnote8anc">8</a>&nbsp;<span style="font-size: x-small;">Larry Diamond, <span style="color: #000080;"><span lang="zxx"><a href="http://www.wilsonquarterly.com/essays/why-wait-democracy"><span style="color: #1155cc;"><span style="font-size: x-small;">http://www.wilsonquarterly.com/essays/why-wait-democracy</a><span style="font-size: x-small;">. 	For the first citation given in N1 speech we suggest enrolling to 	that course, didn&rsquo;t find another source unfortunately.</p>
+<p class="sdfootnote-western">&nbsp;</p>
+</div></div><hr><hr><h2>Decision:</h2> <script>
+        $j(document).ready(function(){
+			$j('.decizie_toggler').toggle( 
+				function(){
+					$j(this).attr('src', '../../../../images/little_stuff/16-em-down.png');   
+					$j(this).parent().next('.decizie').hide('fast'); 
+                },
+                function(){
+					$j(this).attr('src', '../../../../images/little_stuff/16-em-up.png');
+					$j(this).parent().next('.decizie').show('fast'); 
+                } 
+			);
+		});</script><div class='decizie'><h3>cristina rosu
+                <img src='../../../../images/little_stuff/16-em-up.png' class='decizie_toggler'></h3><div class='normal_text'><p class="western" lang="ro-RO"><span lang="en-US"><strong>A1: 21 points</strong></p>
+<p class="western" lang="ro-RO"><span lang="en-US">Content: 10</p>
+<p class="western" lang="ro-RO"><span lang="en-US">Strategy: 7</p>
+<p class="western" lang="ro-RO"><span lang="en-US">Style: 4</p>
+<p class="western">I appreciate the structure of the speech and the initial clarification of the context you want take into consideration in this debate. Be carefull at the fair play, though, because you choose some rules almost impossible to happen in reality- wich affects the vision you propose, by making it less probable to apply in the real world. For example, it is difficult to imagine/ to determine when ALL the diplomatic measures have been used and is also difficult to imagine a union of the western countries for the purpose of imposing democracy using force (a bit contradictory with point 3, where you make sure your vision does not cause a world war). I believe it was necessary to explain better what is &ldquo;moral&rdquo; and why democracy is important and will work in all countries (the example of Korea should have been better explained). Be carefull of using truistic ideas, like we have to save the lives of humans, human rights are important- I would recommend you to focus more on the explanations of how these goals will be achieved if we apply the vision you propose.</p>
+<p class="western">&nbsp;</p>
+<p class="western" lang="ro-RO"><span lang="en-US"><strong>N1: 23 points</strong></p>
+<p class="western" lang="ro-RO"><span lang="en-US">Content: 12</p>
+<p class="western" lang="ro-RO"><span lang="en-US">Strategy: 7</p>
+<p class="western" lang="ro-RO"><span lang="en-US">Style: 4</p>
+<p class="western">The idea of creating democracy from inside, not imposing it from ouside the country, has potential. However, it's worth analyzing if this is feasible, especially in regimes where the opression is so strong, for so long, that peole lack the proper tools to make a change - or when they do manage to stand up for their rights, it takes the form of a bloody revolution. You might want to argue that thisis still preferable to an intervention, but you would have to explain why. Additionally, it would help if you explained why democracy is a slow process  and should remain so, versus imposing it from outside the country.</p>
+<p class="western">&nbsp;I think you made a good strategic choice when saying that military intervention by international bodies is legitimate when stopping genocide/gross violation of human right, but less obvious when trying to impose a regime. ("<span style="font-family: 'Times New Roman', serif;">If we take into  considerations Affirmator&rsquo;s limits for intervention, we agree that they  can get involved in order to protect civilians&rsquo; lives when they are at  threat, but not necessary to overthrow the regime and not to impose  democracy by default.") So, you are right in saying it is the affirmative teams' burden of proof to show that the choice (westermn states' choice) for demoracy is reason enough for intervention, beyond the atrocities that take or don't take place in the country where they want to intervene.</p>
+<p class="western">I recommend you to use a more structured refutation and to make a clear explanation of the immoral aspect of using force.</p>
+<p class="western">&nbsp;</p>
+<p class="western" lang="ro-RO"><span lang="en-US"><strong>A2: 21 points</strong></p>
+<p class="western" lang="ro-RO"><span lang="en-US">Content: 10</p>
+<p class="western" lang="ro-RO"><span lang="en-US">Strategy: 7</p>
+<p class="western" lang="ro-RO"><span lang="en-US">Style: 4</p>
+<p class="western">I appreciate the structured speech.</p>
+<p>You repeat the idea that people in undemocratic countries deserve human rights and beter life and they should have the right to cast a vote - which is not something that anyone would argue against, the opposing team wants these things also, so it might be more useful to spend less space (number of words) on this and explain more why force is the right tool to achieve these things. You raise this good point and challenge the Negatiev team to take a stance when saying "Thirdly, The opposition speaker kept saying that we must always look for  peaceful alternative ways as they have said, &ldquo;as long as, there are  alternatives to military force, we must not waste any human life&rdquo;, our  restrictions for force (in the peaceful ways point) affirmed that. On  the other hand, the other team did not mention what to do if these  alternatives had run out and had become not effective, while the  dictatorship increase its power, oppress, and kill more and more people  every coming day, because eventually force would be demanded in some  cases."</p>
+<p>The negative team proposed some alternative measures for the western countries to intervene (investment, trade, foreign aid,&nbsp; or punitive measures such as economic sanctions) - I believe it was necessary to analyze whether these countries might have a higher level of morality in their military interventions, when they have exhausted all other more diplomatic measures.</p>
+<p>You mention that hypocrisy and self interested interventions are diminished if action is taken by a union of western states and not one individual state - this vision of the affirmative team should have been clear for the start of the debate, otherwise it becomes confusing. Also, you continue this paragraph by invoking Latvia and its history - it looks like an idea that landed in the middle of another idea. Be more careful ins eparating arguments in paragraphs, don't mix them!</p>
+<p class="western">&nbsp;</p>
+<p class="western" lang="ro-RO"><span lang="en-US"><strong>N2: 24 points</strong></p>
+<p class="western" lang="ro-RO"><span lang="en-US">Content: 12</p>
+<p class="western" lang="ro-RO"><span lang="en-US">Strategy: 7</p>
+<p class="western" lang="ro-RO"><span lang="en-US">Style: 5</p>
+<p class="western">Firstly, I congratulate you ont aking teh ime to do research and document your speech, it's a good habbit that will help you become a knowledgeable debater. You need to work on improving the structure of your speech - especially given taht you are the last speaker, you need to point out what are the areas of clash (the ideas on which the teams had opposing views) and&nbsp; explain why your team has been more convincing in proving them.</p>
+<p class="western">You make a distinction between a moral duty and a pragmatic choice, but it is unclear why they can't coexist/overlap. Another aspect remained unsufficiently explained by your team: the negative repercussions of imposing democracy from outside the country and why these are greater than intervention from inside.</p>
+<p class="western">Overall, I think the area that needs improvement in your speech is&nbsp; making a clear vision of what happened in the debate, highlighted as areas of clash. Also, work on delivering a more point by point refutation.</p>
+<p class="western">&nbsp;</p>
+<p class="western" lang="ro-RO"><span lang="en-US"><strong>Decision:</strong></p>
+<p class="western">The affirmative team had the burden of explaining why the western states  have a moral duty to intervene and why they still act in a moral manner  if they use force to impose it. The affirmative team presented a series of situations in wich they consider it is justified to intervene using force. However, during the debate, these initial settings generated discussions about the use of diplomatic sanctions, the necessity of an union and not if an individual state. On the matter of alternative measures, I believe it was necessary to make a connection with the morality of the military intervention- how it increases if we exhaust all other forms of diplomatic sanctions. On the matter of the necessity of all the western democracies, I believe it was necessary an explanation of why we should refer only to an union and not a state/ group of states part of those democracy, especially when the negative team asked for it. Overall, Neg team shows there are alternatives and that the last resort - using force - is only acceptable for peace keeping, not for imposign a regime change.</p>
+<p class="western" lang="ro-RO">The negative team started with the idea that democratization is a slow  process that must happen from the inside and not imposed by an exterior  force. This became a relevant <span lang="en-US">clash about &bdquo;government of and by the people&rdquo;. I believe the negative team pointed out that democracy is a system that needs time to be applied and that it has to be the choice of the population. Even states from the West that are considered democracies have problems with respecting human rights and are democracies only in a formal way. The affirmative team&rsquo;s idea about imposing democracy and organising democratic ellections seems only formal, especially when they mention the neccesity of respecting human rights and creating a new, better world.&nbsp; If morality means to act according to the general good, then I believe the negative team demonstrated that imposing democracy (even using force) has nothing to do with morality, but with individual interests, morality being only a fa&ccedil;ade. The effect is a fake process of democratisation, because the authentic one must start from inside the population, as the negative team pointed out.</p>
+<p class="western" lang="ro-RO"><strong>The negative team</strong> won the debate.</p></div>A1 -> 21 points<br>N1 -> 23 points<br>A2 -> 21 points<br>N2 -> 24 points<br>Winning team: <h3 style='display:inline;color:red;'>Borderless (Negative team)</h3></div><hr><h3 class='important'>We want your opinion! for this you need to login.</h3>
+                <div class='clear'></div>
+        </div><!-- end main content -->
+         <div class='clear'></div>
+</div>
+<div id="pix"></div>
+                                </div><!--end main -->
+                                <div id='parteneri'>
+                                    <span class='tr'></span><span class='tl'></span><span class='br'></span><span class='bl'></span><span id="filler"></span>
+                                    <div class='parteneri' id='sustinatori'>
+                                        <span class='floating_text' id='un_proiect'>Un proiect</span>
+                                        <a href='https://www.facebook.com/Diwanieh'><div class='image' id='diwanieh' >Diwanieh</div></a>
+                                        <a href='http://www.ardor.org.ro/'><div class='image' id='ardor'>Ardor</div></a>
+										<a href='http://www.annalindhfoundation.org/'><div class='image' id='anna_lindh'>Anna Lindh Foundation</div></a>
+                                        <!-- 
+                                        <span class='floating_text' id='finantatori'>Finanțatori</span>
+										<a href='http://www.opensocietyfoundations.org/'><div class='image' id='open_society'>Open Society Foundation </div></a>
+                                        <a href='http://www.studentiq.ro//'><div class='image' id='memoplus'>MemoPlus</div></a>
+                                        <a href='http://www.ratiufamilyfoundation.com/'><div class='image' id='FundatiaRatiu'>Ardor</div></a>
+                                        <a href='http://www.eef.md/'><div class='image' id='eef'>East Europe Foundation</div></a>
+                                        <a href='http://www.mts.gov.md/'><div class='image' id='mdminister'>Ministerul Tineretului si Sportului al Republicii Moldova</div></a> -->
+
+                                        <span class='floating_text' id='parteneri_text'>Parteneri</span>
+
+                                        <a href='http://www.policycenter.eu/'><div class='image' id='PolicyCenter'>Policy Center</div></a>
+                                        <a href='http://www.britishcouncil.org/'><div class='image' id='BritishCouncil'>British Council</div></a>
+                                        <a href='http://www.europuls.ro/'><div class='image' id='europuls'>Europuls</div></a>
+                                        <a href='http://www.cere.ro/'><div class='image' id='cere'>Ce-Re</div></a>
+                                        <a href='http://www.primeromania.ro/'><div class='image' id='prime'>Prime Romania</div></a>
+                                        <a href='http://www.cji.ro/'><div class='image' id='cji'>Centrul pentru jurnalism independent</div></a>
+                                        <a href='http://www.aiesectm.ro/'><div class='image' id='aisec'>Aisec</div></a>
+                                        <!-- ===================================================================================================== -->
+                                        <a href='http://www.cogitus.ro/'><div class='image' id='cogitus'>Cogitus</div></a>
+                                        <a href='http://www.adevarul.ro/international/foreign_policy/'><div class='image' id='foreignPolicy'>Foreign Policy</div></a>
+                                        <a href='http://www.elsa.ro/'><div class='image' id='elsa'>Elsa</div></a>
+                                        <a href='http://www.vipromania.ro/'><div class='image' id='vipromania'>Voluntari pentru idei si proiecte</div></a>
+                                        <a href='http://www.ongtrust.ro/'><div class='image' id='ongtrust'>Trust</div></a>
+
+                                        <!-- ===================================================================================================== -->
+                                        <a href='http://www.leap.ro/'><div class='image' id='leap'>Leap</div></a>
+                                        <a href='http://www.younginitiative.org/'><div class='image' id='younginitiative'>Asociatia young initiative</div></a>
+                                        <a href='http://www.asjc.ro/'><div class='image' id='asjc'>Asjc</div></a>
+                                        <a href='http://osut.ro/'><div class='image' id='osut'>Osut</div></a>
+                                        <div class='clear'></div>
+                                    </div>
+                                    <div class='parteneri' id='parteneri_institutionali'>
+                                        <span class='floating_text' id='sponsori_text'>Sus&#539;in&#x0103;tori</span>
+                                        <a href='http://www.cartier.md/'><div class='image' id='cartier_logo'>Editura Cartier</div></a>
+                                        <a href='http://www.pll.md/ro/'><div class='image' id='biblio_logo'>Biblioteca publica de drept</div></a>
+                                        <span class='floating_text' id='institutii_text'>Parteneri institu&#539;ionali</span> 
+                                        <ul id='institutii'>
+                                            <!-- <span class='floating_text' id='institutii_text'>Parteneri institu&#539;ionali:</span> -->
+                                            <li><a href='http://www.politice.ro/'>Facultatea de &#536;tiin&#539;e Politice SNSPA </a></li>
+                                            <li><a href='http://www.comunicare.ro/'>Facultatea de Comunicare &#537;i Rela&#539;ii Publice SNSPA</a></li>
+                                            <li><a href='http://www.fspub.ro/'>Facultatea de &#536;tiin&#539;e Politice Universitatea Bucure&#537;ti</a></li>
+                                            <li><a href='http://www.filosofie.unibuc.ro/'>Facultatea de Filosofie Universitatea Bucure&#537;ti</a></li>
+                                            <li><a href='http://litere.unibuc.ro/'>Facultatea de Litere din Universitatea Bucure&#x015f;ti</a></li>
+                                            <li><a href='http://www.unibuc.ro/ro/fac_fsas_ro'>Facultatea de Sociologie Universitatea Bucure&#537;ti</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class='parteneri' id='parteneri_media'>
+                                        <span class='floating_text' id='media_text'>Parteneri media</span>
+                                        <a href='http://www.hotnews.ro/'><div class='image' id='hotnews'>HotNews</div></a>
+                                        <!-- <a href='http://www.lumebuna.ro/'><div class='image' id='lumebuna'>Lume Buna</div></a> -->
+                                        <a href='http://www.romaniapozitiva.ro/'><div class='image' id='romaniapozitiva'>Romania Pozitiva</div></a>
+                                        <a href='http://totb.ro/'><div class='image' id='thinkoutsidethebox'>Think Outside The Box</div></a>
+                                        <a href='http://www.facebook.com/carevasazica.vip'><div class='image' id='carevasazica'>Carevasazica</div></a>
+                                        <a href='http://www.studentie.ro/'><div class='image' id='studentiero'>Studentie.ro</div></a>
+                                        <a href='http://startub.unibuc.ro/'><div class='image' id='startub'>startub.unibuc.ro</div></a>
+                                        <!-- <a href='http://www.tvr.ro/tvr_cluj.php'><div class='image' id='tvrcluj'>Tvr Cluj</div></a> -->
+                                        <!-- <a href='http://www.radiotransilvania.ro'><div class='image' id='radiotransilvania'>Radio Transilvania</div></a> -->
+                                        
+
+                                        <div class='clear'></div> 
+                                    </div>
+                                    <div class='clear'></div>
+
+                                </div>	
+                            </div>	<!-- end wrap -->
+                            <div id='footer_mare'>
+                                <div id='footer'>
+                                    <div id='links' class='footer'>
+                                        
+                                    </div><!--
+                                    <div id='contact' class='footer'>
+                                            <h4>Contact</h4>
+                                            <p>office@closer2oxford.ro</p>
+                                            <p>bogdan.draghicescu@closer2oxford.ro<br>
+                                            <span class='detalii'> (asistenta tehnica web - orice probleme legate de site)</span></p>
+                                    </div>
+                                    -->
+                                    <div id='newsletter' class='footer'>
+                                        <script src="../../../../../connect.facebook.net/en_US/all.js#xfbml=1"></script><fb:like href="http://www.facebook.com/pages/Closer2Oxford/162758797069605" width="250" colorscheme="dark"></fb:like>
+                                        <!--<h4>Newsletter</h4>
+                                        <form action='/page/newsletter'>
+                                                <input type='text' name='email'>
+                                                <input type='submit' id='submit' value='>'>
+                                                        
+                                        </form>-->
+                                    </div>
+                                    <div id='credits'>
+                                        Copyright(c) 2021 ARDOR |  Toate drepturile rezervate | Toate logo-urile si sloganurile de pe site sunt proprietate intelectuala inregistrata si nu pot fi reproduse fara acordul explicit al detinatorilor. <br>
+                                            <br /><br />
+                                            <b>Disclaimer</b><br /><i>
+
+                                                Programul educational Closer to Oxford este un program non-profit si nu are o legatura cu universitatea cu acelasi nume, referirea la Oxford avand doar o semnificatie simbolica.
+                                            </i>
+                                    </div>
+
+                                </div>		
+                            </div>		
+
+                            <div id="finantatde">Acest proiect este finantat cu sustinere din partea Comisiei Europene. Aceast publicatie [comunicare] reflecta doar
+                                vederile autorului, iar Comisia nu poate fi facuta  responsabila pentru utilizarea informatiei pe care o contine.</div>
+
+
+                        </body>
+                        </html>

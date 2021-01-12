@@ -1,0 +1,731 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml-strict.dtd">
+<HTML xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+    <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+            <link rel="icon" type="image/png"  href="../../closer2oxford.ro/favicon.html">
+                <link rel="stylesheet" href="var/layout.css" type="text/css">
+                    <title>Closer to Oxford - e timpul pentru argumente!</title>
+                    <link rel="alternate" type="application/rss+xml"  href="rss_feed" title="Stiri Closer2Oxford">
+                        <!-- <link rel="image_src" property="og:image"  href="/images/layout/closer2oxford_fb_white.png" /> -->
+                        <link rel="image_src" property="og:image"   type="image/jpeg"  href="../uploads/2015/06/9/facebook_icon.html" />
+                        <link rel="image_src" type="image/jpeg"  href="../uploads/2015/06/9/icon-facebook.gif" /> 
+						<meta name="description" content="Closer2Oxford pune în valoare oameni şi argumentele lor, în dezbateri online şi publice alături de tineri şi invitați avizaţi"/>
+                        <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9" />
+<script type='text/javascript' src='../js/jquery-1.4.4.min.js'></script>
+<script>var $j = jQuery.noConflict();</script>
+<script type='text/javascript' src='../js/tinymce/tiny_mce.js'></script>
+<script type='text/javascript' src='../js/jquery.form.js'></script>
+<script type='text/javascript' src='../js/fbLoginRegister.js'></script>
+<script type='text/javascript' src='var/javascript.js'></script>
+<script type='text/javascript' src='../js/jquery.hovertip-1.0.min.js'></script> 
+<script type='text/javascript' src='../js/jquery.jgrowl_minimized.js'></script> 
+<link rel='stylesheet' href='../css/jquery.jgrowl.css' media='screen' type='text/css'> 
+<script type='text/javascript' src='../js/jquery.timer-min.js'></script> 
+<link rel='stylesheet' href='var/gallery.css' media='screen' type='text/css'> 
+<script type='text/javascript' src='var/galerie/jquery.prettyPhoto.js'></script> 
+<meta name='description' content=''/> 
+<meta name='keywords' content=''/> 
+<style>.hovertip{
+    position:absolute;
+    padding:10px 13px;
+    z-index:2;
+    max-width:300px;
+    color:#303030;
+    background-color:#f5f5b5;
+    border:1px solid #DECA7E;
+    font-family:sans-serif;
+    font-size:12px;
+    line-height:18px;
+    text-align:left;
+    }</style> 
+<script type='text/javascript'>$j(document).ready(function(){$j('.tooltip').hovertip({'offset':[20,20]});get_notif();});
+
+if(!Array.indexOf){Array.prototype.indexOf = function(obj){for(var i=0; i<this.length; i++){if(this[i]==obj){return i;}}return -1;}}
+    hashuri = [] ;
+	 var tick_timer= 3000 ;
+ 
+	 function get_notif()
+        {
+		  
+		  //console.log(tick_timer);
+	     
+		  setTimeout(get_notif,tick_timer);
+        
+		   $j.ajax(
+            {
+                url: '/page/notif/show_events',
+                dataType: 'json',
+                data: "{}",
+                success: function(data)
+                    {
+                    $j.each(data,function(index,data){
+                        try
+                            {
+                            if( hashuri.indexOf(data.hash) == -1 )
+                                {
+                                hashuri.push(data.hash);
+                                $j.jGrowl(
+                                    data.str,
+                                    {
+                                        corners:'1px',
+                                        life: data.life,
+                                        header:data.title,
+                                        hash: data.hash,
+                                        sticky: data.sticky,
+                                        close: function(e,m,o)
+                                            {
+                                                $j.ajax({url:'/page/notif/delete_single_event/' + o.hash});
+                                            }
+                                    });
+                                }
+                            }
+                        catch(e){}
+                        })
+                    }
+            });
+        }
+	 </script> 
+ 
+                            
+  <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-19111721-1']);
+  _gaq.push(['_setDomainName', '.closer2oxford.ro']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+    
+                        </head>
+                        <body>
+                            <div id="global_wrap">
+                                <div id="header">
+                                    <a href='../index.html'><div id='logo'><img src='../images/layout/sigla.jpg'></div></a>
+                                    <a class='noExternal' href='http://www.facebook.com/pages/Closer2Oxford/162758797069605'><img src='../images/fb.png' style='height:30px;float:right;clear:right;margin:10px 5px 5px 5px;border:none;'/></a>
+                                    <a href='rss_feed'><img src='../images/feed-icon.png' style='height:30px;float:right;clear:right;margin:5px;border:none;'/></a>
+                                </div>
+                                <div id="meniu">
+                                    <div  id='register_login'>
+
+                                        
+  <a href='#' class='todo' id='login'>Login </a> &nbsp;<a href='register.html' class='todo' id='register'>Register</a>
+    <div id='login_box'>
+		  <form action='https://dev.closer2oxford.ro/page/ro/login_user/logon' method='post' id='user_login_form'>
+					 <div>Email: <input type='text' name='email'/> </div><br />
+					 <div>Pass: <input type='password' name='passwd'/></div><br />
+					 <a href='#' class='password_forgot'>forgot password?</a>
+					 <input type='hidden' value='/page/dezbatere_bucuresti_toamna' name='returnto' class='submiter'/><br />
+					 <input type='submit' value='login' name='btn' class='submiter'/><br />
+		  </form>
+		  
+		  <form action='https://dev.closer2oxford.ro/page/ro/login_user/reset_user_pw' method='post' id='user_reset_form'>
+					 <div>Email: <input type='text' name='email'/> </div><br />
+					 <a href='#' class='password_forgot'>login?</a>
+					 <input type='hidden' value='/page/dezbatere_bucuresti_toamna' name='returnto' class='submiter'/><br />
+					 <input type='submit' value='reset' name='btn' class='submiter'/><br />
+		  </form>
+		  
+    </div>
+    
+                                    </div>
+                                    <div id='menu1' style='margin:auto;'> <ul id='meniu_prinicpal'><li><a href='contacte/index.html'> Contact </a></li>
+<li><a href='clubdebate/index.html'> Cluburile </a></li>
+<li><a href='oamenii/index.html'> Oamenii </a></li>
+<li><a href='proiectul/index.html'> Proiectul </a></li>
+<li><a href='home/index.html'> Acasa </a></li>
+</ul></div><!--end menu-->
+                                </div>
+                                <div id="main"> 
+                                    <!--<div id='stiri-padding'>
+        <div id='stiri_back'>
+                {stiri} 
+    
+               
+        </div>-->
+        
+</div>
+<div  id="content-padding">
+        <div id='sidebar_menu'>
+                <span class='tr'></span>
+                <span class='tl'></span>
+                <span class='br'></span>
+                <span class='bl'></span>
+                <span id="filler"></span>
+                    
+                <ul></ul>
+                
+                <div class='clear'></div>
+        </div>
+        <div id="content">
+                <span class='tr'></span>
+                <span class='tl'></span>
+                <span class='br'></span>
+                <span class='bl'></span>
+                <span id="filler"></span>
+                <script type='text/javascript' src='../js/jquery.hovertip-1.0.min.js'></script> 
+<script type='text/javascript' src='../js/jquery.jgrowl_minimized.js'></script> 
+<link rel='stylesheet' href='../css/jquery.jgrowl.css' media='screen' type='text/css'> 
+<script type='text/javascript' src='../js/jquery.timer-min.js'></script> 
+<link rel='stylesheet' href='var/gallery.css' media='screen' type='text/css'> 
+<style>.hovertip{
+    position:absolute;
+    padding:10px 13px;
+    z-index:2;
+    max-width:300px;
+    color:#303030;
+    background-color:#f5f5b5;
+    border:1px solid #DECA7E;
+    font-family:sans-serif;
+    font-size:12px;
+    line-height:18px;
+    text-align:left;
+    }</style> 
+<script type='text/javascript'>$j(document).ready(function(){$j('.tooltip').hovertip({'offset':[20,20]});get_notif();});
+
+if(!Array.indexOf){Array.prototype.indexOf = function(obj){for(var i=0; i<this.length; i++){if(this[i]==obj){return i;}}return -1;}}
+    hashuri = [] ;
+	 var tick_timer= 3000 ;
+ 
+	 function get_notif()
+        {
+		  
+		  //console.log(tick_timer);
+	     
+		  setTimeout(get_notif,tick_timer);
+        
+		   $j.ajax(
+            {
+                url: '/page/notif/show_events',
+                dataType: 'json',
+                data: "{}",
+                success: function(data)
+                    {
+                    $j.each(data,function(index,data){
+                        try
+                            {
+                            if( hashuri.indexOf(data.hash) == -1 )
+                                {
+                                hashuri.push(data.hash);
+                                $j.jGrowl(
+                                    data.str,
+                                    {
+                                        corners:'1px',
+                                        life: data.life,
+                                        header:data.title,
+                                        hash: data.hash,
+                                        sticky: data.sticky,
+                                        close: function(e,m,o)
+                                            {
+                                                $j.ajax({url:'/page/notif/delete_single_event/' + o.hash});
+                                            }
+                                    });
+                                }
+                            }
+                        catch(e){}
+                        })
+                    }
+            });
+        }
+	 </script> 
+
+<script type='text/javascript' src='../js/jquery.hovertip-1.0.min.js'></script> 
+<script type='text/javascript' src='../js/jquery.jgrowl_minimized.js'></script> 
+<link rel='stylesheet' href='../css/jquery.jgrowl.css' media='screen' type='text/css'> 
+<script type='text/javascript' src='../js/jquery.timer-min.js'></script> 
+<link rel='stylesheet' href='var/gallery.css' media='screen' type='text/css'> 
+<script type='text/javascript' src='var/galerie/jquery.prettyPhoto.js'></script> 
+<style>.hovertip{
+    position:absolute;
+    padding:10px 13px;
+    z-index:2;
+    max-width:300px;
+    color:#303030;
+    background-color:#f5f5b5;
+    border:1px solid #DECA7E;
+    font-family:sans-serif;
+    font-size:12px;
+    line-height:18px;
+    text-align:left;
+    }</style> 
+<script type='text/javascript'>$j(document).ready(function(){$j('.tooltip').hovertip({'offset':[20,20]});get_notif();});
+
+if(!Array.indexOf){Array.prototype.indexOf = function(obj){for(var i=0; i<this.length; i++){if(this[i]==obj){return i;}}return -1;}}
+    hashuri = [] ;
+	 var tick_timer= 3000 ;
+ 
+	 function get_notif()
+        {
+		  
+		  //console.log(tick_timer);
+	     
+		  setTimeout(get_notif,tick_timer);
+        
+		   $j.ajax(
+            {
+                url: '/page/notif/show_events',
+                dataType: 'json',
+                data: "{}",
+                success: function(data)
+                    {
+                    $j.each(data,function(index,data){
+                        try
+                            {
+                            if( hashuri.indexOf(data.hash) == -1 )
+                                {
+                                hashuri.push(data.hash);
+                                $j.jGrowl(
+                                    data.str,
+                                    {
+                                        corners:'1px',
+                                        life: data.life,
+                                        header:data.title,
+                                        hash: data.hash,
+                                        sticky: data.sticky,
+                                        close: function(e,m,o)
+                                            {
+                                                $j.ajax({url:'/page/notif/delete_single_event/' + o.hash});
+                                            }
+                                    });
+                                }
+                            }
+                        catch(e){}
+                        })
+                    }
+            });
+        }
+	 </script> 
+
+<style type="text/css">
+.poze
+{
+    float:right;
+    width:110px;
+}
+.poze a img
+{    border:none;
+}
+.main_content
+{
+    float:left;
+    width:560px;
+}
+</style>
+
+ <div class = 'poze'>
+            <a class='thumb' href='../uploads/2011/01/5/bucuresti_initial.muchrn.png' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../uploads/2011/01/5/thumb_bucuresti_initial.muchrn.png' alt='' />
+                <span class='desc'>Vot public initial</span>
+            </a>
+        
+
+            <a class='thumb' href='http://www.vimeo.com/18057120' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../../b.vimeocdn.com/ts/113/107/113107858_100.jpg' alt='' />
+                <span class='desc'>Discurs Flavia Soare</span>
+            </a>
+        
+
+            <a class='thumb' href='http://vimeo.com/18054601' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../../b.vimeocdn.com/ts/113/053/113053729_100.jpg' alt='' />
+                <span class='desc'>Discurs  Andrei Luca</span>
+            </a>
+        
+
+            <a class='thumb' href='http://www.vimeo.com/18057639' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../../b.vimeocdn.com/ts/113/110/113110856_100.jpg' alt='' />
+                <span class='desc'>Discurs Laurentiu Gheorghe</span>
+            </a>
+        
+
+            <a class='thumb' href='http://www.vimeo.com/18057989' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../../b.vimeocdn.com/ts/113/113/113113889_100.jpg' alt='' />
+                <span class='desc'>Andrei Cornea</span>
+            </a>
+        
+
+            <a class='thumb' href='http://vimeo.com/18055483' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../../b.vimeocdn.com/ts/113/094/113094653_100.jpg' alt='' />
+                <span class='desc'>Interventie 1</span>
+            </a>
+        
+
+            <a class='thumb' href='http://vimeo.com/18056083' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../../b.vimeocdn.com/ts/113/099/113099074_100.jpg' alt='' />
+                <span class='desc'>Interventie 2</span>
+            </a>
+        
+
+            <a class='thumb' href='../uploads/2011/01/9/bucuresti3.vg125b.jpg' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../uploads/2011/01/9/thumb_bucuresti3.vg125b.jpg' alt='' />
+                <span class='desc'></span>
+            </a>
+        
+
+            <a class='thumb' href='../uploads/2011/01/9/bucuresti5.wa8lcf.jpg' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../uploads/2011/01/9/thumb_bucuresti5.wa8lcf.jpg' alt='' />
+                <span class='desc'></span>
+            </a>
+        
+
+            <a class='thumb' href='../uploads/2011/01/9/bucuresti6.tkr3ei.jpg' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../uploads/2011/01/9/thumb_bucuresti6.tkr3ei.jpg' alt='' />
+                <span class='desc'></span>
+            </a>
+        
+
+            <a class='thumb' href='../uploads/2011/01/9/bucuresti7.sdptkr.jpg' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../uploads/2011/01/9/thumb_bucuresti7.sdptkr.jpg' alt='' />
+                <span class='desc'></span>
+            </a>
+        
+
+            <a class='thumb' href='../uploads/2011/01/9/bucuresti2.lcfzq0.jpg' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../uploads/2011/01/9/thumb_bucuresti2.lcfzq0.jpg' alt='' />
+                <span class='desc'></span>
+            </a>
+        
+
+            <a class='thumb' href='../uploads/2011/01/9/bucuresti4.fzq0hu.jpg' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../uploads/2011/01/9/thumb_bucuresti4.fzq0hu.jpg' alt='' />
+                <span class='desc'></span>
+            </a>
+        
+
+            <a class='thumb' href='../uploads/2011/01/9/bucuresti1.r3eiom.jpg' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../uploads/2011/01/9/thumb_bucuresti1.r3eiom.jpg' alt='' />
+                <span class='desc'></span>
+            </a>
+        
+
+            <a class='thumb' href='../uploads/2011/01/5/bucuresti_final.jzbpx9.png' title='' rel='disabled_prettyPhoto[mixed]'>
+                <img src='../uploads/2011/01/5/thumb_bucuresti_final.jzbpx9.png' alt='' />
+                <span class='desc'>Vot public final</span>
+            </a>
+        
+
+
+    <script>
+    $j(document).ready(function(){
+      		$j("a[rel^='prettyPhoto']").prettyPhoto({theme:'facebook'});
+        });
+    
+    </script>
+    </div>
+
+<div class='main_content'>
+<p><strong>Bucuresti, Centrul pentru Jurnalism Independent, 14 decembrie 2010</strong></p>
+<p><strong>&nbsp;</strong></p>
+<p>Echipa Afirmatoare: Flavia Soare &ndash; studenta Drept si Laurentiu Gheorghe &ndash; asistent Universitatea Bucuresti, Facultatea de Filosofie</p>
+<p>Echipa Negatoare: Andrei Luca &ndash; student UNATC si Andrei Cornea &ndash; profesor Universitatea Bucuresti, Facultatea de Litere</p>
+<p>moderator: Vlad Mixich - jurnalist Hotnews</p>
+<p>&nbsp;</p>
+<p><strong>A1 - Flavia Soare (Afirmator 1)</strong></p>
+<p>As vrea sa spun ca problema responsabilitatilor televiziunilor private s-a pus destul de des in dezbazbatere atat in competitiile [de debate], cat si in sfera publica. Deasupra argumentelor castigatoare, intotdeauna s-a profilat o idee care, din pacate, a jucat atat rol de cauza, cat si de efect, faptul ca in Romania televiziunea este de proasta calitate. Pentru a gasi vinovatul acestei probleme, esti fortat sa intri, aproape intotdeauna, intr-un cerc vicios. Pe de o parte televiziunea difuzeaza ceea ce consuma publicul, iar publicul consuma ceea ce difuzeaza televiziunea. Pe de o parte ar fi exagerat sa spui ca este numai vina televiziunii, dar la fel de exagerat este sa spui ca daca televiziunea ar incepe sa promoveze materiale cu caracter educational sau de mai buna calitate, publicul ar fi nereceptiv si ar fi vina lui.</p>
+<p>In primul rand ne ridicam o intrebare foarte importanta. Are responsabilitate un mediu de afaceri fata de publicul pe care se bazeaza respectiva afacere? Da. Orice afacere are responsabilitati fata de clientii sai, in sensul calitatii produsului pe care il vinde. Iar televiziunea, trebuie sa acceptam, este o afacere cu un impact foarte mare. De aici rezulta ca si responsabilitatea pe care o are este cu atat mai mare. Acum trebuie sa ne intrebam de ce educatia ar intra in aceasta responsabilitate a televiziunii? Pentru ca, in primul rand, televiziunea este un mijloc de comunicare si de transmitere a informatiei, iar informatia este primul pas din acest fenomen complex al educatiei. Atunci cand privesc la televizor asimilez informatia, o supun unor criterii de selectie si o asimilez in cadrul unei grile de valori pe care o detin. Este asemenea unui rationament matematic. In momentul in care pleci de la o premisa falsa, atunci tot rationamentul va fi viciat.</p>
+<p>Se mai impune o intrebare foarte importanta. De ce s-ar implica o companie privata intr-o chestiune care nu priveste profitul in sine? Aici echipa afirmatoare sustine faptul ca pe termen lung ar fi un beneficiu atat pentru televiziune, cat si pentru public - faptul de a creste nivelul educational al programelor pe care le difuzeaza. De ce spunem asta? Pentru ca in ultima vreme se contureaza tot mai mult acest trend conform caruia publicitatea migreaza tot mai mult catre mediul online. De ce migreaza catre mediul online? Pentru ca la televizor reclama este destul de usor de evitat, in timp ce in mediul online este mult mai greu de evitat. Informatia pe care o cauti pe un site se difuzeaza in acelasi timp cu o reclama. Din acest punct de vedere, cifra de afaceri a televizunilor a scazut simtitor in ultima perioada, iar ca urmare a acestei scaderi, televiziunile vor trebui sa se bata mai mult pentru audienta. Vor trebui sa concureze atat intre ele, cat si cu mediul online. Iar castigarea audientei va fi posibila prin ridicarea standardelor, pentru ca publicul este saturat de aceste programe cu calitate scazuta si nu se va intoarce la televizor decat daca televiziunile isi vor regandi strategia de a atrage publicul. Prin urmare, responsabilitatile educationale fata de public nu sunt doar niste obligatii neprofitabile sau daunatoare, ci la un moment dat se vor dovedi a fi exact mijlocul prin care publicul va fi readus in fata televizoarelor. Astfel se obtine un beneficiu reciproc. Atat societatea, cat si televiziunea vor beneficia de pe urma responsabilitatilor educationale asumate in raport cu publicul.</p>
+<p><strong>Cross 1 </strong></p>
+<p><strong>Andrei Luca:</strong> In ce masura se impune o strategie pe termen lung poate fi eficienta din punct de vedere financiar pentru o televiziune privata? Mai poate ea sa reziste pana sa ajunga sa-si recupereze fondurile investite?</p>
+<p><strong>Flavia Soare:</strong> Daca aceasta strategie s-ar aplica la intregul sistem al televiziunilor si daca am accepta ca pe termen scurt beneficiile nu sunt atat de mari in comparatie cu cele pe termen lung, toate televiziunile ar porni de la egalitate. In spiritul instinctului de supravietuire despre care vorbesti, competitivitatea ar creste, pentru ca televiziunile sa reuseasca sa se mentina pe piata. Crescand aceasta competitivitate, va creste si calitatea produselor acestor televiziuni.</p>
+<p><strong>Andrei Luca: </strong>Sa ne gandim la altceva. Daca o persoana investeste timp de doi ani intr-o televiziune, fara sa obtina un profit, este rentabila afacerea? Cand va mai apuca sa se bucure de beneficiile financiare ale acelei afaceri? Acest lucru pe care tu il propui nu cumva avantajeaza persoanele cu fonduri foarte mari?</p>
+<p><strong>Flavia Soare: </strong>Dupa cum aminteam si in discursul nostru, nu poti presupune ca publicul ar fi nereceptiv fata de implementarea unor programe de o calitate mai buna si ca atare televiziunile nu ar mai face profit. Acest tip de gandire ar presupune sa denigrezi complet publicul si capacitatea lui de a raspunde la niste programe care, in fond, sunt benefice pentru el. De ce sa plecam de la presupunerea ca publicul raspunde doar la manipulari, la programe cu o calitate foarte scazuta, la scandaluri, la vedetismele acestea? Putem sa presupunem ca daca am oferi un produs mai bun publicul ar raspunde pozitiv fata de acesta.</p>
+<p><strong>Andrei Luca: </strong>Ai definit educatia in contextul audio-vizual drept transmitere corecta de informatii. Asta deja se face la televizor, la fiecare televizune privata in parte. Fiecare incearca sa transmita informatiile intr-un mod netrunchiat, pentru ca altfel aceste posturi vor fi penalizate conform legislatiei in vigoare. Nu crezi ca o responsabilitate educationala se refera la altceva?</p>
+<p><strong>Flavia Soare: </strong>Ar trebui sa ne ascundem dupa degete in aceasta dezbatere daca am accepta faptul ca informatia la televizor se transmite netrunchiat. De ce sa nu fim realisti? Daca deschizi acum televizorul si nimeresti un talk-show politic, vei identifica intotdeauna o singura tabara care vorbeste in acea emisiune. Cum poti sa sustii ca se transmite informatia intr-un mod netrunchiat?</p>
+<p><strong>&nbsp;</strong></p>
+<p><strong>&nbsp;</strong><strong>Andrei Luca (Negator 1)</strong></p>
+<p><strong>&nbsp;</strong></p>
+<p>Bună seara, mă numesc Andrei Luca. Am fost plăcut surprins să aflu că şi Flavia a ridicat aceleaşi probleme pe care şi eu le voi ridica. Deloc surprinzător &icirc;nsă, vom merge &icirc;n direcţii opuse.</p>
+<p>&nbsp;</p>
+<p>&Icirc;n primul r&acirc;nd doresc să discut despre problemele care pot apărea &icirc;n plan legislativ atunci c&acirc;nd se aplică o astfel de măsură. Din punct de vedere juridic, după cum a menţionat şi Flavia, televiziunile private sunt &icirc;ncadrate la profilul unei societăţi comerciale. Scopul unei societăţi comerciale este profitul. Deci scopul televiziunii este tot profitul. Aşadar, putem vedea foarte uşor că fiecare &icirc;ncearcă din această afacere, căci p&acirc;nă la urmă este o afacere, un avantaj financiar. Cu siguranţă există şi anumite reglementări din punct de vedere legislativ. Nu toată lumea are dreptul de a face orice şi de a spune fără să aibă informaţii verificate. Şi &icirc;n această privinţă există Consiliul Naţional al Audiovizualului care verifică şi reglementează din punct de vedere legislativ toate aceste probleme legate de decenţă, de transmiterea informaţiilor &icirc;ntr-un mod corect. Şi, dacă o televiziune privată primeşte acordul de a difuza o anumită grilă de programe, nu văd de ce ar trebui să-şi asume vreo responsabilitate &icirc;n plus şi anume aceea de a educa, de a &icirc;ncerca să culturalizeze publicul, at&acirc;ta timp c&acirc;t ea este perfect legală şi &icirc;n acord cu toate normele legislative.&nbsp;</p>
+<p>&nbsp;</p>
+<p>Mai departe aş dori să propun o situaţie ipotetică. Ce s-ar &icirc;nt&acirc;mpla dacă s-ar implementa o astfel de lege? Ar fi ea constituţională? Mă &icirc;ndoiesc. Aşa cum un producător nu poate fi obligat de Stat să producă un anume produs la fel şi producătorul de televiziune (vedeţi că există iarăşi denumirea de producător, există un paralelism, o analogie), nu poate fi obligat să facă un anume tip de emisiune, de oricare tip ar fi el: educaţională, de divertisment şi aşa mai departe. Consider că fiecare televiziune are dreptul de a-şi aleage propria grilă de programe &icirc;n funcţie de publicul ţintă pe care şi-l stabileşte.</p>
+<p>&nbsp;</p>
+<p>Mai departe, trebuie să adăugăm că cetăţeanul nu are nici un aport financiar &icirc;n toată această afacere. Singura responsabilitate a televiziunilor private este faţă de publicitate. Faţă de potenţialii cumpărători de spaţiu publicitar. Pentru că ei sunt cei care susţin financiar această afacere. Iar ei trebuie să satisfacă nevoile celor care se află &icirc;n spate, care investesc &icirc;n toată această afacere.</p>
+<p>&nbsp;</p>
+<p>Un alt lucru de care trebuie să ţinem seama este că televiziunea nu este dec&acirc;t o simplă reflectare a realităţii. Nu ea stabileşte trendul, ci ea sondează preferinţele maselor dintr-o anumită perioadă şi &nbsp;oferă publicului ceea ce el &icirc;şi doreşte. Dacă publicul doreşte divertisment, televiziunea va oferi divertisment. Putem observa cu foarte mare uşurinţă că foarte puţini oameni sunt interesaţi de cultură. Şi astfel mă &icirc;ntreb care ar fi rostul ca Statul să impună o astfel de măsură legislativă?! Oricum masele de oameni interesate de divertisment nu se vor uita la aceste programe, ele vor schimba canalul, vor căuta ceva care să le fie pe plac, iar scopul pentru care au fost create aceste emisiuni tv nu şi-ar găsi corespondentul dincolo de ecran. Mai departe, doresc să &icirc;ntăresc ideea că televiziunile private au dreptul de a-şi alege &icirc;n mod&nbsp; liber grila de programe, cu at&acirc;t mai mult cu c&acirc;t acest lucru este dictat şi de gustul publicului.</p>
+<p>&nbsp;</p>
+<p><strong>Cross 2</strong></p>
+<p><strong>&nbsp;</strong></p>
+<p><strong>Flavia Soare: </strong>&Icirc;n primul r&acirc;nd, de ce presupune echipa negatoare că noi am vrea să supra-reglementăm cadrul legislativ deja existent? Noi nu am vorbit absolut deloc despre o anumită lege.</p>
+<p>&nbsp;</p>
+<p><strong>Andrei Cornea: </strong>Pot să răspund eu? Pentru că este greu de conceput că o astfel de propunere ar putea să răm&acirc;nă numai aşa ca un simplu deziderat spus televiziunilor, gen &bdquo;fraţii noştri, dragii mei, haideţi faceţi voi ceva&rdquo;. Dacă vorbim despre aşa ceva, atunci chiar că poate nu mai merită să vorbim. Trebuie să ne g&acirc;ndim la o propunere legislativă la o schimbare a statului televiziunilor private şi aşa mai departe. Aşa am crezut tot timpul şi la asta ne-am g&acirc;ndit.</p>
+<p>&nbsp;</p>
+<p><strong>Flavia Soare: </strong>Da, dar negatorul 1 a uitat practic o parte a argumentării afirmatoare şi anume aceea a faptului că ne-am referit &icirc;n primul r&acirc;nd la beneficiul televiziunilor. Adică ar fi &icirc;n interesul lor, nu trebuie să le oblige nimeni. Ele şi-ar vedea interesul</p>
+<p>&nbsp;</p>
+<p><strong>Andrei Cornea:</strong> N-aţi putut demonstra lucrul ăsta. &Icirc;mi pare rău, n-a apărut asta.</p>
+<p>&nbsp;</p>
+<p><strong>Vlad Mixich: </strong>&Icirc;ntrebarea este..</p>
+<p>&nbsp;</p>
+<p><strong>Laurenţiu Gheorghe: </strong>Intrebarea este: De ce presupunerea fundamentală a echipei negatoare este că putem rezolva o problemă numai dacă reglementăm?</p>
+<p>&nbsp;</p>
+<p><strong>Andrei Cornea: </strong>Pentru că eu pornesc de la observaţia că o televiziune privată nu este &icirc;n general interesată &icirc;n a obţine si de a face acest tip de educaţie populară mai &icirc;naltă. Sigur că echipa afirmatoare a &icirc;ncercat să arate că lucrurile nu stau aşa şi să vorbească de interesul pe termen lung, iar acest lucru nu mi se pare convingător. Dacă ar fi aşa, atunci n-am mai avea nevoie de televiziunea publică, de sponsorizare specială, pentru că lucrurile s-ar face de la sine. Este clar că cultura &icirc;naltă, sau cultura mai &icirc;naltă (hai să &icirc;i spunem aşa) priveşte un număr mai mic de oameni. Cu un număr mai mic de oameni, avantajele financiare sunt mai mici şi aşa mai departe. &Icirc;ntrebaţi-vă furnizorii de cablu, c&acirc;t succes au programele culturale pe care le au ei, dacă se transmit. Deci, noi am pornit de la această observaţie şi ne-am g&acirc;ndit că televiziunile private, poate ne &icirc;nşelăm, dar ne-am g&acirc;ndit că televiziunile private nu sunt &icirc;n mod spontan interesate să facă, (cele mai multe din ele cel puţin) să facă cultivarea publicului.</p>
+<p>&nbsp;</p>
+<p><strong>Andrei Luca: </strong>&Icirc;n plus putem face o analiză la nivel empiric. Doar dacă studiem piaţa televiziunilor private de astăzi, observăm că ele nu au nici un pic de interes faţă de această parte educaţională.</p>
+<p>&nbsp;</p>
+<p><strong>Andrei Cornea: </strong>Dacă ar fi avut interes am fi constatat altceva.</p>
+<p>&nbsp;</p>
+<p><strong>Andrei Luca: </strong>Şi nu am mai fi avut această dezbatere.</p>
+<p>&nbsp;</p>
+<p><strong>Flavia Soare: </strong>Da, &icirc;ntr-adevăr. Dar asta există pe momentul de faţă, dar dezvoltarea lucrurilor se duce către alt drum practic.</p>
+<p>&nbsp;</p>
+<p><strong>Andrei Luca: </strong>Da, se duce către o anume utopie pe care noi nu o credem fezabilă..</p>
+<p>&nbsp;</p>
+<p><strong>Laurenţiu Gheorghe: </strong>Cu excepţia Bollywood-ului, care de exemplu are un succes extraordinar cu o serie de telenovele.</p>
+<p>&nbsp;</p>
+<p><strong>Andrei Cornea:</strong> Ce aţi spus?</p>
+<p>&nbsp;</p>
+<p><strong>Laurenţiu Gheorghe: </strong>Bollywoodul. Care are un public extraordinar, aproximativ 1.2 miliarde de oameni..</p>
+<p>&nbsp;</p>
+<p><strong>Vlad Mixich:</strong> Explicaţi vă rog termenul de Bollywood.</p>
+<p>&nbsp;</p>
+<p><strong>Laurenţiu Gheorghe: </strong>Bollywood este echivalentul Hollywood-ului &icirc;n Mumbai, India. Este cea mai mare industrie producătoare de produse de entertainment din lume. De 3 ori mai mare dec&acirc;t Hollywoodul. E foarte interesant acest aspect. Ei au lansat o serie de telenovele, cu foarte mare succes, unele se dau şi &icirc;n Rom&acirc;nia, pe un canal de televiziune.</p>
+<p>&nbsp;</p>
+<p><strong>Andrei Cornea: </strong>Şi asta e cultură &icirc;naltă?</p>
+<p>&nbsp;</p>
+<p><strong>Vlad Mixich: </strong>Aveţi o &icirc;ntrebare?</p>
+<p>&nbsp;</p>
+<p><strong>Laurenţiu Gheorghe: </strong>&Icirc;ntrebarea mea este &bdquo;de ce presupunem că neapărat cultura &icirc;naltă &icirc;nseamnă singura formă de educaţie &icirc;n sensul unor valori fundamentale &icirc;n societate?&rdquo;</p>
+<p>&nbsp;</p>
+<p><strong>Andrei Luca: </strong>Mă &icirc;ndoiesc de calitatea estetică a telenovelelor pe care cei de la Bollywood le oferă; eu fiind student la Universitatea naţională de arte teatrale şi cinematografice, cunosc destul de bine problema şi ştiu care este calitatea estetică a acestor programe. Mă g&acirc;ndesc dacă o telenovelă de care vorbeaţi dumneavoastră este educaţională pentru o persoană cu un nivel de cunoştinţe mic sau mediu, ce ar putea ea să-mi ofere mie, spectatorului intersat de cultura adevărată ? Nu [interesat de] traficul cu c&acirc;teva informaţii, uşoare, facile, de găsit oriunde pe internet.</p>
+<p>&nbsp;</p>
+<p><strong>Laurentiu Gheorghe (Afirmator 2)</strong></p>
+<p>As dori sa fac o mica clarificare, iar aceasta clarificare este esentiala; departe de a fi in dezacord fundamental cu echipa negatoare, noi avem putin mai multa incredere in public. Pentru ca noi consideram ca educatia nu este neaparat o formula inghetata dictactico-explicativa sau un discurs elevat care tinteste un anumit set de valori predefinit, dar neexplicitat. Noi consideram ca televiziunile sunt actori pe piata, atat televiziunea publica, cat si cele private. Ca orice actor pe piata, televiziunile interactioneaza cu clientii. Cine sunt clientii televiziunilor? Clientii televiziunilor nu sunt numai companiile de publicitate, ci persoanele din public, care fac posibila existenta televiziunilor. De exemplu, imaginati-va ca Metro are doar clienti furnizori. Mutatis-mutandis, ideea ar fi urmatoarea: nu avem responsabilitati decat fata de cei care ne platesc atunci cand ne vine marfa. Putem sa tragem orice teapa clientilor finali. In definitiv, nu este nicio problema, sunt mai multe magazine Metro. Daca nu le place la noi, pot merge in alta parte. Pentru asta avem legi. Daca vrei sa tragi o teapa pe piata comerciala, ai niste legi, plus niste reglementari. Ce spun reglementarile? Nu ai voie sa &ldquo;tragi tepe&rdquo;.</p>
+<p>Ce inseamna, in schimb, la televiziuni ca nu ai voie &ldquo;sa tragi tepe&rdquo;? Aici este mai complicat, deoarece produsul nu este un hamburger, pe care tu il prezinti ca avand carne de vita si de fapt el are un alt tip de continut. Asta presupune o chestiune mai subtila. Numai ca nu inseamna sa citam din Kant si Hegel. Inseamna ca furnizorul acestui produs sa certifice faptul ca produsul respecta niste standarde. In cazul unei televiziuni standardele acestea sunt foarte simple.</p>
+<p>1. Informatia trebuie sa fie corecta si</p>
+<p>2. Criteriile de selectie pe baza carora au fost alese informatiile sa fie transparente.</p>
+<p>E un lucru extrem de simplu. Il face deja CNA-ul. Nu ii lasa pe acesti oameni sa &ldquo;traga tepe&rdquo; publicului. Este exact ceea ce face politia sanitar-veterinara in piata. Din acest punct de vedere nu exista nicio diferenta intre televiziunile private si comerciantii din piata. Unde intervine educatia in tot acest proces? Educatia intervine intr-un loc foarte important, deoarece noi suntem imersati intr-un proces continuu de educatie.</p>
+<p>Ce inseamna in mod fundamental educatia? Educatia inseamna doua lucruri: 1. asimilarea unei informatii si 2. deprinderea unei grile de selectie pentru utilizarea acestei informatii. Informatia poate fi de diverse feluri, dar esential pentru un cetatean care actioneaza intr-o democratie este sa distinga intre informatia corecta si cea incorecta si sa stie la ce foloseste ea, care sunt seturile de valori implicate in distributia acestei informatii. De ce? Ca sa stie daca este manipulat sau nu. Ca sa stie, de exemplu, ca ceea ce i se propune intr-un program de entertainment este doar <em>entertainment</em>, nu este <em>product placement.</em> Adica nu prin aceste programe de entertainment este persuadat sa cumpere ceva, pe care el nu ar fi dorit sa il cumpere, dar ajunge sa il cumpere.</p>
+<p>Revenind la chestiunea in dezbatere, noi sustinem urmatorul lucru. Televiziunile private au aceleasi responsabilitati pentru a prezenta produsul lor corect si grila de selectie a produsului lor transparent. Acesta este defapt procesul fundamental de educatie pe care ar trebui sa il faca. Aceasta educatie nu se refera doar la tineret, ci se refera la orice cetatean. Pentru ca daca cetateanul are acces la informatii si la grila de valori, prin acest acces el reuseste sa isi imbunatateasca atat capacitatea de a avea acces la informatii corecte, cat si capacitatea de a distinge intre ele. Pentru acest lucru, televiziunile private trebuie sa respecte ceea ce deja este pus in lege. Mai mult decat atat. Senzatia noastre este ca cei care propun producerea fortata a asa ziselor materiale educationale nu fac decat sa scape turma. Urma scapa turma. Adica ei emit 23 de ore fara niciun fel de retinere, dau o ora in care discuta despre culturile inalte si spun: "Gata! Am terminat! Am dat chestiunile educationale si mergem mai departe." Noi credem lucrul acesta: ca ei ar trebui sa fie tot timpul constienti de responsabilitatea pe care o are orice om care actioneaza in public.</p>
+<p><strong>&nbsp;</strong></p>
+<p><strong>&nbsp;</strong><strong>Andrei Cornea&nbsp; (Negator 2)</strong></p>
+<p><strong>&nbsp;</strong>Mulţumesc. Ştiţi, pe vremuri se spunea &bdquo;educaţie prin muncă&rdquo;. Cam aşa ceva aţi propus şi dumneavoastră. Adică eu sunt stupefiat să cred cum se schimbă sensul (dar mă rog, mă aşteptam) se schimbă sensul noţiunilor fundamentale. Noi vorbeam aici despre o responsabilitate educaţională, pe care ar avea-o televiziunile private. Nu ne-am g&acirc;ndit că este vorba despre responsabilitatea informaţională, adică a unei informaţii corecte, netrunchiate, echilibrate şi bine&icirc;nţeles care să nu fie manipulativă &icirc;n măsura cea mai mare. Deci nu ne-am g&acirc;ndit aici că trebuie să luptăm &icirc;mpotriva mogulilor, ca să spun aşa, şi ne-am &icirc;nchipuit că avem cu totul altă funcţie. Şi de asta am vorbit despre televiziuni private, pentru că aici se pune problema. Dacă vorbeam &icirc;n general despre corectitudinea informaţiei vorbeam foarte bine şi despre televiziunea publică unde avem şi acolo destule probleme.</p>
+<p>&nbsp;</p>
+<p>Aş dori să revin la problema fundamentală care s-a pus &icirc;n discuţie. Şi aceasta este dacă există responsabilităţi educaţionale peste ceea ce legea actuală prescrie. Despre asta e vorba. Şi cred că o lege suplimentară ar fi nevoie &icirc;n acest caz. Problema fundamentală deci este dacă trebuie făcută mai multă educaţie. Să nu mi se vorbească despre Bollywood şi despre telenovele. Aia nu este probabil &icirc;n mai mare măsură educaţie ca p&acirc;nă acum. Să reiau un argument, o să reiau de fapt două argumente.</p>
+<p>&nbsp;</p>
+<p>Unul este cel pe care l-a invocat şi colegul meu. Dacă aceste responsabilităţi educaţionale ar fi fost at&acirc;t de facile, şi at&acirc;t de clare, toate televiziunile private sau majoritatea le-ar fi asumat. Pentru că ar fi fost rentabile. Fie că rentabile acum, rentabile peste 5 ani, ar fi fost rentabile. Piaţa naşte spontaneitate. Dacă acest lucru ar fi fost posibil, el s-ar fi şi făcut deja şi n-am mai fi discutat. Prin urmare, nu-i aşa. Piaţa nu cere acest lucru. Piaţa cere dimpotrivă, piaţa cere un nivel c&acirc;t mai jos de cultură, nu un nivel &icirc;nalt de cultură. Acum, dacă cineva vrea să impună o astfel de situaţie, are nevoie de o lege şi de o lege suplimentară. Asta este de fapt toată problema. Pentru că dacă vrei să impui televiziunilor private minute, ore, programe speciale culturale, trebuie să faci o nouă lege.</p>
+<p>&nbsp;</p>
+<p>Ori ca să faci o nouă lege - presupunem că ai face-o, g&acirc;ndiţi-vă un pic la o astfel de lege. O astfel de lege - presupunem că ar trece şi de Curtea Constituţională - nu ar fi aplicabilă. Nu ar fi aplicabilă dintr-un motiv simplu: definiţi dumneavoastră vă rog, sau echipa afirmatoare, sau cine vrea aici, domnul Mixich, definiţi noţiunea de cultură. Ce &icirc;nseamnă cultură? Ce &icirc;nseamnă cultură, produs cultural de calitate? &nbsp;Puteţi să spuneţi? Greu. Foarte greu. Problema nu e că noi nu putem să spune uşor asta. Noi poate că &icirc;nţelegem. Problema este că o lege nu poate să spună asta şi o lege trebuie să definească precis termenii. Pentru că ea va trebui să-i sancţioneze. Noi putem să spunem ce este o informaţie trunchiată. Noi putem să creăm reguli de talk-show corecte şi să spunem că televiziunea trebuie să respecte cutare, cutare. Putem să creăm legi, avem o lege care spune &bdquo;minutele de publicitate trebuie să nu depăşească o anumită limită&rdquo;, le putem număra; sau nu se pot &icirc;ntrebuinţa anumiţi termeni, anumite cuvinte jignitoare, calomnioase.Asta &icirc;ncă putem face. O facem imperfect. Domnul Gelu Trandafir o să poată povesti aici. Dar c&acirc;t de c&acirc;t &icirc;ncercăm să o facem. Dar cum putem noi să definim ce este &bdquo;produs cultural de calitate&rdquo;? Imposibil. Ori dacă nu se poate face asta, atunci mogulul care nu vrea să transmită aşa ceva nu poate fi sancţionat.&nbsp; Televiziunea care vrea să ocolească, care vrea să &bdquo;tragă ţepe&rdquo; (de acord) nu poate fi sancţionată. Şi atunci facem o lege inutilă.</p>
+<p>&nbsp;</p>
+<p>&Icirc;n consecinţă, eu vă rog să g&acirc;ndiţi asupra acestui lucru, să vedeţi că ceea ce ne propun d&acirc;nşii e foarte frumos, suntem cu toţii de acord că televiziunea a ajuns un gunoi; am dori cu toţii să ieşim din acest gunoi, să avem programe frumoase, inteligente şi instructive, dar nu cred că putem face asta nici introduc&acirc;nd legi absurde şi nici elimin&acirc;nd libertăţile de informare şi de &icirc;ntreprindere [ma rog], &icirc;ntreprindere liberă, care este sigur o componentă esenţială a pieţei libere şi a unei societăţi democratice. Vă mulţumesc.</p>
+<p>&nbsp;</p>
+<p><em>&nbsp;<br /><strong>Vlad Mixich:</strong> Domnule Gelu Trandafir, ce credeti?</em></p>
+<p><em><br /><strong>Gelu Trandafir (CNA):</strong> [E important de vazut despre ce vorbim]: Fie vorbim de respectarea principiului informarii corecte sau protectia minorilor, despre protectia demnitatii umane, fie despre responsabilitati privind anumite programe pe care trebuie sa le difuzeze aceste posturi private, responsabilitati de educatie in sensul clar al cuvantului. Asta mi se pare important. Dupa aceea am sa va explic si cu ce ne-am confruntat noi la CNA, dar este esential sa distingem intre ce inseamna responsabilitati culturale si responsabilitati educationale.</em></p>
+<p><em><br /></em></p>
+<p><strong><em>Interventie: </em></strong><em>S-a făcut confuzia clară &icirc;ntre termeni. Şi aş vrea să apăs ceea ce a spus Laurenţiu Gheorghe: faptul că cultura nu are nici o legătură cu educaţia.</em></p>
+<p><em>&nbsp;</em></p>
+<p><strong><em>Andrei Cornea</em></strong><em>: N-are? </em></p>
+<p><em>&nbsp;</em></p>
+<p><strong><em>Interventie: </em></strong><em>Are. Dar poţi să faci educaţie şi fără un nivel foarte &icirc;nalt de cultură. C&acirc;nd spunem că vedem un om educat asta nu &icirc;nseamnă neapărat că a citit foarte multă filosofie sau beletristică. Oare trebuie să fii un om foarte cult ca să fii educat? Asta voiam să vă &icirc;ntreb.</em></p>
+<p><em>&nbsp;</em></p>
+<p><strong><em>Andrei Cornea</em></strong><em>: Spuneţi-mi, credeţi că trebuie să vorbească corect rom&acirc;neşte &icirc;n cazul nostru? </em></p>
+<p><em>&nbsp;</em></p>
+<p><strong><em>Interventie: </em></strong><em>Da</em></p>
+<p><em>&nbsp;</em></p>
+<p><strong><em>Andrei Cornea: </em></strong><em>Bun. Credeţi că e posibil ca cineva să vorbească corect rom&acirc;neşte fără să citească c&acirc;teva cărţi ale literaturii rom&acirc;ne?</em></p>
+<p><em>&nbsp;</em></p>
+<p><strong><em>Interventie :</em></strong><em>Da. Cred că se poate. La un nivel destul de jos se poate.</em></p>
+<p><em>&nbsp;</em></p>
+<p><strong><em>Andrei Cornea: </em></strong><em>Ah..la nivel destul de jos.</em></p>
+<p><em>&nbsp;</em></p>
+<p><strong><em>Interventie: </em></strong><em>Da.</em></p>
+<p><em>&nbsp;</em></p>
+<p><strong><em>Andrei Cornea: </em></strong><em>Dar să facă şi greşeli nu ?</em></p>
+<p><em>&nbsp;</em></p>
+<p><strong><em>Interventie: </em></strong><em>Eu cred că oricine face greşeli.</em></p>
+<p><em>&nbsp;</em></p>
+<p><strong><em>Andrei Cornea&nbsp;: </em></strong><em>Aşa credeţi&nbsp;?</em></p>
+<p><em>&nbsp;</em></p>
+<p><strong><em>Interventie: </em></strong><em>Da. De limbaj mai ales.</em></p>
+<p><em>&nbsp;</em></p>
+<p><strong><em>Andrei Cornea: </em></strong><em>Se poate &icirc;nt&acirc;mpla, se poate &icirc;nt&acirc;mpla să faci uneori o greşeală, să-ţi scape o eroare. Dar este un lucru absolut evident şi constatat că un om care citeşte [bun nu neapărat &icirc;n fiecare zi 7 cărţi, dar care are nişte lecturi], care se interesează de aceste probleme, are un limbaj mai elegant, mai rafinat, mai plastic şi &icirc;n orice caz corect. Noi vedem adeseori, foarte des la televizor, vedem pe politicieni şi chiar pe jurnalişti vorbind extrem de incorect. O să vă spună şi domnul Trandafir, din partea CNA-ului, cred că şi ei au făcut statistici pe această temă. Bun, deci credeţi că lucrul ăsta n-are legătură cu cultura?</em></p>
+<p><strong><em>&nbsp;</em></strong></p>
+<p><strong><em>Interventie: </em></strong><em>Ba da, are legătură. Dar dumneavoastră aţi dus la un nivel foarte &icirc;nalt chestia cu cultura.</em></p>
+<p><em>&nbsp;</em></p>
+<p><strong><em>Andrei Cornea</em></strong><em>: Nu.</em></p>
+<p><em>&nbsp;</em></p>
+<p><strong><em>Interventie: </em></strong><em>Aţi vorbit la un moment dat chiar de un produs cultural foarte &icirc;nalt, ori nu se pune problema de aşa ceva.</em></p>
+<p><em>&nbsp;</em></p>
+<p><strong><em>Andrei Cornea: </em></strong><em>Am spus doar că pentru unii dintre noi, nu pentru toţi, dar pentru unii dintre noi telenovele sunt mai degrabă anticultură dec&acirc;t cultură. Tocmai asta este problema. Că aceşti noi pentru care telenovelele sunt anticultură suntem o minoritate, poate o mică minoritate, şi &icirc;n această situaţie ori suntem protejaţi ca minoritate, ori n-avem &icirc;ncotro. Televiziunile vor accepta, fiind private, vor accepta regula numărului mai mare. Asta este şi sensul demonstraţiei. Accept&acirc;nd regula numărului mai mare ele vor reduce nivelul pentru a ajunge la nivelul cel mai convenabil. Cultura să ştiţi că astăzi &icirc;n limbajul de specialitate &icirc;nseamnă orice. De la cultura bandelor de cartier, există şi acolo o cultură, cultura video, există cultura SMS-urilor, bun, există şi cultura &icirc;n sensul tradiţional al cuv&acirc;ntului. Sunt foarte multe noţiuni; cuv&acirc;ntul ăsta are foarte multe semnificaţii. </em></p>
+<p><strong><em>&nbsp;</em></strong></p>
+<p><strong><em>Laurenţiu Gheorghe: </em></strong><em>Pot aduce o clarificare, care cred că va detensiona un pic, să zicem aşa, poziţiile noastre. Prima clarificare e legată de telenovele. N-am terminat de spus ce voiam să spun. Şi o să vă spun imediat, domnule profesor, de ce a fost o alegere deliberată punerea problemei &icirc;n sensul acesta. Fundamentul unei culturi nu este at&acirc;t informaţia, c&acirc;t setul de valori. De ce? Pentru că noi suntem oameni &bdquo;civilizaţi&rdquo; &icirc;n măsura &icirc;n care noi respectăm un set de valori. Din punctul ăsta de vedere, şi persoanele care au o erudiţie extraordinară, dar şi persoanele simple pot da dovadă de civilizaţie, at&acirc;t timp c&acirc;t ele aderă, respectă şi pun &icirc;n practică nişte valori fundamentale interacţiunilor dintre oameni. Iar aceste valori au fost explicate foarte frumos de domnul profesor, adică: informarea corectă, respectul faţă de celălalt, neprezentarea trunchiată a unui fapt. Se pune problema &icirc;n schimb: cui se adresează o televiziune privată?&nbsp; </em></p>
+<p><em>&nbsp;</em></p>
+<p><em>O televiziune privată. este o afacere. O afacere ca universitatea Harvard. Numai că nu se adresează celor cărora li se adresează universitatea Harvard. Se adresează, aşa cum a spus colegul nostru, unei mase. &Icirc;ntrebarea este deci: cum poţi educa o masă? Cum poţi educa masele? Asta este &icirc;ntrebarea. Acum..ce susţinem noi? Noi susţinem următorul lucru: că este &icirc;n interesul acestor actori&nbsp;</em><em>[televiziunile]să educe aceşti oameni. Şi aici intervine exemplul telenovelei din Bollywood. Acum 5 ani, nu ştiu dacă sunteţi familari cu istoria Indiei, &icirc;n sf&acirc;rşit, statul femeii din societatea indiană nu este foarte simpatic. Acum 100 şi ceva de ani, &icirc;ntr-o anumită parte a societăţii indiene, c&acirc;nd bărbatul -soţul murea, femeia era obligatoriu omor&acirc;tă şi ea. De fapt se sinucidea spontan. Dacă aţi citit ocolul păm&acirc;ntului &icirc;n 80 de zile a lui Jules Verne [o carte foarte simpatică, o vinde un mogul, ieftin], acolo vedeţi descrierea acestei &icirc;nt&acirc;mplări. Vă pot mărturisi, dat fiind faptul că am fost acum c&acirc;ţiva ani &icirc;n India, că situaţia nu s-a schimbat &icirc;ntr-un mod dramatic. Mai ales &icirc;n clasele de jos. Problema cu clasele de jos e că ele nu se duc la Harvard. Şi dacă ar vrea n-ar putea. Ele nu au acces la cultura &icirc;naltă.</em></p>
+<p><em>&nbsp;</em></p>
+<p><em>A cui e vina? Nu ştiu. E vina cuiva? Poate că e vina societăţii respective. Dar cum poţi să transmiţi un mesaj cu privire la o valoare fundamentală (şi aici i-aş recomanda t&acirc;nărului nostru coleg să citească o serie de cărţi despre scris scenarii, una dintre ele scrisă de un mare scenarist ). Cel mai tare povestitor, care bate orice, este Homer. Povestiţi Homer &icirc;n termenii de acum şi să vedeţi ce succes are. Pentru că toate poveştile, chiar şi cele din cultura &icirc;naltă, au &icirc;n spate nişte valori. Ori, ce au &icirc;ncercat indienii să facă &icirc;ntr-un mod foarte subtil şi foarte ok care a funcţionat? Au &icirc;ncercat să construiască o emisiune aparent cu un standard scăzut. De ce? Pentru a fi accesibilă. Şi prin intermediul acestei emisiuni, acestei forme triviale pentru oamenii antrenaţi &icirc;n cultura &icirc;naltă. [Dar nu despre ei vorbim, oamenii care sunt antrenaţi &icirc;n cultura &icirc;naltă, vor fi antrenaţi &icirc;n cultura &icirc;naltă, vor tinde &icirc;n mod natural către cultura &icirc;naltă.]. Cel care caută aşa ceva, el va ajunge acolo. El nu se bazează pe televiziune pentru a ajunge la acest standard. &Icirc;n schimb, cel care nu are acces la cultura &icirc;naltă are nevoie de educaţie. Cum &icirc;şi face el educaţia? Prin accesul la valori. Cum ajunge el la aceste valori? Printr-un format pe care el le poate primi. </em></p>
+<p><em>&nbsp;</em></p>
+<p><strong><em>Andrei Cornea:</em></strong><em> Iertaţi-mă, pot să vă &icirc;ntrerup o secundă?</em></p>
+<p><em>&nbsp;</em></p>
+<p><strong><em>Laurenţiu Gheorghe:</em></strong><em> Sigur că da. </em></p>
+<p><em>&nbsp;</em></p>
+<p><strong><em>Andrei Cornea: </em></strong><em>Pentru că ne ţineţi o conferinţă aici. Vreau să ştiu numai un singur lucru pentru informarea mea. Aceste telenovele sunt făcute, produse şi transmise de televiziuni private?</em></p>
+<p><em>&nbsp;</em></p>
+<p><strong><em>Laurenţiu Gheorghe: </em></strong><em>Exclusiv private. Deci sunt produse vandabile. Vreau să vă spun că au fost cumpărate &icirc;n Rom&acirc;nia. Am rămas absolut uluit de chestiunea asta.</em></p>
+<p><em>&nbsp;</em></p>
+<p><strong><em>Andrei Cornea:</em></strong><em> Şi credeţi că Rom&acirc;nia ar trebui să educe tot prin asta? Nu ştiam că &icirc;n Rom&acirc;nia există ceremonia sati.</em></p>
+<p><em>&nbsp;</em></p>
+<p><strong><em>Laurenţiu Gheorghe: </em></strong><em>Nu, va rog. Nu despre asta e vorba. Este vorba despre respectul femeii. Pentru că &icirc;n aceste telenovele, care e problema? O fată nu vrea să se mărit cu băiatul cu care ar trebui să se mărite. Ea este independentă, a făcut facultatea &icirc;n Oxford, familia &icirc;i zice &bdquo;mărită-te că te dăm afară&rdquo;, şi ea nu vrea, şi de aici toată nebunia. Dar ce se &icirc;nt&acirc;mplă? Oamenii se uită. Da? Şi ce văd? Văd că există o valoare fundamentală, adică n-ar trebui să te forţeze cineva să faci ceva &icirc;mppotriva voinţei tale. </em></p>
+<p><em>&nbsp;</em></p>
+<p><strong><em>Interventie</em></strong><em> (Mihai Sturza)<strong> </strong></em><em>V-am ascultat mai devreme, iar dezbaterea aceasta este una pe care eu o am cu mine insumi de foarte mult timp. Din pacate in seara aceasta nu am descoperit lucruri noi desi sa speram sa descopar. As porni mica mea expunere de la un concept foarte simplu. Imi amintesc de logica de clasa a noua si de definitia omului. Logica defineste omul la indemana oricui: Omul este un mamifer (genul proxim) constient si social. Iar eu gandeam asa: televiziunea are legatura cu oamenii, dar din pacate din aceasta definitie una singura ne duce catre teza educatiei si anume aceea ca omul are constiinta. Omul este insa un mamifer. Si atunci vom vedea in televiziune cum toate instinctele sunt prezente, pentru ca instinctele vand. </em></p>
+<p><em>In toata povestea aceasta eu am avut de-a lungul timpului emisiuni in care am avut invitati toti manelistii tarii. Ii cunosc personal. Am avut emisiuni in care l-am avut ca invitat pe Dan Puric si Petre Roman. I-am cunoscut personal pe presedintii postrevolutiei. Este o vorba: se spune ca in Anglia, in orice casa cu valoare de peste 100.000 de lire sterline gasesti o plasma foarte mare. In orice conac peste un milion de lire sterline gasesti o biblioteca foarte mare si niciun televizor. Eu nu cred ca televiziunea ar trebui sa isi asume rolul culturii inalte. Din pacate, intr-o goana de audienta si din instinctul de mamifer despre care spuneam mai devreme a cauzat scaderea nivelului discursului public. Eu sunt convins ca la anul vom vedea cum un domn si o doamna vor spune la o emisiune: "Buna seara! Am venit aici sa facem sex in direct. Ni se pare foarte tare pentru ca este trecut de ora 12." Iar oamenii se vor uita. </em></p>
+<p><em>Mi-ar fi placut sa aud in discutia din seara aceasta un concept foarte important mai ales pentru vremurile in care traim si anume criza financiar economica. Eu cred ca asta este salvarea de fapt. Televiziunile comerciale fac produse pentru oameni multi si le scad din ce in ce mai mult nivelul educational. Acesti oameni vor avea din ce in ce mai putini bani. Si atunci se va intampla, sper eu, in foarte scurt timp ca un cumparator de publicitate sa se duca la o televiziune si sa spuna "foarte fain ca ai doua milioane de telespectatori, dar acestia sunt saraci lipiti, nu cumpara apa minerala, ci beau apa de la robinet". Iar oamenii acestia nu vor mai da bani. Atunci eu sustin aici o idee foarte simpla. Sunt oarecum ingrijorat de faptul ca niste oameni tineri isi doresc ca statul sa intervina intr-o activitate privata. Mi se pare periculos acest demers. Cred foarte mult in reglementarea naturala a lucrurilor. Cu cat intervenim mai putin formal intr-o activitate privata, cu atat o vom rezolva mai usor. Ce trebuie sa isi asume televiziunea este un set elementar de valori. </em></p>
+<p><em>&nbsp;</em></p>
+<p><strong><em>Interventie: </em></strong><em>Aş fi vrut să citez din ceva mai celebru dar nu-mi vine &icirc;n cap dec&acirc;t Jean-Luc Picard, care spunea..</em></p>
+<p><em>&nbsp;</em></p>
+<p><strong><em>Andrei Cornea: </em></strong><em>Foarte bun!</em></p>
+<p><em>&nbsp;</em></p>
+<p><strong><em>Interventie: </em></strong><em>Da, am rămas cu cultura de la televizor se pare. Luc Picard &nbsp;spunea &bdquo;Lucrurile sunt imposibile p&acirc;nă c&acirc;nd devin posibile&rdquo; şi voiam să semnalez un raţionament &bdquo;..p&acirc;nă c&acirc;nd devin posibile&rdquo;. Voiam să semnalez un raţionament, care e un apel la natură şi voiam să atrag atenţia publicului asupra acestui raţionament. Poate o să mă contraziceţi, dar eu cred că aşa e. Şi anume, dacă lucrurile astea s-ar fi putut face, s-ar fi făcut p&acirc;nă acum. Raţionamentul ăsta nu are cum să fie corect. Niciodată.</em></p>
+<p><em>&nbsp;</em></p>
+<p><strong><em>Andrei Cornea: </em></strong><em>Eu nu spuneam..</em></p>
+<p><em>&nbsp;</em></p>
+<p><strong><em>Interventie: </em></strong><em>Lăsaţi-mă să termin vă rog. La un moment dat, cel care a inventat conceptul de Mall. C&acirc;nd le-a spus comercianţilor &bdquo;hai să facem un magazin care să fie plăcut pentru oameni, să aibă poze pe pereţi, să poţi să mergi şi la un film, şi la un restaurant, să&nbsp; poţi să şi cumperi?&rdquo;. Unii au zis &bdquo;asta e o prostie&rdquo;. Si dacă ar fi fost o idee aşa de bună ar fi &icirc;ncercat cineva p&acirc;nă acum&rdquo;. Şi nu l-a băgat nimeni &icirc;n seamă. Şi pe urmă a făcut chestia asta, a c&acirc;ştigat o groază de bani, acum cred că avem 5 mall-uri &icirc;n Bucureşti. Deci &icirc;n orice moment, o chestie nouă, o inovaţie, cum ar fi şi &icirc;n cazul ăsta, cum se cheamă, educarea prin televiziune apare ca ceva ce nu s-a mai făcut p&acirc;nă atunci. Şi dacă s-ar fi putut s-ar fi făcut p&acirc;nă atunci. Dar raţionamentul ăsta nu ne permite niciodată să evoluăm... Dacă pot primi un răspuns pentru asta?</em></p>
+<p><strong><em>&nbsp;</em></strong></p>
+<p><strong><em>Andrei Cornea:</em></strong><em> Există &icirc;ntr-adevăr lucruri pe care le-ar fi făcut toată lumea dacă ar fi fost cu putinţă. Tocmai apelul la natură este lucrul pe care l-aţi făcut şi de care ar trebui să ţineţi seama. Ceea ce noi spunem nu este că nu se poate să existe programe de entertainment interesante şi pentru educaţia unei anumite categorii de public. Noi nu spunem că televiziunea n-ar trebui/nu poate &nbsp;face multe lucruri bune. Nu negăm totul aici. Suntem negatori, dar nu negăm chiar totul. Ceea ce vrem să spunem doar este că &icirc;n mod normal, astfel de programe educaţionale private, deci &icirc;n televiziunile alea, peste ceea ce este posibil din punct de vedere comercial şi economic şi care ţine de stricta informaţie, sunt &icirc;n acest moment utopice, că ele nu sunt plauzibile, că faptul că acum avem ideea că din cauza crizei lucrurile o să meargă mai bine, din punctul ăsta de vedere mi se pare greu de acceptat, mi se pare aşa un raţionament &icirc;ntors pe dos. Ceea ce noi constatăm este că de ani zile şi la noi şi &icirc;n multe alte ţări nivelul general al televiziunilor comerciale este tot mai scăzut. Constatăm acest lucru ca pe o fatalitate. Nu ştiu dacă putem să o combatem. &Icirc;n orice caz mie mi se pare că nu putem să o combatem prin legi, printr-o nouă legislaţie sau o supralegislaţie cum bine s-a spus aici, pentru motivele pe care le-am arătat.&nbsp; </em></p>
+<p><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </em><em>. </em></p>
+<p><strong><em>Interventie:</em></strong><em> </em><em>Din partea ambelor echipe mi-a lipsit foarte mult definitia a ceea ce inseamna educatie, pentru ca poti educa pe cineva in nu stiu cate directii. Regimul comunist totalitar din Romania ii educa pe elevi sa fie disciplinati, dar pe de alta parte ii educa sa nu aiba initiativa. Vorbind despre telenovele, bineinteles ca ele educa pe cei care le privesc daca obiectivul lor este acela de a invata o limba straina. La fel de bine cred ca putem considera ca un rol educational au chiar aceste emisiuni de scandal pentru ca ele ii invata pe cei care le privesc cum sa relationeze cu alte persoane, cu colegii lor spre exemplu.</em></p>
+<p><strong><em>Andrei Cornea:</em></strong><em> Sa inteleg ca le recomandati sa se bata?</em></p>
+<p><strong><em>Interventie</em></strong><em>: Nu le recomand. Dar s-a ajuns pana la urma la concluzia ca este nevoie sa promovam un anumit set de valori, iar acesta ar trebui clarificat. Asta nu are legatura nici cu informarea corecta si completa, cu cu accentuarea acelor valori si atat. </em></p>
+<p><strong><em>Gelu Trandafir</em></strong><strong><em>:</em></strong><em> Prin publicitate fac televiziunile profit. Apropo de faptul ca spuneati ca este criza si ca, prin urmare, se face mai putina publicitate. Este adevarat, dar asta nu inseamna ca televiziunile nu vor mai avea publicitate. Se va face publicitate pentru produse din ce in ce mai ieftine, iar programele se vor adapta unui public care cumpara produse foarte ieftine. Asta va duce si a dus deja la o degradare grava a programelor tv. </em></p>
+<p><strong><em>Interventie: </em></strong><em>Care este rolul televiziunilor, acela de a transmite informatii?</em></p>
+<p><strong><em>Gelu Trandafir:</em></strong><em> Legal, rolul televiziunilor comerciale este acela de a produce divertisment, sa ofere informatii etc. Sigur ca principala tinta a televiziunilor comerciale este aceea a profitului. Atunci cand purtam discutii cu televiziunile, ele spun ca vor sa faca educatie, insa educatie sexuala. Acesta este singurul rol pe care televiziunile si le-ar asuma. E totusi important sa vedem in ce termeni discutam. Daca le impunem televiziunilor sa aiba o cota de doua ore pe saptamana de cultura sau de a difuza 40 de ore de muzica romaneasca, acesta este o utopie si nu va duce la nici un fel de rezultat. In europa sunt tari care merg spre modele de genul acesta, dar audiovizualul din Romania este croit la ora actuala pe a avea niste obligatii minime, dar fundamentale pentru un stat de drept. Aici vorbim despre informare corecta, protectia demnitatii umane, de protectia minorilor, de respectarea pluralismului si de publicitate, de felul in care o faci. Aici sunt niste cerinte minime impuse prin lege, iar eu cred ca asa trebuie sa se si ramana. </em></p>
+<p><em>Ori, &nbsp;e o prapastie enorma pe care o constatam intre ceea ce spune legea si ceea ce este in realitate. A-ti imagina ca prin doua ore de cultura pe zi lumea se va schimba este o utopie ce va fi batjocorita chiar de realitate. Intram in tot felul de discutii. La un moment dat se faceau tabele cu cate minute de istorie a dansului sa se difuzeze, de istoria literaturii. Sa fii un post privat sau din provincie. Astazi am descoperit un post care emitea doar 30 de minute. Ei, oamenii aceia ar trebui sa aiba nu stiu cate minute de istorie a dansului. E utopic din punctul acesta de vedere. Cerinta minima care se impune este ca posturile de televiziune este aceea de a respecta un set de valori, de a nu face anticultura. </em></p>
+<p><em>S-a vorbit mai devreme despre public. Aici am sentimente amestecate. Eu merg in continuare pe reactia publicului. Uitati-va ca audienta OTV-ului a scazut. OTV-ul avea o audienta destul de ridicata in urma cu trei ani. Pe de alta parte daca urmarim lista posturilor cu audienta vom vedea ca sunt si posturi care obtin aceasta audienta sfidand legea, prin faptul ca submineaza valorile. </em></p>
+<p><em>O ultima remarca. Cine face educatia? Educatia o face in primul rand familia. Eu am copii pe care ii educ. Nu trebuie sa faca televiziunea educatie. Doamne fereste! Eu m-as feri. Educatia sexuala se face in familie. A evoluat societatea fara nici un fel de problema, fara televiziune si va spun ca e sanatos. Educatia este facuta de scoala. De multe ori daca televiziunea isi asuma un astfel de rol o face in detrimentul si prin subminarea formelor traditionale, prin subminarea valorilor familiei, prin subminarea scolii.&nbsp; </em></p>
+<p><em>&nbsp;</em></p>
+<p><em>&nbsp;</em></p>
+<p><em>&nbsp;</em></p>
+</div>
+                <div class='clear'></div>
+        </div><!-- end main content -->
+         <div class='clear'></div>
+</div>
+<div id="pix"></div>
+
+
+                                </div><!--end main -->
+                                <div id='parteneri'>
+                                    <span class='tr'></span><span class='tl'></span><span class='br'></span><span class='bl'></span><span id="filler"></span>
+                                    <div class='parteneri' id='sustinatori'>
+                                        <span class='floating_text' id='un_proiect'>Un proiect</span>
+                                        <a href='http://www.ardor.org.ro/'><div class='image' id='ardor'>Ardor</div></a>
+                                        <span class='floating_text' id='finantatori'>Finanțatori</span>
+                                        <a href='http://www.opensocietyfoundations.org/'><div class='image' id='open_society'>Open Society Foundation </div></a>
+                                        <a href='http://www.studentiq.ro//'><div class='image' id='memoplus'>MemoPlus</div></a>
+                                        <!-- <a href='http://www.ratiufamilyfoundation.com/'><div class='image' id='FundatiaRatiu'>Ardor</div></a>
+                                        <a href='http://www.eef.md/'><div class='image' id='eef'>East Europe Foundation</div></a>
+                                        <a href='http://www.mts.gov.md/'><div class='image' id='mdminister'>Ministerul Tineretului si Sportului al Republicii Moldova</div></a> -->
+
+                                        <span class='floating_text' id='parteneri_text'>Parteneri</span>
+
+                                        <a href='http://www.policycenter.eu/'><div class='image' id='PolicyCenter'>Policy Center</div></a>
+                                        <a href='http://www.britishcouncil.org/'><div class='image' id='BritishCouncil'>British Council</div></a>
+                                        <a href='http://www.europuls.ro/'><div class='image' id='europuls'>Europuls</div></a>
+                                        <a href='http://www.cere.ro/'><div class='image' id='cere'>Ce-Re</div></a>
+                                        <a href='http://www.primeromania.ro/'><div class='image' id='prime'>Prime Romania</div></a>
+                                        <a href='http://www.cji.ro/'><div class='image' id='cji'>Centrul pentru jurnalism independent</div></a>
+                                        <a href='http://www.aiesectm.ro/'><div class='image' id='aisec'>Aisec</div></a>
+                                        <!-- ===================================================================================================== -->
+                                        <a href='http://www.cogitus.ro/'><div class='image' id='cogitus'>Cogitus</div></a>
+                                        <a href='http://www.adevarul.ro/international/foreign_policy/'><div class='image' id='foreignPolicy'>Foreign Policy</div></a>
+                                        <a href='http://www.elsa.ro/'><div class='image' id='elsa'>Elsa</div></a>
+                                        <a href='http://www.vipromania.ro/'><div class='image' id='vipromania'>Voluntari pentru idei si proiecte</div></a>
+                                        <a href='http://www.ongtrust.ro/'><div class='image' id='ongtrust'>Trust</div></a>
+
+                                        <!-- ===================================================================================================== -->
+                                        <a href='http://www.leap.ro/'><div class='image' id='leap'>Leap</div></a>
+                                        <a href='http://www.younginitiative.org/'><div class='image' id='younginitiative'>Asociatia young initiative</div></a>
+                                        <a href='http://www.asjc.ro/'><div class='image' id='asjc'>Asjc</div></a>
+                                        <a href='http://osut.ro/'><div class='image' id='osut'>Osut</div></a>
+                                        <div class='clear'></div>
+                                    </div>
+                                    <div class='parteneri' id='parteneri_institutionali'>
+                                        <span class='floating_text' id='sponsori_text'>Sus&#539;in&#x0103;tori</span>
+                                        <a href='http://www.cartier.md/'><div class='image' id='cartier_logo'>Editura Cartier</div></a>
+                                        <a href='http://www.pll.md/ro/'><div class='image' id='biblio_logo'>Biblioteca publica de drept</div></a>
+                                        <span class='floating_text' id='institutii_text'>Parteneri institu&#539;ionali</span> 
+                                        <ul id='institutii'>
+                                            <!-- <span class='floating_text' id='institutii_text'>Parteneri institu&#539;ionali:</span> -->
+                                            <li><a href='http://www.politice.ro/'>Facultatea de &#536;tiin&#539;e Politice SNSPA </a></li>
+                                            <li><a href='http://www.comunicare.ro/'>Facultatea de Comunicare &#537;i Rela&#539;ii Publice SNSPA</a></li>
+                                            <li><a href='http://www.fspub.ro/'>Facultatea de &#536;tiin&#539;e Politice Universitatea Bucure&#537;ti</a></li>
+                                            <li><a href='http://www.filosofie.unibuc.ro/'>Facultatea de Filosofie Universitatea Bucure&#537;ti</a></li>
+                                            <li><a href='http://litere.unibuc.ro/'>Facultatea de Litere din Universitatea Bucure&#x015f;ti</a></li>
+                                            <li><a href='http://www.unibuc.ro/ro/fac_fsas_ro'>Facultatea de Sociologie Universitatea Bucure&#537;ti</a></li>
+                                            <li><a href='http://laws.uaic.ro/'>Facultatea de Drept Universitatea Alexandru Ioan Cuza Ia&#537;i</a></li>
+                                            <li><a href='http://www.uaic.ro/uaic/bin/view/Academic/Filosofie'>Facultatea de Filosofie si &#536;tiin&#539;e Social Politice Universitatea AIC Ia&#537;i</a></li>
+                                            <li><a href='http://www.upa.ro/'>Facultatea de Drept si Facultatea de &#x015e;tiin&#x0163;e Politice si Administrative Universitatea Petre Andrei Ia&#x015f;i</a></li> 
+
+                                            <li><a href='http://www.ubbcluj.ro/'>Universitatea Babe&#537;-Bolyai Cluj Napoca</a></li>
+                                            <li><a href='http://www.uvt.ro/'>Universitatea de Vest Timi&#537;oara</a></li>
+                                            <li><a href='http://www.upt.ro/'>Universitatea Politehnica Timi&#537;oara</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class='parteneri' id='parteneri_media'>
+                                        <span class='floating_text' id='media_text'>Parteneri media</span>
+                                        <a href='http://www.hotnews.ro/'><div class='image' id='hotnews'>HotNews</div></a>
+                                        <!-- <a href='http://www.lumebuna.ro/'><div class='image' id='lumebuna'>Lume Buna</div></a> -->
+                                        <a href='http://www.romaniapozitiva.ro/'><div class='image' id='romaniapozitiva'>Romania Pozitiva</div></a>
+                                        <a href='http://totb.ro/'><div class='image' id='thinkoutsidethebox'>Think Outside The Box</div></a>
+                                        <a href='http://www.facebook.com/carevasazica.vip'><div class='image' id='carevasazica'>Carevasazica</div></a>
+                                        <a href='http://www.studentie.ro/'><div class='image' id='studentiero'>Studentie.ro</div></a>
+                                        <a href='http://startub.unibuc.ro/'><div class='image' id='startub'>startub.unibuc.ro</div></a>
+                                        <!-- <a href='http://www.tvr.ro/tvr_cluj.php'><div class='image' id='tvrcluj'>Tvr Cluj</div></a> -->
+                                        <!-- <a href='http://www.radiotransilvania.ro'><div class='image' id='radiotransilvania'>Radio Transilvania</div></a> -->
+                                        <a href='http://iasifun.ziaruldeiasi.ro/'><div class='image' id='iasifun'>Iasi fun</div></a>
+                                        <a href='http://www.ziaruldeiasi.ro/'><div class='image' id='ziaruldeiasi'>Ziarul de Iasi</div></a>
+                                        <a href='http://www.kissfm.ro/timisoara'><div class='image' id='kissfm'>KissFm</div></a>
+
+                                        <div class='clear'></div> 
+                                    </div>
+                                    <div class='clear'></div>
+
+                                </div>	
+                            </div>	<!-- end wrap -->
+                            <div id='footer_mare'>
+                                <div id='footer'>
+                                    <div id='links' class='footer'>
+                                        <div id='menu1' style='margin:auto;'> <ul id='meniu_prinicpal'><li><a href='contacte/index.html'> Contact </a></li>
+<li><a href='clubdebate/index.html'> Cluburile </a></li>
+<li><a href='oamenii/index.html'> Oamenii </a></li>
+<li><a href='proiectul/index.html'> Proiectul </a></li>
+<li><a href='home/index.html'> Acasa </a></li>
+</ul></div><!--end menu-->
+                                    </div><!--
+                                    <div id='contact' class='footer'>
+                                            <h4>Contact</h4>
+                                            <p>office@closer2oxford.ro</p>
+                                            <p>bogdan.draghicescu@closer2oxford.ro<br>
+                                            <span class='detalii'> (asistenta tehnica web - orice probleme legate de site)</span></p>
+                                    </div>
+                                    -->
+                                    <div id='newsletter' class='footer'>
+                                        <script src="../../connect.facebook.net/en_US/all.js#xfbml=1"></script><fb:like href="http://www.facebook.com/pages/Closer2Oxford/162758797069605" width="250" colorscheme="dark"></fb:like>
+                                        <!--<h4>Newsletter</h4>
+                                        <form action='/page/newsletter'>
+                                                <input type='text' name='email'>
+                                                <input type='submit' id='submit' value='>'>
+                                                        
+                                        </form>-->
+                                    </div>
+                                    <div id='credits'>
+                                        Copyright(c) 2021 ARDOR |  Toate drepturile rezervate | Toate logo-urile si sloganurile de pe site sunt proprietate intelectuala inregistrata si nu pot fi reproduse fara acordul explicit al detinatorilor. <br>
+                                            <br /><br />
+                                            <b>Disclaimer</b><br /><i>
+
+                                                Programul educational Closer to Oxford este un program non-profit si nu are o legatura cu universitatea cu acelasi nume, referirea la Oxford avand doar o semnificatie simbolica.
+                                            </i>
+                                    </div>
+
+                                </div>		
+                            </div>		
+
+                            <div id="finantatde">Acest proiect este finantat cu sustinere din partea Comisiei Europene. Aceast publicatie [comunicare] reflecta doar
+                                vederile autorului, iar Comisia nu poate fi facuta  responsabila pentru utilizarea informatiei pe care o contine.</div>
+
+
+                        </body>
+                        </html>

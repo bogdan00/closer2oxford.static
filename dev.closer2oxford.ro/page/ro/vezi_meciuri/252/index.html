@@ -1,0 +1,541 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml-strict.dtd">
+<HTML xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+    <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+            <link rel="icon" type="image/png"  href="../../../../../closer2oxford.ro/favicon.html">
+                <link rel="stylesheet" href="../../../var/layout.css" type="text/css">
+                    <title>Closer to Oxford - e timpul pentru argumente!</title>
+                    <link rel="alternate" type="application/rss+xml"  href="../../../rss_feed" title="Stiri Closer2Oxford">
+                        <!-- <link rel="image_src" property="og:image"  href="/images/layout/closer2oxford_fb_white.png" /> -->
+                        <link rel="image_src" property="og:image"   type="image/jpeg"  href="../../../../uploads/2015/06/9/facebook_icon.html" />
+                        <link rel="image_src" type="image/jpeg"  href="../../../../uploads/2015/06/9/icon-facebook.gif" /> 
+						<meta name="description" content="Closer2Oxford pune în valoare oameni şi argumentele lor, în dezbateri online şi publice alături de tineri şi invitați avizaţi"/>
+                        <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9" />
+<script type='text/javascript' src='../../../../js/jquery-1.4.4.min.js'></script>
+<script>var $j = jQuery.noConflict();</script>
+<script type='text/javascript' src='../../../../js/tinymce/tiny_mce.js'></script>
+<script type='text/javascript' src='../../../../js/jquery.form.js'></script>
+<script type='text/javascript' src='../../../../js/fbLoginRegister.js'></script>
+<script type='text/javascript' src='../../../var/javascript.js'></script>
+<script type='text/javascript' src='../../../../js/jquery.hovertip-1.0.min.js'></script> 
+<script type='text/javascript' src='../../../../js/jquery.jgrowl_minimized.js'></script> 
+<link rel='stylesheet' href='../../../../css/jquery.jgrowl.css' media='screen' type='text/css'> 
+<script type='text/javascript' src='../../../../js/jquery.timer-min.js'></script> 
+<style>.hovertip{
+    position:absolute;
+    padding:10px 13px;
+    z-index:2;
+    max-width:300px;
+    color:#303030;
+    background-color:#f5f5b5;
+    border:1px solid #DECA7E;
+    font-family:sans-serif;
+    font-size:12px;
+    line-height:18px;
+    text-align:left;
+    }
+           .normal_text ol,.normal_text ol *{text-align:left !important}
+           .normal_text *{font-weight:normal !important;font-size:12px !important;font-face:tahoma !important}</style> 
+<script type='text/javascript'>$j(document).ready(function(){$j('.tooltip').hovertip({'offset':[20,20]});get_notif();});
+
+if(!Array.indexOf){Array.prototype.indexOf = function(obj){for(var i=0; i<this.length; i++){if(this[i]==obj){return i;}}return -1;}}
+    hashuri = [] ;
+	 var tick_timer= 3000 ;
+ 
+	 function get_notif()
+        {
+		  
+		  //console.log(tick_timer);
+	     
+		  setTimeout(get_notif,tick_timer);
+        
+		   $j.ajax(
+            {
+                url: '/page/notif/show_events',
+                dataType: 'json',
+                data: "{}",
+                success: function(data)
+                    {
+                    $j.each(data,function(index,data){
+                        try
+                            {
+                            if( hashuri.indexOf(data.hash) == -1 )
+                                {
+                                hashuri.push(data.hash);
+                                $j.jGrowl(
+                                    data.str,
+                                    {
+                                        corners:'1px',
+                                        life: data.life,
+                                        header:data.title,
+                                        hash: data.hash,
+                                        sticky: data.sticky,
+                                        close: function(e,m,o)
+                                            {
+                                                $j.ajax({url:'/page/notif/delete_single_event/' + o.hash});
+                                            }
+                                    });
+                                }
+                            }
+                        catch(e){}
+                        })
+                    }
+            });
+        }
+	 </script> 
+ 
+                            
+  <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-19111721-1']);
+  _gaq.push(['_setDomainName', '.closer2oxford.ro']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+    
+                        </head>
+                        <body>
+                            <div id="global_wrap">
+                                <div id="header">
+                                    <a href='../../../../index.html'><div id='logo'><img src='../../../../images/layout/sigla.jpg'></div></a>
+                                    <a class='noExternal' href='http://www.facebook.com/pages/Closer2Oxford/162758797069605'><img src='../../../../images/fb.png' style='height:30px;float:right;clear:right;margin:10px 5px 5px 5px;border:none;'/></a>
+                                    <a href='../../../rss_feed'><img src='../../../../images/feed-icon.png' style='height:30px;float:right;clear:right;margin:5px;border:none;'/></a>
+                                </div>
+                                <div id="meniu">
+                                    <div  id='register_login'>
+
+                                        
+  <a href='#' class='todo' id='login'>Login </a> &nbsp;<a href='../../../register.html' class='todo' id='register'>Register</a>
+    <div id='login_box'>
+		  <form action='https://dev.closer2oxford.ro/page/ro/login_user/logon' method='post' id='user_login_form'>
+					 <div>Email: <input type='text' name='email'/> </div><br />
+					 <div>Pass: <input type='password' name='passwd'/></div><br />
+					 <a href='#' class='password_forgot'>forgot password?</a>
+					 <input type='hidden' value='/page/ro/vezi_meciuri/252/' name='returnto' class='submiter'/><br />
+					 <input type='submit' value='login' name='btn' class='submiter'/><br />
+		  </form>
+		  
+		  <form action='https://dev.closer2oxford.ro/page/ro/login_user/reset_user_pw' method='post' id='user_reset_form'>
+					 <div>Email: <input type='text' name='email'/> </div><br />
+					 <a href='#' class='password_forgot'>login?</a>
+					 <input type='hidden' value='/page/ro/vezi_meciuri/252/' name='returnto' class='submiter'/><br />
+					 <input type='submit' value='reset' name='btn' class='submiter'/><br />
+		  </form>
+		  
+    </div>
+    
+                                    </div>
+                                    <div id='menu1' style='margin:auto;'> <ul id='meniu_prinicpal'><li><a href='../../../contacte/index.html'> Contact </a></li>
+<li><a href='../../../clubdebate/index.html'> Cluburile </a></li>
+<li><a href='../../../oamenii/index.html'> Oamenii </a></li>
+<li><a href='../../../proiectul/index.html'> Proiectul </a></li>
+<li><a href='../../../home/index.html'> Acasa </a></li>
+</ul></div><!--end menu-->
+                                </div>
+                                <div id="main"> 
+                                    <!--<div id='stiri-padding'>
+        <div id='stiri_back'>
+                {stiri} 
+    
+               
+        </div>-->
+        
+</div>
+<div  id="content-padding">
+        <div id='sidebar_menu'>
+                <span class='tr'></span>
+                <span class='tl'></span>
+                <span class='br'></span>
+                <span class='bl'></span>
+                <span id="filler"></span>
+                    
+                <ul></ul>
+                
+                <div class='clear'></div>
+        </div>
+        <div id="content">
+                <span class='tr'></span>
+                <span class='tl'></span>
+                <span class='br'></span>
+                <span class='bl'></span>
+                <span id="filler"></span>
+                  <script>
+        $j(document).ready(function(){
+        $j('.discurs_toggler').toggle(
+                function(){
+                $j(this).attr('src', '../../../../images/little_stuff/16-em-down.png');   
+                $j(this).parent().next('.discurs').hide('fast');
+                },
+                function(){
+                $j(this).attr('src', '../../../../images/little_stuff/16-em-up.png');
+                $j(this).parent().next('.discurs').show('fast');
+                });
+            });
+        </script><style>.nowrap{white-space: nowrap;}
+		.noJustify{text-align:left;}
+		</style><h2 class='noJustify'><span class='nowrap'>'Carmen si Maria'</span> <span class='notif'>(afirmatori)</span> vs <span class='nowrap'>'Aila si Elena'</span> <span class='notif'>(negatori)</span></h2><h3>A1 (Carmen Elena Stefan) <img src='../../../../images/little_stuff/16-em-up.png' class='discurs_toggler'></h3>
+            <div class='discurs normal_text'><p class="western">&nbsp;Prin pasivitatea individului care este martor la &icirc;ncălcări ale legii &icirc;nțelegem situația &icirc;n care o persoană fie este prezentă &icirc;ntr-un moment &icirc;n care o altă persoană se găsește &icirc;ntr-o situație periculoasă, fie este prezentă &icirc;ntr-un moment &icirc;n care are loc nerespectarea unei legii sau ia cunoștiință de un asemenea fapt dar nu acționează &icirc;n nici un fel.</p>
+<p class="western">Suntem indivizi dar trăim &icirc;ntr-o comunitate, &icirc;nconjurați de alță indivizi. Suntem oameni, deci suntem caracterizați de sentimente și rațiune. Prin urmare, este timpul să  sancționăm prin lege pasivitatea individului care este martor la &icirc;ncălcari al legii.</p>
+<p class="western">Un prim argument &icirc;l reprezintă protejarea vieții. Pasivitatea individului care este prezent la un accident care are ca urmare răniți și care au nevoie de ajutor medical nu ar trebui să poată fi scuzată pe motiv că datoria de salva impune o sarcină mult prea grea pentru libertatea individuală. Ar trebui să observăm că &icirc;n aceste cazuri legea impune &icirc;n principal obligația de &icirc;nștiințare a autorităților sau de a se asigura că s-a realizat această &icirc;nștiințate<sup><a class="sdfootnoteanc" name="sdfootnote1anc" href="#sdfootnote1sym"><sup>1</sup></a></sup>.  Obligația de a săv&acirc;rși alte acte pentru salvarea persoanei aflate &icirc;n nevoie este limitată la: acte necesare &icirc;nlăturării primejdiei &icirc;n care se găsește persoana, care sunt posibile pentru cel care oferă ajutor și care nu implică un risc pentru acesta<sup><a class="sdfootnoteanc" name="sdfootnote2anc" href="#sdfootnote2sym"><sup>2</sup></a></sup>;  primul ajutor de bază se efectuează de orice persoană instruită &icirc;n acest sens sau de persoane fără instruire prealabilă acţion&acirc;nd la indicaţiile personalului specializat din cadrul dispeceratelor medicale de urgenţă sau al serviciilor de urgenţă<sup><a class="sdfootnoteanc" name="sdfootnote3anc" href="#sdfootnote3sym"><sup>3</sup></a></sup>.</p>
+<p class="western">Am putea pune semnul egalității &icirc;ntre libertatea individuală și acțiunile la care suntem obligați &icirc;n baza legii pentru a salva o persoană, acțiunii care ar putea determina salvarea vieții acelei persoane? De exemplu, să luăm o situație din S.U.A., unde nu există o obligație de a salva. Pe o stradă din New York, pe parcursul a 35 de minute, o femeie a fost &icirc;njunghiată &icirc;n mod repetat, iar  &icirc;n timp acesta a strigat după ajutor și s-a t&acirc;rat spre ușa blocului &icirc;n care locuia. &Icirc;n tot acest timp, 38 de vecini care se aflau &icirc;n apartamentele lor priveau evenimentele din strada dar nimeni nu a sunat dupa ajutor. Abia dupa ce atacatorul a fugit, cineva a anunțat poliția, care a ajuns &icirc;n 2 minute<sup><a class="sdfootnoteanc" name="sdfootnote4anc" href="#sdfootnote4sym"><sup>4</sup></a></sup>.</p>
+<p class="western">&Icirc;n al doilea r&acirc;nd, apartenența individului la societate implică obligarea la anumite acțiuni, printre care și datoria de a salva. Trăim &icirc;ntr-o societate și suntem obligați să săv&acirc;rșim anumite fapte at&acirc;t spre beneficiul celor din jur dar și pentru beneficiul statului.. De exemplu, plătim taxe, angajatorii au obligația de a asigura un loc de muncă sigur, copii sunt obligații să meargă la școală. Datoria noastră de a nu răm&acirc;ne pasivi față de nerespectarea unui legi reprezintă o acțiune care prezintă avantaje pentru societate și pentru cei din jur. Obligația de denunțare a unor infracțiuni asigura statului posibilitatea de a sancționa persoanele care nu respectă legea, iar pentru ceilalți cetățeni asigură un mediu mai puțin periculos prin &icirc;ndepărtarea infractorilor și prin descurajarea altor persoane de a săv&acirc;rșii infracțiunii.</p>
+<p class="western">&Icirc;n ultimul r&acirc;nd, legea influențează moralitatea individului.  Fiecare dintre noi tinde să aibă anumite norme morale, dar acestea sunt suplinite și de existența legilor care reglementează anumite aspecte morale pe care statul le consideră a fi benefice pentru societate. &Icirc;n plus, există studii care susțin că existența unei legii determină și modul &icirc;n care este privită din punct de vedere moral o anumită problemă. De exemplu, &icirc;ntr-un studiu s-au creat două grupuri cărora li s-a prezentat cazul unor persoane care stăteau pasiv pe mal &icirc;n timp ce &icirc;n apa o persoană se &icirc;nneca.  Unuia dintre grupuri i s-a spus că există o obligație legala de a salva, iar celuilalt grup i s-a spus că nu era necesară o asemenea acțiune. Majoritatea celor din primul grup au susținut că acțiunile persoanelor pasive erau greșite din punct de vedere moral<sup><a class="sdfootnoteanc" name="sdfootnote5anc" href="#sdfootnote5sym"><sup>5</sup></a></sup>.</p>
+<p class="western">Prin sancționarea individului pasiv martor la &icirc;ncălcarea unei legii obținem avantaje pentru societatea &icirc;n care trăim mai importante dec&acirc;t discomfortul pe care o asemenea intervenție l-ar putea cauza. Salvarea unei vieții este mai importantă dec&acirc;t cele 5 minunte pe care le-am pierde d&acirc;nd un telefon  pentru a chema ajutoare. &Icirc;n plus, legea nu ne obligă sa intervenim dacă ne-am pune pe noi &icirc;n pericol sau dacă nu avem cunoștiințele necesare.</p>
+<p class="western">&nbsp;</p>
+<p class="western" lang="ro-RO">&nbsp;</p>
+<p class="western" lang="ro-RO">&nbsp;</p>
+<p class="western" lang="ro-RO">&nbsp;</p>
+<div id="sdfootnote1">
+<p class="sdfootnote-western"><a class="sdfootnotesym" name="sdfootnote1sym" href="#sdfootnote1anc">1</a> <span lang="ro-RO">Art. 315 Cod Penal, art. 87 alin. 2 din Legea 	95/2006 privind reforma &icirc;n domeniu sanatății </p>
+</div>
+<div id="sdfootnote2">
+<p class="sdfootnote-western"><a class="sdfootnotesym" name="sdfootnote2sym" href="#sdfootnote2anc">2</a> <span lang="ro-RO">Tudorel Toader, Drept penal rom&acirc;n. Partea 	specială, ed. Hamangiu, București, 2008, p. 427</p>
+</div>
+<div id="sdfootnote3">
+<p class="sdfootnote-western"><a class="sdfootnotesym" name="sdfootnote3sym" href="#sdfootnote3anc">3</a> <span lang="ro-RO">Art. 87 alin. 1 Legea 95/2006 privind reforma &icirc;n 	domeniul sanatății</p>
+</div>
+<div id="sdfootnote4">
+<p class="sdfootnote-western"><a class="sdfootnotesym" name="sdfootnote4sym" href="#sdfootnote4anc">4</a> <span style="font-size: x-small;">Jay Silver,  The duty to 	rescue: reexamination and proposal, p.423 	(http://scholarship.law.wm.edu/cgi/viewcontent.cgi?article=2168&amp;context=wmlr 	)</p>
+</div>
+<div id="sdfootnote5">
+<p class="western"><a class="sdfootnotesym" name="sdfootnote5sym" href="#sdfootnote5anc">5</a> <span style="font-size: x-small;">D`Amato, The "Bad 	Samaritan" Paradigm, nota de subsol 43, p. 429( <span style="font-size: x-small;">http://scholarship.law.wm.edu/cgi/viewcontent.cgi?article=2168&amp;context=wmlr) &nbsp;</p>
+</div>
+</div><hr><h3>N1 (Aila Veli) <img src='../../../../images/little_stuff/16-em-up.png' class='discurs_toggler'></h3>
+            <div class='discurs normal_text'><p>Din punctul nostru de vedere, această sancționare a pasivității individului care e martor la &icirc;ncălcări ale legii ar fi inegală deoarece, ea trebuie să provină de la oameni care au dovedit deja că le pasă. Nu spunem că există nepăsare, &icirc;nsă &nbsp;interesul este direcționat &icirc;n cu totul alte direcții, cel puțin &icirc;n realitatea rom&acirc;nească. Mai mult, considerăm că această sancționare nu ar putea fi aplicată &icirc;n toate situațiile. Spre exemplu : &icirc;ntr-un accident de mașină, ar trebui sancționați toți conducătorii auto care nu opresc ? Vom contraargumenta inutilitatea legii prin cele ce urmează.</p>
+
+<p>&Icirc;n primul r&acirc;nd, analiz&acirc;nd primul argument, considerăm că sancționarea individului datorită neparticipării &icirc;ntr-o situație periculoasă reprezintă o atentare la libertatea individuală. Individul este liber să decidă care este modul de a acționa &icirc;n respectiva situație, dacă pericolul nu cumva s-ar răsfr&acirc;nge și asupra lui. &Icirc;nsuși John Stuart Mill, renumit filozof,&nbsp; afirmă &nbsp;că trebuie să existe "o departajare intre libertatea socială și cea individuală, orice imixtiune a socialului fiind nepermisă, ea gener&acirc;nd uniformizare și stopare a dezvoltării individuale&rdquo;<a  href="#1e421">[1]</a>. Mai mult, adoptarea acestei legi ar implica din start faptul că indivizii sunt imorali, așadar ei trebuie constr&acirc;nși să &icirc;și ofere ajutorul, ceea ce nouă ni se pare absurd. Situația ar fi similară cu &ldquo;educația prin bătaie, că altfel nu se poate &ldquo;, practicată &icirc;n trecut, adapt&acirc;nd &icirc;n cazul de față &ldquo;moralitate cu forța&rdquo;.</p>
+<p>Totodată, această &ldquo;pasivitate a individului&rdquo; &icirc;ntr-o situație &icirc;n care o persoană este pusă &icirc;n pericol &icirc;și găsește cauza chiar &icirc;n cercetările sociologice. De exemplu, Bibb Latene a facut un studiu de caz asupra unui viol produs &icirc;n New York. La scena au fost martori mai mulți vecini&nbsp; care au urmărit scena de la ferestre și care ar fi putut interveni. Intrigarea lui a fost datorită faptului că apelul la poliție, a survenit abia peste jumătate de oră. Iar vecinii, majoritatea, erau persoane respectabile. Acest mod de a acționa este explicat prin &ldquo;efectul de așteptare&rdquo;. Acesta apare &icirc;n situații de grup sau &icirc;n care indivizii doar &icirc;și definesc situația astfel ( precum cazul de față). Latene a tras astfel concluzia că ajutorul survine &icirc;ntr-un interval de timp invers proporțional cu numărul indivizilor ce pot oferi ajutorul. Iar această așteptare se produce datorită faptului că&nbsp; cei mai mulți &icirc;i așteaptă pe alții să preia initiațiva. <a  href="#1e422">[2]</a></p>
+
+<p>Suntem de acord cu afirmația A1 &icirc;n ceea ce privește faptul că &ldquo;apartenența individului la societate implică obligarea la anumite acțiuni, printre care și datoria de a salva&rdquo;, &icirc;nsă nu vedem cum constr&acirc;ngerea de a salva ar &icirc;mbunătăți situația &icirc;ntr-o societate. Făc&acirc;nd&nbsp; distincție &icirc;ntre considerentele de ordin moral și &icirc;ndatoririle legale ale unui individ putem confirma faptul că legile au ca temelie credințele, valorile și așteptările noastre<a  href="#1e423">[3]</a>, iar așa zisa &rdquo;datorie de a salva&rdquo; derivă prin intermediul legilor din valorile morale individuale chiar dacă acestea nu sunt unanim acceptate.</p>
+
+<p>Nu &icirc;n ultimul r&acirc;nd , nu suntem de acord cu afirmația că legea influențează moralitatea individului. &Icirc;n opinia noastră, moralitatea individului este un atribut dob&acirc;ndit prin educația primită sau prin interacțiunile individului &icirc;n societate. Fiecare &icirc;și stabilește propriile norme morale &icirc;n funcție de viziunea asupra lumii. Spre exemplu, un fapt ce unui individ i se pare moral, precum să intervii dacă vezi un cerșetor căzut &icirc;n parc, altuia i s-ar parea că nu este de datoria lui, cerșetorul probabil merit&acirc;ndu-și soarta. Așadar, o astfel de lege&nbsp; ar&nbsp; institui o generalizare a normelor morale, astfel &icirc;nc&acirc;t acestea să fie aceleași pentru toți. &Icirc;n adaugarea acestui contraargument, considerăm că nu este obligatorie sancționarea grupului care nu a acționat &icirc;n salvarea unui om la &icirc;nec &nbsp;at&acirc;t timp c&acirc;t nu raționăm asupra motivelor acestei &ldquo; pasivități&rdquo;. V-ați g&acirc;ndit poate că membrii respectivului grup, prin reducere la absurd, nu știau să &icirc;noate, fapt ce nu poate fi dovedit sau supus cercetării?</p>
+<p>&Icirc;n concluzie, considerăm că ar trebui să existe alte mijloace pentru a cultiva spiritul civic al cetațenilor, precum o stimulare a activităților de voluntariat sau proiecte de &icirc;ntrajutorare a semenilor care ar duce la o &icirc;mbunatățire indirectă a ceea ce se dorește prin această lege și anume existența mai multor &ldquo; buni samariteni&rdquo;.</p>
+
+
+<div><br /> 
+<hr size="1" />
+<div>
+<p><a  name="1e421">[1]</a> John Stuart Mill, Despre libertate, Editura Humanitas, Bucuresti, 2005, p. 48-60</p>
+</div>
+<div>
+<p><a  name="1e422">[2]</a> Alfred Bulai, Concepte fundamentale in sociologie &ndash;Suport de curs, p.78</p>
+</div>
+<div>
+<p><a  name="1e423">[3]</a>Ridolfi, Kathleen M., &rdquo;Law, Ethics, and the Good Samaritan: Should There Be a Duty to Rescue?&rdquo;, Santa Clara Law Review ,vol. 40, 2000, p. 960 <a href="http://digitalcommons.law.scu.edu/cgi/viewcontent.cgi?article=1358&amp;context=lawreview">http://digitalcommons.law.scu.edu/cgi/viewcontent.cgi?article=1358&amp;context=lawreview</a></p>
+</div>
+</div>
+</div><hr><h3>A2 (Maria) <img src='../../../../images/little_stuff/16-em-up.png' class='discurs_toggler'></h3>
+            <div class='discurs normal_text'><p>Incalcarea legii poate genera diverse efecte in functie de intensitatea incalcarii, de valoarea pe care o ocroteste respectiva lege, si nu in ultimul rand de sanctiunea prevazuta pentru incalcarea acesteia.</p>
+<p>Astfel, in unele cazuri, incalcarea legii poate genera o infractiune contra persoanei.</p>
+<p>A fi martor la o asemenea incalcare, si nu numai, are de asemenea efectele ei asupra spectatorilor cum ar fi teama, nesiguranta, pe scurt, ne afecteaza emotional.</p>
+<p>Dar a fi martor pasiv la incalcarea unei legi ce poate inseamna? Nu inseamna oare ca ceea ce tocmai am vazut nu ne afecteaza psihic pentru ca altfel ar fi intervenit instinctul de aparare? Mai mult, nu inseamna ca acceptam ceea ce se intampla transformandu-ne astfel in complici?</p>
+<p>Astfel stand lucrurile, este necesar a afirma ca asa cum complicitatea este incriminata de legea penala si o astfel de complicitate va trebui sanctionata.</p>
+<p>In primul rand,contrar partii negatoare, consider ca sanctionarea pasivitatii individului care asista la incalcarea legii nu poate fi inegala intrucat, asa cum aceasta sustinea in discursul sau, &ldquo;legea are ca temei credintele, valorile si asteptarile noastre&rdquo;, adica ale societatii. Asadar, daca se constata necesitatea incriminarii unui atare comportament, inegalitatea este exclusa. Si pana la urma ce reprezinta aceasta inegalitatea? In plus, nu se poate vorbi nici despre discriminare pentru ca o eventuala sanctionare a pasivitatii in discutie urmareste pastrarea ordinii de drept, ocrotirea binelui general deci insusi individul care si-a exprimat opinia contrara afladu-se intr-o situatie de pericol poate beneficia de pe urma acesteia.</p>
+<p>In al doilea rand, observ ca negatorii au absolutizat ideea de libertate individuala<sup>1</sup>. Neicercand sa contrazic ideile filosofului John Stuart Mill, trebuie totusi sa afirm ca libertatea individuala se&nbsp; manifesta in raport cu societatea presupunand &ldquo; o responsabilitate asumată de către fiecare individ &icirc;n parte, &icirc;n aşa fel &icirc;nc&acirc;t limitele ce se impun pentru fiecare libertate personala &icirc;n parte, necesare pentru o bună funcţionare a societăţii, să fie admise şi respectate de toţi indivizii &rdquo;. De asemenea, nu ignor ceea ce este garantat de insasi Constitutia Romaniei in art. 23 pentru ca sunt de parere ca respectarea acestui drept este o conditie sine qua non a societatii demoratice.</p>
+<p>Referitor la &ldquo;efectul de asteptare&rdquo; consider ca acesta a fost interpretat gresit deoarece in insusi studiul citat se afirma faptul ca &ldquo;asteptarea se produce datorita faptului ca atunci cand oamenii percep o situatie de grup ei doresc sa primeasca un mesaj persuasiv ( de a actiona ) de la cei care sunt considerati a fi in pozitii superioare&rdquo;. Astfel, consider ca daca pasivitatea ar fi fost incriminata cu siguranta rezultatul nu ar fi fost acelasi; mai mult, trebuie sa spun ca se desprind inclusiv cele mentionate anterior si anume ca legea influenteaza moralitatea individului. Un exemplu relevant este cel al incriminarii avortului in Romania care, se stie, a influentat gandirea societatii dupa cum a fost sau nu legalizat cu consecinte pe planul dreptului femeii asupra propriului sau corp<sup>2</sup>.</p>
+<p>Aceasta influentare, desigur, nu &nbsp;incalca articolul 9-CEDO-privind Libertatea de gandire, de constiinta si de religie deoarece, asa cum am afirmat mai sus, insasi aceasta gandire a societatii in ansamblu este reflectata in incriminarea martorilor pasivi iar situatia in care exista oameni care nu aproba aceasta eventuala sanctiune se explica, din nou, prin convietuirea indivizilor in societate si de exercitarea drepturilor lor cu buna-credinta conform art. 57 din Constitutia Romaniei care prevede &ldquo;Cetăţenii rom&acirc;ni, cetăţenii străini şi apatrizii trebuie să-şi exercite drepturile şi libertăţile constituţionale cu bună-credinţă, fără să &icirc;ncalce drepturile şi libertăţile celorlalţi&rdquo;.</p>
+<p>In ultimul rand, adaug ca&nbsp; noi, oamenii suntem complexi si in acelasi timp egali ceeea ce nu ne da dreptul de a ne judeca intre noi; nu suntem in masura de a decide daca unul dintre noi isi merita soarta sau nu. Fara indoiala ca fiecare este indreptatit sa actioneze in consecinta gandirii sale, dar asta nu este o scuza plauzibila pentru pasivitatea fata de individul in nevoie. Ce s-ar intampla cu oamenii obligati sa cerseasca, sa se prostitueze daca am considera ca-si merita soarta? Iar daca i-am ajuta nu ar insemna implicit ca suntem voluntari? De ce trebuie sa facem parte dintr-o organizatie cand si aceasta presupun un grad de risc in cazul interventiilor de urgenta sau in cadrul programelor anti-drog, de exemplu.</p>
+<p>In concluzie, cred de cuviinta ca pasivitatea martorilor la incalcarea legii poate face obiectul unei reglementari pentru ca societatea ar avea de castigat atat pe plan spiritual, cat si pe plan material.</p>
+
+<p><sup>&nbsp;</sup></p>
+<p><sup>&nbsp;</sup></p>
+<p><sup>&nbsp;</sup></p>
+<p><sup>&nbsp;</sup></p>
+<p><sup>&nbsp;</sup></p>
+<p><sup>&nbsp;</sup></p>
+<p><sup>&nbsp;</sup></p>
+<p><sup>&nbsp;</sup></p>
+<p><sup>&nbsp;</sup></p>
+<p><sup>&nbsp;</sup></p>
+<p><sup>&nbsp;</sup></p>
+<p><sup>1</sup> http://www.beckshop.ro/fisiere/5862_fp_2664_EdituraCHBECK-dimensiunea....%20extras.pdf</p>
+<p><sup>2</sup> <a href="http://ro.wikipedia.org/wiki/Avort">http://ro.wikipedia.org/wiki/Avort</a></p>
+<p>Constitutia Romaniei</p>
+<p>Declaratia Universala a Drepturilor Omului</p>
+</div><hr><h3>N2 (Elena Radu) <img src='../../../../images/little_stuff/16-em-up.png' class='discurs_toggler'></h3>
+            <div class='discurs normal_text'>
+<p>A fi afectat de o anumită situație nu &icirc;nseamnă neapărat manifestarea &icirc;ntr-un anumit sens. Cum am afirmat anterior, individul dispune de libertatea de a decide cum va acționa, &icirc;n funcție de propriul echilibru emoțional, propriile priorități, g&acirc;nduri, percepții, pe scurt din perspectiva propriei mentalități. Problema fundamentală abordată de dimensiunea individualismului din modelul 5D al lui Geert Hofstede, autorul teoriei dimensiunilor culturale, este gradul de interdependenţă pe care o societate o menţine &icirc;ntre membrii săi. Ea are de a face cu felul &icirc;n care oamenii &icirc;și definesc imaginea de sine: prin &ldquo;eu&rdquo; sau &ldquo;noi&rdquo;. &Icirc;n societăţile individualiste, oamenii se presupune că ar trebui să aibă grijă directă doar de ei şi familia lor. &Icirc;n societăţile colectiviste oamenii aparţin unor grupuri &icirc;n care membrii acestora au grijă unii de alții &icirc;n schimbul loialităţii. Un scor mare indică faptul că individul și drepturile individuale sunt supreme &icirc;n cadrul societății. Societatea colectivistă se manifestă printr-un angajament str&acirc;ns, pe termen lung, fie că grupul este familia, familia extinsă sau relaţiile extinse. Loialitatea &icirc;ntr-o cultură colectivistă este primordială, şi prevalează asupra majorității celorlalte norme sociale şi reglementări. Societatea &icirc;ncurajează relaţiile puternice &icirc;n care toată lumea &icirc;şi asumă responsabilitatea pentru ceilalţi membri ai grupului lor. &Icirc;n societăţile colectiviste infracţiunea atrage ruşinea şi alterarea imaginii, relațiile angajator/angajat sunt percepute &icirc;n termeni morali (ca o legătură de familie), deciziile de angajare şi promovare țin seama de grupul angajatului, managementul este unul de gestionare a grupurilor.<a  href="#b34f1">[1]</a>Așadar, dacă pentru un individ instinctul de apărare se manifestă printr-o acțiune promptă și imediată de ajutor, pentru altul instinctul de apărare presupune apărarea propriei ființe, printr-o limitare a acțiunilor. De ce trebuie sa fie considerat complice dacă respectiva persoană a considerat că aceasta este cea mai bună soluție &icirc;n acel sens? Subliniem din nou importanța libertății individului &icirc;n societate, idee regăsită la J.S.Mill.</p>
+<p>&Icirc;n primul r&acirc;nd, afirmăm din nou că legea nu poate fi practică pentru că ea presupune din start inegalitate. Ne-ar fi plăcut ca A2 să ne prezinte c&acirc;teva criterii obiective &icirc;n sancționarea inacțiunii sau &icirc;n dovedirea inacțiunii unui individ. &Icirc;ntrebarea este:există oare?&nbsp; Asumpția lui A2 referitoare la imposibilitatea existenței unui raport de inegalitate &icirc;n ceea ce ține de sancționarea pasivității individului martor are ca fundament decontextualizarea ideii din discursul lui N1 prin referire la faptul că &ldquo;legea are ca temei credintele, valorile si asteptarile noastre, adică ale societății&rdquo;, &icirc;nsă omite să adauge că &rdquo; așa zisa &rdquo;datorie de a salva&rdquo; derivă prin intermediul legilor din valorile morale individuale chiar dacă acestea nu sunt unanim acceptate&rdquo;, ceea ce implică faptul că &icirc;ntregul nu se regăsește &icirc;n totalitate &icirc;n fiecare parte a sa.</p>
+<p>&Icirc;n altă ordine de idei, nu am afirmat faptul că libertatea individuală este superioară normelor impuse de societate, insă prin adoptarea acestei legi, echilibrul dintre cele două ar fi &icirc;n mare parte distrus. Dacă ajungem să impunem individului ce să facă, de ce nu am ajunge să impunem individului ce să măn&acirc;nce, ce să bea. Pe scurt, unde ar mai fi democrația? Reiau idea cum că individual ar trebui &icirc;ncurajat &icirc;n dezvoltarea spiritului civic &icirc;n mod indirect, prin activități care să &icirc;i facă plăcere și &icirc;n care să aibă posibilitatea să se implice voluntar.</p>
+<p>&Icirc;n ceea ce privește &ldquo;efectul de așteptare&rdquo; amintit că argument invocat este considerat &icirc;n continuare plauzibil; &icirc;n acest sens voi extinde explicația. Socio-psihologii au explicat acest proces prin trei procese mai mici. Pentru ca o persoană să ajute, ea trebuie să treacă prin 3 situații:ea trebuie să observe acțiunea, să o interpreteze ca o urgență și să &icirc;și asume responsabilitatea &icirc;n oferirea ajutorului. Pentru ca ajutorul să apară, individual trebuie să indeplinească aceste condiții. Astfel, aceasta poate cu ușurință fie să nu observe situația, fie să o interpreteze greșit, fie să considere că altcineva va interveni. Se subliniază din nou subiectivitatea alegerilor individului care nu poate fi constr&acirc;ns moral printr-o lege să facă un lucru pe care nu &icirc;l consideră/observă/interpretează ca atare.<a  href="#b34f2">[2]</a> Platon &icirc;nsuși spunea că oamenii buni nu au nevoie de legi pentru a acționa responsabil, iar oamenii răi vor găsi &icirc;ntotdeauna o modalitate de a le ocoli.</p>
+<p>Pentru a restabili cazul echipei negatoare și pentru a conchide vom aduce &icirc;n atenția auditoriului faptul că legea bunului Samaritean se referă la acordarea primului ajutor atunci c&acirc;nd este nevoie, de către persoane care au cunoștințe minime necesare (a se consulta Legea 95/2006 art.87 (2) și 88 (1) )<a  href="#b34f3">[3]</a>, &icirc;nsă cunoașterea legii nu &icirc;nseamnă aplicare ci mai degrabă găsirea căii minimei rezistențe. Conținutul unei astfel de legi există &icirc;n substratul cultural al poporului/societății colective prin prisma faptului că se renunță la o parte de intimitate pentru rațiunea de siguranță fizică, ceea ce implică lipsa necesității sancționării pasivității individului martor catalogat cel mai probabil ca fiind un om rău care oricum va găsi &icirc;ntotdeauna modalități de a ocoli legile.</p>
+<div><br /> 
+<hr size="1" />
+<div>
+<p><a  name="b34f1">[1]</a> http://www.catchy.ro/ce-fel-de-popor-suntem-dupa-teoria-lui-geert-hofstede/29245</p>
+</div>
+<div>
+<p><a  name="b34f2">[2]</a> http://en.wikipedia.org/wiki/Bystander_effect</p>
+</div>
+<div>
+<p><a  name="b34f3">[3]</a> http://www.cdep.ro/pls/legis/legis_pck.htp_act_text?idt=72105</p>
+</div>
+</div>
+</div><hr><hr><h2>Decizia:</h2> <script>
+        $j(document).ready(function(){
+			$j('.decizie_toggler').toggle( 
+				function(){
+					$j(this).attr('src', '../../../../images/little_stuff/16-em-down.png');   
+					$j(this).parent().next('.decizie').hide('fast'); 
+                },
+                function(){
+					$j(this).attr('src', '../../../../images/little_stuff/16-em-up.png');
+					$j(this).parent().next('.decizie').show('fast'); 
+                } 
+			);
+		});</script><div class='decizie'><h3>George Maxim
+                <img src='../../../../images/little_stuff/16-em-up.png' class='decizie_toggler'></h3><div class='normal_text'><p>Partea 1 &ndash; Remarci individuale</p>
+<p>Afirmatorul 1:</p>
+<ul>
+<li>Un discurs bun cu argumente clare</li>
+<li>Atentie la prima parte din argumentul nr 1: obligatia primului ajutor este stabilita d&eacute;j&agrave; prin legislatia curenta in situatiile de urgenta. Scopul motiunii este de a discuta despre acele situatii care nu implica urgent medicala ci una la nivel de oprirea savarsirii unei infractiuni; totodata, intarizerea acordarii ingrijirilor medicale necesare (fie din neglijenta sau rea-credinta) se pedepseste conform legilor in vigoare</li>
+<li>&ldquo;legea nu ne obligă sa intervenim dacă ne-am pune pe noi &icirc;n pericol sau dacă nu avem cunoștiințele necesare.&rdquo; &ndash; tocmai aici sta esenta conflictului din cadrul motiunii, anume de a forta indivizii sa iasa din zona de comfort (chiar si in situatii de urgenta) pentru a-si ajuta semenii</li>
+</ul>
+<p>Negatorul 1:</p>
+<ul>
+<li>Un discurs foarte bun cu doua scapari: in primul rand se face confuzie intre moralitatea individului si comportamentul lui in societate (de exemplu as considera morala razbunarea victimei asupra infractorului; insa conform normelor societale si legale exista un parcurs legal care inlocuieste aceasta retributie considerata de multi ca fiind &ldquo;morala&rdquo;); </li>
+<li>Al doilea aspect este legat de contraargumentarea dovezilor aduse de echipa adversa care este preferabil sa se faca prin alte dovezi si mai putin prin punerea sub indoiala a fiecarui aspect al dovezilor prin reducere la absurd &nbsp;</li>
+</ul>
+<p>Afirmatorul 2:</p>
+<ul>
+<li>Discursul este unul pertinent dar se focalizeaza prea mult pe detaliile dovezilor aduse, nu propune arii clare de conflict si mentioneaza la final un castig material al societatii care nu este explicat indeajuns de clar inainte (spre deosebire de cel moral).</li>
+<li>&ldquo;In ultimul rand, adaug ca&nbsp; noi, oamenii suntem complexi si in acelasi timp egali ceeea ce nu ne da dreptul de a ne judeca intre noi; nu suntem in masura de a decide daca unul dintre noi isi merita soarta sau nu.&rdquo; &ndash; complecsi nu complexi J iar cheia de bolta a intregului sistem juridic este faptul ca fiecare individ accepta sa fie judecat pentru faptele sale de catre semenii lui </li>
+</ul>
+<p>Negatorul 2:</p>
+<ul>
+<li>Discursul are un continut foarte bun, dar din pacate aduce aspecte noi pe final care din punct de vedere al fair-play-ului ar fi trebuit evitate: societate colectivista vs individualista si minima resistenta la aplicare. Aceste concepte sunt foarte utile dar trebuiau precizate la primul discurs negator deoarece in acest moment nu mai exista un al treilea afirmator care sa poata sa apere pozitia echipei sale si de a contraargumenta aceste aspecte noi</li>
+</ul>
+
+<p>Partea 2 &ndash; Verdict si punctaje</p>
+<p>Tin sa multumesc ambelor echipe pentru o runda excelenta, cu argumente care nu s-au oprit la un nivel superficial ci au implicat o abordare profunda a motiunii. Totodata logica discursurilor a fost evidenta si clara.</p>
+<p>Avand in vedere ca echipa negatoare aduce argumente noi prin vorbitorul al doilea, verdictul se acorda echipei afirmatoare care reuseste sa-si apere pozitia pastrand liniile de argumentare de la primul afirmator la cel de-al doilea.</p>
+<p>Felicitari ambelor echipe!</p>
+<table border="1" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td width="128" valign="top">
+<p>Vorbitor</p>
+</td>
+<td width="128" valign="top">
+<p>Continut</p>
+</td>
+<td width="128" valign="top">
+<p>Strategie</p>
+</td>
+<td width="128" valign="top">
+<p>Stil</p>
+</td>
+<td width="128" valign="top">
+<p>Total</p>
+</td>
+</tr>
+<tr>
+<td width="128" valign="top">
+<p>A1</p>
+</td>
+<td width="128" valign="top">
+<p>12</p>
+</td>
+<td width="128" valign="top">
+<p>8</p>
+</td>
+<td width="128" valign="top">
+<p>4</p>
+</td>
+<td width="128" valign="top">
+<p>24</p>
+</td>
+</tr>
+<tr>
+<td width="128" valign="top">
+<p>N1</p>
+</td>
+<td width="128" valign="top">
+<p>13</p>
+</td>
+<td width="128" valign="top">
+<p>8</p>
+</td>
+<td width="128" valign="top">
+<p>4</p>
+</td>
+<td width="128" valign="top">
+<p>25</p>
+</td>
+</tr>
+<tr>
+<td width="128" valign="top">
+<p>A2</p>
+</td>
+<td width="128" valign="top">
+<p>12</p>
+</td>
+<td width="128" valign="top">
+<p>7</p>
+</td>
+<td width="128" valign="top">
+<p>4</p>
+</td>
+<td width="128" valign="top">
+<p>23</p>
+</td>
+</tr>
+<tr>
+<td width="128" valign="top">
+<p>N2</p>
+</td>
+<td width="128" valign="top">
+<p>11</p>
+</td>
+<td width="128" valign="top">
+<p>6</p>
+</td>
+<td width="128" valign="top">
+<p>4</p>
+</td>
+<td width="128" valign="top">
+<p>21</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</div>A1 -> 24 puncte<br>N1 -> 25 puncte<br>A2 -> 23 puncte<br>N2 -> 21 puncte<br>Castiga echipa: <h3 style='display:inline;color:red;'>Carmen si Maria (afirmatori)</h3></div><hr><h3 class='important'>Vrem parerea ta! Pentru asta, trebuie sa te loghezi.</h3>
+                <div class='clear'></div>
+        </div><!-- end main content -->
+         <div class='clear'></div>
+</div>
+<div id="pix"></div>
+
+
+                                </div><!--end main -->
+                                <div id='parteneri'>
+                                    <span class='tr'></span><span class='tl'></span><span class='br'></span><span class='bl'></span><span id="filler"></span>
+                                    <div class='parteneri' id='sustinatori'>
+                                        <span class='floating_text' id='un_proiect'>Un proiect</span>
+                                        <a href='http://www.ardor.org.ro/'><div class='image' id='ardor'>Ardor</div></a>
+                                        <span class='floating_text' id='finantatori'>Finanțatori</span>
+                                        <a href='http://www.opensocietyfoundations.org/'><div class='image' id='open_society'>Open Society Foundation </div></a>
+                                        <a href='http://www.studentiq.ro//'><div class='image' id='memoplus'>MemoPlus</div></a>
+                                        <!-- <a href='http://www.ratiufamilyfoundation.com/'><div class='image' id='FundatiaRatiu'>Ardor</div></a>
+                                        <a href='http://www.eef.md/'><div class='image' id='eef'>East Europe Foundation</div></a>
+                                        <a href='http://www.mts.gov.md/'><div class='image' id='mdminister'>Ministerul Tineretului si Sportului al Republicii Moldova</div></a> -->
+
+                                        <span class='floating_text' id='parteneri_text'>Parteneri</span>
+
+                                        <a href='http://www.policycenter.eu/'><div class='image' id='PolicyCenter'>Policy Center</div></a>
+                                        <a href='http://www.britishcouncil.org/'><div class='image' id='BritishCouncil'>British Council</div></a>
+                                        <a href='http://www.europuls.ro/'><div class='image' id='europuls'>Europuls</div></a>
+                                        <a href='http://www.cere.ro/'><div class='image' id='cere'>Ce-Re</div></a>
+                                        <a href='http://www.primeromania.ro/'><div class='image' id='prime'>Prime Romania</div></a>
+                                        <a href='http://www.cji.ro/'><div class='image' id='cji'>Centrul pentru jurnalism independent</div></a>
+                                        <a href='http://www.aiesectm.ro/'><div class='image' id='aisec'>Aisec</div></a>
+                                        <!-- ===================================================================================================== -->
+                                        <a href='http://www.cogitus.ro/'><div class='image' id='cogitus'>Cogitus</div></a>
+                                        <a href='http://www.adevarul.ro/international/foreign_policy/'><div class='image' id='foreignPolicy'>Foreign Policy</div></a>
+                                        <a href='http://www.elsa.ro/'><div class='image' id='elsa'>Elsa</div></a>
+                                        <a href='http://www.vipromania.ro/'><div class='image' id='vipromania'>Voluntari pentru idei si proiecte</div></a>
+                                        <a href='http://www.ongtrust.ro/'><div class='image' id='ongtrust'>Trust</div></a>
+
+                                        <!-- ===================================================================================================== -->
+                                        <a href='http://www.leap.ro/'><div class='image' id='leap'>Leap</div></a>
+                                        <a href='http://www.younginitiative.org/'><div class='image' id='younginitiative'>Asociatia young initiative</div></a>
+                                        <a href='http://www.asjc.ro/'><div class='image' id='asjc'>Asjc</div></a>
+                                        <a href='http://osut.ro/'><div class='image' id='osut'>Osut</div></a>
+                                        <div class='clear'></div>
+                                    </div>
+                                    <div class='parteneri' id='parteneri_institutionali'>
+                                        <span class='floating_text' id='sponsori_text'>Sus&#539;in&#x0103;tori</span>
+                                        <a href='http://www.cartier.md/'><div class='image' id='cartier_logo'>Editura Cartier</div></a>
+                                        <a href='http://www.pll.md/ro/'><div class='image' id='biblio_logo'>Biblioteca publica de drept</div></a>
+                                        <span class='floating_text' id='institutii_text'>Parteneri institu&#539;ionali</span> 
+                                        <ul id='institutii'>
+                                            <!-- <span class='floating_text' id='institutii_text'>Parteneri institu&#539;ionali:</span> -->
+                                            <li><a href='http://www.politice.ro/'>Facultatea de &#536;tiin&#539;e Politice SNSPA </a></li>
+                                            <li><a href='http://www.comunicare.ro/'>Facultatea de Comunicare &#537;i Rela&#539;ii Publice SNSPA</a></li>
+                                            <li><a href='http://www.fspub.ro/'>Facultatea de &#536;tiin&#539;e Politice Universitatea Bucure&#537;ti</a></li>
+                                            <li><a href='http://www.filosofie.unibuc.ro/'>Facultatea de Filosofie Universitatea Bucure&#537;ti</a></li>
+                                            <li><a href='http://litere.unibuc.ro/'>Facultatea de Litere din Universitatea Bucure&#x015f;ti</a></li>
+                                            <li><a href='http://www.unibuc.ro/ro/fac_fsas_ro'>Facultatea de Sociologie Universitatea Bucure&#537;ti</a></li>
+                                            <li><a href='http://laws.uaic.ro/'>Facultatea de Drept Universitatea Alexandru Ioan Cuza Ia&#537;i</a></li>
+                                            <li><a href='http://www.uaic.ro/uaic/bin/view/Academic/Filosofie'>Facultatea de Filosofie si &#536;tiin&#539;e Social Politice Universitatea AIC Ia&#537;i</a></li>
+                                            <li><a href='http://www.upa.ro/'>Facultatea de Drept si Facultatea de &#x015e;tiin&#x0163;e Politice si Administrative Universitatea Petre Andrei Ia&#x015f;i</a></li> 
+
+                                            <li><a href='http://www.ubbcluj.ro/'>Universitatea Babe&#537;-Bolyai Cluj Napoca</a></li>
+                                            <li><a href='http://www.uvt.ro/'>Universitatea de Vest Timi&#537;oara</a></li>
+                                            <li><a href='http://www.upt.ro/'>Universitatea Politehnica Timi&#537;oara</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class='parteneri' id='parteneri_media'>
+                                        <span class='floating_text' id='media_text'>Parteneri media</span>
+                                        <a href='http://www.hotnews.ro/'><div class='image' id='hotnews'>HotNews</div></a>
+                                        <!-- <a href='http://www.lumebuna.ro/'><div class='image' id='lumebuna'>Lume Buna</div></a> -->
+                                        <a href='http://www.romaniapozitiva.ro/'><div class='image' id='romaniapozitiva'>Romania Pozitiva</div></a>
+                                        <a href='http://totb.ro/'><div class='image' id='thinkoutsidethebox'>Think Outside The Box</div></a>
+                                        <a href='http://www.facebook.com/carevasazica.vip'><div class='image' id='carevasazica'>Carevasazica</div></a>
+                                        <a href='http://www.studentie.ro/'><div class='image' id='studentiero'>Studentie.ro</div></a>
+                                        <a href='http://startub.unibuc.ro/'><div class='image' id='startub'>startub.unibuc.ro</div></a>
+                                        <!-- <a href='http://www.tvr.ro/tvr_cluj.php'><div class='image' id='tvrcluj'>Tvr Cluj</div></a> -->
+                                        <!-- <a href='http://www.radiotransilvania.ro'><div class='image' id='radiotransilvania'>Radio Transilvania</div></a> -->
+                                        <a href='http://iasifun.ziaruldeiasi.ro/'><div class='image' id='iasifun'>Iasi fun</div></a>
+                                        <a href='http://www.ziaruldeiasi.ro/'><div class='image' id='ziaruldeiasi'>Ziarul de Iasi</div></a>
+                                        <a href='http://www.kissfm.ro/timisoara'><div class='image' id='kissfm'>KissFm</div></a>
+
+                                        <div class='clear'></div> 
+                                    </div>
+                                    <div class='clear'></div>
+
+                                </div>	
+                            </div>	<!-- end wrap -->
+                            <div id='footer_mare'>
+                                <div id='footer'>
+                                    <div id='links' class='footer'>
+                                        <div id='menu1' style='margin:auto;'> <ul id='meniu_prinicpal'><li><a href='../../../contacte/index.html'> Contact </a></li>
+<li><a href='../../../clubdebate/index.html'> Cluburile </a></li>
+<li><a href='../../../oamenii/index.html'> Oamenii </a></li>
+<li><a href='../../../proiectul/index.html'> Proiectul </a></li>
+<li><a href='../../../home/index.html'> Acasa </a></li>
+</ul></div><!--end menu-->
+                                    </div><!--
+                                    <div id='contact' class='footer'>
+                                            <h4>Contact</h4>
+                                            <p>office@closer2oxford.ro</p>
+                                            <p>bogdan.draghicescu@closer2oxford.ro<br>
+                                            <span class='detalii'> (asistenta tehnica web - orice probleme legate de site)</span></p>
+                                    </div>
+                                    -->
+                                    <div id='newsletter' class='footer'>
+                                        <script src="../../../../../connect.facebook.net/en_US/all.js#xfbml=1"></script><fb:like href="http://www.facebook.com/pages/Closer2Oxford/162758797069605" width="250" colorscheme="dark"></fb:like>
+                                        <!--<h4>Newsletter</h4>
+                                        <form action='/page/newsletter'>
+                                                <input type='text' name='email'>
+                                                <input type='submit' id='submit' value='>'>
+                                                        
+                                        </form>-->
+                                    </div>
+                                    <div id='credits'>
+                                        Copyright(c) 2021 ARDOR |  Toate drepturile rezervate | Toate logo-urile si sloganurile de pe site sunt proprietate intelectuala inregistrata si nu pot fi reproduse fara acordul explicit al detinatorilor. <br>
+                                            <br /><br />
+                                            <b>Disclaimer</b><br /><i>
+
+                                                Programul educational Closer to Oxford este un program non-profit si nu are o legatura cu universitatea cu acelasi nume, referirea la Oxford avand doar o semnificatie simbolica.
+                                            </i>
+                                    </div>
+
+                                </div>		
+                            </div>		
+
+                            <div id="finantatde">Acest proiect este finantat cu sustinere din partea Comisiei Europene. Aceast publicatie [comunicare] reflecta doar
+                                vederile autorului, iar Comisia nu poate fi facuta  responsabila pentru utilizarea informatiei pe care o contine.</div>
+
+
+                        </body>
+                        </html>

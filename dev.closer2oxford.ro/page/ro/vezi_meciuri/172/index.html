@@ -1,0 +1,574 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml-strict.dtd">
+<HTML xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+    <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+            <link rel="icon" type="image/png"  href="../../../../../closer2oxford.ro/favicon.html">
+                <link rel="stylesheet" href="../../../var/layout.css" type="text/css">
+                    <title>Closer to Oxford - e timpul pentru argumente!</title>
+                    <link rel="alternate" type="application/rss+xml"  href="../../../rss_feed" title="Stiri Closer2Oxford">
+                        <!-- <link rel="image_src" property="og:image"  href="/images/layout/closer2oxford_fb_white.png" /> -->
+                        <link rel="image_src" property="og:image"   type="image/jpeg"  href="../../../../uploads/2015/06/9/facebook_icon.html" />
+                        <link rel="image_src" type="image/jpeg"  href="../../../../uploads/2015/06/9/icon-facebook.gif" /> 
+						<meta name="description" content="Closer2Oxford pune în valoare oameni şi argumentele lor, în dezbateri online şi publice alături de tineri şi invitați avizaţi"/>
+                        <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9" />
+<script type='text/javascript' src='../../../../js/jquery-1.4.4.min.js'></script>
+<script>var $j = jQuery.noConflict();</script>
+<script type='text/javascript' src='../../../../js/tinymce/tiny_mce.js'></script>
+<script type='text/javascript' src='../../../../js/jquery.form.js'></script>
+<script type='text/javascript' src='../../../../js/fbLoginRegister.js'></script>
+<script type='text/javascript' src='../../../var/javascript.js'></script>
+<script type='text/javascript' src='../../../../js/jquery.hovertip-1.0.min.js'></script> 
+<script type='text/javascript' src='../../../../js/jquery.jgrowl_minimized.js'></script> 
+<link rel='stylesheet' href='../../../../css/jquery.jgrowl.css' media='screen' type='text/css'> 
+<script type='text/javascript' src='../../../../js/jquery.timer-min.js'></script> 
+<style>.hovertip{
+    position:absolute;
+    padding:10px 13px;
+    z-index:2;
+    max-width:300px;
+    color:#303030;
+    background-color:#f5f5b5;
+    border:1px solid #DECA7E;
+    font-family:sans-serif;
+    font-size:12px;
+    line-height:18px;
+    text-align:left;
+    }
+           .normal_text ol,.normal_text ol *{text-align:left !important}
+           .normal_text *{font-weight:normal !important;font-size:12px !important;font-face:tahoma !important}</style> 
+<script type='text/javascript'>$j(document).ready(function(){$j('.tooltip').hovertip({'offset':[20,20]});get_notif();});
+
+if(!Array.indexOf){Array.prototype.indexOf = function(obj){for(var i=0; i<this.length; i++){if(this[i]==obj){return i;}}return -1;}}
+    hashuri = [] ;
+	 var tick_timer= 3000 ;
+ 
+	 function get_notif()
+        {
+		  
+		  //console.log(tick_timer);
+	     
+		  setTimeout(get_notif,tick_timer);
+        
+		   $j.ajax(
+            {
+                url: '/page/notif/show_events',
+                dataType: 'json',
+                data: "{}",
+                success: function(data)
+                    {
+                    $j.each(data,function(index,data){
+                        try
+                            {
+                            if( hashuri.indexOf(data.hash) == -1 )
+                                {
+                                hashuri.push(data.hash);
+                                $j.jGrowl(
+                                    data.str,
+                                    {
+                                        corners:'1px',
+                                        life: data.life,
+                                        header:data.title,
+                                        hash: data.hash,
+                                        sticky: data.sticky,
+                                        close: function(e,m,o)
+                                            {
+                                                $j.ajax({url:'/page/notif/delete_single_event/' + o.hash});
+                                            }
+                                    });
+                                }
+                            }
+                        catch(e){}
+                        })
+                    }
+            });
+        }
+	 </script> 
+ 
+                            
+  <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-19111721-1']);
+  _gaq.push(['_setDomainName', '.closer2oxford.ro']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+    
+                        </head>
+                        <body>
+                            <div id="global_wrap">
+                                <div id="header">
+                                    <a href='../../../../index.html'><div id='logo'><img src='../../../../images/layout/sigla.jpg'></div></a>
+                                    <a class='noExternal' href='http://www.facebook.com/pages/Closer2Oxford/162758797069605'><img src='../../../../images/fb.png' style='height:30px;float:right;clear:right;margin:10px 5px 5px 5px;border:none;'/></a>
+                                    <a href='../../../rss_feed'><img src='../../../../images/feed-icon.png' style='height:30px;float:right;clear:right;margin:5px;border:none;'/></a>
+                                </div>
+                                <div id="meniu">
+                                    <div  id='register_login'>
+
+                                        
+  <a href='#' class='todo' id='login'>Login </a> &nbsp;<a href='../../../register.html' class='todo' id='register'>Register</a>
+    <div id='login_box'>
+		  <form action='https://dev.closer2oxford.ro/page/ro/login_user/logon' method='post' id='user_login_form'>
+					 <div>Email: <input type='text' name='email'/> </div><br />
+					 <div>Pass: <input type='password' name='passwd'/></div><br />
+					 <a href='#' class='password_forgot'>forgot password?</a>
+					 <input type='hidden' value='/page/ro/vezi_meciuri/172/' name='returnto' class='submiter'/><br />
+					 <input type='submit' value='login' name='btn' class='submiter'/><br />
+		  </form>
+		  
+		  <form action='https://dev.closer2oxford.ro/page/ro/login_user/reset_user_pw' method='post' id='user_reset_form'>
+					 <div>Email: <input type='text' name='email'/> </div><br />
+					 <a href='#' class='password_forgot'>login?</a>
+					 <input type='hidden' value='/page/ro/vezi_meciuri/172/' name='returnto' class='submiter'/><br />
+					 <input type='submit' value='reset' name='btn' class='submiter'/><br />
+		  </form>
+		  
+    </div>
+    
+                                    </div>
+                                    <div id='menu1' style='margin:auto;'> <ul id='meniu_prinicpal'><li><a href='../../../contacte/index.html'> Contact </a></li>
+<li><a href='../../../clubdebate/index.html'> Cluburile </a></li>
+<li><a href='../../../oamenii/index.html'> Oamenii </a></li>
+<li><a href='../../../proiectul/index.html'> Proiectul </a></li>
+<li><a href='../../../home/index.html'> Acasa </a></li>
+</ul></div><!--end menu-->
+                                </div>
+                                <div id="main"> 
+                                    <!--<div id='stiri-padding'>
+        <div id='stiri_back'>
+                {stiri} 
+    
+               
+        </div>-->
+        
+</div>
+<div  id="content-padding">
+        <div id='sidebar_menu'>
+                <span class='tr'></span>
+                <span class='tl'></span>
+                <span class='br'></span>
+                <span class='bl'></span>
+                <span id="filler"></span>
+                    
+                <ul></ul>
+                
+                <div class='clear'></div>
+        </div>
+        <div id="content">
+                <span class='tr'></span>
+                <span class='tl'></span>
+                <span class='br'></span>
+                <span class='bl'></span>
+                <span id="filler"></span>
+                  <script>
+        $j(document).ready(function(){
+        $j('.discurs_toggler').toggle(
+                function(){
+                $j(this).attr('src', '../../../../images/little_stuff/16-em-down.png');   
+                $j(this).parent().next('.discurs').hide('fast');
+                },
+                function(){
+                $j(this).attr('src', '../../../../images/little_stuff/16-em-up.png');
+                $j(this).parent().next('.discurs').show('fast');
+                });
+            });
+        </script><style>.nowrap{white-space: nowrap;}
+		.noJustify{text-align:left;}
+		</style><h2 class='noJustify'><span class='nowrap'>'Teo si Miruna'</span> <span class='notif'>(afirmatori)</span> vs <span class='nowrap'>'Bogdan si Bogdan'</span> <span class='notif'>(negatori)</span></h2><h3>A1 (Teodora Oprea) <img src='../../../../images/little_stuff/16-em-up.png' class='discurs_toggler'></h3>
+            <div class='discurs normal_text'><p><strong>&nbsp;</strong></p>
+<p><strong>&nbsp;</strong></p>
+<p><strong>E timpul sa decriminalizăm pirateria pe internet?</strong></p>
+
+<p>Consideram ca acest mod de transmitere a informatiei prin Internet este caracteristic unei societati puternic tehnologizate. Este firesc ca o data cu diversificarea si liberalizarea mijloacelor de comunicatie sa nu mai poata fi aplicate aceleasi reguli pentru protectia drepturilor de autor precum cele folosite cand mijloacele de transmitere erau limitate si puteau fi usor controlate. Din acest punct de vedere, fenomenul &ldquo;pirateriei&rdquo; ar trebui mai degraba integrat si reglementat astfel incat sa functioneze pozitiv, decat combatut inutil si ineficient.</p>
+<p>In cadrul acestei dezbateri, pirateria pe internet inseamna distribuirea de materiale protejate prin legea drepturilor de autor prin intermediul Internetului. Consideram ca ar trebui mentinuta incriminarea doar pentru acele acte de piraterie facute in scopul obtinerii de profit prin comercializare, pe cand utilizarea gratuita a materialelor protejate ar trebui permisa ca un fenomen natural si avantajos in societatea actuala.</p>
+<ol>
+<li><strong>1.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </strong><strong>Nu exista metode eficiente de combatere a pirateriei</strong></li>
+</ol>
+<p>Un utilizator al internetului are la dispozitie peste 7 miliarde de pagini web<a  href="#ea931">[1]</a>. A combate pirateria eficient inseamna sa detectezi aparitia materialului piratat si sa blochezi posibilitatea de distributie a materialelor piratate. Nu au fost gasite mijloace suficiente de depistare a paginilor cu continut piratat si a autorilor acestora, iar metodele de blocare nu sunt definitive, aceeasi informatie reaparand pe Internet la scurta perioada dupa ce a fost cenzurata. De asemenea pentru aplicarea unei sanctiuni trebuie verificata competenta unui stat de a o aplica, proces dificil intrucat o pagina de internet poate fi realizata si apoi transmisa de oriunde din lume. Metodele represive folosite pana acum, inclusiv cele de sanctionare penala si de confiscare a calculatoarelor, amenzi foarte mari sau incercarile de blocare completa a unor site-uri de sharing nu au reusit sa stavileasca fenomenul pirateriei.</p>
+
+<ol>
+<li><strong>2.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </strong><strong>In conditiile actuale, este mai avantajos pentru autori sa faciliteze transmiterea informatiei</strong></li>
+</ol>
+<p>In societatea actuala, pietele de desfacere a produselor intelectuale depasesc granitele locale sau regionale, astfel incat un autor are interesul sa vanda cat mai mult, dar si sa isi asigure un public de consumatori fideli. Singurul mod in care pot fi obtinute ambele rezultate este cel al libertatii circulatiei produselor intelectuale.</p>
+<p>In prezent, se considera ca persoana care lanseaza un album doreste ca CD-ul sau sa nu ajunga in mod gratuit la utilizatori pentru ca astfel sunt pierduti bani. Se neglijeaza faptul ca un consumator neavizat nu ar cumpara CD-ul pentru ca nu are nici un fel de stimul in acest sens. Gratuitatea ascultarii melodiilor i-ar asigura insa in mod gratuit si rapid autorului o baza larga de fani care vor cumpara fidel produsele legate de acel album din dorinta de a avea originalul. Nu mai cumpara CD-ul doar cei care isi permit sa riste bani pe o muzica slaba, ci toti cei care, descoperind muzica, au devenit fani.</p>
+<p>De asemenea, este mai avantajos sa oferi o parte din produs in mod gratuit, pentru a atrage un numar mai mare de consumatori, carora le poti oferi alte produse sau servicii complementare si de o calitate sporita. Cel mai evident este cazul jocurilor online de tip Massive Multiplayer Online(MMO). Cu un cod sursa deschis publicului, cu servere private in care oricine poate sa joace fara sa plateasca nimic, totusi sunt multi doritori sa joace jocul platit, pe serverul original, deoarece serviciul oferit de compania care a creat jocul este mult mai bun decat cel piratat. &nbsp;</p>
+
+<ol>
+<li><strong>3.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </strong><strong>Avantaje pentru producatori si consumatori</strong><ol>
+<li>Calitatea produsului</li>
+</ol></li>
+</ol>
+<p>Oferind posibilitatea de a testa produsele prin Internet, i se ofera ocazia utilizatorilor sa-si selecteze produsele consumate in cunostiinta de cauza. Cu cat isi permite sa testeze mai mult, cu atat are sanse mai mari sa gaseasca lucrurile de calitate si sa raspandeasca vestea. Avand mai multi testeri pentru un produs exista mai mult feed-back care duce intr-un final la cresterea calitatii produselor.</p>
+<p>De asemenea, programe precum Android sau Linux<a  href="#ea932">[2]</a> care au fost de la momentul creatiei lor open-source s-au dezvoltat mult mai rapid cu ajutorul utilizatorilor din intreaga lume care si-au adus contributia la produs. Jocuri precum Mass Effect<a  href="#ea933">[3]</a> care s-au dezvoltat cu feedback continuu de la jucatori-testeri a avut un succes imens.</p>
+<p>Posibilitatea de a implini cerintele publicului tinta este un avantaj enorm care duce la dezvoltarea unor produse de calitate ridicata si foarte apreciate de utilizatori.</p>
+<ol>
+<li>Satisfactia utilizatorului</li>
+</ol>
+<p>Utilizatorii care sunt expusi la mai multe produse gratuite au posibilitatea sa aleaga in functie de calitate si de gusturi, pentru ca o data facuta alegerea, sa fie dispusi sa plateasca pentru un produs, dar DOAR pentru ca stiu ca are calitatile pe care le cauta. Serviciile suplimentare, atentia la calitatea acestora, atentia la calitatea produsului vandut fata de cel luat de pe Internet sunt motive pentru care oamenii inca mai cumpara astfel de produse si pentru care decriminalizare piraterii pe Internet ar trebui sa se produca.</p>
+
+<div><br /> 
+<hr size="1" />
+<div>
+<p><a  name="ea931">[1]</a> <a href="http://www.worldwidewebsize.com/">http://www.worldwidewebsize.com/</a></p>
+</div>
+<div>
+<p><a  name="ea932">[2]</a> <a href="http://en.wikipedia.org/wiki/Linux_kernel#Estimated_cost_to_redevelop">http://en.wikipedia.org/wiki/Linux_kernel#Estimated_cost_to_redevelop</a></p>
+</div>
+<div>
+<p><a  name="ea933">[3]</a> <a href="http://www.industrygamers.com/news/mass-effect-2-development-driven-by-user-feedback/">http://www.industrygamers.com/news/mass-effect-2-development-driven-by-user-feedback/</a></p>
+</div>
+</div>
+</div><hr><h3>N1 (Stupariu Bogdan) <img src='../../../../images/little_stuff/16-em-up.png' class='discurs_toggler'></h3>
+            <div class='discurs normal_text'><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;Libertatea individului este sustinuta atata timp cat aceasta nu intervine peste libertatea sau drepturile altei peroane,iar in cazul nostru, cel al libertatii accesului la informatie, se incalca flagrant dreptul la posesie, dreptul de autor, astfel fiind atacata libertatea de a detine o proprietate.</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Strategia echipei afirmatoare este una tematoare inca din inceput, cand accepta practic necesitatea pedepselor in cazul in care pirateria este facuta cu scopuri comerciale, pentru obtinerea unui profit. In primul rand, subliniem acceptarea incrimanilizarii pirateriei pe internet de catre afirmatori. In al doilea rand, consideram nefezabila aceasta separare a scopurilor pirateriei, deoarece sa fim realisti, nimeni in momentul in care descarca o carte de pe internet nu e intrebat daca o va vinde cuiva sau nu.</p>
+<p>Caz afirmator&nbsp;:</p>
+<ol>
+<li>Ineficienta metodelor</li>
+</ol>
+<p>Faptul ca nu exista momentan nicio metoda eficienta de a stopa cazurile de viol, nu inseamna ca ar trebui sa decriminalizam violul, si sa lasam violatorii nepedepsiti. Din contra, daca violul este o problema, si este , trebuie impuse sanctiuni mai dure, care sa duca eficienta masurilor la un nivel mai inalt. In cazul pirateriei, totul se aplica. Singurul lucru pe care trebuie ca echipa negatoare sa il demonstreze, este ca pirateria este rea, iar acest lucru il vom face in partea noastra constructiva.</p>
+<p>Ca un exemplu de metoda ce ar putea fi efectiva, este ca responsabilitatea sa treaca de partea distribuitorilor de internet, asa cum este propus si in ACTA, tratatul semnat de majoritatea statelor UE.</p>
+<ol>
+<li>Promovare prin piraterie</li>
+</ol>
+<p>Echipa afirmatoare crede ca cea mai buna metoda de promovare a unui album muzical este ca acesta sa fie gasit gratis de fiecare om. Totusi, acestia nu realizeza ca adevaratul motiv al promovarii este sa atraga cat mai multi oameni care cumpere produsul. Indiferent ca vorbim de CD-uri de muzica sau conserve de pateu. In cazul in care pirateria va fi un lucru considerat legal si moral, toata lumea va lua de pe internet muzica, jocurile si toate cele,&nbsp; foarte putinii fiind cei care vor mai cumpara. Astfel nu mai are rost. Toata aceasta idee, rationament, nu are logica.</p>
+<p>Cat despre exemplul MMO, este un exemplu izolat, in care strategia creatorilor este cu totul alta pentru ca le este permis de formatul jocurilor. Nu vedem cum se poate aceasta sa fie aplicata in cazul jocurilor Single Player, sau, de ce sa nu mergem mai departe, in cazul muzicii si a cartilor.</p>
+<p>Si pentru a arata ca exista defapt alte metode de promovare, vom da cateva exemple&nbsp;: publicitate prin reclame, oferirea de monstre (Demo), descrieri, fime prin care sa fie promovate, etc&hellip;</p>
+<ol>
+<li>Calitate prin testare</li>
+</ol>
+<p>Consideram irelevanta aceasta discutie, in special avand in vedere faptul ca feedback-ul&nbsp; este oferit si in cazul in care produsul este testat.</p>
+<ol>
+<li>Satisfactie utilizatorului</li>
+</ol>
+<p>Suntem constienti ca consumatorilor le-ar place ca totul sa le fie oferit gratis, insa pentru ca valorile de baza ale functionarii societatii noastre, pentru ca valorile capitalismului sa nu dispara, nu pe putem permite sa le oferim acest lucru.</p>
+<p>Argumente&nbsp;:</p>
+<ol>
+<li>De ce pirateria este rea&nbsp;?</li>
+</ol>
+<p>In primul rand, este vorba despre dreptul la proprietate, sau asa cum este el numit in acest subiect, dreptul de autor. &nbsp;Nu credem ca este nevoie sa explicam de ce dreptul la proprietate este justificat, dar in spiritul dezbaterii vom arata cum acesta se pierde din pricina pirateriei. In momentul&nbsp; in care un bun facut de x este folosit de y fara acceptul producatorului, este considerat furt al proprietatii private, si astfel trebuie sa fie oprit.</p>
+<p>Singura motivatie pentru care o persoana depune un efort constant, profesand o meserie este pentru a obtine bani. Daca efortul pe care aceasta persoana nu ar mai fi valorizat, nu ar mai avea niciun motiv sa profeseze, si astfel nu am mai avea aceleasi produse pe care astazi le avem.</p>
+<ol>
+<li>De ce pedepsirea este buna&nbsp;?</li>
+</ol>
+<p>Chiar daca nu sunt toate cazurile de piraterie pedepsite, ideea ca acestea pot fi pedepsite introduc un efect cominator, efect de frica printre utilizatorii de internet, facandu-i sa se gandeasca de doua ori inainte de a apasa cunoscutul buton &laquo;&nbsp;Descarca&nbsp;&raquo;. Putem sa impartim utilizatorii de internet in 3 grupuri:</p>
+<ol>
+<li>Cei care sunt &laquo;&nbsp;pirati&nbsp;&raquo; si orice ar fi vor fi incontinuare, indiferent de masurile luate vor gasi noi metode de a obtine materialele gratuit</li>
+<li>Cei care sunt morali si vor plati intotdeauna pentru bunurile dorite</li>
+<li>Cei care sunt influentabili, cei care sunt de fapt in numarul cel mai mare. Acestia sunt afectati de efectul cominator. In cazul in care nu vor mai fi pedepse, nu numai ca acestia nu se vor mai teme ca incalca legea, ci mai mult, vor percepe urmatorul mesaj&nbsp;: &laquo;&nbsp;pirateria este buna, este legala&nbsp;&raquo;. In acest caz vor fi incurajati sa pirateze.</li>
+</ol>
+<p>Astfel, pentru ca valorile principale ale societatii noastre sa ramana intacte, avem nevoie ca dreptul la proprietate sa fie respectat. Avem nevoie ca pirateria sa fie incriminata&nbsp;!</p>
+</div><hr><h3>A2 (Miruna Semenescu) <img src='../../../../images/little_stuff/16-em-up.png' class='discurs_toggler'></h3>
+            <div class='discurs normal_text'><p>Ceea ce echipa negatoare a esuat sa observe este delimitarea decriminalizarii pe care primul vorbitor a echipei afirmatoare a facut-o: cea de sustinere a criminalizarii in momentul in care produsele sunt descarcate online urmand sa fie vandute si pastrarea decriminalizarii in restul cazurilor. Spunem&nbsp; ca datorita acestui motiv, negatorii nu si-au indeplinit rolul, cel de a contraargumenta ideiile aduse pe masa de catre guvern.
+<div><em>Cazul negator:&nbsp;&nbsp;</em></div>
+<div>Trecand la contraargumentarea cazului negator, noi, ca echipa afirmatoare, am observant la nivelul argumentului intai o inconsistenta extrema. Urmarind logica negatorilor, pirateria va elimina complet produsele pe care le avem astazi. Complet fals. Ceea ce trebuie sesizat este faptul ca internetul nu este numai o retea nociva si rea in care produsele sunt transmite ilegal. Internetul a fost creat cu scopul schimbului de informatie, raspandirii ideilor. Nu gasim nici un motiv pentru care negatorii nu ar fi de acord cu acest lucru. Din aceasta cauza, este gresit de a afirma ca internetul dauneaza comertului cu produse . Observam ca societatea de consum din zilele de astazi a avut posibilitatea de a se dezvolta fix datorita rapidului schimb de informatie, facand posibil transportul unui obiect, lucrari artistice s.a.m.d dintr-o parte a globului in cealalta.</div>
+<div>Referitor la cel de-al doilea argument,&nbsp; bazat tot pe schema si afirmatiile oferita de echipa negatoare , consideram ca numarul urias de persoane care downloadeaza filme, carti, muzica s.a.m.d. se incadreaza in prima categorie. De asemenea, exista la momentul de fata o suma exorbitanta de bani care este investita in incercarea de a limita pirateria online. Insa observam ca aceasta categorie, care este majoritara, nu este deloc influentabila si nu isi va schimba niciodata metodele de preluare a produselor. Din aceasta cauza consideram ca investirea acestor bani este inutila, in momentul in care se face un raport costuri-beneficii. Reiese ca nu merita sa investim atatea miliarde ca sa bagam frica intr-un numar foarte insignifiant de oameni.</div>
+<div>Mai mult decat atat, ne sunt aduse acuzatii la nivelul cazului propriu din partea echipei negatoare</div>
+<div>In primul rand observam o analogie complet falsa a pirateriei online, care este vazut intr-o lume negatoare ca un viol. Aceasta comparatie nu numai ca este groaznica, dar este si complet falsa. Motivele pentru care sustinem acest fapt este deoarece nu ni se pare legitim ca o promovare a produselor pe internet, o tentative de furt online, poate fi comparata cu actul de a rupe o persoana&nbsp; de propriul control fizic, deoarece din orice punct de vedere, internetul poate oferi beneficii.</div>
+<div>Totodata, consideram ca artistii de pretutindeni pot avea beneficii din partea pirateriei online, replica care poate fi sustinuta de afirmatie lui Paulo Coehlo care a declarat ca odata ce cartile lui au inceput sa fie piratate pe net, cresterea vanzariilor de carti a crescut de asemenea. (1)Putem observa astfel cum pirateria ajuta artistii si vanzariile lor&nbsp;</div>
+<div><em>Cazul afirmator:&nbsp;&nbsp;</em></div>
+<div><em><br /></em></div>
+<div>1.Principalul lucru care necesita resustinut la nivelul cazului afirmator este dorinta noastra de a delimita ce este criminal si ce nu, precum am mentionat la inceputul discursului.&nbsp; In primul rand, avem o societate de consum complet schimbata, care nu numai ca se bazeaza pe libera circulatie de informatie si utilizarea ei, dar a ajuns intr-un punct critic in care efectul poate fi numit ireversibil.</div>
+<div>In alta ordine de ei, cosideram ca promovarea produselor prin intermediul internetului este un&nbsp; nu numai benefica, dar si necesara, deoarece este in dezavantajul producatorului sa nu fie prezent pe &ldquo;piata online&rdquo;.</div>
+<div>2.In acelasi timp, spunem ca este avantajos de a oferi un produs gratuit, in special datorita multitudinilor de produse existente pe piata la momentul de fata. Astfel, artistul nu numai ca se poate face mai cunosc, dar poate si sa-si formeze un grup de client fideli care in lipsa internetului ar fi fost inabordabili (din tari, continente diferite etc) .</div>
+<div>3.De asemenea, echipa negatoare ne-a&nbsp; ridicat problema &ldquo;altor modalitati de promovare&rdquo; . Din aceasta perspectiva,&nbsp; nu ni s-a adus niciun motiv pentru care libera circulatie online nu este o promovare. Mai mult decat atat, rolul negator era sa dovedeasca clar ca pirateria nu este o metoda de promovare, fapt ignorant complet.</div>
+<div>4.Nu in ultimul rand, primul vorbitor al guvernului a adus un numar mare de exemple prin care pirateria online este benefica atat pentru utilizatori, cat si pentru producatori. Raspunzul negator la acest fapt a fost incosistent, din aceasta cauza, argumentul ramand in continuare in picioare.</div>
+<div>La sfarsitul zilei trebuie analizat clar daca in cele din urma pirateria este intradevar o problema si daca aceasta poate fi rezolvata. La ambele chestiuni, echipa afirmatoare a raspuns conform motiunii, dovedind de ce societatea are nevoie de decriminalizarea pirateriei online.</div>
+<div><a href="http://www.guardian.co.uk/books/2012/feb/01/paulo-coelho-readers-pirate-books?INTCMP=SRCH" target="_blank">1.http://www.guardian.co.uk/books/2012/feb/01/paulo-coelho-readers-pirate-books?INTCMP=SRCH</a></div>
+</p></div><hr><h3>N2 (Stupariu Bogdan) <img src='../../../../images/little_stuff/16-em-up.png' class='discurs_toggler'></h3>
+            <div class='discurs normal_text'><p>Echipa afirmatoare ne acuza pe noi ca nu am contraargumentat in totalitate, insa acestia se pare ca nu ne-au luat in considerare o parte din caz, cea in care ne refeream la strategia adoptata de acestia. Asa cum spuneam, aceasta strategie de a separa pirateria in piraterie cu scop individual si cu scop comercial, nu este fezabila deoarece toata lumea descarca un fisier din acelasi loc, fara a fi intrebat, prin absurd, daca doreste sa il vanda sau nu. Chiar daca am fi absurzi si am spune ca utilizatorul este intrebat, nu exista nicio posibilitate de control, de verificare, pentru a sti daca persoana ce a descarcat fisierul il va folosi in scopuri comerciale sau nu. Mai mult decat atat, separarea aceasta nu este corecta deoarece este menita sa faca treaba afirmatoar mai usoara,iar pe cea negatoare mai usoara.</p>
+<p>Caz afirmator&nbsp;:</p>
+<ol>
+<li>Avem intradevar o societate de consum, dar aceasta nu se bazeaza pe un consum gratuit, ci pe un consum contra cost, ceea ce este impotriva propunerii afirmatoare. Trebuie sa realizam ca informatia, produsul, exista. Nu este oprita circulatia informatiei, ci aceasta necesita un pret pentru ca valoarea produsului sa existe.</li>
+</ol>
+<p>La nivelul ideii de &laquo;&nbsp;cand putem vorbi de un criminal&nbsp;&raquo;&nbsp;: In primul rand, asumarea numelui de criminali de catre echipa afirmatoare nu este corecta. Scopul analogiei noastre referitoare la cazul&nbsp; violului, nu a fost pentru a va demonstra faptul ca cei care pirateaza sunt violatori, ci era de a va arata cum functioneaza principiile legii si cum acestea se aplica si in cazul pirateriei online. Explicand inca odata la modul general, atunci cand avem o problema, chiar daca nu o putem eradica, trebuie sa persuasam pentru a o diminua pe cat posibil, ci nu sa o trecem din lista de probleme in legalitate. Suntem siguri ca echipa afirmatoare este de acord cu noi.</p>
+
+<ol>
+<li>Dupa cum echipa negatoare a sustinut si in primul discurs, scopul promovarii este acela de a obtine cat mai multi oameni care sa cumpere produsul. In momentul in care toate produsele vor putea sa fie descarcate gratuit, nimeni nu va mai aveam motiv sa cumpere produsele. Toate ideile care ne spun ca artistul se face mai cunoscut si ca isi castiga fani, pana la urma nu au nicio importanta pentru producator.</li>
+</ol>
+
+<ol>
+<li>Pirateria este o metoda de promovara care aduce putina evantaje producatorului. Odata ce o persoana obtine un bun piratat, va folosi bunul si nu il va mai cumpara inca odata astfel incat producatorul sa isi primeasca ceea ce merita. Mergand mai departe, in cazul in care internautul va mai dori mai multe produse de la acel producator, mai mult decat probabil, il va obtine tot prin piraterie, si astfel nu se va ajunge la rasplatirea producatorului.</li>
+</ol>
+
+<p>Caz negator&nbsp;:</p>
+<p>Atunci cand pirateria va fi ceva normal, majoritatea oamenilor isi vor procura produsele media de pe internet (carti, jocuri, muzica, filme). Aceasta va distruge in mare parte toate aceste industrii din punct de vedere financiar, ceea ce va avea consecinte la nivelul calitatii produselor si a nivelului la care se va insvesti in ele.</p>
+<p>Intreadevar este foarte importanta libera circulatie si accesul la informatie, insa ceea ce omite echipa afirmatoare este ca informatia exista. Chiar acestia au sustinut ca exista o dorinta de promovare pe internet. Astfel, accesul la informatie nu este oprit, ci este contra cost. Acelasi lucru se intampla si in cazul cartilor printate, si in cazul facultatiilor etc. Informatia este valoroasa, motiv pentru care trebuie platita.</p>
+<p>Consideram de asemenea ca partea cea mai mare din populatie este cea usor influentabila de deciziile legii, iar ca dovada va aducem aminte numarul oamenilor care au iesit in strada pentru&nbsp; a protesta impotriva ACTA, si inca cati alti s-au declarat impotriva acesteia. Acestia sunt cei infuentabili, deoarece acestia au aratat ca sunt cei care se tem de acel tratat. Cei din categoria celor care mereu vor gasi metode de a obtine totul gratis, nu aveam si nu au niciun motiv pentru a protesta.</p>
+
+<p>Toate acestea fiind spuse, consideram ca pirateria trebuie sa ramana o crima impotriva proprietatii private.</p>
+</div><hr><hr><h2>Decizia:</h2> <script>
+        $j(document).ready(function(){
+			$j('.decizie_toggler').toggle( 
+				function(){
+					$j(this).attr('src', '../../../../images/little_stuff/16-em-down.png');   
+					$j(this).parent().next('.decizie').hide('fast'); 
+                },
+                function(){
+					$j(this).attr('src', '../../../../images/little_stuff/16-em-up.png');
+					$j(this).parent().next('.decizie').show('fast'); 
+                } 
+			);
+		});</script><div class='decizie'><h3>George Maxim
+                <img src='../../../../images/little_stuff/16-em-up.png' class='decizie_toggler'></h3><div class='normal_text'><p>Feedback runda &nbsp;172</p>
+<p>Partea 1 &ndash; Remarci individuale</p>
+<p>Afirmatorul 1:</p>
+<ul>
+<li>Discurs standard a carui analiza punctuala nu va fi facuta</li>
+</ul>
+<p>Negatorul 1:</p>
+<ul>
+<li>&ldquo;Singurul lucru pe care trebuie ca echipa negatoare sa il demonstreze, este ca pirateria este rea&rdquo;- nu chiar, ci sa si demonstreze ca actualul sistem poate oferi un cadru legal echilibrat si metode suficiente de a combate fenomenul fara a aduce atingere drepturilor fundamentale mentionate</li>
+<li>Promovare prin piraterie &ndash; interpretare eronata: este vorba despre distributie gratuita (in care detinatorul drepturilor renunta sa obtina profit in urma comercializarii) si nu pirateriei (unde acelui detinator ii este negata aceasta optiune)</li>
+<li>&ldquo;valorile capitalismului sa nu dispara&rdquo; &ndash; care sunt acele valori? Daca discutam despre principiul capitalist al profitului acesta in sine nu reprezinta o valoare</li>
+<li>&ldquo;Singura motivatie pentru care o persoana depune un efort constant, profesand o meserie este pentru a obtine bani&rdquo;- generalizare pripita; astfel eforturile celor de la Crucea Rosie sau Doctori fara frontiere (ca sa avem doar 2 exemple) nu au ca scop final satisfactia la nivel financiar</li>
+<li>De ce pedepsirea este buna &ndash; ar fi de dorit o analiza mai complexa a mecanismelor prin care se ajunge la piraterie; in plus, se ajunge la o falsa dilema: daca exista un material ( software educational de exemplu) care este disponibil doar in anumite tari iar un utilizator dintr-o alta tara doreste sa aibe acces fara sa pirateze produsul cum procedeaza fara a incalca legea si a ramane &ldquo;moral&rdquo;?</li>
+</ul>
+<p>Afirmatorul 2:</p>
+<ul>
+<li>&ldquo;ne sunt aduse acuzatii&rdquo; &ndash; contraargumente ar fi un termen preferabil</li>
+<li>&ldquo;Aceasta comparatie nu numai ca este groaznica, dar este si complet falsa&rdquo; &ndash; de preferat este ca analiza calitativa a afirmatiilor oponentilor sa fie facuta <strong>doar</strong> de catre arbitru si nu de participant</li>
+<li>Atentie la exprimare: &ldquo;artistul nu numai ca se poate face mai cunosc, dar poate si sa-si formeze un grup de client fideli&rdquo;</li>
+</ul>
+<p>Negatorul 2:</p>
+<ul>
+<li>Atentie la exprimare: &ldquo;Mai mult decat atat, separarea aceasta nu este corecta deoarece este menita sa faca treaba afirmatoar mai usoara,iar pe cea negatoare mai usoara&rdquo;.</li>
+<li>Atentie la exprimare: &ldquo;trebuie sa persuasam&rdquo;?! (probabil sa persuadam)</li>
+<li>Atentie la exprimare: &ldquo;putina evantaje&rdquo;</li>
+<li>Atentie la exprimare: &ldquo;va folosi bunul si nu il va mai cumpara inca odata astfel incat producatorul sa isi primeasca ceea ce merita&rdquo;(o data, fara isi deoarece nu discutam despre o actiune efectuata de catre sine cu consecinte directe asupra sinelui)</li>
+<li>Atentie la exprimare: &ldquo;produse de la acel producator, mai mult decat probabil, il va obtine tot prin piraterie&rdquo; (produse &ndash; producator, dezacord intre produse si &ldquo;il obtine&rdquo;)</li>
+<li>Atentie la exprimare: &ldquo;se va insvesti&rdquo;</li>
+<li>Atentie la exprimare: &ldquo;Intreadeva este foarte importanta libera circulatie si accesul la informatie&rdquo; (intr-adevar, sunt foarte importante)</li>
+<li>Atentie la exprimare: &ldquo;infuentabili&rdquo;</li>
+<li>Atentie la exprimare: &ldquo;consideram ca pirateria trebuie sa ramana o crima impotriva proprietatii private&rdquo; &ndash; gresit, ca cei care practica sau beneficiaza direct sau indirect de pe urma pirateriei online nu ar trebui decriminalizati (alternativ, ar trebui tratati ca infractori de drept comun)</li>
+</ul>
+<p>Partea 2 &ndash; Verdict si punctaje</p>
+<p>Negatorii au propus discutarea motiunii in termeni simplisti, apropiati unei false dileme (toti fie sunt pirati, fie sunt corecti). Chiar daca au o interpretare justa in privinta strategiei gresite aplicate de afirmatori, faptul ca se rezuma la o viziune superficiala face ca verdictul sa mearga la limita, echipei afirmatoare!</p>
+<p>Pe viitor as ruga toti participantii sa fie foarte atenti la exprimarile folosite pentru a avea o runda usor de jucat si de arbitrat!</p>
+<table border="1" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td width="128" valign="top">
+<p>Vorbitor</p>
+</td>
+<td width="128" valign="top">
+<p>Continut</p>
+</td>
+<td width="128" valign="top">
+<p>Strategie</p>
+</td>
+<td width="128" valign="top">
+<p>Stil</p>
+</td>
+<td width="128" valign="top">
+<p>Total</p>
+</td>
+</tr>
+<tr>
+<td width="128" valign="top">
+<p>A1</p>
+</td>
+<td width="128" valign="top">
+
+</td>
+<td width="128" valign="top">
+
+</td>
+<td width="128" valign="top">
+
+</td>
+<td width="128" valign="top">
+
+</td>
+</tr>
+<tr>
+<td width="128" valign="top">
+<p>N1</p>
+</td>
+<td width="128" valign="top">
+<p>10</p>
+</td>
+<td width="128" valign="top">
+<p>7</p>
+</td>
+<td width="128" valign="top">
+<p>4</p>
+</td>
+<td width="128" valign="top">
+<p>21</p>
+</td>
+</tr>
+<tr>
+<td width="128" valign="top">
+<p>A2</p>
+</td>
+<td width="128" valign="top">
+<p>12</p>
+</td>
+<td width="128" valign="top">
+<p>7</p>
+</td>
+<td width="128" valign="top">
+<p>4</p>
+</td>
+<td width="128" valign="top">
+<p>23</p>
+</td>
+</tr>
+<tr>
+<td width="128" valign="top">
+<p>N2</p>
+</td>
+<td width="128" valign="top">
+<p>10</p>
+</td>
+<td width="128" valign="top">
+<p>8</p>
+</td>
+<td width="128" valign="top">
+<p>0</p>
+</td>
+<td width="128" valign="top">
+<p>18</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+</div>A1 -> 23 puncte<br>N1 -> 21 puncte<br>A2 -> 23 puncte<br>N2 -> 18 puncte<br>Castiga echipa: <h3 style='display:inline;color:red;'>Teo si Miruna (afirmatori)</h3></div><hr><h3 class='important'>Vrem parerea ta! Pentru asta, trebuie sa te loghezi.</h3>
+                <div class='clear'></div>
+        </div><!-- end main content -->
+         <div class='clear'></div>
+</div>
+<div id="pix"></div>
+
+
+                                </div><!--end main -->
+                                <div id='parteneri'>
+                                    <span class='tr'></span><span class='tl'></span><span class='br'></span><span class='bl'></span><span id="filler"></span>
+                                    <div class='parteneri' id='sustinatori'>
+                                        <span class='floating_text' id='un_proiect'>Un proiect</span>
+                                        <a href='http://www.ardor.org.ro/'><div class='image' id='ardor'>Ardor</div></a>
+                                        <span class='floating_text' id='finantatori'>Finanțatori</span>
+                                        <a href='http://www.opensocietyfoundations.org/'><div class='image' id='open_society'>Open Society Foundation </div></a>
+                                        <a href='http://www.studentiq.ro//'><div class='image' id='memoplus'>MemoPlus</div></a>
+                                        <!-- <a href='http://www.ratiufamilyfoundation.com/'><div class='image' id='FundatiaRatiu'>Ardor</div></a>
+                                        <a href='http://www.eef.md/'><div class='image' id='eef'>East Europe Foundation</div></a>
+                                        <a href='http://www.mts.gov.md/'><div class='image' id='mdminister'>Ministerul Tineretului si Sportului al Republicii Moldova</div></a> -->
+
+                                        <span class='floating_text' id='parteneri_text'>Parteneri</span>
+
+                                        <a href='http://www.policycenter.eu/'><div class='image' id='PolicyCenter'>Policy Center</div></a>
+                                        <a href='http://www.britishcouncil.org/'><div class='image' id='BritishCouncil'>British Council</div></a>
+                                        <a href='http://www.europuls.ro/'><div class='image' id='europuls'>Europuls</div></a>
+                                        <a href='http://www.cere.ro/'><div class='image' id='cere'>Ce-Re</div></a>
+                                        <a href='http://www.primeromania.ro/'><div class='image' id='prime'>Prime Romania</div></a>
+                                        <a href='http://www.cji.ro/'><div class='image' id='cji'>Centrul pentru jurnalism independent</div></a>
+                                        <a href='http://www.aiesectm.ro/'><div class='image' id='aisec'>Aisec</div></a>
+                                        <!-- ===================================================================================================== -->
+                                        <a href='http://www.cogitus.ro/'><div class='image' id='cogitus'>Cogitus</div></a>
+                                        <a href='http://www.adevarul.ro/international/foreign_policy/'><div class='image' id='foreignPolicy'>Foreign Policy</div></a>
+                                        <a href='http://www.elsa.ro/'><div class='image' id='elsa'>Elsa</div></a>
+                                        <a href='http://www.vipromania.ro/'><div class='image' id='vipromania'>Voluntari pentru idei si proiecte</div></a>
+                                        <a href='http://www.ongtrust.ro/'><div class='image' id='ongtrust'>Trust</div></a>
+
+                                        <!-- ===================================================================================================== -->
+                                        <a href='http://www.leap.ro/'><div class='image' id='leap'>Leap</div></a>
+                                        <a href='http://www.younginitiative.org/'><div class='image' id='younginitiative'>Asociatia young initiative</div></a>
+                                        <a href='http://www.asjc.ro/'><div class='image' id='asjc'>Asjc</div></a>
+                                        <a href='http://osut.ro/'><div class='image' id='osut'>Osut</div></a>
+                                        <div class='clear'></div>
+                                    </div>
+                                    <div class='parteneri' id='parteneri_institutionali'>
+                                        <span class='floating_text' id='sponsori_text'>Sus&#539;in&#x0103;tori</span>
+                                        <a href='http://www.cartier.md/'><div class='image' id='cartier_logo'>Editura Cartier</div></a>
+                                        <a href='http://www.pll.md/ro/'><div class='image' id='biblio_logo'>Biblioteca publica de drept</div></a>
+                                        <span class='floating_text' id='institutii_text'>Parteneri institu&#539;ionali</span> 
+                                        <ul id='institutii'>
+                                            <!-- <span class='floating_text' id='institutii_text'>Parteneri institu&#539;ionali:</span> -->
+                                            <li><a href='http://www.politice.ro/'>Facultatea de &#536;tiin&#539;e Politice SNSPA </a></li>
+                                            <li><a href='http://www.comunicare.ro/'>Facultatea de Comunicare &#537;i Rela&#539;ii Publice SNSPA</a></li>
+                                            <li><a href='http://www.fspub.ro/'>Facultatea de &#536;tiin&#539;e Politice Universitatea Bucure&#537;ti</a></li>
+                                            <li><a href='http://www.filosofie.unibuc.ro/'>Facultatea de Filosofie Universitatea Bucure&#537;ti</a></li>
+                                            <li><a href='http://litere.unibuc.ro/'>Facultatea de Litere din Universitatea Bucure&#x015f;ti</a></li>
+                                            <li><a href='http://www.unibuc.ro/ro/fac_fsas_ro'>Facultatea de Sociologie Universitatea Bucure&#537;ti</a></li>
+                                            <li><a href='http://laws.uaic.ro/'>Facultatea de Drept Universitatea Alexandru Ioan Cuza Ia&#537;i</a></li>
+                                            <li><a href='http://www.uaic.ro/uaic/bin/view/Academic/Filosofie'>Facultatea de Filosofie si &#536;tiin&#539;e Social Politice Universitatea AIC Ia&#537;i</a></li>
+                                            <li><a href='http://www.upa.ro/'>Facultatea de Drept si Facultatea de &#x015e;tiin&#x0163;e Politice si Administrative Universitatea Petre Andrei Ia&#x015f;i</a></li> 
+
+                                            <li><a href='http://www.ubbcluj.ro/'>Universitatea Babe&#537;-Bolyai Cluj Napoca</a></li>
+                                            <li><a href='http://www.uvt.ro/'>Universitatea de Vest Timi&#537;oara</a></li>
+                                            <li><a href='http://www.upt.ro/'>Universitatea Politehnica Timi&#537;oara</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class='parteneri' id='parteneri_media'>
+                                        <span class='floating_text' id='media_text'>Parteneri media</span>
+                                        <a href='http://www.hotnews.ro/'><div class='image' id='hotnews'>HotNews</div></a>
+                                        <!-- <a href='http://www.lumebuna.ro/'><div class='image' id='lumebuna'>Lume Buna</div></a> -->
+                                        <a href='http://www.romaniapozitiva.ro/'><div class='image' id='romaniapozitiva'>Romania Pozitiva</div></a>
+                                        <a href='http://totb.ro/'><div class='image' id='thinkoutsidethebox'>Think Outside The Box</div></a>
+                                        <a href='http://www.facebook.com/carevasazica.vip'><div class='image' id='carevasazica'>Carevasazica</div></a>
+                                        <a href='http://www.studentie.ro/'><div class='image' id='studentiero'>Studentie.ro</div></a>
+                                        <a href='http://startub.unibuc.ro/'><div class='image' id='startub'>startub.unibuc.ro</div></a>
+                                        <!-- <a href='http://www.tvr.ro/tvr_cluj.php'><div class='image' id='tvrcluj'>Tvr Cluj</div></a> -->
+                                        <!-- <a href='http://www.radiotransilvania.ro'><div class='image' id='radiotransilvania'>Radio Transilvania</div></a> -->
+                                        <a href='http://iasifun.ziaruldeiasi.ro/'><div class='image' id='iasifun'>Iasi fun</div></a>
+                                        <a href='http://www.ziaruldeiasi.ro/'><div class='image' id='ziaruldeiasi'>Ziarul de Iasi</div></a>
+                                        <a href='http://www.kissfm.ro/timisoara'><div class='image' id='kissfm'>KissFm</div></a>
+
+                                        <div class='clear'></div> 
+                                    </div>
+                                    <div class='clear'></div>
+
+                                </div>	
+                            </div>	<!-- end wrap -->
+                            <div id='footer_mare'>
+                                <div id='footer'>
+                                    <div id='links' class='footer'>
+                                        <div id='menu1' style='margin:auto;'> <ul id='meniu_prinicpal'><li><a href='../../../contacte/index.html'> Contact </a></li>
+<li><a href='../../../clubdebate/index.html'> Cluburile </a></li>
+<li><a href='../../../oamenii/index.html'> Oamenii </a></li>
+<li><a href='../../../proiectul/index.html'> Proiectul </a></li>
+<li><a href='../../../home/index.html'> Acasa </a></li>
+</ul></div><!--end menu-->
+                                    </div><!--
+                                    <div id='contact' class='footer'>
+                                            <h4>Contact</h4>
+                                            <p>office@closer2oxford.ro</p>
+                                            <p>bogdan.draghicescu@closer2oxford.ro<br>
+                                            <span class='detalii'> (asistenta tehnica web - orice probleme legate de site)</span></p>
+                                    </div>
+                                    -->
+                                    <div id='newsletter' class='footer'>
+                                        <script src="../../../../../connect.facebook.net/en_US/all.js#xfbml=1"></script><fb:like href="http://www.facebook.com/pages/Closer2Oxford/162758797069605" width="250" colorscheme="dark"></fb:like>
+                                        <!--<h4>Newsletter</h4>
+                                        <form action='/page/newsletter'>
+                                                <input type='text' name='email'>
+                                                <input type='submit' id='submit' value='>'>
+                                                        
+                                        </form>-->
+                                    </div>
+                                    <div id='credits'>
+                                        Copyright(c) 2021 ARDOR |  Toate drepturile rezervate | Toate logo-urile si sloganurile de pe site sunt proprietate intelectuala inregistrata si nu pot fi reproduse fara acordul explicit al detinatorilor. <br>
+                                            <br /><br />
+                                            <b>Disclaimer</b><br /><i>
+
+                                                Programul educational Closer to Oxford este un program non-profit si nu are o legatura cu universitatea cu acelasi nume, referirea la Oxford avand doar o semnificatie simbolica.
+                                            </i>
+                                    </div>
+
+                                </div>		
+                            </div>		
+
+                            <div id="finantatde">Acest proiect este finantat cu sustinere din partea Comisiei Europene. Aceast publicatie [comunicare] reflecta doar
+                                vederile autorului, iar Comisia nu poate fi facuta  responsabila pentru utilizarea informatiei pe care o contine.</div>
+
+
+                        </body>
+                        </html>

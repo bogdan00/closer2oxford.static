@@ -1,0 +1,501 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml-strict.dtd">
+<HTML xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+    <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+            <link rel="icon" type="image/png"  href="../../../../../closer2oxford.ro/favicon.html">
+                <link rel="stylesheet" href="../../../var/layout.css" type="text/css">
+                    <title>Closer to Oxford - e timpul pentru argumente!</title>
+                    <link rel="alternate" type="application/rss+xml"  href="../../../rss_feed" title="Stiri Closer2Oxford">
+                        <!-- <link rel="image_src" property="og:image"  href="/images/layout/closer2oxford_fb_white.png" /> -->
+                        <link rel="image_src" property="og:image"   type="image/jpeg"  href="../../../../uploads/2015/06/9/facebook_icon.html" />
+                        <link rel="image_src" type="image/jpeg"  href="../../../../uploads/2015/06/9/icon-facebook.gif" /> 
+						<meta name="description" content="Closer2Oxford pune în valoare oameni şi argumentele lor, în dezbateri online şi publice alături de tineri şi invitați avizaţi"/>
+                        <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9" />
+<script type='text/javascript' src='../../../../js/jquery-1.4.4.min.js'></script>
+<script>var $j = jQuery.noConflict();</script>
+<script type='text/javascript' src='../../../../js/tinymce/tiny_mce.js'></script>
+<script type='text/javascript' src='../../../../js/jquery.form.js'></script>
+<script type='text/javascript' src='../../../../js/fbLoginRegister.js'></script>
+<script type='text/javascript' src='../../../var/javascript.js'></script>
+<script type='text/javascript' src='../../../../js/jquery.hovertip-1.0.min.js'></script> 
+<script type='text/javascript' src='../../../../js/jquery.jgrowl_minimized.js'></script> 
+<link rel='stylesheet' href='../../../../css/jquery.jgrowl.css' media='screen' type='text/css'> 
+<script type='text/javascript' src='../../../../js/jquery.timer-min.js'></script> 
+<style>.hovertip{
+    position:absolute;
+    padding:10px 13px;
+    z-index:2;
+    max-width:300px;
+    color:#303030;
+    background-color:#f5f5b5;
+    border:1px solid #DECA7E;
+    font-family:sans-serif;
+    font-size:12px;
+    line-height:18px;
+    text-align:left;
+    }
+           .normal_text ol,.normal_text ol *{text-align:left !important}
+           .normal_text *{font-weight:normal !important;font-size:12px !important;font-face:tahoma !important}</style> 
+<script type='text/javascript'>$j(document).ready(function(){$j('.tooltip').hovertip({'offset':[20,20]});get_notif();});
+
+if(!Array.indexOf){Array.prototype.indexOf = function(obj){for(var i=0; i<this.length; i++){if(this[i]==obj){return i;}}return -1;}}
+    hashuri = [] ;
+	 var tick_timer= 3000 ;
+ 
+	 function get_notif()
+        {
+		  
+		  //console.log(tick_timer);
+	     
+		  setTimeout(get_notif,tick_timer);
+        
+		   $j.ajax(
+            {
+                url: '/page/notif/show_events',
+                dataType: 'json',
+                data: "{}",
+                success: function(data)
+                    {
+                    $j.each(data,function(index,data){
+                        try
+                            {
+                            if( hashuri.indexOf(data.hash) == -1 )
+                                {
+                                hashuri.push(data.hash);
+                                $j.jGrowl(
+                                    data.str,
+                                    {
+                                        corners:'1px',
+                                        life: data.life,
+                                        header:data.title,
+                                        hash: data.hash,
+                                        sticky: data.sticky,
+                                        close: function(e,m,o)
+                                            {
+                                                $j.ajax({url:'/page/notif/delete_single_event/' + o.hash});
+                                            }
+                                    });
+                                }
+                            }
+                        catch(e){}
+                        })
+                    }
+            });
+        }
+	 </script> 
+ 
+                            
+  <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-19111721-1']);
+  _gaq.push(['_setDomainName', '.closer2oxford.ro']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+    
+                        </head>
+                        <body>
+                            <div id="global_wrap">
+                                <div id="header">
+                                    <a href='../../../../index.html'><div id='logo'><img src='../../../../images/layout/sigla.jpg'></div></a>
+                                    <a class='noExternal' href='http://www.facebook.com/pages/Closer2Oxford/162758797069605'><img src='../../../../images/fb.png' style='height:30px;float:right;clear:right;margin:10px 5px 5px 5px;border:none;'/></a>
+                                    <a href='../../../rss_feed'><img src='../../../../images/feed-icon.png' style='height:30px;float:right;clear:right;margin:5px;border:none;'/></a>
+                                </div>
+                                <div id="meniu">
+                                    <div  id='register_login'>
+
+                                        
+  <a href='#' class='todo' id='login'>Login </a> &nbsp;<a href='../../../register.html' class='todo' id='register'>Register</a>
+    <div id='login_box'>
+		  <form action='https://dev.closer2oxford.ro/page/ro/login_user/logon' method='post' id='user_login_form'>
+					 <div>Email: <input type='text' name='email'/> </div><br />
+					 <div>Pass: <input type='password' name='passwd'/></div><br />
+					 <a href='#' class='password_forgot'>forgot password?</a>
+					 <input type='hidden' value='/page/ro/vezi_meciuri/309/' name='returnto' class='submiter'/><br />
+					 <input type='submit' value='login' name='btn' class='submiter'/><br />
+		  </form>
+		  
+		  <form action='https://dev.closer2oxford.ro/page/ro/login_user/reset_user_pw' method='post' id='user_reset_form'>
+					 <div>Email: <input type='text' name='email'/> </div><br />
+					 <a href='#' class='password_forgot'>login?</a>
+					 <input type='hidden' value='/page/ro/vezi_meciuri/309/' name='returnto' class='submiter'/><br />
+					 <input type='submit' value='reset' name='btn' class='submiter'/><br />
+		  </form>
+		  
+    </div>
+    
+                                    </div>
+                                    <div id='menu1' style='margin:auto;'> <ul id='meniu_prinicpal'><li><a href='../../../contacte/index.html'> Contact </a></li>
+<li><a href='../../../clubdebate/index.html'> Cluburile </a></li>
+<li><a href='../../../oamenii/index.html'> Oamenii </a></li>
+<li><a href='../../../proiectul/index.html'> Proiectul </a></li>
+<li><a href='../../../home/index.html'> Acasa </a></li>
+</ul></div><!--end menu-->
+                                </div>
+                                <div id="main"> 
+                                    <!--<div id='stiri-padding'>
+        <div id='stiri_back'>
+                {stiri} 
+    
+               
+        </div>-->
+        
+</div>
+<div  id="content-padding">
+        <div id='sidebar_menu'>
+                <span class='tr'></span>
+                <span class='tl'></span>
+                <span class='br'></span>
+                <span class='bl'></span>
+                <span id="filler"></span>
+                    
+                <ul></ul>
+                
+                <div class='clear'></div>
+        </div>
+        <div id="content">
+                <span class='tr'></span>
+                <span class='tl'></span>
+                <span class='br'></span>
+                <span class='bl'></span>
+                <span id="filler"></span>
+                  <script>
+        $j(document).ready(function(){
+        $j('.discurs_toggler').toggle(
+                function(){
+                $j(this).attr('src', '../../../../images/little_stuff/16-em-down.png');   
+                $j(this).parent().next('.discurs').hide('fast');
+                },
+                function(){
+                $j(this).attr('src', '../../../../images/little_stuff/16-em-up.png');
+                $j(this).parent().next('.discurs').show('fast');
+                });
+            });
+        </script><style>.nowrap{white-space: nowrap;}
+		.noJustify{text-align:left;}
+		</style><h2 class='noJustify'><span class='nowrap'>'Andreea si Denisa'</span> <span class='notif'>(afirmatori)</span> vs <span class='nowrap'>'Luca si Teodora'</span> <span class='notif'>(negatori)</span></h2><h3>A1 (Andreea Iordachescu) <img src='../../../../images/little_stuff/16-em-up.png' class='discurs_toggler'></h3>
+            <div class='discurs normal_text'><p>E timpul ca statul sa nu mai subventioneze specializarile care nu au cautare pe piata muncii?</p>
+<p>Definitii:</p>
+<ul>
+<li>specializari subventionate= specializari din cadrul universitatilor publice/de stat</li>
+<li>&bdquo;care nu au cautare pe piata muncii&rdquo;= specializari care pregatesc studentii pentru un domeniu in care s-a demonstrat ca nu isi vor gasi un loc de munca</li>
+</ul>
+<p>Ex: "Constructii de Masini"- 40% din absolventii facultatii nu si-au gasit un loc de munca in domeniul respectiv &nbsp;</p>
+<ol>
+<li>Factorul de descurajare </li>
+</ol>
+<p>- exista multa specializari care &bdquo;suna bine&rdquo;, insa nu sunt construite in conformitate cu piata muncii, ci mai degraba doar pentru a atrage cat mai multi studenti pe bancile facultatii; totodata, aceste specializari sunt un hibrid intre mai multe domenii(ex: Facultatea de Studii Europene: specializarile sale nu pregatesc absolventii pentrun domeniu anume, ci ii initeaza teoretic in domenii precum Administratia sau Istoria, insa fara a-i specializa efectiv), in consecinta, nu au o programa bine stabilita si nici un grad mare de dificultate. Acest lucru atrage tinerii care se gandesc ca vor avea un viitor asigurat doar pentru simplul fapt ca reusesc sa termina o facultate. Pe de alta parte, exista specializari care au cautare pe piata muncii, insa nu au suficienti studenti: acesta este si cazul Facultatii de Textile Pielarie. Exista cerere pe piata, insa majoritatea tinerilor prefera sa se instruiasca intr-o filiera teoritica, cum ar fi Dreptul si Psihologia, specializari care nu mai au cautare pe piata muncii. Astfel, exista pe piata o cerere care nu este satisfacuta, iar pe de alta parte, exista un nr foarte mare de studenti care nu isi gasesc o slujba dupa terminarea facultatii, sau lucreaza in alt domeniu, care este cu mult sub nivelul expertizei lor.</p>
+<p> &nbsp;2. Ineficienta economica</p>
+<p>- Statul va investi bani in subventionarea acestor specializari, bani pe care nu ii va recupera din cauza ca majoritatea studentilor absolventi nu isi vor gasi un loc de munca, deci nu vor plati impozite, nu isi vor cumpara o casa/masina, nu vor face investitii mari si cel mai probabil nu isi vor deschide un cont la banca unde sa depoziteze bani. Ce vor face cel mai probabil este sa aplice pentru a primi ajutor de somaj. In aceste situatii, statul investe bani in instruirea tinerilor, pe urma investeste mai multi bani in sustinerea acestora oferindu-le diferite ajutoare sociale. Daca nu ar mai subventiona specializarile fara cautare pe piata muncii si ar investi bani strict in domeniile care au cautare, cum ar fi cele ale Economiei sau Politehnicii, atunci absolventii ar avea locuri de munca, ar fii consumatori si platitori de impozite, iar banii statului ar putea fi investiti nu in ajutoare sociale pentru ei, ci de exemplu in programe pentru reinstruirea somerilor existenti in momentul de fata, a caror domenii de lucru nu mai exista acum pe piata muncii.</p>
+<p>Este important de specificat ca statul ar trebui sa ofere sanse egale tuturor cetatenilor si sa asigure bunastarea acestora; faptul ca nu ar mai subventiona specializarile fara cautare pe piata muncii, nu inseamna neaparat ca acesta vor disparea. Acestea pot exista in continuare in cadrul facultatilor private.</p>
+<p> &nbsp;3. Incurajarea mediocritatii</p>
+<p>- Nu este foarte greu sa realizezi ca poti sa lucrezi la McDonald&rsquo;s sau ca sofer de taxi si fara sa ai o facultate in spate, iar asta este una realitatile zilelor noastre. Tot mai multi studenti ajung la concluzia ca decat sa studieze intre 3 si 5 ani, mai bine lucreaza in acest timp, pentru ca si dupa terminarea facultatii nu vor avea prospecte mai bune. Acest lucru duce la inrolarea a tot mai putini tineri la facultate. Acesta este din nou un exemplu despre cum statul pierde bani defapt subventionand specializari ce nu au cautare, insa ce se va intampla atunci cand si aceste slujbe pentru care nu iti trebuie o calificare anume, se vor epuiza? Atunci se va forma o majoritate covarsitoare de tineri, someri, fara studii, pentru care re-integrarea intr-un sistem educational sau pe piata muncii va fi mult mai dificila, decat in conditiile in care acesta macar este familiarizat cu un domeniu de studiu si ar putea fi doar reinstruit.&nbsp;</p>
+<p><strong>Referinte:&nbsp;</strong></p>
+<p>(<a href="http://www.digi24.ro/Stiri/Digi24/Actualitate/Educatie/Facultati+fara+cautare+Specializari+de+la+facultatile+de+fizica+">http://www.digi24.ro/Stiri/Digi24/Actualitate/Educatie/Facultati+fara+cautare+Specializari+de+la+facultatile+de+fizica+</a>)</p>
+<p><a href="http://www.forbes.com/sites/jennagoudreau/2012/10/11/the-10-worst-college-majors/">http://www.forbes.com/sites/jennagoudreau/2012/10/11/the-10-worst-college-majors/</a></p>
+<p><a href="http://www.latimes.com/business/la-fi-college-grads-20130920,0,4465594.story#axzz2irHNQcg6">http://www.latimes.com/business/la-fi-college-grads-20130920,0,4465594.story#axzz2irHNQcg6</a></p>
+</div><hr><h3>N1 (Teodora Bogza) <img src='../../../../images/little_stuff/16-em-up.png' class='discurs_toggler'></h3>
+            <div class='discurs normal_text'><p>Este necesar ca facultatile sa ofere o gama variata de arii educationale pentru a spori competitivitatea in domeniul respectiv si a incuraja absolventii sa devina mai buni in aria in care activeaza.</p>
+<p>Traim intr-o societate care se bazeaza pe principiul concurentei care impulsioneaza absolventii si studentii sa isi asume propriile decizii si sa isi hotarasca specializarile. Intradevar facultatile isi prezinta oferta educational intr-o maniera cat mai atractiva pentru ca absolventii de liceu sunt principala lor materie prima si prin aceasta initiere in mai multe domenii lasa studentilor libertate de a-si idea seama in ce doresc sa se specializeze si sa devina profesionisti si sa isi impuna singuri o anumita directie. Insasi concepul de facultate vine de la termenul facultativ ceea ce presupune un anumit efort pentru a ajunge la un anumit nivel si de a deveni cu adevarat bun intr-un anumit domeniu. In exemplul dat de adversari, Facultatea de Studii Europene se pliaza pe locurile oferite de Uniunea Europeana si institutiile aferente. Procesul lor de selectie se bazeaza pe verificarea abilitatilor personale ale aplicantilor iar apoi pe verificarea informatiilor academice generale oferite de catre aceasta facultate pentru a fi slefuite ulterior. O oprire totala a subventionarilor pentru o specializare anume nu reprezinta o solutie pentru ca va lipsi piata muncii de doritori de a inova in domenii care sunt in continua dezvoltare.</p>
+
+
+<p>Sursa insuficientei economice nu sunt subventionarile date pentru studentii de la specializarile care nu au cerere pe piata muncii ci, de multe ori, lipsa locurilor pe piata muncii.</p>
+<p>Lipsa incurajarii sectorului de intreprinderi mari si mijlocii, lipsa incurajarii dezvoltarii sectorului industrial si tehnologic determina o scadere a economiei la nivel national si asta este un handicap al societatii noastre.&nbsp; Aceasta problema ar trebui solutionata prin creearea unor locuri de munca si nu prin descurajarea domeniului in totalitate. Absolventii inovativi de la diverse specalizari reusesc totusi cu putina imaginatie sa isi creeze un drum in mediul competitiv al afacerilor. Un exemplu relevant chiar in domeniul constructiilor de masini il reprezinta companie mai puţin cunoscută, Ghe-o Motors, noul tot-teren botezat Rescue pare să fie cea mai nouă armă &icirc;n lupta cu calamităţile naturale.<strong>&nbsp;</strong></p>
+
+<p>Un sector industrial, social si administratie bine dezvoltat ar determina locuri de munca si ar impulsiona o anumita adaptare constanta a programei academic a facultatilor la cererea de pe piata eliminand &nbsp;stagnarea care exista la momentul acesta. &nbsp;Un exemplu relevant in acest sens este si facultatea de Electrotehnica (denumirea anterioara) care si-a adapatat programa academica la nivelul actual al evolutiei tehnologice &ndash; actuala Facultate de Inginerie electrica, energetica si Informatica aplicata.</p>
+
+
+<p>Sa fii pasionat sau atras de un anumit domeniu va determina o implicare pentru dezvoltarea arei respective, idei inovatoare si creeare de companii. Daca nu s-ar oferi o anumita diversitate si varietate acadamica absolventii de liceu ar fi obligati sa se plieze pe un domeniu neatractiv pentru ei sau pentru care nu manifesta o anumita inclinatie, situatie ce ar determina frustrari, o lipsa a specialistilor in respectivul domeniu chiar si un plus de emigrare catre state in care se poate oferi o astfel de varietate.&nbsp; In plus societatea are nevoie de diversitate. Chiar daca specilizarile si informatiile nu raman aceleasi, domeniile persista. Nevoia de resursa umana va continua sa existe, indiferent daca este vorba de resursa calificata sau necalificata. Alegerile le facem noi.</p>
+<p>Referinte:</p>
+<p>(http://autoindustry.ro/stiri-auto/ghe-o-motors-cel-mai-mediatizat-produs-romanesc-al-anului-in-presa-straina-20164</p>
+<p>http://www.economist.com/news/international/21576657-around-world-almost-300m-15-24-year-olds-are-not-working-what-has-caused)</p>
+
+</div><hr><h3>A2 (Denisa Neamtiu) <img src='../../../../images/little_stuff/16-em-up.png' class='discurs_toggler'></h3>
+            <div class='discurs normal_text'><p>Tocmai termenul de facultate sugereaza un element facultativ in existenta individului, dar si in ceea ce priveste conditiile pe care statul trebuie sa le ofere cetatenilor si echipa afirmatoare in niciun moment nu a afirmat ca acele specializari ar trebui desfiintate, ci doar ca statul nu este dator sa le incurajeze.</p>
+<p>Referitor la primul argument negator, aceasta masura nu doar ca descurajeaza competitivitatea, ci din contra o incurajeaza. Faptul ca nu li se mai asigura facultatilor acel fond de la stat le determina sa se adapteze in functie de cerintele de pe piata de munca, deoarece in momentul in care rata de angajabilitate a studentilor facultatii va creste, subventiile vor reveni. Problema principala pe care o identifica echipa afirmatoare nu este atat domeniul care se studiaza, ci faptul ca el nu este cerut pe piata de munca. Astfel chiar in exemplul Facultatii de Studii Europene, problema nu e atat aria de studiu, ci faptul ca studentul nu dobandeste nicio competenta de care are nevoie cand se va angaja, or a nu mai subventiona facultatile, inseamna a le scoate din zona de comfort in care se afla azi stiind ca oricum vor avea studenti respectiv fonduri si a le determina sa inoveze in ceea ce inseamna procesul de invatare, fapt care ar rezolva problema identificata in primul argument afirmator si atinge si valoarea competitivitatii propuse de afirmatori. Mai mult o astfel de masura incurajeaza diversificarea programelor astfel incat studentul sa se specializeze mult mai mult pe o aumita arie cum se intampla in Marea Britanie, unde diversitatea de programe e extrem de larga, sau impingand facultatile sa gaseasca alte surse de finantare, in speta companiile care lucreaza in domeniu, incurajand parteneriatele publi-private, care ar ajuta foarte mult si studentul oferindu-i o imagine mult mai clara a ceea ce se intampla pe piata de munca. Mai mult aceasta masura ar reprezenta o masura care ar incuraja initierea unor programe exact in domeniul industriei, sau a domeniilor cautate in piata, element care si negatorii il doresc. In concluzie la nivelul primei discutii, a eficientei sistemului, consideram ca lipsa fondurilor de la stat reprezinta motivatia pentru facultati sa isi dezvolte si adapteze programele de studiu pentru cerintele reale ale pietei de munca, atragand un semnal de alarma si viitorului student ca e vital sa isi aleaga o facultate care il va ajuta in viitor. &nbsp;</p>
+<p>In al doilea rand , trebuie sa abordam problema si la nivel de oportunitate. Dincolo de faptul ca se pierd foarte multi bani, trebuie sa privim care e rolul statului. Consideram ca prin faptul ca statul asigura invatamantul gimnazial si intr-o masura cel liceal, el isi indeplineste rolul de a asigura dreptul la educatie. Statul subventioneaza totusi facultatile pentru ca in anumite domenii are nevoie de indivizi calificati pentru ca ei sa contribuie la buna functionare a societatii. Pentru ca societatea are nevoie de medici finantam facultatea de medicina, pentru ca o economie nu functioneaza fara...economisti, subventionam facultatea de economie. Ceea ce nu trebuie, insa sa mai faca statul este sa subventioneze specializari care nu aduc nicio contributie societatii. Faptul ca studentii nu isi gasesc un loc de munca in domeniul pe care l-au studiat, inseamna ca acea specializare nu aduce niciun beneficiu societatii, prin urmare ca sunt niste fonduri irosite, care s-ar putea directiona catre dezvoltarea unor sectoare unde se simte lipsa de persoane calificate. Celelalte specializari pot exista in continuare, daca studentul e atat de pasionat de domeniul acela, dar nu statul trebuie sa il finanteze. Faptul ca imi place sa merg la film nu inseamna ca statul trebuie sa imi plateasca biletul atat timp cat asta nu aduce o contributie societatii, interes de care el ar trebui sa se ocupe.</p>
+<p>In final, pentru ca reprezinta o motivatie spre progres, pentru ca specializarile acelea nu vor disparea in mod necesar, pentru ca responsabilizeaza studentul cand isi alege specializarea si pentru ca datoria statului e sa investeasca spre binele intregii societati, aceasta motiune ar trebui respinsa.</p>
+<p>Referinte:&nbsp;</p></div><hr><h3>N2 (Luca Ciubotaru) <img src='../../../../images/little_stuff/16-em-up.png' class='discurs_toggler'></h3>
+            <div class='discurs normal_text'><p>Stimati colegi afirmatori, stimat juriu,&nbsp;</p>
+<p>Va multumim pentru ideile si argumentele aduse pana in prezent insa dorim sa subliniem anumite aspecte neluate in calcul pana in prezent in sustinerea argumentelor anterioare.</p>
+
+<p> <strong>1.</strong>&nbsp;Referitor la primul argument al echipei afirmatoare, si anume&nbsp;<strong>factorul de descurajare,</strong>acestia au mentionat in primul discurs afirmator faptul ca o specializare teoretica precum Dreptul sau Psihologia nu mai are cautare in campul muncii. Cu toate acestea, aceste specializari ofera o palata mult mai larga (avocatura, magistratura, notariat, executor judecatoresc, diplomatie, mediator, arbitru, grefier, functionar al Uniunii Europene, functionar public, etc) decat o specializare tehnica ce nu are aplicabilitate decat pe acea arie ingusta careia i se adreseaza.&nbsp;</p>
+<p> &Icirc;n acelasi timp, &icirc;n sustinerea argumentului echipei noastre referitor la&nbsp;<strong>concurenta&nbsp;</strong>absolut fireasca de pe piata muncii,&nbsp;trebuie sa amintim faptul ca aceasta oportunitate trebuie oferita tuturor tinerilor iar domeniile trebuie sa fie din cele mai diverse. O limitare și o reducere &icirc;n același timp a specializărilor nu ar face dec&acirc;t să plafoneze generația t&acirc;nără iar singurele specializări care ar supraviețui ar fi cele din domeniul&nbsp;comerțului, poate și unele specializări teoretice.&nbsp;</p>
+<p> Este suficient că Rom&acirc;nia este deja un debușeu profitabil pentru alte tări exportatoare iar politica dusă &icirc;n domeniul educației este un lucru extrem de sensibil cu implicații pe termen lung &icirc;n ceea ce privește&nbsp;structura populației&nbsp;și&nbsp;nivelul de educație&nbsp;al acesteia.&nbsp;</p>
+<p> <strong>2.</strong>&nbsp;Revenind la&nbsp;<strong>argumentul de natură economică</strong>&nbsp;al echipei afirmatoare, faptul că se alocă prea puțini bani pentru sistemul de educație este o realitate, Rom&acirc;nia av&acirc;nd o pondere de doar<strong>4.3% din PIB,&nbsp;</strong>sub media UE care se situează aproximativ la nivelul de 5.5%.</p>
+<p> Țările nordice au &icirc;nțeles faptul că schimbarea majoră &icirc;n bine a unei țări se realizeză prin educație și prin creșterea gradului de instruire și educare al populației, chiar dacă rezultatele apar abia pe termen lung, după 2 sau chiar 3 generații. Este cunoscut faptul că sistemele educaționale din Norvegia, Suedia sau Finlanda funcționeză cel mai bine, av&acirc;nd și un procent ridicat din PIB alocat acestora (peste 6.5).&nbsp;</p>
+<p> O economie cu adevărat puternică &icirc;și extrage forța din industrie sau servicii. Cu toate acestea, investitorii străini, deținători de capital nu aleg Rom&acirc;nia ca destinație a investițiilor lor iar unul din motive este dat tocmai de&nbsp;lipsa unei forțe de muncă specializate.&nbsp;</p>
+<p> Mai mult, cunoaștem faptul că Rom&acirc;nia are printre cele mai mici&nbsp;rate de absorbție&nbsp;ale fondurilor europene din Uniunea Europeană. Așadar, adevărata problemă ar trebui să fie cea a facilitării accesului la aceste fonduri și a atragerii investitorilor.&nbsp;</p>
+<p> &Icirc;n același timp, refereritor la mențiunea echipei afirmatoare ca aceste specializări vor putea exista chiar și &icirc;n lipsa finanțării consideram că acest lucru nu ar fi posibil &icirc;ntruc&acirc;t chiar și &icirc;n condițiile acestea, specializările subvenționate de stat ar fi &icirc;n cea mai mare parte &icirc;n&nbsp;imposibilitate de a continua procesul de educație prin autofinanțare.</p>
+<p> Nu &icirc;n ultimul r&acirc;nd, &icirc;n susținerea argumentului nostru, o diversitate de specializări ar &icirc;ncuraja o implicare cu adevărat din partea studenților, aceștia av&acirc;nd &icirc;n mod real posibilitatea de a urma un domeniu &icirc;n care studiază cu plăcere. Menționăm &icirc;n același timp că singurele consecințe ce ar decurge din limitatarea ofertei educaționale la doar c&acirc;teva specializări ar fi nefaste, descuraj&acirc;nd diversitatea și buna orientare a tinerilor &icirc;ncă de la &icirc;nceput pe domeniul pe care aceștia &icirc;l preferă.&nbsp;</p>
+
+<p> &Icirc;n final, sper&acirc;nd că această moțiune; &bdquo;E timpul ca statul să nu mai subvenționeze specializările care nu au cautare pe piața muncii&rdquo; va fi respinsă, ne dorim ca statul să ofere aceleași posibilități tinerilor ca și p&acirc;nă acum și să subvenționeze specializări diverse. Le mulțumim colegilor din echipa afirmatoare pentru că susține de asemenea acest fapt &icirc;n ultimele r&acirc;nduri ale celui de-al doilea discurs afirmator, că această moțiune ar trebui respinsă.&nbsp;</p>
+<p>&nbsp; Chiar dacă au fost luate măsuri &icirc;n acest sens (referința nr. 4), sperăm ca educația să ocupe o pondere tot mai importantă ca alocație din bugetul de stat.</p>
+
+
+<p>Referinte:</p>
+<p><a href="http://en.wikipedia.org/wiki/List_of_countries_by_spending_on_education_(%25_of_GDP)">http://en.wikipedia.org/wiki/List_of_countries_by_spending_on_education_(%25_of_GDP)</a></p>
+<p><a href="http://www.ssb.no/en/utdanning/statistikker/utuvh">http://www.ssb.no/en/utdanning/statistikker/utuvh</a></p>
+<p><a href="http://www.anosr.ro/semneaza-petitia/">http://www.anosr.ro/semneaza-petitia/</a></p>
+<p><a href="http://www.max-media.ro/183-de-specializari-desfiintate-in-facultatile-din-tara-vezi-lista.html">http://www.max-media.ro/183-de-specializari-desfiintate-in-facultatile-din-tara-vezi-lista.html</a></p>
+</div><hr><hr><h2>Decizia:</h2> <script>
+        $j(document).ready(function(){
+			$j('.decizie_toggler').toggle( 
+				function(){
+					$j(this).attr('src', '../../../../images/little_stuff/16-em-down.png');   
+					$j(this).parent().next('.decizie').hide('fast'); 
+                },
+                function(){
+					$j(this).attr('src', '../../../../images/little_stuff/16-em-up.png');
+					$j(this).parent().next('.decizie').show('fast'); 
+                } 
+			);
+		});</script><div class='decizie'><h3>Teo Oprea
+                <img src='../../../../images/little_stuff/16-em-up.png' class='decizie_toggler'></h3><div class='normal_text'><p>Feedback pentru pledanti:</p>
+<p>Afirmator 1:</p>
+<p>- in privinta argumentului 1, observ ca el mentioneaza de fapt mai multe idei care ar putea fi dezvoltate separat (facultati care au programe prost facute, facultati cu pregatire pur teoretic, facultati care au o imagine falsa). Incearca sa delimitezi tu insuti intre aceste diferite aspecte si sa oferi concluzii pentru fiecare dintre ele.</p>
+<p>- argumentul 3 este neclar din cauza formularilor: sunt tineri care prefera sa intre in piata muncii fara facultate, si astfel facultatile pierd studenti, si pe termen lung exista riscul ca nici acesti tineri sa nu mai gaseasca locuri de munca. Nu-mi este clar de aici care e solutia sau concluzia pe care o propui (directionarea acestor studenti spre facultatile cu cautare pe piata muncii? si daca da, cum, daca acesti nu vor sa se inscrie la facultate? sau nu vor sa se inscrie la facultate tocmai pentru ca e neproductiv?). As fi preferat o explicatie scurta si clara, cu trimitere spre tema dezbaterii, privind subventionarea facultatilor.</p>
+<p>Negator 1:</p>
+<p>- ti-as sugera sa iti delimitezi argumentele, nu pentru ca nu ar fi fost clar despre ce vorbesti la fiecare paragraf, ci pentru ca asta te ajuta sa evidentiezi forta argumentelor tale in raport de motiune. In cazul in care nu faci asta, argumentele tale par doar cateva idei pe care le mentionezi, fara a ma face sa inteleg de ce acestea sunt aspectele esentiale pe care trebuie sa le iau in considerare cand decid daca aceste facultati trebuie sa fie subventionate sau nu.</p>
+<p>- abordeaza mai evident impactul subventionarii asupra eficientei, calitatii, importantei acestor specializari, ca sa nu dai prilejul echipei oponente sa iti ignore argumentele, sustinand ca nu au legatura cu motiunea<br />- abordeaza toate argumentele afirmatorului 1 (inclusiv argumentul economic), pentru a nu le da prilejul sa exploateze acest argument ulterior in dezbatere, cand poate colegul tau va avea prea multe lucruri de contracarat pentru a le putea aborda eficient pe toate daca tu nu ii pregatesti terenul.<br /><br />Afirmator 2:</p>
+<p>- e o strategie eficienta sa abordezi discutia despre responsabilitatea statului in privinta educatiei doar in masura in care echipa negatoare ar sustine faptul ca exista o astfel de responsabilitate si in privinta specializarilor slabe. Atat timp cat ei nu se sprijina pe acest argument,faptul ca tu il mentionezi s-ar putea sa le sugereze lor o cale de atac eficienta, la care nu se gandisera anterior (atac la care nu mai ai cum sa raspunzi, avand in vedere ca discursul tau e ultimul discurs din partea afirmatorilor). Pe de alta parte, inteleg de ce ai considerat necesar sa arati ca subventionarea publica nu este o datorie, ci o investitie din partea statului. Ai fi putut sa corelezi aceasta explicatie cu argumentul 2 al afirmatorului 1, pentru mai multa siguranta.</p>
+<p>- ar fi bine sa imi explici de ce aceste specializari nu vor disparea in absenta subventionarii si, eventual, ca nu ar fi asa de rau daca dispar, avand in vedere ca tocmai voi sustineati ca sunt slabe sau inutile.<br /><br />Negator  2:</p>
+<p>- e bine ca speculezi erorile de rationament/factuale (cea privind Dreptul ca fiind o specializare pur teoretica), nu insa si erorile de exprimare (cea privind respingerea motiunii), pentru ca tradeaza faptul ca nu va puteti baza pe propriile argumente ca sa castigati (in unele cazuri).<br />- explica-mi de ce necesitatea de a creste procentul din PIB pentru educatie, sau necesitatea de a atrage investitii din strainatate sunt aspecte de natura a sustine mentinerea subventiilor. Fara astfel de explicatii, argumentele voastre imi contureaza imaginea importantei educatiei si cresterii economice, dar ma lasa pe mine sa decid daca aceste conditii impun cu necesitate mentinerea subventiilor, sau doar sugereaza ca subventiile nu sunt o problema.<br /><br />Verdict:</p>
+<p>Aria principala de conflict se refera la necesitatea subventiilor pentru facultati. Echipa afirmatoare sustine ca aceste facultati sunt slabe si necompetitive si ca absenta fondurilor le-ar determina sa devina competente, iar echipa negatoare sustine ca este necesar sa mentinem diversitatea si ca studentii trebuie sa poata alege liber. Fiecare din echipe are scopuri si valori diferite&nbsp;: echipa afirmatoare vrea eficienta si calitate, echipa negatoare vrea tot calitate dar prin libertatea alegerii. Echipa afirmatoare priveste din perspectiva statului, echipa negatoare din perspectiva tinerilor studenti. Consider ca aceasta arie este castigata de echipa afirmatoare pentru ca trateaza direct problema responsabilitatii si interesului statului in a subventiona, lucru la care negatorii raspund (tradus)ca statul ar trebui sa mentina subventiile, pentru ca problema e pe piata muncii, nu in domeniul invatamantului (argument foarte bun si interesant). Pe de alta parte, negatorul 2 nu mai reuseste sa exprime aceeasi idee, vorbind mult despre necesitatea educatiei, fara a spune in ce forma, si de ce subventiile trebuie mentinute pentru ca educatia e importanta.</p>
+<p>O subarie in cadrul acestui punct s-a referit la posibilitatea de supravietuire a acestor specializari in cazul retragerii subventiilor, discutie cu privire la care nici una dintre echipe nu a facut decat simple afirmatii, astfel incat nu pot sa-mi dau seama care sunt consecintele negative ale schimbarii care m-ar determina sa dau castig de cauza negatorilor.</p>
+<p>Cred ca negatorii sunt de asemenea in dezavantaj cand scapa din vedere argumentele de ordin economic ale echipei afirmatoare, pentru ca ele indica, in fond, ca statul nu este dator sa subventioneze aceste specializari, indiferent de ce se intampla cu acestea.</p>
+<p>Din punct de vedere al strategiei de dezbateri, ultimul afirmator polarizeaza argumentele in raport cu motiunea, aratand ca subventiile trebuie retrase, desi doreste poate mentinerea unor valori din cele mentionate de negatori, pec and ultimul negator acorda foarte mult spatii recastigarii unor puncte minore (drept, investitii straine, model de educatie), pe care insa nu le coreleaza direct cu discutia, din care nu reiese ca e necesar sa mentinem subventiile, ci ca problemele sunt (mai mari) in alta parte.</p>
+<p>Atat timp cat afirmatorii prezinta problema specializarilor subventionate si urmaresc un scop prin eliminarea lor, pe cand negatorii nu reusesc sa combata problema respectiva si prefera mentinerea pentru motive care nu tin de subventii, ci de existenta specializarilor in sine, atunci consider ca in acest meci, au castigat cei din echipa AFIRMATOARE.</p>
+
+<p>Recomand debaterilor sa consulte tutorialele de pe site-ul Closer2Oxford pentru a-si imbunatati prestatia in urmatoarea runda, au idei cu potential dar mai au lucruri de imbunatatit pentru ca acestea sa devina pledoarii convingatoare:&nbsp;http://closer2oxford.ro/page/tutoriale</p>
+<p><br /><br /></p>
+<table cellspacing="0" cellpadding="7" width="639">
+<colgroup><col width="113"></col> <col width="114"></col> <col width="114"></col> <col width="114"></col> <col width="113"></col> </colgroup> 
+<tbody>
+<tr valign="TOP">
+<td width="113">
+<p>Criteriu</p>
+</td>
+<td width="114">
+<p>A1</p>
+</td>
+<td width="114">
+<p>N1</p>
+</td>
+<td width="114">
+<p>A2</p>
+</td>
+<td width="113">
+<p>N2</p>
+</td>
+</tr>
+<tr valign="TOP">
+<td width="113">
+<p>Continut</p>
+</td>
+<td width="114">
+<p>9</p>
+</td>
+<td width="114">
+<p>9</p>
+</td>
+<td width="114">
+<p>9</p>
+</td>
+<td width="113">
+<p>9</p>
+</td>
+</tr>
+<tr valign="TOP">
+<td width="113">
+<p>Strategie</p>
+</td>
+<td width="114">
+<p>9</p>
+</td>
+<td width="114">
+<p>9</p>
+</td>
+<td width="114">
+<p>10</p>
+</td>
+<td width="113">
+<p>8</p>
+</td>
+</tr>
+<tr valign="TOP">
+<td width="113">
+<p>stil</p>
+</td>
+<td width="114">
+<p>5</p>
+</td>
+<td width="114">
+<p>5</p>
+</td>
+<td width="114">
+<p>5</p>
+</td>
+<td width="113">
+<p>5</p>
+</td>
+</tr>
+<tr valign="TOP">
+<td width="113">
+
+</td>
+<td width="114">
+<p>23</p>
+</td>
+<td width="114">
+<p>23</p>
+</td>
+<td width="114">
+<p>24</p>
+</td>
+<td width="113">
+<p>22</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p><br /><br /></p>
+</div>A1 -> 23 puncte<br>N1 -> 23 puncte<br>A2 -> 24 puncte<br>N2 -> 22 puncte<br>Castiga echipa: <h3 style='display:inline;color:red;'>Andreea si Denisa (afirmatori)</h3></div><hr><h3 class='important'>Vrem parerea ta! Pentru asta, trebuie sa te loghezi.</h3>
+                <div class='clear'></div>
+        </div><!-- end main content -->
+         <div class='clear'></div>
+</div>
+<div id="pix"></div>
+
+
+                                </div><!--end main -->
+                                <div id='parteneri'>
+                                    <span class='tr'></span><span class='tl'></span><span class='br'></span><span class='bl'></span><span id="filler"></span>
+                                    <div class='parteneri' id='sustinatori'>
+                                        <span class='floating_text' id='un_proiect'>Un proiect</span>
+                                        <a href='http://www.ardor.org.ro/'><div class='image' id='ardor'>Ardor</div></a>
+                                        <span class='floating_text' id='finantatori'>Finanțatori</span>
+                                        <a href='http://www.opensocietyfoundations.org/'><div class='image' id='open_society'>Open Society Foundation </div></a>
+                                        <a href='http://www.studentiq.ro//'><div class='image' id='memoplus'>MemoPlus</div></a>
+                                        <!-- <a href='http://www.ratiufamilyfoundation.com/'><div class='image' id='FundatiaRatiu'>Ardor</div></a>
+                                        <a href='http://www.eef.md/'><div class='image' id='eef'>East Europe Foundation</div></a>
+                                        <a href='http://www.mts.gov.md/'><div class='image' id='mdminister'>Ministerul Tineretului si Sportului al Republicii Moldova</div></a> -->
+
+                                        <span class='floating_text' id='parteneri_text'>Parteneri</span>
+
+                                        <a href='http://www.policycenter.eu/'><div class='image' id='PolicyCenter'>Policy Center</div></a>
+                                        <a href='http://www.britishcouncil.org/'><div class='image' id='BritishCouncil'>British Council</div></a>
+                                        <a href='http://www.europuls.ro/'><div class='image' id='europuls'>Europuls</div></a>
+                                        <a href='http://www.cere.ro/'><div class='image' id='cere'>Ce-Re</div></a>
+                                        <a href='http://www.primeromania.ro/'><div class='image' id='prime'>Prime Romania</div></a>
+                                        <a href='http://www.cji.ro/'><div class='image' id='cji'>Centrul pentru jurnalism independent</div></a>
+                                        <a href='http://www.aiesectm.ro/'><div class='image' id='aisec'>Aisec</div></a>
+                                        <!-- ===================================================================================================== -->
+                                        <a href='http://www.cogitus.ro/'><div class='image' id='cogitus'>Cogitus</div></a>
+                                        <a href='http://www.adevarul.ro/international/foreign_policy/'><div class='image' id='foreignPolicy'>Foreign Policy</div></a>
+                                        <a href='http://www.elsa.ro/'><div class='image' id='elsa'>Elsa</div></a>
+                                        <a href='http://www.vipromania.ro/'><div class='image' id='vipromania'>Voluntari pentru idei si proiecte</div></a>
+                                        <a href='http://www.ongtrust.ro/'><div class='image' id='ongtrust'>Trust</div></a>
+
+                                        <!-- ===================================================================================================== -->
+                                        <a href='http://www.leap.ro/'><div class='image' id='leap'>Leap</div></a>
+                                        <a href='http://www.younginitiative.org/'><div class='image' id='younginitiative'>Asociatia young initiative</div></a>
+                                        <a href='http://www.asjc.ro/'><div class='image' id='asjc'>Asjc</div></a>
+                                        <a href='http://osut.ro/'><div class='image' id='osut'>Osut</div></a>
+                                        <div class='clear'></div>
+                                    </div>
+                                    <div class='parteneri' id='parteneri_institutionali'>
+                                        <span class='floating_text' id='sponsori_text'>Sus&#539;in&#x0103;tori</span>
+                                        <a href='http://www.cartier.md/'><div class='image' id='cartier_logo'>Editura Cartier</div></a>
+                                        <a href='http://www.pll.md/ro/'><div class='image' id='biblio_logo'>Biblioteca publica de drept</div></a>
+                                        <span class='floating_text' id='institutii_text'>Parteneri institu&#539;ionali</span> 
+                                        <ul id='institutii'>
+                                            <!-- <span class='floating_text' id='institutii_text'>Parteneri institu&#539;ionali:</span> -->
+                                            <li><a href='http://www.politice.ro/'>Facultatea de &#536;tiin&#539;e Politice SNSPA </a></li>
+                                            <li><a href='http://www.comunicare.ro/'>Facultatea de Comunicare &#537;i Rela&#539;ii Publice SNSPA</a></li>
+                                            <li><a href='http://www.fspub.ro/'>Facultatea de &#536;tiin&#539;e Politice Universitatea Bucure&#537;ti</a></li>
+                                            <li><a href='http://www.filosofie.unibuc.ro/'>Facultatea de Filosofie Universitatea Bucure&#537;ti</a></li>
+                                            <li><a href='http://litere.unibuc.ro/'>Facultatea de Litere din Universitatea Bucure&#x015f;ti</a></li>
+                                            <li><a href='http://www.unibuc.ro/ro/fac_fsas_ro'>Facultatea de Sociologie Universitatea Bucure&#537;ti</a></li>
+                                            <li><a href='http://laws.uaic.ro/'>Facultatea de Drept Universitatea Alexandru Ioan Cuza Ia&#537;i</a></li>
+                                            <li><a href='http://www.uaic.ro/uaic/bin/view/Academic/Filosofie'>Facultatea de Filosofie si &#536;tiin&#539;e Social Politice Universitatea AIC Ia&#537;i</a></li>
+                                            <li><a href='http://www.upa.ro/'>Facultatea de Drept si Facultatea de &#x015e;tiin&#x0163;e Politice si Administrative Universitatea Petre Andrei Ia&#x015f;i</a></li> 
+
+                                            <li><a href='http://www.ubbcluj.ro/'>Universitatea Babe&#537;-Bolyai Cluj Napoca</a></li>
+                                            <li><a href='http://www.uvt.ro/'>Universitatea de Vest Timi&#537;oara</a></li>
+                                            <li><a href='http://www.upt.ro/'>Universitatea Politehnica Timi&#537;oara</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class='parteneri' id='parteneri_media'>
+                                        <span class='floating_text' id='media_text'>Parteneri media</span>
+                                        <a href='http://www.hotnews.ro/'><div class='image' id='hotnews'>HotNews</div></a>
+                                        <!-- <a href='http://www.lumebuna.ro/'><div class='image' id='lumebuna'>Lume Buna</div></a> -->
+                                        <a href='http://www.romaniapozitiva.ro/'><div class='image' id='romaniapozitiva'>Romania Pozitiva</div></a>
+                                        <a href='http://totb.ro/'><div class='image' id='thinkoutsidethebox'>Think Outside The Box</div></a>
+                                        <a href='http://www.facebook.com/carevasazica.vip'><div class='image' id='carevasazica'>Carevasazica</div></a>
+                                        <a href='http://www.studentie.ro/'><div class='image' id='studentiero'>Studentie.ro</div></a>
+                                        <a href='http://startub.unibuc.ro/'><div class='image' id='startub'>startub.unibuc.ro</div></a>
+                                        <!-- <a href='http://www.tvr.ro/tvr_cluj.php'><div class='image' id='tvrcluj'>Tvr Cluj</div></a> -->
+                                        <!-- <a href='http://www.radiotransilvania.ro'><div class='image' id='radiotransilvania'>Radio Transilvania</div></a> -->
+                                        <a href='http://iasifun.ziaruldeiasi.ro/'><div class='image' id='iasifun'>Iasi fun</div></a>
+                                        <a href='http://www.ziaruldeiasi.ro/'><div class='image' id='ziaruldeiasi'>Ziarul de Iasi</div></a>
+                                        <a href='http://www.kissfm.ro/timisoara'><div class='image' id='kissfm'>KissFm</div></a>
+
+                                        <div class='clear'></div> 
+                                    </div>
+                                    <div class='clear'></div>
+
+                                </div>	
+                            </div>	<!-- end wrap -->
+                            <div id='footer_mare'>
+                                <div id='footer'>
+                                    <div id='links' class='footer'>
+                                        <div id='menu1' style='margin:auto;'> <ul id='meniu_prinicpal'><li><a href='../../../contacte/index.html'> Contact </a></li>
+<li><a href='../../../clubdebate/index.html'> Cluburile </a></li>
+<li><a href='../../../oamenii/index.html'> Oamenii </a></li>
+<li><a href='../../../proiectul/index.html'> Proiectul </a></li>
+<li><a href='../../../home/index.html'> Acasa </a></li>
+</ul></div><!--end menu-->
+                                    </div><!--
+                                    <div id='contact' class='footer'>
+                                            <h4>Contact</h4>
+                                            <p>office@closer2oxford.ro</p>
+                                            <p>bogdan.draghicescu@closer2oxford.ro<br>
+                                            <span class='detalii'> (asistenta tehnica web - orice probleme legate de site)</span></p>
+                                    </div>
+                                    -->
+                                    <div id='newsletter' class='footer'>
+                                        <script src="../../../../../connect.facebook.net/en_US/all.js#xfbml=1"></script><fb:like href="http://www.facebook.com/pages/Closer2Oxford/162758797069605" width="250" colorscheme="dark"></fb:like>
+                                        <!--<h4>Newsletter</h4>
+                                        <form action='/page/newsletter'>
+                                                <input type='text' name='email'>
+                                                <input type='submit' id='submit' value='>'>
+                                                        
+                                        </form>-->
+                                    </div>
+                                    <div id='credits'>
+                                        Copyright(c) 2021 ARDOR |  Toate drepturile rezervate | Toate logo-urile si sloganurile de pe site sunt proprietate intelectuala inregistrata si nu pot fi reproduse fara acordul explicit al detinatorilor. <br>
+                                            <br /><br />
+                                            <b>Disclaimer</b><br /><i>
+
+                                                Programul educational Closer to Oxford este un program non-profit si nu are o legatura cu universitatea cu acelasi nume, referirea la Oxford avand doar o semnificatie simbolica.
+                                            </i>
+                                    </div>
+
+                                </div>		
+                            </div>		
+
+                            <div id="finantatde">Acest proiect este finantat cu sustinere din partea Comisiei Europene. Aceast publicatie [comunicare] reflecta doar
+                                vederile autorului, iar Comisia nu poate fi facuta  responsabila pentru utilizarea informatiei pe care o contine.</div>
+
+
+                        </body>
+                        </html>
